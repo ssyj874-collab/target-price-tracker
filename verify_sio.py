@@ -2,9 +2,9 @@
 엑셀 레퍼런스 vs pykrx 계산 SIO 전수 비교 스크립트
 
 실행 방법:
-  python verify_sio.py KOSPI
+  python verify_sio.py KOSPI              # 전체 245일 비교
   python verify_sio.py KOSDAQ
-  python verify_sio.py KOSPI --value   # 거래대금 기준
+  python verify_sio.py KOSPI --hypothesis 20250625   # 단일 날짜 가설 테스트
 
 레퍼런스: kospi_sio_reference.csv / kosdaq_sio_reference.csv
 """
@@ -31,8 +31,8 @@ def load_reference(market: str) -> pd.DataFrame:
     return df.set_index('date')
 
 
-def compute_sio_for_dates(market: str, dates: list[str], use_value: bool) -> pd.DataFrame:
-    """dates 리스트에 대해 SIO 일괄 계산."""
+def compute_sio_for_dates(market: str, dates: list[str]) -> pd.DataFrame:
+    """dates 리스트에 대해 SIO 일괄 계산 (확인된 수식: J=거래대금, K=등락폭pt)."""
     from sio_calculator import get_market_data, calc_sio_from_raw
 
     rows = []
@@ -43,7 +43,7 @@ def compute_sio_for_dates(market: str, dates: list[str], use_value: bool) -> pd.
             df = get_market_data(market, date_str)
             if df.empty:
                 raise ValueError("빈 데이터")
-            r = calc_sio_from_raw(df, use_value=use_value)
+            r = calc_sio_from_raw(df)
             rows.append({'date': date_str, **r})
         except Exception as e:
             rows.append({'date': date_str, 'sio': float('nan'), 'error': str(e)})
@@ -167,7 +167,6 @@ def test_hypothesis(market: str, date_str: str, ref_sio: float):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('market', choices=['KOSPI', 'KOSDAQ'])
-    parser.add_argument('--value', action='store_true')
     parser.add_argument('--hypothesis', metavar='YYYYMMDD',
                         help='단일 날짜 가설 전수 테스트')
     args = parser.parse_args()
@@ -181,9 +180,9 @@ if __name__ == '__main__':
         sys.exit(0)
 
     print(f"레퍼런스: {len(ref)}일 로드 완료 ({ref.index[0]} ~ {ref.index[-1]})")
-    print("pykrx로 계산 중...")
+    print("pykrx로 계산 중... (J=거래대금, K=등락폭pt 수식)")
 
-    calc = compute_sio_for_dates(args.market, ref.index.tolist(), args.value)
+    calc = compute_sio_for_dates(args.market, ref.index.tolist())
     result = summarize_diff(ref['sio'], calc['sio'], args.market)
 
     if result is not None:
