@@ -84,58 +84,82 @@ def test_hypothesis(market: str, date_str: str, ref_sio: float):
     """
     단일 날짜에 대해 여러 파라미터 조합으로 SIO를 계산해
     어느 조합이 엑셀값과 일치하는지 출력.
+
+    J 계산 방식:
+      count  : 상승/하락 종목 수 비율  (F=상승수, G=하락수)
+      volume : 상승/하락 거래량 비율
+      value  : 상승/하락 거래대금 비율
+
+    K 계산 방식:
+      pct    : 등락률(%) 합산
+      pt     : 등락폭(포인트=종가×등락률/100) 합산
     """
     from pykrx import stock
     from sio_calculator import _find_column
 
-    # 전 종목 데이터
-    tickers = stock.get_market_ticker_list(date_str, market=market)
-    rows = []
-    for t in tickers:
-        df = stock.get_market_ohlcv(date_str, date_str, t)
-        if not df.empty:
-            row = df.iloc[0].to_dict()
-            row['ticker'] = t
-            rows.append(row)
-    raw = pd.DataFrame(rows).set_index('ticker')
+    raw = stock.get_market_ohlcv(date_str, market=market)
 
     change_col = _find_column(raw, ['등락률', '변동률', 'change'])
     vol_col    = _find_column(raw, ['거래량', 'Volume', 'volume'])
     val_col    = _find_column(raw, ['거래대금', 'Turnover', 'turnover'])
-    pct        = raw[change_col].fillna(0)
-    up         = pct > 0
-    dn         = pct < 0
+    close_col  = _find_column(raw, ['종가', 'Close', 'close'])
+
+    pct = raw[change_col].fillna(0)
+    up  = pct > 0
+    dn  = pct < 0
 
     print(f"\n[가설 테스트] {market} {date_str}  엑셀SIO={ref_sio}")
     print(f"컬럼: {raw.columns.tolist()}")
     print(f"상승: {up.sum()}  하락: {dn.sum()}  보합: {(pct==0).sum()}")
-    print()
 
+    # 역산: 엑셀 SIO에서 D값 추정
+    ref_D = ref_sio / 100 if ref_sio > 0 else 1 + ref_sio / 100
+    print(f"엑셀 역산 D = {ref_D:.4f}\n")
+
+    # ── J 후보 ────────────────────────────────────────────────────────────
+    j_candidates = {}
+    j_candidates['count'] = (int(up.sum()), int(dn.sum()))  # (F, G) = 종목수
+
+    if vol_col:
+        vol = raw[vol_col].fillna(0)
+        j_candidates['volume'] = (vol[up].sum(), vol[dn].sum())
+    if val_col:
+        val = raw[val_col].fillna(0)
+        j_candidates['value'] = (val[up].sum(), val[dn].sum())
+
+    # ── K 후보 ────────────────────────────────────────────────────────────
+    k_candidates = {}
+    H_pct = pct[up].sum()
+    I_pct = pct[dn].abs().sum()
+    k_candidates['pct'] = (H_pct, I_pct)
+
+    if close_col:
+        close = raw[close_col].fillna(0)
+        # 등락폭(pt) = 종가 × 등락률/100  (근사치, 전일종가 불필요)
+        pt    = close * pct / 100
+        H_pt  = pt[up].sum()
+        I_pt  = pt[dn].abs().sum()
+        k_candidates['pt'] = (H_pt, I_pt)
+
+    # ── 전체 조합 출력 ────────────────────────────────────────────────────
     best = None
-    for base_col, base_name in [(vol_col,'거래량'), (val_col,'거래대금')]:
-        if base_col is None:
-            continue
-        vol = raw[base_col].fillna(0)
-        F = vol[up].sum();  G = vol[dn].sum()
-        J = F/(F+G) if (F+G) > 0 else 0.5
+    for j_name, (F, G) in j_candidates.items():
+        J = F / (F + G) if (F + G) > 0 else 0.5
+        for k_name, (H, I) in k_candidates.items():
+            K = H / (H + I) if (H + I) > 0 else 0.5
+            D = (J + K) / 2
+            E = 1 - D
+            sio = D * 100 if D > E else -E * 100
 
-        for abs_I in [True, False]:
-            H = pct[up].sum()
-            I = pct[dn].abs().sum() if abs_I else pct[dn].sum()
-            K = H/(H+I) if (H+I) != 0 else 0.5
-
-            for flip in [False, True]:
-                D = (J+K)/2
-                E = 1 - D
-                cond = (D > E) if not flip else (E > D)
-                sio = D*100 if cond else -E*100
-
-                sign_ok = np.sign(sio) == np.sign(ref_sio)
-                label = f"{base_name:5s} abs_I={abs_I} flip={flip}"
-                mark = "★ 부호일치" if sign_ok else ""
-                print(f"  {label}: J={J:.4f} K={K:.4f} D={D:.4f} SIO={sio:+.2f}  {mark}")
-                if sign_ok and best is None:
-                    best = label
+            sign_ok  = np.sign(sio) == np.sign(ref_sio)
+            val_close = abs(sio - ref_sio) < 5   # 5% 이내 근사
+            mark = ""
+            if sign_ok and val_close: mark = "★★ 부호+값 근사"
+            elif sign_ok:             mark = "★  부호일치"
+            label = f"J={j_name:6s} K={k_name:3s}"
+            print(f"  {label}: J={J:.4f} K={K:.4f} D={D:.4f} SIO={sio:+.2f}  {mark}")
+            if sign_ok and best is None:
+                best = label
 
     print(f"\n→ 첫 번째 부호 일치 조합: {best}")
 
