@@ -23,16 +23,7 @@ os.environ.setdefault('KRX_PW', 'song135!')
 
 def get_raw_df(market: str, date: str) -> pd.DataFrame:
     from pykrx import stock
-    tickers = stock.get_market_ticker_list(date, market=market)
-    rows = []
-    for ticker in tickers:
-        df = stock.get_market_ohlcv(date, date, ticker)
-        if df.empty:
-            continue
-        row = df.iloc[0].to_dict()
-        row['ticker'] = ticker
-        rows.append(row)
-    return pd.DataFrame(rows).set_index('ticker') if rows else pd.DataFrame()
+    return stock.get_market_ohlcv(date, market=market)
 
 
 def try_all_hypotheses(df: pd.DataFrame) -> pd.DataFrame:

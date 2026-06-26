@@ -37,20 +37,8 @@ def get_market_data(market: str, date: str) -> pd.DataFrame:
     """
     from pykrx import stock
 
-    tickers = stock.get_market_ticker_list(date, market=market)
-    rows = []
-    for ticker in tickers:
-        df = stock.get_market_ohlcv(date, date, ticker)
-        if df.empty:
-            continue
-        row = df.iloc[0].to_dict()
-        row['ticker'] = ticker
-        rows.append(row)
-
-    if not rows:
-        return pd.DataFrame()
-
-    df = pd.DataFrame(rows).set_index('ticker')
+    # 전 종목 일괄 조회 (티커별 루프 대신 단일 호출)
+    df = stock.get_market_ohlcv(date, market=market)
     return df
 
 
