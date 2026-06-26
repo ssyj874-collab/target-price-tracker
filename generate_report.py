@@ -152,7 +152,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
 
 <header>
   <h1>📊 KOSPI / KOSDAQ SIO 리포트</h1>
-  <p>생성: {generated_at} &nbsp;|&nbsp; 수식: J=거래대금비율, K=등락폭비율, D=(J+K)/2</p>
+  <p>생성: {generated_at} &nbsp;|&nbsp; 수식: J=거래량비율, K=등락률비율, D=(J+K)/2</p>
 </header>
 
 <div class="legend">

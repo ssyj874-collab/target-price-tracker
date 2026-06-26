@@ -169,6 +169,10 @@ if __name__ == '__main__':
     parser.add_argument('market', choices=['KOSPI', 'KOSDAQ'])
     parser.add_argument('--hypothesis', metavar='YYYYMMDD',
                         help='단일 날짜 가설 전수 테스트')
+    parser.add_argument('--single', metavar='YYYYMMDD',
+                        help='단일 날짜 상세 J/K 비교 (엑셀 vs pykrx)')
+    parser.add_argument('--days', type=int, default=None,
+                        help='최근 N일만 비교 (기본: 전체)')
     args = parser.parse_args()
 
     ref = load_reference(args.market)
@@ -179,8 +183,36 @@ if __name__ == '__main__':
         test_hypothesis(args.market, date, ref_sio)
         sys.exit(0)
 
+    if args.single:
+        date = args.single
+        from sio_calculator import get_market_data, calc_sio_from_raw
+        df = get_market_data(args.market, date)
+        r  = calc_sio_from_raw(df)
+        if date in ref.index:
+            xls = ref.loc[date]
+            print(f"\n{'='*60}")
+            print(f"{args.market} {date} — pykrx vs 엑셀")
+            print(f"{'='*60}")
+            print(f"  {'항목':8s}  {'pykrx':>12s}  {'엑셀':>12s}  {'차이':>10s}")
+            print(f"  {'-'*46}")
+            for key in ['J','K','D','sio']:
+                v  = r[key]
+                x  = float(xls[key])
+                print(f"  {key:8s}  {v:>12.5f}  {x:>12.5f}  {v-x:>+10.5f}")
+            print(f"  상승종목: {r['advancing']}  하락종목: {r['declining']}")
+            print(f"  F(거래량 up): {r['F']:.0f}  엑셀F: {float(xls['F']):.0f}")
+            print(f"  G(거래량 dn): {r['G']:.0f}  엑셀G: {float(xls['G']):.0f}")
+        else:
+            print(f"\n{args.market} {date} — 엑셀 레퍼런스 없음, pykrx만:")
+            for key in ['J','K','D','sio']:
+                print(f"  {key}: {r[key]:.5f}")
+        sys.exit(0)
+
+    if args.days:
+        ref = ref.tail(args.days)
+
     print(f"레퍼런스: {len(ref)}일 로드 완료 ({ref.index[0]} ~ {ref.index[-1]})")
-    print("pykrx로 계산 중... (J=거래량, K=시총가중등락률, ETF제외)")
+    print("pykrx로 계산 중... (J=거래량, K=등락률%, ETF제외)")
 
     calc = compute_sio_for_dates(args.market, ref.index.tolist())
     result = summarize_diff(ref['sio'], calc['sio'], args.market)
