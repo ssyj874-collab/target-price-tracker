@@ -216,6 +216,59 @@ def is_already_updated(out_path: str) -> bool:
     return mtime >= cutoff
 
 
+def publish_to_github_pages(html_path: str):
+    """생성된 HTML을 gh-pages 브랜치에 push → GitHub Pages로 서빙."""
+    import subprocess, shutil, tempfile
+
+    repo_dir = os.path.dirname(html_path)
+
+    def git(cmd, cwd=repo_dir):
+        result = subprocess.run(
+            ['git'] + cmd, cwd=cwd,
+            capture_output=True, text=True
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"git {' '.join(cmd)} 실패:\n{result.stderr}")
+        return result.stdout.strip()
+
+    print("\n📤 GitHub Pages에 업로드 중...")
+    try:
+        # 현재 브랜치 저장
+        original_branch = git(['rev-parse', '--abbrev-ref', 'HEAD'])
+
+        # gh-pages 브랜치가 원격에 있으면 가져오고, 없으면 새로 만들기
+        remote_branches = git(['branch', '-r'])
+        if 'origin/gh-pages' in remote_branches:
+            git(['fetch', 'origin', 'gh-pages'])
+            git(['checkout', 'gh-pages'])
+            git(['reset', '--hard', 'origin/gh-pages'])
+        else:
+            git(['checkout', '--orphan', 'gh-pages'])
+            git(['rm', '-rf', '.'])
+
+        # index.html 복사
+        dest = os.path.join(repo_dir, 'index.html')
+        shutil.copy2(html_path, dest)
+
+        git(['add', 'index.html'])
+        git(['commit', '-m', f'Update SIO report {datetime.today().strftime("%Y-%m-%d %H:%M")}'])
+        git(['push', 'origin', 'gh-pages'])
+
+        # 원래 브랜치로 복귀
+        git(['checkout', original_branch])
+
+        print("✅ GitHub Pages 업로드 완료!")
+        print("   URL: https://ssyj874-collab.github.io/target-price-tracker/")
+        print("   (첫 등록 시 GitHub 설정에서 Pages를 활성화해야 합니다)")
+    except Exception as e:
+        print(f"⚠️  GitHub 업로드 실패: {e}")
+        # 실패해도 원래 브랜치로 복귀 시도
+        try:
+            git(['checkout', original_branch])
+        except Exception:
+            pass
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--days',      type=int, default=365, help='최근 N일 (기본 365)')
@@ -223,6 +276,8 @@ def main():
     parser.add_argument('--no-open',   action='store_true', help='브라우저 자동 열기 안 함')
     parser.add_argument('--skip-if-fresh', action='store_true',
                         help='오늘 이미 업데이트됐으면 건너뜀 (자동실행용)')
+    parser.add_argument('--publish',   action='store_true',
+                        help='생성 후 GitHub Pages(gh-pages 브랜치)에 자동 push')
     args = parser.parse_args()
 
     out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.out)
@@ -255,6 +310,10 @@ def main():
         f.write(html)
 
     print(f"\n✅ 리포트 생성 완료: {out_path}")
+
+    if args.publish:
+        publish_to_github_pages(out_path)
+
     if not args.no_open:
         webbrowser.open(f'file://{out_path}')
 

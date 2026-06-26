@@ -35,6 +35,7 @@ cat > "$PLIST" <<EOF
     <string>$SCRIPT_DIR/generate_report.py</string>
     <string>--no-open</string>
     <string>--skip-if-fresh</string>
+    <string>--publish</string>
   </array>
 
   <key>EnvironmentVariables</key>
