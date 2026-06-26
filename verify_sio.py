@@ -180,10 +180,18 @@ if __name__ == '__main__':
         sys.exit(0)
 
     print(f"레퍼런스: {len(ref)}일 로드 완료 ({ref.index[0]} ~ {ref.index[-1]})")
-    print("pykrx로 계산 중... (J=거래량, K=등락률%, ETF제외)")
+    print("pykrx로 계산 중... (J=거래량, K=시총가중등락률, ETF제외)")
 
     calc = compute_sio_for_dates(args.market, ref.index.tolist())
     result = summarize_diff(ref['sio'], calc['sio'], args.market)
+
+    # J, K 비교 (오차 원인 파악)
+    if 'J' in ref.columns and 'J' in calc.columns:
+        print("\n── J (거래량 비율) 오차 ──")
+        summarize_diff(ref['J'], calc['J'], f'{args.market} J')
+    if 'K' in ref.columns and 'K' in calc.columns:
+        print("\n── K (등락률 비율) 오차 ──")
+        summarize_diff(ref['K'], calc['K'], f'{args.market} K')
 
     if result is not None:
         out = f"{args.market.lower()}_sio_comparison.csv"

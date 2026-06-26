@@ -24,7 +24,7 @@ PANIC_SELL = -80
 
 def fetch_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
     from pykrx import stock
-    from sio_calculator import calc_sio_from_raw
+    from sio_calculator import get_market_data, calc_sio_from_raw
 
     index_ticker = '1001' if market == 'KOSPI' else '2001'
     try:
@@ -39,7 +39,7 @@ def fetch_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
         date_str = dt.strftime('%Y%m%d')
         print(f"\r  [{market}] {i:3d}/{total} {date_str}...", end='', flush=True)
         try:
-            df = stock.get_market_ohlcv(date_str, market=market)
+            df = get_market_data(market, date_str)
             if df.empty:
                 continue
             r = calc_sio_from_raw(df)

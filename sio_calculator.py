@@ -40,7 +40,7 @@ def get_stock_only_tickers(date: str, market: str) -> set:
 
 def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.DataFrame:
     """
-    특정 날짜의 시장 전 종목 OHLCV + 등락률 반환.
+    특정 날짜의 시장 전 종목 OHLCV + 등락률 + 시가총액 반환.
     exclude_etf=True 이면 ETF 제외 (엑셀과 동일 기준).
     """
     from pykrx import stock
@@ -48,6 +48,14 @@ def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.Data
     df = stock.get_market_ohlcv(date, market=market)
     if df.empty:
         return df
+
+    # 시가총액 merge (market-cap weighted K 계산에 필요)
+    try:
+        cap = stock.get_market_cap(date, market=market)
+        if not cap.empty and '시가총액' in cap.columns:
+            df = df.join(cap[['시가총액']], how='left')
+    except Exception:
+        pass
 
     if exclude_etf:
         valid = get_stock_only_tickers(date, market)
