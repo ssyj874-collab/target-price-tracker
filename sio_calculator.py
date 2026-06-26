@@ -99,18 +99,21 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     G = vol[dn].sum()
 
     # H, I : 시가총액 가중 등락률 (지수기여도 근사)
-    if cap_col is not None:
+    # NaN 시총이 많으면 가중치가 왜곡되므로 커버리지 70% 미만 시 단순합으로 fallback
+    def _use_cap_weight():
+        if cap_col is None:
+            return False
+        valid = df[cap_col].notna() & (df[cap_col] > 0)
+        coverage = valid.sum() / max(len(df), 1)
+        return coverage >= 0.7
+
+    if _use_cap_weight():
         cap        = df[cap_col].fillna(0)
         total_cap  = cap.sum()
-        if total_cap > 0:
-            weight = cap / total_cap          # 시총 비중 (합=1)
-            H = (weight * pct)[up].sum()      # 상승 기여도 (%)
-            I = (weight * pct.abs())[dn].sum()  # 하락 기여도 (%)
-        else:
-            H = pct[up].sum()
-            I = pct[dn].abs().sum()
+        weight     = cap / total_cap
+        H = (weight * pct)[up].sum()
+        I = (weight * pct.abs())[dn].sum()
     else:
-        # 시가총액 없으면 단순합 (fallback)
         H = pct[up].sum()
         I = pct[dn].abs().sum()
 
