@@ -29,13 +29,20 @@ import numpy as np
 # 데이터 취득
 # ---------------------------------------------------------------------------
 
+# 날짜별 티커 캐시 (같은 날짜 반복 호출 방지)
+_ticker_cache: dict = {}
+
+
 def get_stock_only_tickers(date: str, market: str) -> set:
-    """ETF·스팩 제외 순수 주권 티커 목록 반환."""
+    """ETF·스팩 제외 순수 주권 티커 목록 반환 (캐시됨)."""
     from pykrx import stock
 
-    all_tickers = set(stock.get_market_ticker_list(date, market=market))
-    etf_tickers = set(stock.get_etf_ticker_list(date))
-    return all_tickers - etf_tickers
+    key = (date, market)
+    if key not in _ticker_cache:
+        all_tickers = set(stock.get_market_ticker_list(date, market=market))
+        etf_tickers = set(stock.get_etf_ticker_list(date))
+        _ticker_cache[key] = all_tickers - etf_tickers
+    return _ticker_cache[key]
 
 
 def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.DataFrame:
