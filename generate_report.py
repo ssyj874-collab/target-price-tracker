@@ -205,14 +205,34 @@ function showTab(id, el) {{
 </html>"""
 
 
+def is_already_updated(out_path: str) -> bool:
+    """오늘 날짜로 이미 리포트가 생성됐으면 True."""
+    if not os.path.exists(out_path):
+        return False
+    mtime = datetime.fromtimestamp(os.path.getmtime(out_path))
+    today = datetime.today()
+    # 오늘 오후 3시 30분(장 마감) 이후에 생성된 파일이면 최신으로 간주
+    cutoff = today.replace(hour=15, minute=30, second=0, microsecond=0)
+    return mtime >= cutoff
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--days', type=int, default=365, help='최근 N일 (기본 365)')
-    parser.add_argument('--out',  default='sio_report.html', help='출력 파일명')
+    parser.add_argument('--days',      type=int, default=365, help='최근 N일 (기본 365)')
+    parser.add_argument('--out',       default='sio_report.html', help='출력 파일명')
+    parser.add_argument('--no-open',   action='store_true', help='브라우저 자동 열기 안 함')
+    parser.add_argument('--skip-if-fresh', action='store_true',
+                        help='오늘 이미 업데이트됐으면 건너뜀 (자동실행용)')
     args = parser.parse_args()
 
+    out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.out)
+
+    if args.skip_if_fresh and is_already_updated(out_path):
+        print(f"✅ 오늘 리포트가 이미 최신입니다. 건너뜁니다. ({out_path})")
+        return
+
     today    = datetime.today()
-    fromdate = (today - timedelta(days=args.days + 60)).strftime('%Y%m%d')  # 여유분 포함
+    fromdate = (today - timedelta(days=args.days + 60)).strftime('%Y%m%d')
     todate   = today.strftime('%Y%m%d')
 
     print(f"기간: {fromdate} ~ {todate} (거래일 기준 약 {args.days}일)")
@@ -235,7 +255,8 @@ def main():
         f.write(html)
 
     print(f"\n✅ 리포트 생성 완료: {out_path}")
-    webbrowser.open(f'file://{out_path}')
+    if not args.no_open:
+        webbrowser.open(f'file://{out_path}')
 
 
 if __name__ == '__main__':
