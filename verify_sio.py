@@ -126,6 +126,10 @@ def test_hypothesis(market: str, date_str: str, ref_sio: float):
     if val_col:
         val = raw[val_col].fillna(0)
         j_candidates['value'] = (val[up].sum(), val[dn].sum())
+    cap_col = _find_column(raw, ['시가총액', 'MarketCap', 'marketcap'])
+    if cap_col:
+        cap = raw[cap_col].fillna(0)
+        j_candidates['cap'] = (cap[up].sum(), cap[dn].sum())
 
     # ── K 후보 ────────────────────────────────────────────────────────────
     k_candidates = {}
