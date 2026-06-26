@@ -63,12 +63,17 @@ def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.Data
 def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     """
     종목별 데이터프레임으로부터 SIO 계산.
-    F/G = 거래량 기준, H/I = 등락률(%) 기준
+
+    F/G = 거래량 기준
+    H/I = 시가총액 가중 등락률 (index contribution)
+          H = Σ(시총_i / 총시총 × 등락률_i) for rising  [%단위]
+          I = Σ(시총_i / 총시총 × |등락률_i|) for falling
 
     Returns dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
     """
     change_col = _find_column(df, ['등락률', '변동률', 'change', 'Change'])
     vol_col    = _find_column(df, ['거래량', 'Volume', 'volume'])
+    cap_col    = _find_column(df, ['시가총액', 'Marcap', 'marcap'])
 
     if change_col is None:
         raise KeyError(f"등락률 컬럼 없음. 컬럼: {df.columns.tolist()}")
@@ -85,9 +90,21 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     F = vol[up].sum()
     G = vol[dn].sum()
 
-    # H, I : 등락률(%) 합
-    H = pct[up].sum()           # 양수
-    I = pct[dn].abs().sum()     # 절대값 (양수)
+    # H, I : 시가총액 가중 등락률 (지수기여도 근사)
+    if cap_col is not None:
+        cap        = df[cap_col].fillna(0)
+        total_cap  = cap.sum()
+        if total_cap > 0:
+            weight = cap / total_cap          # 시총 비중 (합=1)
+            H = (weight * pct)[up].sum()      # 상승 기여도 (%)
+            I = (weight * pct.abs())[dn].sum()  # 하락 기여도 (%)
+        else:
+            H = pct[up].sum()
+            I = pct[dn].abs().sum()
+    else:
+        # 시가총액 없으면 단순합 (fallback)
+        H = pct[up].sum()
+        I = pct[dn].abs().sum()
 
     J = F / (F + G) if (F + G) > 0 else 0.5
     K = H / (H + I) if (H + I) > 0 else 0.5
