@@ -2,22 +2,22 @@
 KOSPI/KOSDAQ SIO (Strength Index Oscillator) Calculator
 카페라떼 엑셀 SIO 수식 재현
 
-확인된 수식:
-  SIO = IF(D > E, D, -E) * 100
-  D   = (J + K) / 2
-  E   = 1 - D
-  J   = F / (F + G)   ← 상승종목 거래대금 / 전체(상승+하락) 거래대금
-  K   = H / (H + I)   ← 상승종목 등락폭합 / 전체 등락폭합  (등락폭 = 전일종가×등락률/100)
+확정 수식 (원본 엑셀 xlsm 역공학):
+  SIO = D×100        (D > 0.5, 상승장)
+  SIO = -(1-D)×100   (D ≤ 0.5, 하락장)
 
-  F = 상승종목 거래대금 합
-  G = 하락종목 거래대금 합
-  H = 상승종목 등락폭 합  (양수)
-  I = 하락종목 등락폭 절대값 합  (양수)
+  D = (J + K) / 2
+  J = F / (F + G)   ← 상승종목 거래량 / (상승+하락 거래량)
+  K = H / (H + I)   ← 상승종목 등락률%합 / (상승+하락 등락률%합)
 
-참고:
-  - D > 0.5 → 상승장, SIO = D*100  (최소 +50)
-  - D ≤ 0.5 → 하락장, SIO = -E*100 (최대 -50)
-  - 전일종가가 없을 때 등락폭 근사치: 종가 × 등락률 / (100 + 등락률)
+  F = 상승종목 거래량 합 (ETF/스팩/관리종목 제외)
+  G = 하락종목 거래량 합
+  H = 상승종목 등락률(%) 합  (양수)
+  I = 하락종목 등락률(%) 절대값 합  (양수)
+
+주의:
+  - pykrx는 ETF·스팩 포함 → 엑셀 대비 J 값 약 0.05~0.07 차이
+  - 완전 재현을 위해 ETF 티커를 제외한 주권(주식)만 사용
 """
 
 import os
@@ -29,94 +29,66 @@ import numpy as np
 # 데이터 취득
 # ---------------------------------------------------------------------------
 
-def get_market_data(market: str, date: str) -> pd.DataFrame:
-    """
-    특정 날짜의 시장 전 종목 OHLCV + 등락률 일괄 반환.
-    market : 'KOSPI' 또는 'KOSDAQ'
-    date   : 'YYYYMMDD'
-    """
+def get_stock_only_tickers(date: str, market: str) -> set:
+    """ETF·스팩 제외 순수 주권 티커 목록 반환."""
     from pykrx import stock
-    return stock.get_market_ohlcv(date, market=market)
+
+    all_tickers = set(stock.get_market_ticker_list(date, market=market))
+    etf_tickers = set(stock.get_etf_ticker_list(date))
+    return all_tickers - etf_tickers
 
 
-def get_prev_close(market: str, date: str) -> pd.Series:
+def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.DataFrame:
     """
-    date 직전 거래일의 종가를 반환 (등락폭 정밀 계산용).
-    반환: ticker → 전일종가 Series
+    특정 날짜의 시장 전 종목 OHLCV + 등락률 반환.
+    exclude_etf=True 이면 ETF 제외 (엑셀과 동일 기준).
     """
     from pykrx import stock
-    # 당일 포함 2일치 조회 → 전일 데이터 추출
-    df2 = stock.get_market_ohlcv(date, market=market)
-    # pykrx에서 전전일 종가를 직접 얻는 API가 없으므로
-    # 종가와 등락률로 역산: 전일종가 = 종가 / (1 + 등락률/100)
-    close_col  = _find_column(df2, ['종가', 'Close', 'close'])
-    change_col = _find_column(df2, ['등락률', '변동률', 'change'])
-    if close_col is None or change_col is None:
-        return pd.Series(dtype=float)
-    close  = df2[close_col].fillna(0)
-    pct    = df2[change_col].fillna(0)
-    prev   = close / (1 + pct / 100)
-    return prev
+
+    df = stock.get_market_ohlcv(date, market=market)
+    if df.empty:
+        return df
+
+    if exclude_etf:
+        valid = get_stock_only_tickers(date, market)
+        df = df[df.index.isin(valid)]
+
+    return df
 
 
 # ---------------------------------------------------------------------------
 # SIO 계산
 # ---------------------------------------------------------------------------
 
-def calc_sio_from_raw(
-    df: pd.DataFrame,
-    prev_close: pd.Series | None = None,
-) -> dict:
+def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     """
     종목별 데이터프레임으로부터 SIO 계산.
+    F/G = 거래량 기준, H/I = 등락률(%) 기준
 
-    Parameters
-    ----------
-    df         : get_market_data() 반환값
-    prev_close : 전일종가 Series (없으면 근사치 사용)
-
-    Returns
-    -------
-    dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
+    Returns dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
     """
     change_col = _find_column(df, ['등락률', '변동률', 'change', 'Change'])
-    val_col    = _find_column(df, ['거래대금', 'Turnover', 'turnover'])
-    close_col  = _find_column(df, ['종가', 'Close', 'close'])
+    vol_col    = _find_column(df, ['거래량', 'Volume', 'volume'])
 
     if change_col is None:
         raise KeyError(f"등락률 컬럼 없음. 컬럼: {df.columns.tolist()}")
-    if val_col is None:
-        raise KeyError(f"거래대금 컬럼 없음. 컬럼: {df.columns.tolist()}")
-    if close_col is None:
-        raise KeyError(f"종가 컬럼 없음. 컬럼: {df.columns.tolist()}")
+    if vol_col is None:
+        raise KeyError(f"거래량 컬럼 없음. 컬럼: {df.columns.tolist()}")
 
-    pct   = df[change_col].fillna(0)
-    val   = df[val_col].fillna(0)
-    close = df[close_col].fillna(0)
+    pct = df[change_col].fillna(0)
+    vol = df[vol_col].fillna(0)
 
     up = pct > 0
     dn = pct < 0
 
-    # ── F, G : 거래대금 ──────────────────────────────────────────────────
-    F = val[up].sum()
-    G = val[dn].sum()
+    # F, G : 거래량
+    F = vol[up].sum()
+    G = vol[dn].sum()
 
-    # ── H, I : 등락폭(포인트) 합산 ───────────────────────────────────────
-    # 전일종가가 있으면 정확히, 없으면 근사치 사용
-    # 정확: 등락폭 = 전일종가 × 등락률/100
-    # 근사: 등락폭 = 종가 × 등락률 / (100 + 등락률)  ← 전일종가 역산
-    if prev_close is not None and not prev_close.empty:
-        aligned = prev_close.reindex(df.index).fillna(0)
-        pt = aligned * pct / 100
-    else:
-        # 종가 / (1 + pct/100) = 전일종가 → 등락폭 = 전일종가 × pct/100
-        prev_approx = close / (1 + pct / 100)
-        pt = prev_approx * pct / 100
+    # H, I : 등락률(%) 합
+    H = pct[up].sum()           # 양수
+    I = pct[dn].abs().sum()     # 절대값 (양수)
 
-    H = pt[up].sum()
-    I = pt[dn].abs().sum()
-
-    # ── J, K, D, E ────────────────────────────────────────────────────────
     J = F / (F + G) if (F + G) > 0 else 0.5
     K = H / (H + I) if (H + I) > 0 else 0.5
     D = (J + K) / 2
@@ -145,20 +117,11 @@ def _find_column(df: pd.DataFrame, candidates: list) -> str | None:
 # 날짜 범위 일괄 계산
 # ---------------------------------------------------------------------------
 
-def calc_sio_range(
-    market: str,
-    fromdate: str,
-    todate: str,
-) -> pd.DataFrame:
-    """
-    fromdate~todate 기간의 일별 SIO 계산.
-    반환: DatetimeIndex DataFrame
-    """
+def calc_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
     from pykrx import stock
 
-    trading_days = stock.get_index_ohlcv_by_date(
-        fromdate, todate, '1001' if market == 'KOSPI' else '2001'
-    ).index
+    index_ticker = '1001' if market == 'KOSPI' else '2001'
+    trading_days = stock.get_index_ohlcv_by_date(fromdate, todate, index_ticker).index
 
     results = []
     total = len(trading_days)
@@ -178,31 +141,54 @@ def calc_sio_range(
     print()
     if not results:
         return pd.DataFrame()
-
     return pd.DataFrame(results).set_index('date')
 
 
 # ---------------------------------------------------------------------------
-# 단일 날짜 디버그 출력
+# 단일 날짜 디버그
 # ---------------------------------------------------------------------------
 
 def debug_sio(market: str, date: str):
-    df = get_market_data(market, date)
-    r  = calc_sio_from_raw(df)
+    df  = get_market_data(market, date)
+    r   = calc_sio_from_raw(df)
+    xls = _load_excel_ref(market, date)
 
-    print(f"\n{'='*55}")
-    print(f"{market} SIO [{date}]")
-    print(f"{'='*55}")
-    print(f"  상승/하락/보합 : {r['advancing']} / {r['declining']} / {r['unchanged']}")
-    print(f"  F (상승 거래대금): {r['F']:,.0f}")
-    print(f"  G (하락 거래대금): {r['G']:,.0f}")
-    print(f"  H (상승 등락폭합): {r['H']:,.2f}")
-    print(f"  I (하락 등락폭합): {r['I']:,.2f}")
-    print(f"  J = F/(F+G)     : {r['J']:.6f}")
-    print(f"  K = H/(H+I)     : {r['K']:.6f}")
-    print(f"  D = (J+K)/2     : {r['D']:.6f}")
-    print(f"  E = 1-D         : {r['E']:.6f}")
-    print(f"  SIO             : {r['sio']:.4f}")
+    print(f"\n{'='*60}")
+    print(f"{market} SIO [{date}]  (ETF 제외)")
+    print(f"{'='*60}")
+    print(f"  종목수  상승:{r['advancing']} / 하락:{r['declining']} / 보합:{r['unchanged']}")
+    print(f"  {'항목':12s}  {'pykrx':>14s}  {'엑셀':>14s}  {'차이':>10s}")
+    print(f"  {'-'*54}")
+    fields = [
+        ('F (상승거래량)', r['F'],   xls.get('F')),
+        ('G (하락거래량)', r['G'],   xls.get('G')),
+        ('H (상승등락률%)', r['H'],  xls.get('H')),
+        ('I (하락등락률%)', r['I'],  xls.get('I')),
+        ('J',              r['J'],  xls.get('J')),
+        ('K',              r['K'],  xls.get('K')),
+        ('D',              r['D'],  xls.get('D')),
+        ('SIO(%)',         r['sio'], xls.get('sio')),
+    ]
+    for name, computed, excel in fields:
+        if excel is not None:
+            diff = f"{computed - excel:+.4f}"
+            print(f"  {name:12s}  {computed:>14.4f}  {excel:>14.4f}  {diff:>10s}")
+        else:
+            print(f"  {name:12s}  {computed:>14.4f}  {'(없음)':>14s}")
+
+
+def _load_excel_ref(market: str, date: str) -> dict:
+    """xlsm 레퍼런스에서 해당 날짜 값 로드."""
+    fname = f"{'kospi' if market=='KOSPI' else 'kosdaq'}_sio_reference.csv"
+    path  = os.path.join(os.path.dirname(os.path.abspath(__file__)), fname)
+    if not os.path.exists(path):
+        return {}
+    ref = pd.read_csv(path, dtype={'date': str})
+    row = ref[ref['date'] == date]
+    if row.empty:
+        return {}
+    r = row.iloc[0]
+    return {k: float(r[k]) for k in ['sio','D','E','F','G','H','I','J','K'] if k in r}
 
 
 # ---------------------------------------------------------------------------
@@ -214,9 +200,10 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='KOSPI/KOSDAQ SIO Calculator')
     parser.add_argument('market', choices=['KOSPI', 'KOSDAQ'])
-    parser.add_argument('date',   help='YYYYMMDD (단일) 또는 시작날짜')
+    parser.add_argument('date',   help='YYYYMMDD')
     parser.add_argument('--end',  default=None, help='종료날짜 (기간 조회)')
-    parser.add_argument('--debug', action='store_true', help='상세 출력')
+    parser.add_argument('--debug', action='store_true')
+    parser.add_argument('--include-etf', action='store_true', help='ETF 포함 (기본: 제외)')
     args = parser.parse_args()
 
     os.environ.setdefault('KRX_ID', 'syj6718')
@@ -226,4 +213,4 @@ if __name__ == '__main__':
         debug_sio(args.market, args.date)
     else:
         df = calc_sio_range(args.market, args.date, args.end)
-        print(df[['sio', 'D', 'J', 'K', 'advancing', 'declining']].to_string())
+        print(df[['sio','D','J','K','advancing','declining']].to_string())

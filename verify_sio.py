@@ -32,7 +32,7 @@ def load_reference(market: str) -> pd.DataFrame:
 
 
 def compute_sio_for_dates(market: str, dates: list[str]) -> pd.DataFrame:
-    """dates 리스트에 대해 SIO 일괄 계산 (확인된 수식: J=거래대금, K=등락폭pt)."""
+    """dates 리스트에 대해 SIO 일괄 계산 (J=거래량, K=등락률%, ETF제외)."""
     from sio_calculator import get_market_data, calc_sio_from_raw
 
     rows = []
@@ -180,7 +180,7 @@ if __name__ == '__main__':
         sys.exit(0)
 
     print(f"레퍼런스: {len(ref)}일 로드 완료 ({ref.index[0]} ~ {ref.index[-1]})")
-    print("pykrx로 계산 중... (J=거래대금, K=등락폭pt 수식)")
+    print("pykrx로 계산 중... (J=거래량, K=등락률%, ETF제외)")
 
     calc = compute_sio_for_dates(args.market, ref.index.tolist())
     result = summarize_diff(ref['sio'], calc['sio'], args.market)
