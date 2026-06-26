@@ -278,7 +278,7 @@ def publish_to_github_pages(html_path: str):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--days',      type=int, default=365, help='최근 N일 (기본 365)')
+    parser.add_argument('--days',      type=int, default=60, help='최근 N일 (기본 60)')
     parser.add_argument('--out',       default='sio_report.html', help='출력 파일명')
     parser.add_argument('--no-open',   action='store_true', help='브라우저 자동 열기 안 함')
     parser.add_argument('--skip-if-fresh', action='store_true',
