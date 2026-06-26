@@ -47,7 +47,7 @@ def get_stock_only_tickers(date: str, market: str) -> set:
 
 def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.DataFrame:
     """
-    특정 날짜의 시장 전 종목 OHLCV + 등락률 + 시가총액 반환.
+    특정 날짜의 시장 전 종목 OHLCV + 등락률 반환.
     exclude_etf=True 이면 ETF 제외 (엑셀과 동일 기준).
     """
     from pykrx import stock
@@ -55,14 +55,6 @@ def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.Data
     df = stock.get_market_ohlcv(date, market=market)
     if df.empty:
         return df
-
-    # 시가총액 merge (market-cap weighted K 계산에 필요)
-    try:
-        cap = stock.get_market_cap(date, market=market)
-        if not cap.empty and '시가총액' in cap.columns:
-            df = df.join(cap[['시가총액']], how='left')
-    except Exception:
-        pass
 
     if exclude_etf:
         valid = get_stock_only_tickers(date, market)
@@ -80,15 +72,14 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     종목별 데이터프레임으로부터 SIO 계산.
 
     F/G = 거래량 기준
-    H/I = 시가총액 가중 등락률 (index contribution)
-          H = Σ(시총_i / 총시총 × 등락률_i) for rising  [%단위]
-          I = Σ(시총_i / 총시총 × |등락률_i|) for falling
+    H/I = 등락률(%) 단순합 기준
+          H = 상승종목 등락률(%) 합  (양수)
+          I = 하락종목 등락률(%) 절대값 합  (양수)
 
     Returns dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
     """
     change_col = _find_column(df, ['등락률', '변동률', 'change', 'Change'])
     vol_col    = _find_column(df, ['거래량', 'Volume', 'volume'])
-    cap_col    = _find_column(df, ['시가총액', 'Marcap', 'marcap'])
 
     if change_col is None:
         raise KeyError(f"등락률 컬럼 없음. 컬럼: {df.columns.tolist()}")
@@ -105,24 +96,9 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     F = vol[up].sum()
     G = vol[dn].sum()
 
-    # H, I : 시가총액 가중 등락률 (지수기여도 근사)
-    # NaN 시총이 많으면 가중치가 왜곡되므로 커버리지 70% 미만 시 단순합으로 fallback
-    def _use_cap_weight():
-        if cap_col is None:
-            return False
-        valid = df[cap_col].notna() & (df[cap_col] > 0)
-        coverage = valid.sum() / max(len(df), 1)
-        return coverage >= 0.7
-
-    if _use_cap_weight():
-        cap        = df[cap_col].fillna(0)
-        total_cap  = cap.sum()
-        weight     = cap / total_cap
-        H = (weight * pct)[up].sum()
-        I = (weight * pct.abs())[dn].sum()
-    else:
-        H = pct[up].sum()
-        I = pct[dn].abs().sum()
+    # H, I : 등락률(%) 단순합
+    H = pct[up].sum()
+    I = pct[dn].abs().sum()
 
     J = F / (F + G) if (F + G) > 0 else 0.5
     K = H / (H + I) if (H + I) > 0 else 0.5
