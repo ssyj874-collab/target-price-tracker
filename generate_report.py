@@ -236,12 +236,19 @@ def publish_to_github_pages(html_path: str):
         # 현재 브랜치 저장
         original_branch = git(['rev-parse', '--abbrev-ref', 'HEAD'])
 
-        # gh-pages 브랜치가 원격에 있으면 가져오고, 없으면 새로 만들기
+        # 로컬/원격 gh-pages 브랜치 존재 여부 확인
+        local_branches  = git(['branch'])
         remote_branches = git(['branch', '-r'])
-        if 'origin/gh-pages' in remote_branches:
-            git(['fetch', 'origin', 'gh-pages'])
+        has_local  = 'gh-pages' in local_branches
+        has_remote = 'origin/gh-pages' in remote_branches
+
+        if has_local:
             git(['checkout', 'gh-pages'])
-            git(['reset', '--hard', 'origin/gh-pages'])
+            if has_remote:
+                git(['reset', '--hard', 'origin/gh-pages'])
+        elif has_remote:
+            git(['fetch', 'origin', 'gh-pages'])
+            git(['checkout', '-b', 'gh-pages', 'origin/gh-pages'])
         else:
             git(['checkout', '--orphan', 'gh-pages'])
             git(['rm', '-rf', '.'])
