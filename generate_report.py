@@ -127,7 +127,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
   .tabs {{ display: flex; gap: 0; padding: 16px 24px 0; }}
   .tab {{ padding: 8px 20px; cursor: pointer; border-radius: 6px 6px 0 0;
           background: #ddd; font-size: 0.9rem; font-weight: 600; user-select: none; }}
-  .tab.active {{ background: #1a1a2e; border: 1px solid #1a1a2e; border-bottom: none; color: #fff; }}
+  .tab.active {{ background: #1a1a2e; border: 1px solid #1a1a2e; border-bottom: 1px solid #1a1a2e; color: #fff; }}
 
   .panel {{ display: none; padding: 0 24px 24px; }}
   .panel.active {{ display: block; }}
