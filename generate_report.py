@@ -106,7 +106,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KOSPI / KOSDAQ 과매수 과매도 확인</title>
+<title>KOSPI / KOSDAQ 매매과열</title>
 <style>
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: -apple-system, 'Malgun Gothic', sans-serif; background: #f5f5f5; color: #222; }}
@@ -151,7 +151,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
 <body>
 
 <header>
-  <h1>📊 KOSPI / KOSDAQ 과매수 과매도 확인</h1>
+  <h1>📊 KOSPI / KOSDAQ 매매과열</h1>
   <p>생성: {generated_at} &nbsp;|&nbsp; 수식: J=거래량비율, K=등락률비율 (KOSPI200/KOSDAQ150 기준), D=(J+K)/2</p>
 </header>
 
