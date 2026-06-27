@@ -173,7 +173,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
       <thead><tr>
         <th>날짜</th><th>SIO (%)</th><th>신호</th>
         <th>상승<br>종목수</th><th>하락<br>종목수</th>
-        <th>J<br>(거래대금)</th><th>K<br>(등락폭)</th>
+        <th>J<br>(거래량)</th><th>K<br>(등락률)</th>
       </tr></thead>
       <tbody>{kospi_rows}</tbody>
     </table>
@@ -186,7 +186,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
       <thead><tr>
         <th>날짜</th><th>SIO (%)</th><th>신호</th>
         <th>상승<br>종목수</th><th>하락<br>종목수</th>
-        <th>J<br>(거래대금)</th><th>K<br>(등락폭)</th>
+        <th>J<br>(거래량)</th><th>K<br>(등락률)</th>
       </tr></thead>
       <tbody>{kosdaq_rows}</tbody>
     </table>
