@@ -8,14 +8,14 @@ KOSPI/KOSDAQ SIO (Strength Index Oscillator) Calculator
 
   D = (J + K) / 2
   J = F / (F + G)   ← 상승종목 거래량 / (상승+하락 거래량)
-  K = H / (H + I)   ← 상승종목 등락폭(pt)합 / (상승+하락 등락폭(pt)합)
+  K = H / (H + I)   ← 상승종목 등락률(%)합 / (상승+하락 등락률(%)합)
 
   대상 종목: KOSPI → KOSPI 200 구성종목 (엑셀 B:GS = 200열)
              KOSDAQ → KOSDAQ 150 구성종목
   F = 상승종목 거래량 합
   G = 하락종목 거래량 합
-  H = 상승종목 등락폭(pt) 합  = 종가×등락률/100  (양수)
-  I = 하락종목 등락폭(pt) 절대값 합  (양수)
+  H = 상승종목 등락률(%) 합  (양수)
+  I = 하락종목 등락률(%) 절대값 합  (양수)
 """
 
 import os
@@ -85,26 +85,22 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     종목별 데이터프레임으로부터 SIO 계산.
 
     F/G = 거래량 기준 (엑셀 UPSIDE/DOWNSIDE 거래량 시트, KOSPI200/KOSDAQ150)
-    H/I = 등락폭(pt) 기준 = 종가 × 등락률/100
-          H = 상승종목 등락폭(pt) 합  (양수)
-          I = 하락종목 등락폭(pt) 절대값 합  (양수)
+    H/I = 등락률(%) 단순합 기준
+          H = 상승종목 등락률(%) 합  (양수)
+          I = 하락종목 등락률(%) 절대값 합  (양수)
 
     Returns dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
     """
     change_col = _find_column(df, ['등락률', '변동률', 'change', 'Change'])
     vol_col    = _find_column(df, ['거래량', 'Volume', 'volume'])
-    close_col  = _find_column(df, ['종가', 'Close', 'close'])
 
     if change_col is None:
         raise KeyError(f"등락률 컬럼 없음. 컬럼: {df.columns.tolist()}")
     if vol_col is None:
         raise KeyError(f"거래량 컬럼 없음. 컬럼: {df.columns.tolist()}")
-    if close_col is None:
-        raise KeyError(f"종가 컬럼 없음. 컬럼: {df.columns.tolist()}")
 
-    pct   = df[change_col].fillna(0)
-    vol   = df[vol_col].fillna(0)
-    close = df[close_col].fillna(0)
+    pct = df[change_col].fillna(0)
+    vol = df[vol_col].fillna(0)
 
     up = pct > 0
     dn = pct < 0
@@ -113,10 +109,9 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     F = vol[up].sum()
     G = vol[dn].sum()
 
-    # H, I : 등락폭(pt) = 종가 × 등락률/100
-    pt = close * pct / 100
-    H = pt[up].sum()
-    I = pt[dn].abs().sum()
+    # H, I : 등락률(%) 단순합
+    H = pct[up].sum()
+    I = pct[dn].abs().sum()
 
     J = F / (F + G) if (F + G) > 0 else 0.5
     K = H / (H + I) if (H + I) > 0 else 0.5
