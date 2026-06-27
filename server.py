@@ -26,7 +26,7 @@ def run_update():
     try:
         env = os.environ.copy()
         result = subprocess.run(
-            ['python3', os.path.join(BASE_DIR, 'generate_report.py'), '--no-open'],
+            ['python3', os.path.join(BASE_DIR, 'generate_report.py'), '--no-open', '--publish'],
             capture_output=True, text=True, env=env, cwd=BASE_DIR
         )
         if result.returncode == 0:
