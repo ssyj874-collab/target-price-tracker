@@ -130,6 +130,12 @@ def test_hypothesis(market: str, date_str: str, ref_sio: float):
     if cap_col:
         cap = raw[cap_col].fillna(0)
         j_candidates['cap'] = (cap[up].sum(), cap[dn].sum())
+        # 회전율 = 거래대금 / 시가총액 (개별종목 회전율 합산)
+        if val_col:
+            val2 = raw[val_col].fillna(0)
+            cap2 = cap.replace(0, float('nan'))
+            turnover = val2 / cap2
+            j_candidates['turnover'] = (turnover[up].sum(), turnover[dn].sum())
 
     # ── K 후보 ────────────────────────────────────────────────────────────
     k_candidates = {}
