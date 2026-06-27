@@ -7,11 +7,13 @@ KOSPI/KOSDAQ SIO (Strength Index Oscillator) Calculator
   SIO = -(1-D)×100   (D ≤ 0.5, 하락장)
 
   D = (J + K) / 2
-  J = F / (F + G)   ← 상승종목 거래대금 / (상승+하락 거래대금)
+  J = F / (F + G)   ← 상승종목 거래량 / (상승+하락 거래량)
   K = H / (H + I)   ← 상승종목 등락폭(pt)합 / (상승+하락 등락폭(pt)합)
 
-  F = 상승종목 거래대금 합 (ETF 제외)
-  G = 하락종목 거래대금 합
+  대상 종목: KOSPI → KOSPI 200 구성종목 (엑셀 B:GS = 200열)
+             KOSDAQ → KOSDAQ 150 구성종목
+  F = 상승종목 거래량 합
+  G = 하락종목 거래량 합
   H = 상승종목 등락폭(pt) 합  = 종가×등락률/100  (양수)
   I = 하락종목 등락폭(pt) 절대값 합  (양수)
 """
@@ -29,22 +31,40 @@ import numpy as np
 _ticker_cache: dict = {}
 
 
-def get_stock_only_tickers(date: str, market: str) -> set:
-    """ETF·스팩 제외 순수 주권 티커 목록 반환 (캐시됨)."""
+# 지수별 구성종목 인덱스 티커
+_INDEX_TICKER = {
+    'KOSPI':  '1028',  # KOSPI 200
+    'KOSDAQ': '2203',  # KOSDAQ 150
+}
+
+
+def get_index_tickers(date: str, market: str) -> set:
+    """KOSPI 200 / KOSDAQ 150 구성종목 티커 반환 (캐시됨)."""
     from pykrx import stock
 
     key = (date, market)
     if key not in _ticker_cache:
-        all_tickers = set(stock.get_market_ticker_list(date, market=market))
-        etf_tickers = set(stock.get_etf_ticker_list(date))
-        _ticker_cache[key] = all_tickers - etf_tickers
+        idx = _INDEX_TICKER.get(market)
+        try:
+            tickers = stock.get_index_portfolio_deposit_file(idx, date)
+            _ticker_cache[key] = set(tickers)
+        except Exception as e:
+            print(f"[WARN] {market} 지수 구성종목 조회 실패({e}), 전체 종목으로 대체")
+            all_t = set(stock.get_market_ticker_list(date, market=market))
+            etf_t = set(stock.get_etf_ticker_list(date))
+            _ticker_cache[key] = all_t - etf_t
     return _ticker_cache[key]
+
+
+# 하위 호환을 위해 유지
+def get_stock_only_tickers(date: str, market: str) -> set:
+    return get_index_tickers(date, market)
 
 
 def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.DataFrame:
     """
-    특정 날짜의 시장 전 종목 OHLCV + 등락률 반환.
-    exclude_etf=True 이면 ETF 제외 (엑셀과 동일 기준).
+    KOSPI 200 / KOSDAQ 150 구성종목의 OHLCV + 등락률 반환.
+    엑셀 원본: '코스피 SIO(태린이아빠).xlsx' B:GS(200열) = KOSPI 200
     """
     from pykrx import stock
 
@@ -52,11 +72,8 @@ def get_market_data(market: str, date: str, exclude_etf: bool = True) -> pd.Data
     if df.empty:
         return df
 
-    if exclude_etf:
-        valid = get_stock_only_tickers(date, market)
-        df = df[df.index.isin(valid)]
-
-    return df
+    valid = get_index_tickers(date, market)
+    return df[df.index.isin(valid)]
 
 
 # ---------------------------------------------------------------------------
@@ -67,7 +84,7 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     """
     종목별 데이터프레임으로부터 SIO 계산.
 
-    F/G = 거래대금 기준 (엑셀 원본과 동일)
+    F/G = 거래량 기준 (엑셀 UPSIDE/DOWNSIDE 거래량 시트, KOSPI200/KOSDAQ150)
     H/I = 등락폭(pt) 기준 = 종가 × 등락률/100
           H = 상승종목 등락폭(pt) 합  (양수)
           I = 하락종목 등락폭(pt) 절대값 합  (양수)
@@ -75,26 +92,26 @@ def calc_sio_from_raw(df: pd.DataFrame) -> dict:
     Returns dict: J, K, D, E, sio, F, G, H, I, advancing, declining, unchanged
     """
     change_col = _find_column(df, ['등락률', '변동률', 'change', 'Change'])
-    val_col    = _find_column(df, ['거래대금', 'Turnover', 'turnover'])
+    vol_col    = _find_column(df, ['거래량', 'Volume', 'volume'])
     close_col  = _find_column(df, ['종가', 'Close', 'close'])
 
     if change_col is None:
         raise KeyError(f"등락률 컬럼 없음. 컬럼: {df.columns.tolist()}")
-    if val_col is None:
-        raise KeyError(f"거래대금 컬럼 없음. 컬럼: {df.columns.tolist()}")
+    if vol_col is None:
+        raise KeyError(f"거래량 컬럼 없음. 컬럼: {df.columns.tolist()}")
     if close_col is None:
         raise KeyError(f"종가 컬럼 없음. 컬럼: {df.columns.tolist()}")
 
     pct   = df[change_col].fillna(0)
-    val   = df[val_col].fillna(0)
+    vol   = df[vol_col].fillna(0)
     close = df[close_col].fillna(0)
 
     up = pct > 0
     dn = pct < 0
 
-    # F, G : 거래대금
-    F = val[up].sum()
-    G = val[dn].sum()
+    # F, G : 거래량 (KOSPI 200 / KOSDAQ 150 기준)
+    F = vol[up].sum()
+    G = vol[dn].sum()
 
     # H, I : 등락폭(pt) = 종가 × 등락률/100
     pt = close * pct / 100
