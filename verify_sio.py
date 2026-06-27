@@ -189,27 +189,53 @@ if __name__ == '__main__':
 
     if args.single:
         date = args.single
-        from sio_calculator import get_market_data, calc_sio_from_raw
-        df = get_market_data(args.market, date)
-        r  = calc_sio_from_raw(df)
+        from pykrx import stock as _stock
+        from sio_calculator import get_stock_only_tickers, _find_column
+
+        raw = _stock.get_market_ohlcv(date, market=args.market)
+        valid = get_stock_only_tickers(date, args.market)
+        df = raw[raw.index.isin(valid)]
+
+        pct   = df['등락률'].fillna(0)
+        up    = pct > 0
+        dn    = pct < 0
+
+        vol   = df['거래량'].fillna(0)
+        val   = df['거래대금'].fillna(0)
+        cap   = df['시가총액'].fillna(0) if '시가총액' in df.columns else None
+        close = df['종가'].fillna(0)
+        pt    = close * pct / 100
+
+        F_vol = vol[up].sum();  G_vol = vol[dn].sum()
+        F_val = val[up].sum();  G_val = val[dn].sum()
+        F_cap = cap[up].sum() if cap is not None else 0
+        G_cap = cap[dn].sum() if cap is not None else 0
+
+        J_vol = F_vol/(F_vol+G_vol) if (F_vol+G_vol)>0 else 0.5
+        J_val = F_val/(F_val+G_val) if (F_val+G_val)>0 else 0.5
+        J_cap = F_cap/(F_cap+G_cap) if (F_cap+G_cap)>0 else 0.5
+        J_cnt = up.sum()/(up.sum()+dn.sum()) if (up.sum()+dn.sum())>0 else 0.5
+
+        H_pct = pct[up].sum();  I_pct = pct[dn].abs().sum()
+        H_pt  = pt[up].sum();   I_pt  = pt[dn].abs().sum()
+        K_pct = H_pct/(H_pct+I_pct) if (H_pct+I_pct)>0 else 0.5
+        K_pt  = H_pt/(H_pt+I_pt)   if (H_pt+I_pt)>0   else 0.5
+
+        print(f"\n{'='*60}")
+        print(f"{args.market} {date} — 원시 지표 분석 (ETF 제외)")
+        print(f"  상승:{up.sum()}  하락:{dn.sum()}  보합:{(pct==0).sum()}")
+        print(f"{'='*60}")
+        print(f"  J 후보:  count={J_cnt:.5f}  volume={J_vol:.5f}  value={J_val:.5f}  cap={J_cap:.5f}")
+        print(f"  K 후보:  pct={K_pct:.5f}  pt={K_pt:.5f}")
+
         if date in ref.index:
             xls = ref.loc[date]
-            print(f"\n{'='*60}")
-            print(f"{args.market} {date} — pykrx vs 엑셀")
-            print(f"{'='*60}")
-            print(f"  {'항목':8s}  {'pykrx':>12s}  {'엑셀':>12s}  {'차이':>10s}")
-            print(f"  {'-'*46}")
-            for key in ['J','K','D','sio']:
-                v  = r[key]
-                x  = float(xls[key])
-                print(f"  {key:8s}  {v:>12.5f}  {x:>12.5f}  {v-x:>+10.5f}")
-            print(f"  상승종목: {r['advancing']}  하락종목: {r['declining']}")
-            print(f"  F(거래량 up): {r['F']:.0f}  엑셀F: {float(xls['F']):.0f}")
-            print(f"  G(거래량 dn): {r['G']:.0f}  엑셀G: {float(xls['G']):.0f}")
-        else:
-            print(f"\n{args.market} {date} — 엑셀 레퍼런스 없음, pykrx만:")
-            for key in ['J','K','D','sio']:
-                print(f"  {key}: {r[key]:.5f}")
+            print(f"\n  엑셀: J={float(xls['J']):.5f}  K={float(xls['K']):.5f}  SIO={float(xls['sio']):.2f}")
+            print(f"  엑셀: F={float(xls['F']):.0f}  G={float(xls['G']):.0f}")
+            print(f"  pykrx 거래량:  F_up={F_vol:.0f}  G_dn={G_vol:.0f}")
+            print(f"  pykrx 거래대금: F_up={F_val:.0f}  G_dn={G_val:.0f}")
+            if cap is not None:
+                print(f"  pykrx 시가총액: F_up={F_cap:.0f}  G_dn={G_cap:.0f}")
         sys.exit(0)
 
     if args.days:
