@@ -7,73 +7,93 @@
   MACD       = EMA12 - EMA26
   시그널      = EMA(MACD, 9)
   오실레이터  = MACD - 시그널
-  20일매도합산 = 기관20일매도대금 + 외인20일매도대금
 """
 
 import os
+import json
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from pathlib import Path
 from dotenv import load_dotenv
 from pykrx import stock
 
 load_dotenv()
-os.environ.setdefault('KRX_ID', os.environ.get('KRX_ID', 'syj6718'))
-os.environ.setdefault('KRX_PW', os.environ.get('KRX_PW', 'song135!'))
+os.environ.setdefault('KRX_ID', 'syj6718')
+os.environ.setdefault('KRX_PW', 'song135!')
+
+CACHE_DIR = Path(__file__).parent / '.cache'
+CACHE_DIR.mkdir(exist_ok=True)
 
 
-def last_trading_day(date: str | None = None) -> str:
-    """주어진 날짜(또는 오늘) 기준 가장 최근 거래일 반환 (YYYYMMDD)"""
-    from pykrx import stock as _s
-    dt = datetime.strptime(date, '%Y%m%d') if date else datetime.today()
+# ── 마지막 거래일 ──────────────────────────────────────────────────────────
+
+def last_trading_day() -> str:
+    """오늘 기준 가장 최근 거래일 반환 (YYYYMMDD)"""
+    dt = datetime.today()
     for _ in range(10):
         candidate = dt.strftime('%Y%m%d')
         try:
-            df = _s.get_market_ohlcv_by_ticker(candidate, market='KOSPI')
-            if not df.empty:
+            idx = stock.get_index_ohlcv_by_date(candidate, candidate, '1001')
+            if not idx.empty:
                 return candidate
         except Exception:
             pass
         dt -= timedelta(days=1)
-    return dt.strftime('%Y%m%d')
+    return datetime.today().strftime('%Y%m%d')
 
 
-def _find_col(df: pd.DataFrame, candidates: list) -> str | None:
-    for c in candidates:
-        if c in df.columns:
-            return c
-    return None
+# ── 유니버스: 시가총액 상위 N종목 ───────────────────────────────────────────
 
+def get_top_n_by_marketcap(ref_date: str, n: int) -> list[str]:
+    """
+    시가총액 상위 N종목 티커 반환.
+    결과를 캐시 파일에 저장하므로 같은 날짜 재실행 시 즉시 반환.
+    """
+    cache_file = CACHE_DIR / f'universe_{ref_date}.json'
+    if cache_file.exists():
+        tickers = json.loads(cache_file.read_text())
+        print(f"  (캐시 로드: {ref_date}, {len(tickers)}종목)")
+        return tickers[:n]
 
-# ── 유니버스 ──────────────────────────────────────────────────────────────
-
-def get_top_n_by_marketcap(date: str, n: int, markets=('KOSPI', 'KOSDAQ')) -> list[str]:
-    """시가총액 상위 N개 종목 티커 반환"""
-    frames = []
-    for mkt in markets:
+    print(f"  시가총액 조회 중 (최초 1회, 약 10~20분 소요)...")
+    all_tickers = []
+    for mkt in ('KOSPI', 'KOSDAQ'):
         try:
-            df = stock.get_market_cap_by_ticker(date, market=mkt)
-            cap_col = _find_col(df, ['시가총액', 'Mkt Cap', 'MarketCap'])
-            if cap_col is None:
-                print(f"[WARN] {mkt} 시가총액 컬럼 없음. 실제 컬럼: {list(df.columns)}")
-                continue
-            frames.append(df[[cap_col]].rename(columns={cap_col: '시가총액'}))
+            t_list = stock.get_market_ticker_list(ref_date, market=mkt)
+            all_tickers += list(t_list)
         except Exception as e:
-            print(f"[WARN] {mkt} 시가총액 조회 실패: {e}")
-    if not frames:
-        return []
-    combined = pd.concat(frames).sort_values('시가총액', ascending=False)
-    return list(combined.index[:n])
+            print(f"  [WARN] {mkt} 종목 목록 조회 실패: {e}")
+
+    print(f"  전체 {len(all_tickers)}종목 시가총액 수집 중...")
+    caps = {}
+    total = len(all_tickers)
+    for i, ticker in enumerate(all_tickers, 1):
+        if i % 100 == 0:
+            print(f"\r  {i}/{total}...", end='', flush=True)
+        try:
+            df = stock.get_market_cap_by_date(ref_date, ref_date, ticker)
+            if not df.empty and '시가총액' in df.columns:
+                caps[ticker] = int(df['시가총액'].iloc[0])
+            else:
+                caps[ticker] = 0
+        except Exception:
+            caps[ticker] = 0
+
+    print()
+    sorted_tickers = sorted(caps, key=lambda t: caps[t], reverse=True)
+    cache_file.write_text(json.dumps(sorted_tickers))
+    print(f"  캐시 저장 완료: {cache_file}")
+    return sorted_tickers[:n]
 
 
-# ── 원시 데이터 수집 ───────────────────────────────────────────────────────
+# ── 데이터 수집 ────────────────────────────────────────────────────────────
 
 def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
                         verbose: bool = True) -> pd.DataFrame:
     """
     종목별 일자별 외인/기관 순매수대금 + 시가총액 수집
-    get_market_trading_value_by_date: 기관합계, 외국인합계 순매수대금(원)
-    get_market_cap_by_date: 시가총액(원)
+    컬럼: ticker, date, foreign_net, institution_net, market_cap (단위: 원)
     """
     rows = []
     total = len(tickers)
@@ -92,15 +112,13 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
         for dt in inv.index:
             if dt not in cap_map.index:
                 continue
-            row_inv = inv.loc[dt]
-            mktcap  = cap_map.loc[dt, '시가총액']
+            r = inv.loc[dt]
             rows.append({
                 'ticker':          ticker,
                 'date':            dt,
-                'foreign_net':     row_inv.get('외국인합계', 0),
-                'institution_net': row_inv.get('기관합계', 0),
-                'foreign_sell':    0,      # 별도 수집 불필요 (순매수 = 매수-매도)
-                'market_cap':      mktcap,
+                'foreign_net':     r.get('외국인합계', 0),
+                'institution_net': r.get('기관합계', 0),
+                'market_cap':      cap_map.loc[dt, '시가총액'],
             })
 
     if verbose:
@@ -113,84 +131,11 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
     return df.sort_values(['ticker', 'date'])
 
 
-def fetch_sell_data(tickers: list[str], fromdate: str, todate: str,
-                    verbose: bool = True) -> pd.DataFrame:
-    """
-    20일 누적매도합산용: 기관+외인 매도대금
-    get_market_trading_value_by_investor 로 기간 집계 (날짜별 필요시 날짜 루프)
-    """
-    rows = []
-    total = len(tickers)
-    for i, ticker in enumerate(tickers, 1):
-        if verbose and i % 50 == 0:
-            print(f"\r  {i}/{total} 매도데이터 수집 중...", end='', flush=True)
-        try:
-            inv = stock.get_market_trading_value_by_date(fromdate, todate, ticker)
-        except Exception:
-            continue
-        if inv.empty:
-            continue
-        for dt, row in inv.iterrows():
-            rows.append({
-                'ticker':           ticker,
-                'date':             dt,
-                # 매도는 순매수의 역산: 실제 매도 = (매수+매도)/2 - 순매수/2
-                # 여기서는 근사치로 순매수가 음수면 매도로 처리
-                'foreign_sell':     max(0, -row.get('외국인합계', 0)),
-                'institution_sell': max(0, -row.get('기관합계', 0)),
-            })
+# ── EMA / 오실레이터 계산 ─────────────────────────────────────────────────
 
-    if verbose:
-        print()
-    if not rows:
-        return pd.DataFrame()
-    df = pd.DataFrame(rows)
-    df['date'] = pd.to_datetime(df['date'])
-    return df.sort_values(['ticker', 'date'])
-
-
-def fetch_investor_sell_data_unused(tickers: list[str], fromdate: str, todate: str,
-                             verbose: bool = True) -> pd.DataFrame:
-    # 미사용 (fetch_sell_data로 대체됨)
-    rows = []
-    total = len(tickers)
-    for i, ticker in enumerate(tickers, 1):
-        if verbose and i % 50 == 0:
-            print(f"\r  {i}/{total} 매도데이터 수집 중...", end='', flush=True)
-        try:
-            df_trade = stock.get_market_trading_value_by_investor(
-                fromdate, todate, ticker
-            )
-        except Exception:
-            continue
-
-        if df_trade.empty:
-            continue
-
-        for dt, row in df_trade.iterrows():
-            rows.append({
-                'ticker':              ticker,
-                'date':                dt,
-                'foreign_sell':        abs(row.get('외국인', {}).get('매도', 0) if isinstance(row.get('외국인'), dict) else 0),
-                'institution_sell':    abs(row.get('기관합계', {}).get('매도', 0) if isinstance(row.get('기관합계'), dict) else 0),
-            })
-
-    if verbose:
-        print()
-    if not rows:
-        return pd.DataFrame()
-    df = pd.DataFrame(rows)
-    df['date'] = pd.to_datetime(df['date'])
-    return df.sort_values(['ticker', 'date'])
-
-
-# ── EMA 계산 ──────────────────────────────────────────────────────────────
-
-def ema(series: pd.Series, span: int) -> pd.Series:
+def _ema(series: pd.Series, span: int) -> pd.Series:
     return series.ewm(span=span, adjust=False).mean()
 
-
-# ── 수급오실레이터 계산 ────────────────────────────────────────────────────
 
 def calc_sugu_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
     """
@@ -201,55 +146,44 @@ def calc_sugu_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
 
     for ticker, grp in raw.groupby('ticker'):
         grp = grp.set_index('date').sort_index()
-
         if len(grp) < 30:
             continue
 
-        # 5일 누적 순매수 (rolling sum)
-        roll5_foreign      = grp['foreign_net'].rolling(5).sum()
-        roll5_institution  = grp['institution_net'].rolling(5).sum()
-
-        # 수급비율
+        roll5  = (grp['foreign_net'] + grp['institution_net']).rolling(5).sum()
         mktcap = grp['market_cap'].replace(0, np.nan)
-        sugu_ratio = (roll5_foreign + roll5_institution) / mktcap
+        ratio  = roll5 / mktcap
 
-        # MACD
-        ema12  = ema(sugu_ratio.dropna(), 12)
-        ema26  = ema(sugu_ratio.dropna(), 26)
+        valid = ratio.dropna()
+        if len(valid) < 26:
+            continue
+
+        ema12  = _ema(valid, 12)
+        ema26  = _ema(valid, 26)
         macd   = ema12 - ema26
-        signal = ema(macd, 9)
+        signal = _ema(macd, 9)
         osc    = macd - signal
 
-        latest_date = grp.index[-1]
         results.append({
             'ticker':     ticker,
-            'date':       latest_date,
-            'sugu_ratio': round(sugu_ratio.iloc[-1] * 100, 4) if not pd.isna(sugu_ratio.iloc[-1]) else None,
-            'macd':       round(macd.iloc[-1] * 100, 4) if len(macd) > 0 else None,
-            'signal':     round(signal.iloc[-1] * 100, 4) if len(signal) > 0 else None,
-            'oscillator': round(osc.iloc[-1] * 100, 4) if len(osc) > 0 else None,
+            'date':       grp.index[-1],
+            'macd':       round(macd.iloc[-1] * 100, 4),
+            'signal':     round(signal.iloc[-1] * 100, 4),
+            'oscillator': round(osc.iloc[-1] * 100, 4),
+            'ratio':      round(ratio.iloc[-1] * 100, 4) if not pd.isna(ratio.iloc[-1]) else None,
         })
 
     if not results:
         return pd.DataFrame()
 
-    result_df = pd.DataFrame(results).set_index('ticker')
-    return result_df.sort_values('oscillator', ascending=False)
+    return (pd.DataFrame(results)
+            .set_index('ticker')
+            .sort_values('oscillator', ascending=False))
 
 
 # ── 종목명 조회 ───────────────────────────────────────────────────────────
 
-def get_ticker_names(tickers: list[str], date: str) -> dict:
-    names = {}
-    for mkt in ('KOSPI', 'KOSDAQ'):
-        try:
-            tlist = stock.get_market_ticker_list(date, market=mkt)
-            for t in tlist:
-                if t in tickers:
-                    names[t] = stock.get_market_ticker_name(t)
-        except Exception:
-            pass
-    return names
+def get_ticker_names(tickers: list[str]) -> dict:
+    return {t: stock.get_market_ticker_name(t) for t in tickers}
 
 
 # ── 메인 ─────────────────────────────────────────────────────────────────
@@ -257,29 +191,29 @@ def get_ticker_names(tickers: list[str], date: str) -> dict:
 if __name__ == '__main__':
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
-    # EMA 계산에 충분한 기간 필요 (26+9+5 = 40일 + 여유)
     fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
 
-    print(f"기간: {fromdate} ~ {todate}")
-    print("시가총액 상위 700 종목 조회 중...")
+    ref_date = last_trading_day()
+    print(f"기준일: {ref_date}, 기간: {fromdate} ~ {todate}")
 
-    ref_date = last_trading_day(todate)
-    print(f"  (기준일: {ref_date})")
-    tickers  = get_top_n_by_marketcap(ref_date, 700)
+    print("시가총액 상위 700 종목 선정 중...")
+    tickers = get_top_n_by_marketcap(ref_date, 700)
     print(f"  → {len(tickers)}개 종목 선정")
+    print(f"  상위 10개: {tickers[:10]}")
 
-    # 테스트: 처음 5개만
+    # 상위 10개 이름 확인
+    names = get_ticker_names(tickers[:10])
+    for t, n in names.items():
+        print(f"    {t}: {n}")
+
+    # 테스트: 상위 5개만
     test_tickers = tickers[:5]
-    print(f"\n[테스트] 상위 5개 종목: {test_tickers}")
-
-    print("데이터 수집 중...")
+    print(f"\n데이터 수집 중 (테스트 5개)...")
     raw = fetch_investor_data(test_tickers, fromdate, todate)
     print(f"수집된 데이터: {len(raw)}행")
 
     if not raw.empty:
         result = calc_sugu_oscillator(raw)
-        names  = get_ticker_names(test_tickers, ref_date)
-
-        result['종목명'] = result.index.map(lambda t: names.get(t, t))
+        result['종목명'] = result.index.map(lambda t: stock.get_market_ticker_name(t))
         print("\n[수급오실레이터 결과]")
-        print(result[['종목명', 'sugu_ratio', 'macd', 'signal', 'oscillator']].to_string())
+        print(result[['종목명', 'ratio', 'macd', 'signal', 'oscillator']].to_string())
