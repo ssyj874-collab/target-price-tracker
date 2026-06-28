@@ -155,6 +155,7 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
     """
     info = kis_stock_info(ticker)
     shares = info['shares']
+    name   = info['name']
     time.sleep(0.05)
 
     if shares == 0:
@@ -184,13 +185,16 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
 
     combined = pd.concat(all_frames)
     combined = combined[~combined.index.duplicated(keep='first')].sort_index()
+    combined.attrs['name'] = name
     return combined
 
 
 # ── 데이터 수집 ────────────────────────────────────────────────────────────
 
-def fetch_all(tickers: list[str], fromdate: str, todate: str) -> pd.DataFrame:
+def fetch_all(tickers: list[str], fromdate: str, todate: str) -> tuple[pd.DataFrame, dict]:
+    """raw 데이터 + 종목명 dict 반환"""
     rows = []
+    names = {}
     total = len(tickers)
     for i, ticker in enumerate(tickers, 1):
         print(f"\r  {i}/{total} {ticker}...", end='', flush=True)
@@ -198,11 +202,12 @@ def fetch_all(tickers: list[str], fromdate: str, todate: str) -> pd.DataFrame:
         if not df.empty:
             df['ticker'] = ticker
             rows.append(df.reset_index())
+            names[ticker] = df.attrs.get('name', ticker)
 
     print()
     if not rows:
-        return pd.DataFrame()
-    return pd.concat(rows, ignore_index=True).sort_values(['ticker', 'date'])
+        return pd.DataFrame(), names
+    return pd.concat(rows, ignore_index=True).sort_values(['ticker', 'date']), names
 
 
 # ── 오실레이터 계산 ────────────────────────────────────────────────────────
@@ -211,18 +216,20 @@ def _ema(s: pd.Series, span: int) -> pd.Series:
     return s.ewm(span=span, adjust=False).mean()
 
 
-def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
+def calc_oscillator(raw: pd.DataFrame, names: dict = None) -> pd.DataFrame:
+    if names is None:
+        names = {}
     results = []
     for ticker, grp in raw.groupby('ticker'):
         grp = grp.set_index('date').sort_index()
         if len(grp) < 30:
             continue
 
-        net_buy = grp['foreign_net'] + grp['institution_net']
-        roll20_sum = net_buy.rolling(20).sum()   # 20일 누적 순매수대금합산 (표시용)
-        roll5  = net_buy.rolling(5).sum()        # 5일 누적 → 수급비율
-        mktcap = grp['market_cap'].replace(0, np.nan)
-        ratio  = roll5 / mktcap
+        net_buy    = grp['foreign_net'] + grp['institution_net']
+        roll20_sum = net_buy.rolling(20).sum()
+        roll5      = net_buy.rolling(5).sum()
+        mktcap     = grp['market_cap'].replace(0, np.nan)
+        ratio      = roll5 / mktcap
 
         valid = ratio.dropna()
         if len(valid) < 26:
@@ -234,21 +241,36 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
         signal = _ema(macd, 9)
         osc    = macd - signal
 
-        # 20일 누적합산: 단위 원 → 억원
         net20_eok = round(roll20_sum.iloc[-1] / 1_0000_0000, 1)
 
+        # 히스토리: 차트용 시계열
+        history = []
+        for dt in grp.index:
+            dt_str = dt.strftime('%Y-%m-%d')
+            mc     = grp.loc[dt, 'market_cap']
+            n20    = roll20_sum.get(dt)
+            o      = osc.get(dt) if dt in osc.index else None
+            history.append({
+                'date':    dt_str,
+                'mktcap':  round(mc / 1_0000_0000, 1) if mc and mc > 0 else None,
+                'net20':   round(-n20 / 1_0000_0000, 1) if n20 is not None and not np.isnan(n20) else None,
+                'osc':     round(o * 100, 4) if o is not None and not np.isnan(o) else None,
+            })
+
         results.append({
-            'ticker':        ticker,
-            'date':          grp.index[-1],
-            '20일누적합산(억)': net20_eok,
-            'macd':          round(macd.iloc[-1] * 100, 4),
-            'signal':        round(signal.iloc[-1] * 100, 4),
-            'oscillator':    round(osc.iloc[-1] * 100, 4),
+            'ticker':     ticker,
+            'name':       names.get(ticker, ticker),
+            'date':       grp.index[-1],
+            'net20':      net20_eok,
+            'macd':       round(macd.iloc[-1] * 100, 4),
+            'signal':     round(signal.iloc[-1] * 100, 4),
+            'oscillator': round(osc.iloc[-1] * 100, 4),
+            'history':    history,
         })
 
     if not results:
         return pd.DataFrame()
-    return pd.DataFrame(results).set_index('ticker').sort_values('20일누적합산(억)', ascending=False)
+    return pd.DataFrame(results).set_index('ticker').sort_values('net20', ascending=True)
 
 
 # ── 메인 ─────────────────────────────────────────────────────────────────
@@ -289,12 +311,19 @@ def run_full(n: int = 700):
     else:
         raw = None
 
+    names_cache_file = CACHE_DIR / f'names_{ref_date}.json'
+    names = {}
+
     if raw is None:
         print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
-        raw = fetch_all(tickers, fromdate, todate)
+        raw, names = fetch_all(tickers, fromdate, todate)
         if not raw.empty:
             raw.to_parquet(RAW_CACHE)
+            names_cache_file.write_text(json.dumps(names, ensure_ascii=False))
             print(f"  캐시 저장: {RAW_CACHE}")
+    else:
+        if names_cache_file.exists():
+            names = json.loads(names_cache_file.read_text())
 
     print(f"수집된 데이터: {len(raw)}행")
 
@@ -302,19 +331,16 @@ def run_full(n: int = 700):
         print("데이터 없음")
         return
 
-    result = calc_oscillator(raw)
+    result = calc_oscillator(raw, names)
     if result.empty:
         print("계산 결과 없음 (데이터 부족)")
         return
 
-    # 부호 조정: 20일누적합산은 순매도 양수로 표시
-    result['20일누적합산(억)'] = -result['20일누적합산(억)']
-
     print(f"\n[수급오실레이터 결과] {len(result)}종목")
-    print(result[['20일누적합산(억)', 'macd', 'signal', 'oscillator']].head(20).to_string())
+    print(result[['name', 'net20', 'oscillator']].head(20).to_string())
 
     # JSON 저장
-    df_out = result.reset_index().rename(columns={'20일누적합산(억)': 'net20'})
+    df_out = result.reset_index()
     df_out['date'] = df_out['date'].dt.strftime('%Y-%m-%d')
     out = {
         'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
