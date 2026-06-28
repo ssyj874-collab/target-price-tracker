@@ -218,9 +218,9 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
         if len(grp) < 30:
             continue
 
-        roll5  = (grp['foreign_net'] + grp['institution_net']).rolling(5).sum()
+        roll20 = (grp['foreign_net'] + grp['institution_net']).rolling(20).sum()
         mktcap = grp['market_cap'].replace(0, np.nan)
-        ratio  = roll5 / mktcap
+        ratio  = roll20 / mktcap
 
         valid = ratio.dropna()
         if len(valid) < 26:
@@ -259,7 +259,7 @@ def last_trading_day() -> str:
 if __name__ == '__main__':
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
-    fromdate = (today - timedelta(days=90)).strftime('%Y%m%d')
+    fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
 
     print(f"기준일: {last_trading_day()}, 기간: {fromdate} ~ {todate}")
 
