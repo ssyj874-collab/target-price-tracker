@@ -262,32 +262,53 @@ def last_trading_day() -> str:
     return datetime.today().strftime('%Y%m%d')
 
 
-if __name__ == '__main__':
+OUTPUT_FILE = Path(__file__).parent / 'sugu_result.json'
+
+
+def run_full(n: int = 700):
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
     fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
+    ref_date = last_trading_day()
 
-    print(f"기준일: {last_trading_day()}, 기간: {fromdate} ~ {todate}")
+    print(f"기준일: {ref_date}, 기간: {fromdate} ~ {todate}")
 
     print("유니버스 로드 중...")
-    tickers = load_universe()
+    tickers = load_universe()[:n]
     print(f"  → {len(tickers)}개 종목")
-    print(f"  상위 10: {tickers[:10]}")
 
-    # 테스트: 상위 5개
-    test_tickers = tickers[:5]
-    print(f"\n투자자 데이터 수집 중 (테스트 5개)...")
-    raw = fetch_all(test_tickers, fromdate, todate)
+    print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
+    raw = fetch_all(tickers, fromdate, todate)
     print(f"수집된 데이터: {len(raw)}행")
 
-    if not raw.empty:
-        print(f"\n종목별 데이터 수:")
-        for t, g in raw.groupby('ticker'):
-            print(f"  {t}: {len(g)}행, market_cap 비율: {(g['market_cap']>0).mean():.0%}")
+    if raw.empty:
+        print("데이터 없음")
+        return
 
-        result = calc_oscillator(raw)
-        if result.empty:
-            print("데이터 부족 (각 종목당 최소 30일 필요). 기간을 늘려야 합니다.")
-        else:
-            print("\n[수급오실레이터 결과]")
-            print(result[['20일누적합산(억)', 'macd', 'signal', 'oscillator']].to_string())
+    result = calc_oscillator(raw)
+    if result.empty:
+        print("계산 결과 없음 (데이터 부족)")
+        return
+
+    # 부호 조정: 20일누적합산은 순매도 양수로 표시
+    result['20일누적합산(억)'] = -result['20일누적합산(억)']
+
+    print(f"\n[수급오실레이터 결과] {len(result)}종목")
+    print(result[['20일누적합산(억)', 'macd', 'signal', 'oscillator']].head(20).to_string())
+
+    # JSON 저장
+    out = {
+        'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
+        'ref_date':   ref_date,
+        'data': result.reset_index().rename(columns={
+            '20일누적합산(억)': 'net20',
+        }).to_dict(orient='records'),
+    }
+    OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2))
+    print(f"\n저장 완료: {OUTPUT_FILE}")
+
+
+if __name__ == '__main__':
+    import sys
+    n = int(sys.argv[1]) if len(sys.argv) > 1 else 700
+    run_full(n)
