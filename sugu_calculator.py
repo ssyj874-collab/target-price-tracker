@@ -297,12 +297,12 @@ def run_full(n: int = 700):
     print(result[['20일누적합산(억)', 'macd', 'signal', 'oscillator']].head(20).to_string())
 
     # JSON 저장
+    df_out = result.reset_index().rename(columns={'20일누적합산(억)': 'net20'})
+    df_out['date'] = df_out['date'].dt.strftime('%Y-%m-%d')
     out = {
         'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
         'ref_date':   ref_date,
-        'data': result.reset_index().rename(columns={
-            '20일누적합산(억)': 'net20',
-        }).to_dict(orient='records'),
+        'data': df_out.to_dict(orient='records'),
     }
     OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2))
     print(f"\n저장 완료: {OUTPUT_FILE}")
