@@ -218,9 +218,11 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
         if len(grp) < 30:
             continue
 
-        roll20 = (grp['foreign_net'] + grp['institution_net']).rolling(20).sum()
+        net_buy = grp['foreign_net'] + grp['institution_net']
+        roll20_sum = net_buy.rolling(20).sum()   # 20일 누적 순매수대금합산 (표시용)
+        roll5  = net_buy.rolling(5).sum()        # 5일 누적 → 수급비율
         mktcap = grp['market_cap'].replace(0, np.nan)
-        ratio  = roll20 / mktcap
+        ratio  = roll5 / mktcap
 
         valid = ratio.dropna()
         if len(valid) < 26:
@@ -232,17 +234,21 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
         signal = _ema(macd, 9)
         osc    = macd - signal
 
+        # 20일 누적합산: 단위 원 → 억원
+        net20_eok = round(roll20_sum.iloc[-1] / 1_0000_0000, 1)
+
         results.append({
-            'ticker':     ticker,
-            'date':       grp.index[-1],
-            'macd':       round(macd.iloc[-1] * 100, 4),
-            'signal':     round(signal.iloc[-1] * 100, 4),
-            'oscillator': round(osc.iloc[-1] * 100, 4),
+            'ticker':        ticker,
+            'date':          grp.index[-1],
+            '20일누적합산(억)': net20_eok,
+            'macd':          round(macd.iloc[-1] * 100, 4),
+            'signal':        round(signal.iloc[-1] * 100, 4),
+            'oscillator':    round(osc.iloc[-1] * 100, 4),
         })
 
     if not results:
         return pd.DataFrame()
-    return pd.DataFrame(results).set_index('ticker').sort_values('oscillator', ascending=False)
+    return pd.DataFrame(results).set_index('ticker').sort_values('20일누적합산(억)', ascending=False)
 
 
 # ── 메인 ─────────────────────────────────────────────────────────────────
@@ -284,4 +290,4 @@ if __name__ == '__main__':
             print("데이터 부족 (각 종목당 최소 30일 필요). 기간을 늘려야 합니다.")
         else:
             print("\n[수급오실레이터 결과]")
-            print(result[['macd', 'signal', 'oscillator']].to_string())
+            print(result[['20일누적합산(억)', 'macd', 'signal', 'oscillator']].to_string())
