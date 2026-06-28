@@ -29,16 +29,11 @@ CACHE_DIR.mkdir(exist_ok=True)
 # ── 마지막 거래일 ──────────────────────────────────────────────────────────
 
 def last_trading_day() -> str:
-    """오늘 기준 가장 최근 거래일 반환 (YYYYMMDD)"""
+    """오늘 기준 가장 최근 평일 반환 (YYYYMMDD). 주말만 제외, 공휴일은 무시."""
     dt = datetime.today()
     for _ in range(10):
-        candidate = dt.strftime('%Y%m%d')
-        try:
-            idx = stock.get_index_ohlcv_by_date(candidate, candidate, '1001')
-            if not idx.empty:
-                return candidate
-        except Exception:
-            pass
+        if dt.weekday() < 5:  # 월(0)~금(4)
+            return dt.strftime('%Y%m%d')
         dt -= timedelta(days=1)
     return datetime.today().strftime('%Y%m%d')
 
@@ -49,12 +44,19 @@ def get_top_n_by_marketcap(ref_date: str, n: int) -> list[str]:
     """
     시가총액 상위 N종목 티커 반환.
     결과를 캐시 파일에 저장하므로 같은 날짜 재실행 시 즉시 반환.
+    최근 5거래일 캐시도 재사용.
     """
-    cache_file = CACHE_DIR / f'universe_{ref_date}.json'
-    if cache_file.exists():
-        tickers = json.loads(cache_file.read_text())
-        print(f"  (캐시 로드: {ref_date}, {len(tickers)}종목)")
-        return tickers[:n]
+    # 최근 5일치 캐시 중 유효한 것 찾기
+    dt = datetime.strptime(ref_date, '%Y%m%d')
+    for _ in range(10):
+        candidate = dt.strftime('%Y%m%d')
+        cache_file = CACHE_DIR / f'universe_{candidate}.json'
+        if cache_file.exists():
+            tickers = json.loads(cache_file.read_text())
+            if len(tickers) > 0:
+                print(f"  (캐시 로드: {candidate}, {len(tickers)}종목)")
+                return tickers[:n]
+        dt -= timedelta(days=1)
 
     print(f"  시가총액 조회 중 (최초 1회, 약 10~20분 소요)...")
     all_tickers = []
