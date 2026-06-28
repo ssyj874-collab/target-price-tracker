@@ -56,9 +56,8 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
                         verbose: bool = True) -> pd.DataFrame:
     """
     종목별 일자별 외인/기관 순매수대금 + 시가총액 수집
-    반환 컬럼: ticker, date, foreign_net, institution_net,
-               foreign_sell, institution_sell, market_cap
-    단위: 순매수/매도대금 → 원(KRX 기준), 시가총액 → 원
+    get_market_trading_value_by_date: 기관합계, 외국인합계 순매수대금(원)
+    get_market_cap_by_date: 시가총액(원)
     """
     rows = []
     total = len(tickers)
@@ -66,12 +65,7 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
         if verbose and i % 50 == 0:
             print(f"\r  {i}/{total} 수집 중...", end='', flush=True)
         try:
-            # 투자자별 순매수 (단위: 주)
-            inv = stock.get_market_net_purchases_of_investor(
-                fromdate, todate, ticker
-            )
-            # 시가총액 일별
-            cap = stock.get_market_ohlcv_by_date(fromdate, todate, ticker)[['종가']]
+            inv     = stock.get_market_trading_value_by_date(fromdate, todate, ticker)
             cap_map = stock.get_market_cap_by_date(fromdate, todate, ticker)[['시가총액']]
         except Exception:
             continue
@@ -85,11 +79,12 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
             row_inv = inv.loc[dt]
             mktcap  = cap_map.loc[dt, '시가총액']
             rows.append({
-                'ticker':           ticker,
-                'date':             dt,
-                'foreign_net':      row_inv.get('외국인', 0),
-                'institution_net':  row_inv.get('기관합계', 0),
-                'market_cap':       mktcap,
+                'ticker':          ticker,
+                'date':            dt,
+                'foreign_net':     row_inv.get('외국인합계', 0),
+                'institution_net': row_inv.get('기관합계', 0),
+                'foreign_sell':    0,      # 별도 수집 불필요 (순매수 = 매수-매도)
+                'market_cap':      mktcap,
             })
 
     if verbose:
@@ -102,11 +97,45 @@ def fetch_investor_data(tickers: list[str], fromdate: str, todate: str,
     return df.sort_values(['ticker', 'date'])
 
 
-def fetch_investor_sell_data(tickers: list[str], fromdate: str, todate: str,
+def fetch_sell_data(tickers: list[str], fromdate: str, todate: str,
+                    verbose: bool = True) -> pd.DataFrame:
+    """
+    20일 누적매도합산용: 기관+외인 매도대금
+    get_market_trading_value_by_investor 로 기간 집계 (날짜별 필요시 날짜 루프)
+    """
+    rows = []
+    total = len(tickers)
+    for i, ticker in enumerate(tickers, 1):
+        if verbose and i % 50 == 0:
+            print(f"\r  {i}/{total} 매도데이터 수집 중...", end='', flush=True)
+        try:
+            inv = stock.get_market_trading_value_by_date(fromdate, todate, ticker)
+        except Exception:
+            continue
+        if inv.empty:
+            continue
+        for dt, row in inv.iterrows():
+            rows.append({
+                'ticker':           ticker,
+                'date':             dt,
+                # 매도는 순매수의 역산: 실제 매도 = (매수+매도)/2 - 순매수/2
+                # 여기서는 근사치로 순매수가 음수면 매도로 처리
+                'foreign_sell':     max(0, -row.get('외국인합계', 0)),
+                'institution_sell': max(0, -row.get('기관합계', 0)),
+            })
+
+    if verbose:
+        print()
+    if not rows:
+        return pd.DataFrame()
+    df = pd.DataFrame(rows)
+    df['date'] = pd.to_datetime(df['date'])
+    return df.sort_values(['ticker', 'date'])
+
+
+def fetch_investor_sell_data_unused(tickers: list[str], fromdate: str, todate: str,
                              verbose: bool = True) -> pd.DataFrame:
-    """
-    종목별 일자별 외인/기관 매도대금 수집 (20일 누적 매도합산용)
-    """
+    # 미사용 (fetch_sell_data로 대체됨)
     rows = []
     total = len(tickers)
     for i, ticker in enumerate(tickers, 1):
