@@ -109,37 +109,53 @@ def kis_market_cap_ranking(top_n: int = 700) -> list[dict]:
 
 
 def get_top_n_tickers(ref_date: str, n: int) -> list[str]:
-    """시가총액 상위 N종목 티커 반환 (캐시)"""
+    """시가총액 상위 N종목 티커 반환 (캐시 우선)"""
     dt = datetime.strptime(ref_date, '%Y%m%d')
-    for _ in range(7):
+    for _ in range(10):
         candidate = dt.strftime('%Y%m%d')
-        cache_file = CACHE_DIR / f'universe_kis_{candidate}.json'
-        if cache_file.exists():
-            data = json.loads(cache_file.read_text())
-            if data:
-                print(f"  (캐시 로드: {candidate}, {len(data)}종목)")
-                return [d['ticker'] for d in data[:n]]
+        # KIS 캐시 (dict 형태)
+        kis_cache = CACHE_DIR / f'universe_kis_{candidate}.json'
+        if kis_cache.exists():
+            data = json.loads(kis_cache.read_text())
+            if isinstance(data, list) and len(data) > 0:
+                # dict 리스트이면 ticker 추출, 문자열 리스트이면 그대로
+                if isinstance(data[0], dict):
+                    tickers = list({d['ticker']: None for d in data}.keys())  # 중복 제거
+                else:
+                    tickers = data
+                if len(tickers) >= n:
+                    print(f"  (KIS 캐시 로드: {candidate}, {len(tickers)}종목)")
+                    return tickers[:n]
+        # pykrx 캐시 (문자열 리스트 형태)
+        pykrx_cache = CACHE_DIR / f'universe_{candidate}.json'
+        if pykrx_cache.exists():
+            tickers = json.loads(pykrx_cache.read_text())
+            if len(tickers) >= n:
+                print(f"  (pykrx 캐시 로드: {candidate}, {len(tickers)}종목)")
+                return tickers[:n]
         dt -= timedelta(days=1)
 
     print("  KIS API 시가총액 순위 조회 중...")
     ranking = kis_market_cap_ranking(top_n=n)
     if not ranking:
-        raise RuntimeError("시가총액 순위 조회 실패")
+        raise RuntimeError("시가총액 순위 조회 실패 - 캐시도 없음")
 
     cache_file = CACHE_DIR / f'universe_kis_{ref_date}.json'
     cache_file.write_text(json.dumps(ranking, ensure_ascii=False))
-    print(f"  캐시 저장: {len(ranking)}종목")
-    return [d['ticker'] for d in ranking[:n]]
+    tickers = list({d['ticker']: None for d in ranking}.keys())
+    print(f"  캐시 저장: {len(tickers)}종목")
+    return tickers[:n]
 
 
 def get_ticker_names_from_cache(ref_date: str) -> dict:
     dt = datetime.strptime(ref_date, '%Y%m%d')
-    for _ in range(7):
+    for _ in range(10):
         candidate = dt.strftime('%Y%m%d')
-        cache_file = CACHE_DIR / f'universe_kis_{candidate}.json'
-        if cache_file.exists():
-            data = json.loads(cache_file.read_text())
-            return {d['ticker']: d['name'] for d in data}
+        kis_cache = CACHE_DIR / f'universe_kis_{candidate}.json'
+        if kis_cache.exists():
+            data = json.loads(kis_cache.read_text())
+            if isinstance(data, list) and data and isinstance(data[0], dict):
+                return {d['ticker']: d['name'] for d in data}
         dt -= timedelta(days=1)
     return {}
 
@@ -291,6 +307,10 @@ if __name__ == '__main__':
 
     if not raw.empty:
         result = calc_oscillator(raw)
-        result['종목명'] = result.index.map(lambda t: names.get(t, t))
-        print("\n[수급오실레이터 결과]")
-        print(result[['종목명', 'macd', 'signal', 'oscillator']].to_string())
+        if result.empty:
+            print("데이터 부족 (각 종목당 최소 30일 필요). 기간을 늘려야 합니다.")
+        else:
+            result['종목명'] = result.index.map(lambda t: names.get(t, t))
+            print("\n[수급오실레이터 결과]")
+            cols = [c for c in ['종목명', 'macd', 'signal', 'oscillator'] if c in result.columns]
+            print(result[cols].to_string())
