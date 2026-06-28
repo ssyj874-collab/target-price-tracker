@@ -263,6 +263,7 @@ def last_trading_day() -> str:
 
 
 OUTPUT_FILE = Path(__file__).parent / 'sugu_result.json'
+RAW_CACHE   = CACHE_DIR / 'sugu_raw_cache.parquet'
 
 
 def run_full(n: int = 700):
@@ -277,8 +278,24 @@ def run_full(n: int = 700):
     tickers = load_universe()[:n]
     print(f"  → {len(tickers)}개 종목")
 
-    print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
-    raw = fetch_all(tickers, fromdate, todate)
+    # 오늘 캐시가 있으면 API 재호출 생략
+    if RAW_CACHE.exists():
+        cache_mtime = datetime.fromtimestamp(RAW_CACHE.stat().st_mtime).strftime('%Y%m%d')
+        if cache_mtime == ref_date:
+            print(f"  (오늘 캐시 로드: {RAW_CACHE})")
+            raw = pd.read_parquet(RAW_CACHE)
+        else:
+            raw = None
+    else:
+        raw = None
+
+    if raw is None:
+        print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
+        raw = fetch_all(tickers, fromdate, todate)
+        if not raw.empty:
+            raw.to_parquet(RAW_CACHE)
+            print(f"  캐시 저장: {RAW_CACHE}")
+
     print(f"수집된 데이터: {len(raw)}행")
 
     if raw.empty:
