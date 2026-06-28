@@ -10,10 +10,23 @@
   20일매도합산 = 기관20일매도대금 + 외인20일매도대금
 """
 
+import os
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 from pykrx import stock
+
+load_dotenv()
+os.environ.setdefault('KRX_ID', os.environ.get('KRX_ID', 'syj6718'))
+os.environ.setdefault('KRX_PW', os.environ.get('KRX_PW', 'song135!'))
+
+
+def _find_col(df: pd.DataFrame, candidates: list) -> str | None:
+    for c in candidates:
+        if c in df.columns:
+            return c
+    return None
 
 
 # ── 유니버스 ──────────────────────────────────────────────────────────────
@@ -24,7 +37,11 @@ def get_top_n_by_marketcap(date: str, n: int, markets=('KOSPI', 'KOSDAQ')) -> li
     for mkt in markets:
         try:
             df = stock.get_market_cap_by_ticker(date, market=mkt)
-            frames.append(df[['시가총액']])
+            cap_col = _find_col(df, ['시가총액', 'Mkt Cap', 'MarketCap'])
+            if cap_col is None:
+                print(f"[WARN] {mkt} 시가총액 컬럼 없음. 실제 컬럼: {list(df.columns)}")
+                continue
+            frames.append(df[[cap_col]].rename(columns={cap_col: '시가총액'}))
         except Exception as e:
             print(f"[WARN] {mkt} 시가총액 조회 실패: {e}")
     if not frames:
