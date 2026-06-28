@@ -22,6 +22,22 @@ os.environ.setdefault('KRX_ID', os.environ.get('KRX_ID', 'syj6718'))
 os.environ.setdefault('KRX_PW', os.environ.get('KRX_PW', 'song135!'))
 
 
+def last_trading_day(date: str | None = None) -> str:
+    """주어진 날짜(또는 오늘) 기준 가장 최근 거래일 반환 (YYYYMMDD)"""
+    from pykrx import stock as _s
+    dt = datetime.strptime(date, '%Y%m%d') if date else datetime.today()
+    for _ in range(10):
+        candidate = dt.strftime('%Y%m%d')
+        try:
+            df = _s.get_market_ohlcv_by_ticker(candidate, market='KOSPI')
+            if not df.empty:
+                return candidate
+        except Exception:
+            pass
+        dt -= timedelta(days=1)
+    return dt.strftime('%Y%m%d')
+
+
 def _find_col(df: pd.DataFrame, candidates: list) -> str | None:
     for c in candidates:
         if c in df.columns:
@@ -247,7 +263,8 @@ if __name__ == '__main__':
     print(f"기간: {fromdate} ~ {todate}")
     print("시가총액 상위 700 종목 조회 중...")
 
-    ref_date = today.strftime('%Y%m%d')
+    ref_date = last_trading_day(todate)
+    print(f"  (기준일: {ref_date})")
     tickers  = get_top_n_by_marketcap(ref_date, 700)
     print(f"  → {len(tickers)}개 종목 선정")
 
