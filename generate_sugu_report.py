@@ -73,10 +73,11 @@ def generate():
 
     rows_str = '\n'.join(rows_html)
 
-    # oscillator 히스토그램 데이터 (chart.js용)
-    osc_values = [row.get('oscillator', 0) for row in data_sorted]
-    osc_labels = [names.get(row.get('ticker',''), row.get('ticker','')) for row in data_sorted]
-    osc_colors = ["'rgba(192,57,43,0.7)'" if v > 0 else "'rgba(41,128,185,0.7)'" for v in osc_values]
+    # 차트 데이터 (f-string 밖에서 미리 직렬화)
+    chart_data_json = json.dumps([
+        {'l': names.get(r.get('ticker',''), r.get('ticker','')), 'v': r.get('oscillator', 0)}
+        for r in data_sorted
+    ], ensure_ascii=False)
 
     html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -182,7 +183,7 @@ def generate():
 
 <script>
 // 차트 (상위 25 + 하위 25)
-const allData = {json.dumps([{{'l': names.get(r.get('ticker',''), r.get('ticker','')), 'v': r.get('oscillator',0)}} for r in data_sorted])};
+const allData = {chart_data_json};
 const top25  = allData.slice(0, 25);
 const bot25  = allData.slice(-25).reverse();
 const chartData = [...top25, ...bot25];
