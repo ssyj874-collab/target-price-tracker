@@ -28,6 +28,8 @@ TOKEN_FILE = Path(__file__).parent / 'kis_token.json'
 CACHE_DIR  = Path(__file__).parent / '.cache'
 CACHE_DIR.mkdir(exist_ok=True)
 
+UNIVERSE_FILE = Path(__file__).parent / 'universe_700.json'
+
 
 # ── KIS API 인증 ──────────────────────────────────────────────────────────
 
@@ -61,109 +63,21 @@ def _h(tr_id: str) -> dict:
     }
 
 
-# ── KIS API: 유니버스 (시가총액 순위) ─────────────────────────────────────
+# ── 유니버스: universe_700.json 로드 ─────────────────────────────────────
 
-def kis_market_cap_ranking(top_n: int = 700) -> list[dict]:
-    """
-    KIS API 시가총액 순위 조회 (KOSPI + KOSDAQ)
-    반환: [{'ticker': '005930', 'name': '삼성전자', 'market_cap': ...}, ...]  시총 내림차순
-    """
-    results = []
-    for blng_cls_code in ('1', '2'):  # 1=KOSPI, 2=KOSDAQ
-        params = {
-            'fid_cond_mrkt_div_code': 'J',
-            'fid_cond_scr_div_code':  '20174',
-            'fid_input_iscd':         '0000',
-            'fid_div_cls_code':       '0',
-            'fid_blng_cls_code':      blng_cls_code,
-            'fid_trgt_cls_code':      '0',
-            'fid_trgt_exls_cls_code': '0',
-            'fid_input_price_1':      '',
-            'fid_input_price_2':      '',
-            'fid_vol_cnt':            '500',
-            'fid_input_date_1':       '',
-        }
-        try:
-            resp = requests.get(
-                f'{BASE_URL}/uapi/domestic-stock/v1/ranking/market-cap',
-                headers=_h('FHPST01740000'),
-                params=params, timeout=10,
-            )
-            data = resp.json()
-            if data.get('rt_cd') != '0':
-                print(f"[WARN] 시가총액 순위 오류: {data.get('msg1')}")
-                continue
-            for row in data.get('output', []):
-                results.append({
-                    'ticker':     row.get('mksc_shrn_iscd', ''),
-                    'name':       row.get('hts_kor_isnm', ''),
-                    'market_cap': int(row.get('stck_avls', 0)) * 100_000_000,
-                })
-        except Exception as e:
-            print(f"[WARN] 시가총액 순위 조회 실패: {e}")
-        time.sleep(0.1)
-
-    # KOSPI+KOSDAQ 합산 후 시총 내림차순 정렬
-    results.sort(key=lambda x: x['market_cap'], reverse=True)
-    return results[:top_n]
+def load_universe() -> list[str]:
+    """universe_700.json에서 고정 700종목 티커 로드"""
+    if not UNIVERSE_FILE.exists():
+        raise FileNotFoundError(f"유니버스 파일 없음: {UNIVERSE_FILE}")
+    tickers = json.loads(UNIVERSE_FILE.read_text())
+    print(f"  유니버스 로드: {len(tickers)}종목 (universe_700.json)")
+    return tickers
 
 
-def get_top_n_tickers(ref_date: str, n: int) -> list[str]:
-    """시가총액 상위 N종목 티커 반환 (캐시 우선)"""
-    dt = datetime.strptime(ref_date, '%Y%m%d')
-    for _ in range(10):
-        candidate = dt.strftime('%Y%m%d')
-        # KIS 캐시 (dict 형태)
-        kis_cache = CACHE_DIR / f'universe_kis_{candidate}.json'
-        if kis_cache.exists():
-            data = json.loads(kis_cache.read_text())
-            if isinstance(data, list) and len(data) > 0:
-                # dict 리스트이면 ticker 추출, 문자열 리스트이면 그대로
-                if isinstance(data[0], dict):
-                    tickers = list({d['ticker']: None for d in data}.keys())  # 중복 제거
-                else:
-                    tickers = data
-                if len(tickers) >= n:
-                    print(f"  (KIS 캐시 로드: {candidate}, {len(tickers)}종목)")
-                    return tickers[:n]
-        # pykrx 캐시 (문자열 리스트 형태)
-        pykrx_cache = CACHE_DIR / f'universe_{candidate}.json'
-        if pykrx_cache.exists():
-            tickers = json.loads(pykrx_cache.read_text())
-            if len(tickers) >= n:
-                print(f"  (pykrx 캐시 로드: {candidate}, {len(tickers)}종목)")
-                return tickers[:n]
-        dt -= timedelta(days=1)
+# ── KIS API: 종목 현재가 (상장주식수 + 종목명) ────────────────────────────
 
-    print("  KIS API 시가총액 순위 조회 중...")
-    ranking = kis_market_cap_ranking(top_n=n)
-    if not ranking:
-        raise RuntimeError("시가총액 순위 조회 실패 - 캐시도 없음")
-
-    cache_file = CACHE_DIR / f'universe_kis_{ref_date}.json'
-    cache_file.write_text(json.dumps(ranking, ensure_ascii=False))
-    tickers = list({d['ticker']: None for d in ranking}.keys())
-    print(f"  캐시 저장: {len(tickers)}종목")
-    return tickers[:n]
-
-
-def get_ticker_names_from_cache(ref_date: str) -> dict:
-    dt = datetime.strptime(ref_date, '%Y%m%d')
-    for _ in range(10):
-        candidate = dt.strftime('%Y%m%d')
-        kis_cache = CACHE_DIR / f'universe_kis_{candidate}.json'
-        if kis_cache.exists():
-            data = json.loads(kis_cache.read_text())
-            if isinstance(data, list) and data and isinstance(data[0], dict):
-                return {d['ticker']: d['name'] for d in data}
-        dt -= timedelta(days=1)
-    return {}
-
-
-# ── KIS API: 종목별 일자별 투자자 순매수대금 + 시가총액 ──────────────────
-
-def kis_shares_outstanding(ticker: str) -> int:
-    """KIS API: 종목 상장주식수 조회 (현재가 API)"""
+def kis_stock_info(ticker: str) -> dict:
+    """종목 상장주식수 + 한글명 조회"""
     try:
         resp = requests.get(
             f'{BASE_URL}/uapi/domestic-stock/v1/quotations/inquire-price',
@@ -173,15 +87,21 @@ def kis_shares_outstanding(ticker: str) -> int:
         )
         data = resp.json()
         output = data.get('output', {})
-        return int(output.get('lstn_stcn', 0))
+        return {
+            'shares': int(output.get('lstn_stcn', 0)),
+            'name':   output.get('hts_kor_isnm', ticker),
+        }
     except Exception:
-        return 0
+        return {'shares': 0, 'name': ticker}
 
 
-def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
+# ── KIS API: 종목별 일자별 투자자 순매수대금 ──────────────────────────────
+
+def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int) -> pd.DataFrame:
     """
-    KIS API: 종목별 일자별 외인/기관 순매수대금 + 시가총액
-    반환: date(index), foreign_net, institution_net, market_cap (원)
+    KIS FHKST01010900: 종목별 투자자 기간 데이터 (최대 30행)
+    frgn_ntby_tr_pbmn, orgn_ntby_tr_pbmn 단위: 백만원 → 원으로 변환
+    시가총액 = 종가 × 상장주식수
     """
     params = {
         'fid_cond_mrkt_div_code': 'J',
@@ -212,21 +132,59 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
                 continue
             rows.append({
                 'date':            pd.to_datetime(d),
-                'foreign_net':     int(row.get('frgn_ntby_tr_pbmn', 0)),
-                'institution_net': int(row.get('orgn_ntby_tr_pbmn', 0)),
+                # 백만원 → 원
+                'foreign_net':     int(row.get('frgn_ntby_tr_pbmn', 0)) * 1_000_000,
+                'institution_net': int(row.get('orgn_ntby_tr_pbmn', 0)) * 1_000_000,
                 'close':           int(row.get('stck_clpr', 0)),
             })
         if not rows:
             return pd.DataFrame()
 
-        # 상장주식수 별도 조회 → 시가총액 계산
-        shares = kis_shares_outstanding(ticker)
         df = pd.DataFrame(rows).set_index('date').sort_index()
         df['market_cap'] = df['close'] * shares
         return df[['foreign_net', 'institution_net', 'market_cap']]
 
     except Exception:
         return pd.DataFrame()
+
+
+def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
+    """
+    KIS API 30행 제한 우회: 기간을 30일 단위로 분할하여 여러 번 호출
+    전체 기간 데이터를 합산하여 반환
+    """
+    info = kis_stock_info(ticker)
+    shares = info['shares']
+    time.sleep(0.05)
+
+    if shares == 0:
+        return pd.DataFrame()
+
+    # 기간을 30일 단위로 분할
+    end_dt   = datetime.strptime(todate, '%Y%m%d')
+    start_dt = datetime.strptime(fromdate, '%Y%m%d')
+    all_frames = []
+
+    current_end = end_dt
+    while current_end >= start_dt:
+        current_start = max(current_end - timedelta(days=29), start_dt)
+        chunk = kis_stock_daily_period(
+            ticker,
+            current_start.strftime('%Y%m%d'),
+            current_end.strftime('%Y%m%d'),
+            shares,
+        )
+        if not chunk.empty:
+            all_frames.append(chunk)
+        current_end = current_start - timedelta(days=1)
+        time.sleep(0.05)
+
+    if not all_frames:
+        return pd.DataFrame()
+
+    combined = pd.concat(all_frames)
+    combined = combined[~combined.index.duplicated(keep='first')].sort_index()
+    return combined
 
 
 # ── 데이터 수집 ────────────────────────────────────────────────────────────
@@ -240,7 +198,6 @@ def fetch_all(tickers: list[str], fromdate: str, todate: str) -> pd.DataFrame:
         if not df.empty:
             df['ticker'] = ticker
             rows.append(df.reset_index())
-        time.sleep(0.05)
 
     print()
     if not rows:
@@ -258,7 +215,7 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
     results = []
     for ticker, grp in raw.groupby('ticker'):
         grp = grp.set_index('date').sort_index()
-        if len(grp) < 10:
+        if len(grp) < 30:
             continue
 
         roll5  = (grp['foreign_net'] + grp['institution_net']).rolling(5).sum()
@@ -266,7 +223,7 @@ def calc_oscillator(raw: pd.DataFrame) -> pd.DataFrame:
         ratio  = roll5 / mktcap
 
         valid = ratio.dropna()
-        if len(valid) < 10:
+        if len(valid) < 26:
             continue
 
         ema12  = _ema(valid, 12)
@@ -302,17 +259,14 @@ def last_trading_day() -> str:
 if __name__ == '__main__':
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
-    fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
-    ref_date = last_trading_day()
+    fromdate = (today - timedelta(days=90)).strftime('%Y%m%d')
 
-    print(f"기준일: {ref_date}, 기간: {fromdate} ~ {todate}")
+    print(f"기준일: {last_trading_day()}, 기간: {fromdate} ~ {todate}")
 
-    print("시가총액 상위 700 종목 선정 중...")
-    tickers = get_top_n_tickers(ref_date, 700)
-    names   = get_ticker_names_from_cache(ref_date)
+    print("유니버스 로드 중...")
+    tickers = load_universe()
     print(f"  → {len(tickers)}개 종목")
-    for t in tickers[:10]:
-        print(f"    {t}: {names.get(t, '?')}")
+    print(f"  상위 10: {tickers[:10]}")
 
     # 테스트: 상위 5개
     test_tickers = tickers[:5]
@@ -321,11 +275,13 @@ if __name__ == '__main__':
     print(f"수집된 데이터: {len(raw)}행")
 
     if not raw.empty:
+        print(f"\n종목별 데이터 수:")
+        for t, g in raw.groupby('ticker'):
+            print(f"  {t}: {len(g)}행, market_cap 비율: {(g['market_cap']>0).mean():.0%}")
+
         result = calc_oscillator(raw)
         if result.empty:
             print("데이터 부족 (각 종목당 최소 30일 필요). 기간을 늘려야 합니다.")
         else:
-            result['종목명'] = result.index.map(lambda t: names.get(t, t))
             print("\n[수급오실레이터 결과]")
-            cols = [c for c in ['종목명', 'macd', 'signal', 'oscillator'] if c in result.columns]
-            print(result[cols].to_string())
+            print(result[['macd', 'signal', 'oscillator']].to_string())
