@@ -162,12 +162,27 @@ def get_ticker_names_from_cache(ref_date: str) -> dict:
 
 # ── KIS API: 종목별 일자별 투자자 순매수대금 + 시가총액 ──────────────────
 
+def kis_shares_outstanding(ticker: str) -> int:
+    """KIS API: 종목 상장주식수 조회 (현재가 API)"""
+    try:
+        resp = requests.get(
+            f'{BASE_URL}/uapi/domestic-stock/v1/quotations/inquire-price',
+            headers=_h('FHKST01010100'),
+            params={'fid_cond_mrkt_div_code': 'J', 'fid_input_iscd': ticker},
+            timeout=10,
+        )
+        data = resp.json()
+        output = data.get('output', {})
+        return int(output.get('lstn_stcn', 0))
+    except Exception:
+        return 0
+
+
 def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
     """
     KIS API: 종목별 일자별 외인/기관 순매수대금 + 시가총액
     반환: date(index), foreign_net, institution_net, market_cap (원)
     """
-    # 1) 투자자별 순매수대금
     params = {
         'fid_cond_mrkt_div_code': 'J',
         'fid_input_iscd':         ticker,
@@ -200,14 +215,14 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
                 'foreign_net':     int(row.get('frgn_ntby_tr_pbmn', 0)),
                 'institution_net': int(row.get('orgn_ntby_tr_pbmn', 0)),
                 'close':           int(row.get('stck_clpr', 0)),
-                'shares':          int(row.get('lstn_stcn', 0)),  # 상장주식수
             })
         if not rows:
             return pd.DataFrame()
 
+        # 상장주식수 별도 조회 → 시가총액 계산
+        shares = kis_shares_outstanding(ticker)
         df = pd.DataFrame(rows).set_index('date').sort_index()
-        # 시가총액 = 종가 × 상장주식수
-        df['market_cap'] = df['close'] * df['shares']
+        df['market_cap'] = df['close'] * shares
         return df[['foreign_net', 'institution_net', 'market_cap']]
 
     except Exception:
