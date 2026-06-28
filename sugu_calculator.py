@@ -63,26 +63,24 @@ def _h(tr_id: str) -> dict:
 
 # ── KIS API: 유니버스 (시가총액 순위) ─────────────────────────────────────
 
-def kis_market_cap_ranking(market: str = 'J', top_n: int = 700) -> list[dict]:
+def kis_market_cap_ranking(top_n: int = 700) -> list[dict]:
     """
-    KIS API 시가총액 순위 조회
-    market: J=전체주식, W=전체(ETF포함)
-    반환: [{'ticker': '005930', 'name': '삼성전자', 'market_cap': 123456789}, ...]
+    KIS API 시가총액 순위 조회 (KOSPI + KOSDAQ)
+    반환: [{'ticker': '005930', 'name': '삼성전자', 'market_cap': ...}, ...]  시총 내림차순
     """
     results = []
-    # KIS API는 한번에 30개씩, 페이지 반복
-    for fid_trgt_cls_code in range(1, 30):
+    for blng_cls_code in ('1', '2'):  # 1=KOSPI, 2=KOSDAQ
         params = {
-            'fid_cond_mrkt_div_code': market,
+            'fid_cond_mrkt_div_code': 'J',
             'fid_cond_scr_div_code':  '20174',
             'fid_input_iscd':         '0000',
             'fid_div_cls_code':       '0',
-            'fid_blng_cls_code':      '0',
-            'fid_trgt_cls_code':      str(fid_trgt_cls_code),
+            'fid_blng_cls_code':      blng_cls_code,
+            'fid_trgt_cls_code':      '0',
             'fid_trgt_exls_cls_code': '0',
             'fid_input_price_1':      '',
             'fid_input_price_2':      '',
-            'fid_vol_cnt':            '',
+            'fid_vol_cnt':            '500',
             'fid_input_date_1':       '',
         }
         try:
@@ -93,23 +91,20 @@ def kis_market_cap_ranking(market: str = 'J', top_n: int = 700) -> list[dict]:
             )
             data = resp.json()
             if data.get('rt_cd') != '0':
-                break
-            output = data.get('output', [])
-            if not output:
-                break
-            for row in output:
+                print(f"[WARN] 시가총액 순위 오류: {data.get('msg1')}")
+                continue
+            for row in data.get('output', []):
                 results.append({
-                    'ticker':     row.get('stck_shrn_iscd', ''),
+                    'ticker':     row.get('mksc_shrn_iscd', ''),
                     'name':       row.get('hts_kor_isnm', ''),
-                    'market_cap': int(row.get('stck_avls', 0)) * 100_000_000,  # 억원 → 원
+                    'market_cap': int(row.get('stck_avls', 0)) * 100_000_000,
                 })
-            if len(results) >= top_n:
-                break
         except Exception as e:
             print(f"[WARN] 시가총액 순위 조회 실패: {e}")
-            break
-        time.sleep(0.05)
+        time.sleep(0.1)
 
+    # KOSPI+KOSDAQ 합산 후 시총 내림차순 정렬
+    results.sort(key=lambda x: x['market_cap'], reverse=True)
     return results[:top_n]
 
 
