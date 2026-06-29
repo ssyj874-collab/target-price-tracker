@@ -346,7 +346,7 @@ def save_persistent_names(names: dict):
     NAMES_FILE.write_text(json.dumps(existing, ensure_ascii=False, indent=2))
 
 
-def run_full(n: int = 700):
+def run_full(n: int = 1400):
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
     fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
@@ -430,5 +430,5 @@ def run_full(n: int = 700):
 
 if __name__ == '__main__':
     import sys
-    n = int(sys.argv[1]) if len(sys.argv) > 1 else 700
+    n = int(sys.argv[1]) if len(sys.argv) > 1 else 1400
     run_full(n)
