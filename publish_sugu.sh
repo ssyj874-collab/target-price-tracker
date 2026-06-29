@@ -14,30 +14,21 @@ if [ ! -f "sugu_report.html" ]; then
     python3 generate_sugu_report.py
 fi
 
-# HTML을 임시 파일로 백업 (브랜치 전환 후에도 접근 가능하도록)
-TMP_HTML=$(mktemp /tmp/sugu_report_XXXXXX.html)
-cp sugu_report.html "$TMP_HTML"
-
-# 현재 브랜치 저장
-CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-
-echo "gh-pages 브랜치로 배포 중..."
+# gh-pages를 별도 임시 디렉토리에 체크아웃 (브랜치 전환 없이 배포)
+WORKTREE_DIR=$(mktemp -d /tmp/gh-pages-XXXXXX)
 git fetch origin gh-pages
+git worktree add "$WORKTREE_DIR" origin/gh-pages 2>/dev/null || \
+    git worktree add "$WORKTREE_DIR" gh-pages
 
-# 로컬 gh-pages를 origin 기준으로 강제 동기화
-git branch -f gh-pages origin/gh-pages
-git checkout gh-pages
+cp sugu_report.html "$WORKTREE_DIR/sugu_report.html"
 
-# 임시 파일에서 복사
-cp "$TMP_HTML" sugu_report.html
-rm "$TMP_HTML"
-
+cd "$WORKTREE_DIR"
 git add sugu_report.html
 git commit -m "update: 수급오실레이터 리포트 $(date '+%Y-%m-%d %H:%M')" || echo "변경사항 없음"
-git push origin gh-pages
+git push origin HEAD:gh-pages
 
-# 원래 브랜치로 복귀
-git checkout "$CURRENT_BRANCH"
+cd "$SCRIPT_DIR"
+git worktree remove "$WORKTREE_DIR" --force
 
 echo ""
 echo "배포 완료!"
