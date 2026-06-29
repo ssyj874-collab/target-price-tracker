@@ -7,8 +7,19 @@ import json
 import webbrowser
 from pathlib import Path
 
-RESULT_FILE = Path(__file__).parent / 'sugu_result.json'
-OUTPUT_FILE = Path(__file__).parent / 'sugu_report.html'
+RESULT_FILE   = Path(__file__).parent / 'sugu_result.json'
+OUTPUT_FILE   = Path(__file__).parent / 'sugu_report.html'
+UNIVERSE_FILE = Path(__file__).parent / 'universe_700.json'
+
+
+def load_name_map() -> dict:
+    """universe_700.json에서 ticker→한글명 매핑 로드"""
+    if not UNIVERSE_FILE.exists():
+        return {}
+    data = json.loads(UNIVERSE_FILE.read_text())
+    if data and isinstance(data[0], dict):
+        return {d['ticker']: d.get('name', d['ticker']) for d in data}
+    return {}
 
 
 def generate():
@@ -21,6 +32,13 @@ def generate():
     updated  = result.get('updated_at', '')
     ref_date = result.get('ref_date', '')
     data     = result.get('data', [])
+
+    # universe_700.json 한글명으로 덮어쓰기
+    name_map = load_name_map()
+    for row in data:
+        t = row.get('ticker', '')
+        if t in name_map:
+            row['name'] = name_map[t]
 
     # 테이블 행 (net20 순매도 기준 정렬: 원본 net20이 음수=순매수, 양수=순매도)
     data_by_net = sorted(data, key=lambda x: x.get('net20', 0))  # 가장 많이 순매도한 것이 앞
