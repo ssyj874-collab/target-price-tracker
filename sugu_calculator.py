@@ -284,8 +284,25 @@ def last_trading_day() -> str:
     return datetime.today().strftime('%Y%m%d')
 
 
-OUTPUT_FILE = Path(__file__).parent / 'sugu_result.json'
-RAW_CACHE   = CACHE_DIR / 'sugu_raw_cache.parquet'
+OUTPUT_FILE  = Path(__file__).parent / 'sugu_result.json'
+RAW_CACHE    = CACHE_DIR / 'sugu_raw_cache.parquet'
+NAMES_FILE   = CACHE_DIR / 'names_persistent.json'  # 영구 종목명 캐시
+
+
+def load_persistent_names() -> dict:
+    if NAMES_FILE.exists():
+        return json.loads(NAMES_FILE.read_text())
+    return {}
+
+
+def save_persistent_names(names: dict):
+    """기존 영구 캐시와 병합 후 저장 (티커 코드값은 덮어쓰지 않음)"""
+    existing = load_persistent_names()
+    for ticker, name in names.items():
+        # 새 이름이 실제 한글명(티커 코드 아님)일 때만 업데이트
+        if name and name != ticker:
+            existing[ticker] = name
+    NAMES_FILE.write_text(json.dumps(existing, ensure_ascii=False, indent=2))
 
 
 def run_full(n: int = 700):
@@ -311,12 +328,20 @@ def run_full(n: int = 700):
     else:
         raw = None
 
-    names_cache_file = CACHE_DIR / f'names_{ref_date}.json'
-    names = {}
+    # 영구 종목명 캐시 로드 (장중/빈값 문제 우회)
+    names = load_persistent_names()
 
     if raw is None:
         print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
-        raw, names = fetch_all(tickers, fromdate, todate)
+        raw, new_names = fetch_all(tickers, fromdate, todate)
+        # 새로 수집한 이름을 영구 캐시에 반영 (한글명만)
+        save_persistent_names(new_names)
+        names = load_persistent_names()
+        # 영구 캐시에 없는 종목은 새로 수집한 이름 사용
+        for t, n in new_names.items():
+            if t not in names:
+                names[t] = n
+
         if not raw.empty:
             # 누적 캐시: 기존 데이터와 병합하여 최대 90 거래일 보존
             if RAW_CACHE.exists():
@@ -333,11 +358,7 @@ def run_full(n: int = 700):
                 except Exception as e:
                     print(f"  기존 캐시 병합 실패 ({e}), 새 데이터로 덮어씀")
             raw.to_parquet(RAW_CACHE)
-            names_cache_file.write_text(json.dumps(names, ensure_ascii=False))
             print(f"  캐시 저장: {RAW_CACHE}")
-    else:
-        if names_cache_file.exists():
-            names = json.loads(names_cache_file.read_text())
 
     print(f"수집된 데이터: {len(raw)}행")
 
