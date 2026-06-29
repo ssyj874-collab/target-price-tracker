@@ -182,7 +182,7 @@ def status_sugu():
 if __name__ == '__main__':
     print("=" * 50)
     print("리포트 서버 시작")
-    print("  SIO 목표가:      http://localhost:5000")
-    print("  수급오실레이터:   http://localhost:5000/sugu")
+    print("  SIO 목표가:      http://localhost:8888")
+    print("  수급오실레이터:   http://localhost:8888/sugu")
     print("=" * 50)
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=8888, debug=False)
