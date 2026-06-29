@@ -236,9 +236,9 @@ function showChart(ticker) {{
         {{ type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
            borderColor:'#3498db', backgroundColor:'transparent', borderWidth:1.5,
            pointRadius:0, tension:0.3 }},
-        {{ type:'bar',  label:'20일순매도합산(억)', data:net20, yAxisID:'y2',
-           backgroundColor: net20.map(v => v > 0 ? 'rgba(231,76,60,0.6)' : 'rgba(52,152,219,0.6)'),
-           borderWidth:0 }},
+        {{ type:'line', label:'20일순매도합산(억)', data:net20, yAxisID:'y2',
+           borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5,
+           pointRadius:0, tension:0.3 }},
       ]
     }},
     options: {{
