@@ -88,8 +88,8 @@ def kis_stock_info(ticker: str) -> dict:
         data = resp.json()
         output = data.get('output', {})
         return {
-            'shares': int(output.get('lstn_stcn', 0)),
-            'name':   output.get('hts_kor_isnm', ticker),
+            'shares': int(output.get('lstn_stcn') or 0),
+            'name':   output.get('hts_kor_isnm') or ticker,
         }
     except Exception:
         return {'shares': 0, 'name': ticker}
@@ -202,7 +202,7 @@ def fetch_all(tickers: list[str], fromdate: str, todate: str) -> tuple[pd.DataFr
         if not df.empty:
             df['ticker'] = ticker
             rows.append(df.reset_index())
-            names[ticker] = df.attrs.get('name', ticker)
+        names[ticker] = df.attrs.get('name', '') or ticker
 
     print()
     if not rows:
