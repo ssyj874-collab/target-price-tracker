@@ -48,9 +48,14 @@ def generate():
         if t in name_map:
             row['name'] = name_map[t]
 
-    # 테이블 행 (net20 순매도 기준 정렬: 원본 net20이 음수=순매수, 양수=순매도)
-    data_by_net = sorted(data, key=lambda x: x.get('net20', 0))  # 가장 많이 순매도한 것이 앞
+    # 테이블 행 (오실레이터 내림차순)
     data_by_osc = sorted(data, key=lambda x: x.get('oscillator', 0), reverse=True)
+
+    # 과매수/과매도 임계값: 상위 20% / 하위 20%
+    oscs = sorted([r.get('oscillator', 0) or 0 for r in data])
+    n = len(oscs)
+    overbought_th  = oscs[int(n * 0.80)] if n else 0   # 상위 20%
+    oversold_th    = oscs[int(n * 0.20)] if n else 0   # 하위 20%
 
     rows_html = []
     for i, row in enumerate(data_by_osc, 1):
@@ -64,10 +69,20 @@ def generate():
         date   = row.get('date', '')
         osc_color = '#e74c3c' if osc > 0 else '#3498db'
 
-        rows_html.append(f"""<tr data-ticker="{ticker}" onclick="showChart('{ticker}')">
+        if osc >= overbought_th:
+            badge = '<span class="badge ob">과매수</span>'
+            data_zone = 'ob'
+        elif osc <= oversold_th:
+            badge = '<span class="badge os">과매도</span>'
+            data_zone = 'os'
+        else:
+            badge = ''
+            data_zone = ''
+
+        rows_html.append(f"""<tr data-ticker="{ticker}" data-zone="{data_zone}" onclick="showChart('{ticker}')">
           <td class="rank">{i}</td>
           <td class="ticker">{ticker}</td>
-          <td class="name">{name}</td>
+          <td class="name">{name}{badge}</td>
           <td class="num">{net20_disp}</td>
           <td class="num osc" style="color:{osc_color};font-weight:bold">{osc:+.4f}%</td>
           <td class="num">{macd:+.4f}%</td>
@@ -200,6 +215,10 @@ td.date{{color:#8b949e;font-size:0.78rem;}}
 tr:hover td{{background:#1c2128;cursor:pointer;}}
 tr.active td{{background:#1f2937;}}
 tr.hidden{{display:none;}}
+.badge{{display:inline-block;font-size:0.68rem;font-weight:700;padding:1px 5px;border-radius:3px;
+         margin-left:5px;vertical-align:middle;}}
+.badge.ob{{background:#5c1a1a;color:#ff6b6b;}}
+.badge.os{{background:#0d2a4a;color:#5ba3f5;}}
 </style>
 </head>
 <body>
@@ -244,8 +263,10 @@ tr.hidden{{display:none;}}
     </div>
     <select id="oscFilter" onchange="filterTable()">
       <option value="all">전체</option>
-      <option value="pos">오실레이터 양수 (매수세)</option>
-      <option value="neg">오실레이터 음수 (매도세)</option>
+      <option value="ob">과매수 (상위 20%)</option>
+      <option value="os">과매도 (하위 20%)</option>
+      <option value="pos">오실레이터 양수</option>
+      <option value="neg">오실레이터 음수</option>
     </select>
     <span class="stat" id="statText"></span>
   </div>
@@ -540,8 +561,13 @@ function filterTable() {{
     const ticker = tr.querySelector('td.ticker')?.textContent.toLowerCase() || '';
     const name   = tr.querySelector('td.name')?.textContent.toLowerCase() || '';
     const oscVal = parseFloat(tr.querySelector('td.osc')?.textContent) || 0;
+    const zone   = tr.dataset.zone || '';
     const matchQ   = !q || ticker.includes(q) || name.includes(q);
-    const matchFlt = flt==='all'||(flt==='pos'&&oscVal>0)||(flt==='neg'&&oscVal<0);
+    const matchFlt = flt==='all'
+      || (flt==='ob' && zone==='ob')
+      || (flt==='os' && zone==='os')
+      || (flt==='pos' && oscVal>0)
+      || (flt==='neg' && oscVal<0);
     tr.classList.toggle('hidden', !(matchQ && matchFlt));
     if (matchQ && matchFlt) visible++;
   }});
