@@ -217,17 +217,42 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
 # ── 데이터 수집 ────────────────────────────────────────────────────────────
 
 def fetch_all(tickers: list[str], fromdate: str, todate: str) -> tuple[pd.DataFrame, dict]:
-    """raw 데이터 + 종목명 dict 반환"""
+    """raw 데이터 + 종목명 dict 반환. 실패 종목 최대 3회 재시도."""
     rows = []
     names = {}
     total = len(tickers)
+    failed = []
+
     for i, ticker in enumerate(tickers, 1):
         print(f"\r  {i}/{total} {ticker}...", end='', flush=True)
         df = kis_stock_daily(ticker, fromdate, todate)
         if not df.empty:
             df['ticker'] = ticker
             rows.append(df.reset_index())
-        names[ticker] = df.attrs.get('name', '') or ticker
+            names[ticker] = df.attrs.get('name', '') or ticker
+        else:
+            failed.append(ticker)
+            names[ticker] = ticker
+
+    # 실패 종목 재시도 (최대 3회, 딜레이 증가)
+    for attempt in range(1, 4):
+        if not failed:
+            break
+        print(f"\n  재시도 {attempt}회차: {len(failed)}개 종목...")
+        time.sleep(1.0 * attempt)
+        still_failed = []
+        for ticker in failed:
+            df = kis_stock_daily(ticker, fromdate, todate)
+            if not df.empty:
+                df['ticker'] = ticker
+                rows.append(df.reset_index())
+                names[ticker] = df.attrs.get('name', '') or ticker
+            else:
+                still_failed.append(ticker)
+        failed = still_failed
+
+    if failed:
+        print(f"\n  최종 실패 {len(failed)}개: {failed[:10]}")
 
     print()
     if not rows:
@@ -359,48 +384,55 @@ def run_full(n: int = 1400):
     tickers = tickers[:n]
     print(f"  → {len(tickers)}개 종목")
 
-    # 오늘 캐시가 있으면 API 재호출 생략
-    if RAW_CACHE.exists():
-        cache_mtime = datetime.fromtimestamp(RAW_CACHE.stat().st_mtime).strftime('%Y%m%d')
-        if cache_mtime == ref_date:
-            print(f"  (오늘 캐시 로드: {RAW_CACHE})")
-            raw = pd.read_parquet(RAW_CACHE)
-        else:
-            raw = None
-    else:
-        raw = None
-
-    # 종목명: universe_700.json 우선, 영구 캐시로 보완
+    # 종목명: universe 우선, 영구 캐시로 보완
     names = {**load_persistent_names(), **universe_names}
 
-    if raw is None:
-        print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
-        raw, new_names = fetch_all(tickers, fromdate, todate)
-        # 새로 수집한 이름을 영구 캐시에 반영 (한글명만)
-        save_persistent_names(new_names)
-        names = load_persistent_names()
-        # 영구 캐시에 없는 종목은 새로 수집한 이름 사용
-        for t, n in new_names.items():
-            if t not in names:
-                names[t] = n
+    # 기존 캐시 로드
+    existing_raw = pd.DataFrame()
+    if RAW_CACHE.exists():
+        try:
+            existing_raw = pd.read_parquet(RAW_CACHE)
+        except Exception:
+            existing_raw = pd.DataFrame()
 
-        if not raw.empty:
-            # 누적 캐시: 기존 데이터와 병합하여 최대 90 거래일 보존
-            if RAW_CACHE.exists():
-                try:
-                    existing = pd.read_parquet(RAW_CACHE)
-                    raw = pd.concat([existing, raw])
-                    raw = raw[~raw.duplicated(subset=['ticker', 'date'], keep='last')]
-                    raw = raw.sort_values(['ticker', 'date'])
-                    # 종목별 최근 90 거래일만 유지
-                    raw = (raw.groupby('ticker', group_keys=False)
-                             .apply(lambda g: g.tail(90))
-                             .reset_index(drop=True))
-                    print(f"  기존 캐시 병합 완료: {len(raw)}행")
-                except Exception as e:
-                    print(f"  기존 캐시 병합 실패 ({e}), 새 데이터로 덮어씀")
+    # 오늘 데이터가 있는 종목 확인
+    ref_date_dt = pd.to_datetime(ref_date)
+    if not existing_raw.empty and 'date' in existing_raw.columns:
+        today_tickers = set(
+            existing_raw[existing_raw['date'] >= ref_date_dt]['ticker'].unique()
+        )
+    else:
+        today_tickers = set()
+
+    # 오늘 데이터 없는 종목만 수집
+    need_fetch = [t for t in tickers if t not in today_tickers]
+
+    if not need_fetch:
+        print(f"  (오늘 캐시 완전: {len(today_tickers)}종목, API 호출 생략)")
+        raw = existing_raw
+    else:
+        print(f"\n투자자 데이터 수집 중 ({len(need_fetch)}개 / 전체 {len(tickers)}개)...")
+        new_raw, new_names = fetch_all(need_fetch, fromdate, todate)
+
+        save_persistent_names(new_names)
+        names = {**names, **{t: n for t, n in new_names.items() if n and n != t}}
+
+        if not new_raw.empty:
+            # 기존 캐시와 병합, 최대 90 거래일 보존
+            if not existing_raw.empty:
+                raw = pd.concat([existing_raw, new_raw])
+                raw = raw[~raw.duplicated(subset=['ticker', 'date'], keep='last')]
+                raw = raw.sort_values(['ticker', 'date'])
+                raw = (raw.groupby('ticker', group_keys=False)
+                         .apply(lambda g: g.tail(90))
+                         .reset_index(drop=True))
+                print(f"  병합 완료: {len(raw)}행")
+            else:
+                raw = new_raw
             raw.to_parquet(RAW_CACHE)
             print(f"  캐시 저장: {RAW_CACHE}")
+        else:
+            raw = existing_raw
 
     print(f"수집된 데이터: {len(raw)}행")
 
