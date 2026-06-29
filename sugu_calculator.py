@@ -165,6 +165,12 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
     name   = info['name']
     time.sleep(0.05)
 
+    # API가 0 반환 시 영구 캐시에서 복원
+    if shares == 0:
+        shares = load_persistent_shares().get(ticker, 0)
+    else:
+        save_persistent_shares(ticker, shares)
+
     if shares == 0:
         return pd.DataFrame()
 
@@ -291,9 +297,25 @@ def last_trading_day() -> str:
     return datetime.today().strftime('%Y%m%d')
 
 
-OUTPUT_FILE  = Path(__file__).parent / 'sugu_result.json'
-RAW_CACHE    = CACHE_DIR / 'sugu_raw_cache.parquet'
-NAMES_FILE   = CACHE_DIR / 'names_persistent.json'  # 영구 종목명 캐시
+OUTPUT_FILE   = Path(__file__).parent / 'sugu_result.json'
+RAW_CACHE     = CACHE_DIR / 'sugu_raw_cache.parquet'
+NAMES_FILE    = CACHE_DIR / 'names_persistent.json'  # 영구 종목명 캐시
+SHARES_FILE   = CACHE_DIR / 'shares_persistent.json'  # 영구 상장주식수 캐시
+
+
+def load_persistent_shares() -> dict:
+    if SHARES_FILE.exists():
+        return {k: int(v) for k, v in json.loads(SHARES_FILE.read_text()).items()}
+    return {}
+
+
+def save_persistent_shares(ticker: str, shares: int):
+    """상장주식수 영구 캐시에 저장 (0이면 저장 안 함)"""
+    if shares <= 0:
+        return
+    existing = load_persistent_shares()
+    existing[ticker] = shares
+    SHARES_FILE.write_text(json.dumps(existing, ensure_ascii=False))
 
 
 def load_persistent_names() -> dict:
