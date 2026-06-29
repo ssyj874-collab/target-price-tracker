@@ -392,6 +392,11 @@ def run_full(n: int = 1400):
     if RAW_CACHE.exists():
         try:
             existing_raw = pd.read_parquet(RAW_CACHE)
+            # ticker가 인덱스에 있으면 컬럼으로 복원
+            if 'ticker' not in existing_raw.columns:
+                existing_raw = existing_raw.reset_index()
+            if 'ticker' not in existing_raw.columns:
+                existing_raw = pd.DataFrame()  # 복구 불가 → 재수집
         except Exception:
             existing_raw = pd.DataFrame()
 
