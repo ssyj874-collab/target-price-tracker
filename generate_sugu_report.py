@@ -91,6 +91,25 @@ select{{padding:6px 10px;border-radius:6px;border:1px solid #30363d;
         background:#161b22;color:#e6edf3;font-size:0.88rem;}}
 .stat{{margin-left:auto;font-size:0.82rem;color:#8b949e;}}
 
+/* 검색 자동완성 */
+.search-wrap{{position:relative;}}
+.autocomplete-list{{
+  position:absolute;top:100%;left:0;z-index:1000;
+  background:#1c2128;border:1px solid #30363d;border-radius:6px;
+  width:320px;max-height:280px;overflow-y:auto;
+  box-shadow:0 8px 24px rgba(0,0,0,0.5);display:none;margin-top:3px;
+}}
+.autocomplete-list.open{{display:block;}}
+.ac-item{{
+  display:flex;align-items:center;gap:10px;padding:8px 12px;
+  cursor:pointer;border-bottom:1px solid #21262d;
+}}
+.ac-item:last-child{{border-bottom:none;}}
+.ac-item:hover,.ac-item.focused{{background:#2d333b;}}
+.ac-ticker{{font-family:monospace;color:#79c0ff;font-size:0.82rem;min-width:52px;}}
+.ac-name{{color:#e6edf3;font-size:0.88rem;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}
+.ac-osc{{font-family:monospace;font-size:0.82rem;min-width:72px;text-align:right;}}
+
 .table-wrap{{overflow-x:auto;}}
 table{{width:100%;border-collapse:collapse;font-size:0.87rem;}}
 thead tr{{background:#161b22;position:sticky;top:0;z-index:10;}}
@@ -134,7 +153,11 @@ tr.hidden{{display:none;}}
 
 <div class="container">
   <div class="toolbar">
-    <input type="text" id="searchInput" placeholder="종목코드 / 종목명 검색" oninput="filterTable()">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="종목코드 / 종목명 검색"
+             oninput="onSearchInput()" onkeydown="onSearchKey(event)" autocomplete="off">
+      <div class="autocomplete-list" id="acList"></div>
+    </div>
     <select id="oscFilter" onchange="filterTable()">
       <option value="all">전체</option>
       <option value="pos">오실레이터 양수 (매수세)</option>
@@ -240,6 +263,86 @@ function showChart(ticker) {{
   document.getElementById('chartPanel').scrollIntoView({{behavior:'smooth',block:'start'}});
 }}
 
+// ── 자동완성 ──────────────────────────────────────────────────────────────
+const STOCK_LIST = Object.values(ALL_DATA).map(d => ({{
+  ticker: d.ticker,
+  name:   d.name || d.ticker,
+  osc:    d.oscillator || 0,
+}}));
+
+let acFocus = -1;
+
+function onSearchInput() {{
+  filterTable();
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const list = document.getElementById('acList');
+  if (!q) {{ list.classList.remove('open'); return; }}
+
+  const matches = STOCK_LIST.filter(s =>
+    s.ticker.toLowerCase().includes(q) || s.name.toLowerCase().includes(q)
+  ).slice(0, 15);
+
+  if (!matches.length) {{ list.classList.remove('open'); return; }}
+
+  list.innerHTML = matches.map((s, i) => {{
+    const color = s.osc > 0 ? '#e74c3c' : '#3498db';
+    return `<div class="ac-item" data-ticker="${{s.ticker}}" data-idx="${{i}}"
+                 onmousedown="selectAc('${{s.ticker}}')" onmouseover="setFocus(${{i}})">
+      <span class="ac-ticker">${{s.ticker}}</span>
+      <span class="ac-name">${{s.name}}</span>
+      <span class="ac-osc" style="color:${{color}}">${{s.osc >= 0 ? '+' : ''}}${{s.osc.toFixed(4)}}%</span>
+    </div>`;
+  }}).join('');
+  acFocus = -1;
+  list.classList.add('open');
+}}
+
+function setFocus(idx) {{
+  acFocus = idx;
+  document.querySelectorAll('.ac-item').forEach((el, i) =>
+    el.classList.toggle('focused', i === idx));
+}}
+
+function onSearchKey(e) {{
+  const items = document.querySelectorAll('.ac-item');
+  if (e.key === 'ArrowDown') {{
+    e.preventDefault();
+    acFocus = Math.min(acFocus + 1, items.length - 1);
+    items.forEach((el, i) => el.classList.toggle('focused', i === acFocus));
+    if (items[acFocus]) items[acFocus].scrollIntoView({{block:'nearest'}});
+  }} else if (e.key === 'ArrowUp') {{
+    e.preventDefault();
+    acFocus = Math.max(acFocus - 1, 0);
+    items.forEach((el, i) => el.classList.toggle('focused', i === acFocus));
+    if (items[acFocus]) items[acFocus].scrollIntoView({{block:'nearest'}});
+  }} else if (e.key === 'Enter') {{
+    if (acFocus >= 0 && items[acFocus]) {{
+      selectAc(items[acFocus].dataset.ticker);
+    }}
+  }} else if (e.key === 'Escape') {{
+    document.getElementById('acList').classList.remove('open');
+  }}
+}}
+
+function selectAc(ticker) {{
+  const d = ALL_DATA[ticker];
+  if (!d) return;
+  document.getElementById('searchInput').value = d.name || ticker;
+  document.getElementById('acList').classList.remove('open');
+  filterTable();
+  showChart(ticker);
+  // 해당 행으로 스크롤
+  const row = document.querySelector(`tr[data-ticker="${{ticker}}"]`);
+  if (row) setTimeout(() => row.scrollIntoView({{behavior:'smooth', block:'center'}}), 300);
+}}
+
+// 외부 클릭 시 드롭다운 닫기
+document.addEventListener('click', e => {{
+  if (!e.target.closest('.search-wrap'))
+    document.getElementById('acList').classList.remove('open');
+}});
+
+// ── 테이블 필터 ───────────────────────────────────────────────────────────
 function filterTable() {{
   const q   = document.getElementById('searchInput').value.toLowerCase();
   const flt = document.getElementById('oscFilter').value;
