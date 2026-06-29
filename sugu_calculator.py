@@ -222,7 +222,7 @@ def calc_oscillator(raw: pd.DataFrame, names: dict = None) -> pd.DataFrame:
     results = []
     for ticker, grp in raw.groupby('ticker'):
         grp = grp.set_index('date').sort_index()
-        if len(grp) < 30:
+        if len(grp) < 20:
             continue
 
         net_buy    = grp['foreign_net'] + grp['institution_net']
@@ -232,7 +232,7 @@ def calc_oscillator(raw: pd.DataFrame, names: dict = None) -> pd.DataFrame:
         ratio      = roll5 / mktcap
 
         valid = ratio.dropna()
-        if len(valid) < 26:
+        if len(valid) < 10:
             continue
 
         ema12  = _ema(valid, 12)
