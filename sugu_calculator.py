@@ -423,9 +423,7 @@ def run_full(n: int = 1400):
                 raw = pd.concat([existing_raw, new_raw])
                 raw = raw[~raw.duplicated(subset=['ticker', 'date'], keep='last')]
                 raw = raw.sort_values(['ticker', 'date'])
-                raw = (raw.groupby('ticker', group_keys=False)
-                         .apply(lambda g: g.tail(90), include_groups=False)
-                         .reset_index(drop=True))
+                raw = raw.groupby('ticker').tail(90).reset_index(drop=True)
                 print(f"  병합 완료: {len(raw)}행")
             else:
                 raw = new_raw
