@@ -28,7 +28,8 @@ TOKEN_FILE = Path(__file__).parent / 'kis_token.json'
 CACHE_DIR  = Path(__file__).parent / '.cache'
 CACHE_DIR.mkdir(exist_ok=True)
 
-UNIVERSE_FILE = Path(__file__).parent / 'universe_700.json'
+UNIVERSE_FILE  = Path(__file__).parent / 'universe_700.json'
+UNIVERSE_FILE2 = Path(__file__).parent / 'universe_701_1400.json'
 
 
 # ── KIS API 인증 ──────────────────────────────────────────────────────────
@@ -66,18 +67,29 @@ def _h(tr_id: str) -> dict:
 # ── 유니버스: universe_700.json 로드 ─────────────────────────────────────
 
 def load_universe() -> tuple[list[str], dict]:
-    """universe_700.json에서 고정 700종목 티커 + 종목명 로드"""
+    """universe_700.json + universe_701_1400.json 합쳐서 로드"""
     if not UNIVERSE_FILE.exists():
         raise FileNotFoundError(f"유니버스 파일 없음: {UNIVERSE_FILE}")
-    data = json.loads(UNIVERSE_FILE.read_text())
-    # 구 형식(list[str])과 신 형식(list[dict]) 모두 지원
-    if data and isinstance(data[0], dict):
-        tickers = [d['ticker'] for d in data]
-        names   = {d['ticker']: d.get('name', d['ticker']) for d in data}
-    else:
-        tickers = data
-        names   = {}
-    print(f"  유니버스 로드: {len(tickers)}종목 (universe_700.json)")
+
+    def _parse(f):
+        data = json.loads(f.read_text())
+        if data and isinstance(data[0], dict):
+            return [d['ticker'] for d in data], {d['ticker']: d.get('name', d['ticker']) for d in data}
+        return data, {}
+
+    tickers, names = _parse(UNIVERSE_FILE)
+
+    if UNIVERSE_FILE2.exists():
+        tickers2, names2 = _parse(UNIVERSE_FILE2)
+        # 중복 제거
+        seen = set(tickers)
+        for t in tickers2:
+            if t not in seen:
+                tickers.append(t)
+                seen.add(t)
+        names.update(names2)
+
+    print(f"  유니버스 로드: {len(tickers)}종목")
     return tickers, names
 
 
