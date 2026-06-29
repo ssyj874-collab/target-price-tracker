@@ -14,18 +14,18 @@ if [ ! -f "sugu_report.html" ]; then
     python3 generate_sugu_report.py
 fi
 
-echo "gh-pages 브랜치로 배포 중..."
-
 # 현재 브랜치 저장
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-# gh-pages 브랜치로 sugu_report.html만 복사
+echo "gh-pages 브랜치로 배포 중..."
+
+# origin/gh-pages 기준으로 로컬 gh-pages 강제 리셋
 git fetch origin gh-pages
 git checkout gh-pages
-git pull --rebase origin gh-pages
+git reset --hard origin/gh-pages
 
+# sugu_report.html 복사 후 커밋
 cp "$SCRIPT_DIR/sugu_report.html" ./sugu_report.html
-
 git add sugu_report.html
 git commit -m "update: 수급오실레이터 리포트 $(date '+%Y-%m-%d %H:%M')" || echo "변경사항 없음"
 git push origin gh-pages
