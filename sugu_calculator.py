@@ -318,6 +318,20 @@ def run_full(n: int = 700):
         print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")
         raw, names = fetch_all(tickers, fromdate, todate)
         if not raw.empty:
+            # 누적 캐시: 기존 데이터와 병합하여 최대 90 거래일 보존
+            if RAW_CACHE.exists():
+                try:
+                    existing = pd.read_parquet(RAW_CACHE)
+                    raw = pd.concat([existing, raw])
+                    raw = raw[~raw.duplicated(subset=['ticker', 'date'], keep='last')]
+                    raw = raw.sort_values(['ticker', 'date'])
+                    # 종목별 최근 90 거래일만 유지
+                    raw = (raw.groupby('ticker', group_keys=False)
+                             .apply(lambda g: g.tail(90))
+                             .reset_index(drop=True))
+                    print(f"  기존 캐시 병합 완료: {len(raw)}행")
+                except Exception as e:
+                    print(f"  기존 캐시 병합 실패 ({e}), 새 데이터로 덮어씀")
             raw.to_parquet(RAW_CACHE)
             names_cache_file.write_text(json.dumps(names, ensure_ascii=False))
             print(f"  캐시 저장: {RAW_CACHE}")
