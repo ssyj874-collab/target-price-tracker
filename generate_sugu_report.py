@@ -8,6 +8,7 @@ import webbrowser
 from pathlib import Path
 
 RESULT_FILE   = Path(__file__).parent / 'sugu_result.json'
+SECTOR_FILE   = Path(__file__).parent / 'sector_result.json'
 OUTPUT_FILE   = Path(__file__).parent / 'sugu_report.html'
 UNIVERSE_FILE = Path(__file__).parent / 'universe_700.json'
 
@@ -20,6 +21,13 @@ def load_name_map() -> dict:
     if data and isinstance(data[0], dict):
         return {d['ticker']: d.get('name', d['ticker']) for d in data}
     return {}
+
+
+def load_sector_data() -> dict:
+    """sector_result.json 로드 (없으면 빈 dict)"""
+    if not SECTOR_FILE.exists():
+        return {}
+    return json.loads(SECTOR_FILE.read_text())
 
 
 def generate():
@@ -78,6 +86,45 @@ def generate():
     rd = ref_date
     ref_fmt = f"{rd[:4]}-{rd[4:6]}-{rd[6:]}" if len(rd) == 8 else rd
 
+    # ── 업종별 탭 ──────────────────────────────────────────────────────────
+    sector_data = load_sector_data()
+    sector_rows_html = []
+    sector_all_json = '{}'
+    has_sector = bool(sector_data and sector_data.get('data'))
+    if has_sector:
+        sec_list = sector_data['data']
+        for i, row in enumerate(sec_list, 1):
+            code  = row.get('sector_code', '')
+            name  = row.get('name', code)
+            net20 = row.get('net20', 0) or 0
+            osc   = row.get('oscillator', 0) or 0
+            macd  = row.get('macd', 0) or 0
+            sig   = row.get('signal', 0) or 0
+            cnt   = row.get('member_count', 0)
+            date  = row.get('date', '')
+            net20_disp = f"{-net20:+,.1f}"
+            osc_color = '#e74c3c' if osc > 0 else '#3498db'
+            sector_rows_html.append(
+                f"""<tr data-code="{code}" onclick="showSectorChart('{code}')">
+              <td class="rank">{i}</td>
+              <td class="ticker">{code}</td>
+              <td class="name">{name}</td>
+              <td class="num">{cnt}</td>
+              <td class="num">{net20_disp}</td>
+              <td class="num osc" style="color:{osc_color};font-weight:bold">{osc:+.4f}%</td>
+              <td class="num">{macd:+.4f}%</td>
+              <td class="num">{sig:+.4f}%</td>
+              <td class="date">{date}</td>
+            </tr>"""
+            )
+        sector_all_json = json.dumps(
+            {row['sector_code']: row for row in sec_list if 'sector_code' in row},
+            ensure_ascii=False
+        )
+    sector_rows_str = '\n'.join(sector_rows_html)
+
+    sector_tab_display = 'inline-block' if has_sector else 'none'
+
     html = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -88,9 +135,18 @@ def generate():
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{font-family:'Apple SD Gothic Neo','Nanum Gothic',sans-serif;background:#0d1117;color:#e6edf3;}}
-header{{padding:16px 24px;border-bottom:1px solid #21262d;display:flex;align-items:center;gap:16px;}}
+header{{padding:16px 24px;border-bottom:1px solid #21262d;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}}
 header h1{{font-size:1.3rem;color:#58a6ff;}}
 header p{{font-size:0.82rem;color:#8b949e;margin-top:3px;}}
+
+/* 탭 */
+.tabs{{padding:0 24px;border-bottom:1px solid #21262d;display:flex;gap:0;}}
+.tab-btn{{padding:10px 20px;background:none;border:none;border-bottom:2px solid transparent;
+          color:#8b949e;font-size:0.9rem;cursor:pointer;font-family:inherit;transition:color 0.2s;}}
+.tab-btn:hover{{color:#e6edf3;}}
+.tab-btn.active{{color:#58a6ff;border-bottom-color:#58a6ff;}}
+.tab-content{{display:none;}}
+.tab-content.active{{display:block;}}
 
 /* 차트 패널 */
 .chart-panel{{background:#161b22;border-bottom:1px solid #21262d;padding:16px 24px;display:none;}}
@@ -138,7 +194,7 @@ th.left{{text-align:left;}}
 td{{padding:7px 12px;border-bottom:1px solid #161b22;text-align:right;}}
 td.rank{{color:#8b949e;font-size:0.78rem;}}
 td.ticker{{font-family:monospace;color:#79c0ff;text-align:left;}}
-td.name{{text-align:left;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis;}}
+td.name{{text-align:left;white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;}}
 td.num{{font-family:monospace;}}
 td.date{{color:#8b949e;font-size:0.78rem;}}
 tr:hover td{{background:#1c2128;cursor:pointer;}}
@@ -153,6 +209,16 @@ tr.hidden{{display:none;}}
     <p>기준일: {ref_fmt} &nbsp;|&nbsp; 업데이트: {updated} &nbsp;|&nbsp; {len(data)}종목</p>
   </div>
 </header>
+
+<!-- 탭 -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('stock')">종목별</button>
+  <button class="tab-btn" onclick="switchTab('sector')"
+          style="display:{sector_tab_display}">업종별</button>
+</div>
+
+<!-- ══════════ 종목별 탭 ══════════ -->
+<div id="tab-stock" class="tab-content active">
 
 <!-- 종목별 차트 패널 -->
 <div class="chart-panel" id="chartPanel">
@@ -186,63 +252,117 @@ tr.hidden{{display:none;}}
   <div class="table-wrap">
     <table id="dataTable">
       <thead><tr>
-        <th class="left" onclick="sortTable(0)">#</th>
-        <th class="left" onclick="sortTable(1)">코드</th>
-        <th class="left" onclick="sortTable(2)">종목명</th>
-        <th onclick="sortTable(3)">20일순매도합산(억)</th>
-        <th onclick="sortTable(4)">오실레이터(%)</th>
-        <th onclick="sortTable(5)">MACD(%)</th>
-        <th onclick="sortTable(6)">시그널(%)</th>
-        <th onclick="sortTable(7)">기준일</th>
+        <th class="left" onclick="sortTable('dataTable',0)">#</th>
+        <th class="left" onclick="sortTable('dataTable',1)">코드</th>
+        <th class="left" onclick="sortTable('dataTable',2)">종목명</th>
+        <th onclick="sortTable('dataTable',3)">20일순매도합산(억)</th>
+        <th onclick="sortTable('dataTable',4)">오실레이터(%)</th>
+        <th onclick="sortTable('dataTable',5)">MACD(%)</th>
+        <th onclick="sortTable('dataTable',6)">시그널(%)</th>
+        <th onclick="sortTable('dataTable',7)">기준일</th>
       </tr></thead>
       <tbody>{rows_str}</tbody>
     </table>
   </div>
 </div>
 
-<script>
-const ALL_DATA = {all_data_json};
+</div><!-- /tab-stock -->
 
+<!-- ══════════ 업종별 탭 ══════════ -->
+<div id="tab-sector" class="tab-content">
+
+<!-- 업종별 차트 패널 -->
+<div class="chart-panel" id="sectorChartPanel">
+  <h2 id="sectorChartTitle">업종 차트</h2>
+  <div class="chart-grid">
+    <div class="chart-box">
+      <h3>시가총액 + 기관/외국인 20일 누적합산(억원)</h3>
+      <canvas id="secChart1"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>시가총액 + 수급오실레이터(%)</h3>
+      <canvas id="secChart2"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="toolbar">
+    <input type="text" id="secSearch" placeholder="업종코드 / 업종명 검색"
+           oninput="filterSectorTable()" autocomplete="off">
+    <select id="secOscFilter" onchange="filterSectorTable()">
+      <option value="all">전체</option>
+      <option value="pos">오실레이터 양수 (매수세)</option>
+      <option value="neg">오실레이터 음수 (매도세)</option>
+    </select>
+    <span class="stat" id="secStatText"></span>
+  </div>
+  <div class="table-wrap">
+    <table id="sectorTable">
+      <thead><tr>
+        <th class="left" onclick="sortTable('sectorTable',0)">#</th>
+        <th class="left" onclick="sortTable('sectorTable',1)">업종코드</th>
+        <th class="left" onclick="sortTable('sectorTable',2)">업종명</th>
+        <th onclick="sortTable('sectorTable',3)">구성종목수</th>
+        <th onclick="sortTable('sectorTable',4)">20일순매도합산(억)</th>
+        <th onclick="sortTable('sectorTable',5)">오실레이터(%)</th>
+        <th onclick="sortTable('sectorTable',6)">MACD(%)</th>
+        <th onclick="sortTable('sectorTable',7)">시그널(%)</th>
+        <th onclick="sortTable('sectorTable',8)">기준일</th>
+      </tr></thead>
+      <tbody>{sector_rows_str}</tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- /tab-sector -->
+
+<script>
+const ALL_DATA    = {all_data_json};
+const SECTOR_DATA = {sector_all_json};
+
+// ── 탭 전환 ──────────────────────────────────────────────────────────────
+function switchTab(name) {{
+  document.querySelectorAll('.tab-content').forEach(el =>
+    el.classList.toggle('active', el.id === 'tab-' + name));
+  document.querySelectorAll('.tab-btn').forEach((btn, i) => {{
+    const names = ['stock','sector'];
+    btn.classList.toggle('active', names[i] === name);
+  }});
+}}
+
+// ── 종목 차트 ─────────────────────────────────────────────────────────────
 let chart1 = null, chart2 = null;
 
 function showChart(ticker) {{
   const d = ALL_DATA[ticker];
   if (!d || !d.history) return;
 
-  // 행 하이라이트
-  document.querySelectorAll('tr.active').forEach(r => r.classList.remove('active'));
-  const row = document.querySelector(`tr[data-ticker="${{ticker}}"]`);
+  document.querySelectorAll('#tab-stock tr.active').forEach(r => r.classList.remove('active'));
+  const row = document.querySelector(`#dataTable tr[data-ticker="${{ticker}}"]`);
   if (row) row.classList.add('active');
 
-  const hist    = d.history;
-  const labels  = hist.map(h => h.date);
-  const mktcap  = hist.map(h => h.mktcap);
-  const net20   = hist.map(h => h.net20 !== null ? -h.net20 : null); // 순매도 양수
-  const osc     = hist.map(h => h.osc);
+  const hist   = d.history;
+  const labels = hist.map(h => h.date);
+  const mktcap = hist.map(h => h.mktcap);
+  const net20  = hist.map(h => h.net20 !== null ? -h.net20 : null);
+  const osc    = hist.map(h => h.osc);
 
   document.getElementById('chartTitle').textContent =
     `${{d.name || ticker}} (${{ticker}}) — 기준일 ${{d.date}}`;
   document.getElementById('chartPanel').classList.add('visible');
 
-  const gridColor = '#21262d';
-  const tickColor = '#8b949e';
+  const gridColor = '#21262d', tickColor = '#8b949e';
 
-  // 차트1: 시가총액 + 20일 누적합산
   if (chart1) chart1.destroy();
   chart1 = new Chart(document.getElementById('chart1'), {{
-    data: {{
-      labels,
-      datasets: [
-        {{ type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
-           borderColor:'#3498db', backgroundColor:'transparent', borderWidth:1.5,
-           pointRadius:0, tension:0.3 }},
-        {{ type:'line', label:'20일순매도합산(억)', data:net20, yAxisID:'y2',
-           borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5,
-           pointRadius:0, tension:0.3 }},
-      ]
-    }},
-    options: {{
-      responsive:true, interaction:{{mode:'index',intersect:false}},
+    data: {{ labels, datasets: [
+      {{ type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
+         borderColor:'#3498db', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+      {{ type:'line', label:'20일순매도합산(억)', data:net20, yAxisID:'y2',
+         borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+    ]}},
+    options: {{ responsive:true, interaction:{{mode:'index',intersect:false}},
       plugins:{{ legend:{{ labels:{{ color:tickColor, font:{{size:11}} }} }} }},
       scales:{{
         x:{{ ticks:{{ color:tickColor, maxTicksLimit:8, font:{{size:10}} }}, grid:{{ color:gridColor }} }},
@@ -252,22 +372,15 @@ function showChart(ticker) {{
     }}
   }});
 
-  // 차트2: 시가총액 + 오실레이터
   if (chart2) chart2.destroy();
   chart2 = new Chart(document.getElementById('chart2'), {{
-    data: {{
-      labels,
-      datasets: [
-        {{ type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
-           borderColor:'#2ecc71', backgroundColor:'transparent', borderWidth:1.5,
-           pointRadius:0, tension:0.3 }},
-        {{ type:'line', label:'수급오실레이터(%)', data:osc, yAxisID:'y2',
-           borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5,
-           pointRadius:0, tension:0.3 }},
-      ]
-    }},
-    options: {{
-      responsive:true, interaction:{{mode:'index',intersect:false}},
+    data: {{ labels, datasets: [
+      {{ type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
+         borderColor:'#2ecc71', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+      {{ type:'line', label:'수급오실레이터(%)', data:osc, yAxisID:'y2',
+         borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+    ]}},
+    options: {{ responsive:true, interaction:{{mode:'index',intersect:false}},
       plugins:{{ legend:{{ labels:{{ color:tickColor, font:{{size:11}} }} }} }},
       scales:{{
         x:{{ ticks:{{ color:tickColor, maxTicksLimit:8, font:{{size:10}} }}, grid:{{ color:gridColor }} }},
@@ -281,11 +394,72 @@ function showChart(ticker) {{
   document.getElementById('chartPanel').scrollIntoView({{behavior:'smooth',block:'start'}});
 }}
 
-// ── 자동완성 ──────────────────────────────────────────────────────────────
+// ── 업종 차트 ─────────────────────────────────────────────────────────────
+let secChart1 = null, secChart2 = null;
+
+function showSectorChart(code) {{
+  const d = SECTOR_DATA[code];
+  if (!d || !d.history || !d.history.length) return;
+
+  document.querySelectorAll('#sectorTable tr.active').forEach(r => r.classList.remove('active'));
+  const row = document.querySelector(`#sectorTable tr[data-code="${{code}}"]`);
+  if (row) row.classList.add('active');
+
+  const hist   = d.history;
+  const labels = hist.map(h => h.date);
+  const mktcap = hist.map(h => h.mktcap);
+  const net20  = hist.map(h => h.net20 !== null ? -h.net20 : null);
+  const osc    = hist.map(h => h.osc);
+
+  document.getElementById('sectorChartTitle').textContent =
+    `${{d.name || code}} (${{code}}) — 기준일 ${{d.date}}`;
+  document.getElementById('sectorChartPanel').classList.add('visible');
+
+  const gridColor = '#21262d', tickColor = '#8b949e';
+
+  if (secChart1) secChart1.destroy();
+  secChart1 = new Chart(document.getElementById('secChart1'), {{
+    data: {{ labels, datasets: [
+      {{ type:'line', label:'업종시총합(억)', data:mktcap, yAxisID:'y1',
+         borderColor:'#3498db', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+      {{ type:'line', label:'업종20일순매도합산(억)', data:net20, yAxisID:'y2',
+         borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+    ]}},
+    options: {{ responsive:true, interaction:{{mode:'index',intersect:false}},
+      plugins:{{ legend:{{ labels:{{ color:tickColor, font:{{size:11}} }} }} }},
+      scales:{{
+        x:{{ ticks:{{ color:tickColor, maxTicksLimit:8, font:{{size:10}} }}, grid:{{ color:gridColor }} }},
+        y1:{{ position:'left',  ticks:{{ color:'#3498db', font:{{size:10}} }}, grid:{{ color:gridColor }} }},
+        y2:{{ position:'right', ticks:{{ color:'#e74c3c', font:{{size:10}} }}, grid:{{ drawOnChartArea:false }} }},
+      }}
+    }}
+  }});
+
+  if (secChart2) secChart2.destroy();
+  secChart2 = new Chart(document.getElementById('secChart2'), {{
+    data: {{ labels, datasets: [
+      {{ type:'line', label:'업종시총합(억)', data:mktcap, yAxisID:'y1',
+         borderColor:'#2ecc71', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+      {{ type:'line', label:'업종오실레이터(%)', data:osc, yAxisID:'y2',
+         borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 }},
+    ]}},
+    options: {{ responsive:true, interaction:{{mode:'index',intersect:false}},
+      plugins:{{ legend:{{ labels:{{ color:tickColor, font:{{size:11}} }} }} }},
+      scales:{{
+        x:{{ ticks:{{ color:tickColor, maxTicksLimit:8, font:{{size:10}} }}, grid:{{ color:gridColor }} }},
+        y1:{{ position:'left',  ticks:{{ color:'#2ecc71', font:{{size:10}} }}, grid:{{ color:gridColor }} }},
+        y2:{{ position:'right', ticks:{{ color:'#e74c3c', callback:v=>v.toFixed(2)+'%', font:{{size:10}} }},
+              grid:{{ drawOnChartArea:false }} }},
+      }}
+    }}
+  }});
+
+  document.getElementById('sectorChartPanel').scrollIntoView({{behavior:'smooth',block:'start'}});
+}}
+
+// ── 종목 자동완성 ─────────────────────────────────────────────────────────
 const STOCK_LIST = Object.values(ALL_DATA).map(d => ({{
-  ticker: d.ticker,
-  name:   d.name || d.ticker,
-  osc:    d.oscillator || 0,
+  ticker: d.ticker, name: d.name || d.ticker, osc: d.oscillator || 0,
 }}));
 
 let acFocus = -1;
@@ -334,9 +508,7 @@ function onSearchKey(e) {{
     items.forEach((el, i) => el.classList.toggle('focused', i === acFocus));
     if (items[acFocus]) items[acFocus].scrollIntoView({{block:'nearest'}});
   }} else if (e.key === 'Enter') {{
-    if (acFocus >= 0 && items[acFocus]) {{
-      selectAc(items[acFocus].dataset.ticker);
-    }}
+    if (acFocus >= 0 && items[acFocus]) selectAc(items[acFocus].dataset.ticker);
   }} else if (e.key === 'Escape') {{
     document.getElementById('acList').classList.remove('open');
   }}
@@ -349,12 +521,10 @@ function selectAc(ticker) {{
   document.getElementById('acList').classList.remove('open');
   filterTable();
   showChart(ticker);
-  // 해당 행으로 스크롤
-  const row = document.querySelector(`tr[data-ticker="${{ticker}}"]`);
+  const row = document.querySelector(`#dataTable tr[data-ticker="${{ticker}}"]`);
   if (row) setTimeout(() => row.scrollIntoView({{behavior:'smooth', block:'center'}}), 300);
 }}
 
-// 외부 클릭 시 드롭다운 닫기
 document.addEventListener('click', e => {{
   if (!e.target.closest('.search-wrap'))
     document.getElementById('acList').classList.remove('open');
@@ -378,11 +548,30 @@ function filterTable() {{
   document.getElementById('statText').textContent = `${{visible}}종목 표시 중`;
 }}
 
-let sortDir = {{}};
-function sortTable(col) {{
-  const tbody = document.querySelector('#dataTable tbody');
+function filterSectorTable() {{
+  const q   = document.getElementById('secSearch').value.toLowerCase();
+  const flt = document.getElementById('secOscFilter').value;
+  const rows = document.querySelectorAll('#sectorTable tbody tr');
+  let visible = 0;
+  rows.forEach(tr => {{
+    const code = tr.querySelector('td.ticker')?.textContent.toLowerCase() || '';
+    const name = tr.querySelector('td.name')?.textContent.toLowerCase() || '';
+    const oscVal = parseFloat(tr.querySelector('td.osc')?.textContent) || 0;
+    const matchQ   = !q || code.includes(q) || name.includes(q);
+    const matchFlt = flt==='all'||(flt==='pos'&&oscVal>0)||(flt==='neg'&&oscVal<0);
+    tr.classList.toggle('hidden', !(matchQ && matchFlt));
+    if (matchQ && matchFlt) visible++;
+  }});
+  document.getElementById('secStatText').textContent = `${{visible}}업종 표시 중`;
+}}
+
+// ── 테이블 정렬 ───────────────────────────────────────────────────────────
+const sortDir = {{}};
+function sortTable(tableId, col) {{
+  const tbody = document.querySelector(`#${{tableId}} tbody`);
   const rows  = Array.from(tbody.querySelectorAll('tr'));
-  const asc   = (sortDir[col] = !sortDir[col]);
+  const key   = tableId + '_' + col;
+  const asc   = (sortDir[key] = !sortDir[key]);
   rows.sort((a, b) => {{
     const av = a.querySelectorAll('td')[col]?.textContent.replace(/[,%+]/g,'').trim()||'';
     const bv = b.querySelectorAll('td')[col]?.textContent.replace(/[,%+]/g,'').trim()||'';
@@ -394,6 +583,7 @@ function sortTable(col) {{
 }}
 
 filterTable();
+filterSectorTable();
 </script>
 </body>
 </html>"""

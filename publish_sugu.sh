@@ -11,6 +11,10 @@ echo "=== 수급오실레이터 리포트 GitHub Pages 배포 ==="
 # sugu_report.html 존재 확인
 if [ ! -f "sugu_report.html" ]; then
     echo "sugu_report.html 없음. 먼저 생성합니다..."
+    # 업종 데이터가 있으면 먼저 집계
+    if [ -f "sector_universe.json" ]; then
+        python3 sector_calculator.py
+    fi
     python3 generate_sugu_report.py
 fi
 
