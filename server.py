@@ -68,7 +68,12 @@ def _inject_button(html: str, update_url: str, status_url: str) -> str:
 }})();
 </script>
 """
-    return html.replace('</body>', button + '</body>')
+    if '</body>' in html:
+        return html.replace('</body>', button + '</body>')
+    elif '</html>' in html:
+        return html.replace('</html>', button + '</html>')
+    else:
+        return html + button
 
 
 # ── SIO 리포트 ─────────────────────────────────────────────────────────────
