@@ -320,28 +320,57 @@ def run(sectors: dict = None):
 
 
 def _debug_single(code: str):
-    """단일 업종 API 응답 디버그 출력"""
-    print(f"\n=== API 응답 디버그: {code} ===")
+    """여러 후보 엔드포인트를 순서대로 시도해서 작동하는 것 찾기"""
     today    = datetime.now().strftime('%Y%m%d')
     fromdate = (datetime.now() - timedelta(days=10)).strftime('%Y%m%d')
-    params = {
-        'fid_cond_mrkt_div_code': 'U',
-        'fid_input_iscd':         code,
-        'fid_input_date_1':       fromdate,
-        'fid_input_date_2':       today,
-        'fid_period_div_code':    'D',
-        'fid_div_cls_code':       '0',
-    }
-    try:
-        resp = requests.get(
-            f'{BASE_URL}/uapi/domestic-stock/v1/quotations/inquire-sector-timedata',
-            headers=_h('FHKUP03500100'),
-            params=params, timeout=10,
-        )
-        print(f"HTTP {resp.status_code}")
-        print(json.dumps(resp.json(), ensure_ascii=False, indent=2)[:1500])
-    except Exception as e:
-        print(f"오류: {e}")
+
+    candidates = [
+        # (tr_id, url_path, params)
+        ('FHKUP03500100', '/uapi/domestic-stock/v1/quotations/inquire-sector-timedata', {
+            'fid_cond_mrkt_div_code': 'U', 'fid_input_iscd': code,
+            'fid_input_date_1': fromdate, 'fid_input_date_2': today,
+            'fid_period_div_code': 'D', 'fid_div_cls_code': '0',
+        }),
+        ('FHKST03030100', '/uapi/domestic-stock/v1/quotations/inquire-daily-sector-index', {
+            'fid_cond_mrkt_div_code': 'U', 'fid_input_iscd': code,
+            'fid_input_date_1': fromdate, 'fid_input_date_2': today,
+            'fid_period_div_code': 'D',
+        }),
+        ('FHKST03030200', '/uapi/domestic-stock/v1/quotations/inquire-daily-sector-index', {
+            'fid_cond_mrkt_div_code': 'U', 'fid_input_iscd': code,
+            'fid_input_date_1': fromdate, 'fid_input_date_2': today,
+            'fid_period_div_code': 'D',
+        }),
+        ('FHKUP03500100', '/uapi/domestic-stock/v1/quotations/inquire-investor-trend-estimate', {
+            'fid_cond_mrkt_div_code': 'U', 'fid_input_iscd': code,
+            'fid_input_date_1': fromdate, 'fid_input_date_2': today,
+        }),
+        ('FHKST03030100', '/uapi/domestic-stock/v1/quotations/inquire-sector-index', {
+            'fid_cond_mrkt_div_code': 'U', 'fid_input_iscd': code,
+            'fid_input_date_1': fromdate, 'fid_input_date_2': today,
+        }),
+    ]
+
+    for tr_id, path, params in candidates:
+        url = BASE_URL + path
+        print(f"\n시도: TR={tr_id}")
+        print(f"  URL: {path}")
+        try:
+            resp = requests.get(url, headers=_h(tr_id), params=params, timeout=10)
+            body = resp.text[:800] if resp.text else '(빈 응답)'
+            print(f"  HTTP {resp.status_code}: {body}")
+            if resp.status_code == 200 and resp.text:
+                try:
+                    j = resp.json()
+                    if j.get('rt_cd') == '0':
+                        print(f"\n  ★ 성공! TR_ID={tr_id}, path={path}")
+                        print(json.dumps(j, ensure_ascii=False, indent=2)[:2000])
+                        return
+                except Exception:
+                    pass
+        except Exception as e:
+            print(f"  오류: {e}")
+        time.sleep(0.3)
 
 
 if __name__ == '__main__':
