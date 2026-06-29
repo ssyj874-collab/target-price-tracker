@@ -65,13 +65,20 @@ def _h(tr_id: str) -> dict:
 
 # ── 유니버스: universe_700.json 로드 ─────────────────────────────────────
 
-def load_universe() -> list[str]:
-    """universe_700.json에서 고정 700종목 티커 로드"""
+def load_universe() -> tuple[list[str], dict]:
+    """universe_700.json에서 고정 700종목 티커 + 종목명 로드"""
     if not UNIVERSE_FILE.exists():
         raise FileNotFoundError(f"유니버스 파일 없음: {UNIVERSE_FILE}")
-    tickers = json.loads(UNIVERSE_FILE.read_text())
+    data = json.loads(UNIVERSE_FILE.read_text())
+    # 구 형식(list[str])과 신 형식(list[dict]) 모두 지원
+    if data and isinstance(data[0], dict):
+        tickers = [d['ticker'] for d in data]
+        names   = {d['ticker']: d.get('name', d['ticker']) for d in data}
+    else:
+        tickers = data
+        names   = {}
     print(f"  유니버스 로드: {len(tickers)}종목 (universe_700.json)")
-    return tickers
+    return tickers, names
 
 
 # ── KIS API: 종목 현재가 (상장주식수 + 종목명) ────────────────────────────
@@ -314,7 +321,8 @@ def run_full(n: int = 700):
     print(f"기준일: {ref_date}, 기간: {fromdate} ~ {todate}")
 
     print("유니버스 로드 중...")
-    tickers = load_universe()[:n]
+    tickers, universe_names = load_universe()
+    tickers = tickers[:n]
     print(f"  → {len(tickers)}개 종목")
 
     # 오늘 캐시가 있으면 API 재호출 생략
@@ -328,8 +336,8 @@ def run_full(n: int = 700):
     else:
         raw = None
 
-    # 영구 종목명 캐시 로드 (장중/빈값 문제 우회)
-    names = load_persistent_names()
+    # 종목명: universe_700.json 우선, 영구 캐시로 보완
+    names = {**load_persistent_names(), **universe_names}
 
     if raw is None:
         print(f"\n투자자 데이터 수집 중 ({len(tickers)}개)...")

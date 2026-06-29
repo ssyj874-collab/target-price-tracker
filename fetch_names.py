@@ -13,7 +13,7 @@ from pathlib import Path
 from sugu_calculator import load_universe, kis_stock_info, NAMES_FILE, CACHE_DIR
 
 def main():
-    tickers = load_universe()
+    tickers, universe_names = load_universe()
     total   = len(tickers)
 
     existing = {}
