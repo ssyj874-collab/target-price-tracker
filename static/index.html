@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>업종쏠림지수</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a2e; color: #e0e0e0; font-family: 'Malgun Gothic', sans-serif; padding: 16px; }
+  h1 { text-align: center; font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+  .desc {
+    background: #16213e; border: 1px solid #0f3460; border-radius: 6px;
+    padding: 10px 14px; margin-bottom: 16px; font-size: 0.82rem; line-height: 1.7; color: #bbb;
+  }
+  .desc p { margin-bottom: 4px; }
+  .chart-wrap {
+    background: #16213e; border: 1px solid #0f3460; border-radius: 8px;
+    padding: 12px; margin-bottom: 20px; position: relative;
+  }
+  .chart-title { font-size: 1rem; font-weight: bold; margin-bottom: 10px; color: #e0e0e0; }
+  canvas { width: 100% !important; }
+  .toolbar {
+    display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  button {
+    background: #0f3460; border: 1px solid #1a6ba8; color: #e0e0e0;
+    padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 0.85rem;
+  }
+  button:hover { background: #1a6ba8; }
+  .status { font-size: 0.8rem; color: #888; margin-left: auto; }
+  .loading {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    color: #888; font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>업종쏠림지수 (특정업종 강도지수)</h1>
+
+<div class="desc">
+  <p>붉은선이 <strong>오르면</strong> → 특정 업종으로 자금이 쏠림 (주도업종 위주 장세)</p>
+  <p>붉은선이 <strong>하락</strong> → 업종 순환장, 여러 종목 골고루 상승해 수익내기 쉬운 장</p>
+  <p>붉은선이 <strong>과도하게 하락</strong> → 특정업종 쏠림 가능성 염두, 일부 업종만 상승하거나 시장 리스크 발생 가능</p>
+</div>
+
+<div class="toolbar">
+  <button onclick="setRange(30)">1개월</button>
+  <button onclick="setRange(90)">3개월</button>
+  <button onclick="setRange(180)">6개월</button>
+  <button onclick="setRange(365)">1년</button>
+  <button onclick="setRange(0)">전체</button>
+  <button onclick="refreshData()" style="margin-left:8px;">🔄 데이터 갱신</button>
+  <span class="status" id="status">로딩 중...</span>
+</div>
+
+<div class="chart-wrap">
+  <div class="chart-title">📊 코스피 업종쏠림지수</div>
+  <div class="loading" id="kospi-loading">데이터 수집 중...</div>
+  <canvas id="kospiChart" height="320"></canvas>
+</div>
+
+<div class="chart-wrap">
+  <div class="chart-title">📊 코스닥 업종쏠림지수</div>
+  <div class="loading" id="kosdaq-loading">데이터 수집 중...</div>
+  <canvas id="kosdaqChart" height="320"></canvas>
+</div>
+
+<script>
+let fullData = { kospi: null, kosdaq: null };
+let charts = {};
+let currentRange = 180;
+
+async function loadChart(market) {
+  const loading = document.getElementById(`${market}-loading`);
+  loading.style.display = 'block';
+  try {
+    const res = await fetch(`/api/chart/${market}`);
+    if (res.status === 202) {
+      document.getElementById('status').textContent = '데이터 수집 중... (1~2분 소요)';
+      setTimeout(() => loadChart(market), 10000);
+      return;
+    }
+    const data = await res.json();
+    if (data.error) {
+      loading.textContent = data.error;
+      setTimeout(() => loadChart(market), 15000);
+      return;
+    }
+    fullData[market] = data;
+    loading.style.display = 'none';
+    renderChart(market);
+    updateStatus();
+  } catch (e) {
+    loading.textContent = '오류: ' + e.message;
+  }
+}
+
+function sliceData(data, days) {
+  if (!days || days === 0) return data;
+  const n = data.dates.length;
+  const from = Math.max(0, n - days);
+  return {
+    dates: data.dates.slice(from),
+    market: data.market.slice(from),
+    concentration: data.concentration.slice(from),
+    correlation: data.correlation.slice(from),
+  };
+}
+
+function renderChart(market) {
+  const d = fullData[market];
+  if (!d) return;
+  const sliced = sliceData(d, currentRange);
+  const canvasId = `${market}Chart`;
+
+  if (charts[market]) {
+    charts[market].destroy();
+  }
+
+  const ctx = document.getElementById(canvasId).getContext('2d');
+
+  // 지수화된 집중도를 오른쪽 축에 맞추기 위해 스케일 분리
+  charts[market] = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: sliced.dates,
+      datasets: [
+        {
+          label: market === 'kospi' ? '코스피' : '코스닥',
+          data: sliced.market,
+          borderColor: '#4e9af1',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          yAxisID: 'yLeft',
+          tension: 0.1,
+        },
+        {
+          label: '업종쏠림지수',
+          data: sliced.concentration,
+          borderColor: '#e05252',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          yAxisID: 'yRight',
+          tension: 0.1,
+        },
+        {
+          label: '상관계수',
+          data: sliced.correlation,
+          borderColor: '#5bc85b',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          yAxisID: 'yCorr',
+          tension: 0.1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#ccc', font: { size: 12 } },
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.y;
+              if (v === null || v === undefined || isNaN(v)) return null;
+              return `${ctx.dataset.label}: ${v.toFixed(2)}`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#888', maxTicksLimit: 12, maxRotation: 0,
+            callback: (val, idx, ticks) => {
+              const label = sliced.dates[idx];
+              if (!label) return '';
+              // 월 첫 날만 표시
+              return label.slice(0, 7);
+            },
+          },
+          grid: { color: '#2a2a4a' },
+        },
+        yLeft: {
+          position: 'left',
+          ticks: { color: '#4e9af1', font: { size: 11 } },
+          grid: { color: '#2a2a4a' },
+          title: { display: true, text: market === 'kospi' ? '코스피' : '코스닥', color: '#4e9af1' },
+        },
+        yRight: {
+          position: 'right',
+          ticks: { color: '#e05252', font: { size: 11 } },
+          grid: { drawOnChartArea: false },
+          title: { display: true, text: '쏠림지수', color: '#e05252' },
+        },
+        yCorr: {
+          position: 'right',
+          ticks: { color: '#5bc85b', font: { size: 11 } },
+          grid: { drawOnChartArea: false },
+          min: -1.5,
+          max: 1.5,
+          title: { display: true, text: '상관계수', color: '#5bc85b' },
+          offset: true,
+        },
+      },
+    },
+  });
+}
+
+function setRange(days) {
+  currentRange = days;
+  if (fullData.kospi) renderChart('kospi');
+  if (fullData.kosdaq) renderChart('kosdaq');
+}
+
+async function refreshData() {
+  document.getElementById('status').textContent = '갱신 요청 중...';
+  await fetch('/api/refresh', { method: 'POST' });
+  document.getElementById('status').textContent = '수집 중 (백그라운드)...';
+  setTimeout(() => { loadChart('kospi'); loadChart('kosdaq'); }, 60000);
+}
+
+function updateStatus() {
+  const d = fullData.kospi || fullData.kosdaq;
+  if (d && d.dates && d.dates.length) {
+    const last = d.dates[d.dates.length - 1];
+    document.getElementById('status').textContent = `최종 데이터: ${last}`;
+  }
+}
+
+// 초기 로드
+loadChart('kospi');
+loadChart('kosdaq');
+</script>
+</body>
+</html>
