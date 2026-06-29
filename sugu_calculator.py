@@ -132,10 +132,10 @@ def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int)
                 continue
             rows.append({
                 'date':            pd.to_datetime(d),
-                # 백만원 → 원
-                'foreign_net':     int(row.get('frgn_ntby_tr_pbmn', 0)) * 1_000_000,
-                'institution_net': int(row.get('orgn_ntby_tr_pbmn', 0)) * 1_000_000,
-                'close':           int(row.get('stck_clpr', 0)),
+                # 백만원 → 원 (빈 문자열 처리)
+                'foreign_net':     int(row.get('frgn_ntby_tr_pbmn') or 0) * 1_000_000,
+                'institution_net': int(row.get('orgn_ntby_tr_pbmn') or 0) * 1_000_000,
+                'close':           int(row.get('stck_clpr') or 0),
             })
         if not rows:
             return pd.DataFrame()
