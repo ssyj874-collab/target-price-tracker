@@ -14,18 +14,24 @@ if [ ! -f "sugu_report.html" ]; then
     python3 generate_sugu_report.py
 fi
 
+# HTML을 임시 파일로 백업 (브랜치 전환 후에도 접근 가능하도록)
+TMP_HTML=$(mktemp /tmp/sugu_report_XXXXXX.html)
+cp sugu_report.html "$TMP_HTML"
+
 # 현재 브랜치 저장
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 echo "gh-pages 브랜치로 배포 중..."
-
-# origin/gh-pages 기준으로 로컬 gh-pages 강제 리셋
 git fetch origin gh-pages
-git checkout gh-pages
-git reset --hard origin/gh-pages
 
-# sugu_report.html 복사 후 커밋
-cp "$SCRIPT_DIR/sugu_report.html" ./sugu_report.html
+# 로컬 gh-pages를 origin 기준으로 강제 동기화
+git branch -f gh-pages origin/gh-pages
+git checkout gh-pages
+
+# 임시 파일에서 복사
+cp "$TMP_HTML" sugu_report.html
+rm "$TMP_HTML"
+
 git add sugu_report.html
 git commit -m "update: 수급오실레이터 리포트 $(date '+%Y-%m-%d %H:%M')" || echo "변경사항 없음"
 git push origin gh-pages
