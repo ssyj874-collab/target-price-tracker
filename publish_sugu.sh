@@ -22,7 +22,7 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 # gh-pages 브랜치로 sugu_report.html만 복사
 git fetch origin gh-pages
 git checkout gh-pages
-git pull origin gh-pages
+git pull --rebase origin gh-pages
 
 cp "$SCRIPT_DIR/sugu_report.html" ./sugu_report.html
 
