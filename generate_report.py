@@ -232,46 +232,24 @@ def publish_to_github_pages(html_path: str):
         return result.stdout.strip()
 
     print("\n📤 GitHub Pages에 업로드 중...")
+    worktree_dir = tempfile.mkdtemp()
     try:
-        # 현재 브랜치 저장
-        original_branch = git(['rev-parse', '--abbrev-ref', 'HEAD'])
+        git(['fetch', 'origin', 'gh-pages'])
+        git(['worktree', 'add', worktree_dir, 'origin/gh-pages'])
 
-        # 로컬/원격 gh-pages 브랜치 존재 여부 확인
-        local_branches  = git(['branch'])
-        remote_branches = git(['branch', '-r'])
-        has_local  = 'gh-pages' in local_branches
-        has_remote = 'origin/gh-pages' in remote_branches
+        shutil.copy2(html_path, os.path.join(worktree_dir, 'index.html'))
 
-        if has_local:
-            git(['checkout', 'gh-pages'])
-            if has_remote:
-                git(['reset', '--hard', 'origin/gh-pages'])
-        elif has_remote:
-            git(['fetch', 'origin', 'gh-pages'])
-            git(['checkout', '-b', 'gh-pages', 'origin/gh-pages'])
-        else:
-            git(['checkout', '--orphan', 'gh-pages'])
-            git(['rm', '-rf', '.'])
-
-        # index.html 복사
-        dest = os.path.join(repo_dir, 'index.html')
-        shutil.copy2(html_path, dest)
-
-        git(['add', 'index.html'])
-        git(['commit', '-m', f'Update SIO report {datetime.today().strftime("%Y-%m-%d %H:%M")}'])
-        git(['push', 'origin', 'gh-pages'])
-
-        # 원래 브랜치로 복귀
-        git(['checkout', original_branch])
+        git(['add', 'index.html'], cwd=worktree_dir)
+        git(['commit', '-m', f'Update SIO report {datetime.today().strftime("%Y-%m-%d %H:%M")}'], cwd=worktree_dir)
+        git(['push', 'origin', 'HEAD:gh-pages'], cwd=worktree_dir)
 
         print("✅ GitHub Pages 업로드 완료!")
         print("   URL: https://ssyj874-collab.github.io/target-price-tracker/")
-        print("   (첫 등록 시 GitHub 설정에서 Pages를 활성화해야 합니다)")
     except Exception as e:
         print(f"⚠️  GitHub 업로드 실패: {e}")
-        # 실패해도 원래 브랜치로 복귀 시도
+    finally:
         try:
-            git(['checkout', original_branch])
+            git(['worktree', 'remove', worktree_dir, '--force'])
         except Exception:
             pass
 
