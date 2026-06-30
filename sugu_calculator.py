@@ -150,7 +150,7 @@ def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int)
             if not d:
                 continue
             rows.append({
-                'date':            pd.to_datetime(d),
+                'date':            datetime.strptime(d, '%Y%m%d'),
                 # 백만원 → 원 (빈 문자열 처리)
                 'foreign_net':     int(row.get('frgn_ntby_tr_pbmn') or 0) * 1_000_000,
                 'institution_net': int(row.get('orgn_ntby_tr_pbmn') or 0) * 1_000_000,
@@ -401,7 +401,7 @@ def run_full(n: int = 1400):
             existing_raw = pd.DataFrame()
 
     # 오늘 데이터가 있는 종목 확인
-    ref_date_dt = pd.to_datetime(ref_date)
+    ref_date_dt = datetime.strptime(ref_date, '%Y%m%d')
     if not existing_raw.empty and 'date' in existing_raw.columns:
         today_tickers = set(
             existing_raw[existing_raw['date'] >= ref_date_dt]['ticker'].unique()
