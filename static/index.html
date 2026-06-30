@@ -70,7 +70,7 @@
 <script>
 let fullData = { kospi: null, kosdaq: null };
 let charts = {};
-let currentRange = 180;
+let currentRange = 90;
 
 async function loadChart(market) {
   const loading = document.getElementById(`${market.toLowerCase()}-loading`);
@@ -193,6 +193,8 @@ function renderChart(market) {
         },
         yLeft: {
           position: 'left',
+          min: Math.min(...sliced.market.filter(v => v != null)) * 0.99,
+          max: Math.max(...sliced.market.filter(v => v != null)) * 1.01,
           ticks: { color: '#4e9af1', font: { size: 11 } },
           grid: { color: '#2a2a4a' },
           title: { display: true, text: market.toLowerCase() === 'kospi' ? '코스피' : '코스닥', color: '#4e9af1' },
