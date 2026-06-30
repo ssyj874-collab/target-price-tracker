@@ -1,28 +1,30 @@
-"""KRX API 응답 확인용. 터미널에서 python3 debug_krx.py 실행"""
-import requests, io
+"""KIS API 연결 테스트. python3 debug_krx.py"""
+import os, requests
+from dotenv import load_dotenv
+load_dotenv()
 
-OTP_URL = "https://data.krx.co.kr/comm/fileDn/GenerateOTP/generate.cmd"
-DL_URL  = "https://data.krx.co.kr/comm/fileDn/download_csv.cmd"
+KEY = os.getenv("KIS_APP_KEY")
+SEC = os.getenv("KIS_APP_SECRET")
+BASE = "https://openapi.koreainvestment.com:9443"
 
-session = requests.Session()
-session.headers.update({
-    "Referer":    "https://data.krx.co.kr/",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-})
-session.get("https://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=15)
-print("세션 쿠키:", dict(session.cookies))
+# 토큰 발급
+r = requests.post(f"{BASE}/oauth2/tokenP", json={
+    "grant_type": "client_credentials", "appkey": KEY, "appsecret": SEC,
+}, timeout=10)
+print("토큰 상태:", r.status_code)
+if r.status_code != 200:
+    print(r.text); exit()
 
-otp_resp = session.post(OTP_URL, data={
-    "locale": "ko_KR", "idxIndMidclssCd": "02",
-    "indIdx": "1005", "indIdx2": "1005",
-    "strtDd": "20240101", "endDd": "20241231",
-    "share": "1", "money": "1", "csvxls_isNo": "false",
-    "name": "fileDown", "url": "dbms/MDC/STAT/standard/MDCSTAT01001",
-}, timeout=15)
+token = r.json()["access_token"]
+print("토큰:", token[:30], "...")
 
-print("OTP:", repr(otp_resp.text[:100]))
-
-dl_resp = session.post(DL_URL, data={"code": otp_resp.text.strip()}, timeout=15)
-print("Status:", dl_resp.status_code)
-print("Content-Type:", dl_resp.headers.get("Content-Type"))
-print("첫 500바이트:", dl_resp.content[:500])
+# 코스피 종합 기간별 시세 테스트
+r2 = requests.get(f"{BASE}/uapi/domestic-stock/v1/quotations/inquire-index-chartprice",
+    headers={"authorization": f"Bearer {token}", "appkey": KEY, "appsecret": SEC,
+             "tr_id": "FHKUP03500100", "custtype": "P"},
+    params={"FID_COND_MRKT_DIV_CODE": "U", "FID_INPUT_ISCD": "0001",
+            "FID_INPUT_DATE_1": "20240101", "FID_INPUT_DATE_2": "20240110",
+            "FID_PERIOD_DIV_CODE": "D"},
+    timeout=15)
+print("업종시세 상태:", r2.status_code)
+print("응답:", r2.text[:500])

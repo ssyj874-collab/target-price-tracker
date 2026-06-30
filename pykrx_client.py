@@ -1,21 +1,35 @@
-import io
-import time
-import requests
-import pandas as pd
+import os, time, requests, pandas as pd
+from dotenv import load_dotenv
 
-# KRX는 OTP 방식: GenerateOTP → download_csv
-OTP_URL = "https://data.krx.co.kr/comm/fileDn/GenerateOTP/generate.cmd"
-DL_URL  = "https://data.krx.co.kr/comm/fileDn/download_csv.cmd"
+load_dotenv()
 
-session = requests.Session()
-session.headers.update({
-    "Referer":    "https://data.krx.co.kr/",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-})
-# 세션 쿠키 확보
-session.get("https://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=15)
+BASE    = "https://openapi.koreainvestment.com:9443"
+APP_KEY = os.getenv("KIS_APP_KEY")
+APP_SEC = os.getenv("KIS_APP_SECRET")
 
-# idxIndMidclssCd: 01=코스피종합, 02=코스피업종, 05=코스닥종합, 06=코스닥업종
+_token = {"v": None, "exp": 0}
+
+def _get_token() -> str:
+    if _token["v"] and time.time() < _token["exp"]:
+        return _token["v"]
+    r = requests.post(f"{BASE}/oauth2/tokenP", json={
+        "grant_type": "client_credentials",
+        "appkey": APP_KEY, "appsecret": APP_SEC,
+    }, timeout=10)
+    r.raise_for_status()
+    d = r.json()
+    _token["v"] = d["access_token"]
+    _token["exp"] = time.time() + int(d.get("expires_in", 86400)) - 60
+    return _token["v"]
+
+def _headers(tr_id: str) -> dict:
+    return {
+        "authorization": f"Bearer {_get_token()}",
+        "appkey": APP_KEY, "appsecret": APP_SEC,
+        "tr_id": tr_id, "custtype": "P",
+    }
+
+# KRX 업종코드 (코스피: 1005~1025, 코스닥: 2001~)
 KOSPI_SECTORS = {
     "1005": "음식료품",   "1006": "섬유의복",    "1007": "종이목재",
     "1008": "화학",       "1009": "의약품",       "1010": "비금속광물",
@@ -34,54 +48,52 @@ KOSDAQ_SECTORS = {
     "2025": "통신서비스",
 }
 
-SECTOR_MAP = {"KOSPI": KOSPI_SECTORS, "KOSDAQ": KOSDAQ_SECTORS}
-MID_CLS    = {"KOSPI": "02",          "KOSDAQ": "06"}
-MID_IDX    = {"KOSPI": ("01","1001"), "KOSDAQ": ("05","2001")}
+SECTOR_MAP  = {"KOSPI": KOSPI_SECTORS,  "KOSDAQ": KOSDAQ_SECTORS}
+MARKET_IDX  = {"KOSPI": "0001",         "KOSDAQ": "1001"}
 
 
-def _fetch_csv(mid_cls: str, idx_code: str, from_date: str, to_date: str) -> pd.DataFrame:
-    otp = session.post(OTP_URL, data={
-        "locale":           "ko_KR",
-        "idxIndMidclssCd":  mid_cls,
-        "indIdx":           idx_code,
-        "indIdx2":          idx_code,
-        "strtDd":           from_date,
-        "endDd":            to_date,
-        "share":            "1",
-        "money":            "1",
-        "csvxls_isNo":      "false",
-        "name":             "fileDown",
-        "url":              "dbms/MDC/STAT/standard/MDCSTAT01001",
-    }, timeout=15).text.strip()
-
-    resp = session.post(DL_URL, data={"code": otp}, timeout=15)
-    df = pd.read_csv(io.BytesIO(resp.content), encoding="utf-8-sig", engine="python")
-    return df
-
-
-def _parse(df: pd.DataFrame) -> pd.Series:
-    # 날짜·종가 컬럼 자동 탐지
-    date_col  = next(c for c in df.columns if "일자" in c)
-    close_col = next(c for c in df.columns if "종가" in c)
-    df = df[[date_col, close_col]].copy()
-    df.columns = ["date", "close"]
-    df["close"] = pd.to_numeric(df["close"].astype(str).str.replace(",", ""), errors="coerce")
-    df = df.sort_values("date").set_index("date")
-    return df["close"]
+def _fetch_period(iscd: str, from_date: str, to_date: str) -> list[dict]:
+    """업종 기간별 시세 (tr: FHKUP03500100)"""
+    r = requests.get(
+        f"{BASE}/uapi/domestic-stock/v1/quotations/inquire-index-chartprice",
+        headers=_headers("FHKUP03500100"),
+        params={
+            "FID_COND_MRKT_DIV_CODE": "U",
+            "FID_INPUT_ISCD": iscd,
+            "FID_INPUT_DATE_1": from_date,
+            "FID_INPUT_DATE_2": to_date,
+            "FID_PERIOD_DIV_CODE": "D",
+        },
+        timeout=15,
+    )
+    r.raise_for_status()
+    return r.json().get("output2", [])
 
 
 def fetch_all_sector_returns(market: str, fromdate: str, todate: str) -> pd.DataFrame:
     sectors = SECTOR_MAP.get(market, KOSPI_SECTORS)
-    mid     = MID_CLS.get(market, "02")
     all_returns = {}
 
     for code, name in sectors.items():
         try:
-            df  = _fetch_csv(mid, code, fromdate, todate)
-            pct = _parse(df).pct_change() * 100
+            rows = _fetch_period(code, fromdate, todate)
+            if not rows:
+                print(f"  [{name}] 데이터 없음")
+                continue
+            df = pd.DataFrame(rows)
+            # 날짜·종가 컬럼 탐지
+            date_col  = next(c for c in df.columns if "date" in c.lower() or "bsop" in c.lower())
+            close_col = next(c for c in df.columns if "prpr" in c.lower() or "prdy" not in c.lower() and "prpr" in c.lower(), None)
+            if close_col is None:
+                close_col = [c for c in df.columns if "prpr" in c.lower()][0]
+            df = df[[date_col, close_col]].copy()
+            df.columns = ["date", "close"]
+            df["close"] = pd.to_numeric(df["close"], errors="coerce")
+            df = df.sort_values("date").set_index("date")
+            pct = df["close"].pct_change() * 100
             all_returns[code] = pct
             print(f"  [{name}] {len(pct)}일 완료")
-            time.sleep(0.3)
+            time.sleep(0.2)
         except Exception as e:
             print(f"  [{name}({code})] 오류: {e}")
 
@@ -91,6 +103,13 @@ def fetch_all_sector_returns(market: str, fromdate: str, todate: str) -> pd.Data
 
 
 def fetch_market_close(market: str, fromdate: str, todate: str) -> pd.Series:
-    mid, code = MID_IDX.get(market, ("01", "1001"))
-    df = _fetch_csv(mid, code, fromdate, todate)
-    return _parse(df)
+    code = MARKET_IDX.get(market, "0001")
+    rows = _fetch_period(code, fromdate, todate)
+    df = pd.DataFrame(rows)
+    date_col  = next(c for c in df.columns if "date" in c.lower() or "bsop" in c.lower())
+    close_col = [c for c in df.columns if "prpr" in c.lower()][0]
+    df = df[[date_col, close_col]].copy()
+    df.columns = ["date", "close"]
+    df["close"] = pd.to_numeric(df["close"], errors="coerce")
+    df = df.sort_values("date").set_index("date")
+    return df["close"]
