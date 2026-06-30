@@ -22,13 +22,16 @@ header p{font-size:0.82rem;color:#8b949e;margin-top:3px;}
 .tab-content.active{display:block;}
 
 /* 차트 패널 */
-.chart-panel{background:#161b22;border-bottom:1px solid #21262d;padding:16px 24px;display:none;}
-.chart-panel.visible{display:block;}
-.chart-panel h2{font-size:0.95rem;color:#8b949e;margin-bottom:12px;}
-.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.chart-box{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;}
-.chart-box h3{font-size:0.82rem;color:#8b949e;margin-bottom:8px;}
-canvas{max-height:220px;}
+.chart-stack{background:#161b22;border-bottom:1px solid #21262d;padding:12px 24px;display:none;flex-direction:column;gap:12px;}
+.chart-stack.visible{display:flex;}
+.chart-card{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;}
+.chart-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.chart-card-title{font-size:0.92rem;color:#e6edf3;font-weight:600;}
+.chart-card-close{background:none;border:none;color:#8b949e;font-size:1rem;cursor:pointer;padding:0 4px;line-height:1;}
+.chart-card-close:hover{color:#e6edf3;}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.chart-box h3{font-size:0.78rem;color:#8b949e;margin-bottom:6px;}
+canvas{max-height:200px;}
 
 .container{padding:16px 24px;}
 .toolbar{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
@@ -93,20 +96,8 @@ tr.hidden{display:none;}
 <!-- ══════════ 종목별 탭 ══════════ -->
 <div id="tab-stock" class="tab-content active">
 
-<!-- 종목별 차트 패널 -->
-<div class="chart-panel" id="chartPanel">
-  <h2 id="chartTitle">종목 차트</h2>
-  <div class="chart-grid">
-    <div class="chart-box">
-      <h3>시가총액 + 기관/외국인 20일 누적합산(억원)</h3>
-      <canvas id="chart1"></canvas>
-    </div>
-    <div class="chart-box">
-      <h3>시가총액 + 수급오실레이터(%)</h3>
-      <canvas id="chart2"></canvas>
-    </div>
-  </div>
-</div>
+<!-- 종목별 차트 스택 (최대 3개) -->
+<div class="chart-stack" id="chartStack"></div>
 
 <div class="container">
   <div class="toolbar">
@@ -13813,13 +13804,22 @@ function switchTab(name) {
   });
 }
 
-// ── 종목 차트 ─────────────────────────────────────────────────────────────
-let chart1 = null, chart2 = null;
+// ── 종목 차트 (최대 3개 스택) ─────────────────────────────────────────────
+const MAX_CHARTS = 3;
+const chartCards = []; // {ticker, chart1, chart2, el}
 
 function showChart(ticker) {
   const d = ALL_DATA[ticker];
   if (!d || !d.history) return;
 
+  // 이미 표시 중인 종목이면 스크롤만
+  const existing = chartCards.find(c => c.ticker === ticker);
+  if (existing) {
+    existing.el.scrollIntoView({behavior:'smooth', block:'start'});
+    return;
+  }
+
+  // 테이블 행 하이라이트
   document.querySelectorAll('#tab-stock tr.active').forEach(r => r.classList.remove('active'));
   const row = document.querySelector(`#dataTable tr[data-ticker="${ticker}"]`);
   if (row) row.classList.add('active');
@@ -13829,15 +13829,39 @@ function showChart(ticker) {
   const mktcap = hist.map(h => h.mktcap);
   const net20  = hist.map(h => h.net20 !== null ? -h.net20 : null);
   const osc    = hist.map(h => h.osc);
-
-  document.getElementById('chartTitle').textContent =
-    `${d.name || ticker} (${ticker}) — 기준일 ${d.date}`;
-  document.getElementById('chartPanel').classList.add('visible');
-
   const gridColor = '#21262d', tickColor = '#8b949e';
 
-  if (chart1) chart1.destroy();
-  chart1 = new Chart(document.getElementById('chart1'), {
+  // 카드 DOM 생성
+  const cardId = 'card_' + ticker;
+  const c1Id   = 'c1_' + ticker;
+  const c2Id   = 'c2_' + ticker;
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.id = cardId;
+  card.innerHTML = `
+    <div class="chart-card-header">
+      <span class="chart-card-title">${d.name || ticker} (${ticker}) — ${d.date}</span>
+      <button class="chart-card-close" onclick="removeChart('${ticker}')">✕</button>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-box"><h3>시가총액 + 20일순매도합산(억)</h3><canvas id="${c1Id}"></canvas></div>
+      <div class="chart-box"><h3>시가총액 + 수급오실레이터(%)</h3><canvas id="${c2Id}"></canvas></div>
+    </div>`;
+
+  const stack = document.getElementById('chartStack');
+
+  // 최대 3개 초과 시 가장 오래된 것 제거
+  if (chartCards.length >= MAX_CHARTS) {
+    const oldest = chartCards.shift();
+    oldest.chart1.destroy();
+    oldest.chart2.destroy();
+    oldest.el.remove();
+  }
+
+  stack.appendChild(card);
+  stack.classList.add('visible');
+
+  const ch1 = new Chart(document.getElementById(c1Id), {
     data: { labels, datasets: [
       { type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
          borderColor:'#3498db', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
@@ -13854,8 +13878,7 @@ function showChart(ticker) {
     }
   });
 
-  if (chart2) chart2.destroy();
-  chart2 = new Chart(document.getElementById('chart2'), {
+  const ch2 = new Chart(document.getElementById(c2Id), {
     data: { labels, datasets: [
       { type:'line', label:'시가총액(억)', data:mktcap, yAxisID:'y1',
          borderColor:'#2ecc71', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
@@ -13873,7 +13896,19 @@ function showChart(ticker) {
     }
   });
 
-  document.getElementById('chartPanel').scrollIntoView({behavior:'smooth',block:'start'});
+  chartCards.push({ ticker, chart1: ch1, chart2: ch2, el: card });
+  card.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function removeChart(ticker) {
+  const idx = chartCards.findIndex(c => c.ticker === ticker);
+  if (idx === -1) return;
+  const entry = chartCards.splice(idx, 1)[0];
+  entry.chart1.destroy();
+  entry.chart2.destroy();
+  entry.el.remove();
+  if (chartCards.length === 0)
+    document.getElementById('chartStack').classList.remove('visible');
 }
 
 // ── 업종 차트 ─────────────────────────────────────────────────────────────
