@@ -150,7 +150,7 @@ def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int)
             if not d:
                 continue
             rows.append({
-                'date':            datetime.strptime(d, '%Y%m%d'),
+                'date':            d,  # 'YYYYMMDD' 문자열 유지
                 # 백만원 → 원 (빈 문자열 처리)
                 'foreign_net':     int(row.get('frgn_ntby_tr_pbmn') or 0) * 1_000_000,
                 'institution_net': int(row.get('orgn_ntby_tr_pbmn') or 0) * 1_000_000,
@@ -159,9 +159,9 @@ def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int)
         if not rows:
             return pd.DataFrame()
 
-        df = pd.DataFrame(rows).set_index('date').sort_index()
+        df = pd.DataFrame(rows).sort_values('date').reset_index(drop=True)
         df['market_cap'] = df['close'] * shares
-        return df[['foreign_net', 'institution_net', 'market_cap']]
+        return df[['date', 'foreign_net', 'institution_net', 'market_cap']]
 
     except Exception:
         return pd.DataFrame()
@@ -208,8 +208,8 @@ def kis_stock_daily(ticker: str, fromdate: str, todate: str) -> pd.DataFrame:
     if not all_frames:
         return pd.DataFrame()
 
-    combined = pd.concat(all_frames)
-    combined = combined[~combined.index.duplicated(keep='first')].sort_index()
+    combined = pd.concat(all_frames, ignore_index=True)
+    combined = combined[~combined.duplicated(subset=['date'], keep='first')].sort_values('date').reset_index(drop=True)
     combined.attrs['name'] = name
     return combined
 
@@ -228,7 +228,7 @@ def fetch_all(tickers: list[str], fromdate: str, todate: str) -> tuple[pd.DataFr
         df = kis_stock_daily(ticker, fromdate, todate)
         if not df.empty:
             df['ticker'] = ticker
-            rows.append(df.reset_index())
+            rows.append(df)
             names[ticker] = df.attrs.get('name', '') or ticker
         else:
             failed.append(ticker)
@@ -245,7 +245,7 @@ def fetch_all(tickers: list[str], fromdate: str, todate: str) -> tuple[pd.DataFr
             df = kis_stock_daily(ticker, fromdate, todate)
             if not df.empty:
                 df['ticker'] = ticker
-                rows.append(df.reset_index())
+                rows.append(df)
                 names[ticker] = df.attrs.get('name', '') or ticker
             else:
                 still_failed.append(ticker)
@@ -296,7 +296,7 @@ def calc_oscillator(raw: pd.DataFrame, names: dict = None) -> pd.DataFrame:
         # 히스토리: 차트용 시계열
         history = []
         for dt in grp.index:
-            dt_str = dt.strftime('%Y-%m-%d')
+            dt_str = f"{dt[:4]}-{dt[4:6]}-{dt[6:]}"
             mc     = grp.loc[dt, 'market_cap']
             n20    = roll20_sum.get(dt)
             o      = osc.get(dt) if dt in osc.index else None
@@ -401,10 +401,9 @@ def run_full(n: int = 1400):
             existing_raw = pd.DataFrame()
 
     # 오늘 데이터가 있는 종목 확인
-    ref_date_dt = datetime.strptime(ref_date, '%Y%m%d')
     if not existing_raw.empty and 'date' in existing_raw.columns:
         today_tickers = set(
-            existing_raw[existing_raw['date'] >= ref_date_dt]['ticker'].unique()
+            existing_raw[existing_raw['date'] >= ref_date]['ticker'].unique()
         )
     else:
         today_tickers = set()
@@ -453,7 +452,10 @@ def run_full(n: int = 1400):
 
     # JSON 저장
     df_out = result.reset_index()
-    df_out['date'] = df_out['date'].dt.strftime('%Y-%m-%d')
+    # date는 'YYYYMMDD' 문자열 → 'YYYY-MM-DD' 변환
+    df_out['date'] = df_out['date'].apply(
+        lambda s: f"{s[:4]}-{s[4:6]}-{s[6:]}" if isinstance(s, str) and len(s) == 8 else str(s)
+    )
     out = {
         'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
         'ref_date':   ref_date,
