@@ -335,7 +335,7 @@ def last_trading_day() -> str:
 
 
 OUTPUT_FILE   = Path(__file__).parent / 'sugu_result.json'
-RAW_CACHE     = CACHE_DIR / 'sugu_raw_cache.parquet'
+RAW_CACHE     = CACHE_DIR / 'sugu_raw_cache.pkl'
 NAMES_FILE    = CACHE_DIR / 'names_persistent.json'  # 영구 종목명 캐시
 SHARES_FILE   = CACHE_DIR / 'shares_persistent.json'  # 영구 상장주식수 캐시
 
@@ -391,7 +391,7 @@ def run_full(n: int = 1400):
     existing_raw = pd.DataFrame()
     if RAW_CACHE.exists():
         try:
-            existing_raw = pd.read_parquet(RAW_CACHE)
+            existing_raw = pd.read_pickle(RAW_CACHE)
             # ticker가 인덱스에 있으면 컬럼으로 복원
             if 'ticker' not in existing_raw.columns:
                 existing_raw = existing_raw.reset_index()
@@ -432,7 +432,7 @@ def run_full(n: int = 1400):
                 print(f"  병합 완료: {len(raw)}행")
             else:
                 raw = new_raw
-            raw.to_parquet(RAW_CACHE)
+            raw.to_pickle(RAW_CACHE)
             print(f"  캐시 저장: {RAW_CACHE}")
         else:
             raw = existing_raw
