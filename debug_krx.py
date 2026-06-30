@@ -1,4 +1,4 @@
-"""네이버 업종 HTML 파싱 + KRX 로컬 접근. python3 debug_krx.py"""
+"""네이버 업종 API URL 추출 + 대안 소스 탐색. python3 debug_krx.py"""
 import requests, time, re, json
 
 HDR = {
@@ -6,117 +6,105 @@ HDR = {
                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Referer": "https://finance.naver.com/",
     "Accept-Language": "ko-KR,ko;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
 }
 
 # ============================================================
-# 1. 네이버 업종 목록 HTML 파싱 (등락률 추출)
+# 1. 업종 목록 HTML에서 API URL / 데이터 찾기
 # ============================================================
-print("=== 네이버 업종 목록 HTML 파싱 ===\n")
+print("=== 네이버 업종 목록 HTML 내 API URL 추출 ===\n")
 r = requests.get(
     "https://finance.naver.com/sise/sise_group.naver",
     headers=HDR, params={"type": "upjong"}, timeout=15,
 )
 html = r.text
-# "등락률" 근처 파싱
-# 패턴: 업종명, 지수, 전일비, 등락률
-rows = re.findall(
-    r'type=upjong&amp;no=(\d+)[^>]*>([^<]+)</a>.*?'
-    r'<td[^>]*class="[^"]*number[^"]*"[^>]*>([\d,\.]+)</td>.*?'
-    r'<td[^>]*>([\d,\.\+\-]+)%?</td>',
-    html, re.DOTALL
-)
-if rows:
-    print(f"파싱 성공! {len(rows)}개 업종:")
-    for no, name, idx, rate in rows[:10]:
-        print(f"  no={no} {name.strip()} | 지수={idx} | 등락={rate}")
-else:
-    # 대안 패턴
-    print("패턴1 실패, 대안 시도...")
-    # 등락률 텍스트 근처 raw 데이터
-    pos = html.find('등락률')
-    if pos > 0:
-        print(f"'등락률' 위치: {pos}")
-        print(html[pos-200:pos+500])
-    else:
-        print("'등락률' 텍스트 없음")
 
-    # 업종명 목록이라도 추출
-    names = re.findall(r'type=upjong&(?:amp;)?no=(\d+)[^>]*>([^<]{2,20})</a>', html)
-    print(f"\n업종명 {len(names)}개 발견:")
-    for no, name in names[:20]:
-        print(f"  no={no}: {name.strip()}")
-
-    # 숫자 데이터 근처 샘플
-    chunk_pos = html.find('1,')
-    if chunk_pos > 0:
-        print(f"\nHTML 샘플 (숫자 근처):\n{html[chunk_pos-100:chunk_pos+500]}")
-
-print()
-
-# ============================================================
-# 2. 네이버 업종 상세 페이지에서 차트 API URL 찾기
-# ============================================================
-print("=== 네이버 업종 상세 페이지 분석 (no=282) ===\n")
-r2 = requests.get(
-    "https://finance.naver.com/sise/sise_group_detail.naver",
-    headers=HDR, params={"type": "upjong", "no": "282"}, timeout=15,
-)
-html2 = r2.text
-# API URL 패턴 찾기
-api_urls = re.findall(r'(?:fetch|axios|url|href|src)["\s:=]+(["\'])([^"\']*(?:api|chart|json|ajax)[^"\']*)\1', html2, re.I)
-print(f"API URL {len(api_urls)}개 발견:")
-for _, url in api_urls[:20]:
-    print(f"  {url}")
-
-# 등락률 데이터
-ctrt = re.findall(r'(?:prdy_ctrt|fluctuat|등락)[^:]*[:\s=]+"?([\d\.\-\+]+)"?', html2, re.I)
-print(f"\n등락률 데이터: {ctrt[:10]}")
-
-print()
-
-# ============================================================
-# 3. KRX 데이터 포털 (Mac 로컬에서 접근)
-# ============================================================
-print("=== KRX 데이터포털 (OTP 방식 로컬 시도) ===\n")
-sess = requests.Session()
-sess.headers.update({
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-    "Accept": "application/json, text/plain, */*",
-    "Origin": "http://data.krx.co.kr",
-    "Referer": "http://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp",
-})
-
-# 먼저 메인 페이지 접근 (쿠키 획득)
-r3 = sess.get("http://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=10)
-print(f"KRX 메인: {r3.status_code}")
-
-time.sleep(0.5)
-
-# 업종지수 데이터 요청 (올바른 BLD로)
-for bld_name, bld, extra in [
-    ("업종지수 시세", "dbms/MDC/STAT/standard/MDCSTAT00601",
-     {"trdDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02", "share": "1", "money": "1"}),
-    ("업종지수 추이", "dbms/MDC/STAT/standard/MDCSTAT00602",
-     {"trdDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02"}),
-    ("지수 기간별", "dbms/MDC/STAT/standard/MDCSTAT00603",
-     {"strtDd": "20260620", "endDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02", "idxCd": "1001"}),
+# polling / api / ajax URL 찾기
+found_urls = set()
+for pattern in [
+    r'["\']([^"\']*(?:polling|realtime|ajax|/api/)[^"\']*)["\']',
+    r'url\s*:\s*["\']([^"\']+)["\']',
+    r'fetch\(["\']([^"\']+)["\']',
 ]:
-    r4 = sess.post(
-        "http://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
-        data={"bld": bld, "locale": "ko_KR", **extra},
-        timeout=10,
-    )
-    print(f"[{bld_name}] {r4.status_code} ({len(r4.content)}B)")
-    if r4.status_code == 200:
-        try:
-            j = r4.json()
-            print(f"  키: {list(j.keys())[:8]}")
-            for k, v in j.items():
-                if isinstance(v, list) and v:
-                    print(f"  {k}[0]: {v[0]}")
-        except:
-            print(f"  텍스트: {r4.text[:200]}")
-    else:
-        print(f"  → {r4.text[:100]}")
-    time.sleep(0.5)
+    for m in re.finditer(pattern, html, re.I):
+        u = m.group(1)
+        if u.startswith(('http', '/')):
+            found_urls.add(u)
+
+print(f"발견된 API URL {len(found_urls)}개:")
+for u in sorted(found_urls)[:30]:
+    print(f"  {u}")
+
+# __NEXT_DATA__ 탐색
+nd = re.search(r'<script id="__NEXT_DATA__"[^>]*>({.*?})</script>', html, re.S)
+if nd:
+    print(f"\n__NEXT_DATA__ 발견! 길이: {len(nd.group(1))}")
+    try:
+        data = json.loads(nd.group(1))
+        print(f"  키: {list(data.keys())}")
+    except:
+        print(f"  파싱 실패: {nd.group(1)[:200]}")
+else:
+    print("\n__NEXT_DATA__ 없음")
+
+# 업종 데이터 직접 포함 여부
+upjong_json = re.search(r'upjong[^=]*=\s*(\[{.*?}\])', html, re.S)
+if upjong_json:
+    print(f"\n업종 JSON 데이터 발견: {upjong_json.group(1)[:300]}")
+
+print()
+
+# ============================================================
+# 2. 네이버 업종 AJAX 엔드포인트 직접 시도
+# ============================================================
+print("=== 네이버 업종 AJAX 엔드포인트 ===\n")
+
+HDR2 = {**HDR, "Accept": "application/json, text/plain, */*",
+         "X-Requested-With": "XMLHttpRequest"}
+
+for url in [
+    "https://finance.naver.com/sise/sise_group_ajax.naver?type=upjong",
+    "https://finance.naver.com/sise/ajaxSiseUpjong.naver?type=upjong",
+    "https://finance.naver.com/sise/getUpjongList.naver",
+    "https://finance.naver.com/api/sise/upjongList",
+    "https://finance.naver.com/api/sise/group?type=upjong",
+    "https://api.finance.naver.com/service/sise/upjong",
+    "https://m.stock.naver.com/api/sector/list",
+    "https://m.stock.naver.com/api/domestic/market/sector",
+    "https://m.stock.naver.com/api/domestic/market/KOSPI/sector",
+    "https://m.stock.naver.com/api/domestic/category/industry",
+    "https://m.stock.naver.com/api/domestic/upjong",
+]:
+    try:
+        r2 = requests.get(url, headers=HDR2, timeout=8)
+        ct = r2.headers.get("content-type", "")
+        print(f"  [{r2.status_code}] {url.split('naver.com')[-1][:60]}")
+        if r2.status_code == 200 and "json" in ct:
+            j = r2.json()
+            print(f"    JSON: {str(j)[:200]}")
+        elif r2.status_code == 200 and r2.text.strip().startswith(('[', '{')):
+            print(f"    JSON-like: {r2.text[:200]}")
+    except Exception as e:
+        print(f"  [오류] {url.split('naver.com')[-1][:60]}: {e}")
+    time.sleep(0.2)
+
+print()
+
+# ============================================================
+# 3. Naver Finance 업종 차트 히스토리 (fchart 변형)
+# ============================================================
+print("=== fchart 업종 코드 변형 테스트 ===\n")
+for sym in ["KPI1", "KPI2", "KPI3", "U282", "UPJ282", "UPJONG282",
+            "N282", "GROUP282", "B282", "S282", "F282"]:
+    r3 = requests.get("https://fchart.stock.naver.com/sise.nhn",
+        headers=HDR,
+        params={"symbol": sym, "timeframe": "day", "count": "3", "requestType": "0"},
+        timeout=8)
+    body = r3.text.strip()
+    if "<candle" in body or ("200" == str(r3.status_code) and len(body) > 60):
+        print(f"  [{sym}] ✅ {body[:200]}")
+    elif r3.status_code != 200:
+        print(f"  [{sym}] {r3.status_code}")
+    # else: silent (empty protocol)
+    time.sleep(0.1)
+
+print("(✅ 없으면 모두 빈 protocol)")
