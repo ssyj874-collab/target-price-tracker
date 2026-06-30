@@ -53,7 +53,7 @@ def _fetch_csv(mid_cls: str, idx_code: str, from_date: str, to_date: str) -> pd.
     }, timeout=15).text.strip()
 
     resp = session.post(DL_URL, data={"code": otp}, timeout=15)
-    df = pd.read_csv(io.BytesIO(resp.content), encoding="utf-8-sig")
+    df = pd.read_csv(io.BytesIO(resp.content), encoding="euc-kr", engine="python")
     return df
 
 
