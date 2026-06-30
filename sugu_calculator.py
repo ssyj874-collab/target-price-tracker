@@ -374,7 +374,7 @@ def save_persistent_names(names: dict):
 def run_full(n: int = 1400):
     today    = datetime.today()
     todate   = today.strftime('%Y%m%d')
-    fromdate = (today - timedelta(days=120)).strftime('%Y%m%d')
+    fromdate = (today - timedelta(days=180)).strftime('%Y%m%d')
     ref_date = last_trading_day()
 
     print(f"기준일: {ref_date}, 기간: {fromdate} ~ {todate}")
@@ -427,7 +427,7 @@ def run_full(n: int = 1400):
                 raw = pd.concat([existing_raw, new_raw])
                 raw = raw[~raw.duplicated(subset=['ticker', 'date'], keep='last')]
                 raw = raw.sort_values(['ticker', 'date'])
-                raw = raw.groupby('ticker').tail(90).reset_index(drop=True)
+                raw = raw.groupby('ticker').tail(130).reset_index(drop=True)
                 print(f"  병합 완료: {len(raw)}행")
             else:
                 raw = new_raw
