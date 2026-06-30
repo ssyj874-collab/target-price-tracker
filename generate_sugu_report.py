@@ -51,38 +51,22 @@ def generate():
     # 테이블 행 (오실레이터 내림차순)
     data_by_osc = sorted(data, key=lambda x: x.get('oscillator', 0), reverse=True)
 
-    # 과매수/과매도 임계값: 상위 20% / 하위 20%
-    oscs = sorted([r.get('oscillator', 0) or 0 for r in data])
-    n = len(oscs)
-    overbought_th  = oscs[int(n * 0.80)] if n else 0   # 상위 20%
-    oversold_th    = oscs[int(n * 0.20)] if n else 0   # 하위 20%
-
     rows_html = []
     for i, row in enumerate(data_by_osc, 1):
         ticker = row.get('ticker', '')
         name   = row.get('name', ticker)
         net20  = row.get('net20', 0) or 0
-        net20_disp = f"{-net20:+,.1f}"  # 순매도 양수로 표시
+        net20_disp = f"{-net20:+,.1f}"
         macd   = row.get('macd', 0) or 0
         signal = row.get('signal', 0) or 0
         osc    = row.get('oscillator', 0) or 0
         date   = row.get('date', '')
         osc_color = '#e74c3c' if osc > 0 else '#3498db'
 
-        if osc >= overbought_th:
-            badge = '<span class="badge ob">과매수</span>'
-            data_zone = 'ob'
-        elif osc <= oversold_th:
-            badge = '<span class="badge os">과매도</span>'
-            data_zone = 'os'
-        else:
-            badge = ''
-            data_zone = ''
-
-        rows_html.append(f"""<tr data-ticker="{ticker}" data-zone="{data_zone}" onclick="showChart('{ticker}')">
+        rows_html.append(f"""<tr data-ticker="{ticker}" onclick="showChart('{ticker}')">
           <td class="rank">{i}</td>
           <td class="ticker">{ticker}</td>
-          <td class="name">{name}{badge}</td>
+          <td class="name">{name}</td>
           <td class="num">{net20_disp}</td>
           <td class="num osc" style="color:{osc_color};font-weight:bold">{osc:+.4f}%</td>
           <td class="num">{macd:+.4f}%</td>
@@ -215,10 +199,6 @@ td.date{{color:#8b949e;font-size:0.78rem;}}
 tr:hover td{{background:#1c2128;cursor:pointer;}}
 tr.active td{{background:#1f2937;}}
 tr.hidden{{display:none;}}
-.badge{{display:inline-block;font-size:0.68rem;font-weight:700;padding:1px 5px;border-radius:3px;
-         margin-left:5px;vertical-align:middle;}}
-.badge.ob{{background:#5c1a1a;color:#ff6b6b;}}
-.badge.os{{background:#0d2a4a;color:#5ba3f5;}}
 </style>
 </head>
 <body>
@@ -263,8 +243,6 @@ tr.hidden{{display:none;}}
     </div>
     <select id="oscFilter" onchange="filterTable()">
       <option value="all">전체</option>
-      <option value="ob">과매수 (상위 20%)</option>
-      <option value="os">과매도 (하위 20%)</option>
       <option value="pos">오실레이터 양수</option>
       <option value="neg">오실레이터 음수</option>
     </select>
@@ -529,7 +507,11 @@ function onSearchKey(e) {{
     items.forEach((el, i) => el.classList.toggle('focused', i === acFocus));
     if (items[acFocus]) items[acFocus].scrollIntoView({{block:'nearest'}});
   }} else if (e.key === 'Enter') {{
-    if (acFocus >= 0 && items[acFocus]) selectAc(items[acFocus].dataset.ticker);
+    if (acFocus >= 0 && items[acFocus]) {{
+      selectAc(items[acFocus].dataset.ticker);
+    }} else if (items.length > 0) {{
+      selectAc(items[0].dataset.ticker);
+    }}
   }} else if (e.key === 'Escape') {{
     document.getElementById('acList').classList.remove('open');
   }}
@@ -564,8 +546,6 @@ function filterTable() {{
     const zone   = tr.dataset.zone || '';
     const matchQ   = !q || ticker.includes(q) || name.includes(q);
     const matchFlt = flt==='all'
-      || (flt==='ob' && zone==='ob')
-      || (flt==='os' && zone==='os')
       || (flt==='pos' && oscVal>0)
       || (flt==='neg' && oscVal<0);
     tr.classList.toggle('hidden', !(matchQ && matchFlt));
