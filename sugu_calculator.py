@@ -159,9 +159,9 @@ def kis_stock_daily_period(ticker: str, fromdate: str, todate: str, shares: int)
         if not rows:
             return pd.DataFrame()
 
-        df = pd.DataFrame(rows).sort_values('date').reset_index(drop=True)
+        df = pd.DataFrame(rows).sort_values('date').reset_index(drop=True).copy()
         df['market_cap'] = df['close'] * shares
-        return df[['date', 'foreign_net', 'institution_net', 'market_cap']]
+        return df[['date', 'foreign_net', 'institution_net', 'market_cap']].copy()
 
     except Exception:
         return pd.DataFrame()
