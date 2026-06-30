@@ -157,7 +157,7 @@ def calc_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
             if df.empty:
                 continue
             row = calc_sio_from_raw(df)
-            row['date'] = dt
+            row['date'] = date_str
             results.append(row)
         except Exception as e:
             print(f"\n[WARN] {date_str}: {e}")
@@ -165,7 +165,7 @@ def calc_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
     print()
     if not results:
         return pd.DataFrame()
-    return pd.DataFrame(results).set_index('date')
+    return pd.DataFrame(results).sort_values('date').set_index('date')
 
 
 # ---------------------------------------------------------------------------

@@ -88,7 +88,7 @@ def make_html(kospi: pd.DataFrame, kosdaq: pd.DataFrame, generated_at: str) -> s
             sig = signal_label(sio)
             html += f"""
             <tr class="{cls}">
-              <td>{dt.strftime('%Y-%m-%d')}</td>
+              <td>{dt[:4]}-{dt[4:6]}-{dt[6:]}</td>
               <td class="num">{sio:+.2f}</td>
               <td>{sig}</td>
               <td class="num">{row['advancing']}</td>
