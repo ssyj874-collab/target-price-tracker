@@ -3,4 +3,4 @@ uvicorn==0.29.0
 python-dotenv==1.0.1
 pandas
 numpy
-finance-datareader
+requests
