@@ -1,115 +1,95 @@
-"""네이버 모바일 API 업종코드 탐색. python3 debug_krx.py"""
-import requests, time, json
+"""네이버 업종 API 코드 탐색 2탄. python3 debug_krx.py"""
+import requests, time, re
 
 HDR = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/124.0.0.0 Safari/537.36",
+                  "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Referer": "https://m.stock.naver.com/",
 }
+HDR_PC = {**HDR, "Referer": "https://finance.naver.com/"}
 
-BASE = "https://m.stock.naver.com/api"
-
-def get_json(url, params=None):
-    r = requests.get(url, headers=HDR, params=params, timeout=10)
-    if r.status_code == 200:
-        try:
-            return r.json()
-        except:
-            return r.text
-    return None
-
-# 1. 먼저 전체 인덱스 목록 확인
-print("=== 네이버 인덱스 목록 ===")
-for path in [
-    "/index/kospi/price",
-    "/index/sector/list",
-    "/index/upjong/list",
-    "/sector/list",
-    "/index/sectorList",
-    "/stock/sector/list",
-]:
-    r = requests.get(f"{BASE}{path}", headers=HDR, timeout=10)
-    print(f"[{path}] {r.status_code} ({len(r.content)}B)")
-    if r.status_code == 200:
-        try:
-            j = r.json()
-            if isinstance(j, list):
-                print(f"  리스트 {len(j)}개 | 첫번째: {str(j[0])[:200]}")
-            elif isinstance(j, dict):
-                print(f"  키: {list(j.keys())[:8]}")
-        except:
-            print(f"  텍스트: {r.text[:200]}")
-    time.sleep(0.2)
-
-print()
-
-# 2. KOSPI 업종 목록 검색
-print("=== KOSPI 업종 목록 ===")
-for path in [
-    "/index/KOSPI/sectorList",
-    "/index/sectorList?market=KOSPI",
-    "/domestic/index/sectorList",
-    "/index/group/list",
-]:
-    r = requests.get(f"{BASE}{path}", headers=HDR, timeout=10)
-    print(f"[{path}] {r.status_code} ({len(r.content)}B)")
-    if r.status_code == 200:
-        try:
-            j = r.json()
-            print(f"  {str(j)[:300]}")
-        except:
-            print(f"  {r.text[:200]}")
-    time.sleep(0.2)
-
-print()
-
-# 3. 알려진 업종 코드 후보 테스트
-print("=== 업종 코드 후보 테스트 (기간별 데이터) ===")
-CANDIDATES = [
-    # Naver 전통 코드
-    "KPI", "KQI", "KPI001", "KPI002", "KPI003",
-    # 업종 번호
-    "001", "002", "003", "KOSPI_FOOD",
-    # 네이버 upjong 코드
-    "UPJONG_1", "UPJONG001",
-    # 다른 형식
-    "KOSPI.GIC.10", "GIC10",
-]
-for code in CANDIDATES:
+def test_mobile(code):
     r = requests.get(
-        f"{BASE}/index/{code}/price",
+        f"https://m.stock.naver.com/api/index/{code}/price",
         headers=HDR,
         params={"startTime": "20260620", "endTime": "20260630", "timeframe": "1D"},
-        timeout=10,
+        timeout=8,
     )
-    if r.status_code == 200:
-        try:
-            j = r.json()
-            if j:
-                print(f"[{code}] ✅ 200 - {str(j[0])[:200]}")
-            else:
-                print(f"[{code}] 200 빈 리스트")
-        except:
-            print(f"[{code}] 200 텍스트: {r.text[:100]}")
+    return r.status_code, r.text[:200] if r.status_code != 404 else ""
+
+# 1. upjong no 값으로 테스트
+print("=== upjong no 값으로 모바일 API 테스트 ===")
+for no in [282, 278, 263, 301, 321, 25, 273, 299, 269, 315, 265]:
+    code = str(no)
+    status, text = test_mobile(code)
+    if status == 200:
+        print(f"  [{no}] ✅ 200: {text[:150]}")
     else:
-        print(f"[{code}] {r.status_code}")
+        print(f"  [{no}] {status}")
+    time.sleep(0.1)
+
+# 2. Naver 모바일 업종 목록 API 찾기
+print("\n=== 모바일 업종 목록 API 탐색 ===")
+for path in [
+    "https://m.stock.naver.com/api/index/KOSPI/industry",
+    "https://m.stock.naver.com/api/industry/list",
+    "https://m.stock.naver.com/api/sector/KOSPI/list",
+    "https://m.stock.naver.com/domestic/index/KOSPI/total",
+    "https://m.stock.naver.com/api/index/KOSPI/sector",
+    "https://m.stock.naver.com/api/board/KOSPI/industry",
+]:
+    r = requests.get(path, headers=HDR, timeout=8)
+    print(f"  [{r.status_code}] {path.split('/')[-1] or path}")
+    if r.status_code == 200:
+        print(f"    → {r.text[:300]}")
     time.sleep(0.15)
 
-print()
+# 3. Naver PC 업종별 일별시세 HTML 파싱 (BeautifulSoup 없이 regex)
+print("\n=== Naver PC 업종별 일별시세 HTML 파싱 ===")
+# KPI = KOSPI 전체 코드
+for code in ["KPI", "KQI", "BSTP1", "BSTP2"]:
+    r = requests.get(
+        "https://finance.naver.com/sise/sise_index_day.nhn",
+        headers=HDR_PC, params={"code": code, "page": "1"}, timeout=10,
+    )
+    if r.status_code == 200:
+        # 날짜와 지수값 추출 시도
+        dates = re.findall(r'(\d{4}\.\d{2}\.\d{2})', r.text)
+        nums  = re.findall(r'<td class="number_1"><span[^>]*>([\d,\.]+)</span>', r.text)
+        if dates:
+            print(f"  [{code}] 날짜: {dates[:5]} | 수치: {nums[:5]}")
+        else:
+            print(f"  [{code}] 날짜 없음 ({len(r.content)}B)")
+    else:
+        print(f"  [{code}] {r.status_code}")
+    time.sleep(0.2)
 
-# 4. 네이버 PC 업종 페이지에서 upjong 코드 추출
-print("=== 네이버 PC 업종 목록 파싱 ===")
-r = requests.get(
-    "https://finance.naver.com/sise/sise_group.nhn",
-    headers={**HDR, "Referer": "https://finance.naver.com/"},
-    params={"type": "upjong"},
-    timeout=10,
-)
-if r.status_code == 200:
-    # no= 값 찾기
-    import re
-    hits = re.findall(r'no=(\d+)[^>]*>([^<]+)</a>', r.text)
-    print(f"발견된 upjong 코드 ({len(hits)}개):")
-    for no, name in hits[:30]:
-        print(f"  no={no}: {name.strip()}")
+# 4. Naver 업종별 API (PC JSON 엔드포인트 탐색)
+print("\n=== Naver PC JSON 엔드포인트 ===")
+for url in [
+    "https://finance.naver.com/sise/sise_upjong_day.nhn?upjong_cd=1",
+    "https://finance.naver.com/api/sise/upjong?code=1",
+    "https://finance.naver.com/sise/sise_group_day.nhn?type=upjong&no=282",
+    "https://finance.naver.com/sise/upjong_group_list_ajax.nhn",
+    "https://sise.naver.com/index.naver?code=KPI",
+]:
+    r = requests.get(url, headers=HDR_PC, timeout=8)
+    print(f"  [{r.status_code}] {url.split('/')[-1][:50]}")
+    if r.status_code == 200 and len(r.content) < 50000:
+        snippet = r.text[:300]
+        if snippet.strip():
+            print(f"    → {snippet[:200]}")
+    time.sleep(0.15)
+
+# 5. Naver 주식 API에서 업종 차트 찾기
+print("\n=== Naver 주식 API 업종 차트 ===")
+for url in [
+    "https://api.stock.naver.com/index/KOSPI/price?startTime=20260620&endTime=20260630&timeframe=1D",
+    "https://polling.finance.naver.com/api/realtime/domestic/index/KPI",
+    "https://polling.finance.naver.com/api/realtime/domestic/group/upjong",
+]:
+    r = requests.get(url, headers=HDR_PC, timeout=8)
+    print(f"  [{r.status_code}] {url.split('/')[-2]}/{url.split('/')[-1][:40]}")
+    if r.status_code == 200:
+        print(f"    → {r.text[:300]}")
+    time.sleep(0.15)
