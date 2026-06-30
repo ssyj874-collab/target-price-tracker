@@ -73,13 +73,15 @@ let charts = {};
 let currentRange = 180;
 
 async function loadChart(market) {
-  const loading = document.getElementById(`${market}-loading`);
+  const loading = document.getElementById(`${market.toLowerCase()}-loading`);
   loading.style.display = 'block';
   try {
     const res = await fetch(`/api/chart/${market}`);
     if (res.status === 202) {
-      document.getElementById('status').textContent = '데이터 수집 중... (1~2분 소요)';
-      setTimeout(() => loadChart(market), 10000);
+      const j = await res.json();
+      loading.textContent = j.error || '데이터 수집 중...';
+      document.getElementById('status').textContent = '데이터 수집 중... (약 2~3분 소요)';
+      setTimeout(() => loadChart(market), 15000);
       return;
     }
     const data = await res.json();
@@ -113,7 +115,7 @@ function renderChart(market) {
   const d = fullData[market];
   if (!d) return;
   const sliced = sliceData(d, currentRange);
-  const canvasId = `${market}Chart`;
+  const canvasId = `${market.toLowerCase()}Chart`;
 
   if (charts[market]) {
     charts[market].destroy();
@@ -224,8 +226,8 @@ function setRange(days) {
 async function refreshData() {
   document.getElementById('status').textContent = '갱신 요청 중...';
   await fetch('/api/refresh', { method: 'POST' });
-  document.getElementById('status').textContent = '수집 중 (백그라운드)...';
-  setTimeout(() => { loadChart('kospi'); loadChart('kosdaq'); }, 60000);
+  document.getElementById('status').textContent = '수집 중 (약 3분 소요)...';
+  setTimeout(() => { loadChart('KOSPI'); loadChart('KOSDAQ'); }, 180000);
 }
 
 function updateStatus() {
@@ -237,8 +239,8 @@ function updateStatus() {
 }
 
 // 초기 로드
-loadChart('kospi');
-loadChart('kosdaq');
+loadChart('KOSPI');
+loadChart('KOSDAQ');
 </script>
 </body>
 </html>
