@@ -41,7 +41,7 @@ def compute_concentration(returns_by_date: dict) -> dict:
             idx_val = 1000.0
             first = False
         else:
-            idx_val = prev_idx * (1 + long_short / 100)
+            idx_val = prev_idx + 1 + long_short
 
         results[dt] = {"long_short": long_short, "index_value": idx_val}
         prev_idx = idx_val

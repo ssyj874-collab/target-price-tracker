@@ -130,7 +130,7 @@ function renderChart(market) {
       labels: sliced.dates,
       datasets: [
         {
-          label: market === 'kospi' ? '코스피' : '코스닥',
+          label: market.toLowerCase() === 'kospi' ? '코스피' : '코스닥',
           data: sliced.market,
           borderColor: '#4e9af1',
           backgroundColor: 'transparent',
@@ -195,7 +195,7 @@ function renderChart(market) {
           position: 'left',
           ticks: { color: '#4e9af1', font: { size: 11 } },
           grid: { color: '#2a2a4a' },
-          title: { display: true, text: market === 'kospi' ? '코스피' : '코스닥', color: '#4e9af1' },
+          title: { display: true, text: market.toLowerCase() === 'kospi' ? '코스피' : '코스닥', color: '#4e9af1' },
         },
         yRight: {
           position: 'right',
