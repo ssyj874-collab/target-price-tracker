@@ -1,4 +1,4 @@
-"""네이버 업종 API 탐색 3탄 + Yahoo Finance. python3 debug_krx.py"""
+"""네이버 업종 HTML 파싱 + KRX 로컬 접근. python3 debug_krx.py"""
 import requests, time, re, json
 
 HDR = {
@@ -6,75 +6,117 @@ HDR = {
                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Referer": "https://finance.naver.com/",
     "Accept-Language": "ko-KR,ko;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
 }
 
-def get(label, url, params=None, headers=None):
-    try:
-        r = requests.get(url, headers=headers or HDR, params=params, timeout=10)
-        print(f"[{label}] {r.status_code} ({len(r.content)}B)")
-        if r.status_code == 200 and len(r.content) < 200000:
-            ct = r.headers.get("content-type", "")
-            if "json" in ct:
-                j = r.json()
-                print(f"  JSON: {str(j)[:400]}")
-            else:
-                # 날짜 패턴 탐색
-                text = r.text
-                dates = re.findall(r'\d{4}[.\-/]\d{2}[.\-/]\d{2}', text)
-                nums  = re.findall(r'[\d,]{4,}\.?\d*', text)
-                if dates:
-                    print(f"  날짜 발견: {dates[:5]}")
-                    print(f"  숫자: {nums[:10]}")
-                else:
-                    print(f"  텍스트: {text[:300]}")
-    except Exception as e:
-        print(f"[{label}] 오류: {e}")
-    print()
-    time.sleep(0.3)
+# ============================================================
+# 1. 네이버 업종 목록 HTML 파싱 (등락률 추출)
+# ============================================================
+print("=== 네이버 업종 목록 HTML 파싱 ===\n")
+r = requests.get(
+    "https://finance.naver.com/sise/sise_group.naver",
+    headers=HDR, params={"type": "upjong"}, timeout=15,
+)
+html = r.text
+# "등락률" 근처 파싱
+# 패턴: 업종명, 지수, 전일비, 등락률
+rows = re.findall(
+    r'type=upjong&amp;no=(\d+)[^>]*>([^<]+)</a>.*?'
+    r'<td[^>]*class="[^"]*number[^"]*"[^>]*>([\d,\.]+)</td>.*?'
+    r'<td[^>]*>([\d,\.\+\-]+)%?</td>',
+    html, re.DOTALL
+)
+if rows:
+    print(f"파싱 성공! {len(rows)}개 업종:")
+    for no, name, idx, rate in rows[:10]:
+        print(f"  no={no} {name.strip()} | 지수={idx} | 등락={rate}")
+else:
+    # 대안 패턴
+    print("패턴1 실패, 대안 시도...")
+    # 등락률 텍스트 근처 raw 데이터
+    pos = html.find('등락률')
+    if pos > 0:
+        print(f"'등락률' 위치: {pos}")
+        print(html[pos-200:pos+500])
+    else:
+        print("'등락률' 텍스트 없음")
 
-print("=== 네이버 .naver suffix 시도 ===")
-get("업종 목록(.naver)", "https://finance.naver.com/sise/sise_group.naver", {"type": "upjong"})
-get("업종 상세 282", "https://finance.naver.com/sise/sise_group_detail.naver", {"type": "upjong", "no": "282"})
-get("업종 상세 278", "https://finance.naver.com/sise/sise_group_detail.naver", {"type": "upjong", "no": "278"})
+    # 업종명 목록이라도 추출
+    names = re.findall(r'type=upjong&(?:amp;)?no=(\d+)[^>]*>([^<]{2,20})</a>', html)
+    print(f"\n업종명 {len(names)}개 발견:")
+    for no, name in names[:20]:
+        print(f"  no={no}: {name.strip()}")
 
-print("=== 네이버 업종 일별 차트 데이터 ===")
-# 네이버 업종 지수 일별 (차트용 API)
-for code in ["KPI", "KQI", "0001", "1005"]:
-    get(f"index_chart_day({code})",
-        "https://finance.naver.com/sise/sise_index_chart_day.nhn",
-        {"code": code, "timeframe": "day", "count": "10"})
+    # 숫자 데이터 근처 샘플
+    chunk_pos = html.find('1,')
+    if chunk_pos > 0:
+        print(f"\nHTML 샘플 (숫자 근처):\n{html[chunk_pos-100:chunk_pos+500]}")
 
-# 네이버 차트 데이터 API
-get("fchart upjong 282",
-    "https://fchart.stock.naver.com/sise.nhn",
-    {"symbol": "282", "timeframe": "day", "count": "5", "requestType": "0"})
+print()
 
-get("fchart upjong 278",
-    "https://fchart.stock.naver.com/sise.nhn",
-    {"symbol": "278", "timeframe": "day", "count": "5", "requestType": "0"})
+# ============================================================
+# 2. 네이버 업종 상세 페이지에서 차트 API URL 찾기
+# ============================================================
+print("=== 네이버 업종 상세 페이지 분석 (no=282) ===\n")
+r2 = requests.get(
+    "https://finance.naver.com/sise/sise_group_detail.naver",
+    headers=HDR, params={"type": "upjong", "no": "282"}, timeout=15,
+)
+html2 = r2.text
+# API URL 패턴 찾기
+api_urls = re.findall(r'(?:fetch|axios|url|href|src)["\s:=]+(["\'])([^"\']*(?:api|chart|json|ajax)[^"\']*)\1', html2, re.I)
+print(f"API URL {len(api_urls)}개 발견:")
+for _, url in api_urls[:20]:
+    print(f"  {url}")
 
-# 네이버 Finance 새 API
-get("naver finance new API",
-    "https://finance.naver.com/sise/ajax/sise_group_info.naver",
-    {"type": "upjong", "no": "282"})
+# 등락률 데이터
+ctrt = re.findall(r'(?:prdy_ctrt|fluctuat|등락)[^:]*[:\s=]+"?([\d\.\-\+]+)"?', html2, re.I)
+print(f"\n등락률 데이터: {ctrt[:10]}")
 
-print("=== Yahoo Finance 한국 시장 ===")
-YHD = {"User-Agent": "curl/7.79.1"}
+print()
 
-# KOSPI 전체
-get("Yahoo KOSPI", "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11",
-    {"interval": "1d", "range": "5d"}, headers=YHD)
+# ============================================================
+# 3. KRX 데이터 포털 (Mac 로컬에서 접근)
+# ============================================================
+print("=== KRX 데이터포털 (OTP 방식 로컬 시도) ===\n")
+sess = requests.Session()
+sess.headers.update({
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Origin": "http://data.krx.co.kr",
+    "Referer": "http://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp",
+})
 
-# 한국 섹터 ETF들 (TIGER ETF)
-for sym in ["139270.KS", "091160.KS", "091170.KS"]:  # 삼성전자, 필라델피아 등
-    get(f"Yahoo {sym}",
-        f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}",
-        {"interval": "1d", "range": "5d"}, headers=YHD)
+# 먼저 메인 페이지 접근 (쿠키 획득)
+r3 = sess.get("http://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=10)
+print(f"KRX 메인: {r3.status_code}")
 
-print("=== Stooq 한국 시장 ===")
-# Stooq - 한국 섹터 인덱스
-for sym in ["^ks11", "^ks50", "^kq11", "^ks10p"]:
-    get(f"Stooq {sym}",
-        f"https://stooq.com/q/d/l/",
-        {"s": sym, "i": "d"},
-        headers={"User-Agent": "Mozilla/5.0"})
+time.sleep(0.5)
+
+# 업종지수 데이터 요청 (올바른 BLD로)
+for bld_name, bld, extra in [
+    ("업종지수 시세", "dbms/MDC/STAT/standard/MDCSTAT00601",
+     {"trdDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02", "share": "1", "money": "1"}),
+    ("업종지수 추이", "dbms/MDC/STAT/standard/MDCSTAT00602",
+     {"trdDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02"}),
+    ("지수 기간별", "dbms/MDC/STAT/standard/MDCSTAT00603",
+     {"strtDd": "20260620", "endDd": "20260630", "idxIndMktClss": "1", "idxIndClss": "02", "idxCd": "1001"}),
+]:
+    r4 = sess.post(
+        "http://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+        data={"bld": bld, "locale": "ko_KR", **extra},
+        timeout=10,
+    )
+    print(f"[{bld_name}] {r4.status_code} ({len(r4.content)}B)")
+    if r4.status_code == 200:
+        try:
+            j = r4.json()
+            print(f"  키: {list(j.keys())[:8]}")
+            for k, v in j.items():
+                if isinstance(v, list) and v:
+                    print(f"  {k}[0]: {v[0]}")
+        except:
+            print(f"  텍스트: {r4.text[:200]}")
+    else:
+        print(f"  → {r4.text[:100]}")
+    time.sleep(0.5)
