@@ -1,110 +1,82 @@
-"""네이버 업종 API URL 추출 + 대안 소스 탐색. python3 debug_krx.py"""
+"""네이버 업종 API 데이터 확인. python3 debug_krx.py"""
 import requests, time, re, json
 
 HDR = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Referer": "https://finance.naver.com/",
+    "Accept": "application/json, text/plain, */*",
     "Accept-Language": "ko-KR,ko;q=0.9",
 }
 
-# ============================================================
-# 1. 업종 목록 HTML에서 API URL / 데이터 찾기
-# ============================================================
-print("=== 네이버 업종 목록 HTML 내 API URL 추출 ===\n")
-r = requests.get(
-    "https://finance.naver.com/sise/sise_group.naver",
-    headers=HDR, params={"type": "upjong"}, timeout=15,
-)
-html = r.text
+BASE = "https://finance.naver.com"
 
-# polling / api / ajax URL 찾기
-found_urls = set()
-for pattern in [
-    r'["\']([^"\']*(?:polling|realtime|ajax|/api/)[^"\']*)["\']',
-    r'url\s*:\s*["\']([^"\']+)["\']',
-    r'fetch\(["\']([^"\']+)["\']',
-]:
-    for m in re.finditer(pattern, html, re.I):
-        u = m.group(1)
-        if u.startswith(('http', '/')):
-            found_urls.add(u)
+def show(label, url, params=None):
+    r = requests.get(url, headers=HDR, params=params, timeout=10)
+    ct = r.headers.get("content-type","")
+    print(f"[{label}] {r.status_code} ({len(r.content)}B) ct={ct[:40]}")
+    if r.status_code == 200:
+        try:
+            j = r.json()
+            if isinstance(j, list):
+                print(f"  리스트 {len(j)}개")
+                if j:
+                    print(f"  첫번째: {json.dumps(j[0], ensure_ascii=False)[:400]}")
+                    print(f"  두번째: {json.dumps(j[1], ensure_ascii=False)[:200] if len(j)>1 else ''}")
+            elif isinstance(j, dict):
+                print(f"  키: {list(j.keys())}")
+                print(f"  내용: {json.dumps(j, ensure_ascii=False)[:600]}")
+        except:
+            print(f"  텍스트: {r.text[:500]}")
+    else:
+        print(f"  → {r.text[:200]}")
+    print()
+    time.sleep(0.3)
 
-print(f"발견된 API URL {len(found_urls)}개:")
-for u in sorted(found_urls)[:30]:
-    print(f"  {u}")
+print("=== 네이버 업종 API (200 확인된 것) ===\n")
 
-# __NEXT_DATA__ 탐색
-nd = re.search(r'<script id="__NEXT_DATA__"[^>]*>({.*?})</script>', html, re.S)
-if nd:
-    print(f"\n__NEXT_DATA__ 발견! 길이: {len(nd.group(1))}")
-    try:
-        data = json.loads(nd.group(1))
-        print(f"  키: {list(data.keys())}")
-    except:
-        print(f"  파싱 실패: {nd.group(1)[:200]}")
-else:
-    print("\n__NEXT_DATA__ 없음")
+show("upjongList", f"{BASE}/api/sise/upjongList")
+show("group?upjong", f"{BASE}/api/sise/group", {"type": "upjong"})
 
-# 업종 데이터 직접 포함 여부
-upjong_json = re.search(r'upjong[^=]*=\s*(\[{.*?}\])', html, re.S)
-if upjong_json:
-    print(f"\n업종 JSON 데이터 발견: {upjong_json.group(1)[:300]}")
+print("=== 히스토리 관련 엔드포인트 ===\n")
 
-print()
+# upjongList 기반 히스토리 탐색
+show("upjongList?no=282", f"{BASE}/api/sise/upjongList", {"no": "282"})
+show("upjongList?no=282&page=2", f"{BASE}/api/sise/upjongList", {"no": "282", "page": "2"})
+show("upjongHistory", f"{BASE}/api/sise/upjongHistory", {"no": "282"})
+show("upjongChart", f"{BASE}/api/sise/upjongChart", {"no": "282", "timeframe": "day", "count": "10"})
+show("upjongDay", f"{BASE}/api/sise/upjongDay", {"no": "282"})
+show("upjong detail", f"{BASE}/api/sise/upjong", {"no": "282", "type": "upjong"})
+show("group detail", f"{BASE}/api/sise/group", {"type": "upjong", "no": "282"})
+show("group history", f"{BASE}/api/sise/groupHistory", {"type": "upjong", "no": "282"})
 
-# ============================================================
-# 2. 네이버 업종 AJAX 엔드포인트 직접 시도
-# ============================================================
-print("=== 네이버 업종 AJAX 엔드포인트 ===\n")
+print("=== upjong 코드로 모바일 API 재시도 ===\n")
 
-HDR2 = {**HDR, "Accept": "application/json, text/plain, */*",
-         "X-Requested-With": "XMLHttpRequest"}
-
-for url in [
-    "https://finance.naver.com/sise/sise_group_ajax.naver?type=upjong",
-    "https://finance.naver.com/sise/ajaxSiseUpjong.naver?type=upjong",
-    "https://finance.naver.com/sise/getUpjongList.naver",
-    "https://finance.naver.com/api/sise/upjongList",
-    "https://finance.naver.com/api/sise/group?type=upjong",
-    "https://api.finance.naver.com/service/sise/upjong",
-    "https://m.stock.naver.com/api/sector/list",
-    "https://m.stock.naver.com/api/domestic/market/sector",
-    "https://m.stock.naver.com/api/domestic/market/KOSPI/sector",
-    "https://m.stock.naver.com/api/domestic/category/industry",
-    "https://m.stock.naver.com/api/domestic/upjong",
-]:
-    try:
-        r2 = requests.get(url, headers=HDR2, timeout=8)
-        ct = r2.headers.get("content-type", "")
-        print(f"  [{r2.status_code}] {url.split('naver.com')[-1][:60]}")
-        if r2.status_code == 200 and "json" in ct:
-            j = r2.json()
-            print(f"    JSON: {str(j)[:200]}")
-        elif r2.status_code == 200 and r2.text.strip().startswith(('[', '{')):
-            print(f"    JSON-like: {r2.text[:200]}")
-    except Exception as e:
-        print(f"  [오류] {url.split('naver.com')[-1][:60]}: {e}")
-    time.sleep(0.2)
-
-print()
-
-# ============================================================
-# 3. Naver Finance 업종 차트 히스토리 (fchart 변형)
-# ============================================================
-print("=== fchart 업종 코드 변형 테스트 ===\n")
-for sym in ["KPI1", "KPI2", "KPI3", "U282", "UPJ282", "UPJONG282",
-            "N282", "GROUP282", "B282", "S282", "F282"]:
-    r3 = requests.get("https://fchart.stock.naver.com/sise.nhn",
-        headers=HDR,
-        params={"symbol": sym, "timeframe": "day", "count": "3", "requestType": "0"},
-        timeout=8)
-    body = r3.text.strip()
-    if "<candle" in body or ("200" == str(r3.status_code) and len(body) > 60):
-        print(f"  [{sym}] ✅ {body[:200]}")
-    elif r3.status_code != 200:
-        print(f"  [{sym}] {r3.status_code}")
-    # else: silent (empty protocol)
+HDR_M = {**HDR, "Referer": "https://m.stock.naver.com/"}
+for code in ["UPJONG282", "KOSPI_UPJONG_282", "U282", "SECTOR282",
+             "UPJONG_282", "upjong282", "KRX282"]:
+    r = requests.get(
+        f"https://m.stock.naver.com/api/index/{code}/price",
+        headers=HDR_M,
+        params={"startTime": "20260623", "endTime": "20260630", "timeframe": "1D"},
+        timeout=8,
+    )
+    if r.status_code == 200:
+        print(f"  [{code}] ✅ {r.text[:200]}")
+    elif r.status_code != 409:
+        print(f"  [{code}] {r.status_code}: {r.text[:80]}")
     time.sleep(0.1)
 
-print("(✅ 없으면 모두 빈 protocol)")
+print("(409가 아닌 코드만 출력)")
+print()
+
+# upjongList로 받은 no 기반 히스토리
+print("=== 네이버 upjong 차트/히스토리 패턴 완전 탐색 ===\n")
+for suffix in ["Chart", "History", "Price", "Day", "Daily", "Candle", "Ohlc"]:
+    for no in ["282", "278"]:
+        url = f"{BASE}/api/sise/upjong{suffix}"
+        r = requests.get(url, headers=HDR, params={"no": no, "count": "5"}, timeout=8)
+        if r.status_code == 200 and len(r.content) > 100:
+            print(f"  [✅ upjong{suffix} no={no}] {r.text[:300]}")
+        time.sleep(0.1)
+print("(200+데이터 없으면 빈 출력)")
