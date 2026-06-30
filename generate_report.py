@@ -44,7 +44,7 @@ def fetch_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
                 continue
             r = calc_sio_from_raw(df)
             rows.append({
-                'date': dt,
+                'date': date_str,
                 'sio':  round(r['sio'], 2),
                 'J':    round(r['J'], 4),
                 'K':    round(r['K'], 4),
@@ -58,7 +58,7 @@ def fetch_sio_range(market: str, fromdate: str, todate: str) -> pd.DataFrame:
 
     if not rows:
         return pd.DataFrame()
-    return pd.DataFrame(rows).set_index('date').sort_index(ascending=False)
+    return pd.DataFrame(rows).sort_values('date', ascending=False).set_index('date')
 
 
 def signal_label(sio: float) -> str:
