@@ -12,6 +12,8 @@ session.headers.update({
     "Referer":    "https://data.krx.co.kr/",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
 })
+# 세션 쿠키 확보
+session.get("https://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=15)
 
 # idxIndMidclssCd: 01=코스피종합, 02=코스피업종, 05=코스닥종합, 06=코스닥업종
 KOSPI_SECTORS = {
@@ -53,7 +55,7 @@ def _fetch_csv(mid_cls: str, idx_code: str, from_date: str, to_date: str) -> pd.
     }, timeout=15).text.strip()
 
     resp = session.post(DL_URL, data={"code": otp}, timeout=15)
-    df = pd.read_csv(io.BytesIO(resp.content), encoding="euc-kr", engine="python")
+    df = pd.read_csv(io.BytesIO(resp.content), encoding="utf-8-sig", engine="python")
     return df
 
 

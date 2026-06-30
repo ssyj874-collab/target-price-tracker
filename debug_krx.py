@@ -9,6 +9,8 @@ session.headers.update({
     "Referer":    "https://data.krx.co.kr/",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
 })
+session.get("https://data.krx.co.kr/contents/MDC/MAIN/main/MDCMain.jsp", timeout=15)
+print("세션 쿠키:", dict(session.cookies))
 
 otp_resp = session.post(OTP_URL, data={
     "locale": "ko_KR", "idxIndMidclssCd": "02",
