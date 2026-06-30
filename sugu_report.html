@@ -53,7 +53,7 @@ canvas{max-height:200px;width:100%!important;}
 .container{padding:16px 24px;}
 .toolbar{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
 input[type=text]{padding:6px 12px;border-radius:6px;border:1px solid #30363d;
-                  background:#161b22;color:#e6edf3;font-size:0.88rem;width:220px;}
+                  background:#ffffff;color:#000000;font-size:0.88rem;width:220px;}
 select{padding:6px 10px;border-radius:6px;border:1px solid #30363d;
         background:#161b22;color:#e6edf3;font-size:0.88rem;}
 .stat{margin-left:auto;font-size:0.82rem;color:#8b949e;}
@@ -13877,7 +13877,7 @@ function showChart(ticker) {
     oldest.el.remove();
   }
 
-  stack.appendChild(card);
+  stack.insertBefore(card, stack.firstChild);
   stack.classList.add('visible');
 
   const ch1 = new Chart(document.getElementById(c1Id), {
