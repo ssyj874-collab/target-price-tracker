@@ -18,6 +18,9 @@ header p{font-size:0.82rem;color:#8b949e;margin-top:3px;}
   .header-search .search-wrap{flex:1;}
   .header-search input[type=text]{width:100%;}
   .chart-grid{grid-template-columns:1fr!important;}
+  .chart-stack{padding:10px 14px;}
+  .chart-card{padding:10px;}
+  canvas{max-height:160px;}
   .container{padding:10px 14px;}
   .toolbar{gap:6px;}
   select{font-size:0.82rem;}
@@ -43,8 +46,9 @@ header p{font-size:0.82rem;color:#8b949e;margin-top:3px;}
 .chart-card-close{background:none;border:none;color:#8b949e;font-size:1rem;cursor:pointer;padding:0 4px;line-height:1;}
 .chart-card-close:hover{color:#e6edf3;}
 .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.chart-box{min-width:0;overflow:hidden;}
 .chart-box h3{font-size:0.78rem;color:#8b949e;margin-bottom:6px;}
-canvas{max-height:200px;}
+canvas{max-height:200px;width:100%!important;}
 
 .container{padding:16px 24px;}
 .toolbar{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
@@ -13883,7 +13887,7 @@ function showChart(ticker) {
       { type:'line', label:'20일순매도합산(억)', data:net20, yAxisID:'y2',
          borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
     ]},
-    options: { responsive:true, interaction:{mode:'index',intersect:false},
+    options: { responsive:true, maintainAspectRatio:true, interaction:{mode:'index',intersect:false},
       plugins:{ legend:{ labels:{ color:tickColor, font:{size:11} } } },
       scales:{
         x:{ ticks:{ color:tickColor, maxTicksLimit:8, font:{size:10} }, grid:{ color:gridColor } },
@@ -13900,7 +13904,7 @@ function showChart(ticker) {
       { type:'line', label:'수급오실레이터(%)', data:osc, yAxisID:'y2',
          borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
     ]},
-    options: { responsive:true, interaction:{mode:'index',intersect:false},
+    options: { responsive:true, maintainAspectRatio:true, interaction:{mode:'index',intersect:false},
       plugins:{ legend:{ labels:{ color:tickColor, font:{size:11} } } },
       scales:{
         x:{ ticks:{ color:tickColor, maxTicksLimit:8, font:{size:10} }, grid:{ color:gridColor } },
@@ -13957,7 +13961,7 @@ function showSectorChart(code) {
       { type:'line', label:'업종20일순매도합산(억)', data:net20, yAxisID:'y2',
          borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
     ]},
-    options: { responsive:true, interaction:{mode:'index',intersect:false},
+    options: { responsive:true, maintainAspectRatio:true, interaction:{mode:'index',intersect:false},
       plugins:{ legend:{ labels:{ color:tickColor, font:{size:11} } } },
       scales:{
         x:{ ticks:{ color:tickColor, maxTicksLimit:8, font:{size:10} }, grid:{ color:gridColor } },
@@ -13975,7 +13979,7 @@ function showSectorChart(code) {
       { type:'line', label:'업종오실레이터(%)', data:osc, yAxisID:'y2',
          borderColor:'#e74c3c', backgroundColor:'transparent', borderWidth:1.5, pointRadius:0, tension:0.3 },
     ]},
-    options: { responsive:true, interaction:{mode:'index',intersect:false},
+    options: { responsive:true, maintainAspectRatio:true, interaction:{mode:'index',intersect:false},
       plugins:{ legend:{ labels:{ color:tickColor, font:{size:11} } } },
       scales:{
         x:{ ticks:{ color:tickColor, maxTicksLimit:8, font:{size:10} }, grid:{ color:gridColor } },
