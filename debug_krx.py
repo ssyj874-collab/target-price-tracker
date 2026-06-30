@@ -1,78 +1,115 @@
-"""네이버금융 업종 시세 API 탐색. python3 debug_krx.py"""
-import requests, time
+"""네이버 모바일 API 업종코드 탐색. python3 debug_krx.py"""
+import requests, time, json
 
 HDR = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) "
                   "Chrome/124.0.0.0 Safari/537.36",
-    "Referer": "https://finance.naver.com/",
+    "Referer": "https://m.stock.naver.com/",
 }
 
-def get(label, url, **kwargs):
-    try:
-        r = requests.get(url, headers=HDR, timeout=10, **kwargs)
-        print(f"[{label}] {r.status_code} ({len(r.content)} bytes)")
-        if r.status_code == 200:
-            ct = r.headers.get("content-type","")
-            if "json" in ct:
-                j = r.json()
-                if isinstance(j, dict):
-                    print("  keys:", list(j.keys())[:10])
-                elif isinstance(j, list):
-                    print("  list len:", len(j), "| first:", str(j[0])[:200] if j else "")
-            else:
-                print("  →", r.text[:400])
-        else:
-            print("  →", r.text[:200])
-    except Exception as e:
-        print(f"[{label}] ERROR: {e}")
-    print()
-    time.sleep(0.3)
+BASE = "https://m.stock.naver.com/api"
 
-print("=== 네이버 금융 업종지수 ===\n")
+def get_json(url, params=None):
+    r = requests.get(url, headers=HDR, params=params, timeout=10)
+    if r.status_code == 200:
+        try:
+            return r.json()
+        except:
+            return r.text
+    return None
 
-# 업종별 지수 목록 (코스피 업종 목록)
-get("업종 목록", "https://finance.naver.com/sise/sise_group.nhn",
-    params={"type": "upjong"})
-
-# 업종 상세 (no=3: 음식료품?)
-get("음식료품 상세(no=3)", "https://finance.naver.com/sise/sise_group_detail.nhn",
-    params={"type": "upjong", "no": "3"})
-
-# 업종 차트 - fchart
-get("fchart KPI", "https://fchart.stock.naver.com/sise.nhn",
-    params={"symbol": "KPI", "timeframe": "day", "count": "5", "requestType": "0"})
-
-# 네이버 업종지수 차트 - 다른 API
-get("업종 차트 API", "https://m.stock.naver.com/api/index/KOSPI/price",
-    params={"startTime": "20240101", "endTime": "20240110", "timeframe": "1D"})
-
-# 업종 일별 시세 - HTML scraping target
-get("업종 일별시세 페이지", "https://finance.naver.com/sise/sise_index_day.nhn",
-    params={"code": "KPI", "page": "1"})
-
-print("=== 네이버 금융 업종 차트 데이터 ===\n")
-
-# 네이버 업종별 차트 (코스피 서브인덱스)
-for code in ["001", "002", "003", "004", "005", "006"]:
-    get(f"업종코드 {code}", "https://finance.naver.com/sise/sise_index_day.nhn",
-        params={"code": code, "page": "1"})
-
-print("=== KRX 데이터포털 업종지수 ===\n")
-
-# KRX 업종지수 - 올바른 BLD 탐색
-for bld in [
-    "dbms/MDC/STAT/standard/MDCSTAT00101",   # 전체 시장 기본
-    "dbms/MDC/STAT/standard/MDCSTAT00801",   # 업종 시세?
-    "dbms/MDC/STAT/standard/MDCSTAT00901",
-    "dbms/MDC/STAT/standard/MDCSTAT01601",   # 업종 지수?
-    "dbms/MDC/STAT/standard/MDCSTAT01701",
+# 1. 먼저 전체 인덱스 목록 확인
+print("=== 네이버 인덱스 목록 ===")
+for path in [
+    "/index/kospi/price",
+    "/index/sector/list",
+    "/index/upjong/list",
+    "/sector/list",
+    "/index/sectorList",
+    "/stock/sector/list",
 ]:
-    get(f"KRX {bld.split('/')[-1]}", "http://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
-        params={
-            "bld": bld,
-            "locale": "ko_KR",
-            "trdDd": "20240102",
-            "idxIndMktClss": "01",
-            "idxIndClss": "02",
-        })
+    r = requests.get(f"{BASE}{path}", headers=HDR, timeout=10)
+    print(f"[{path}] {r.status_code} ({len(r.content)}B)")
+    if r.status_code == 200:
+        try:
+            j = r.json()
+            if isinstance(j, list):
+                print(f"  리스트 {len(j)}개 | 첫번째: {str(j[0])[:200]}")
+            elif isinstance(j, dict):
+                print(f"  키: {list(j.keys())[:8]}")
+        except:
+            print(f"  텍스트: {r.text[:200]}")
+    time.sleep(0.2)
+
+print()
+
+# 2. KOSPI 업종 목록 검색
+print("=== KOSPI 업종 목록 ===")
+for path in [
+    "/index/KOSPI/sectorList",
+    "/index/sectorList?market=KOSPI",
+    "/domestic/index/sectorList",
+    "/index/group/list",
+]:
+    r = requests.get(f"{BASE}{path}", headers=HDR, timeout=10)
+    print(f"[{path}] {r.status_code} ({len(r.content)}B)")
+    if r.status_code == 200:
+        try:
+            j = r.json()
+            print(f"  {str(j)[:300]}")
+        except:
+            print(f"  {r.text[:200]}")
+    time.sleep(0.2)
+
+print()
+
+# 3. 알려진 업종 코드 후보 테스트
+print("=== 업종 코드 후보 테스트 (기간별 데이터) ===")
+CANDIDATES = [
+    # Naver 전통 코드
+    "KPI", "KQI", "KPI001", "KPI002", "KPI003",
+    # 업종 번호
+    "001", "002", "003", "KOSPI_FOOD",
+    # 네이버 upjong 코드
+    "UPJONG_1", "UPJONG001",
+    # 다른 형식
+    "KOSPI.GIC.10", "GIC10",
+]
+for code in CANDIDATES:
+    r = requests.get(
+        f"{BASE}/index/{code}/price",
+        headers=HDR,
+        params={"startTime": "20260620", "endTime": "20260630", "timeframe": "1D"},
+        timeout=10,
+    )
+    if r.status_code == 200:
+        try:
+            j = r.json()
+            if j:
+                print(f"[{code}] ✅ 200 - {str(j[0])[:200]}")
+            else:
+                print(f"[{code}] 200 빈 리스트")
+        except:
+            print(f"[{code}] 200 텍스트: {r.text[:100]}")
+    else:
+        print(f"[{code}] {r.status_code}")
+    time.sleep(0.15)
+
+print()
+
+# 4. 네이버 PC 업종 페이지에서 upjong 코드 추출
+print("=== 네이버 PC 업종 목록 파싱 ===")
+r = requests.get(
+    "https://finance.naver.com/sise/sise_group.nhn",
+    headers={**HDR, "Referer": "https://finance.naver.com/"},
+    params={"type": "upjong"},
+    timeout=10,
+)
+if r.status_code == 200:
+    # no= 값 찾기
+    import re
+    hits = re.findall(r'no=(\d+)[^>]*>([^<]+)</a>', r.text)
+    print(f"발견된 upjong 코드 ({len(hits)}개):")
+    for no, name in hits[:30]:
+        print(f"  no={no}: {name.strip()}")
