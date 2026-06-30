@@ -35,7 +35,8 @@ def compute_concentration(returns_by_date: dict) -> dict:
         sorted_vals = sorted(rates.values(), reverse=True)
         top = sorted_vals[:TOP_N]
         bottom = sorted_vals[TOP_N:]
-        long_short = _stat.mean(top) - _stat.mean(bottom)
+        n_total = len(sorted_vals)
+        long_short = (sum(top) - sum(bottom)) / n_total
 
         if first:
             idx_val = 1000.0
