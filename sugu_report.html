@@ -8,9 +8,22 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Apple SD Gothic Neo','Nanum Gothic',sans-serif;background:#0d1117;color:#e6edf3;}
-header{padding:16px 24px;border-bottom:1px solid #21262d;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+header{padding:12px 24px;border-bottom:1px solid #21262d;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
 header h1{font-size:1.3rem;color:#58a6ff;}
 header p{font-size:0.82rem;color:#8b949e;margin-top:3px;}
+.header-search{margin-left:auto;display:flex;align-items:center;gap:8px;}
+@media(max-width:600px){
+  header{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 14px;}
+  .header-search{margin-left:0;width:100%;}
+  .header-search .search-wrap{flex:1;}
+  .header-search input[type=text]{width:100%;}
+  .chart-grid{grid-template-columns:1fr!important;}
+  .container{padding:10px 14px;}
+  .toolbar{gap:6px;}
+  select{font-size:0.82rem;}
+  table{font-size:0.78rem;}
+  td,th{padding:5px 7px;}
+}
 
 /* 탭 */
 .tabs{padding:0 24px;border-bottom:1px solid #21262d;display:flex;gap:0;}
@@ -84,6 +97,13 @@ tr.hidden{display:none;}
     <h1>📊 수급오실레이터 리포트</h1>
     <p>기준일: 2026-06-30 &nbsp;|&nbsp; 업데이트: 2026-06-30 12:06 &nbsp;|&nbsp; 1361종목</p>
   </div>
+  <div class="header-search">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="종목코드 / 종목명 검색 후 Enter"
+             oninput="onSearchInput()" onkeydown="onSearchKey(event)" autocomplete="off">
+      <div class="autocomplete-list" id="acList"></div>
+    </div>
+  </div>
 </header>
 
 <!-- 탭 -->
@@ -101,11 +121,6 @@ tr.hidden{display:none;}
 
 <div class="container">
   <div class="toolbar">
-    <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="종목코드 / 종목명 검색"
-             oninput="onSearchInput()" onkeydown="onSearchKey(event)" autocomplete="off">
-      <div class="autocomplete-list" id="acList"></div>
-    </div>
     <select id="oscFilter" onchange="filterTable()">
       <option value="all">전체</option>
       <option value="pos">오실레이터 양수</option>
@@ -13805,7 +13820,7 @@ function switchTab(name) {
 }
 
 // ── 종목 차트 (최대 3개 스택) ─────────────────────────────────────────────
-const MAX_CHARTS = 3;
+const MAX_CHARTS = 10;
 const chartCards = []; // {ticker, chart1, chart2, el}
 
 function showChart(ticker) {
