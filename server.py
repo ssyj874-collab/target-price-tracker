@@ -18,6 +18,14 @@ os.environ.setdefault('KRX_PW', 'song135!')
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# miniforge Python 우선 사용 (macOS 26 Tahoe brew Python segfault 우회)
+_HOME = os.path.expanduser('~')
+_MINIFORGE_PY = os.path.join(_HOME, 'miniforge3', 'envs', 'krx', 'bin', 'python3')
+_BASE_PY = os.path.join(_HOME, 'miniforge3', 'bin', 'python3')
+PYTHON = _MINIFORGE_PY if os.path.isfile(_MINIFORGE_PY) else (
+    _BASE_PY if os.path.isfile(_BASE_PY) else 'python3'
+)
+
 # 각 리포트별 상태
 _st = {
     'sio':  {'running': False, 'message': '대기 중'},
@@ -83,7 +91,7 @@ def _run_sio():
     _st['sio']['message'] = 'SIO 데이터 수집 중...'
     try:
         r = subprocess.run(
-            ['python3', os.path.join(BASE_DIR, 'generate_report.py'), '--no-open', '--publish'],
+            [PYTHON, os.path.join(BASE_DIR, 'generate_report.py'), '--no-open', '--publish'],
             capture_output=True, text=True, env=os.environ.copy(), cwd=BASE_DIR
         )
         if r.returncode == 0:
@@ -124,10 +132,9 @@ def _run_sugu():
     _st['sugu']['running'] = True
     _st['sugu']['message'] = '수급 데이터 수집 중...'
     try:
-        python = 'python3'
         # 1. 데이터 수집
         r1 = subprocess.run(
-            [python, os.path.join(BASE_DIR, 'sugu_calculator.py')],
+            [PYTHON, os.path.join(BASE_DIR, 'sugu_calculator.py')],
             capture_output=True, text=True, env=os.environ.copy(), cwd=BASE_DIR
         )
         if r1.returncode != 0:
@@ -137,7 +144,7 @@ def _run_sugu():
         _st['sugu']['message'] = '리포트 생성 중...'
         # 2. 리포트 생성
         r2 = subprocess.run(
-            [python, os.path.join(BASE_DIR, 'generate_sugu_report.py')],
+            [PYTHON, os.path.join(BASE_DIR, 'generate_sugu_report.py')],
             capture_output=True, text=True, env=os.environ.copy(), cwd=BASE_DIR
         )
         if r2.returncode != 0:
