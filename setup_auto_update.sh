@@ -102,8 +102,8 @@ cat > "$PLIST_SUGU" <<EOPLIST
 
   <key>ProgramArguments</key>
   <array>
-    <string>${PYTHON}</string>
-    <string>${SCRIPT_DIR}/sugu_calculator.py</string>
+    <string>/bin/bash</string>
+    <string>${SCRIPT_DIR}/run_sugu.sh</string>
   </array>
 
   <key>EnvironmentVariables</key>
