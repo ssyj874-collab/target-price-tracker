@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한눈에 보는 근현대사 타임라인 · 1800 – 현재</title>
+<style>
+  :root {
+    --page:        #f9f9f7;
+    --surface:     #fcfcfb;
+    --ink:         #0b0b0b;
+    --ink-2:       #52514e;
+    --ink-muted:   #898781;
+    --hairline:    #e1e0d9;
+    --border:      rgba(11,11,11,0.10);
+    --spine:       #c3c2b7;
+
+    --c-pol:  #2a78d6;  /* 정치·외교 */
+    --c-eco:  #eda100;  /* 경제      */
+    --c-war:  #e34948;  /* 전쟁·분쟁 */
+    --c-soc:  #4a3aa7;  /* 사회·문화 */
+
+    --eco-wash: rgba(237,161,0,0.07);
+    --era-band: #f0efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page:        #0d0d0d;
+      --surface:     #1a1a19;
+      --ink:         #ffffff;
+      --ink-2:       #c3c2b7;
+      --ink-muted:   #898781;
+      --hairline:    #2c2c2a;
+      --border:      rgba(255,255,255,0.10);
+      --spine:       #383835;
+
+      --c-pol:  #3987e5;
+      --c-eco:  #c98500;
+      --c-war:  #e66767;
+      --c-soc:  #9085e9;
+
+      --eco-wash: rgba(201,133,0,0.10);
+      --era-band: #232322;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .wrap.main-pad { padding-bottom: 96px; }
+
+  /* ---------- header ---------- */
+  header.hero { padding: 44px 0 20px; }
+  header.hero h1 { font-size: clamp(22px, 3.4vw, 32px); font-weight: 800; letter-spacing: -0.02em; }
+  header.hero p.sub { margin-top: 8px; color: var(--ink-2); font-size: 14.5px; max-width: 760px; }
+  header.hero p.meta { margin-top: 10px; color: var(--ink-muted); font-size: 12.5px; }
+
+  /* ---------- sticky control bar ---------- */
+  .controls {
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--page) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hairline);
+    padding: 10px 0;
+  }
+  .controls .rows { max-width: 1180px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; gap: 8px; }
+  .chiprow { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .chiprow .lbl { font-size: 11.5px; color: var(--ink-muted); margin-right: 2px; min-width: 30px; }
+
+  button.chip {
+    font: inherit; font-size: 12.5px; cursor: pointer;
+    padding: 4px 12px; border-radius: 999px;
+    border: 1px solid var(--hairline);
+    background: var(--surface); color: var(--ink-2);
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: background .12s, border-color .12s;
+    white-space: nowrap;
+  }
+  button.chip:hover { border-color: var(--ink-muted); }
+  button.chip .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  button.chip.on { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  button.chip.on .dot { outline: 2px solid var(--page); outline-offset: -1px; }
+
+  a.erachip {
+    font-size: 12px; text-decoration: none; color: var(--ink-2);
+    padding: 3px 10px; border-radius: 999px; border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  a.erachip:hover { border-color: var(--hairline); background: var(--surface); }
+  a.erachip b { color: var(--ink); font-weight: 700; }
+  .eranav { overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
+  .eranav::-webkit-scrollbar { display: none; }
+
+  /* ---------- column header ---------- */
+  .colhead {
+    display: grid;
+    grid-template-columns: 1fr 1fr 76px 1.15fr;
+    gap: 14px;
+    padding: 18px 0 10px;
+    position: sticky; top: 92px; z-index: 30;
+    background: var(--page);
+  }
+  .colhead > div {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+    color: var(--ink-muted); text-transform: uppercase;
+    border-bottom: 2px solid var(--hairline); padding-bottom: 7px;
+  }
+  .colhead .west b, .colhead .asia b, .colhead .kr b { color: var(--ink); font-size: 13px; letter-spacing: 0; }
+  .colhead .yr { text-align: center; }
+
+  /* ---------- era band ---------- */
+  section.era { scroll-margin-top: 150px; }
+  .eraband {
+    margin: 34px 0 6px;
+    background: var(--era-band);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  .eraband .num {
+    font-size: 11px; font-weight: 800; letter-spacing: 0.1em;
+    color: var(--ink-muted);
+  }
+  .eraband h2 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
+  .eraband .range { font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .eraband p { flex-basis: 100%; font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+
+  /* ---------- timeline grid ---------- */
+  .yearrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 76px 1.15fr;
+    gap: 14px;
+    padding: 10px 0;
+    position: relative;
+  }
+  .yearrow.hidden { display: none; }
+
+  .cell { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+
+  .yearcell { display: flex; flex-direction: column; align-items: center; position: relative; }
+  .yearcell::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 2px; margin-left: -1px; background: var(--spine);
+  }
+  .yearrow:first-of-type .yearcell::before { top: 12px; }
+  .yearchip {
+    position: relative; z-index: 1;
+    background: var(--surface);
+    border: 1.5px solid var(--spine);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums;
+    padding: 3px 10px; margin-top: 4px;
+    color: var(--ink);
+  }
+
+  /* ---------- event card ---------- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, var(--hairline));
+    border-radius: 8px;
+    padding: 9px 12px 10px;
+    transition: transform .1s, box-shadow .1s;
+  }
+  .card:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+  .card.t-pol { --accent: var(--c-pol); }
+  .card.t-eco { --accent: var(--c-eco); background: linear-gradient(0deg, var(--eco-wash), var(--eco-wash)), var(--surface); }
+  .card.t-war { --accent: var(--c-war); }
+  .card.t-soc { --accent: var(--c-soc); }
+  .card.hidden { display: none; }
+
+  .card .top { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10.5px; font-weight: 700; color: var(--ink-2);
+    letter-spacing: 0.02em;
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .span { font-size: 10.5px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+  .rbadge {
+    display: none;
+    font-size: 10px; font-weight: 700; color: var(--ink-muted);
+    border: 1px solid var(--hairline); border-radius: 4px; padding: 0 5px;
+  }
+  .card h3 { font-size: 13.5px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; }
+  .card p { font-size: 12px; color: var(--ink-2); margin-top: 3px; }
+
+  .emptynote { display: none; font-size: 12.5px; color: var(--ink-muted); padding: 8px 2px; }
+  section.era.allhidden .emptynote { display: block; }
+
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--ink-muted); }
+
+  /* ---------- mobile: single column ---------- */
+  @media (max-width: 880px) {
+    .colhead { display: none; }
+    .yearrow {
+      display: flex; flex-direction: column;
+      gap: 8px;
+      padding: 6px 0 6px 20px;
+      border-left: 2px solid var(--spine);
+      margin-left: 8px;
+    }
+    .yearrow .cell:empty { display: none; }
+    .yearcell { order: -1; align-items: flex-start; }
+    .yearcell::before { display: none; }
+    .yearchip { margin: 2px 0 0 -37px; }
+    .rbadge { display: inline-flex; }
+    .eraband { margin-left: 0; }
+    section.era { scroll-margin-top: 120px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>한눈에 보는 근현대사 타임라인 <span style="color:var(--ink-muted);font-weight:600;">1800 – 현재</span></h1>
+    <p class="sub">
+      시대별로 <b>해외(서방 · 아시아)</b> — <b>연도</b> — <b>국내(한국)</b> 3열로 나누어 굵직한 사건을 배치했습니다.
+      근현대(20세기 이후)로 올수록 <b style="color:var(--c-eco);">경제</b> 사건의 비중을 높여 세계 경제사의 흐름과
+      한국 경제의 궤적이 나란히 읽히도록 구성했습니다. 아래 필터로 특정 유형만 골라 볼 수 있습니다.
+    </p>
+    <p class="meta" id="stat"></p>
+  </header>
+</div>
+
+<div class="controls">
+  <div class="rows">
+    <div class="chiprow" id="typefilter">
+      <span class="lbl">유형</span>
+      <button class="chip on" data-t="all">전체</button>
+      <button class="chip" data-t="pol"><span class="dot" style="background:var(--c-pol)"></span>정치·외교</button>
+      <button class="chip" data-t="eco"><span class="dot" style="background:var(--c-eco)"></span>경제 💰</button>
+      <button class="chip" data-t="war"><span class="dot" style="background:var(--c-war)"></span>전쟁·분쟁</button>
+      <button class="chip" data-t="soc"><span class="dot" style="background:var(--c-soc)"></span>사회·문화</button>
+    </div>
+    <div class="chiprow eranav" id="eranav">
+      <span class="lbl">시대</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap main-pad">
+  <div class="colhead">
+    <div class="west">해외 · <b>서방</b></div>
+    <div class="asia">해외 · <b>아시아</b></div>
+    <div class="yr">연도</div>
+    <div class="kr">국내 · <b>한국</b></div>
+  </div>
+  <main id="timeline"></main>
+
+  <footer>
+    구성: 사건 유형 — <b>정치·외교</b> / <b>경제</b> / <b>전쟁·분쟁</b> / <b>사회·문화</b>.
+    다년(多年) 사건은 시작 연도에 배치하고 기간을 함께 표기했습니다. 연도·수치는 통설을 기준으로 한 요약이며,
+    세부 서술은 참고용입니다.
+  </footer>
+</div>
+
+<script>
+/* ================= 시대 구분 ================= */
+const ERAS = [
+  { id:"e1", from:1800, to:1863, range:"1800 – 1863", name:"근대의 여명",
+    sub:"산업혁명이 유럽 밖으로 퍼지고, 서구 열강이 함포를 앞세워 동아시아의 문을 두드리기 시작한 시대. 조선은 세도정치 속에서 안으로 흔들린다." },
+  { id:"e2", from:1864, to:1909, range:"1864 – 1909", name:"제국주의와 개항",
+    sub:"메이지 유신으로 앞서간 일본, 열강의 이권 각축 속에서 문을 연 조선. 세계는 철도·운하·금본위제로 하나의 시장이 되어 간다." },
+  { id:"e3", from:1910, to:1944, range:"1910 – 1944", name:"식민지 시대와 두 차례의 세계대전",
+    sub:"제국주의의 폭주가 두 번의 세계대전으로 폭발한 시대. 대공황·하이퍼인플레이션 등 현대 경제학의 교과서가 된 사건들이 몰려 있고, 한반도는 수탈과 저항의 시간을 지난다." },
+  { id:"e4", from:1945, to:1960, range:"1945 – 1960", name:"해방과 분단, 전쟁과 재건",
+    sub:"광복의 기쁨이 분단과 전쟁으로 이어진 시대. 세계는 브레튼우즈·마셜 플랜으로 전후 경제질서를 설계하고, 한국은 원조에 기대어 폐허에서 일어선다." },
+  { id:"e5", from:1961, to:1979, range:"1961 – 1979", name:"고도성장의 시대",
+    sub:"경제개발 5개년 계획과 수출주도 공업화로 '한강의 기적'이 시작된다. 세계는 닉슨 쇼크로 달러 체제가 흔들리고 두 차례 오일쇼크를 겪는다." },
+  { id:"e6", from:1980, to:1996, range:"1980 – 1996", name:"민주화와 세계화",
+    sub:"6월 항쟁으로 민주주의를, 3저 호황으로 첫 흑자를 얻은 한국. 냉전이 끝나고 일본 버블이 꺼지며, 세계는 WTO 체제의 세계화로 질주한다." },
+  { id:"e7", from:1997, to:2007, range:"1997 – 2007", name:"외환위기와 IT 혁명",
+    sub:"IMF 외환위기라는 혹독한 구조조정을 거쳐 한국 경제의 체질이 바뀐 시대. 닷컴 버블의 팽창과 붕괴, 중국의 WTO 가입이 오늘의 경제 지형을 만들었다." },
+  { id:"e8", from:2008, to:2019, range:"2008 – 2019", name:"글로벌 금융위기 이후",
+    sub:"리먼 파산이 연 저금리·양적완화의 10년. 중국이 G2로 올라서고, 브렉시트와 미중 무역전쟁으로 세계화의 흐름이 꺾이기 시작한다." },
+  { id:"e9", from:2020, to:2100, range:"2020 – 현재", name:"팬데믹, 인플레이션, AI",
+    sub:"코로나발 무제한 유동성과 40년 만의 인플레이션, 급격한 긴축, 그리고 생성형 AI 붐. 공급망 재편과 관세 전쟁 속에 새로운 경제질서가 만들어지는 중이다." },
+];
+
+/* ================= 사건 데이터 =================
+   r: west(서방) | asia(아시아) | kr(국내)
+   t: pol(정치·외교) | eco(경제) | war(전쟁·분쟁) | soc(사회·문화)
+   span: 다년 사건 기간 표기 (선택)                     */
+const EVENTS = [
+  /* ---- 1800–1863 근대의 여명 ---- */
+  { y:1804, r:"west", t:"pol", title:"나폴레옹, 황제 즉위", d:"프랑스 제1제정 시작. 나폴레옹 전쟁이 유럽 전역의 정치 질서를 뒤흔든다." },
+  { y:1811, r:"kr", t:"war", title:"홍경래의 난", d:"세도정치의 수탈과 지역 차별에 맞선 평안도 농민·상인의 대규모 봉기." },
+  { y:1815, r:"west", t:"war", title:"워털루 전투 · 빈 체제", d:"나폴레옹 최종 몰락. 빈 회의로 유럽 보수 질서가 복원된다." },
+  { y:1825, r:"west", t:"eco", title:"세계 최초 상업 철도 개통", d:"영국 스톡턴–달링턴 철도. 산업혁명이 교통혁명으로 확장되는 출발점." },
+  { y:1839, r:"kr", t:"soc", title:"기해박해", d:"천주교 신자 대탄압. 서구 문물에 대한 조선의 경계가 극에 달한다." },
+  { y:1840, r:"asia", t:"war", title:"제1차 아편전쟁", span:"1840–42", d:"영국의 대중국 무역적자가 부른 전쟁. 중국 중심의 동아시아 질서가 무너지기 시작한다." },
+  { y:1842, r:"asia", t:"eco", title:"난징조약", d:"홍콩 할양, 5개 항구 개항. 동아시아 불평등조약 체제의 시작." },
+  { y:1848, r:"west", t:"pol", title:"유럽 혁명의 해 · 공산당 선언", d:"자유주의·민족주의 혁명이 유럽을 휩쓸고, 마르크스·엥겔스가 공산당 선언을 발표." },
+  { y:1851, r:"asia", t:"war", title:"태평천국운동", span:"1851–64", d:"청 왕조를 뒤흔든 사상 최대급 내전. 청의 쇠퇴를 가속한다." },
+  { y:1853, r:"asia", t:"pol", title:"페리 제독, 일본 내항", d:"'흑선'의 무력시위로 이듬해 일본 개항(가나가와 조약). 일본 근대화의 방아쇠." },
+  { y:1860, r:"kr", t:"soc", title:"최제우, 동학 창시", d:"'사람이 곧 하늘'. 서학에 맞선 민중 사상으로 훗날 농민운동의 뿌리가 된다." },
+  { y:1861, r:"west", t:"war", title:"미국 남북전쟁", span:"1861–65", d:"노예제와 산업구조를 둘러싼 내전. 통일된 미국이 세계 최대 공업국으로 도약하는 계기." },
+  { y:1863, r:"kr", t:"pol", title:"고종 즉위 · 흥선대원군 집권", d:"왕권 강화 개혁과 강력한 통상수교 거부 정책(쇄국)을 병행." },
+
+  /* ---- 1864–1909 제국주의와 개항 ---- */
+  { y:1866, r:"kr", t:"war", title:"병인양요 · 제너럴셔먼호 사건", d:"프랑스·미국과의 첫 무력 충돌. 이후 신미양요(1871)로 이어진다." },
+  { y:1868, r:"asia", t:"pol", title:"일본 메이지 유신", d:"막부 타도와 위로부터의 근대화. 부국강병·식산흥업으로 아시아 세력 균형이 급변한다." },
+  { y:1869, r:"west", t:"eco", title:"수에즈 운하 · 미 대륙횡단철도 개통", d:"세계 물류 혁명. 유럽–아시아 항로가 극적으로 단축되며 글로벌 무역이 팽창." },
+  { y:1871, r:"west", t:"pol", title:"독일 제국 성립", d:"프로이센 주도의 통일. 후발 공업국 독일의 부상이 유럽 세력 균형을 흔든다." },
+  { y:1871, r:"kr", t:"war", title:"신미양요", d:"미국 함대의 강화도 침공. 대원군은 전국에 척화비를 세운다." },
+  { y:1873, r:"west", t:"eco", title:"1873년 대불황 시작", span:"~1896", d:"빈 증시 붕괴발 장기 불황. 각국의 보호무역 회귀와 제국주의 팽창의 경제적 배경이 된다." },
+  { y:1876, r:"kr", t:"eco", title:"강화도조약 — 개항", d:"일본과 맺은 최초의 근대적(불평등) 조약. 조선 경제가 세계 시장에 강제로 편입된다." },
+  { y:1882, r:"kr", t:"pol", title:"임오군란 · 조미수호통상조약", d:"구식 군대의 봉기로 청의 내정 간섭 심화. 서양과의 첫 수교." },
+  { y:1884, r:"kr", t:"pol", title:"갑신정변", d:"김옥균 등 급진 개화파의 '3일 천하'. 위로부터의 근대화 시도가 좌절된다." },
+  { y:1894, r:"kr", t:"war", title:"동학농민운동 · 갑오개혁", d:"반봉건·반외세 농민전쟁. 신분제 폐지 등 근대적 개혁이 뒤따르지만 일본의 개입을 부른다." },
+  { y:1894, r:"asia", t:"war", title:"청일전쟁", span:"1894–95", d:"조선 지배권을 둘러싼 전쟁. 일본 승리로 동아시아 패권이 청에서 일본으로 이동." },
+  { y:1897, r:"kr", t:"pol", title:"대한제국 선포", d:"고종, 황제국 선언. 광무개혁으로 근대화를 시도하지만 때는 이미 늦었다." },
+  { y:1899, r:"kr", t:"eco", title:"경인선 철도 개통", d:"한반도 최초의 철도(제물포–노량진). 근대 교통·시장 통합의 시작이자 열강 이권 침탈의 상징." },
+  { y:1904, r:"asia", t:"war", title:"러일전쟁", span:"1904–05", d:"만주·한반도를 둘러싼 전쟁. 일본이 비서구 국가 최초로 열강을 꺾고 한반도 지배를 굳힌다." },
+  { y:1905, r:"kr", t:"pol", title:"을사늑약", d:"외교권 박탈, 통감부 설치. 사실상의 국권 상실." },
+  { y:1907, r:"west", t:"eco", title:"1907년 금융공황", d:"미국 신탁회사 연쇄 위기를 JP모건이 사재로 진화. 중앙은행의 필요성이 대두되어 연준 창설(1913)로 이어진다." },
+
+  /* ---- 1910–1944 식민지 시대와 세계대전 ---- */
+  { y:1910, r:"kr", t:"pol", title:"경술국치 — 한일병합", d:"대한제국 멸망. 35년 식민지 시대의 시작." },
+  { y:1910, r:"kr", t:"eco", title:"토지조사사업", span:"1910–18", d:"근대적 소유권 정리를 명분으로 한 식민지 수탈 체제의 토대 구축. 총독부가 최대 지주가 된다." },
+  { y:1913, r:"west", t:"eco", title:"미국 연방준비제도(Fed) 창설", d:"1907년 공황의 교훈으로 탄생한 중앙은행. 이후 세계 경제의 심장이 된다." },
+  { y:1914, r:"west", t:"war", title:"제1차 세계대전 발발", span:"1914–18", d:"사라예보의 총성으로 시작된 총력전. 유럽 중심 시대의 종언, 미국 부상의 계기." },
+  { y:1917, r:"west", t:"pol", title:"러시아 혁명", d:"세계 최초의 사회주의 국가 탄생. 20세기 냉전 구도의 씨앗." },
+  { y:1919, r:"kr", t:"pol", title:"3·1 운동 · 임시정부 수립", d:"전 민족적 독립운동. 상하이에 대한민국 임시정부가 세워진다." },
+  { y:1919, r:"west", t:"pol", title:"베르사유 조약", d:"독일에 가혹한 배상 부과. 케인스가 경고한 대로 다음 전쟁의 경제적 씨앗이 된다." },
+  { y:1920, r:"kr", t:"eco", title:"산미증식계획 · 회사령 철폐", d:"쌀 수탈이 본격화되고 일본 자본의 한반도 진출 길이 열린다." },
+  { y:1923, r:"west", t:"eco", title:"독일 하이퍼인플레이션", d:"빵 한 덩이가 수천억 마르크. 화폐 신뢰 붕괴의 교과서적 사례로, 나치 부상의 토양이 된다." },
+  { y:1923, r:"asia", t:"soc", title:"관동대지진", d:"도쿄 일대 대지진. 유언비어 속 조선인 학살이 자행된다." },
+  { y:1929, r:"west", t:"eco", title:"대공황 — 월가 대폭락", d:"'검은 목요일' 주가 폭락으로 시작된 세계 공황. 미국 실업률 25%, 보호무역(스무트–홀리 관세)이 위기를 세계로 확산." },
+  { y:1931, r:"asia", t:"war", title:"만주사변", d:"일본의 대륙 침략 본격화. 만주국 수립, 국제연맹 탈퇴로 고립의 길로." },
+  { y:1933, r:"west", t:"eco", title:"뉴딜 정책", d:"루스벨트의 정부 주도 수요 창출과 금본위제 이탈. '큰 정부' 시대와 케인스주의의 개막." },
+  { y:1937, r:"asia", t:"war", title:"중일전쟁 발발 · 난징대학살", d:"일본의 전면적 중국 침략. 한반도는 병참기지화된다." },
+  { y:1938, r:"kr", t:"eco", title:"국가총동원법", d:"인력·물자의 전면 강제동원. 징용·공출로 전시 수탈 경제가 극에 달한다." },
+  { y:1939, r:"west", t:"war", title:"제2차 세계대전 발발", span:"1939–45", d:"독일의 폴란드 침공. 인류사 최대 규모의 전쟁이 시작된다." },
+  { y:1941, r:"asia", t:"war", title:"태평양전쟁 — 진주만 공습", d:"일본의 미국 기습으로 태평양 전선 개전. 미국의 참전이 전세를 결정짓는다." },
+  { y:1944, r:"west", t:"eco", title:"브레튼우즈 체제 출범", d:"달러를 기축통화로 하는 전후 국제금융질서 설계. IMF와 세계은행이 탄생한다." },
+
+  /* ---- 1945–1960 해방과 분단 ---- */
+  { y:1945, r:"west", t:"pol", title:"제2차 세계대전 종전 · UN 창설", d:"독일·일본 항복. 미·소 양극의 새 국제질서와 핵 시대가 열린다." },
+  { y:1945, r:"kr", t:"pol", title:"8·15 광복", d:"일본 패망으로 식민지배 종식. 그러나 38선을 경계로 미·소 군정이 들어선다." },
+  { y:1947, r:"west", t:"eco", title:"마셜 플랜 · GATT 출범", d:"미국의 대규모 유럽 부흥 지원과 자유무역 체제의 시동. 전후 서방 경제 황금기의 기반." },
+  { y:1948, r:"kr", t:"pol", title:"대한민국 정부 수립", d:"남북에 각각 정부가 들어서며 분단이 고착화. 제주 4·3의 비극도 이 시기다." },
+  { y:1949, r:"asia", t:"pol", title:"중화인민공화국 수립", d:"국공내전에서 공산당 승리. 아시아 냉전 구도가 완성된다." },
+  { y:1950, r:"kr", t:"war", title:"한국전쟁 발발", span:"1950–53", d:"동족상잔의 전쟁으로 수백만 사상, 산업기반 초토화. 냉전 최초의 열전." },
+  { y:1950, r:"kr", t:"eco", title:"농지개혁 · 한국은행 설립", d:"유상몰수·유상분배로 지주제 해체 — 훗날 교육열과 산업화의 밑거름. 중앙은행도 출범." },
+  { y:1953, r:"kr", t:"eco", title:"휴전, 원조 경제의 시작", d:"미국 원조에 의존한 전후 복구. 제분·제당·면방직 '삼백산업'이 초기 자본 축적을 이끈다." },
+  { y:1955, r:"asia", t:"eco", title:"일본, 고도성장기 진입", d:"'진무 경기'를 시작으로 연 10% 성장 시대. 한국전쟁 특수가 부흥의 발판이 됐다." },
+  { y:1957, r:"west", t:"eco", title:"로마 조약 — EEC 창설", d:"유럽경제공동체 출범. 훗날 EU로 이어지는 유럽 경제 통합의 출발점." },
+  { y:1960, r:"kr", t:"pol", title:"4·19 혁명", d:"3·15 부정선거에 맞선 시민혁명. 이승만 대통령 하야." },
+
+  /* ---- 1961–1979 고도성장 ---- */
+  { y:1961, r:"kr", t:"pol", title:"5·16 군사정변", d:"박정희 소장의 군부 집권. 이후 18년간 개발독재 체제가 이어진다." },
+  { y:1962, r:"kr", t:"eco", title:"제1차 경제개발 5개년 계획", d:"수출주도 공업화의 개시. 화폐개혁(환→원)도 단행. '한강의 기적'의 설계도가 그려진다." },
+  { y:1964, r:"asia", t:"eco", title:"도쿄 올림픽 · 신칸센 개통", d:"일본, 패전 19년 만에 경제대국 복귀를 세계에 선언." },
+  { y:1964, r:"kr", t:"eco", title:"수출 1억 달러 달성", d:"'수출의 날' 제정. 가발·합판·섬유 등 경공업이 외화벌이의 주역." },
+  { y:1965, r:"kr", t:"pol", title:"한일협정 · 베트남 파병", d:"청구권 자금 8억 달러와 베트남 특수가 경제개발의 종잣돈이 된다. 격렬한 반대 시위 속 체결." },
+  { y:1967, r:"asia", t:"pol", title:"ASEAN 창설", d:"동남아 5개국의 지역협력체 출범. 훗날 글로벌 공급망의 핵심 축으로 성장." },
+  { y:1968, r:"kr", t:"eco", title:"포항제철 설립 · 경부고속도로 착공", d:"중화학공업 시대의 기반 구축. 고속도로는 1970년, 포철 1기는 1973년 완공." },
+  { y:1971, r:"west", t:"eco", title:"닉슨 쇼크 — 금태환 정지", d:"달러–금 태환 중단으로 브레튼우즈 체제 붕괴. 변동환율과 신용화폐의 시대가 열린다." },
+  { y:1972, r:"asia", t:"pol", title:"닉슨 방중 — 미·중 데탕트", d:"냉전 구도의 대전환. 중국이 국제무대로 복귀하는 첫걸음." },
+  { y:1972, r:"kr", t:"pol", title:"10월 유신", d:"영구집권형 유신체제 선포. 같은 해 8·3 사채동결 조치로 기업 부채를 구제하며 정경유착이 깊어진다." },
+  { y:1973, r:"west", t:"eco", title:"제1차 오일쇼크", d:"중동전쟁 여파로 유가 4배 폭등. 고물가·저성장의 스태그플레이션이 세계를 덮친다." },
+  { y:1973, r:"kr", t:"eco", title:"중화학공업화 선언", d:"철강·조선·전자·석유화학 집중 육성. 오늘날 한국 주력산업의 뼈대가 이때 만들어졌다." },
+  { y:1977, r:"kr", t:"eco", title:"수출 100억 달러 달성", d:"1억 달러 달성 후 불과 13년 만의 100배 성장. 중동 건설 붐도 외화 유입에 한몫." },
+  { y:1978, r:"asia", t:"eco", title:"중국 개혁개방", d:"덩샤오핑의 시장경제 도입 선언. 이후 40년 세계 경제 지형을 바꾼 가장 큰 사건." },
+  { y:1979, r:"west", t:"eco", title:"제2차 오일쇼크 · 볼커 쇼크", d:"이란 혁명발 유가 폭등. 미 연준 볼커 의장이 기준금리 20%의 초긴축으로 인플레이션을 진압." },
+  { y:1979, r:"kr", t:"pol", title:"10·26 사태 · 12·12 군사반란", d:"박정희 대통령 피살로 유신 종말. 신군부가 권력을 장악한다." },
+
+  /* ---- 1980–1996 민주화와 세계화 ---- */
+  { y:1980, r:"kr", t:"pol", title:"5·18 광주민주화운동", d:"신군부의 계엄 확대에 맞선 광주 시민의 항쟁. 한국 민주주의의 분수령." },
+  { y:1980, r:"kr", t:"eco", title:"사상 첫 마이너스 성장(-1.6%)", d:"2차 오일쇼크와 정치 불안, 냉해가 겹친 역성장. 이후 안정화 정책으로 체질 전환." },
+  { y:1985, r:"west", t:"eco", title:"플라자 합의", d:"주요 5개국의 달러 약세 유도 합의. 엔화 급등이 일본 버블과 한국 3저 호황의 방아쇠가 된다." },
+  { y:1986, r:"kr", t:"eco", title:"3저 호황", span:"1986–88", d:"저유가·저금리·저달러의 순풍. 사상 첫 경상수지 흑자, 연 12% 성장의 단군 이래 최대 호황." },
+  { y:1987, r:"kr", t:"pol", title:"6월 항쟁 — 직선제 개헌", d:"전 국민적 민주화 투쟁으로 대통령 직선제 쟁취. 뒤이은 노동자 대투쟁으로 임금이 급등한다." },
+  { y:1987, r:"west", t:"eco", title:"블랙 먼데이", d:"다우지수 하루 -22.6%, 사상 최대 폭락. 프로그램 매매의 위험이 처음 드러난 날." },
+  { y:1988, r:"kr", t:"soc", title:"서울 올림픽", d:"전쟁의 폐허에서 일어선 한국을 세계에 각인. 북방외교의 발판이 된다." },
+  { y:1989, r:"west", t:"pol", title:"베를린 장벽 붕괴", d:"동유럽 공산권 연쇄 붕괴의 상징. 냉전 종식의 서막." },
+  { y:1989, r:"asia", t:"eco", title:"일본 버블 정점 — 닛케이 38,915", d:"도쿄 땅값으로 미국 전체를 산다던 시절. 이 고점을 다시 넘는 데 34년이 걸린다." },
+  { y:1989, r:"asia", t:"pol", title:"톈안먼 사건", d:"민주화 시위 무력 진압. 중국은 정치 통제와 경제 개방의 병행 노선을 굳힌다." },
+  { y:1990, r:"asia", t:"eco", title:"일본 버블 붕괴", d:"주가·부동산 동반 폭락. 디플레이션과 함께 '잃어버린 30년'이 시작된다." },
+  { y:1991, r:"west", t:"pol", title:"소련 해체 — 냉전 종식", d:"사회주의 진영 소멸. 미국 단극 체제와 자본주의 세계화의 시대가 열린다." },
+  { y:1991, r:"kr", t:"pol", title:"남북 UN 동시 가입", d:"남북기본합의서 채택과 함께 탈냉전기 남북관계의 전환점." },
+  { y:1992, r:"kr", t:"pol", title:"한중 수교", d:"냉전의 벽을 넘은 수교. 중국은 이후 한국의 최대 교역국이 된다." },
+  { y:1992, r:"west", t:"eco", title:"마스트리흐트 조약", d:"EU 출범(1993)과 단일통화(유로) 도입 합의. 유럽 통합의 결정판." },
+  { y:1993, r:"kr", t:"eco", title:"금융실명제 전격 실시", d:"김영삼 정부의 기습 발표. 차명·가명 거래를 금지해 지하경제에 메스를 대다." },
+  { y:1995, r:"west", t:"eco", title:"WTO 출범", d:"GATT를 대체하는 세계무역기구 출범. 세계화가 전면 가속된다." },
+  { y:1995, r:"kr", t:"eco", title:"1인당 국민소득 1만 달러 돌파", d:"수출 1,000억 달러 시대 진입. 그러나 고비용·저효율 구조의 그림자가 짙어진다." },
+  { y:1996, r:"kr", t:"eco", title:"OECD 가입", d:"'선진국 클럽' 가입. 성급한 자본시장 개방이 이듬해 외환위기의 복선이 된다." },
+
+  /* ---- 1997–2007 외환위기와 IT 혁명 ---- */
+  { y:1997, r:"asia", t:"eco", title:"아시아 금융위기", d:"태국 바트화 폭락에서 시작해 인도네시아·한국으로 전염. 아시아 성장 모델의 취약성이 드러난다." },
+  { y:1997, r:"asia", t:"pol", title:"홍콩 반환", d:"155년 영국 통치 종료. '일국양제'의 실험이 시작된다." },
+  { y:1997, r:"kr", t:"eco", title:"IMF 외환위기", d:"외환보유고 고갈로 구제금융 195억 달러 신청. 대기업 연쇄 부도, 대량 실업 — 한국 경제 최대의 트라우마." },
+  { y:1998, r:"kr", t:"eco", title:"구조조정과 금 모으기 운동", d:"재벌 빅딜, 정리해고제 도입, 대우그룹 해체(1999). 국민 351만 명이 금 227톤을 내놓다." },
+  { y:1999, r:"west", t:"eco", title:"유로화 출범", d:"단일통화 도입으로 유럽 경제 통합 완성. 달러 이후 첫 기축통화 도전자." },
+  { y:1999, r:"kr", t:"eco", title:"닷컴 붐 — 코스닥 광풍", d:"벤처 육성 정책 속 코스닥 폭등. 초고속인터넷 보급으로 IT 강국의 기반이 깔린다." },
+  { y:2000, r:"kr", t:"pol", title:"첫 남북정상회담 — 6·15 선언", d:"분단 55년 만의 정상 간 만남. 금강산 관광·개성공단으로 이어진다." },
+  { y:2000, r:"west", t:"eco", title:"닷컴 버블 붕괴", d:"나스닥 고점 대비 -78% 폭락. 인터넷 낙관론의 1차 청산." },
+  { y:2001, r:"west", t:"war", title:"9·11 테러", d:"미국 본토 피습. '테러와의 전쟁'으로 아프간·이라크 전쟁이 이어진다." },
+  { y:2001, r:"asia", t:"eco", title:"중국 WTO 가입", d:"'세계의 공장' 시대 개막. 글로벌 저물가와 제조업 지형 재편의 출발점." },
+  { y:2001, r:"kr", t:"eco", title:"IMF 차입금 조기 상환", d:"예정보다 3년 앞당긴 '위기 졸업'. 그러나 구조조정의 상처는 오래 남는다." },
+  { y:2002, r:"kr", t:"soc", title:"한일 월드컵 — 4강 신화", d:"길거리 응원 700만. 한국 대중문화 자신감의 원점." },
+  { y:2003, r:"kr", t:"eco", title:"카드대란", d:"신용카드 남발이 부른 가계부채 위기. 신용불량자 400만 명 — 내수 침체의 그림자." },
+  { y:2004, r:"kr", t:"eco", title:"한–칠레 FTA 발효", d:"첫 자유무역협정. 이후 미국·EU·중국으로 이어지는 FTA 네트워크의 시작." },
+  { y:2007, r:"west", t:"eco", title:"서브프라임 부실 표면화", d:"미국 주택시장 붕괴 시작. 파생상품에 숨어 있던 부실이 세계 금융시스템을 위협하기 시작한다." },
+  { y:2007, r:"kr", t:"eco", title:"코스피 2,000 첫 돌파 · 한미 FTA 타결", d:"펀드 열풍 속 증시 최고치. 최대 시장 미국과의 FTA도 타결(발효는 2012)." },
+
+  /* ---- 2008–2019 글로벌 금융위기 이후 ---- */
+  { y:2008, r:"west", t:"eco", title:"글로벌 금융위기 — 리먼 파산", d:"대공황 이후 최악의 위기. '대마불사' 금융기관의 연쇄 구제, 세계 실물경제 동반 침체." },
+  { y:2008, r:"kr", t:"eco", title:"환율 급등 · 한미 통화스와프", d:"원/달러 1,500원 육박. 300억 달러 통화스와프 체결로 제2의 외환위기 우려를 진화." },
+  { y:2009, r:"west", t:"eco", title:"제로금리 · 양적완화(QE) 시대", d:"중앙은행이 돈을 찍어 자산을 사들이는 비전통적 통화정책 개막. 같은 해 비트코인 제네시스 블록 생성." },
+  { y:2010, r:"asia", t:"eco", title:"중국 GDP 세계 2위 — 일본 추월", d:"G2 시대 개막. 중국은 한국 수출의 4분의 1을 차지하는 최대 시장으로." },
+  { y:2010, r:"west", t:"eco", title:"유럽 재정위기", d:"그리스발 국가부채 위기가 유로존 전체로. '유로의 설계 결함'이 드러난다." },
+  { y:2011, r:"asia", t:"soc", title:"동일본 대지진 · 후쿠시마 원전 사고", d:"규모 9.0 지진과 쓰나미. 글로벌 공급망 충격과 탈원전 논쟁을 촉발." },
+  { y:2011, r:"kr", t:"eco", title:"무역 1조 달러 달성", d:"세계 9번째 무역 1조 달러 클럽 가입. 수출 대국의 위상 확립." },
+  { y:2012, r:"kr", t:"eco", title:"한미 FTA 발효", d:"세계 최대 시장과의 경제 동맹. 개방형 통상국가 전략의 완성판." },
+  { y:2013, r:"asia", t:"eco", title:"아베노믹스 · 일대일로", d:"일본의 무제한 완화 실험과 중국의 대외 인프라 팽창 전략이 나란히 시작된다." },
+  { y:2016, r:"west", t:"pol", title:"브렉시트 · 트럼프 당선", d:"세계화에 대한 반동이 표심으로. 보호무역과 자국우선주의의 시대가 예고된다." },
+  { y:2016, r:"kr", t:"pol", title:"촛불집회 — 대통령 탄핵", d:"연인원 1,700만 촛불. 헌정 사상 첫 대통령 파면(2017.3)으로 이어진다." },
+  { y:2018, r:"kr", t:"pol", title:"남북·북미 정상회담", d:"판문점 선언과 사상 첫 북미 정상회담(싱가포르). 한반도 해빙 무드." },
+  { y:2018, r:"kr", t:"eco", title:"1인당 국민소득 3만 달러 돌파", d:"인구 5천만 이상이면서 소득 3만 달러를 넘는 '30–50 클럽' 세계 7번째 가입." },
+  { y:2018, r:"west", t:"eco", title:"미중 무역전쟁 개시", d:"관세 폭탄을 주고받는 패권 경쟁의 서막. 글로벌 공급망 재편이 시작된다." },
+  { y:2019, r:"asia", t:"pol", title:"홍콩 민주화 시위", d:"송환법 반대로 촉발된 대규모 시위. 이후 국가보안법으로 '일국양제'가 사실상 형해화." },
+  { y:2019, r:"kr", t:"eco", title:"일본 수출규제 — 소부장 국산화", d:"반도체 핵심소재 3종 규제를 계기로 소재·부품·장비 공급망 자립에 착수." },
+
+  /* ---- 2020–현재 ---- */
+  { y:2020, r:"asia", t:"soc", title:"코로나19 팬데믹", d:"우한에서 시작해 전 세계로. 국경 봉쇄와 '대봉쇄(Great Lockdown)' 경제 충격." },
+  { y:2020, r:"west", t:"eco", title:"무제한 양적완화 · 제로금리", d:"각국의 초대형 부양책으로 유동성 홍수. 주식·부동산·코인 등 전방위 자산가격 급등." },
+  { y:2020, r:"kr", t:"eco", title:"동학개미운동", d:"개인투자자의 주식 대거 매수 열풍. 부동산 급등과 '영끌'로 가계부채가 사상 최대로." },
+  { y:2021, r:"kr", t:"eco", title:"코스피 3,300 사상 최고", d:"수출도 사상 최대. 유동성 파티의 정점 — 그러나 인플레이션의 그림자가 다가온다." },
+  { y:2021, r:"west", t:"eco", title:"인플레이션의 귀환", d:"공급망 병목과 부양책 여파로 40년 만의 물가 급등. '일시적'이라던 진단이 빗나간다." },
+  { y:2021, r:"asia", t:"eco", title:"헝다(에버그란데) 위기", d:"중국 부동산 개발사의 디폴트 위기. 부동산 주도 성장 모델의 균열이 드러난다." },
+  { y:2022, r:"west", t:"war", title:"러시아–우크라이나 전쟁", d:"2차대전 이후 유럽 최대의 전쟁. 에너지·곡물 가격 폭등으로 인플레이션에 기름을 붓다." },
+  { y:2022, r:"west", t:"eco", title:"연준의 초고속 긴축 — 킹달러", d:"자이언트 스텝 연속 인상. 달러 초강세로 신흥국 통화·자산시장이 요동친다." },
+  { y:2022, r:"kr", t:"eco", title:"레고랜드 사태 — 자금시장 경색", d:"지자체 보증 채권의 상환 거부가 채권시장 전체를 얼리다. 무역수지도 14년 만에 적자 전환." },
+  { y:2022, r:"west", t:"soc", title:"ChatGPT 출시 — 생성형 AI 시대", d:"출시 두 달 만에 사용자 1억 명. 이후 AI가 산업과 투자 지형을 뒤흔드는 최대 변수로." },
+  { y:2023, r:"west", t:"eco", title:"SVB 파산 · AI 랠리", d:"금리 급등이 부른 미국 지역은행 위기. 한편 엔비디아가 주도하는 AI 투자 붐이 증시를 견인." },
+  { y:2023, r:"kr", t:"eco", title:"반도체 한파와 회복", d:"메모리 불황으로 수출 부진 — 하반기부터 AI발 수요(HBM)로 회복의 전기를 맞는다." },
+  { y:2024, r:"kr", t:"pol", title:"12·3 비상계엄 — 탄핵 정국", d:"45년 만의 계엄 선포와 국회의 즉각 해제. 대통령 탄핵소추로 정국이 격랑에 빠지고 환율은 1,480원대까지 급등." },
+  { y:2024, r:"west", t:"pol", title:"트럼프 재선", d:"미국 우선주의 2기 예고. 관세·이민·동맹 정책의 대전환이 임박한다." },
+  { y:2024, r:"asia", t:"eco", title:"일본, 17년 만의 금리 인상", d:"마이너스 금리 종료. 여름 엔 캐리 트레이드 청산으로 글로벌 증시가 급락하는 발작을 겪다." },
+  { y:2025, r:"west", t:"eco", title:"트럼프 관세 전쟁", d:"'상호관세' 전면 부과로 글로벌 무역질서 재편. 각국이 협상과 보복 사이에서 줄타기." },
+  { y:2025, r:"kr", t:"pol", title:"대통령 파면 — 조기 대선", d:"헌재의 파면 결정(4월)에 이어 6월 조기 대선으로 새 정부 출범." },
+  { y:2025, r:"kr", t:"eco", title:"코스피 3,000 회복", d:"자본시장 개혁(상법 개정 등) 기대 속 증시 반등. 'K-디스카운트' 해소가 화두로." },
+];
+
+/* ================= 렌더링 ================= */
+const T_LABEL = { pol:"정치·외교", eco:"경제", war:"전쟁·분쟁", soc:"사회·문화" };
+const T_ICON  = { pol:"🏛", eco:"💰", war:"⚔️", soc:"✦" };
+const R_LABEL = { west:"서방", asia:"아시아", kr:"국내" };
+
+const tl = document.getElementById("timeline");
+const nav = document.getElementById("eranav");
+
+ERAS.forEach((era, i) => {
+  const events = EVENTS.filter(e => e.y >= era.from && e.y <= era.to);
+  if (!events.length) return;
+
+  const sec = document.createElement("section");
+  sec.className = "era"; sec.id = era.id;
+  sec.innerHTML = `
+    <div class="eraband">
+      <span class="num">${String(i+1).padStart(2,"0")}</span>
+      <h2>${era.name}</h2>
+      <span class="range">${era.range}</span>
+      <p>${era.sub}</p>
+    </div>
+    <p class="emptynote">현재 필터에 해당하는 사건이 이 시대에는 없습니다.</p>`;
+
+  const years = [...new Set(events.map(e => e.y))].sort((a,b) => a-b);
+  years.forEach(y => {
+    const row = document.createElement("div");
+    row.className = "yearrow";
+    const cells = { west:"", asia:"", kr:"" };
+    events.filter(e => e.y === y).forEach(e => {
+      cells[e.r] += `
+        <article class="card t-${e.t}" data-t="${e.t}">
+          <div class="top">
+            <span class="badge"><span class="dot"></span>${T_ICON[e.t]} ${T_LABEL[e.t]}</span>
+            ${e.span ? `<span class="span">${e.span}</span>` : ""}
+            <span class="rbadge">${R_LABEL[e.r]}</span>
+          </div>
+          <h3>${e.title}</h3>
+          <p>${e.d}</p>
+        </article>`;
+    });
+    row.innerHTML = `
+      <div class="cell">${cells.west}</div>
+      <div class="cell">${cells.asia}</div>
+      <div class="yearcell"><span class="yearchip">${y}</span></div>
+      <div class="cell">${cells.kr}</div>`;
+    sec.appendChild(row);
+  });
+  tl.appendChild(sec);
+
+  const a = document.createElement("a");
+  a.className = "erachip"; a.href = `#${era.id}`;
+  a.innerHTML = `<b>${era.range.replace(" – ","–")}</b> ${era.name}`;
+  nav.appendChild(a);
+});
+
+/* ================= 통계 ================= */
+const ecoCount = EVENTS.filter(e => e.t === "eco").length;
+document.getElementById("stat").textContent =
+  `총 ${EVENTS.length}개 사건 · 경제 ${ecoCount}개 · ${ERAS.length}개 시대 (1800 – 현재)`;
+
+/* ================= 유형 필터 ================= */
+const chips = [...document.querySelectorAll("#typefilter .chip")];
+let active = new Set(["pol","eco","war","soc"]);
+
+function applyFilter() {
+  document.querySelectorAll(".card").forEach(c =>
+    c.classList.toggle("hidden", !active.has(c.dataset.t)));
+  document.querySelectorAll(".yearrow").forEach(r =>
+    r.classList.toggle("hidden", !r.querySelector(".card:not(.hidden)")));
+  document.querySelectorAll("section.era").forEach(s =>
+    s.classList.toggle("allhidden", !s.querySelector(".yearrow:not(.hidden)")));
+  const all = active.size === 4;
+  chips.forEach(ch => {
+    const t = ch.dataset.t;
+    ch.classList.toggle("on", t === "all" ? all : (!all && active.has(t)));
+  });
+}
+
+/* 컨트롤바 높이에 맞춰 열 머리글의 sticky 위치 보정 */
+function syncSticky() {
+  const h = document.querySelector(".controls").offsetHeight;
+  document.querySelector(".colhead").style.top = (h - 1) + "px";
+}
+addEventListener("resize", syncSticky);
+syncSticky();
+
+chips.forEach(ch => ch.addEventListener("click", () => {
+  const t = ch.dataset.t;
+  if (t === "all") { active = new Set(["pol","eco","war","soc"]); }
+  else if (active.size === 4) { active = new Set([t]); }        // 전체 → 단일 선택
+  else if (active.has(t)) { active.delete(t); if (!active.size) active = new Set(["pol","eco","war","soc"]); }
+  else { active.add(t); }
+  applyFilter();
+}));
+</script>
+</body>
+</html>
