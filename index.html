@@ -197,6 +197,20 @@
   .emptynote { display: none; font-size: 12.5px; color: var(--ink-muted); padding: 8px 2px; }
   section.era.allhidden .emptynote { display: block; }
 
+  /* ---------- 대통령 임기 배너 ---------- */
+  .presband { display: flex; align-items: center; gap: 12px; padding: 10px 0; min-width: 0; }
+  .presband .pline { flex: 1; height: 1px; background: var(--hairline); min-width: 12px; }
+  .presband .pchip {
+    display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; justify-content: center;
+    border: 1px dashed var(--spine); border-radius: 999px;
+    background: var(--surface); padding: 5px 15px;
+    font-size: 12px; color: var(--ink-2);
+  }
+  .presband .pchip b { color: var(--ink); font-size: 13px; }
+  .presband .pchip .pterm { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .presband .pchip .pnote { color: var(--ink-muted); }
+  body.hidepres .presband { display: none; }
+
   footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 12px; color: var(--ink-muted); }
 
   /* ---------- mobile: single column ---------- */
@@ -242,6 +256,7 @@
       <button class="chip" data-t="eco"><span class="dot" style="background:var(--c-eco)"></span>경제 💰</button>
       <button class="chip" data-t="war"><span class="dot" style="background:var(--c-war)"></span>전쟁·분쟁</button>
       <button class="chip" data-t="soc"><span class="dot" style="background:var(--c-soc)"></span>사회·문화</button>
+      <button class="chip on" id="prestoggle">🏛 대통령 임기</button>
     </div>
     <div class="chiprow eranav" id="eranav">
       <span class="lbl">시대</span>
@@ -455,6 +470,24 @@ const EVENTS = [
   { y:2025, r:"kr", t:"eco", title:"코스피 3,000 회복", d:"자본시장 개혁(상법 개정 등) 기대 속 증시 반등. 'K-디스카운트' 해소가 화두로." },
 ];
 
+/* ================= 역대 대통령 (임기 시작 시점에 배너 삽입) ================= */
+const PRESIDENTS = [
+  { name:"이승만", ord:"제1–3대",   start:1948, term:"1948.7 – 1960.4",  note:"4·19 혁명으로 하야" },
+  { name:"윤보선", ord:"제4대",     start:1960, term:"1960.8 – 1962.3",  note:"내각책임제 — 실권은 장면 내각" },
+  { name:"박정희", ord:"제5–9대",   start:1963, term:"1963.12 – 1979.10", note:"10·26으로 서거" },
+  { name:"최규하", ord:"제10대",    start:1979, term:"1979.12 – 1980.8", note:"신군부 압박 속 사임" },
+  { name:"전두환", ord:"제11–12대", start:1980, term:"1980.9 – 1988.2",  note:"간선제 · 제5공화국" },
+  { name:"노태우", ord:"제13대",    start:1988, term:"1988.2 – 1993.2",  note:"직선제 개헌 후 첫 대통령" },
+  { name:"김영삼", ord:"제14대",    start:1993, term:"1993.2 – 1998.2",  note:"문민정부" },
+  { name:"김대중", ord:"제15대",    start:1998, term:"1998.2 – 2003.2",  note:"첫 수평적 정권교체" },
+  { name:"노무현", ord:"제16대",    start:2003, term:"2003.2 – 2008.2",  note:"참여정부" },
+  { name:"이명박", ord:"제17대",    start:2008, term:"2008.2 – 2013.2" },
+  { name:"박근혜", ord:"제18대",    start:2013, term:"2013.2 – 2017.3",  note:"탄핵으로 파면" },
+  { name:"문재인", ord:"제19대",    start:2017, term:"2017.5 – 2022.5" },
+  { name:"윤석열", ord:"제20대",    start:2022, term:"2022.5 – 2025.4",  note:"탄핵으로 파면" },
+  { name:"이재명", ord:"제21대",    start:2025, term:"2025.6 – 현재" },
+];
+
 /* ================= 렌더링 ================= */
 const T_LABEL = { pol:"정치·외교", eco:"경제", war:"전쟁·분쟁", soc:"사회·문화" };
 const T_ICON  = { pol:"🏛", eco:"💰", war:"⚔️", soc:"✦" };
@@ -478,8 +511,31 @@ ERAS.forEach((era, i) => {
     </div>
     <p class="emptynote">현재 필터에 해당하는 사건이 이 시대에는 없습니다.</p>`;
 
+  /* 연도 행과 대통령 배너를 시간 순으로 배치
+     (배너는 취임 연도의 사건 행 바로 뒤에 삽입) */
   const years = [...new Set(events.map(e => e.y))].sort((a,b) => a-b);
-  years.forEach(y => {
+  const items = years.map(y => ({ kind:"year", y }));
+  PRESIDENTS.filter(p => p.start >= era.from && p.start <= era.to).forEach(p => {
+    const idx = items.findIndex(it => it.kind === "year" && it.y > p.start);
+    const item = { kind:"pres", p };
+    if (idx === -1) items.push(item); else items.splice(idx, 0, item);
+  });
+
+  items.forEach(it => {
+    if (it.kind === "pres") {
+      const band = document.createElement("div");
+      band.className = "presband";
+      band.innerHTML = `
+        <span class="pline"></span>
+        <span class="pchip">🏛 <b>${it.p.name}</b> 대통령 취임
+          <span class="pterm">${it.p.ord} · ${it.p.term}</span>
+          ${it.p.note ? `<span class="pnote">${it.p.note}</span>` : ""}
+        </span>
+        <span class="pline"></span>`;
+      sec.appendChild(band);
+      return;
+    }
+    const y = it.y;
     const row = document.createElement("div");
     row.className = "yearrow";
     const cells = { west:"", asia:"", kr:"" };
@@ -513,10 +569,17 @@ ERAS.forEach((era, i) => {
 /* ================= 통계 ================= */
 const ecoCount = EVENTS.filter(e => e.t === "eco").length;
 document.getElementById("stat").textContent =
-  `총 ${EVENTS.length}개 사건 · 경제 ${ecoCount}개 · ${ERAS.length}개 시대 (1800 – 현재)`;
+  `총 ${EVENTS.length}개 사건 · 경제 ${ecoCount}개 · 역대 대통령 ${PRESIDENTS.length}명 · ${ERAS.length}개 시대 (1800 – 현재)`;
+
+/* ================= 대통령 임기 표시 토글 ================= */
+const presToggle = document.getElementById("prestoggle");
+presToggle.addEventListener("click", () => {
+  document.body.classList.toggle("hidepres");
+  presToggle.classList.toggle("on", !document.body.classList.contains("hidepres"));
+});
 
 /* ================= 유형 필터 ================= */
-const chips = [...document.querySelectorAll("#typefilter .chip")];
+const chips = [...document.querySelectorAll("#typefilter .chip[data-t]")];
 let active = new Set(["pol","eco","war","soc"]);
 
 function applyFilter() {
