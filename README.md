@@ -63,7 +63,29 @@ python incremental_margin.py examples/sample_paste.txt --fetch-price 298040 --ht
 
 # API 대신 일별 시세 CSV(날짜,종가) 사용
 python incremental_margin.py examples/sample_paste.txt --price-csv daily.csv --html report.html
+
+# 워치리스트: 종목 파일 여러 개 → 하나의 HTML (파일 하나 = 종목 하나)
+python watchlist.py examples/watchlist --fetch-price --html watch.html
 ```
+
+## 워치리스트 (종목 n개 추적)
+
+`watchlist.py`는 디렉토리(또는 파일 목록)를 받아 **워치리스트 → 종목
+상세** 2뎁스 리포트 하나를 만든다. 종목명은 파일명, 파일 안에
+`#code=298040` 주석을 넣으면 `--fetch-price` 플래그로 일별 시세가
+자동으로 붙는다. 예: `examples/watchlist/`.
+
+리포트 안에서 되는 것:
+
+- 상단 워치리스트 테이블: 종목별 최신 분기·전체/증분 이익률·격차·추세·
+  최근 종가 요약, 행 클릭으로 종목 전환
+- **`+ 종목 추가` / 현재 종목 삭제** — 브라우저에서 바로. 새 종목은
+  FnGuide 표를 붙여넣기 박스에 넣으면 분기가 채워진다(주가는 CLI로
+  재생성해야 붙음)
+- **종목명 수정**: 상세 화면의 제목을 클릭해 바로 수정
+- 모든 편집은 localStorage에 저장. 리포트를 재생성해 열면 같은 종목
+  (이름 기준)의 주가 시계열만 새로 갱신되고 분기 수정본은 유지된다
+  (초기화 = 생성 시점 데이터 복귀)
 
 입력 형식은 자동 감지되며 두 가지를 받는다. **기간 제한 없음** —
 붙여넣는 만큼(다트에서 긁은 과거 분기 포함) 전부 그려진다.

@@ -1,25 +1,24 @@
-"""이익률·증분이익률·주가 비교 인터랙티브 HTML 리포트 생성.
+"""워치리스트(종목 n개) 인터랙티브 HTML 리포트 생성.
 
-리포트는 자체 완결형 단일 HTML이며, 분기 실적표가 그 자리에서 편집된다:
-과거/최신 분기 추가, 행 삭제, 매출·영업이익 수정, 컨센서스(E) 체크 —
-바꾸는 즉시 차트·KPI·시그널이 재계산된다. 수정 내용은 브라우저
-localStorage에 자동 저장된다(제목 기준 키). 계산 로직은 파이썬(터미널
-출력용, incremental_margin.py)과 템플릿 안의 JS에 같은 규칙으로 두 벌
-존재한다 — 임계값이나 판정 규칙을 바꿀 때는 양쪽을 함께 고칠 것.
+리포트는 자체 완결형 단일 HTML이며 2뎁스 구조다:
+워치리스트(종목 요약 테이블, 클릭으로 전환) → 종목 상세(차트·KPI·시그널·실적표).
 
-차트 구성:
-- x축은 날짜(시간) 축. 분기 지표는 분기 말일 위치에 찍히고, 주가는
-  일별 종가 선그래프로 같은 타임라인에 정렬된다. 주가 시계열은
-  --fetch-price(네이버) 또는 --price-csv(일별 시세 파일)로 주입되며
-  표에서 수기 입력하지 않는다.
-- 주가와 이익률은 스케일이 달라 한 축에 얹지 않는다(듀얼축 금지).
-  위(주가)/아래(이익률) 두 패널 정렬 + "주가 겹쳐보기" 토글이 이익률
-  패널 위에 일별 주가를 min-max 상대 스케일로 겹쳐 그린다 — 축 없이
-  모양(꺾이는 시점) 비교 전용이고, 정확한 값은 툴팁·주가 패널 담당.
-- 컨센서스(E) 분기는 점선·빈 마커·배경 워시로 구분되며 추세·KPI·
-  손익분기 판정에서 제외된다.
-- 분기 라벨에서 날짜를 읽지 못하면(2025/03·2025Q1 형식이 아니면)
-  등간격 x축으로 폴백하고 주가 차트는 표시하지 않는다.
+브라우저 안에서 되는 것:
+- 종목 추가/삭제, 종목명 수정(제목 클릭), FnGuide 표 붙여넣기로 분기 채우기
+- 분기 실적표 편집(과거/최신 분기 추가, 행 삭제, 매출·영업이익 수정, E 체크)
+  → 차트·KPI·시그널·워치리스트 요약 즉시 재계산
+- 모든 상태는 localStorage에 저장. 리포트를 다시 생성해 열면 같은 종목
+  (이름 기준 id)의 주가 시계열은 새 임베드로 갱신되고, 분기 데이터는
+  사용자 수정본이 유지된다(초기화 버튼으로 임베드 데이터 복귀).
+
+주가는 일별 종가 시계열로 리포트 생성 시 주입된다(--fetch-price /
+--price-csv / watchlist.py). 표에서 수기 입력하지 않는다. 브라우저에서
+추가한 종목은 주가 없이 이익률만 보이며, CLI로 재생성하면 주가가 붙는다.
+
+계산 로직은 파이썬(incremental_margin.py)과 템플릿 JS에 같은 규칙으로
+두 벌 존재한다 — 임계값·판정 규칙을 바꿀 때 양쪽을 함께 고칠 것.
+차트 규칙(날짜 축, 듀얼축 금지, 컨센서스 점선, 상대 스케일 오버레이)은
+이전과 동일하다.
 """
 
 from __future__ import annotations
@@ -31,13 +30,7 @@ from incremental_margin import Analysis
 from price_fetch import quarter_end
 
 
-def render_html(
-    analysis: Analysis,
-    title: str = "증분 영업이익률 리포트",
-    price_series: list | None = None,
-) -> str:
-    """price_series: [[ISO날짜, 종가], ...] 일별 시계열. 없으면 분기별
-    price(CSV 입력 등)를 분기 말일 위치의 성긴 시계열로 변환해 쓴다."""
+def _stock_payload(analysis: Analysis, name: str, price_series: list | None) -> dict:
     if price_series is None:
         price_series = []
         for q in analysis.quarters:
@@ -45,8 +38,9 @@ def render_html(
                 end = quarter_end(q.label)
                 if end:
                     price_series.append([end.isoformat(), q.price])
-    data = {
-        "title": title,
+    return {
+        "id": name,
+        "name": name,
         "quarters": [
             {
                 "label": q.label,
@@ -58,13 +52,37 @@ def render_html(
         ],
         "priceSeries": price_series,
     }
+
+
+def render_watchlist(stocks: list[dict], page_title: str = "증분 이익률 워치리스트") -> str:
+    """stocks: [{"name": str, "analysis": Analysis, "price_series": list|None}]"""
+    data = {
+        "stocks": [
+            _stock_payload(s["analysis"], s["name"], s.get("price_series"))
+            for s in stocks
+        ],
+    }
     page = HTML_TEMPLATE
-    page = page.replace("__TITLE__", html.escape(title))
+    page = page.replace("__TITLE__", html.escape(page_title))
     page = page.replace("__DATA__", json.dumps(data, ensure_ascii=False))
     return page
 
 
-HTML_TEMPLATE = """<!doctype html>
+def render_html(
+    analysis: Analysis,
+    title: str = "증분 영업이익률 리포트",
+    price_series: list | None = None,
+) -> str:
+    """단일 종목 리포트 (워치리스트에 종목 1개)."""
+    return render_watchlist(
+        [{"name": title, "analysis": analysis, "price_series": price_series}],
+        page_title=title,
+    )
+
+
+# raw 문자열 필수: 템플릿 JS의 정규식(\r?\n 등)이 파이썬 이스케이프로
+# 손상되지 않도록.
+HTML_TEMPLATE = r"""<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -116,7 +134,30 @@ body {
   padding: 24px 16px 48px;
 }
 .wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 16px; }
-header h1 { font-size: 20px; font-weight: 650; }
+.panel { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.panel h2 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.grid-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.grid-head h2 { flex: 1; margin-bottom: 0; }
+.btn {
+  font: inherit; font-size: 12px; color: var(--text-primary);
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 7px; padding: 5px 12px; cursor: pointer;
+}
+.btn:hover { background: var(--page); }
+/* 워치리스트 */
+#watch-table tr { cursor: pointer; }
+#watch-table tr.active td { font-weight: 650; }
+#watch-table tr.active td:first-child { color: var(--series-price); }
+#watch-table tr:hover { background: var(--page); }
+.trend-chip { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); }
+/* 종목 헤더 */
+#stock-name {
+  font-size: 20px; font-weight: 650; color: inherit; background: transparent;
+  border: none; border-bottom: 1px dashed transparent; padding: 0; width: 100%;
+  font-family: inherit;
+}
+#stock-name:hover { border-bottom-color: var(--grid); }
+#stock-name:focus { outline: none; border-bottom-color: var(--series-price); }
 header p { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
 .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
@@ -125,8 +166,6 @@ header p { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
 .tile-delta { font-size: 12px; margin-top: 2px; }
 .delta-good { color: var(--delta-good); }
 .delta-bad { color: var(--delta-bad); }
-.panel { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
-.panel h2 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
 .legend-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; font-size: 12px; color: var(--text-secondary); margin: 4px 0 8px; }
 .legend-row .key { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
 .legend-row label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; margin-left: auto; }
@@ -136,14 +175,6 @@ header p { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
 .signals h2 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
 .signals ul { padding-left: 18px; display: grid; gap: 6px; }
 .signals li { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-.grid-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.grid-head h2 { flex: 1; }
-.btn {
-  font: inherit; font-size: 12px; color: var(--text-primary);
-  background: transparent; border: 1px solid var(--border);
-  border-radius: 7px; padding: 5px 12px; cursor: pointer;
-}
-.btn:hover { background: var(--page); }
 .table-wrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 13px; }
 th, td { padding: 6px 8px; white-space: nowrap; }
@@ -168,7 +199,15 @@ button.del {
   color: var(--text-muted); font-size: 14px; padding: 0 4px;
 }
 button.del:hover { color: var(--delta-bad); }
-.hint { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+.hint { font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.6; }
+details.paste { margin-top: 10px; }
+details.paste summary { font-size: 12px; color: var(--text-secondary); cursor: pointer; }
+details.paste textarea {
+  width: 100%; min-height: 110px; margin-top: 8px; font: 12px/1.5 ui-monospace, monospace;
+  color: inherit; background: var(--page); border: 1px solid var(--border);
+  border-radius: 7px; padding: 8px;
+}
+#paste-status { font-size: 12px; margin-left: 8px; color: var(--text-muted); }
 #tooltip {
   position: fixed; pointer-events: none; z-index: 10; display: none;
   background: var(--surface-1); border: 1px solid var(--border);
@@ -185,8 +224,25 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 </head>
 <body>
 <div class="wrap">
+  <section class="panel">
+    <div class="grid-head">
+      <h2>워치리스트</h2>
+      <button class="btn" id="add-stock">+ 종목 추가</button>
+      <button class="btn" id="del-stock">현재 종목 삭제</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>종목</th><th>최신 분기</th><th>전체이익률</th><th>증분이익률</th>
+          <th>격차</th><th style="text-align:center">추세</th><th>최근 종가</th>
+        </tr></thead>
+        <tbody id="watch-table"></tbody>
+      </table>
+    </div>
+  </section>
+
   <header>
-    <h1>__TITLE__</h1>
+    <input id="stock-name" aria-label="종목명 (클릭해서 수정)" title="클릭해서 종목명 수정">
     <p>증분 이익률 추세: <strong id="trend-label">-</strong> ·
        전체 이익률의 기울기는 (증분 − 전체) 격차에 비례 —
        격차가 0에 닿는 분기가 전체 이익률의 고점</p>
@@ -234,14 +290,23 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
         <tbody id="grid"></tbody>
       </table>
     </div>
-    <p class="hint">셀을 클릭해 바로 수정 — 차트·KPI·시그널이 즉시 재계산됩니다.
-       "+ 과거 분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용),
-       "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다. E = 컨센서스
-       추정치(추세 판정에서 제외). 주가는 표에서 입력하지 않습니다 —
-       리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회) 또는
-       --price-csv 일별시세.csv로 일별 시계열이 심어집니다. 수정 내용은
-       이 브라우저에 자동 저장되며, 초기화를 누르면 생성 시점 데이터로
-       돌아갑니다.</p>
+    <details class="paste">
+      <summary>FnGuide 표 붙여넣기로 채우기</summary>
+      <textarea id="paste-box" placeholder="FnGuide Financial Highlight에서 복사한 표를 여기에 붙여넣기&#10;(헤더: 2025/03 2025/06 ... 2026/06(E), 행: 매출액 / 영업이익 / 영업이익(발표기준))"></textarea>
+      <div style="margin-top:6px">
+        <button class="btn" id="paste-apply">적용 (현재 종목 분기 교체)</button>
+        <span id="paste-status"></span>
+      </div>
+    </details>
+    <p class="hint">셀을 클릭해 바로 수정 — 차트·KPI·시그널·워치리스트가 즉시
+       재계산됩니다. "+ 과거 분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛
+       실적 입력용), "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다.
+       E = 컨센서스 추정치(추세 판정에서 제외). 주가는 표에서 입력하지
+       않습니다 — 리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회)
+       또는 --price-csv로 일별 시계열이 심어지며, 브라우저에서 추가한
+       종목은 CLI로 재생성해야 주가가 붙습니다. 수정 내용은 이 브라우저에
+       자동 저장되고, 리포트를 재생성해 열면 주가 시계열만 새로 갱신되며
+       분기 수정본은 유지됩니다(초기화 = 생성 시점 데이터로 복귀).</p>
   </section>
 
   <footer>
@@ -258,41 +323,58 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 <script>
 "use strict";
 const INITIAL = __DATA__;
-const STORE_KEY = "ipm:" + INITIAL.title;
+const STORE_KEY = "ipt:watchlist:v2";
 // 판정 임계값 — incremental_margin.py와 동일하게 유지할 것
 const TREND_PP = 2.0, SPIKE_PP = 15.0;
 const NS = "http://www.w3.org/2000/svg";
 const W = 920, PAD = { l: 58, r: 96, t: 16, b: 30 };
 const DAY = 86400000;
 
-// 일별 주가 시계열 (리포트 생성 시 주입, 표에서 편집 불가)
-const PRICE = (INITIAL.priceSeries || [])
-  .map(([d, c]) => ({ t: Date.parse(d), c }))
-  .filter(p => isFinite(p.t) && p.c != null)
-  .sort((a, b) => a.t - b.t);
-
-// ---------- 상태 ----------
-function cloneRows(rows) { return rows.map(r => ({ ...r })); }
-function loadState() {
+// ---------- 워치리스트 DB ----------
+function clone(x) { return JSON.parse(JSON.stringify(x)); }
+function loadDb() {
   try {
     const raw = localStorage.getItem(STORE_KEY);
-    if (!raw) return null;
-    const rows = JSON.parse(raw);
-    return Array.isArray(rows) && rows.length ? rows : null;
-  } catch (e) { return null; }
+    if (raw) {
+      const db = JSON.parse(raw);
+      if (db && Array.isArray(db.stocks)) return db;
+    }
+  } catch (e) {}
+  return { stocks: [], active: null };
 }
-let state = loadState() || cloneRows(INITIAL.quarters);
-function saveState() {
-  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {}
+let db = loadDb();
+// 임베드 병합: 새 종목은 추가, 기존 종목(id 일치)은 주가 시계열만 갱신
+// (분기 데이터는 사용자 수정본 우선 — 초기화 버튼으로 임베드 복귀)
+for (const s of INITIAL.stocks) {
+  const found = db.stocks.find(x => x.id === s.id);
+  if (!found) db.stocks.push(clone(s));
+  else if (s.priceSeries && s.priceSeries.length) found.priceSeries = clone(s.priceSeries);
 }
+if (!db.stocks.length) db.stocks.push({ id: "새 종목", name: "새 종목", quarters: [], priceSeries: [] });
+if (!db.active || !db.stocks.some(s => s.id === db.active)) db.active = db.stocks[0].id;
 
-// ---------- 분기 라벨 → 날짜 ----------
+function saveDb() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); } catch (e) {}
+}
+function activeStock() { return db.stocks.find(s => s.id === db.active); }
+
+let stock = activeStock();
+let PRICE = [];
+function rebuildPrice() {
+  PRICE = (stock.priceSeries || [])
+    .map(([d, c]) => ({ t: Date.parse(d), c }))
+    .filter(p => isFinite(p.t) && p.c != null)
+    .sort((a, b) => a.t - b.t);
+}
+rebuildPrice();
+
+// ---------- 분기 라벨 ↔ 날짜 ----------
 function qEndMs(label) {
   let y = null, mo = null, m;
   if ((m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || ""))) { y = +m[1]; mo = +m[2]; }
   else if ((m = /^(\d{4})Q([1-4])$/i.exec(label || ""))) { y = +m[1]; mo = +m[2] * 3; }
   if (y == null || mo < 1 || mo > 12) return null;
-  return Date.UTC(y, mo, 0); // 해당 월의 말일
+  return Date.UTC(y, mo, 0);
 }
 function dateStr(t) { return new Date(t).toISOString().slice(0, 10); }
 function prevLabel(label) {
@@ -325,10 +407,8 @@ function nextLabel(label) {
 }
 
 // ---------- 계산 (incremental_margin.py의 규칙을 그대로 옮김) ----------
-function validRows() { return state.filter(r => r.revenue != null && r.op != null); }
-
-function computeAll() {
-  const v = validRows();
+function computeAll(quarters) {
+  const v = quarters.filter(r => r.revenue != null && r.op != null);
   const n = v.length;
   const overall = v.map(q => q.revenue !== 0 ? q.op / q.revenue * 100 : null);
   const incremental = [null], dRev = [null], dOp = [null];
@@ -371,7 +451,6 @@ function computeAll() {
     const dp = v[bLast].op - v[bPrev].op;
     if (dr > 0 && overall[bLast] != null) gap = dp / dr * 100 - overall[bLast];
   }
-  // 날짜 축: 라벨이 전부 해석되고 단조 증가일 때만
   let dates = v.map(q => qEndMs(q.label));
   const datesOK = n >= 2 && dates.every(d => d != null)
     && dates.every((d, i) => !i || d > dates[i - 1]);
@@ -421,6 +500,52 @@ function buildSignals(c) {
   return s;
 }
 
+// ---------- FnGuide 붙여넣기 파서 (incremental_margin.parse_paste 이식) ----------
+function parsePasteText(text) {
+  const QTOKEN = /^(?:\d{4}[./\-]\d{1,2}|\d{4}Q[1-4])(?:\(E\))?$/i;
+  let labels = null, est = null;
+  const fields = {};
+  for (const line of (text || "").split(/\r?\n/)) {
+    const cells = line.includes("\t")
+      ? line.split("\t").map(s => s.trim())
+      : line.trim().split(/\s+/);
+    if (!cells.length || !cells.join("")) continue;
+    const qcells = cells.filter(c => QTOKEN.test(c));
+    if (!labels && qcells.length >= 2) {
+      labels = []; est = [];
+      qcells.forEach(c => {
+        const e = /\(E\)$/i.test(c);
+        labels.push(e ? c.slice(0, -3) : c);
+        est.push(e);
+      });
+      continue;
+    }
+    const name = cells[0].replace(/\s+/g, "");
+    let key = null;
+    if (["매출액", "매출"].includes(name) || name.toLowerCase() === "revenue") key = "revenue";
+    else if (name === "영업이익") key = "op";
+    else if (name.startsWith("영업이익(발표")) key = "opA";
+    else continue;
+    let vals = cells.slice(1).map(c => {
+      const t = c.replace(/,/g, "");
+      if (!t || t === "-") return null;
+      const v = Number(t);
+      return isFinite(v) ? v : null;
+    });
+    if (labels) vals = vals.concat(Array(labels.length).fill(null)).slice(0, labels.length);
+    fields[key] = vals;
+  }
+  if (!labels || !fields.revenue) return null;
+  const op = fields.op || [], opA = fields.opA || [];
+  const rows = [];
+  labels.forEach((lb, i) => {
+    const o = op[i] != null ? op[i] : opA[i];
+    if (fields.revenue[i] == null || o == null) return;
+    rows.push({ label: lb, revenue: fields.revenue[i], op: o, estimate: !!est[i] });
+  });
+  return rows.length ? rows : null;
+}
+
 // ---------- 렌더 공통 ----------
 function fmt(v, digits) {
   return v == null || !isFinite(v) ? "–" : v.toLocaleString("ko-KR",
@@ -450,6 +575,58 @@ function niceTicks(min, max, count) {
   return ticks;
 }
 
+// ---------- 워치리스트 요약 테이블 ----------
+function lastCloseOf(s) {
+  const ps = s.priceSeries || [];
+  return ps.length ? ps[ps.length - 1][1] : null;
+}
+function renderWatchlist() {
+  const tbody = document.getElementById("watch-table");
+  tbody.textContent = "";
+  for (const s of db.stocks) {
+    const c = computeAll(s.quarters || []);
+    const tr = document.createElement("tr");
+    if (s.id === db.active) tr.className = "active";
+    const cells = [];
+    cells.push([s.name || s.id, "left"]);
+    if (c.bLast != null) {
+      cells.push([c.v[c.bLast].label, "num"]);
+      cells.push([fmt(c.overall[c.bLast], 1) + "%", "num"]);
+      const dr = c.bPrev != null ? c.v[c.bLast].revenue - c.v[c.bPrev].revenue : null;
+      const inc = dr ? (c.v[c.bLast].op - c.v[c.bPrev].op) / dr * 100 : null;
+      cells.push([fmt(inc, 1) + "%" + (dr != null && dr < 0 ? " (Δ매출<0)" : ""), "num"]);
+      cells.push([c.gap == null ? "–" : fmt(c.gap, 1) + "%p", "num"]);
+    } else {
+      cells.push(["–", "num"], ["–", "num"], ["–", "num"], ["–", "num"]);
+    }
+    cells.push([c.trend, "chip"]);
+    cells.push([fmt(lastCloseOf(s), 0), "num"]);
+    for (const [text, kind] of cells) {
+      const td = document.createElement("td");
+      if (kind === "num") td.className = "num";
+      if (kind === "chip") {
+        td.style.textAlign = "center";
+        const chip = document.createElement("span");
+        chip.className = "trend-chip";
+        chip.textContent = text;
+        td.appendChild(chip);
+      } else td.textContent = text;
+      tr.appendChild(td);
+    }
+    tr.addEventListener("click", () => switchStock(s.id));
+    tbody.appendChild(tr);
+  }
+}
+
+function switchStock(id) {
+  if (!db.stocks.some(s => s.id === id)) return;
+  db.active = id;
+  stock = activeStock();
+  rebuildPrice();
+  document.getElementById("stock-name").value = stock.name || stock.id;
+  refresh(true);
+}
+
 // ---------- KPI ----------
 function tile(parent, label, value, delta, goodWhenUp, suffix) {
   const t = div("tile", parent);
@@ -461,7 +638,6 @@ function tile(parent, label, value, delta, goodWhenUp, suffix) {
     d.textContent = (delta >= 0 ? "+" : "") + fmt(delta, 1) + suffix + " vs 직전 분기";
   }
 }
-
 function closeAtOrBefore(t, maxGapDays) {
   let best = null;
   for (const p of PRICE) {
@@ -470,11 +646,10 @@ function closeAtOrBefore(t, maxGapDays) {
   if (best && maxGapDays != null && t - best.t > maxGapDays * DAY) return null;
   return best;
 }
-
 function renderKpis(c) {
   const box = document.getElementById("kpis");
   box.textContent = "";
-  if (c.bPrev == null) { tile(box, "분기 수 부족", "–"); return; }
+  if (c.bPrev == null) { tile(box, "분기 수 부족 (2개 이상 입력)", "–"); return; }
   const latest = c.v[c.bLast], prev = c.v[c.bPrev];
   const mNow = c.overall[c.bLast], mPrev = c.overall[c.bPrev];
   tile(box, "전체 영업이익률", fmt(mNow, 1) + "%",
@@ -541,7 +716,6 @@ function drawPanel(containerId, opts) {
     lbl.textContent = label + (est[i] ? "(E)" : "");
   });
 
-  // 주가 오버레이 (상대 스케일 — 모양 비교 전용, 자체 축 없음)
   if (opts.overlay && opts.overlay.length >= 2) {
     const cs = opts.overlay.map(p => p.c);
     const pLo = Math.min(...cs), pHi = Math.max(...cs);
@@ -560,7 +734,6 @@ function drawPanel(containerId, opts) {
     lbl.textContent = "주가(상대)";
   }
 
-  // 일별 라인 시리즈 (주가 패널)
   for (const line of opts.lines || []) {
     let d = "";
     line.points.forEach((p, i) => {
@@ -579,7 +752,6 @@ function drawPanel(containerId, opts) {
   const cross = el("line", { y1: PAD.t, y2: H - PAD.b,
     stroke: "var(--baseline)", "stroke-width": 1, visibility: "hidden" }, svg);
 
-  // 분기 지표 시리즈 (마커·점선·빈 마커)
   const endLabels = [];
   for (const s of opts.qSeries || []) {
     let solid = "", dashed = "", prev = null;
@@ -628,7 +800,16 @@ function renderCharts(c) {
   const est = c.v.map(q => !!q.estimate);
   const hasPrice = c.datesOK && PRICE.length >= 2;
 
-  // 공용 시간 도메인 (양쪽 패널 x 정렬)
+  if (c.n < 2) {
+    panels = []; chartCtx = null;
+    document.getElementById("price-panel").hidden = true;
+    document.getElementById("overlay-label").hidden = true;
+    document.getElementById("overlay-key").hidden = true;
+    document.getElementById("price-chart").textContent = "";
+    document.getElementById("margin-chart").textContent = "";
+    return;
+  }
+
   let t0 = c.dates[0], t1 = c.dates[c.n - 1];
   if (hasPrice) {
     t0 = Math.min(t0, PRICE[0].t);
@@ -687,7 +868,6 @@ function parseNum(s) {
   const v = Number(t);
   return isFinite(v) ? v : null;
 }
-
 function numInput(row, key, refreshFn) {
   const inp = document.createElement("input");
   inp.type = "text";
@@ -702,7 +882,7 @@ function numInput(row, key, refreshFn) {
 function renderTable() {
   const tbody = document.getElementById("grid");
   tbody.textContent = "";
-  state.forEach((row, ri) => {
+  stock.quarters.forEach((row, ri) => {
     const tr = document.createElement("tr");
     const tdL = document.createElement("td");
     const lab = document.createElement("input");
@@ -733,7 +913,7 @@ function renderTable() {
     const tdX = document.createElement("td");
     const del = document.createElement("button");
     del.className = "del"; del.textContent = "×"; del.title = "행 삭제";
-    del.addEventListener("click", () => { state.splice(ri, 1); refresh(true); });
+    del.addEventListener("click", () => { stock.quarters.splice(ri, 1); refresh(true); });
     tdX.appendChild(del); tr.appendChild(tdX);
     tbody.appendChild(tr);
   });
@@ -741,12 +921,13 @@ function renderTable() {
 }
 
 function updateDerived() {
-  const c = computeAll();
+  const c = computeAll(stock.quarters);
   let vi = -1;
-  state.forEach((row, ri) => {
+  stock.quarters.forEach((row, ri) => {
     const ok = row.revenue != null && row.op != null;
     if (ok) vi += 1;
     const get = k => document.querySelector(`[data-slot="d${ri}-${k}"]`);
+    if (!get(0)) return;
     if (!ok) { for (let k = 0; k < 4; k++) get(k).textContent = "–"; return; }
     get(0).textContent = fmt(c.overall[vi], 1) + "%";
     if (vi === 0) { for (let k = 1; k < 4; k++) get(k).textContent = "–"; return; }
@@ -765,20 +946,42 @@ function refresh(rebuildTable) {
   renderKpis(c);
   renderCharts(c);
   renderSignals(c);
-  saveState();
+  renderWatchlist();
+  saveDb();
 }
 
+// ---------- 이벤트 ----------
+document.getElementById("stock-name").addEventListener("input", e => {
+  stock.name = e.target.value.trim() || stock.id;
+  renderWatchlist();
+  saveDb();
+});
+document.getElementById("add-stock").addEventListener("click", () => {
+  const name = (window.prompt("추가할 종목명:") || "").trim();
+  if (!name) return;
+  let id = name, k = 2;
+  while (db.stocks.some(s => s.id === id)) id = `${name} (${k++})`;
+  db.stocks.push({ id, name: id, quarters: [], priceSeries: [] });
+  switchStock(id);
+  document.querySelector("details.paste").open = true;
+});
+document.getElementById("del-stock").addEventListener("click", () => {
+  if (!window.confirm(`'${stock.name}' 종목을 워치리스트에서 삭제할까요?`)) return;
+  db.stocks = db.stocks.filter(s => s.id !== db.active);
+  if (!db.stocks.length) db.stocks.push({ id: "새 종목", name: "새 종목", quarters: [], priceSeries: [] });
+  switchStock(db.stocks[0].id);
+});
 document.getElementById("add-past").addEventListener("click", () => {
-  const first = state[0];
-  state.unshift({ label: prevLabel(first && first.label), revenue: null, op: null,
+  const first = stock.quarters[0];
+  stock.quarters.unshift({ label: prevLabel(first && first.label), revenue: null, op: null,
     estimate: false });
   refresh(true);
   const inp = document.querySelector("#grid tr td input");
   if (inp) inp.focus();
 });
 document.getElementById("add-recent").addEventListener("click", () => {
-  const last = state[state.length - 1];
-  state.push({ label: nextLabel(last && last.label), revenue: null, op: null,
+  const last = stock.quarters[stock.quarters.length - 1];
+  stock.quarters.push({ label: nextLabel(last && last.label), revenue: null, op: null,
     estimate: false });
   refresh(true);
   const rows = document.querySelectorAll("#grid tr");
@@ -786,11 +989,31 @@ document.getElementById("add-recent").addEventListener("click", () => {
   if (inp) inp.focus();
 });
 document.getElementById("reset").addEventListener("click", () => {
-  try { localStorage.removeItem(STORE_KEY); } catch (e) {}
-  state = cloneRows(INITIAL.quarters);
+  const embedded = INITIAL.stocks.find(s => s.id === db.active);
+  if (embedded) {
+    stock.quarters = clone(embedded.quarters);
+    stock.priceSeries = clone(embedded.priceSeries || []);
+    stock.name = embedded.name;
+  } else {
+    stock.quarters = [];
+  }
+  document.getElementById("stock-name").value = stock.name;
+  rebuildPrice();
   refresh(true);
 });
 document.getElementById("overlay-toggle").addEventListener("change", () => refresh(false));
+document.getElementById("paste-apply").addEventListener("click", () => {
+  const status = document.getElementById("paste-status");
+  const rows = parsePasteText(document.getElementById("paste-box").value);
+  if (!rows) {
+    status.textContent = "파싱 실패 — 분기 라벨 헤더와 매출액/영업이익 행이 있는지 확인";
+    return;
+  }
+  stock.quarters = rows;
+  status.textContent = `${rows.length}개 분기 적용됨`;
+  document.getElementById("paste-box").value = "";
+  refresh(true);
+});
 
 // ---------- 크로스헤어 + 툴팁 ----------
 const tooltip = document.getElementById("tooltip");
@@ -805,11 +1028,9 @@ function nearestQuarter(t) {
   });
   return best;
 }
-
 function showAt(t, clientX, clientY) {
   if (!chartCtx || !panels.length || !chartCtx.c.n) return;
   const { c, labels, est, hasPrice, xOf } = chartCtx;
-  // 스냅: 주가가 있으면 가장 가까운 거래일, 없으면 가장 가까운 분기
   let snapT = t, price = null;
   if (hasPrice) {
     let best = PRICE[0], bd = Infinity;
@@ -887,6 +1108,8 @@ chartsBox.addEventListener("keydown", e => {
 });
 chartsBox.addEventListener("blur", () => { focusIndex = -1; hideTip(); });
 
+// ---------- 시작 ----------
+document.getElementById("stock-name").value = stock.name || stock.id;
 refresh(true);
 </script>
 </body>

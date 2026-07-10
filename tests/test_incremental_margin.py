@@ -147,6 +147,63 @@ class PriceAndReportTest(unittest.TestCase):
         self.assertIn('["2025-01-02", 50000.0]', page)
 
 
+class WatchlistTest(unittest.TestCase):
+    def _analysis(self):
+        return analyze([q("2025/03", 100, 10), q("2025/06", 150, 30)])
+
+    def test_render_watchlist_embeds_all_stocks(self):
+        from report import render_watchlist
+
+        page = render_watchlist(
+            [
+                {"name": "효성중공업", "analysis": self._analysis()},
+                {"name": "삼성전자", "analysis": self._analysis()},
+            ],
+            page_title="내 워치리스트",
+        )
+        self.assertIn('"id": "효성중공업"', page)
+        self.assertIn('"id": "삼성전자"', page)
+        self.assertIn("내 워치리스트", page)
+        self.assertIn('id="watch-table"', page)
+        self.assertIn('id="add-stock"', page)
+        self.assertIn('id="stock-name"', page)  # 종목명 수정 입력
+        self.assertIn('id="paste-box"', page)  # 브라우저 붙여넣기
+
+    def test_load_stock_file_with_code_comment(self):
+        import os
+        import tempfile
+
+        from watchlist import load_stock_file
+
+        content = (
+            "#code=298040\n"
+            "\t2025/03\t2025/06\n"
+            "매출액\t100\t150\n"
+            "영업이익\t10\t30\n"
+        )
+        with tempfile.NamedTemporaryFile(
+            "w", suffix=".txt", delete=False, encoding="utf-8",
+            prefix="테스트종목_",
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            name, quarters, code = load_stock_file(path)
+        finally:
+            os.unlink(path)
+        self.assertTrue(name.startswith("테스트종목_"))
+        self.assertEqual(code, "298040")
+        self.assertEqual(len(quarters), 2)
+        self.assertEqual(quarters[1].operating_profit, 30)
+
+    def test_collect_inputs_from_directory(self):
+        from watchlist import collect_inputs
+
+        files = collect_inputs(["examples/watchlist"])
+        self.assertEqual(len(files), 2)
+        self.assertTrue(all(f.endswith((".txt", ".csv")) for f in files))
+
+
 SAMPLE_PASTE = """\
 \t2025/03\t2025/06\t2025/09\t2025/12\t2026/03\t2026/06(E)\t2026/09(E)\t2026/12(E)
 매출액\t10,761\t15,253\t16,241\t17,430\t13,582\t18,143\t18,929\t20,699
