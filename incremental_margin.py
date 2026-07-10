@@ -256,12 +256,12 @@ def analyze(quarters: Sequence[Quarter]) -> Analysis:
         if latest.revenue > be:
             headroom = (latest.revenue - be) / latest.revenue * 100
             signals.append(
-                f"손익분기 매출(빵원 자리) 추정 ≈ {be:,.1f} — "
+                f"손익분기 매출(빵원 자리) 추정 ≈ {be:,.0f} — "
                 f"현재 매출이 분기점보다 {headroom:.0f}% 위에 있음."
             )
         else:
             signals.append(
-                f"손익분기 매출(빵원 자리) 추정 ≈ {be:,.1f} — "
+                f"손익분기 매출(빵원 자리) 추정 ≈ {be:,.0f} — "
                 f"현재 매출이 아직 분기점 아래. 판관비(고정비) 축소 여부 확인."
             )
 

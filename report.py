@@ -54,9 +54,17 @@ def _stock_payload(analysis: Analysis, name: str, price_series: list | None) -> 
     }
 
 
-def render_watchlist(stocks: list[dict], page_title: str = "증분 이익률 워치리스트") -> str:
-    """stocks: [{"name": str, "analysis": Analysis, "price_series": list|None}]"""
+def render_watchlist(
+    stocks: list[dict],
+    page_title: str = "증분 이익률 워치리스트",
+    unit: str = "백만원",
+) -> str:
+    """stocks: [{"name": str, "analysis": Analysis, "price_series": list|None}]
+
+    unit: 매출·영업이익 금액 단위 표기 (기본 백만원 — DART 사업보고서 기준.
+    FnGuide 표는 억원이므로 붙여넣기 시 ×100 변환 체크박스를 쓸 것)."""
     data = {
+        "unit": unit,
         "stocks": [
             _stock_payload(s["analysis"], s["name"], s.get("price_series"))
             for s in stocks
@@ -64,6 +72,7 @@ def render_watchlist(stocks: list[dict], page_title: str = "증분 이익률 워
     }
     page = HTML_TEMPLATE
     page = page.replace("__TITLE__", html.escape(page_title))
+    page = page.replace("__UNIT__", html.escape(unit))
     page = page.replace("__DATA__", json.dumps(data, ensure_ascii=False))
     return page
 
@@ -72,11 +81,13 @@ def render_html(
     analysis: Analysis,
     title: str = "증분 영업이익률 리포트",
     price_series: list | None = None,
+    unit: str = "백만원",
 ) -> str:
     """단일 종목 리포트 (워치리스트에 종목 1개)."""
     return render_watchlist(
         [{"name": title, "analysis": analysis, "price_series": price_series}],
         page_title=title,
+        unit=unit,
     )
 
 
@@ -250,12 +261,8 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 
   <div class="tiles" id="kpis"></div>
 
-  <div id="charts" tabindex="0" aria-label="일별 주가와 분기별 이익률 차트. 좌우 화살표로 분기 이동">
-    <section class="panel" id="price-panel" hidden>
-      <h2>주가 (일별 종가)</h2>
-      <div class="chart" id="price-chart"></div>
-    </section>
-    <section class="panel" style="margin-top:12px">
+  <div id="charts" tabindex="0" aria-label="분기별 이익률 차트 (주가 오버레이 포함). 좌우 화살표로 분기 이동">
+    <section class="panel">
       <h2>영업이익률 vs 증분 영업이익률</h2>
       <div class="legend-row">
         <span><span class="key" style="background:var(--series-overall)"></span>전체 영업이익률</span>
@@ -284,7 +291,7 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     <div class="table-wrap">
       <table>
         <thead><tr>
-          <th>분기</th><th>매출</th><th>영업이익</th><th>E</th>
+          <th>분기</th><th>매출 (__UNIT__)</th><th>영업이익 (__UNIT__)</th><th>E</th>
           <th>전체이익률</th><th>Δ매출</th><th>Δ영업이익</th><th>증분이익률</th><th></th>
         </tr></thead>
         <tbody id="grid"></tbody>
@@ -295,26 +302,32 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
       <textarea id="paste-box" placeholder="FnGuide Financial Highlight에서 복사한 표를 여기에 붙여넣기&#10;(헤더: 2025/03 2025/06 ... 2026/06(E), 행: 매출액 / 영업이익 / 영업이익(발표기준))"></textarea>
       <div style="margin-top:6px">
         <button class="btn" id="paste-apply">적용 (현재 종목 분기 교체)</button>
+        <label style="font-size:12px;color:var(--text-secondary);margin-left:8px">
+          <input type="checkbox" id="paste-eok" checked> 억원 단위 표(FnGuide) — ×100 하여 __UNIT__ 변환
+        </label>
         <span id="paste-status"></span>
       </div>
     </details>
-    <p class="hint">셀을 클릭해 바로 수정 — 차트·KPI·시그널·워치리스트가 즉시
-       재계산됩니다. "+ 과거 분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛
-       실적 입력용), "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다.
-       E = 컨센서스 추정치(추세 판정에서 제외). 주가는 표에서 입력하지
-       않습니다 — 리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회)
-       또는 --price-csv로 일별 시계열이 심어지며, 브라우저에서 추가한
-       종목은 CLI로 재생성해야 주가가 붙습니다. 수정 내용은 이 브라우저에
-       자동 저장되고, 리포트를 재생성해 열면 주가 시계열만 새로 갱신되며
-       분기 수정본은 유지됩니다(초기화 = 생성 시점 데이터로 복귀).</p>
+    <p class="hint">금액 단위: __UNIT__ (다트 사업보고서 기준. FnGuide 표는
+       억원이므로 붙여넣기 시 ×100 변환 체크를 켤 것). 셀을 클릭해 바로
+       수정 — 차트·KPI·시그널·워치리스트가 즉시 재계산됩니다. "+ 과거
+       분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용),
+       "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다. E = 컨센서스
+       추정치(추세 판정에서 제외). 주가는 표에서 입력하지 않습니다 —
+       리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회) 또는
+       --price-csv로 일별 시계열이 심어져 이익률 차트에 오버레이되며,
+       브라우저에서 추가한 종목은 CLI로 재생성해야 주가가 붙습니다.
+       수정 내용은 이 브라우저에 자동 저장되고, 리포트를 재생성해 열면
+       주가 시계열만 새로 갱신되며 분기 수정본은 유지됩니다(초기화 =
+       생성 시점 데이터로 복귀).</p>
   </section>
 
   <footer>
-    당기순이익이 아니라 영업이익 기준. 증분 영업이익률 = Δ영업이익 ÷ Δ매출 —
-    새로 붙는 매출이 몇 %짜리인지를 본다. 매출 변화가 0인 분기의 증분값은
-    표시하지 않음. 분기 지표는 분기 말일 위치에 찍힌다. "주가 겹쳐보기"는
-    min-max 상대 스케일이라 모양(꺾이는 시점) 비교 전용 — 값은 툴팁과
-    주가 패널에서 확인.
+    당기순이익이 아니라 영업이익 기준, 금액 단위 __UNIT__. 증분 영업이익률
+    = Δ영업이익 ÷ Δ매출 — 새로 붙는 매출이 몇 %짜리인지를 본다. 매출
+    변화가 0인 분기의 증분값은 표시하지 않음. 분기 지표는 분기 말일 위치에
+    찍힌다. "주가 겹쳐보기"는 min-max 상대 스케일이라 모양(꺾이는 시점)
+    비교 전용 — 정확한 값은 마우스 툴팁(거래일 스냅)과 KPI에서 확인.
   </footer>
 </div>
 
@@ -491,9 +504,9 @@ function buildSignals(c) {
     const latest = c.v[c.bLast];
     if (latest.revenue > c.breakEven) {
       const head = (latest.revenue - c.breakEven) / latest.revenue * 100;
-      s.push(`손익분기 매출(빵원 자리) 추정 ≈ ${fmt(c.breakEven, 1)} — 현재 매출이 분기점보다 ${head.toFixed(0)}% 위에 있음.`);
+      s.push(`손익분기 매출(빵원 자리) 추정 ≈ ${fmt(c.breakEven, 0)} — 현재 매출이 분기점보다 ${head.toFixed(0)}% 위에 있음.`);
     } else {
-      s.push(`손익분기 매출(빵원 자리) 추정 ≈ ${fmt(c.breakEven, 1)} — 현재 매출이 아직 분기점 아래. 판관비(고정비) 축소 여부 확인.`);
+      s.push(`손익분기 매출(빵원 자리) 추정 ≈ ${fmt(c.breakEven, 0)} — 현재 매출이 아직 분기점 아래. 판관비(고정비) 축소 여부 확인.`);
     }
   }
   if (!s.length) s.push("특이 시그널 없음");
@@ -661,7 +674,7 @@ function renderKpis(c) {
   const incDelta = drLast > 0 && bi.length >= 2 ? bi[bi.length - 1] - bi[bi.length - 2] : null;
   tile(box, incLabel, fmt(incNow, 1) + "%", incDelta, true, "%p");
   tile(box, "증분−전체 격차", c.gap == null ? "–" : fmt(c.gap, 1) + "%p");
-  tile(box, "손익분기 매출 추정", fmt(c.breakEven, 1));
+  tile(box, `손익분기 매출 추정 (${INITIAL.unit})`, fmt(c.breakEven, 0));
   if (PRICE.length && c.datesOK) {
     const last = PRICE[PRICE.length - 1];
     const prevEnd = closeAtOrBefore(qEndMs(prev.label), 15);
@@ -681,7 +694,6 @@ function drawPanel(containerId, opts) {
 
   const pool = [];
   (opts.qSeries || []).forEach(s => s.values.forEach(v => { if (v != null) pool.push(v); }));
-  (opts.lines || []).forEach(l => l.points.forEach(p => pool.push(p.c)));
   if (!pool.length) return null;
   let lo = Math.min(...pool), hi = Math.max(...pool);
   if (opts.includeZero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
@@ -716,6 +728,7 @@ function drawPanel(containerId, opts) {
     lbl.textContent = label + (est[i] ? "(E)" : "");
   });
 
+  // 주가 오버레이 (상대 스케일 — 모양 비교 전용, 자체 축 없음)
   if (opts.overlay && opts.overlay.length >= 2) {
     const cs = opts.overlay.map(p => p.c);
     const pLo = Math.min(...cs), pHi = Math.max(...cs);
@@ -732,21 +745,6 @@ function drawPanel(containerId, opts) {
     const lbl = el("text", { x: Math.min(xOf(lastP.t) + 8, W - 4),
       y: py(lastP.c) + 4, "font-size": 10, fill: "var(--text-muted)" }, svg);
     lbl.textContent = "주가(상대)";
-  }
-
-  for (const line of opts.lines || []) {
-    let d = "";
-    line.points.forEach((p, i) => {
-      d += (i ? "L" : "M") + xOf(p.t).toFixed(1) + " " + y(p.c).toFixed(1);
-    });
-    el("path", { d, fill: "none", stroke: `var(${line.colorVar})`,
-      "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
-    const lastP = line.points[line.points.length - 1];
-    const t = el("text", { x: Math.min(xOf(lastP.t) + 8, W - PAD.r + 10),
-      y: y(lastP.c) + 4, "font-size": 12, "font-weight": 600,
-      fill: "var(--text-primary)",
-      style: "font-variant-numeric: tabular-nums" }, svg);
-    t.textContent = fmt(lastP.c, line.digits);
   }
 
   const cross = el("line", { y1: PAD.t, y2: H - PAD.b,
@@ -802,16 +800,19 @@ function renderCharts(c) {
 
   if (c.n < 2) {
     panels = []; chartCtx = null;
-    document.getElementById("price-panel").hidden = true;
     document.getElementById("overlay-label").hidden = true;
     document.getElementById("overlay-key").hidden = true;
-    document.getElementById("price-chart").textContent = "";
     document.getElementById("margin-chart").textContent = "";
     return;
   }
 
+  document.getElementById("overlay-label").hidden = !hasPrice;
+  const overlayOn = hasPrice && document.getElementById("overlay-toggle").checked;
+  document.getElementById("overlay-key").hidden = !overlayOn;
+
   let t0 = c.dates[0], t1 = c.dates[c.n - 1];
-  if (hasPrice) {
+  if (overlayOn) {
+    // 오버레이가 켜져 있으면 주가 시계열 전체가 보이도록 도메인 확장
     t0 = Math.min(t0, PRICE[0].t);
     t1 = Math.max(t1, PRICE[PRICE.length - 1].t);
   }
@@ -823,21 +824,9 @@ function renderCharts(c) {
   const washX = firstEst < 0 ? null
     : xOf(firstEst > 0 ? (c.dates[firstEst - 1] + c.dates[firstEst]) / 2 : c.dates[firstEst]);
 
-  document.getElementById("price-panel").hidden = !hasPrice;
-  document.getElementById("overlay-label").hidden = !hasPrice;
-  const overlayOn = hasPrice && document.getElementById("overlay-toggle").checked;
-  document.getElementById("overlay-key").hidden = !overlayOn;
-
   panels = [];
-  const common = { xOf, dates: c.dates, est, labels, washX };
-  if (hasPrice) {
-    const p = drawPanel("price-chart", { ...common, H: 240,
-      lines: [{ points: PRICE, colorVar: "--series-price", digits: 0 }] });
-    if (p) panels.push(p);
-  } else {
-    document.getElementById("price-chart").textContent = "";
-  }
-  const m = drawPanel("margin-chart", { ...common, H: 280,
+  const m = drawPanel("margin-chart", {
+    xOf, dates: c.dates, est, labels, washX, H: 300,
     includeZero: true, axisSuffix: "%",
     qSeries: [
       { values: c.overall, colorVar: "--series-overall", digits: 1, suffix: "%" },
@@ -846,7 +835,7 @@ function renderCharts(c) {
     overlay: overlayOn ? PRICE : null });
   if (m) panels.push(m);
 
-  chartCtx = { c, labels, est, hasPrice, t0, t1, xOf };
+  chartCtx = { c, labels, est, hasPrice: overlayOn, t0, t1, xOf };
 }
 
 // ---------- 시그널 ----------
@@ -931,7 +920,7 @@ function updateDerived() {
     if (!ok) { for (let k = 0; k < 4; k++) get(k).textContent = "–"; return; }
     get(0).textContent = fmt(c.overall[vi], 1) + "%";
     if (vi === 0) { for (let k = 1; k < 4; k++) get(k).textContent = "–"; return; }
-    const sign = x => (x >= 0 ? "+" : "") + fmt(x, 1);
+    const sign = x => (x >= 0 ? "+" : "") + fmt(x, 0);
     get(1).textContent = sign(c.dRev[vi]);
     get(2).textContent = sign(c.dOp[vi]);
     get(3).textContent = c.incremental[vi] == null ? "–" : fmt(c.incremental[vi], 1) + "%";
@@ -1008,6 +997,10 @@ document.getElementById("paste-apply").addEventListener("click", () => {
   if (!rows) {
     status.textContent = "파싱 실패 — 분기 라벨 헤더와 매출액/영업이익 행이 있는지 확인";
     return;
+  }
+  // FnGuide 표는 억원 단위 → ×100 하여 백만원으로 통일
+  if (document.getElementById("paste-eok").checked) {
+    for (const r of rows) { r.revenue *= 100; r.op *= 100; }
   }
   stock.quarters = rows;
   status.textContent = `${rows.length}개 분기 적용됨`;

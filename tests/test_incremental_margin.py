@@ -120,12 +120,14 @@ class PriceAndReportTest(unittest.TestCase):
         from report import render_html
 
         page = render_html(analyze(self._quarters()), title="테스트 종목")
-        self.assertIn('id="price-chart"', page)
+        self.assertNotIn('id="price-chart"', page)  # 주가 단독 패널 없음
         self.assertIn('id="margin-chart"', page)
         self.assertIn("분기 실적표", page)
         self.assertIn("과거 분기", page)  # 과거 방향 추가 버튼
         self.assertIn("최신 분기", page)
         self.assertIn("테스트 종목", page)
+        self.assertIn('"unit": "백만원"', page)
+        self.assertIn("매출 (백만원)", page)
         # 분기별 price는 분기 말일 위치의 시계열로 변환되어 임베드된다
         self.assertIn('["2025-03-31", 54000', page)
 
