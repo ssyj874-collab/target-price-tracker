@@ -1,5 +1,5 @@
-quarter,revenue,operating_profit
-2025Q3,100,10
-2025Q4,150,30
-2026Q1,200,50
-2026Q2,250,62.5
+quarter,revenue,operating_profit,price
+2025Q3,100,10,54000
+2025Q4,150,30,72000
+2026Q1,200,50,89000
+2026Q2,250,62.5,83000

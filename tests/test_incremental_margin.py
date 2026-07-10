@@ -85,5 +85,52 @@ class IncrementalMarginTest(unittest.TestCase):
             analyze([q("Q1", 100, 10)])
 
 
+class PriceAndReportTest(unittest.TestCase):
+    def _quarters(self, with_price=True):
+        price = [54000, 72000, 89000, 83000] if with_price else [None] * 4
+        specs = [(100, 10), (150, 30), (200, 50), (250, 62.5)]
+        return [
+            Quarter(f"Q{i+1}", rev, op, price=p)
+            for i, ((rev, op), p) in enumerate(zip(specs, price))
+        ]
+
+    def test_price_change_pct(self):
+        from incremental_margin import price_change_pct
+
+        qs = self._quarters()
+        self.assertAlmostEqual(price_change_pct(qs[0], qs[1]), 100 / 3)
+        self.assertIsNone(price_change_pct(qs[0], q("Q2", 1, 1)))
+
+    def test_render_includes_price_columns(self):
+        from incremental_margin import render
+
+        out = render(analyze(self._quarters()))
+        self.assertIn("주가", out)
+        self.assertIn("+33.3%", out)
+
+    def test_render_without_price_has_no_price_columns(self):
+        from incremental_margin import render
+
+        out = render(analyze(self._quarters(with_price=False)))
+        header = out.splitlines()[0]
+        self.assertNotIn("주가", header)
+
+    def test_html_report_smoke(self):
+        from report import render_html
+
+        page = render_html(analyze(self._quarters()))
+        self.assertIn('id="price-chart"', page)
+        self.assertIn('id="margin-chart"', page)
+        self.assertIn("분기 실적표", page)
+        self.assertIn('"hasPrice": true', page)
+
+    def test_html_report_without_price_skips_price_panel(self):
+        from report import render_html
+
+        page = render_html(analyze(self._quarters(with_price=False)))
+        self.assertNotIn('id="price-chart"', page)
+        self.assertIn('id="margin-chart"', page)
+
+
 if __name__ == "__main__":
     unittest.main()

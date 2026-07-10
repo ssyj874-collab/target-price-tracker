@@ -51,11 +51,16 @@ class Trend(Enum):
 
 @dataclass(frozen=True)
 class Quarter:
-    """분기 실적 한 줄. 금액 단위는 자유(조원, 억원, ...) — 일관되기만 하면 된다."""
+    """분기 실적 한 줄. 금액 단위는 자유(조원, 억원, ...) — 일관되기만 하면 된다.
+
+    price는 그 분기 시점의 주가(예: 분기말 종가). 선택 입력이며,
+    있으면 이익률-주가 비교 테이블·차트에 함께 표시된다.
+    """
 
     label: str
     revenue: float
     operating_profit: float
+    price: Optional[float] = None
 
     @property
     def operating_margin(self) -> Optional[float]:
@@ -246,6 +251,7 @@ def load_csv(path: str) -> list[Quarter]:
         "quarter": "quarter", "분기": "quarter",
         "revenue": "revenue", "매출": "revenue", "매출액": "revenue",
         "operating_profit": "operating_profit", "영업이익": "operating_profit",
+        "price": "price", "주가": "price", "종가": "price", "close": "price",
     }
     quarters = []
     with open(path, newline="", encoding="utf-8-sig") as f:
@@ -264,6 +270,10 @@ def load_csv(path: str) -> list[Quarter]:
                 "(헤더는 quarter,revenue,operating_profit 또는 분기,매출,영업이익)"
             )
         for line in reader:
+            price = None
+            if "price" in colmap:
+                raw = (line[colmap["price"]] or "").replace(",", "").strip()
+                price = float(raw) if raw else None
             quarters.append(
                 Quarter(
                     label=line[colmap["quarter"]].strip(),
@@ -271,6 +281,7 @@ def load_csv(path: str) -> list[Quarter]:
                     operating_profit=float(
                         line[colmap["operating_profit"]].replace(",", "")
                     ),
+                    price=price,
                 )
             )
     return quarters
@@ -280,19 +291,37 @@ def _fmt(value: Optional[float], suffix: str = "") -> str:
     return "-" if value is None else f"{value:,.1f}{suffix}"
 
 
+def price_change_pct(prev: Quarter, curr: Quarter) -> Optional[float]:
+    """직전 분기 대비 주가 등락률(%). 주가가 없으면 None."""
+    if prev.price is None or curr.price is None or prev.price == 0:
+        return None
+    return (curr.price - prev.price) / prev.price * 100
+
+
 def render(analysis: Analysis) -> str:
+    has_price = any(q.price is not None for q in analysis.quarters)
     lines = []
     header = (
         f"{'분기':<8} {'매출':>12} {'영업이익':>12} {'전체이익률':>10} "
         f"{'Δ매출':>12} {'Δ영업이익':>12} {'증분이익률':>10}"
     )
+    if has_price:
+        header += f" {'주가':>12} {'주가등락':>8}"
     lines.append(header)
     lines.append("-" * len(header))
+
+    def price_cols(q: Quarter, change: Optional[float]) -> str:
+        if not has_price:
+            return ""
+        price = "-" if q.price is None else f"{q.price:,.0f}"
+        chg = "-" if change is None else f"{change:+.1f}%"
+        return f" {price:>13} {chg:>10}"
 
     first = analysis.quarters[0]
     lines.append(
         f"{first.label:<8} {first.revenue:>14,.1f} {first.operating_profit:>14,.1f} "
         f"{_fmt(first.operating_margin, '%'):>12} {'-':>13} {'-':>15} {'-':>13}"
+        + price_cols(first, None)
     )
     for row in analysis.rows:
         q = row.curr
@@ -300,6 +329,7 @@ def render(analysis: Analysis) -> str:
             f"{q.label:<8} {q.revenue:>14,.1f} {q.operating_profit:>14,.1f} "
             f"{_fmt(q.operating_margin, '%'):>12} {row.delta_revenue:>+13,.1f} "
             f"{row.delta_profit:>+15,.1f} {_fmt(row.incremental_margin, '%'):>13}"
+            + price_cols(q, price_change_pct(row.prev, q))
         )
 
     lines.append("")
@@ -311,16 +341,34 @@ def render(analysis: Analysis) -> str:
 
 def main(argv: Sequence[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
+    html_out = None
+    if "--html" in argv:
+        i = argv.index("--html")
+        try:
+            html_out = argv[i + 1]
+        except IndexError:
+            print("--html 뒤에 출력 파일 경로를 지정하세요.", file=sys.stderr)
+            return 2
+        del argv[i : i + 2]
     if len(argv) != 1 or argv[0] in ("-h", "--help"):
         print(
-            "사용법: python incremental_margin.py <분기실적.csv>\n"
-            "CSV 헤더: quarter,revenue,operating_profit (분기,매출,영업이익도 가능)\n"
+            "사용법: python incremental_margin.py <분기실적.csv> [--html 리포트.html]\n"
+            "CSV 헤더: quarter,revenue,operating_profit[,price]\n"
+            "          (분기,매출,영업이익[,주가]도 가능)\n"
+            "--html: 이익률·증분이익률·주가를 비교하는 테이블+차트 리포트 생성\n"
             "※ 당기순이익이 아니라 영업이익을 넣을 것.",
             file=sys.stderr,
         )
         return 2
     quarters = load_csv(argv[0])
-    print(render(analyze(quarters)))
+    analysis = analyze(quarters)
+    print(render(analysis))
+    if html_out:
+        from report import render_html
+
+        with open(html_out, "w", encoding="utf-8") as f:
+            f.write(render_html(analysis))
+        print(f"\nHTML 리포트 생성: {html_out}")
     return 0
 
 

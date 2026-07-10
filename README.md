@@ -48,11 +48,27 @@
 ## 사용법
 
 ```bash
+# 터미널 테이블 출력
 python incremental_margin.py examples/sample_quarters.csv
+
+# 이익률·증분이익률·주가를 한눈에 비교하는 HTML 리포트 (테이블 + 차트)
+python incremental_margin.py examples/sample_quarters.csv --html report.html
 ```
 
-CSV 헤더는 `quarter,revenue,operating_profit` (또는 `분기,매출,영업이익`).
-금액 단위는 자유 — 일관되기만 하면 된다. 4개 분기면 충분하다.
+CSV 헤더는 `quarter,revenue,operating_profit[,price]`
+(또는 `분기,매출,영업이익[,주가]`). 주가 열은 선택 — 있으면 테이블과
+차트에 함께 표시된다. 금액 단위는 자유 — 일관되기만 하면 된다.
+4개 분기면 충분하다.
+
+HTML 리포트 구성:
+
+- KPI 타일: 최신 전체 이익률, 증분 이익률, 증분−전체 격차, 손익분기 매출, 주가
+- 주가 패널과 이익률 패널이 같은 분기 x축으로 위아래 정렬
+  (스케일이 달라 한 축에 얹지 않는다 — 듀얼축 없음)
+- 마우스 크로스헤어: 분기에 스냅되어 주가·전체·증분 값을 툴팁 하나로 표시
+  (키보드 ←/→로도 이동 가능)
+- 시그널 목록과 전체 분기 실적표
+- 라이트/다크 모드 자동 대응, 외부 의존성 없는 단일 HTML 파일
 
 ### 주의점
 
