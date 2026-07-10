@@ -118,18 +118,21 @@ class PriceAndReportTest(unittest.TestCase):
     def test_html_report_smoke(self):
         from report import render_html
 
-        page = render_html(analyze(self._quarters()))
+        page = render_html(analyze(self._quarters()), title="테스트 종목")
         self.assertIn('id="price-chart"', page)
         self.assertIn('id="margin-chart"', page)
         self.assertIn("분기 실적표", page)
-        self.assertIn('"hasPrice": true', page)
+        self.assertIn("분기 추가", page)  # 편집 버튼
+        self.assertIn("테스트 종목", page)
+        self.assertIn('"price": 54000', page)
 
-    def test_html_report_without_price_skips_price_panel(self):
+    def test_html_report_embeds_quarters_without_price(self):
         from report import render_html
 
         page = render_html(analyze(self._quarters(with_price=False)))
-        self.assertNotIn('id="price-chart"', page)
-        self.assertIn('id="margin-chart"', page)
+        self.assertIn('"revenue": 100', page)
+        self.assertIn('"price": null', page)
+        self.assertIn('"estimate": false', page)
 
 
 SAMPLE_PASTE = """\
