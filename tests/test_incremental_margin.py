@@ -88,10 +88,11 @@ class IncrementalMarginTest(unittest.TestCase):
 class PriceAndReportTest(unittest.TestCase):
     def _quarters(self, with_price=True):
         price = [54000, 72000, 89000, 83000] if with_price else [None] * 4
+        labels = ["2025/03", "2025/06", "2025/09", "2025/12"]
         specs = [(100, 10), (150, 30), (200, 50), (250, 62.5)]
         return [
-            Quarter(f"Q{i+1}", rev, op, price=p)
-            for i, ((rev, op), p) in enumerate(zip(specs, price))
+            Quarter(label, rev, op, price=p)
+            for label, (rev, op), p in zip(labels, specs, price)
         ]
 
     def test_price_change_pct(self):
@@ -122,17 +123,28 @@ class PriceAndReportTest(unittest.TestCase):
         self.assertIn('id="price-chart"', page)
         self.assertIn('id="margin-chart"', page)
         self.assertIn("분기 실적표", page)
-        self.assertIn("분기 추가", page)  # 편집 버튼
+        self.assertIn("과거 분기", page)  # 과거 방향 추가 버튼
+        self.assertIn("최신 분기", page)
         self.assertIn("테스트 종목", page)
-        self.assertIn('"price": 54000', page)
+        # 분기별 price는 분기 말일 위치의 시계열로 변환되어 임베드된다
+        self.assertIn('["2025-03-31", 54000', page)
 
     def test_html_report_embeds_quarters_without_price(self):
         from report import render_html
 
         page = render_html(analyze(self._quarters(with_price=False)))
         self.assertIn('"revenue": 100', page)
-        self.assertIn('"price": null', page)
+        self.assertIn('"priceSeries": []', page)
         self.assertIn('"estimate": false', page)
+
+    def test_html_report_with_daily_series(self):
+        from report import render_html
+
+        series = [["2025-01-02", 50000.0], ["2025-01-03", 50500.0]]
+        page = render_html(
+            analyze(self._quarters(with_price=False)), price_series=series
+        )
+        self.assertIn('["2025-01-02", 50000.0]', page)
 
 
 SAMPLE_PASTE = """\
@@ -259,6 +271,51 @@ class PriceFetchTest(unittest.TestCase):
             )
         self.assertIsNotNone(err)
         self.assertIsNone(filled[0].price)
+
+    def test_fetch_for_quarters_returns_daily_series(self):
+        import datetime as dt
+        from unittest import mock
+
+        import price_fetch
+
+        closes = {
+            dt.date(2025, 3, 28): 54000.0,
+            dt.date(2025, 3, 31): 54500.0,
+            dt.date(2025, 4, 1): 55000.0,
+        }
+        with mock.patch.object(
+            price_fetch, "_fetch_daily_closes", return_value=closes
+        ):
+            filled, series, err = price_fetch.fetch_for_quarters(
+                [q("2025/03", 100, 10), q("2025/06", 150, 30)],
+                "298040",
+                today=dt.date(2025, 7, 10),
+            )
+        self.assertIsNone(err)
+        self.assertEqual(filled[0].price, 54500)  # 분기말 종가
+        self.assertEqual(series[0], ["2025-03-28", 54000.0])  # 날짜순 시계열
+        self.assertEqual(len(series), 3)
+
+    def test_load_price_csv_formats(self):
+        import datetime as dt
+        import os
+        import tempfile
+
+        from price_fetch import load_price_csv
+
+        content = "날짜,종가\n2025.01.02,\"50,000\"\n20250103,50500\n2025-01-06,51000\n"
+        with tempfile.NamedTemporaryFile(
+            "w", suffix=".csv", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            closes = load_price_csv(path)
+        finally:
+            os.unlink(path)
+        self.assertEqual(closes[dt.date(2025, 1, 2)], 50000)
+        self.assertEqual(closes[dt.date(2025, 1, 3)], 50500)
+        self.assertEqual(len(closes), 3)
 
 
 if __name__ == "__main__":

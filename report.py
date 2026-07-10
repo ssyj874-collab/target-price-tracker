@@ -1,20 +1,25 @@
 """이익률·증분이익률·주가 비교 인터랙티브 HTML 리포트 생성.
 
 리포트는 자체 완결형 단일 HTML이며, 분기 실적표가 그 자리에서 편집된다:
-행 추가/삭제, 매출·영업이익·주가 수정, 컨센서스(E) 체크 — 바꾸는 즉시
-차트·KPI·시그널이 재계산된다. 수정 내용은 브라우저 localStorage에
-자동 저장된다(제목 기준 키). 따라서 계산 로직은 파이썬(터미널 출력용,
-incremental_margin.py)과 템플릿 안의 JS에 같은 규칙으로 두 벌 존재한다 —
-임계값이나 판정 규칙을 바꿀 때는 양쪽을 함께 고칠 것.
+과거/최신 분기 추가, 행 삭제, 매출·영업이익 수정, 컨센서스(E) 체크 —
+바꾸는 즉시 차트·KPI·시그널이 재계산된다. 수정 내용은 브라우저
+localStorage에 자동 저장된다(제목 기준 키). 계산 로직은 파이썬(터미널
+출력용, incremental_margin.py)과 템플릿 안의 JS에 같은 규칙으로 두 벌
+존재한다 — 임계값이나 판정 규칙을 바꿀 때는 양쪽을 함께 고칠 것.
 
 차트 구성:
+- x축은 날짜(시간) 축. 분기 지표는 분기 말일 위치에 찍히고, 주가는
+  일별 종가 선그래프로 같은 타임라인에 정렬된다. 주가 시계열은
+  --fetch-price(네이버) 또는 --price-csv(일별 시세 파일)로 주입되며
+  표에서 수기 입력하지 않는다.
 - 주가와 이익률은 스케일이 달라 한 축에 얹지 않는다(듀얼축 금지).
-  같은 분기 x축을 공유하는 위(주가)/아래(이익률) 두 패널로 정렬.
-- 대신 "주가 겹쳐보기" 토글이 이익률 패널 위에 주가를 min-max 상대
-  스케일로 겹쳐 그린다 — 축 없이 모양(꺾이는 시점) 비교 전용이고,
-  정확한 값은 툴팁과 주가 패널이 담당한다.
+  위(주가)/아래(이익률) 두 패널 정렬 + "주가 겹쳐보기" 토글이 이익률
+  패널 위에 일별 주가를 min-max 상대 스케일로 겹쳐 그린다 — 축 없이
+  모양(꺾이는 시점) 비교 전용이고, 정확한 값은 툴팁·주가 패널 담당.
 - 컨센서스(E) 분기는 점선·빈 마커·배경 워시로 구분되며 추세·KPI·
   손익분기 판정에서 제외된다.
+- 분기 라벨에서 날짜를 읽지 못하면(2025/03·2025Q1 형식이 아니면)
+  등간격 x축으로 폴백하고 주가 차트는 표시하지 않는다.
 """
 
 from __future__ import annotations
@@ -23,9 +28,23 @@ import html
 import json
 
 from incremental_margin import Analysis
+from price_fetch import quarter_end
 
 
-def render_html(analysis: Analysis, title: str = "증분 영업이익률 리포트") -> str:
+def render_html(
+    analysis: Analysis,
+    title: str = "증분 영업이익률 리포트",
+    price_series: list | None = None,
+) -> str:
+    """price_series: [[ISO날짜, 종가], ...] 일별 시계열. 없으면 분기별
+    price(CSV 입력 등)를 분기 말일 위치의 성긴 시계열로 변환해 쓴다."""
+    if price_series is None:
+        price_series = []
+        for q in analysis.quarters:
+            if q.price is not None:
+                end = quarter_end(q.label)
+                if end:
+                    price_series.append([end.isoformat(), q.price])
     data = {
         "title": title,
         "quarters": [
@@ -33,11 +52,11 @@ def render_html(analysis: Analysis, title: str = "증분 영업이익률 리포�
                 "label": q.label,
                 "revenue": q.revenue,
                 "op": q.operating_profit,
-                "price": q.price,
                 "estimate": q.estimate,
             }
             for q in analysis.quarters
         ],
+        "priceSeries": price_series,
     }
     page = HTML_TEMPLATE
     page = page.replace("__TITLE__", html.escape(title))
@@ -117,7 +136,7 @@ header p { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
 .signals h2 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
 .signals ul { padding-left: 18px; display: grid; gap: 6px; }
 .signals li { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-.grid-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.grid-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .grid-head h2 { flex: 1; }
 .btn {
   font: inherit; font-size: 12px; color: var(--text-primary);
@@ -154,7 +173,7 @@ button.del:hover { color: var(--delta-bad); }
   position: fixed; pointer-events: none; z-index: 10; display: none;
   background: var(--surface-1); border: 1px solid var(--border);
   border-radius: 8px; padding: 8px 10px; font-size: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.14); min-width: 150px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14); min-width: 165px;
 }
 #tooltip .tt-title { color: var(--text-muted); margin-bottom: 4px; }
 #tooltip .tt-row { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
@@ -175,9 +194,9 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 
   <div class="tiles" id="kpis"></div>
 
-  <div id="charts" tabindex="0" aria-label="분기별 주가·이익률 차트. 좌우 화살표로 분기 이동">
+  <div id="charts" tabindex="0" aria-label="일별 주가와 분기별 이익률 차트. 좌우 화살표로 분기 이동">
     <section class="panel" id="price-panel" hidden>
-      <h2>주가</h2>
+      <h2>주가 (일별 종가)</h2>
       <div class="chart" id="price-chart"></div>
     </section>
     <section class="panel" style="margin-top:12px">
@@ -202,28 +221,35 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
   <section class="panel">
     <div class="grid-head">
       <h2>분기 실적표</h2>
-      <button class="btn" id="add-row">+ 분기 추가</button>
+      <button class="btn" id="add-past">+ 과거 분기</button>
+      <button class="btn" id="add-recent">+ 최신 분기</button>
       <button class="btn" id="reset">초기화</button>
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr>
-          <th>분기</th><th>매출</th><th>영업이익</th><th>주가</th><th>E</th>
+          <th>분기</th><th>매출</th><th>영업이익</th><th>E</th>
           <th>전체이익률</th><th>Δ매출</th><th>Δ영업이익</th><th>증분이익률</th><th></th>
         </tr></thead>
         <tbody id="grid"></tbody>
       </table>
     </div>
     <p class="hint">셀을 클릭해 바로 수정 — 차트·KPI·시그널이 즉시 재계산됩니다.
-       E = 컨센서스 추정치(추세 판정에서 제외). 수정 내용은 이 브라우저에
-       자동 저장되며, 초기화를 누르면 리포트 생성 시점 데이터로 돌아갑니다.</p>
+       "+ 과거 분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용),
+       "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다. E = 컨센서스
+       추정치(추세 판정에서 제외). 주가는 표에서 입력하지 않습니다 —
+       리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회) 또는
+       --price-csv 일별시세.csv로 일별 시계열이 심어집니다. 수정 내용은
+       이 브라우저에 자동 저장되며, 초기화를 누르면 생성 시점 데이터로
+       돌아갑니다.</p>
   </section>
 
   <footer>
     당기순이익이 아니라 영업이익 기준. 증분 영업이익률 = Δ영업이익 ÷ Δ매출 —
     새로 붙는 매출이 몇 %짜리인지를 본다. 매출 변화가 0인 분기의 증분값은
-    표시하지 않음. "주가 겹쳐보기"는 min-max 상대 스케일이라 모양(꺾이는
-    시점) 비교 전용 — 값은 툴팁과 주가 패널에서 확인.
+    표시하지 않음. 분기 지표는 분기 말일 위치에 찍힌다. "주가 겹쳐보기"는
+    min-max 상대 스케일이라 모양(꺾이는 시점) 비교 전용 — 값은 툴팁과
+    주가 패널에서 확인.
   </footer>
 </div>
 
@@ -237,6 +263,13 @@ const STORE_KEY = "ipm:" + INITIAL.title;
 const TREND_PP = 2.0, SPIKE_PP = 15.0;
 const NS = "http://www.w3.org/2000/svg";
 const W = 920, PAD = { l: 58, r: 96, t: 16, b: 30 };
+const DAY = 86400000;
+
+// 일별 주가 시계열 (리포트 생성 시 주입, 표에서 편집 불가)
+const PRICE = (INITIAL.priceSeries || [])
+  .map(([d, c]) => ({ t: Date.parse(d), c }))
+  .filter(p => isFinite(p.t) && p.c != null)
+  .sort((a, b) => a.t - b.t);
 
 // ---------- 상태 ----------
 function cloneRows(rows) { return rows.map(r => ({ ...r })); }
@@ -253,6 +286,44 @@ function saveState() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {}
 }
 
+// ---------- 분기 라벨 → 날짜 ----------
+function qEndMs(label) {
+  let y = null, mo = null, m;
+  if ((m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || ""))) { y = +m[1]; mo = +m[2]; }
+  else if ((m = /^(\d{4})Q([1-4])$/i.exec(label || ""))) { y = +m[1]; mo = +m[2] * 3; }
+  if (y == null || mo < 1 || mo > 12) return null;
+  return Date.UTC(y, mo, 0); // 해당 월의 말일
+}
+function dateStr(t) { return new Date(t).toISOString().slice(0, 10); }
+function prevLabel(label) {
+  let m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
+  if (m) {
+    let yy = +m[1], mm = +m[2] - 3;
+    if (mm < 1) { mm += 12; yy -= 1; }
+    return `${yy}/${String(mm).padStart(2, "0")}`;
+  }
+  m = /^(\d{4})Q([1-4])$/i.exec(label || "");
+  if (m) {
+    const q = +m[2];
+    return q === 1 ? `${+m[1] - 1}Q4` : `${m[1]}Q${q - 1}`;
+  }
+  return "";
+}
+function nextLabel(label) {
+  let m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
+  if (m) {
+    let yy = +m[1], mm = +m[2] + 3;
+    if (mm > 12) { mm -= 12; yy += 1; }
+    return `${yy}/${String(mm).padStart(2, "0")}`;
+  }
+  m = /^(\d{4})Q([1-4])$/i.exec(label || "");
+  if (m) {
+    const q = +m[2];
+    return q === 4 ? `${+m[1] + 1}Q1` : `${m[1]}Q${q + 1}`;
+  }
+  return "";
+}
+
 // ---------- 계산 (incremental_margin.py의 규칙을 그대로 옮김) ----------
 function validRows() { return state.filter(r => r.revenue != null && r.op != null); }
 
@@ -267,15 +338,12 @@ function computeAll() {
     dRev.push(dr); dOp.push(dp);
     incremental.push(dr !== 0 ? dp / dr * 100 : null);
   }
-  // 실적치만으로 판정 (실적이 2개 미만이면 전체 사용)
   const actualIdx = [];
   v.forEach((q, i) => { if (!q.estimate) actualIdx.push(i); });
   const basisIdx = actualIdx.length >= 2 ? actualIdx : v.map((_, i) => i);
   const basisIncs = [];
   for (let k = 1; k < basisIdx.length; k++) {
     const i = basisIdx[k], j = basisIdx[k - 1];
-    // 판정용 증분은 연속 실적 분기 기준이지만, 표시는 전체 시퀀스 기준을
-    // 쓰므로 연속(j == i-1)일 때만 위 배열을 재사용한다.
     const dr = v[i].revenue - v[j].revenue, dp = v[i].op - v[j].op;
     if (dr > 0) basisIncs.push(dp / dr * 100);
   }
@@ -284,7 +352,6 @@ function computeAll() {
     const diff = basisIncs[basisIncs.length - 1] - basisIncs[basisIncs.length - 2];
     trend = diff > TREND_PP ? "상승" : diff < -TREND_PP ? "하락" : "정체";
   }
-  // 손익분기: basis 점들의 최소제곱 직선
   let breakEven = null;
   if (basisIdx.length >= 2) {
     const xs = basisIdx.map(i => v[i].revenue), ys = basisIdx.map(i => v[i].op);
@@ -297,7 +364,6 @@ function computeAll() {
       if (slope > 0) breakEven = -(my - slope * mx) / slope;
     }
   }
-  // 증분−전체 격차 (마지막 실적 구간이 매출 증가일 때만)
   let gap = null;
   const bLast = basisIdx[basisIdx.length - 1], bPrev = basisIdx[basisIdx.length - 2];
   if (bPrev != null) {
@@ -305,8 +371,13 @@ function computeAll() {
     const dp = v[bLast].op - v[bPrev].op;
     if (dr > 0 && overall[bLast] != null) gap = dp / dr * 100 - overall[bLast];
   }
+  // 날짜 축: 라벨이 전부 해석되고 단조 증가일 때만
+  let dates = v.map(q => qEndMs(q.label));
+  const datesOK = n >= 2 && dates.every(d => d != null)
+    && dates.every((d, i) => !i || d > dates[i - 1]);
+  if (!datesOK) dates = v.map((_, i) => i);
   return { v, n, overall, incremental, dRev, dOp, basisIdx, basisIncs,
-           trend, breakEven, gap, bLast, bPrev };
+           trend, breakEven, gap, bLast, bPrev, dates, datesOK };
 }
 
 function buildSignals(c) {
@@ -328,7 +399,6 @@ function buildSignals(c) {
     else if (g < -0.5) s.push(`증분−전체 이익률 격차 ${g.toFixed(1)}%p — 증분이 평균 밑으로 내려왔으므로 전체 영업이익률은 하락 국면.`);
     else s.push(`증분−전체 이익률 격차 ${(g >= 0 ? "+" : "") + g.toFixed(1)}%p — 증분이 평균과 만나는 자리, 즉 전체 영업이익률의 고점 부근.`);
   }
-  // 컨센서스가 반영하는 증분 이익률
   const est = [];
   for (let i = 1; i < c.n; i++) {
     if (c.v[i].estimate && c.dRev[i] > 0 && c.incremental[i] != null)
@@ -392,6 +462,15 @@ function tile(parent, label, value, delta, goodWhenUp, suffix) {
   }
 }
 
+function closeAtOrBefore(t, maxGapDays) {
+  let best = null;
+  for (const p of PRICE) {
+    if (p.t <= t) best = p; else break;
+  }
+  if (best && maxGapDays != null && t - best.t > maxGapDays * DAY) return null;
+  return best;
+}
+
 function renderKpis(c) {
   const box = document.getElementById("kpis");
   box.textContent = "";
@@ -408,35 +487,38 @@ function renderKpis(c) {
   tile(box, incLabel, fmt(incNow, 1) + "%", incDelta, true, "%p");
   tile(box, "증분−전체 격차", c.gap == null ? "–" : fmt(c.gap, 1) + "%p");
   tile(box, "손익분기 매출 추정", fmt(c.breakEven, 1));
-  if (latest.price != null) {
-    const chg = prev.price ? (latest.price - prev.price) / prev.price * 100 : null;
-    tile(box, "주가", fmt(latest.price, 0), chg, true, "%");
+  if (PRICE.length && c.datesOK) {
+    const last = PRICE[PRICE.length - 1];
+    const prevEnd = closeAtOrBefore(qEndMs(prev.label), 15);
+    const chg = prevEnd ? (last.c - prevEnd.c) / prevEnd.c * 100 : null;
+    tile(box, `주가 (${dateStr(last.t)} 종가)`, fmt(last.c, 0), chg, true, "%");
   }
 }
 
 // ---------- 차트 ----------
-let panels = [], ttSeries = [], chartLabels = [], chartEst = [];
+let panels = [], chartCtx = null;
 
-function drawPanel(containerId, series, labels, est, opts) {
+function drawPanel(containerId, opts) {
   const container = document.getElementById(containerId);
   container.textContent = "";
-  const H = opts.height, n = labels.length;
-  if (n < 2) return null;
-  const all = series.flatMap(s => s.values).filter(x => x != null);
-  if (!all.length) return null;
-  let lo = Math.min(...all), hi = Math.max(...all);
+  const { H, xOf, dates, est, labels, washX } = opts;
+  const n = labels.length;
+
+  const pool = [];
+  (opts.qSeries || []).forEach(s => s.values.forEach(v => { if (v != null) pool.push(v); }));
+  (opts.lines || []).forEach(l => l.points.forEach(p => pool.push(p.c)));
+  if (!pool.length) return null;
+  let lo = Math.min(...pool), hi = Math.max(...pool);
   if (opts.includeZero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
   const padY = (hi - lo || 1) * 0.08;
   lo -= padY; hi += padY;
-  const x = i => PAD.l + (W - PAD.l - PAD.r) * i / (n - 1);
   const y = v => PAD.t + (H - PAD.t - PAD.b) * (1 - (v - lo) / (hi - lo));
+
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
   container.appendChild(svg);
 
-  const firstEst = est.indexOf(true);
-  if (firstEst >= 0) {
-    const startX = firstEst > 0 ? (x(firstEst - 1) + x(firstEst)) / 2 : PAD.l;
-    el("rect", { x: startX, y: PAD.t, width: W - PAD.r - startX,
+  if (washX != null) {
+    el("rect", { x: washX, y: PAD.t, width: Math.max(0, W - PAD.r - washX),
       height: H - PAD.t - PAD.b, fill: "var(--text-muted)", "fill-opacity": 0.07 }, svg);
     const tag = el("text", { x: W - PAD.r - 6, y: PAD.t + 12, "text-anchor": "end",
       "font-size": 10, fill: "var(--text-muted)" }, svg);
@@ -454,55 +536,58 @@ function drawPanel(containerId, series, labels, est, opts) {
   labels.forEach((label, i) => {
     if (i % stride !== 0 && i !== n - 1) return;
     if (i !== n - 1 && n - 1 - i < stride && stride > 1) return;
-    const lbl = el("text", { x: x(i), y: H - 8, "text-anchor": "middle",
+    const lbl = el("text", { x: xOf(dates[i]), y: H - 8, "text-anchor": "middle",
       "font-size": 11, fill: "var(--text-muted)" }, svg);
     lbl.textContent = label + (est[i] ? "(E)" : "");
   });
 
   // 주가 오버레이 (상대 스케일 — 모양 비교 전용, 자체 축 없음)
-  if (opts.overlay) {
-    const pv = opts.overlay.filter(x => x != null);
-    if (pv.length >= 2) {
-      const pLo = Math.min(...pv), pHi = Math.max(...pv);
-      const py = p => pHi === pLo ? (y(lo) + y(hi)) / 2
-        : y(lo) + (y(hi) - y(lo)) * (p - pLo) / (pHi - pLo);
-      let dSolid = "", dDash = "", prev = null;
-      opts.overlay.forEach((p, i) => {
-        if (p == null) { prev = null; return; }
-        if (prev) {
-          const seg = "M" + x(prev.i).toFixed(1) + " " + py(prev.p).toFixed(1)
-            + "L" + x(i).toFixed(1) + " " + py(p).toFixed(1);
-          if (est[i] || est[prev.i]) dDash += seg; else dSolid += seg;
-        }
-        prev = { i, p };
-      });
-      const ob = { fill: "none", stroke: "var(--series-price)", "stroke-width": 2,
-        opacity: 0.55, "stroke-linejoin": "round", "stroke-linecap": "round" };
-      if (dSolid) el("path", { ...ob, d: dSolid }, svg);
-      if (dDash) el("path", { ...ob, d: dDash, "stroke-dasharray": "5 5",
-        "stroke-linecap": "butt" }, svg);
-      for (let i = opts.overlay.length - 1; i >= 0; i--) {
-        if (opts.overlay[i] != null) {
-          const lbl = el("text", { x: x(i) + 8, y: py(opts.overlay[i]) + 4,
-            "font-size": 10, fill: "var(--text-muted)" }, svg);
-          lbl.textContent = "주가(상대)";
-          break;
-        }
-      }
-    }
+  if (opts.overlay && opts.overlay.length >= 2) {
+    const cs = opts.overlay.map(p => p.c);
+    const pLo = Math.min(...cs), pHi = Math.max(...cs);
+    const py = p => pHi === pLo ? (y(lo) + y(hi)) / 2
+      : y(lo) + (y(hi) - y(lo)) * (p - pLo) / (pHi - pLo);
+    let d = "";
+    opts.overlay.forEach((p, i) => {
+      d += (i ? "L" : "M") + xOf(p.t).toFixed(1) + " " + py(p.c).toFixed(1);
+    });
+    el("path", { d, fill: "none", stroke: "var(--series-price)",
+      "stroke-width": 2, opacity: 0.55,
+      "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    const lastP = opts.overlay[opts.overlay.length - 1];
+    const lbl = el("text", { x: Math.min(xOf(lastP.t) + 8, W - 4),
+      y: py(lastP.c) + 4, "font-size": 10, fill: "var(--text-muted)" }, svg);
+    lbl.textContent = "주가(상대)";
+  }
+
+  // 일별 라인 시리즈 (주가 패널)
+  for (const line of opts.lines || []) {
+    let d = "";
+    line.points.forEach((p, i) => {
+      d += (i ? "L" : "M") + xOf(p.t).toFixed(1) + " " + y(p.c).toFixed(1);
+    });
+    el("path", { d, fill: "none", stroke: `var(${line.colorVar})`,
+      "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    const lastP = line.points[line.points.length - 1];
+    const t = el("text", { x: Math.min(xOf(lastP.t) + 8, W - PAD.r + 10),
+      y: y(lastP.c) + 4, "font-size": 12, "font-weight": 600,
+      fill: "var(--text-primary)",
+      style: "font-variant-numeric: tabular-nums" }, svg);
+    t.textContent = fmt(lastP.c, line.digits);
   }
 
   const cross = el("line", { y1: PAD.t, y2: H - PAD.b,
     stroke: "var(--baseline)", "stroke-width": 1, visibility: "hidden" }, svg);
 
+  // 분기 지표 시리즈 (마커·점선·빈 마커)
   const endLabels = [];
-  for (const s of series) {
+  for (const s of opts.qSeries || []) {
     let solid = "", dashed = "", prev = null;
     s.values.forEach((val, i) => {
       if (val == null) { prev = null; return; }
       if (prev) {
-        const seg = "M" + x(prev.i).toFixed(1) + " " + y(prev.v).toFixed(1)
-          + "L" + x(i).toFixed(1) + " " + y(val).toFixed(1);
+        const seg = "M" + xOf(dates[prev.i]).toFixed(1) + " " + y(prev.v).toFixed(1)
+          + "L" + xOf(dates[i]).toFixed(1) + " " + y(val).toFixed(1);
         if (est[i] || est[prev.i]) dashed += seg; else solid += seg;
       }
       prev = { i, v: val };
@@ -514,7 +599,7 @@ function drawPanel(containerId, series, labels, est, opts) {
       "stroke-linecap": "butt" }, svg);
     s.values.forEach((val, i) => {
       if (val == null) return;
-      el("circle", { cx: x(i), cy: y(val), r: 4,
+      el("circle", { cx: xOf(dates[i]), cy: y(val), r: 4,
         fill: est[i] ? "var(--surface-1)" : `var(${s.colorVar})`,
         stroke: est[i] ? `var(${s.colorVar})` : "var(--surface-1)",
         "stroke-width": 2 }, svg);
@@ -535,39 +620,52 @@ function drawPanel(containerId, series, labels, est, opts) {
       style: "font-variant-numeric: tabular-nums" }, svg);
     t.textContent = l.text;
   });
-  return { svg, x, cross };
+  return { svg, cross };
 }
 
 function renderCharts(c) {
-  chartLabels = c.v.map(q => q.label);
-  chartEst = c.v.map(q => !!q.estimate);
-  const price = c.v.map(q => q.price);
-  const hasPrice = price.some(p => p != null);
-  panels = [];
+  const labels = c.v.map(q => q.label);
+  const est = c.v.map(q => !!q.estimate);
+  const hasPrice = c.datesOK && PRICE.length >= 2;
+
+  // 공용 시간 도메인 (양쪽 패널 x 정렬)
+  let t0 = c.dates[0], t1 = c.dates[c.n - 1];
+  if (hasPrice) {
+    t0 = Math.min(t0, PRICE[0].t);
+    t1 = Math.max(t1, PRICE[PRICE.length - 1].t);
+  }
+  const span = t1 - t0 || 1;
+  t0 -= span * 0.03; t1 += span * 0.03;
+  const xOf = t => PAD.l + (W - PAD.l - PAD.r) * (t - t0) / (t1 - t0);
+
+  const firstEst = est.indexOf(true);
+  const washX = firstEst < 0 ? null
+    : xOf(firstEst > 0 ? (c.dates[firstEst - 1] + c.dates[firstEst]) / 2 : c.dates[firstEst]);
+
   document.getElementById("price-panel").hidden = !hasPrice;
   document.getElementById("overlay-label").hidden = !hasPrice;
   const overlayOn = hasPrice && document.getElementById("overlay-toggle").checked;
   document.getElementById("overlay-key").hidden = !overlayOn;
+
+  panels = [];
+  const common = { xOf, dates: c.dates, est, labels, washX };
   if (hasPrice) {
-    const p = drawPanel("price-chart", [
-      { values: price, colorVar: "--series-price", digits: 0 },
-    ], chartLabels, chartEst, { height: 230 });
+    const p = drawPanel("price-chart", { ...common, H: 240,
+      lines: [{ points: PRICE, colorVar: "--series-price", digits: 0 }] });
     if (p) panels.push(p);
   } else {
     document.getElementById("price-chart").textContent = "";
   }
-  const m = drawPanel("margin-chart", [
-    { values: c.overall, colorVar: "--series-overall", digits: 1, suffix: "%" },
-    { values: c.incremental, colorVar: "--series-inc", digits: 1, suffix: "%" },
-  ], chartLabels, chartEst, { height: 280, includeZero: true, axisSuffix: "%",
-    overlay: overlayOn ? price : null });
+  const m = drawPanel("margin-chart", { ...common, H: 280,
+    includeZero: true, axisSuffix: "%",
+    qSeries: [
+      { values: c.overall, colorVar: "--series-overall", digits: 1, suffix: "%" },
+      { values: c.incremental, colorVar: "--series-inc", digits: 1, suffix: "%" },
+    ],
+    overlay: overlayOn ? PRICE : null });
   if (m) panels.push(m);
 
-  ttSeries = [];
-  if (hasPrice) ttSeries.push({ values: price, colorVar: "--series-price", name: "주가", digits: 0, suffix: "" });
-  ttSeries.push(
-    { values: c.overall, colorVar: "--series-overall", name: "전체 이익률", digits: 1, suffix: "%" },
-    { values: c.incremental, colorVar: "--series-inc", name: "증분 이익률", digits: 1, suffix: "%" });
+  chartCtx = { c, labels, est, hasPrice, t0, t1, xOf };
 }
 
 // ---------- 시그널 ----------
@@ -601,21 +699,6 @@ function numInput(row, key, refreshFn) {
   return inp;
 }
 
-function nextLabel(prev) {
-  let m = /^(\d{4})[./\-](\d{1,2})$/.exec(prev || "");
-  if (m) {
-    let yy = +m[1], mm = +m[2] + 3;
-    if (mm > 12) { mm -= 12; yy += 1; }
-    return `${yy}/${String(mm).padStart(2, "0")}`;
-  }
-  m = /^(\d{4})Q([1-4])$/i.exec(prev || "");
-  if (m) {
-    const q = +m[2];
-    return q === 4 ? `${+m[1] + 1}Q1` : `${m[1]}Q${q + 1}`;
-  }
-  return "";
-}
-
 function renderTable() {
   const tbody = document.getElementById("grid");
   tbody.textContent = "";
@@ -627,7 +710,7 @@ function renderTable() {
     lab.addEventListener("input", () => { row.label = lab.value.trim(); refresh(false); });
     tdL.appendChild(lab); tr.appendChild(tdL);
 
-    for (const key of ["revenue", "op", "price"]) {
+    for (const key of ["revenue", "op"]) {
       const td = document.createElement("td");
       td.className = "num";
       td.appendChild(numInput(row, key, () => refresh(false)));
@@ -659,7 +742,6 @@ function renderTable() {
 
 function updateDerived() {
   const c = computeAll();
-  // state 행 → valid 인덱스 매핑
   let vi = -1;
   state.forEach((row, ri) => {
     const ok = row.revenue != null && row.op != null;
@@ -686,10 +768,18 @@ function refresh(rebuildTable) {
   saveState();
 }
 
-document.getElementById("add-row").addEventListener("click", () => {
+document.getElementById("add-past").addEventListener("click", () => {
+  const first = state[0];
+  state.unshift({ label: prevLabel(first && first.label), revenue: null, op: null,
+    estimate: false });
+  refresh(true);
+  const inp = document.querySelector("#grid tr td input");
+  if (inp) inp.focus();
+});
+document.getElementById("add-recent").addEventListener("click", () => {
   const last = state[state.length - 1];
   state.push({ label: nextLabel(last && last.label), revenue: null, op: null,
-    price: null, estimate: false });
+    estimate: false });
   refresh(true);
   const rows = document.querySelectorAll("#grid tr");
   const inp = rows[rows.length - 1].querySelector("input");
@@ -706,30 +796,59 @@ document.getElementById("overlay-toggle").addEventListener("change", () => refre
 const tooltip = document.getElementById("tooltip");
 const chartsBox = document.getElementById("charts");
 
-function showIndex(i, clientX, clientY) {
-  const n = chartLabels.length;
-  if (!n || !panels.length) return;
-  i = Math.max(0, Math.min(n - 1, i));
+function nearestQuarter(t) {
+  const { c } = chartCtx;
+  let best = 0, bd = Infinity;
+  c.dates.forEach((d, i) => {
+    const dist = Math.abs(d - t);
+    if (dist < bd) { bd = dist; best = i; }
+  });
+  return best;
+}
+
+function showAt(t, clientX, clientY) {
+  if (!chartCtx || !panels.length || !chartCtx.c.n) return;
+  const { c, labels, est, hasPrice, xOf } = chartCtx;
+  // 스냅: 주가가 있으면 가장 가까운 거래일, 없으면 가장 가까운 분기
+  let snapT = t, price = null;
+  if (hasPrice) {
+    let best = PRICE[0], bd = Infinity;
+    for (const p of PRICE) {
+      const d = Math.abs(p.t - t);
+      if (d < bd) { bd = d; best = p; }
+    }
+    snapT = best.t; price = best.c;
+  } else {
+    snapT = c.dates[nearestQuarter(t)];
+  }
+  const qi = nearestQuarter(snapT);
+  const px = xOf(snapT);
   for (const p of panels) {
-    const px = p.x(i);
     p.cross.setAttribute("x1", px);
     p.cross.setAttribute("x2", px);
     p.cross.setAttribute("visibility", "visible");
   }
   tooltip.textContent = "";
-  div("tt-title", tooltip, chartLabels[i] + (chartEst[i] ? " (E · 컨센서스)" : ""));
-  for (const s of ttSeries) {
+  const titleText = (hasPrice && c.datesOK ? dateStr(snapT) + " · " : "")
+    + labels[qi] + (est[qi] ? " (E · 컨센서스)" : "");
+  div("tt-title", tooltip, titleText);
+  const rows = [];
+  if (price != null) rows.push({ colorVar: "--series-price", name: "주가", val: fmt(price, 0) });
+  rows.push(
+    { colorVar: "--series-overall", name: "전체 이익률", val: fmt(c.overall[qi], 1) + "%" },
+    { colorVar: "--series-inc", name: "증분 이익률", val: fmt(c.incremental[qi], 1) + "%" });
+  for (const r of rows) {
     const row = div("tt-row", tooltip);
     const key = document.createElement("span");
     key.className = "tt-key";
-    key.style.background = `var(${s.colorVar})`;
+    key.style.background = `var(${r.colorVar})`;
     row.appendChild(key);
     const val = document.createElement("span");
     val.className = "tt-val";
-    val.textContent = fmt(s.values[i], s.digits) + s.suffix;
+    val.textContent = r.val;
     const name = document.createElement("span");
     name.className = "tt-name";
-    name.textContent = s.name;
+    name.textContent = r.name;
     row.append(val, name);
   }
   tooltip.style.display = "block";
@@ -746,23 +865,24 @@ function hideTip() {
 }
 let focusIndex = -1;
 chartsBox.addEventListener("pointermove", e => {
-  if (!panels.length) return;
+  if (!panels.length || !chartCtx) return;
   const rect = panels[0].svg.getBoundingClientRect();
   const relX = (e.clientX - rect.left) / rect.width * W;
-  const n = chartLabels.length;
-  const step = (W - PAD.l - PAD.r) / Math.max(1, n - 1);
-  showIndex(Math.round((relX - PAD.l) / step), e.clientX, e.clientY);
+  const { t0, t1 } = chartCtx;
+  const t = t0 + (relX - PAD.l) / (W - PAD.l - PAD.r) * (t1 - t0);
+  showAt(t, e.clientX, e.clientY);
 });
 chartsBox.addEventListener("pointerleave", hideTip);
 chartsBox.addEventListener("keydown", e => {
-  const n = chartLabels.length;
+  if (!chartCtx) return;
+  const n = chartCtx.c.n;
   if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
     e.preventDefault();
     if (focusIndex < 0) focusIndex = n - 1;
     else focusIndex = e.key === "ArrowRight"
       ? Math.min(n - 1, focusIndex + 1) : Math.max(0, focusIndex - 1);
     const rect = chartsBox.getBoundingClientRect();
-    showIndex(focusIndex, rect.left + 80, rect.top + 60);
+    showAt(chartCtx.c.dates[focusIndex], rect.left + 80, rect.top + 60);
   } else if (e.key === "Escape") { focusIndex = -1; hideTip(); }
 });
 chartsBox.addEventListener("blur", () => { focusIndex = -1; hideTip(); });

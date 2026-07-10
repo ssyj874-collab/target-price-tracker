@@ -507,10 +507,11 @@ USAGE = """사용법: python incremental_margin.py <입력파일 | -> [옵션]
      (E) 분기는 컨센서스로 표시되고 추세 판정에서 제외.
 
 옵션:
-  --html 파일.html       테이블+차트 HTML 리포트 생성
-  --title "종목명"       리포트 제목
-  --fetch-price 005930   네이버 금융에서 분기말 종가를 받아 주가 채움
-                         (실적 분기만, 네트워크 필요)
+  --html 파일.html        테이블+차트 HTML 리포트 생성
+  --title "종목명"        리포트 제목
+  --fetch-price 298040    네이버 금융에서 일별 종가 시계열을 받아
+                          리포트에 일별 주가 선그래프로 표시 (네트워크 필요)
+  --price-csv 시세.csv    일별 시세 파일 사용 (날짜,종가 — API 대신)
 
 ※ 당기순이익이 아니라 영업이익을 넣을 것."""
 
@@ -532,6 +533,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     html_out = take_option("--html")
     title = take_option("--title")
     price_code = take_option("--fetch-price")
+    price_csv = take_option("--price-csv")
 
     if len(argv) != 1 or argv[0] in ("-h", "--help"):
         print(USAGE, file=sys.stderr)
@@ -542,12 +544,23 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("파싱된 분기가 없습니다. 입력 형식을 확인하세요.", file=sys.stderr)
         return 1
 
-    if price_code:
-        from price_fetch import fill_prices
+    price_series = None
+    if price_csv:
+        from price_fetch import closes_to_series, fill_quarter_prices, load_price_csv
 
-        quarters, failures = fill_prices(quarters, price_code)
-        if failures:
-            print(f"주가 조회 실패: {failures}", file=sys.stderr)
+        closes = load_price_csv(price_csv)
+        if closes:
+            quarters = fill_quarter_prices(quarters, closes)
+            price_series = closes_to_series(closes)
+        else:
+            print(f"주가 CSV에서 데이터를 읽지 못함: {price_csv}", file=sys.stderr)
+    elif price_code:
+        from price_fetch import fetch_for_quarters
+
+        quarters, price_series, failure = fetch_for_quarters(quarters, price_code)
+        if failure:
+            print(f"주가 조회 실패: {failure}", file=sys.stderr)
+            price_series = None
 
     analysis = analyze(quarters)
     print(render(analysis))
@@ -556,7 +569,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         kwargs = {"title": title} if title else {}
         with open(html_out, "w", encoding="utf-8") as f:
-            f.write(render_html(analysis, **kwargs))
+            f.write(render_html(analysis, price_series=price_series, **kwargs))
         print(f"\nHTML 리포트 생성: {html_out}")
     return 0
 

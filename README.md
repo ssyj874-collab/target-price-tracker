@@ -58,8 +58,11 @@ python incremental_margin.py examples/sample_quarters.csv --html report.html
 python incremental_margin.py examples/sample_paste.txt --html report.html --title "종목명"
 python incremental_margin.py - --html report.html   # 붙여넣고 Ctrl-D
 
-# 종목코드로 분기말 종가를 자동으로 받아 주가 채우기 (네이버 금융, 키 불필요)
-python incremental_margin.py examples/sample_paste.txt --fetch-price 005930 --html report.html
+# 종목코드로 일별 종가 시계열을 받아 주가 선그래프 표시 (네이버 금융, 키 불필요)
+python incremental_margin.py examples/sample_paste.txt --fetch-price 298040 --html report.html
+
+# API 대신 일별 시세 CSV(날짜,종가) 사용
+python incremental_margin.py examples/sample_paste.txt --price-csv daily.csv --html report.html
 ```
 
 입력 형식은 자동 감지되며 두 가지를 받는다. **기간 제한 없음** —
@@ -83,20 +86,28 @@ python incremental_margin.py examples/sample_paste.txt --fetch-price 005930 --ht
 
 HTML 리포트 구성:
 
-- KPI 타일: 최신 전체 이익률, 증분 이익률, 증분−전체 격차, 손익분기 매출, 주가
-- 주가 패널과 이익률 패널이 같은 분기 x축으로 위아래 정렬
-  (스케일이 달라 한 축에 얹지 않는다 — 듀얼축 없음)
-- **주가 겹쳐보기 토글**: 이익률 패널 위에 주가를 min-max 상대 스케일로
-  오버레이 — 증분이 꺾이는 분기와 주가가 꺾이는 분기를 모양으로 비교.
-  축이 없는 모양 비교 전용이고 정확한 값은 툴팁·주가 패널에서 확인
-- **분기 실적표 직접 편집**: `+ 분기 추가` 버튼(다음 분기 라벨 자동 제안),
-  행 삭제, 매출·영업이익·주가 수정, 컨센서스(E) 체크 — 바꾸는 즉시
-  차트·KPI·시그널이 재계산된다. 수정 내용은 브라우저에 자동 저장
-  (localStorage), `초기화`로 생성 시점 데이터 복귀
-- 마우스 크로스헤어: 분기에 스냅되어 주가·전체·증분 값을 툴팁 하나로 표시
-  (키보드 ←/→로도 이동 가능)
+- x축은 **날짜(시간) 축**: 분기 지표는 분기 말일 위치에 찍히고, 주가는
+  **일별 종가 선그래프**로 같은 타임라인에 정렬된다
+- KPI 타일: 최신 전체 이익률, 증분 이익률, 증분−전체 격차, 손익분기 매출,
+  최근 종가(직전 분기말 대비 등락)
+- 주가 패널과 이익률 패널이 위아래 정렬 (스케일이 달라 한 축에 얹지
+  않는다 — 듀얼축 없음)
+- **주가 겹쳐보기 토글**: 이익률 패널 위에 일별 주가를 min-max 상대
+  스케일로 오버레이 — 증분이 꺾이는 분기와 주가가 꺾이는 시점을 모양으로
+  비교. 축이 없는 모양 비교 전용이고 정확한 값은 툴팁·주가 패널에서 확인
+- **분기 실적표 직접 편집**: `+ 과거 분기`(표 맨 위에 이전 분기 —
+  다트에서 긁은 옛 실적 입력용), `+ 최신 분기`(맨 아래에 다음 분기),
+  행 삭제, 매출·영업이익 수정, 컨센서스(E) 체크 — 바꾸는 즉시
+  차트·KPI·시그널이 재계산된다. 분기 라벨은 자동 제안(2025/03 앞은
+  2024/12). 수정 내용은 브라우저에 자동 저장(localStorage), `초기화`로
+  생성 시점 데이터 복귀. 주가는 표에서 입력하지 않는다 — `--fetch-price`
+  또는 `--price-csv`로 일별 시계열이 심어진다
+- 마우스 크로스헤어: 거래일에 스냅되어 날짜·주가와 해당 분기의 전체·증분
+  이익률을 툴팁 하나로 표시 (키보드 ←/→로 분기 이동)
 - 시그널 목록: 추세·격차·손익분기·컨센서스 비교
 - 라이트/다크 모드 자동 대응, 외부 의존성 없는 단일 HTML 파일
+- 분기 라벨이 날짜로 해석되지 않으면(2025/03·2025Q1 형식이 아니면)
+  등간격 x축으로 폴백하고 주가 차트는 표시하지 않는다
 
 리포트의 계산 로직은 `incremental_margin.py`(터미널 출력)와 템플릿 안의
 JS(편집 시 재계산)에 같은 규칙으로 두 벌 존재한다 — 임계값·판정 규칙을
