@@ -31,16 +31,25 @@ _ENDPOINT = "https://api.finance.naver.com/siseJson.naver"
 _HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 _LABEL_RE = re.compile(r"^(\d{4})(?:[./\-](\d{1,2})|Q([1-4]))$")
+_LABEL_KR = re.compile(r"^(\d{2,4})\.([1-4])분기$")
 
 
 def quarter_end(label: str) -> Optional[dt.date]:
-    """분기 라벨 → 분기 말일. 2025/03, 2025-3, 2025Q1 모두 허용.
+    """분기 라벨 → 분기 말일. 23.1분기, 2025.1분기, 2025/03, 2025Q1 허용.
 
-    FnGuide식 라벨(2025/03)은 그 달이 분기 마지막 달이라는 뜻이므로
-    해당 월의 말일을 쓴다. 달이 3/6/9/12가 아니어도(변칙 결산) 그대로
-    그 달의 말일로 처리한다.
+    2자리 연도는 2000년대로 본다. FnGuide식 라벨(2025/03)은 그 달이 분기
+    마지막 달이라는 뜻이므로 해당 월의 말일을 쓴다. 달이 3/6/9/12가
+    아니어도(변칙 결산) 그대로 그 달의 말일로 처리한다.
     """
-    m = _LABEL_RE.match(label.strip())
+    label = label.strip()
+    m = _LABEL_KR.match(label)
+    if m:
+        year = int(m.group(1))
+        if year < 100:
+            year += 2000
+        month = int(m.group(2)) * 3
+        return dt.date(year, month, calendar.monthrange(year, month)[1])
+    m = _LABEL_RE.match(label)
     if not m:
         return None
     year = int(m.group(1))

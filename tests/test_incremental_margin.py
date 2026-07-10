@@ -269,7 +269,22 @@ class PriceFetchTest(unittest.TestCase):
         self.assertEqual(quarter_end("2025/03"), dt.date(2025, 3, 31))
         self.assertEqual(quarter_end("2025Q2"), dt.date(2025, 6, 30))
         self.assertEqual(quarter_end("2025-12"), dt.date(2025, 12, 31))
+        self.assertEqual(quarter_end("23.1분기"), dt.date(2023, 3, 31))
+        self.assertEqual(quarter_end("2024.4분기"), dt.date(2024, 12, 31))
         self.assertIsNone(quarter_end("이상한라벨"))
+
+    def test_korean_quarter_labels_in_paste(self):
+        from incremental_margin import parse_paste
+
+        text = (
+            "\t23.1분기\t23.2분기\t23.3분기(E)\n"
+            "매출액\t846,470\t1,122,657\t1,039,434\n"
+            "영업이익\t14,104\t85,739\t94,550\n"
+        )
+        quarters = parse_paste(text)
+        self.assertEqual([q.label for q in quarters],
+                         ["23.1분기", "23.2분기", "23.3분기"])
+        self.assertTrue(quarters[2].estimate)
 
     def test_fill_prices_uses_last_close_before_quarter_end(self):
         import datetime as dt

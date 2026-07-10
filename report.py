@@ -11,14 +11,13 @@
   (이름 기준 id)의 주가 시계열은 새 임베드로 갱신되고, 분기 데이터는
   사용자 수정본이 유지된다(초기화 버튼으로 임베드 데이터 복귀).
 
-주가는 일별 종가 시계열로 리포트 생성 시 주입된다(--fetch-price /
---price-csv / watchlist.py). 표에서 수기 입력하지 않는다. 브라우저에서
-추가한 종목은 주가 없이 이익률만 보이며, CLI로 재생성하면 주가가 붙는다.
+주가 그래프는 없다(사용자 요청으로 제거). 주가 시계열(--fetch-price /
+--price-csv / watchlist.py)이 주입되어 있으면 KPI의 '최근 종가' 타일에만
+쓰인다. 분기 라벨은 "23.1분기" 형식이 기본이고 2025/03·2025Q1도 허용.
 
 계산 로직은 파이썬(incremental_margin.py)과 템플릿 JS에 같은 규칙으로
 두 벌 존재한다 — 임계값·판정 규칙을 바꿀 때 양쪽을 함께 고칠 것.
-차트 규칙(날짜 축, 듀얼축 금지, 컨센서스 점선, 상대 스케일 오버레이)은
-이전과 동일하다.
+차트 규칙(날짜 축, 컨센서스 점선·빈 마커·워시)은 이전과 동일하다.
 """
 
 from __future__ import annotations
@@ -261,16 +260,12 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 
   <div class="tiles" id="kpis"></div>
 
-  <div id="charts" tabindex="0" aria-label="분기별 이익률 차트 (주가 오버레이 포함). 좌우 화살표로 분기 이동">
+  <div id="charts" tabindex="0" aria-label="분기별 이익률 차트. 좌우 화살표로 분기 이동">
     <section class="panel">
       <h2>영업이익률 vs 증분 영업이익률</h2>
       <div class="legend-row">
         <span><span class="key" style="background:var(--series-overall)"></span>전체 영업이익률</span>
         <span><span class="key" style="background:var(--series-inc)"></span>증분 영업이익률</span>
-        <span id="overlay-key" hidden><span class="key" style="background:var(--series-price);opacity:.55"></span>주가 (상대 스케일)</span>
-        <label id="overlay-label" hidden>
-          <input type="checkbox" id="overlay-toggle" checked> 주가 겹쳐보기
-        </label>
       </div>
       <div class="chart" id="margin-chart"></div>
     </section>
@@ -309,25 +304,21 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
       </div>
     </details>
     <p class="hint">금액 단위: __UNIT__ (다트 사업보고서 기준. FnGuide 표는
-       억원이므로 붙여넣기 시 ×100 변환 체크를 켤 것). 셀을 클릭해 바로
-       수정 — 차트·KPI·시그널·워치리스트가 즉시 재계산됩니다. "+ 과거
-       분기"는 표 맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용),
-       "+ 최신 분기"는 맨 아래에 다음 분기를 추가합니다. E = 컨센서스
-       추정치(추세 판정에서 제외). 주가는 표에서 입력하지 않습니다 —
-       리포트 생성 시 --fetch-price 종목코드(네이버 자동 조회) 또는
-       --price-csv로 일별 시계열이 심어져 이익률 차트에 오버레이되며,
-       브라우저에서 추가한 종목은 CLI로 재생성해야 주가가 붙습니다.
-       수정 내용은 이 브라우저에 자동 저장되고, 리포트를 재생성해 열면
-       주가 시계열만 새로 갱신되며 분기 수정본은 유지됩니다(초기화 =
-       생성 시점 데이터로 복귀).</p>
+       억원이므로 붙여넣기 시 ×100 변환 체크를 켤 것). 분기 라벨은
+       "23.1분기" 형식(2025/03, 2025Q1도 허용). 셀을 클릭해 바로 수정 —
+       차트·KPI·시그널·워치리스트가 즉시 재계산됩니다. "+ 과거 분기"는 표
+       맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용), "+ 최신 분기"는
+       맨 아래에 다음 분기를 추가합니다. E = 컨센서스 추정치(추세 판정에서
+       제외). 수정 내용은 이 브라우저에 자동 저장되고, 초기화를 누르면
+       생성 시점 데이터로 돌아갑니다.</p>
   </section>
 
   <footer>
     당기순이익이 아니라 영업이익 기준, 금액 단위 __UNIT__. 증분 영업이익률
-    = Δ영업이익 ÷ Δ매출 — 새로 붙는 매출이 몇 %짜리인지를 본다. 매출
-    변화가 0인 분기의 증분값은 표시하지 않음. 분기 지표는 분기 말일 위치에
-    찍힌다. "주가 겹쳐보기"는 min-max 상대 스케일이라 모양(꺾이는 시점)
-    비교 전용 — 정확한 값은 마우스 툴팁(거래일 스냅)과 KPI에서 확인.
+    = Δ영업이익 ÷ Δ매출 — 새로 붙는 매출이 몇 %짜리인지를 본다. 매출이
+    줄어든 분기의 증분값은 부호가 반전된 노이즈라 차트에서 선을 끊고
+    표·툴팁에만 표시하며, 추세 판정에서도 제외한다. 분기 지표는 분기
+    말일 위치에 찍힌다.
   </footer>
 </div>
 
@@ -384,14 +375,23 @@ rebuildPrice();
 // ---------- 분기 라벨 ↔ 날짜 ----------
 function qEndMs(label) {
   let y = null, mo = null, m;
-  if ((m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || ""))) { y = +m[1]; mo = +m[2]; }
+  if ((m = /^(\d{2,4})\.([1-4])분기$/.exec(label || ""))) {
+    y = +m[1]; if (y < 100) y += 2000; mo = +m[2] * 3;
+  }
+  else if ((m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || ""))) { y = +m[1]; mo = +m[2]; }
   else if ((m = /^(\d{4})Q([1-4])$/i.exec(label || ""))) { y = +m[1]; mo = +m[2] * 3; }
   if (y == null || mo < 1 || mo > 12) return null;
   return Date.UTC(y, mo, 0);
 }
 function dateStr(t) { return new Date(t).toISOString().slice(0, 10); }
 function prevLabel(label) {
-  let m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
+  let m = /^(\d{2,4})\.([1-4])분기$/.exec(label || "");
+  if (m) {
+    let yy = +m[1], q = +m[2] - 1;
+    if (q < 1) { q = 4; yy -= 1; }
+    return `${yy}.${q}분기`;
+  }
+  m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
   if (m) {
     let yy = +m[1], mm = +m[2] - 3;
     if (mm < 1) { mm += 12; yy -= 1; }
@@ -405,7 +405,13 @@ function prevLabel(label) {
   return "";
 }
 function nextLabel(label) {
-  let m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
+  let m = /^(\d{2,4})\.([1-4])분기$/.exec(label || "");
+  if (m) {
+    let yy = +m[1], q = +m[2] + 1;
+    if (q > 4) { q = 1; yy += 1; }
+    return `${yy}.${q}분기`;
+  }
+  m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
   if (m) {
     let yy = +m[1], mm = +m[2] + 3;
     if (mm > 12) { mm -= 12; yy += 1; }
@@ -515,7 +521,7 @@ function buildSignals(c) {
 
 // ---------- FnGuide 붙여넣기 파서 (incremental_margin.parse_paste 이식) ----------
 function parsePasteText(text) {
-  const QTOKEN = /^(?:\d{4}[./\-]\d{1,2}|\d{4}Q[1-4])(?:\(E\))?$/i;
+  const QTOKEN = /^(?:\d{2,4}\.[1-4]분기|\d{4}[./\-]\d{1,2}|\d{4}Q[1-4])(?:\(E\))?$/i;
   let labels = null, est = null;
   const fields = {};
   for (const line of (text || "").split(/\r?\n/)) {
@@ -728,25 +734,6 @@ function drawPanel(containerId, opts) {
     lbl.textContent = label + (est[i] ? "(E)" : "");
   });
 
-  // 주가 오버레이 (상대 스케일 — 모양 비교 전용, 자체 축 없음)
-  if (opts.overlay && opts.overlay.length >= 2) {
-    const cs = opts.overlay.map(p => p.c);
-    const pLo = Math.min(...cs), pHi = Math.max(...cs);
-    const py = p => pHi === pLo ? (y(lo) + y(hi)) / 2
-      : y(lo) + (y(hi) - y(lo)) * (p - pLo) / (pHi - pLo);
-    let d = "";
-    opts.overlay.forEach((p, i) => {
-      d += (i ? "L" : "M") + xOf(p.t).toFixed(1) + " " + py(p.c).toFixed(1);
-    });
-    el("path", { d, fill: "none", stroke: "var(--series-price)",
-      "stroke-width": 2, opacity: 0.55,
-      "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
-    const lastP = opts.overlay[opts.overlay.length - 1];
-    const lbl = el("text", { x: Math.min(xOf(lastP.t) + 8, W - 4),
-      y: py(lastP.c) + 4, "font-size": 10, fill: "var(--text-muted)" }, svg);
-    lbl.textContent = "주가(상대)";
-  }
-
   const cross = el("line", { y1: PAD.t, y2: H - PAD.b,
     stroke: "var(--baseline)", "stroke-width": 1, visibility: "hidden" }, svg);
 
@@ -796,26 +783,14 @@ function drawPanel(containerId, opts) {
 function renderCharts(c) {
   const labels = c.v.map(q => q.label);
   const est = c.v.map(q => !!q.estimate);
-  const hasPrice = c.datesOK && PRICE.length >= 2;
 
   if (c.n < 2) {
     panels = []; chartCtx = null;
-    document.getElementById("overlay-label").hidden = true;
-    document.getElementById("overlay-key").hidden = true;
     document.getElementById("margin-chart").textContent = "";
     return;
   }
 
-  document.getElementById("overlay-label").hidden = !hasPrice;
-  const overlayOn = hasPrice && document.getElementById("overlay-toggle").checked;
-  document.getElementById("overlay-key").hidden = !overlayOn;
-
   let t0 = c.dates[0], t1 = c.dates[c.n - 1];
-  if (overlayOn) {
-    // 오버레이가 켜져 있으면 주가 시계열 전체가 보이도록 도메인 확장
-    t0 = Math.min(t0, PRICE[0].t);
-    t1 = Math.max(t1, PRICE[PRICE.length - 1].t);
-  }
   const span = t1 - t0 || 1;
   t0 -= span * 0.03; t1 += span * 0.03;
   const xOf = t => PAD.l + (W - PAD.l - PAD.r) * (t - t0) / (t1 - t0);
@@ -824,18 +799,21 @@ function renderCharts(c) {
   const washX = firstEst < 0 ? null
     : xOf(firstEst > 0 ? (c.dates[firstEst - 1] + c.dates[firstEst]) / 2 : c.dates[firstEst]);
 
+  // 매출 감소 분기의 증분값은 부호가 반전된 노이즈라 차트에서는 끊고
+  // (추세 판정 제외와 동일한 규칙) 표·툴팁에만 남긴다.
+  const incForChart = c.incremental.map((v, i) => (i > 0 && c.dRev[i] > 0 ? v : null));
+
   panels = [];
   const m = drawPanel("margin-chart", {
     xOf, dates: c.dates, est, labels, washX, H: 300,
     includeZero: true, axisSuffix: "%",
     qSeries: [
       { values: c.overall, colorVar: "--series-overall", digits: 1, suffix: "%" },
-      { values: c.incremental, colorVar: "--series-inc", digits: 1, suffix: "%" },
-    ],
-    overlay: overlayOn ? PRICE : null });
+      { values: incForChart, colorVar: "--series-inc", digits: 1, suffix: "%" },
+    ] });
   if (m) panels.push(m);
 
-  chartCtx = { c, labels, est, hasPrice: overlayOn, t0, t1, xOf };
+  chartCtx = { c, labels, est, t0, t1, xOf };
 }
 
 // ---------- 시그널 ----------
@@ -990,7 +968,6 @@ document.getElementById("reset").addEventListener("click", () => {
   rebuildPrice();
   refresh(true);
 });
-document.getElementById("overlay-toggle").addEventListener("change", () => refresh(false));
 document.getElementById("paste-apply").addEventListener("click", () => {
   const status = document.getElementById("paste-status");
   const rows = parsePasteText(document.getElementById("paste-box").value);
@@ -1023,19 +1000,9 @@ function nearestQuarter(t) {
 }
 function showAt(t, clientX, clientY) {
   if (!chartCtx || !panels.length || !chartCtx.c.n) return;
-  const { c, labels, est, hasPrice, xOf } = chartCtx;
-  let snapT = t, price = null;
-  if (hasPrice) {
-    let best = PRICE[0], bd = Infinity;
-    for (const p of PRICE) {
-      const d = Math.abs(p.t - t);
-      if (d < bd) { bd = d; best = p; }
-    }
-    snapT = best.t; price = best.c;
-  } else {
-    snapT = c.dates[nearestQuarter(t)];
-  }
-  const qi = nearestQuarter(snapT);
+  const { c, labels, est, xOf } = chartCtx;
+  const qi = nearestQuarter(t);
+  const snapT = c.dates[qi];
   const px = xOf(snapT);
   for (const p of panels) {
     p.cross.setAttribute("x1", px);
@@ -1043,14 +1010,10 @@ function showAt(t, clientX, clientY) {
     p.cross.setAttribute("visibility", "visible");
   }
   tooltip.textContent = "";
-  const titleText = (hasPrice && c.datesOK ? dateStr(snapT) + " · " : "")
-    + labels[qi] + (est[qi] ? " (E · 컨센서스)" : "");
-  div("tt-title", tooltip, titleText);
-  const rows = [];
-  if (price != null) rows.push({ colorVar: "--series-price", name: "주가", val: fmt(price, 0) });
-  rows.push(
+  div("tt-title", tooltip, labels[qi] + (est[qi] ? " (E · 컨센서스)" : ""));
+  const rows = [
     { colorVar: "--series-overall", name: "전체 이익률", val: fmt(c.overall[qi], 1) + "%" },
-    { colorVar: "--series-inc", name: "증분 이익률", val: fmt(c.incremental[qi], 1) + "%" });
+    { colorVar: "--series-inc", name: "증분 이익률", val: fmt(c.incremental[qi], 1) + "%" }];
   for (const r of rows) {
     const row = div("tt-row", tooltip);
     const key = document.createElement("span");
