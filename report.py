@@ -16,7 +16,7 @@ from __future__ import annotations
 import html
 import json
 
-from incremental_margin import Analysis, price_change_pct
+from incremental_margin import Analysis, incremental_rows, price_change_pct
 
 
 def _fmt_num(value, digits=1, suffix=""):
@@ -42,9 +42,12 @@ def _delta_html(delta, suffix="%p", up_is_good=True):
 
 
 def _build_kpis(analysis: Analysis) -> str:
+    # KPI는 "최신 실적" 기준 — 컨센서스(E) 분기는 제외한다.
     quarters = analysis.quarters
-    latest, prev = quarters[-1], quarters[-2]
-    rows = analysis.rows
+    actuals = [q for q in quarters if not q.estimate]
+    base = actuals if len(actuals) >= 2 else list(quarters)
+    latest, prev = base[-1], base[-2]
+    rows = incremental_rows(base)
 
     tiles = []
     m_delta = None
@@ -58,14 +61,21 @@ def _build_kpis(analysis: Analysis) -> str:
         )
     )
 
-    inc_now = rows[-1].incremental_margin
+    inc_row = rows[-1]
+    inc_now = inc_row.incremental_margin
     inc_prev = rows[-2].incremental_margin if len(rows) >= 2 else None
     inc_delta = (
         inc_now - inc_prev if inc_now is not None and inc_prev is not None else None
     )
+    inc_label = "증분 영업이익률"
+    if inc_row.delta_revenue < 0:
+        # 매출 감소 분기의 증분값은 부호가 뒤집힌 감분 이익률 —
+        # 직전 분기와의 비교도 의미가 없으므로 숨긴다.
+        inc_label = "증분 영업이익률 (매출 감소 구간)"
+        inc_delta = None
     tiles.append(
         _kpi_tile(
-            "증분 영업이익률",
+            inc_label,
             _fmt_num(inc_now, suffix="%"),
             _delta_html(inc_delta),
         )
@@ -111,8 +121,9 @@ def _build_table(analysis: Analysis) -> str:
     body_rows = []
 
     def row(q, d_rev=None, d_op=None, inc=None, chg=None):
+        label = q.label + " (E)" if q.estimate else q.label
         cells = [
-            f"<td>{html.escape(q.label)}</td>",
+            f"<td>{html.escape(label)}</td>",
             f"<td class=num>{_fmt_num(q.revenue)}</td>",
             f"<td class=num>{_fmt_num(q.operating_profit)}</td>",
             f"<td class=num>{_fmt_num(q.operating_margin, suffix='%')}</td>",
@@ -149,6 +160,7 @@ def render_html(analysis: Analysis, title: str = "증분 영업이익률 리포�
 
     data = {
         "labels": [q.label for q in quarters],
+        "estimate": [q.estimate for q in quarters],
         "price": [q.price for q in quarters],
         "overall": [q.operating_margin for q in quarters],
         "incremental": [None]
@@ -325,6 +337,8 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
   <footer>
     당기순이익이 아니라 영업이익 기준. 증분 영업이익률 = Δ영업이익 ÷ Δ매출 —
     새로 붙는 매출이 몇 %짜리인지를 본다. 매출 변화가 0인 분기의 증분값은 표시하지 않음.
+    (E)는 컨센서스 추정치 — 차트에서 점선·빈 마커로 표시되며 추세 판정과
+    KPI·손익분기 계산에는 들어가지 않음.
   </footer>
 </div>
 
@@ -375,6 +389,18 @@ function drawPanel(containerId, series, opts) {
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
   document.getElementById(containerId).appendChild(svg);
 
+  // 컨센서스(E) 구간 배경 워시 — 데이터보다 먼저(뒤에) 깐다
+  const firstEst = DATA.estimate.indexOf(true);
+  if (firstEst >= 0) {
+    const startX = firstEst > 0 ? (x(firstEst - 1) + x(firstEst)) / 2 : PAD.l;
+    el("rect", { x: startX, y: PAD.t, width: W - PAD.r - startX,
+      height: H - PAD.t - PAD.b, fill: "var(--text-muted)",
+      "fill-opacity": 0.07 }, svg);
+    const tag = el("text", { x: W - PAD.r - 6, y: PAD.t + 12,
+      "text-anchor": "end", "font-size": 10, fill: "var(--text-muted)" }, svg);
+    tag.textContent = "컨센서스(E)";
+  }
+
   // 그리드 + y축 눈금
   for (const t of ticks) {
     el("line", { x1: PAD.l, x2: W - PAD.r, y1: y(t), y2: y(t),
@@ -384,32 +410,46 @@ function drawPanel(containerId, series, opts) {
       style: "font-variant-numeric: tabular-nums" }, svg);
     lbl.textContent = fmt(t, 0) + (opts.axisSuffix || "");
   }
-  // x축 라벨
+  // x축 라벨 — 분기가 많으면 겹치지 않게 건너뛰며 표시(마지막은 항상)
+  const stride = Math.ceil(n / 10);
   DATA.labels.forEach((label, i) => {
+    if (i % stride !== 0 && i !== n - 1) return;
+    if (i !== n - 1 && n - 1 - i < stride && stride > 1) return;
     const lbl = el("text", { x: x(i), y: H - 8, "text-anchor": "middle",
       "font-size": 11, fill: "var(--text-muted)" }, svg);
-    lbl.textContent = label;
+    lbl.textContent = label + (DATA.estimate[i] ? "(E)" : "");
   });
 
   // 크로스헤어 (분기에 스냅, 기본 숨김)
   const cross = el("line", { y1: PAD.t, y2: H - PAD.b,
     stroke: "var(--baseline)", "stroke-width": 1, visibility: "hidden" }, svg);
 
-  // 시리즈 라인 + 마커 (null은 선을 끊는다)
+  // 시리즈 라인 + 마커 (null은 선을 끊고, 컨센서스 구간은 점선·빈 마커)
   const endLabels = [];
   for (const s of series) {
-    let d = "", pen = false;
+    let solid = "", dashed = "", prev = null;
     s.values.forEach((v, i) => {
-      if (v == null) { pen = false; return; }
-      d += (pen ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1);
-      pen = true;
+      if (v == null) { prev = null; return; }
+      if (prev) {
+        const seg = "M" + x(prev.i).toFixed(1) + " " + y(prev.v).toFixed(1)
+          + "L" + x(i).toFixed(1) + " " + y(v).toFixed(1);
+        if (DATA.estimate[i] || DATA.estimate[prev.i]) dashed += seg;
+        else solid += seg;
+      }
+      prev = { i, v };
     });
-    el("path", { d, fill: "none", stroke: `var(${s.colorVar})`,
-      "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    const base = { fill: "none", stroke: `var(${s.colorVar})`,
+      "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" };
+    if (solid) el("path", { ...base, d: solid }, svg);
+    if (dashed) el("path", { ...base, d: dashed, "stroke-dasharray": "5 5",
+      "stroke-linecap": "butt" }, svg);
     s.values.forEach((v, i) => {
       if (v == null) return;
-      el("circle", { cx: x(i), cy: y(v), r: 4, fill: `var(${s.colorVar})`,
-        stroke: "var(--surface-1)", "stroke-width": 2 }, svg);
+      const est = DATA.estimate[i];
+      el("circle", { cx: x(i), cy: y(v), r: 4,
+        fill: est ? "var(--surface-1)" : `var(${s.colorVar})`,
+        stroke: est ? `var(${s.colorVar})` : "var(--surface-1)",
+        "stroke-width": 2 }, svg);
     });
     for (let i = n - 1; i >= 0; i--) {
       if (s.values[i] != null) {
@@ -463,7 +503,7 @@ function showIndex(i, clientX, clientY) {
   tooltip.textContent = "";
   const title = document.createElement("div");
   title.className = "tt-title";
-  title.textContent = DATA.labels[i];
+  title.textContent = DATA.labels[i] + (DATA.estimate[i] ? " (E · 컨센서스)" : "");
   tooltip.appendChild(title);
   for (const s of TT_SERIES) {
     const row = document.createElement("div");

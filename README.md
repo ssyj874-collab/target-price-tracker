@@ -53,12 +53,33 @@ python incremental_margin.py examples/sample_quarters.csv
 
 # 이익률·증분이익률·주가를 한눈에 비교하는 HTML 리포트 (테이블 + 차트)
 python incremental_margin.py examples/sample_quarters.csv --html report.html
+
+# FnGuide Financial Highlight 화면을 복사해 파일로 저장하거나 그대로 붙여넣기
+python incremental_margin.py examples/sample_paste.txt --html report.html --title "종목명"
+python incremental_margin.py - --html report.html   # 붙여넣고 Ctrl-D
+
+# 종목코드로 분기말 종가를 자동으로 받아 주가 채우기 (네이버 금융, 키 불필요)
+python incremental_margin.py examples/sample_paste.txt --fetch-price 005930 --html report.html
 ```
 
-CSV 헤더는 `quarter,revenue,operating_profit[,price]`
-(또는 `분기,매출,영업이익[,주가]`). 주가 열은 선택 — 있으면 테이블과
-차트에 함께 표시된다. 금액 단위는 자유 — 일관되기만 하면 된다.
-4개 분기면 충분하다.
+입력 형식은 자동 감지되며 두 가지를 받는다. **기간 제한 없음** —
+붙여넣는 만큼(다트에서 긁은 과거 분기 포함) 전부 그려진다.
+
+1. **세로형 CSV**: 헤더 `quarter,revenue,operating_profit[,price]`
+   (또는 `분기,매출,영업이익[,주가]`)
+2. **가로형 붙여넣기** (FnGuide 등): 헤더 줄에 `2025/03 2025/06 ...
+   2026/06(E)` 식 분기 라벨, 아래에 `매출액` / `영업이익` /
+   `영업이익(발표기준)` / `주가` 행. 탭·공백 구분 모두 허용, `영업이익`
+   행의 빈 칸은 `영업이익(발표기준)` 행 값으로 채운다.
+
+`(E)` 분기는 **컨센서스 추정치**로 취급한다: 차트에 점선·빈 마커·배경
+워시로 구분되어 표시되고, 추세 판정·KPI·손익분기 계산에서는 제외된다.
+대신 "컨센서스가 반영하는 증분 이익률" 시그널로 최근 실적 증분과
+비교해준다 — 시장이 앞으로 붙는 매출을 몇 %짜리로 보고 있는지.
+
+주가 열은 선택 — 있으면 주가 패널이 함께 그려진다. `--fetch-price
+종목코드`를 주면 네이버 금융에서 실적 분기의 분기말 종가를 자동으로
+받아 채운다(추정 분기 제외). 금액 단위는 자유 — 일관되기만 하면 된다.
 
 HTML 리포트 구성:
 
