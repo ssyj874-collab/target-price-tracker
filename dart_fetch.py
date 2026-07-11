@@ -39,7 +39,9 @@ import io
 import json
 import os
 import re
+import ssl
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -88,10 +90,34 @@ def resolve_key(cli_key: Optional[str]) -> str:
 # HTTP (테스트에서 모킹하는 지점)
 # ---------------------------------------------------------------------------
 
+def make_ssl_context() -> Optional[ssl.SSLContext]:
+    """certifi가 설치돼 있으면 그 인증서 번들을 쓴다 (macOS 파이썬 대응)."""
+    try:
+        import certifi
+
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return None
+
+
+_SSL_CTX = make_ssl_context()
+
+_CERT_HELP = """SSL 인증서 오류 — macOS의 python.org 파이썬은 인증서를 따로 설치해야 합니다.
+다음 중 하나를 실행한 뒤 다시 시도하세요:
+  1) open "/Applications/Python 3.14/Install Certificates.command"
+     (폴더명의 버전 숫자는 설치된 파이썬 버전에 맞게)
+  2) python3 -m pip install certifi   (이 스크립트가 자동으로 사용합니다)"""
+
+
 def _http_get(url: str) -> bytes:
     req = urllib.request.Request(url, headers=_HEADERS)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read()
+    try:
+        with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
+            return resp.read()
+    except urllib.error.URLError as e:
+        if isinstance(getattr(e, "reason", None), ssl.SSLCertVerificationError):
+            raise SystemExit(_CERT_HELP)
+        raise
 
 
 def _api_json(path: str, **params) -> dict:

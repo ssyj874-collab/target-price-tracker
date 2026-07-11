@@ -20,11 +20,25 @@ import calendar
 import csv
 import datetime as dt
 import re
+import ssl
 import urllib.error
 import urllib.request
 from typing import Optional, Sequence
 
 from incremental_margin import Quarter
+
+
+def _make_ssl_context() -> Optional[ssl.SSLContext]:
+    """certifi가 설치돼 있으면 그 인증서 번들을 쓴다 (macOS 파이썬 대응)."""
+    try:
+        import certifi
+
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return None
+
+
+_SSL_CTX = _make_ssl_context()
 
 _ENDPOINT = "https://api.finance.naver.com/siseJson.naver"
 # 헤더 없는 요청은 차단될 수 있어 브라우저 UA를 붙인다.
@@ -66,7 +80,7 @@ def _fetch_daily_closes(code: str, start: dt.date, end: dt.date) -> dict[dt.date
         f"&startTime={start:%Y%m%d}&endTime={end:%Y%m%d}&timeframe=day"
     )
     req = urllib.request.Request(url, headers=_HEADERS)
-    with urllib.request.urlopen(req, timeout=15) as resp:
+    with urllib.request.urlopen(req, timeout=15, context=_SSL_CTX) as resp:
         body = resp.read().decode("utf-8", errors="replace")
     closes = {}
     # 행 형식: ["20250102", 시가, 고가, 저가, 종가, 거래량, 외인소진율]
@@ -177,6 +191,12 @@ def fetch_for_quarters(
     try:
         closes = _fetch_daily_closes(code, start, today)
     except (urllib.error.URLError, OSError, TimeoutError) as e:
+        reason = getattr(e, "reason", None)
+        if isinstance(reason, ssl.SSLCertVerificationError):
+            return list(quarters), [], (
+                f"{code}: SSL 인증서 오류 — 'Install Certificates.command' 실행 "
+                "또는 python3 -m pip install certifi 후 재시도"
+            )
         return list(quarters), [], f"{code}: {e}"
     if not closes:
         return list(quarters), [], f"{code}: 시세 데이터가 비어 있음 (종목코드 확인)"
