@@ -321,11 +321,12 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
   <footer>
     당기순이익이 아니라 영업이익 기준, 금액 단위 __UNIT__. 증분 영업이익률
     = Δ영업이익 ÷ Δ매출 — 새로 붙는 매출이 몇 %짜리인지를 본다. 매출이
-    줄어든 분기의 증분값은 부호가 반전된 노이즈라 차트에서 점을 빼고
-    유효한 점끼리 이어 그리며(값은 표·툴팁에서 확인), 추세 판정에서도
-    제외한다. 분기마다 매출이 오르내리는 계절성 종목은 "증분 전년
-    동기(YoY) 기준"을 켜면 이 노이즈가 근본적으로 사라진다. 분기 지표는
-    분기 말일 위치에 찍힌다.
+    줄어든 분기의 증분값은 부호가 반전된 노이즈라 차트에서 제외하고
+    그 자리에서 선이 끊긴다(전후의 유효한 값은 점으로 표시, 값은
+    표·툴팁에서 확인). 추세 판정에서도 제외한다. 분기마다 매출이
+    오르내리는 계절성 종목은 "증분 전년 동기(YoY) 기준"을 켜면 이
+    노이즈가 근본적으로 사라져 선이 이어진다. 분기 지표는 분기 말일
+    위치에 찍힌다.
   </footer>
 </div>
 
@@ -760,10 +761,11 @@ function drawPanel(containerId, opts) {
 
   const endLabels = [];
   for (const s of opts.qSeries || []) {
-    // null(값 없음/제외) 지점은 건너뛰고 유효한 점끼리 이어서 선이 끊기지 않게
+    // null(값 없음/제외) 지점에서는 선을 끊는다 — 그 구간의 유효한 값은
+    // 고립점(마커)으로만 표시. (계절성 종목은 YoY 토글이 정답)
     let solid = "", dashed = "", prev = null;
     s.values.forEach((val, i) => {
-      if (val == null) return;
+      if (val == null) { prev = null; return; }
       if (prev) {
         const seg = "M" + xOf(dates[prev.i]).toFixed(1) + " " + y(prev.v).toFixed(1)
           + "L" + xOf(dates[i]).toFixed(1) + " " + y(val).toFixed(1);
