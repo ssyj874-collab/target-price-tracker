@@ -266,6 +266,9 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
       <div class="legend-row">
         <span><span class="key" style="background:var(--series-overall)"></span>전체 영업이익률</span>
         <span><span class="key" style="background:var(--series-inc)"></span>증분 영업이익률</span>
+        <label title="계절성(분기마다 매출이 오르내리는) 종목은 전년 동기 대비가 깨끗합니다">
+          <input type="checkbox" id="yoy-toggle"> 증분 전년 동기(YoY) 기준
+        </label>
       </div>
       <div class="chart" id="margin-chart"></div>
     </section>
@@ -287,7 +290,8 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
       <table>
         <thead><tr>
           <th>분기</th><th>매출 (__UNIT__)</th><th>영업이익 (__UNIT__)</th><th>E</th>
-          <th>전체이익률</th><th>Δ매출</th><th>Δ영업이익</th><th>증분이익률</th><th></th>
+          <th>전체이익률</th><th id="th-drev">Δ매출</th><th id="th-dop">Δ영업이익</th>
+          <th id="th-inc">증분이익률</th><th></th>
         </tr></thead>
         <tbody id="grid"></tbody>
       </table>
@@ -317,9 +321,11 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
   <footer>
     당기순이익이 아니라 영업이익 기준, 금액 단위 __UNIT__. 증분 영업이익률
     = Δ영업이익 ÷ Δ매출 — 새로 붙는 매출이 몇 %짜리인지를 본다. 매출이
-    줄어든 분기의 증분값은 부호가 반전된 노이즈라 차트에서 선을 끊고
-    표·툴팁에만 표시하며, 추세 판정에서도 제외한다. 분기 지표는 분기
-    말일 위치에 찍힌다.
+    줄어든 분기의 증분값은 부호가 반전된 노이즈라 차트에서 점을 빼고
+    유효한 점끼리 이어 그리며(값은 표·툴팁에서 확인), 추세 판정에서도
+    제외한다. 분기마다 매출이 오르내리는 계절성 종목은 "증분 전년
+    동기(YoY) 기준"을 켜면 이 노이즈가 근본적으로 사라진다. 분기 지표는
+    분기 말일 위치에 찍힌다.
   </footer>
 </div>
 
@@ -433,26 +439,30 @@ function nextLabel(label) {
 }
 
 // ---------- 계산 (incremental_margin.py의 규칙을 그대로 옮김) ----------
-function computeAll(quarters) {
+// mode: "qoq"(전분기 대비, 기본) | "yoy"(전년 동기 대비 — 계절성 종목용.
+// 매출이 거의 항상 증가라 부호 반전 노이즈가 사라지고 선이 이어진다)
+function computeAll(quarters, mode) {
+  const lag = mode === "yoy" ? 4 : 1;
   const v = quarters.filter(r => r.revenue != null && r.op != null);
   const n = v.length;
   const overall = v.map(q => q.revenue !== 0 ? q.op / q.revenue * 100 : null);
-  const incremental = [null], dRev = [null], dOp = [null];
-  for (let i = 1; i < n; i++) {
-    const dr = v[i].revenue - v[i - 1].revenue;
-    const dp = v[i].op - v[i - 1].op;
-    dRev.push(dr); dOp.push(dp);
-    incremental.push(dr !== 0 ? dp / dr * 100 : null);
+  const incremental = Array(n).fill(null);
+  const dRev = Array(n).fill(null), dOp = Array(n).fill(null);
+  for (let i = lag; i < n; i++) {
+    const dr = v[i].revenue - v[i - lag].revenue;
+    const dp = v[i].op - v[i - lag].op;
+    dRev[i] = dr; dOp[i] = dp;
+    incremental[i] = dr !== 0 ? dp / dr * 100 : null;
   }
   const actualIdx = [];
   v.forEach((q, i) => { if (!q.estimate) actualIdx.push(i); });
   const basisIdx = actualIdx.length >= 2 ? actualIdx : v.map((_, i) => i);
+  // 판정용 증분: 실적 분기 & 매출 증가 구간만
   const basisIncs = [];
-  for (let k = 1; k < basisIdx.length; k++) {
-    const i = basisIdx[k], j = basisIdx[k - 1];
-    const dr = v[i].revenue - v[j].revenue, dp = v[i].op - v[j].op;
-    if (dr > 0) basisIncs.push(dp / dr * 100);
-  }
+  v.forEach((q, i) => {
+    if (!q.estimate && incremental[i] != null && dRev[i] > 0)
+      basisIncs.push(incremental[i]);
+  });
   let trend = "판단불가";
   if (basisIncs.length >= 2) {
     const diff = basisIncs[basisIncs.length - 1] - basisIncs[basisIncs.length - 2];
@@ -470,23 +480,25 @@ function computeAll(quarters) {
       if (slope > 0) breakEven = -(my - slope * mx) / slope;
     }
   }
-  let gap = null;
   const bLast = basisIdx[basisIdx.length - 1], bPrev = basisIdx[basisIdx.length - 2];
-  if (bPrev != null) {
-    const dr = v[bLast].revenue - v[bPrev].revenue;
-    const dp = v[bLast].op - v[bPrev].op;
-    if (dr > 0 && overall[bLast] != null) gap = dp / dr * 100 - overall[bLast];
+  let gap = null;
+  if (bLast != null && dRev[bLast] > 0 && overall[bLast] != null
+      && incremental[bLast] != null) {
+    gap = incremental[bLast] - overall[bLast];
   }
   let dates = v.map(q => qEndMs(q.label));
   const datesOK = n >= 2 && dates.every(d => d != null)
     && dates.every((d, i) => !i || d > dates[i - 1]);
   if (!datesOK) dates = v.map((_, i) => i);
-  return { v, n, overall, incremental, dRev, dOp, basisIdx, basisIncs,
-           trend, breakEven, gap, bLast, bPrev, dates, datesOK };
+  return { v, n, lag, mode: mode || "qoq", overall, incremental, dRev, dOp,
+           basisIdx, basisIncs, trend, breakEven, gap, bLast, bPrev,
+           dates, datesOK };
 }
 
 function buildSignals(c) {
   const s = [];
+  if (c.mode === "yoy") s.push(
+    "증분 기준: 전년 동기(YoY) — 계절성 제거를 위해 4분기 전과 비교해 계산.");
   if (c.trend === "상승") s.push(
     "증분 이익률 상승 추세 — 새로 붙는 매출의 수익성이 계속 좋아지는 중. 이런 회사가 이익 성장이 폭발하는 회사.");
   else if (c.trend === "정체") s.push(
@@ -611,7 +623,7 @@ function renderWatchlist() {
   const tbody = document.getElementById("watch-table");
   tbody.textContent = "";
   for (const s of db.stocks) {
-    const c = computeAll(s.quarters || []);
+    const c = computeAll(s.quarters || [], db.incMode);
     const tr = document.createElement("tr");
     if (s.id === db.active) tr.className = "active";
     const cells = [];
@@ -619,8 +631,7 @@ function renderWatchlist() {
     if (c.bLast != null) {
       cells.push([c.v[c.bLast].label, "num"]);
       cells.push([fmt(c.overall[c.bLast], 1) + "%", "num"]);
-      const dr = c.bPrev != null ? c.v[c.bLast].revenue - c.v[c.bPrev].revenue : null;
-      const inc = dr ? (c.v[c.bLast].op - c.v[c.bPrev].op) / dr * 100 : null;
+      const dr = c.dRev[c.bLast], inc = c.incremental[c.bLast];
       cells.push([fmt(inc, 1) + "%" + (dr != null && dr < 0 ? " (Δ매출<0)" : ""), "num"]);
       cells.push([c.gap == null ? "–" : fmt(c.gap, 1) + "%p", "num"]);
     } else {
@@ -677,15 +688,17 @@ function renderKpis(c) {
   const box = document.getElementById("kpis");
   box.textContent = "";
   if (c.bPrev == null) { tile(box, "분기 수 부족 (2개 이상 입력)", "–"); return; }
-  const latest = c.v[c.bLast], prev = c.v[c.bPrev];
+  const prev = c.v[c.bPrev];
   const mNow = c.overall[c.bLast], mPrev = c.overall[c.bPrev];
   tile(box, "전체 영업이익률", fmt(mNow, 1) + "%",
     mNow != null && mPrev != null ? mNow - mPrev : null, true, "%p");
-  const drLast = latest.revenue - prev.revenue;
-  const incNow = drLast !== 0 ? (latest.op - prev.op) / drLast * 100 : null;
-  const incLabel = drLast < 0 ? "증분 영업이익률 (매출 감소 구간)" : "증분 영업이익률";
+  const drLast = c.dRev[c.bLast];
+  const incNow = c.incremental[c.bLast];
+  let incLabel = "증분 영업이익률" + (c.mode === "yoy" ? " (YoY)" : "");
+  if (drLast != null && drLast < 0) incLabel += " (매출 감소 구간)";
   const bi = c.basisIncs;
-  const incDelta = drLast > 0 && bi.length >= 2 ? bi[bi.length - 1] - bi[bi.length - 2] : null;
+  const incDelta = drLast != null && drLast > 0 && bi.length >= 2
+    ? bi[bi.length - 1] - bi[bi.length - 2] : null;
   tile(box, incLabel, fmt(incNow, 1) + "%", incDelta, true, "%p");
   tile(box, "증분−전체 격차", c.gap == null ? "–" : fmt(c.gap, 1) + "%p");
   tile(box, `손익분기 매출 추정 (${INITIAL.unit})`, fmt(c.breakEven, 0));
@@ -747,9 +760,10 @@ function drawPanel(containerId, opts) {
 
   const endLabels = [];
   for (const s of opts.qSeries || []) {
+    // null(값 없음/제외) 지점은 건너뛰고 유효한 점끼리 이어서 선이 끊기지 않게
     let solid = "", dashed = "", prev = null;
     s.values.forEach((val, i) => {
-      if (val == null) { prev = null; return; }
+      if (val == null) return;
       if (prev) {
         const seg = "M" + xOf(dates[prev.i]).toFixed(1) + " " + y(prev.v).toFixed(1)
           + "L" + xOf(dates[i]).toFixed(1) + " " + y(val).toFixed(1);
@@ -896,7 +910,11 @@ function renderTable() {
 }
 
 function updateDerived() {
-  const c = computeAll(stock.quarters);
+  const c = computeAll(stock.quarters, db.incMode);
+  const yoy = db.incMode === "yoy";
+  document.getElementById("th-drev").textContent = "Δ매출" + (yoy ? " (YoY)" : "");
+  document.getElementById("th-dop").textContent = "Δ영업이익" + (yoy ? " (YoY)" : "");
+  document.getElementById("th-inc").textContent = "증분이익률" + (yoy ? " (YoY)" : "");
   let vi = -1;
   stock.quarters.forEach((row, ri) => {
     const ok = row.revenue != null && row.op != null;
@@ -905,7 +923,10 @@ function updateDerived() {
     if (!get(0)) return;
     if (!ok) { for (let k = 0; k < 4; k++) get(k).textContent = "–"; return; }
     get(0).textContent = fmt(c.overall[vi], 1) + "%";
-    if (vi === 0) { for (let k = 1; k < 4; k++) get(k).textContent = "–"; return; }
+    if (c.dRev[vi] == null) {
+      for (let k = 1; k < 4; k++) get(k).textContent = "–";
+      return;
+    }
     const sign = x => (x >= 0 ? "+" : "") + fmt(x, 0);
     get(1).textContent = sign(c.dRev[vi]);
     get(2).textContent = sign(c.dOp[vi]);
@@ -975,6 +996,10 @@ document.getElementById("reset").addEventListener("click", () => {
   document.getElementById("stock-name").value = stock.name;
   rebuildPrice();
   refresh(true);
+});
+document.getElementById("yoy-toggle").addEventListener("change", e => {
+  db.incMode = e.target.checked ? "yoy" : "qoq";
+  refresh(false);
 });
 document.getElementById("paste-apply").addEventListener("click", () => {
   const status = document.getElementById("paste-status");
@@ -1073,6 +1098,8 @@ chartsBox.addEventListener("keydown", e => {
 chartsBox.addEventListener("blur", () => { focusIndex = -1; hideTip(); });
 
 // ---------- 시작 ----------
+if (!db.incMode) db.incMode = "qoq";
+document.getElementById("yoy-toggle").checked = db.incMode === "yoy";
 document.getElementById("stock-name").value = stock.name || stock.id;
 refresh(true);
 </script>
