@@ -221,7 +221,8 @@ class PasteParseTest(unittest.TestCase):
 
         quarters = parse_paste(SAMPLE_PASTE)
         self.assertEqual(len(quarters), 8)
-        self.assertEqual(quarters[0].label, "2025/03")
+        # 라벨은 표준형 YYYY.N분기로 정규화된다
+        self.assertEqual(quarters[0].label, "2025.1분기")
         self.assertEqual(quarters[0].revenue, 10761)
         self.assertEqual(quarters[0].operating_profit, 1024)
         self.assertFalse(quarters[0].estimate)
@@ -279,12 +280,24 @@ class PriceFetchTest(unittest.TestCase):
         text = (
             "\t23.1분기\t23.2분기\t23.3분기(E)\n"
             "매출액\t846,470\t1,122,657\t1,039,434\n"
-            "영업이익\t14,104\t85,739\t94,550\n"
+            "영업이익\t-4,765\t85,739\t94,550\n"
         )
         quarters = parse_paste(text)
         self.assertEqual([q.label for q in quarters],
-                         ["23.1분기", "23.2분기", "23.3분기"])
+                         ["2023.1분기", "2023.2분기", "2023.3분기"])
         self.assertTrue(quarters[2].estimate)
+        self.assertEqual(quarters[0].operating_profit, -4765)  # 적자 분기
+
+    def test_normalize_label(self):
+        from incremental_margin import normalize_label
+
+        self.assertEqual(normalize_label("2024/09"), "2024.3분기")
+        self.assertEqual(normalize_label("2024/12"), "2024.4분기")
+        self.assertEqual(normalize_label("2025/03"), "2025.1분기")
+        self.assertEqual(normalize_label("24.3분기"), "2024.3분기")
+        self.assertEqual(normalize_label("2024.3분기"), "2024.3분기")
+        self.assertEqual(normalize_label("2024Q3"), "2024.3분기")
+        self.assertEqual(normalize_label("이상한라벨"), "이상한라벨")
 
     def test_fill_prices_uses_last_close_before_quarter_end(self):
         import datetime as dt

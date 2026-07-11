@@ -305,7 +305,8 @@ footer { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     </details>
     <p class="hint">금액 단위: __UNIT__ (다트 사업보고서 기준. FnGuide 표는
        억원이므로 붙여넣기 시 ×100 변환 체크를 켤 것). 분기 라벨은
-       "23.1분기" 형식(2025/03, 2025Q1도 허용). 셀을 클릭해 바로 수정 —
+       "2024.3분기" 형식으로 표준화됩니다(2024/09, 24.3분기, 2024Q3으로
+       입력해도 자동 변환). 셀을 클릭해 바로 수정 —
        차트·KPI·시그널·워치리스트가 즉시 재계산됩니다. "+ 과거 분기"는 표
        맨 위에 이전 분기를(다트에서 긁은 옛 실적 입력용), "+ 최신 분기"는
        맨 아래에 다음 분기를 추가합니다. E = 컨센서스 추정치(추세 판정에서
@@ -347,15 +348,32 @@ function loadDb() {
   return { stocks: [], active: null };
 }
 let db = loadDb();
-// 임베드 병합: 새 종목은 추가, 기존 종목(id 일치)은 주가 시계열만 갱신
-// (분기 데이터는 사용자 수정본 우선 — 초기화 버튼으로 임베드 복귀)
+// 임베드 병합: 새 종목은 추가. 기존 종목(id 일치)은 임베드 데이터가
+// 바뀌었으면(리포트 재생성) 임베드로 교체 — 재생성이 곧 데이터 원본이다.
+// 임베드가 그대로면 브라우저에서의 수정본을 유지한다.
 for (const s of INITIAL.stocks) {
+  const hash = JSON.stringify(s.quarters);
   const found = db.stocks.find(x => x.id === s.id);
-  if (!found) db.stocks.push(clone(s));
-  else if (s.priceSeries && s.priceSeries.length) found.priceSeries = clone(s.priceSeries);
+  if (!found) {
+    const c = clone(s);
+    c.seedHash = hash;
+    db.stocks.push(c);
+  } else {
+    if (found.seedHash !== hash) {
+      found.quarters = clone(s.quarters);
+      found.name = s.name;
+      found.seedHash = hash;
+    }
+    if (s.priceSeries && s.priceSeries.length) found.priceSeries = clone(s.priceSeries);
+  }
 }
 if (!db.stocks.length) db.stocks.push({ id: "새 종목", name: "새 종목", quarters: [], priceSeries: [] });
 if (!db.active || !db.stocks.some(s => s.id === db.active)) db.active = db.stocks[0].id;
+// 분기 라벨을 표준형(YYYY.N분기)으로 정규화 — 과거에 2024/09 식으로
+// 저장된 라벨도 열 때 자동 변환된다.
+for (const s of db.stocks) {
+  (s.quarters || []).forEach(r => { r.label = normalizeLabel(r.label); });
+}
 
 function saveDb() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); } catch (e) {}
@@ -373,6 +391,21 @@ function rebuildPrice() {
 rebuildPrice();
 
 // ---------- 분기 라벨 ↔ 날짜 ----------
+// 표준형 'YYYY.N분기'로 정규화 (2024/09 → 2024.3분기, 24.3분기 → 2024.3분기)
+function normalizeLabel(label) {
+  const s = String(label || "").trim();
+  let m = /^(\d{2,4})\.([1-4])분기$/.exec(s);
+  if (m) {
+    let y = +m[1]; if (y < 100) y += 2000;
+    return `${y}.${m[2]}분기`;
+  }
+  m = /^(\d{4})[./\-](\d{1,2})$/.exec(s);
+  if (m && +m[2] >= 1 && +m[2] <= 12) return `${m[1]}.${Math.ceil(+m[2] / 3)}분기`;
+  m = /^(\d{4})Q([1-4])$/i.exec(s);
+  if (m) return `${m[1]}.${m[2]}분기`;
+  return s;
+}
+
 function qEndMs(label) {
   let y = null, mo = null, m;
   if ((m = /^(\d{2,4})\.([1-4])분기$/.exec(label || ""))) {
@@ -385,44 +418,18 @@ function qEndMs(label) {
 }
 function dateStr(t) { return new Date(t).toISOString().slice(0, 10); }
 function prevLabel(label) {
-  let m = /^(\d{2,4})\.([1-4])분기$/.exec(label || "");
-  if (m) {
-    let yy = +m[1], q = +m[2] - 1;
-    if (q < 1) { q = 4; yy -= 1; }
-    return `${yy}.${q}분기`;
-  }
-  m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
-  if (m) {
-    let yy = +m[1], mm = +m[2] - 3;
-    if (mm < 1) { mm += 12; yy -= 1; }
-    return `${yy}/${String(mm).padStart(2, "0")}`;
-  }
-  m = /^(\d{4})Q([1-4])$/i.exec(label || "");
-  if (m) {
-    const q = +m[2];
-    return q === 1 ? `${+m[1] - 1}Q4` : `${m[1]}Q${q - 1}`;
-  }
-  return "";
+  const m = /^(\d{4})\.([1-4])분기$/.exec(normalizeLabel(label));
+  if (!m) return "";
+  let y = +m[1], q = +m[2] - 1;
+  if (q < 1) { q = 4; y -= 1; }
+  return `${y}.${q}분기`;
 }
 function nextLabel(label) {
-  let m = /^(\d{2,4})\.([1-4])분기$/.exec(label || "");
-  if (m) {
-    let yy = +m[1], q = +m[2] + 1;
-    if (q > 4) { q = 1; yy += 1; }
-    return `${yy}.${q}분기`;
-  }
-  m = /^(\d{4})[./\-](\d{1,2})$/.exec(label || "");
-  if (m) {
-    let yy = +m[1], mm = +m[2] + 3;
-    if (mm > 12) { mm -= 12; yy += 1; }
-    return `${yy}/${String(mm).padStart(2, "0")}`;
-  }
-  m = /^(\d{4})Q([1-4])$/i.exec(label || "");
-  if (m) {
-    const q = +m[2];
-    return q === 4 ? `${+m[1] + 1}Q1` : `${m[1]}Q${q + 1}`;
-  }
-  return "";
+  const m = /^(\d{4})\.([1-4])분기$/.exec(normalizeLabel(label));
+  if (!m) return "";
+  let y = +m[1], q = +m[2] + 1;
+  if (q > 4) { q = 1; y += 1; }
+  return `${y}.${q}분기`;
 }
 
 // ---------- 계산 (incremental_margin.py의 규칙을 그대로 옮김) ----------
@@ -560,7 +567,8 @@ function parsePasteText(text) {
   labels.forEach((lb, i) => {
     const o = op[i] != null ? op[i] : opA[i];
     if (fields.revenue[i] == null || o == null) return;
-    rows.push({ label: lb, revenue: fields.revenue[i], op: o, estimate: !!est[i] });
+    rows.push({ label: normalizeLabel(lb), revenue: fields.revenue[i], op: o,
+      estimate: !!est[i] });
   });
   return rows.length ? rows : null;
 }

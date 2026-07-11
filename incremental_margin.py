@@ -287,6 +287,29 @@ _ROW_ALIASES = {
 }
 
 
+def normalize_label(label: str) -> str:
+    """분기 라벨을 표준형 'YYYY.N분기'로 정규화. 해석 불가면 그대로 둔다.
+
+    2024/09 → 2024.3분기, 24.3분기 → 2024.3분기, 2024Q3 → 2024.3분기.
+    월 표기는 그 달이 분기 마지막 달이라는 뜻(FnGuide식)으로 보고
+    분기 번호로 바꾼다.
+    """
+    s = label.strip()
+    m = re.match(r"^(\d{2,4})\.([1-4])분기$", s)
+    if m:
+        year = int(m.group(1))
+        if year < 100:
+            year += 2000
+        return f"{year}.{m.group(2)}분기"
+    m = re.match(r"^(\d{4})[./\-](\d{1,2})$", s)
+    if m and 1 <= int(m.group(2)) <= 12:
+        return f"{m.group(1)}.{(int(m.group(2)) + 2) // 3}분기"
+    m = re.match(r"^(\d{4})Q([1-4])$", s, re.IGNORECASE)
+    if m:
+        return f"{m.group(1)}.{m.group(2)}분기"
+    return label
+
+
 def _parse_cell(cell: str) -> Optional[float]:
     cell = cell.strip().replace(",", "")
     if cell in ("", "-", "–", "—", "N/A", "n/a"):
@@ -324,7 +347,7 @@ def parse_paste(text: str) -> list[Quarter]:
         if not labels and len(quarter_cells) >= 2:
             for c in quarter_cells:
                 est = c.upper().endswith("(E)")
-                labels.append(c[:-3] if est else c)
+                labels.append(normalize_label(c[:-3] if est else c))
                 estimates.append(est)
             continue
         # "영업이익률" 같은 다른 지표가 매출/영업이익으로 오인되지 않게
@@ -432,7 +455,7 @@ def parse_csv_text(text: str) -> list[Quarter]:
             price = float(raw) if raw else None
         quarters.append(
             Quarter(
-                label=line[colmap["quarter"]].strip(),
+                label=normalize_label(line[colmap["quarter"]].strip()),
                 revenue=float(line[colmap["revenue"]].replace(",", "")),
                 operating_profit=float(
                     line[colmap["operating_profit"]].replace(",", "")
