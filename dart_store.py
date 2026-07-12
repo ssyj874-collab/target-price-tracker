@@ -13,10 +13,17 @@ fnlttSinglAcntAll(단일회사 전체 재무제표) API를 쓴다 — 주요계�
 보관: data/ 디렉토리에 종목별 JSON 하나.
 {
   "corp_code", "corp_name", "stock_code", "updated": ISO시각,
+  "fs_div": "CFS"|"OFS",              # 이 회사가 쓰는 재무제표 (호출 절약용)
+  "cums": {"2024": {"1": {revenue, op, sga, inventory}, ...}},  # 보고서 원본(누적, 원)
   "quarterly": [{"label": "2024.3분기", "revenue", "op", "sga", "inventory"}...],
   "annual":    [{"year": 2024, "revenue", "op", "sga", "inventory"}...]
 }
-업데이트는 라벨/연도 기준 upsert라 몇 번을 눌러도 안전하다(멱등).
+cums가 원본이고 quarterly/annual은 cums에서 재계산된다. 이미 저장된
+(연도, 분기)는 API를 다시 부르지 않으므로 업데이트를 몇 번 돌려도
+호출이 낭비되지 않는다 — 전 상장사 정기 갱신이 가능한 이유.
+
+API_HOOK: 호출 직전에 불리는 훅(페이싱·쿼터 계산용). 전체 수집 잡이
+여기에 속도 제한과 일일 한도 체크를 끼워 넣는다.
 """
 
 from __future__ import annotations
@@ -25,9 +32,22 @@ import datetime as dt
 import json
 import os
 import re
-from typing import Optional
+from typing import Callable, Optional
 
 from dart_fetch import _api_json, _REPRT
+
+# 호출 직전 훅 — 잡 러너가 페이싱/쿼터/진행 카운트에 사용
+API_HOOK: Optional[Callable[[], None]] = None
+
+
+class BudgetExceeded(Exception):
+    """일일 호출 한도 도달 — 잡을 중단하고 다음 날 이어서."""
+
+
+def _call_api(path: str, **params) -> dict:
+    if API_HOOK is not None:
+        API_HOOK()
+    return _api_json(path, **params)
 
 # 계정 매칭: account_id(표준 태그) 우선, 없으면 account_nm(공백 제거) 비교
 _MATCHERS = {
@@ -83,29 +103,28 @@ def extract_metrics(rows: list[dict]) -> dict[str, Optional[int]]:
     return out
 
 
-def fetch_report(key: str, corp_code: str, year: int, reprt: str) -> list[dict]:
-    """전체 재무제표 행. 연결(CFS) 우선, 비면 별도(OFS). 없으면 []."""
-    for fs in ("CFS", "OFS"):
-        data = _api_json("fnlttSinglAcntAll.json", crtfc_key=key,
+def fetch_period(key: str, corp_code: str, year: int, q: int,
+                 fs_hint: Optional[str] = None) -> tuple[Optional[dict], Optional[str]]:
+    """(연도, 분기) 보고서의 metrics(누적/시점, 원)와 사용한 fs_div.
+
+    fs_hint(이 회사가 지난번에 쓴 재무제표 구분)를 먼저 시도해 호출을
+    절약한다. 공시가 없거나 매출·영업이익을 못 찾으면 (None, None).
+    """
+    order = ["CFS", "OFS"]
+    if fs_hint in order:
+        order.remove(fs_hint)
+        order.insert(0, fs_hint)
+    for fs in order:
+        data = _call_api("fnlttSinglAcntAll.json", crtfc_key=key,
                          corp_code=corp_code, bsns_year=str(year),
-                         reprt_code=reprt, fs_div=fs)
+                         reprt_code=_REPRT[q], fs_div=fs)
         rows = data.get("list", [])
-        if rows:
-            return rows
-    return []
-
-
-def collect_year(key: str, corp_code: str, year: int) -> dict[int, dict]:
-    """{분기번호: metrics(누적/시점, 원)} — 공시된 보고서만."""
-    out = {}
-    for q, reprt in _REPRT.items():
-        rows = fetch_report(key, corp_code, year, reprt)
         if not rows:
             continue
         metrics = extract_metrics(rows)
         if metrics["revenue"] is not None and metrics["op"] is not None:
-            out[q] = metrics
-    return out
+            return metrics, fs
+    return None, None
 
 
 def _mil(x: Optional[int]) -> Optional[int]:
@@ -180,40 +199,80 @@ def save_store(path: str, store: dict) -> None:
     os.replace(tmp, path)
 
 
-def _label_key(label: str) -> tuple:
-    m = re.match(r"^(\d{4})\.([1-4])분기$", label)
-    return (int(m.group(1)), int(m.group(2))) if m else (0, 0)
+def new_store(corp: dict) -> dict:
+    return {"corp_code": corp["corp_code"], "corp_name": corp["corp_name"],
+            "stock_code": corp["stock_code"], "cums": {},
+            "quarterly": [], "annual": []}
 
 
-def upsert(store: dict, quarters: list[dict], annual: list[dict]) -> dict:
-    """라벨/연도 기준으로 새 값을 덮어쓰며 병합(멱등)."""
-    q_map = {r["label"]: r for r in store.get("quarterly", [])}
-    for r in quarters:
-        q_map[r["label"]] = r
-    a_map = {r["year"]: r for r in store.get("annual", [])}
-    for r in annual:
-        a_map[r["year"]] = r
-    store["quarterly"] = sorted(q_map.values(), key=lambda r: _label_key(r["label"]))
-    store["annual"] = sorted(a_map.values(), key=lambda r: r["year"])
+def rebuild(store: dict) -> dict:
+    """cums(원본 누적치)에서 quarterly/annual을 다시 만든다."""
+    year_data = {
+        int(y): {int(q): m for q, m in qs.items()}
+        for y, qs in store.get("cums", {}).items()
+    }
+    store["quarterly"] = build_quarters(year_data)
+    store["annual"] = build_annual(year_data)
     return store
+
+
+def missing_periods(store: dict, periods: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    """periods 중 아직 cums에 없는 (연도, 분기)만 남긴다."""
+    cums = store.get("cums", {})
+    return [(y, q) for y, q in periods
+            if str(q) not in cums.get(str(y), {})]
+
+
+def ensure_periods(key: str, corp: dict, data_dir: str,
+                   periods: list[tuple[int, int]]) -> tuple[dict, int]:
+    """지정한 (연도, 분기)들 중 없는 것만 수집해 저장. (store, 새로 받은 수).
+
+    이미 저장된 기간은 API를 부르지 않으므로 멱등이면서 싸다.
+    BudgetExceeded가 나면 그때까지 받은 것을 저장하고 그대로 올린다.
+    """
+    path = store_path(data_dir, corp)
+    store = load_store(path) or new_store(corp)
+    store.setdefault("cums", {})
+    todo = missing_periods(store, periods)
+    added = 0
+    try:
+        for year, q in todo:
+            metrics, fs = fetch_period(key, corp["corp_code"], year, q,
+                                       fs_hint=store.get("fs_div"))
+            if metrics is None:
+                continue  # 미공시 — 다음 갱신 때 다시 시도
+            store["cums"].setdefault(str(year), {})[str(q)] = metrics
+            store["fs_div"] = fs
+            added += 1
+    finally:
+        if added or not os.path.exists(path):
+            rebuild(store)
+            store["updated"] = dt.datetime.now().isoformat(timespec="seconds")
+            save_store(path, store)
+    return store, added
+
+
+def year_range_periods(start_year: int, end_year: int) -> list[tuple[int, int]]:
+    return [(y, q) for y in range(start_year, end_year + 1) for q in (1, 2, 3, 4)]
+
+
+def rolling_periods(today: Optional[dt.date] = None, count: int = 4) -> list[tuple[int, int]]:
+    """오늘 기준 직전 count개 분기 (진행 중인 분기 제외) — 실적시즌 갱신 대상."""
+    today = today or dt.date.today()
+    year, q = today.year, (today.month - 1) // 3 + 1
+    out = []
+    for _ in range(count):
+        q -= 1
+        if q < 1:
+            q = 4
+            year -= 1
+        out.append((year, q))
+    return sorted(out)
 
 
 def update_stock(key: str, corp: dict, data_dir: str,
                  start_year: int, end_year: int) -> dict:
-    """start~end년 보고서를 수집해 저장소에 병합하고 파일로 저장."""
-    path = store_path(data_dir, corp)
-    store = load_store(path) or {
-        "corp_code": corp["corp_code"],
-        "corp_name": corp["corp_name"],
-        "stock_code": corp["stock_code"],
-        "quarterly": [], "annual": [],
-    }
-    year_data = {}
-    for year in range(start_year, end_year + 1):
-        cums = collect_year(key, corp["corp_code"], year)
-        if cums:
-            year_data[year] = cums
-    upsert(store, build_quarters(year_data), build_annual(year_data))
-    store["updated"] = dt.datetime.now().isoformat(timespec="seconds")
-    save_store(path, store)
+    """start~end년 중 빠진 보고서를 수집해 저장(하위호환 API)."""
+    store, _added = ensure_periods(key, corp, data_dir,
+                                   year_range_periods(start_year, end_year))
     return store

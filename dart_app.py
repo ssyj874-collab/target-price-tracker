@@ -1,19 +1,22 @@
-"""다트 재무 데이터 수집기 — 버튼으로 종목 추가/업데이트하는 로컬 앱.
+"""다트 재무 데이터 수집기 — 전 상장사 커버, 실적시즌 버튼 갱신.
 
 실행:
     python3 dart_app.py            # http://127.0.0.1:8899 브라우저 자동 오픈
-    python3 dart_app.py --port 8899 --dir data
+    python3 dart_app.py --port 8899 --dir data --budget 19000
 
-화면에서:
-- 종목명(또는 6자리 코드) 입력 → [종목 추가]: 최근 3년 + 올해 진행분의
-  분기·연간 매출액/영업이익/판관비/재고자산을 다트에서 수집해 저장
-- 종목별 [업데이트]: 작년~올해 보고서를 다시 받아 새 분기만 병합(멱등)
-  — 분기·반기·사업보고서가 새로 공시될 때마다 누르면 쌓인다
-- [전체 업데이트]: 저장된 모든 종목 일괄 업데이트
+화면 버튼:
+- [전체 수집 시작/이어하기]: 상장사 전체(~2,600개)의 최근 3년 + 올해
+  진행분 매출액/영업이익/판관비/재고자산을 수집. 다트 일일 한도(2만 건)
+  때문에 첫 수집은 며칠에 나뉠 수 있다 — 한도에 닿으면 자동으로 멈추고,
+  다음 날 같은 버튼을 누르면 이어서 진행한다(이미 받은 보고서는 호출 안 함).
+- [실적시즌 업데이트]: 직전 4개 분기 중 아직 저장 안 된 보고서만 전
+  종목에 대해 조회. 시즌 중 며칠 간격으로 눌러주면 새 공시가 차곡차곡
+  쌓인다. 매일 돌릴 필요 없음.
+- [중지]: 진행 중인 잡을 멈춘다(받은 데이터는 저장돼 있음).
 
-데이터는 data/ 디렉토리에 종목별 JSON으로 보관된다(단위 백만원).
-DART 인증키는 dart_fetch.py와 동일하게 DART_API_KEY 환경변수 또는
-dart_api_key.txt에서 읽는다. 서버는 127.0.0.1에만 바인딩된다.
+데이터: data/ 디렉토리에 종목별 JSON(연간/분기 분리, 단위 백만원).
+호출 속도는 분당 ~600건으로 제한하고, 일일 사용량은 data/_quota.json에
+기록해 한도를 넘지 않게 한다. 서버는 127.0.0.1에만 바인딩.
 """
 
 from __future__ import annotations
@@ -24,6 +27,7 @@ import json
 import os
 import sys
 import threading
+import time
 import urllib.parse
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -32,12 +36,157 @@ import dart_store
 from dart_fetch import load_corp_map, lookup_corp, resolve_key
 
 DATA_DIR = "data"
-_LOCK = threading.Lock()  # 다트 호출·파일 쓰기 직렬화
+DAILY_BUDGET = 19000       # 다트 일일 한도(20,000)보다 여유 있게
+CALL_INTERVAL = 0.1        # 초당 10건 = 분당 600건
 
+_LOCK = threading.Lock()
+
+JOB = {
+    "running": False, "mode": None, "total": 0, "done": 0,
+    "current": "", "added": 0, "calls_today": 0,
+    "message": "", "errors": [],
+}
+
+
+# ---------------------------------------------------------------------------
+# 일일 쿼터 + 페이싱
+# ---------------------------------------------------------------------------
+
+def _quota_path() -> str:
+    return os.path.join(DATA_DIR, "_quota.json")
+
+
+def load_quota() -> dict:
+    try:
+        with open(_quota_path(), encoding="utf-8") as f:
+            q = json.load(f)
+        if q.get("date") == dt.date.today().isoformat():
+            return q
+    except (OSError, ValueError):
+        pass
+    return {"date": dt.date.today().isoformat(), "used": 0}
+
+
+def save_quota(q: dict) -> None:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(_quota_path(), "w", encoding="utf-8") as f:
+        json.dump(q, f)
+
+
+class _Pacer:
+    """호출 훅: 속도 제한 + 일일 한도 + 진행 카운트."""
+
+    def __init__(self):
+        self.quota = load_quota()
+        self.stop = False
+
+    def __call__(self):
+        if self.stop:
+            raise dart_store.BudgetExceeded("사용자 중지")
+        if self.quota["used"] >= DAILY_BUDGET:
+            raise dart_store.BudgetExceeded(
+                f"오늘 호출 한도({DAILY_BUDGET:,}건) 도달 — 내일 [이어하기]를 누르세요.")
+        self.quota["used"] += 1
+        JOB["calls_today"] = self.quota["used"]
+        if self.quota["used"] % 50 == 0:
+            save_quota(self.quota)
+        time.sleep(CALL_INTERVAL)
+
+
+# ---------------------------------------------------------------------------
+# 잡 러너
+# ---------------------------------------------------------------------------
+
+def _job_state_path() -> str:
+    return os.path.join(DATA_DIR, "_job_state.json")
+
+
+def _load_job_state() -> dict:
+    try:
+        with open(_job_state_path(), encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_job_state(state: dict) -> None:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(_job_state_path(), "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False)
+
+
+_PACER: _Pacer | None = None
+
+
+def run_job(mode: str) -> None:
+    """mode: 'backfill'(3년치 전체) | 'season'(직전 4개 분기만)."""
+    global _PACER
+    key = resolve_key(None)
+    corps = sorted(load_corp_map(key)["entries"], key=lambda e: e["corp_name"])
+    this_year = dt.date.today().year
+    if mode == "backfill":
+        periods = dart_store.year_range_periods(this_year - 3, this_year)
+    else:
+        periods = dart_store.rolling_periods()
+
+    # 이어하기: backfill은 마지막 완료 지점부터
+    state = _load_job_state()
+    start_idx = state.get("index", 0) if (
+        mode == "backfill" and state.get("mode") == "backfill") else 0
+
+    _PACER = _Pacer()
+    dart_store.API_HOOK = _PACER
+    JOB.update(running=True, mode=mode, total=len(corps), done=start_idx,
+               added=0, current="", message="", errors=[],
+               calls_today=_PACER.quota["used"])
+    try:
+        for i in range(start_idx, len(corps)):
+            corp = corps[i]
+            JOB["current"] = f"{corp['corp_name']} ({corp['stock_code']})"
+            try:
+                _store, added = dart_store.ensure_periods(key, corp, DATA_DIR, periods)
+                JOB["added"] += added
+            except dart_store.BudgetExceeded as e:
+                JOB["message"] = str(e)
+                if mode == "backfill":
+                    _save_job_state({"mode": "backfill", "index": i})
+                return
+            except Exception as e:  # noqa: BLE001 — 한 종목 실패는 건너뛴다
+                JOB["errors"].append(f"{corp['corp_name']}: {e}")
+                if len(JOB["errors"]) > 20:
+                    JOB["message"] = "오류가 너무 많아 중단 (인증키/네트워크 확인)"
+                    return
+            JOB["done"] = i + 1
+        if mode == "backfill":
+            _save_job_state({})  # 완주 — 다음 backfill은 처음부터(스킵이 빨라서 무방)
+        JOB["message"] = f"완료 — 새로 받은 보고서 {JOB['added']:,}건"
+    finally:
+        if _PACER:
+            save_quota(_PACER.quota)
+        dart_store.API_HOOK = None
+        JOB["running"] = False
+        JOB["current"] = ""
+
+
+def start_job(mode: str) -> bool:
+    with _LOCK:
+        if JOB["running"]:
+            return False
+        # 스레드 시작 전에 상태를 리셋해야 이전 잡의 완료 메시지가
+        # 새 잡 것으로 오인되지 않는다
+        JOB.update(running=True, mode=mode, total=0, done=0, current="",
+                   added=0, message="", errors=[])
+        threading.Thread(target=run_job, args=(mode,), daemon=True).start()
+        return True
+
+
+# ---------------------------------------------------------------------------
+# 조회
+# ---------------------------------------------------------------------------
 
 def list_stores() -> list[dict]:
     out = []
-    for path in sorted(glob.glob(os.path.join(DATA_DIR, "*.json"))):
+    for path in sorted(glob.glob(os.path.join(DATA_DIR, "[0-9]*.json"))):
         store = dart_store.load_store(path)
         if not store:
             continue
@@ -46,7 +195,6 @@ def list_stores() -> list[dict]:
             "corp_name": store.get("corp_name"),
             "updated": store.get("updated"),
             "quarters": len(store.get("quarterly", [])),
-            "years": len(store.get("annual", [])),
             "latest": (store.get("quarterly") or [{}])[-1].get("label"),
         })
     return out
@@ -60,30 +208,10 @@ def find_store(stock_code: str) -> dict | None:
     return None
 
 
-def do_add(key: str, query: str) -> dict:
-    corp = lookup_corp(load_corp_map(key), query)
-    this_year = dt.date.today().year
-    with _LOCK:
-        return dart_store.update_stock(key, corp, DATA_DIR,
-                                       this_year - 3, this_year)
-
-
-def do_update(key: str, stock_code: str) -> dict:
-    store = find_store(stock_code)
-    if not store:
-        raise SystemExit(f"저장된 종목이 아닙니다: {stock_code}")
-    corp = {"corp_code": store["corp_code"], "corp_name": store["corp_name"],
-            "stock_code": store["stock_code"]}
-    this_year = dt.date.today().year
-    with _LOCK:
-        return dart_store.update_stock(key, corp, DATA_DIR,
-                                       this_year - 1, this_year)
-
-
 class Handler(BaseHTTPRequestHandler):
-    server_version = "DartCollector/1.0"
+    server_version = "DartCollector/2.0"
 
-    def log_message(self, fmt, *args):  # 조용히
+    def log_message(self, fmt, *args):
         pass
 
     def _send(self, code: int, body: bytes, ctype: str) -> None:
@@ -103,6 +231,8 @@ class Handler(BaseHTTPRequestHandler):
             self._send(200, PAGE.encode("utf-8"), "text/html; charset=utf-8")
         elif url.path == "/api/stocks":
             self._json(list_stores())
+        elif url.path == "/api/job":
+            self._json(JOB)
         elif url.path.startswith("/api/stock/"):
             code = url.path.rsplit("/", 1)[-1]
             store = find_store(code)
@@ -118,28 +248,38 @@ class Handler(BaseHTTPRequestHandler):
         try:
             length = int(self.headers.get("Content-Length") or 0)
             payload = json.loads(self.rfile.read(length) or b"{}")
-            key = resolve_key(None)
-            if url.path == "/api/add":
-                store = do_add(key, str(payload.get("query", "")).strip())
-                self._json({"ok": True, "stock_code": store["stock_code"],
-                            "corp_name": store["corp_name"],
-                            "quarters": len(store["quarterly"])})
-            elif url.path == "/api/update":
-                store = do_update(key, str(payload.get("code", "")).strip())
-                self._json({"ok": True, "stock_code": store["stock_code"],
-                            "quarters": len(store["quarterly"])})
-            elif url.path == "/api/update-all":
-                results = []
-                for s in list_stores():
-                    store = do_update(key, s["stock_code"])
-                    results.append({"stock_code": store["stock_code"],
-                                    "quarters": len(store["quarterly"])})
-                self._json({"ok": True, "results": results})
+            if url.path == "/api/job/start":
+                mode = payload.get("mode")
+                if mode not in ("backfill", "season"):
+                    self._json({"ok": False, "error": "mode?"}, 400)
+                    return
+                resolve_key(None)  # 키 확인
+                started = start_job(mode)
+                self._json({"ok": started,
+                            "error": None if started else "이미 실행 중"})
+            elif url.path == "/api/job/stop":
+                if _PACER:
+                    _PACER.stop = True
+                self._json({"ok": True})
+            elif url.path == "/api/update-one":
+                key = resolve_key(None)
+                code = str(payload.get("code", "")).strip()
+                store = find_store(code)
+                if not store:
+                    self._json({"ok": False, "error": "저장된 종목 아님"}, 404)
+                    return
+                corp = {"corp_code": store["corp_code"],
+                        "corp_name": store["corp_name"],
+                        "stock_code": store["stock_code"]}
+                with _LOCK:
+                    _s, added = dart_store.ensure_periods(
+                        key, corp, DATA_DIR, dart_store.rolling_periods())
+                self._json({"ok": True, "added": added})
             else:
                 self._json({"error": "not found"}, 404)
-        except SystemExit as e:  # lookup 실패, 키 없음 등 사용자 오류
+        except SystemExit as e:
             self._json({"ok": False, "error": str(e)}, 400)
-        except Exception as e:  # noqa: BLE001 — 화면에 사유를 보여준다
+        except Exception as e:  # noqa: BLE001
             self._json({"ok": False, "error": f"{type(e).__name__}: {e}"}, 500)
 
 
@@ -182,9 +322,13 @@ button { font: inherit; font-size: 13px; color: var(--ink);
   border-radius: 7px; padding: 6px 14px; cursor: pointer; }
 button:hover { background: var(--page); }
 button.primary { border-color: var(--accent); color: var(--accent); font-weight: 600; }
-button:disabled { opacity: .5; cursor: wait; }
-#status { font-size: 13px; color: var(--ink2); min-height: 18px; }
-#status.err { color: var(--bad); white-space: pre-wrap; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+#progress-wrap { margin-top: 10px; display: none; }
+#progress-bar { height: 6px; background: var(--grid); border-radius: 999px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0; background: var(--accent); transition: width .5s; }
+#job-line { font-size: 13px; color: var(--ink2); margin-top: 6px; }
+#job-msg { font-size: 13px; margin-top: 4px; }
+#job-msg.err { color: var(--bad); }
 table { border-collapse: collapse; width: 100%; font-size: 13px; }
 th, td { padding: 6px 8px; white-space: nowrap; text-align: right;
   font-variant-numeric: tabular-nums; }
@@ -195,7 +339,7 @@ tbody tr:last-child { border-bottom: none; }
 #stock-list tr { cursor: pointer; }
 #stock-list tr:hover { background: var(--page); }
 #stock-list tr.active td:first-child { color: var(--accent); font-weight: 650; }
-.table-wrap { overflow-x: auto; }
+.table-wrap { overflow-x: auto; max-height: 420px; overflow-y: auto; }
 .neg { color: var(--bad); }
 .tabs { display: flex; gap: 8px; margin-bottom: 10px; }
 .tabs button.on { border-color: var(--accent); color: var(--accent); font-weight: 600; }
@@ -204,29 +348,37 @@ tbody tr:last-child { border-bottom: none; }
 </head>
 <body>
 <div class="wrap">
-  <h1>다트 재무 데이터 수집기<small>매출액 · 영업이익 · 판관비 · 재고자산 (단위: 백만원)</small></h1>
+  <h1>다트 재무 데이터 수집기<small>전 상장사 · 매출액 · 영업이익 · 판관비 · 재고자산 (단위: 백만원)</small></h1>
 
   <section class="panel">
     <div class="row">
-      <input type="text" id="query" placeholder="종목명 또는 종목코드 (예: 효성중공업)">
-      <button class="primary" id="btn-add">종목 추가 (3년치 수집)</button>
-      <button id="btn-update-all">전체 업데이트</button>
+      <button class="primary" id="btn-backfill">전체 수집 시작/이어하기 (3년치)</button>
+      <button class="primary" id="btn-season">실적시즌 업데이트 (직전 4개 분기)</button>
+      <button id="btn-stop" disabled>중지</button>
     </div>
-    <p id="status"></p>
+    <div id="progress-wrap">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <div id="job-line"></div>
+    </div>
+    <div id="job-msg"></div>
+    <p class="hint">전체 수집은 다트 일일 한도(2만 건) 때문에 첫 회는 2~3일에
+      나뉠 수 있습니다 — 한도에 닿으면 자동으로 멈추고, 다음 날 같은 버튼을
+      누르면 이어서 받습니다(이미 받은 보고서는 건너뜀). 실적시즌 업데이트는
+      새로 공시된 보고서만 조회하므로 시즌 중 몇 번을 눌러도 가볍습니다.</p>
   </section>
 
   <section class="panel">
-    <h2>종목</h2>
-    <div class="table-wrap">
+    <div class="row" style="justify-content: space-between">
+      <h2 style="margin:0">종목 <span id="count" style="font-weight:400;color:var(--muted)"></span></h2>
+      <input type="text" id="filter" placeholder="종목명/코드 검색">
+    </div>
+    <div class="table-wrap" style="margin-top:8px">
       <table>
         <thead><tr><th>종목</th><th>코드</th><th>분기 수</th><th>최근 분기</th>
           <th>마지막 수집</th><th></th></tr></thead>
         <tbody id="stock-list"></tbody>
       </table>
     </div>
-    <p class="hint">새 분기·반기·사업보고서가 공시되면 [업데이트]를 누르세요 —
-      작년~올해 보고서를 다시 받아 새로 나온 분기만 저장소에 쌓입니다(중복 안전).
-      데이터는 data/ 폴더의 종목별 JSON에 보관됩니다.</p>
   </section>
 
   <section class="panel" id="detail" hidden>
@@ -242,15 +394,15 @@ tbody tr:last-child { border-bottom: none; }
       </table>
     </div>
     <p class="hint">손익 항목(매출·영업이익·판관비)은 보고서 누적치의 분기 차분,
-      재고자산은 분기말 잔액. 판관비율 = 판관비 ÷ 매출, 재고/매출 = 재고자산 ÷ 매출(분기).
-      연결(CFS) 재무제표 기준(없으면 별도).</p>
+      재고자산은 분기말 잔액. 판관비율 = 판관비 ÷ 매출, 재고/매출 = 재고자산 ÷
+      매출(분기). 연결(CFS) 재무제표 기준(없으면 별도).</p>
   </section>
 </div>
 
 <script>
 "use strict";
 const $ = id => document.getElementById(id);
-let currentCode = null, currentTab = "q", cache = {};
+let currentCode = null, currentTab = "q", cache = {}, stocks = [], poller = null;
 
 function fmt(v) {
   if (v == null) return "–";
@@ -263,23 +415,21 @@ function pct(a, b) {
   const s = v.toFixed(1) + "%";
   return v < 0 ? `<span class="neg">${s}</span>` : s;
 }
-function setStatus(msg, isErr) {
-  $("status").textContent = msg || "";
-  $("status").className = isErr ? "err" : "";
-}
 async function api(path, body) {
   const opt = body ? { method: "POST", body: JSON.stringify(body) } : {};
   const res = await fetch(path, opt);
-  const data = await res.json();
-  if (body && !data.ok) throw new Error(data.error || "실패");
-  return data;
+  return res.json();
 }
 
-async function refreshList() {
-  const stocks = await api("/api/stocks");
+function renderList() {
+  const q = $("filter").value.trim().toLowerCase();
   const tbody = $("stock-list");
   tbody.innerHTML = "";
+  let shown = 0;
   for (const s of stocks) {
+    if (q && !(s.corp_name.toLowerCase().includes(q) || s.stock_code.includes(q))) continue;
+    shown += 1;
+    if (shown > 500) break;  // 필터로 좁혀 쓰세요
     const tr = document.createElement("tr");
     if (s.stock_code === currentCode) tr.className = "active";
     tr.innerHTML = `<td>${s.corp_name}</td><td>${s.stock_code}</td>` +
@@ -287,21 +437,36 @@ async function refreshList() {
       `<td>${(s.updated || "").replace("T", " ")}</td><td></td>`;
     const btn = document.createElement("button");
     btn.textContent = "업데이트";
-    btn.addEventListener("click", e => { e.stopPropagation(); update(s.stock_code); });
+    btn.addEventListener("click", async e => {
+      e.stopPropagation();
+      btn.disabled = true;
+      await api("/api/update-one", { code: s.stock_code });
+      btn.disabled = false;
+      await refreshList();
+      if (currentCode === s.stock_code) showDetail(s.stock_code);
+    });
     tr.lastChild.appendChild(btn);
     tr.addEventListener("click", () => showDetail(s.stock_code));
     tbody.appendChild(tr);
   }
+  $("count").textContent = `수집됨 ${stocks.length.toLocaleString()}개` +
+    (q ? ` · 표시 ${Math.min(shown, 500)}` : "");
+}
+
+async function refreshList() {
+  stocks = await api("/api/stocks");
+  renderList();
 }
 
 async function showDetail(code) {
   currentCode = code;
   delete cache[code];
-  const store = cache[code] || (cache[code] = await api("/api/stock/" + code));
+  const store = await api("/api/stock/" + code);
+  cache[code] = store;
   $("detail").hidden = false;
   $("detail-title").textContent = `${store.corp_name} (${store.stock_code})`;
   renderDetail(store);
-  refreshList();
+  renderList();
 }
 
 function renderDetail(store) {
@@ -324,50 +489,49 @@ function renderDetail(store) {
   }
 }
 
-function busy(on, msg) {
-  for (const b of document.querySelectorAll("button")) b.disabled = on;
-  if (msg !== undefined) setStatus(msg);
+// ---- 잡 상태 ----
+function setJobUi(job) {
+  const running = job.running;
+  $("btn-backfill").disabled = running;
+  $("btn-season").disabled = running;
+  $("btn-stop").disabled = !running;
+  $("progress-wrap").style.display = running || job.done ? "block" : "none";
+  const pctDone = job.total ? (job.done / job.total * 100) : 0;
+  $("progress-fill").style.width = pctDone.toFixed(1) + "%";
+  $("job-line").textContent = running || job.done
+    ? `${job.done.toLocaleString()}/${job.total.toLocaleString()} 종목` +
+      ` · 오늘 API ${job.calls_today.toLocaleString()}건` +
+      ` · 새 보고서 ${job.added.toLocaleString()}건` +
+      (job.current ? ` · ${job.current}` : "")
+    : "";
+  $("job-msg").textContent = job.message ||
+    (job.errors && job.errors.length ? `오류 ${job.errors.length}건: ${job.errors[0]}` : "");
+  $("job-msg").className = (job.errors && job.errors.length) ? "err" : "";
 }
 
-async function run(msg, fn) {
-  busy(true, msg);
-  try {
-    await fn();
-    setStatus("완료");
-  } catch (e) {
-    setStatus(String(e.message || e), true);
-  } finally {
-    busy(false);
+async function pollJob() {
+  const job = await api("/api/job");
+  setJobUi(job);
+  if (job.running) {
+    if (!poller) poller = setInterval(pollJob, 2000);
+  } else if (poller) {
+    clearInterval(poller);
+    poller = null;
     refreshList();
   }
 }
 
-function update(code) {
-  run(`${code} 업데이트 중... (다트 조회, 수십 초 걸릴 수 있음)`, async () => {
-    await api("/api/update", { code });
-    if (currentCode === code) await showDetail(code);
-  });
+async function startJob(mode) {
+  const r = await api("/api/job/start", { mode });
+  if (r.error) { $("job-msg").textContent = r.error; $("job-msg").className = "err"; }
+  pollJob();
+  if (!poller) poller = setInterval(pollJob, 2000);
 }
 
-$("btn-add").addEventListener("click", () => {
-  const q = $("query").value.trim();
-  if (!q) { setStatus("종목명이나 종목코드를 입력하세요.", true); return; }
-  run(`'${q}' 수집 중... (3년치 보고서 조회 — 최초 실행은 1~2분 걸릴 수 있음)`,
-    async () => {
-      const r = await api("/api/add", { query: q });
-      $("query").value = "";
-      await showDetail(r.stock_code);
-    });
-});
-$("query").addEventListener("keydown", e => {
-  if (e.key === "Enter") $("btn-add").click();
-});
-$("btn-update-all").addEventListener("click", () => {
-  run("전체 종목 업데이트 중...", async () => {
-    await api("/api/update-all", {});
-    if (currentCode) await showDetail(currentCode);
-  });
-});
+$("btn-backfill").addEventListener("click", () => startJob("backfill"));
+$("btn-season").addEventListener("click", () => startJob("season"));
+$("btn-stop").addEventListener("click", () => api("/api/job/stop", {}));
+$("filter").addEventListener("input", renderList);
 $("tab-q").addEventListener("click", () => {
   currentTab = "q";
   if (currentCode && cache[currentCode]) renderDetail(cache[currentCode]);
@@ -378,6 +542,7 @@ $("tab-a").addEventListener("click", () => {
 });
 
 refreshList();
+pollJob();
 </script>
 </body>
 </html>
@@ -385,15 +550,15 @@ refreshList();
 
 
 def main(argv=None) -> int:
+    global DATA_DIR, DAILY_BUDGET
     argv = list(sys.argv[1:] if argv is None else argv)
     port = 8899
     if "--port" in argv:
-        i = argv.index("--port")
-        port = int(argv[i + 1])
+        port = int(argv[argv.index("--port") + 1])
     if "--dir" in argv:
-        i = argv.index("--dir")
-        global DATA_DIR
-        DATA_DIR = argv[i + 1]
+        DATA_DIR = argv[argv.index("--dir") + 1]
+    if "--budget" in argv:
+        DAILY_BUDGET = int(argv[argv.index("--budget") + 1])
 
     resolve_key(None)  # 키 없으면 안내 후 종료
     os.makedirs(DATA_DIR, exist_ok=True)

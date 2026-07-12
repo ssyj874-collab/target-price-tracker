@@ -97,47 +97,95 @@ class BuildAnnualTest(unittest.TestCase):
                                    "sga": 110, "inventory": 70})
 
 
+CORP = {"corp_code": "00266961", "corp_name": "효성중공업",
+        "stock_code": "298040"}
+
+
 class StoreTest(unittest.TestCase):
-    def test_upsert_idempotent_and_sorted(self):
-        store = {"quarterly": [{"label": "2024.1분기", "revenue": 1, "op": 1,
-                                "sga": None, "inventory": None}],
-                 "annual": []}
-        new_q = [
-            {"label": "2023.4분기", "revenue": 9, "op": 9, "sga": None, "inventory": None},
-            {"label": "2024.1분기", "revenue": 2, "op": 2, "sga": None, "inventory": None},
-        ]
-        dart_store.upsert(store, new_q, [{"year": 2023, "revenue": 9, "op": 9,
-                                          "sga": None, "inventory": None}])
-        labels = [r["label"] for r in store["quarterly"]]
-        self.assertEqual(labels, ["2023.4분기", "2024.1분기"])
-        self.assertEqual(store["quarterly"][1]["revenue"], 2)  # 새 값으로 교체
-        dart_store.upsert(store, new_q, [])  # 한 번 더 — 멱등
-        self.assertEqual(len(store["quarterly"]), 2)
+    def test_ensure_periods_skips_stored_and_saves(self):
+        calls = []
 
-    def test_update_stock_end_to_end_with_mock(self):
-        corp = {"corp_code": "00266961", "corp_name": "효성중공업",
-                "stock_code": "298040"}
-
-        def fake_collect(key, corp_code, year):
-            if year != 2024:
-                return {}
-            return {1: _metrics(100 * M, 10 * M, 20 * M, 50 * M),
-                    4: _metrics(700 * M, 100 * M, 110 * M, 70 * M)}
+        def fake_fetch(key, corp_code, year, q, fs_hint=None):
+            calls.append((year, q, fs_hint))
+            if (year, q) == (2024, 1):
+                return _metrics(100 * M, 10 * M, 20 * M, 50 * M), "CFS"
+            return None, None  # 미공시
 
         with tempfile.TemporaryDirectory() as d:
-            with mock.patch.object(dart_store, "collect_year", side_effect=fake_collect):
-                store = dart_store.update_stock("KEY", corp, d, 2023, 2024)
-            path = dart_store.store_path(d, corp)
-            self.assertTrue(os.path.exists(path))
+            with mock.patch.object(dart_store, "fetch_period", side_effect=fake_fetch):
+                store, added = dart_store.ensure_periods(
+                    "KEY", CORP, d, [(2024, 1), (2024, 2)])
+                self.assertEqual(added, 1)
+                self.assertEqual(len(calls), 2)
+                # 두 번째 실행: 저장된 (2024,1)은 건너뛰고 (2024,2)만 재시도
+                calls.clear()
+                store, added = dart_store.ensure_periods(
+                    "KEY", CORP, d, [(2024, 1), (2024, 2)])
+                self.assertEqual(added, 0)
+                self.assertEqual([c[:2] for c in calls], [(2024, 2)])
+                # fs_div 힌트가 기억됨
+                self.assertEqual(calls[0][2], "CFS")
+            path = dart_store.store_path(d, CORP)
             with open(path, encoding="utf-8") as f:
                 saved = json.load(f)
-        self.assertEqual(saved["corp_name"], "효성중공업")
-        self.assertEqual(len(saved["quarterly"]), 2)  # Q1 + Q4(재고만)
-        self.assertEqual(saved["annual"][0]["year"], 2024)
+        self.assertEqual(saved["cums"]["2024"]["1"]["revenue"], 100 * M)
+        self.assertEqual(saved["quarterly"][0]["revenue"], 100)
         self.assertIn("updated", saved)
 
+    def test_budget_exceeded_saves_partial(self):
+        seen = []
 
-class FetchReportTest(unittest.TestCase):
+        def fake_fetch(key, corp_code, year, q, fs_hint=None):
+            seen.append((year, q))
+            if len(seen) == 1:
+                return _metrics(100 * M, 10 * M, None, None), "CFS"
+            raise dart_store.BudgetExceeded("한도")
+
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(dart_store, "fetch_period", side_effect=fake_fetch):
+                with self.assertRaises(dart_store.BudgetExceeded):
+                    dart_store.ensure_periods("KEY", CORP, d,
+                                              [(2024, 1), (2024, 2)])
+            saved = dart_store.load_store(dart_store.store_path(d, CORP))
+        # 한도 전에 받은 (2024,1)은 저장돼 있어야 한다
+        self.assertEqual(saved["cums"]["2024"]["1"]["revenue"], 100 * M)
+
+    def test_update_stock_compat(self):
+        def fake_fetch(key, corp_code, year, q, fs_hint=None):
+            if year == 2024 and q in (1, 4):
+                vals = {1: _metrics(100 * M, 10 * M, 20 * M, 50 * M),
+                        4: _metrics(700 * M, 100 * M, 110 * M, 70 * M)}
+                return vals[q], "CFS"
+            return None, None
+
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(dart_store, "fetch_period", side_effect=fake_fetch):
+                store = dart_store.update_stock("KEY", CORP, d, 2023, 2024)
+        self.assertEqual(len(store["quarterly"]), 2)  # Q1 + Q4(재고만)
+        self.assertEqual(store["annual"][0]["year"], 2024)
+
+
+class PeriodsTest(unittest.TestCase):
+    def test_rolling_periods_excludes_current_quarter(self):
+        import datetime as dt
+
+        periods = dart_store.rolling_periods(dt.date(2026, 7, 12))
+        # 2026년 3분기 진행 중 → 직전 4개: 2025.3 ~ 2026.2
+        self.assertEqual(periods, [(2025, 3), (2025, 4), (2026, 1), (2026, 2)])
+
+    def test_rolling_periods_year_boundary(self):
+        import datetime as dt
+
+        periods = dart_store.rolling_periods(dt.date(2026, 2, 1))
+        self.assertEqual(periods, [(2025, 1), (2025, 2), (2025, 3), (2025, 4)])
+
+    def test_missing_periods(self):
+        store = {"cums": {"2024": {"1": {}, "2": {}}}}
+        got = dart_store.missing_periods(store, [(2024, 1), (2024, 3), (2025, 1)])
+        self.assertEqual(got, [(2024, 3), (2025, 1)])
+
+
+class FetchPeriodTest(unittest.TestCase):
     def test_cfs_then_ofs_fallback(self):
         calls = []
 
@@ -145,12 +193,38 @@ class FetchReportTest(unittest.TestCase):
             calls.append(params["fs_div"])
             if params["fs_div"] == "CFS":
                 return {"status": "013", "list": []}
-            return {"status": "000", "list": [_row("IS", "매출액", "100")]}
+            return {"status": "000", "list": [
+                _row("IS", "매출액", "100"), _row("IS", "영업이익", "10")]}
 
         with mock.patch.object(dart_store, "_api_json", side_effect=fake_api):
-            rows = dart_store.fetch_report("K", "C", 2024, "11011")
+            metrics, fs = dart_store.fetch_period("K", "C", 2024, 4)
         self.assertEqual(calls, ["CFS", "OFS"])
-        self.assertEqual(len(rows), 1)
+        self.assertEqual(fs, "OFS")
+        self.assertEqual(metrics["revenue"], 100)
+
+    def test_fs_hint_tried_first(self):
+        calls = []
+
+        def fake_api(path, **params):
+            calls.append(params["fs_div"])
+            return {"status": "000", "list": [
+                _row("IS", "매출액", "100"), _row("IS", "영업이익", "10")]}
+
+        with mock.patch.object(dart_store, "_api_json", side_effect=fake_api):
+            _m, fs = dart_store.fetch_period("K", "C", 2024, 1, fs_hint="OFS")
+        self.assertEqual(calls, ["OFS"])  # 힌트 먼저, 성공하면 1회로 끝
+        self.assertEqual(fs, "OFS")
+
+    def test_api_hook_invoked(self):
+        count = []
+        dart_store.API_HOOK = lambda: count.append(1)
+        try:
+            with mock.patch.object(dart_store, "_api_json",
+                                   return_value={"status": "013", "list": []}):
+                dart_store.fetch_period("K", "C", 2024, 1)
+        finally:
+            dart_store.API_HOOK = None
+        self.assertEqual(len(count), 2)  # CFS·OFS 각 1회
 
 
 if __name__ == "__main__":
