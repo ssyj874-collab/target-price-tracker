@@ -49,30 +49,36 @@ def _call_api(path: str, **params) -> dict:
         API_HOOK()
     return _api_json(path, **params)
 
-# 계정 매칭: account_id(표준 태그) 우선, 없으면 account_nm(공백 제거) 비교
+# 계정 매칭: account_id(표준 태그) 우선, 없으면 account_nm(정규화) 비교.
+# 손익 항목은 IS뿐 아니라 CIS(단일 포괄손익계산서)에도 온다 — 이걸 안
+# 받으면 포괄손익 단일 표를 쓰는 회사가 통째로 빈다.
 _MATCHERS = {
     "revenue": {
         "ids": {"ifrs-full_Revenue", "ifrs_Revenue"},
-        "names": {"매출액", "수익(매출액)", "영업수익", "매출"},
-        "sj": "IS", "cumulative": True,
+        "names": {"매출액", "수익(매출액)", "매출액(수익)", "영업수익", "매출"},
+        "sj": {"IS", "CIS"}, "cumulative": True,
     },
     "op": {
         "ids": {"dart_OperatingIncomeLoss"},
-        "names": {"영업이익", "영업이익(손실)"},
-        "sj": "IS", "cumulative": True,
+        "names": {"영업이익", "영업이익(손실)", "영업손실", "영업손실(이익)",
+                  "영업손익"},
+        "sj": {"IS", "CIS"}, "cumulative": True,
     },
     "sga": {
         "ids": {"dart_TotalSellingGeneralAdministrativeExpenses"},
-        "names": {"판매비와관리비", "판매비및관리비", "판매비와 관리비"},
-        "sj": "IS", "cumulative": True,
+        "names": {"판매비와관리비", "판매비및관리비"},
+        "sj": {"IS", "CIS"}, "cumulative": True,
     },
     "inventory": {
         "ids": {"ifrs-full_Inventories", "ifrs_Inventories"},
         "names": {"재고자산"},
-        "sj": "BS", "cumulative": False,
+        "sj": {"BS"}, "cumulative": False,
     },
 }
 _METRICS = tuple(_MATCHERS)
+
+# "Ⅰ. 매출액", "1.매출액" 같은 순번 접두어 제거용
+_ORDINAL_PREFIX = re.compile(r"^[0-9IVXⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]+\.")
 
 
 def _amount(row: dict, cumulative: bool) -> Optional[int]:
@@ -95,8 +101,9 @@ def extract_metrics(rows: list[dict]) -> dict[str, Optional[int]]:
         sj = (r.get("sj_div") or "").strip()
         acc_id = (r.get("account_id") or "").strip()
         name = re.sub(r"\s+", "", r.get("account_nm") or "")
+        name = _ORDINAL_PREFIX.sub("", name)
         for metric, m in _MATCHERS.items():
-            if out[metric] is not None or sj != m["sj"]:
+            if out[metric] is not None or sj not in m["sj"]:
                 continue
             if acc_id in m["ids"] or name in m["names"]:
                 out[metric] = _amount(r, m["cumulative"])

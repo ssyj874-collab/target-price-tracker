@@ -109,15 +109,24 @@ _CERT_HELP = """SSL 인증서 오류 — macOS의 python.org 파이썬은 인증
   2) python3 -m pip install certifi   (이 스크립트가 자동으로 사용합니다)"""
 
 
-def _http_get(url: str) -> bytes:
+def _http_get(url: str, retries: int = 2) -> bytes:
     req = urllib.request.Request(url, headers=_HEADERS)
-    try:
-        with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
-            return resp.read()
-    except urllib.error.URLError as e:
-        if isinstance(getattr(e, "reason", None), ssl.SSLCertVerificationError):
-            raise SystemExit(_CERT_HELP)
-        raise
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
+                return resp.read()
+        except urllib.error.URLError as e:
+            if isinstance(getattr(e, "reason", None), ssl.SSLCertVerificationError):
+                raise SystemExit(_CERT_HELP)
+            if attempt >= retries:
+                raise
+        except (TimeoutError, OSError):
+            if attempt >= retries:
+                raise
+        import time
+
+        time.sleep(2 * (attempt + 1))  # 일시적 네트워크 문제 재시도
+    raise RuntimeError("unreachable")
 
 
 def _api_json(path: str, **params) -> dict:

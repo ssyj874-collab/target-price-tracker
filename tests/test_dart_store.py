@@ -46,6 +46,25 @@ class ExtractMetricsTest(unittest.TestCase):
         rows = [_row("IS", "재고자산", "999")]
         self.assertIsNone(dart_store.extract_metrics(rows)["inventory"])
 
+    def test_cis_single_statement_company(self):
+        # 단일 포괄손익계산서(CIS)만 쓰는 회사도 손익 항목을 잡아야 한다
+        rows = [
+            _row("CIS", "매출액", "100"),
+            _row("CIS", "영업이익", "10"),
+            _row("CIS", "판매비와관리비", "5"),
+        ]
+        m = dart_store.extract_metrics(rows)
+        self.assertEqual((m["revenue"], m["op"], m["sga"]), (100, 10, 5))
+
+    def test_ordinal_prefix_and_loss_names(self):
+        rows = [
+            _row("IS", "Ⅰ. 매출액", "100"),
+            _row("IS", "영업손실", "-10"),
+        ]
+        m = dart_store.extract_metrics(rows)
+        self.assertEqual(m["revenue"], 100)
+        self.assertEqual(m["op"], -10)
+
 
 class BuildQuartersTest(unittest.TestCase):
     def test_differencing_and_inventory_point(self):
