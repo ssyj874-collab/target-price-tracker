@@ -221,6 +221,27 @@ class FetchPeriodTest(unittest.TestCase):
         self.assertEqual(fs, "OFS")
         self.assertEqual(metrics["revenue"], 100)
 
+    def test_bank_without_revenue_still_stored(self):
+        # 은행·지주는 매출액 계정이 없다 — 영업이익만으로도 채택
+        def fake_api(path, **params):
+            return {"status": "000", "list": [
+                _row("CIS", "영업이익", "1,000,000,000,000")]}
+
+        with mock.patch.object(dart_store, "_api_json", side_effect=fake_api):
+            metrics, fs = dart_store.fetch_period("K", "C", 2024, 1)
+        self.assertIsNotNone(metrics)
+        self.assertIsNone(metrics["revenue"])
+        self.assertEqual(metrics["op"], 1_000_000_000_000)
+
+    def test_quarters_with_op_only(self):
+        year_data = {2024: {
+            1: _metrics(None, 10 * M, None, None),
+            2: _metrics(None, 25 * M, None, None),
+        }}
+        rows = dart_store.build_quarters(year_data)
+        self.assertEqual([r["op"] for r in rows], [10, 15])
+        self.assertEqual([r["revenue"] for r in rows], [None, None])
+
     def test_fs_hint_tried_first(self):
         calls = []
 

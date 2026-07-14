@@ -129,7 +129,9 @@ def fetch_period(key: str, corp_code: str, year: int, q: int,
         if not rows:
             continue
         metrics = extract_metrics(rows)
-        if metrics["revenue"] is not None and metrics["op"] is not None:
+        # 은행·지주 등 금융사는 매출액 계정이 없다 — 영업이익만 있어도
+        # 저장한다(매출 칸은 비움). 둘 다 없으면 이 재무제표는 불채택.
+        if metrics["op"] is not None or metrics["revenue"] is not None:
             return metrics, fs
     return None, None
 
