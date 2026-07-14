@@ -271,9 +271,13 @@ class Handler(BaseHTTPRequestHandler):
                 corp = {"corp_code": store["corp_code"],
                         "corp_name": store["corp_name"],
                         "stock_code": store["stock_code"]}
+                # 단일 종목은 호출 부담이 없으므로 3년치 전체 범위를 채운다
+                # (빠진 보고서만 조회 — 이미 있으면 호출 0건)
+                this_year = dt.date.today().year
                 with _LOCK:
                     _s, added = dart_store.ensure_periods(
-                        key, corp, DATA_DIR, dart_store.rolling_periods())
+                        key, corp, DATA_DIR,
+                        dart_store.year_range_periods(this_year - 3, this_year))
                 self._json({"ok": True, "added": added})
             else:
                 self._json({"error": "not found"}, 404)
