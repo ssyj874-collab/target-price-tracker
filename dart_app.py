@@ -174,29 +174,46 @@ def run_job(mode: str) -> None:
 
 
 def git_backup() -> str:
-    """data/ 폴더를 커밋하고 GitHub로 푸시. 결과를 한 줄로 반환."""
+    """data/ 폴더를 커밋하고 GitHub로 푸시. 결과를 한 줄로 반환.
+
+    push는 커밋 유무와 무관하게 항상 시도한다 — 이전에 커밋까지 되고
+    push만 실패(타임아웃 등)한 경우를 재시도로 살리기 위해.
+    """
     root = os.path.dirname(os.path.abspath(__file__))
     if not os.path.isdir(os.path.join(root, ".git")):
         return "git 저장소가 아니라 백업 생략"
 
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0")  # 로그인 입력 대기로 멈추지 않게
+
     def run(*args, timeout=120):
         return subprocess.run(args, cwd=root, capture_output=True,
-                              text=True, timeout=timeout)
+                              text=True, timeout=timeout, env=env)
 
     try:
         run("git", "add", DATA_DIR)
-        if run("git", "diff", "--cached", "--quiet").returncode == 0:
-            return "GitHub 백업: 변경 없음"
-        stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
-        commit = run("git", "commit", "-m", f"재무 데이터 백업 {stamp}")
-        if commit.returncode != 0:
-            return f"GitHub 백업 실패(commit): {commit.stderr.strip()[:200]}"
-        push = run("git", "push")
+        committed = False
+        if run("git", "diff", "--cached", "--quiet").returncode != 0:
+            stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
+            commit = run("git", "commit", "-m", f"재무 데이터 백업 {stamp}")
+            if commit.returncode != 0:
+                return f"GitHub 백업 실패(commit): {commit.stderr.strip()[:200]}"
+            committed = True
+        # 첫 백업은 파일이 수천 개라 오래 걸릴 수 있다 — 여유 있게
+        push = run("git", "push", timeout=900)
         if push.returncode != 0:
-            return ("GitHub 백업 실패(push): " + push.stderr.strip()[:200]
-                    + " — GitHub 로그인(토큰) 문제일 수 있음")
-        return "GitHub 백업 완료"
-    except (OSError, subprocess.TimeoutExpired) as e:
+            err = (push.stderr or push.stdout).strip()
+            if "terminal prompts disabled" in err or "Username" in err \
+                    or "Authentication" in err or "403" in err:
+                return ("GitHub 백업 실패: GitHub 로그인 정보가 없습니다 — "
+                        "이 메시지를 Claude에게 보여주세요. (데이터는 컴퓨터에 안전하게 저장돼 있음)")
+            return f"GitHub 백업 실패(push): {err[:200]}"
+        if committed:
+            return "GitHub 백업 완료"
+        return "GitHub 백업: 새 변경 없음 (밀린 업로드가 있었다면 마저 올림)"
+    except subprocess.TimeoutExpired:
+        return ("GitHub 백업 실패: 업로드 시간 초과 — 인터넷이 느리거나 파일이 많습니다. "
+                "[GitHub 백업]을 다시 누르면 이어서 시도합니다. (데이터는 컴퓨터에 안전)")
+    except OSError as e:
         return f"GitHub 백업 실패: {e}"
 
 
