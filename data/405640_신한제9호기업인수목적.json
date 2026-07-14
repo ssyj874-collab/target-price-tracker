@@ -1,0 +1,63 @@
+{
+ "corp_code": "01594764",
+ "corp_name": "신한제9호기업인수목적",
+ "stock_code": "405640",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -38491474,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -44441114,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -15112880,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -44,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:15:58"
+}

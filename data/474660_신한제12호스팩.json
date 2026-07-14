@@ -1,0 +1,27 @@
+{
+ "corp_code": "01809569",
+ "corp_name": "신한제12호스팩",
+ "stock_code": "474660",
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 0,
+    "op": -222881560,
+    "sga": 222881560,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:14:41"
+}

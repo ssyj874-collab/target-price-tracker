@@ -1,0 +1,211 @@
+{
+ "corp_code": "00990819",
+ "corp_name": "아티스트스튜디오",
+ "stock_code": "200350",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10123667746,
+    "op": 1572653109,
+    "sga": 343193681,
+    "inventory": 3981544683
+   },
+   "2": {
+    "revenue": 28500118174,
+    "op": 968993946,
+    "sga": 2517832900,
+    "inventory": 3279281116
+   },
+   "3": {
+    "revenue": 33920608688,
+    "op": -2022979885,
+    "sga": 3712781586,
+    "inventory": 3470124479
+   },
+   "4": {
+    "revenue": 41863614133,
+    "op": -7787502929,
+    "sga": 7128029840,
+    "inventory": 3088257879
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5435327070,
+    "op": -506352788,
+    "sga": 892779415,
+    "inventory": 3525857879
+   },
+   "2": {
+    "revenue": 15019603011,
+    "op": -1564662881,
+    "sga": 1600881511,
+    "inventory": 2846757879
+   },
+   "3": {
+    "revenue": 23596878136,
+    "op": -1339084456,
+    "sga": 2560929743,
+    "inventory": 3193457879
+   },
+   "4": {
+    "revenue": 27306791627,
+    "op": -7321436149,
+    "sga": 5171928408,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2181930050,
+    "op": -688183262,
+    "sga": 1241771597,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5737848604,
+    "op": -1869488961,
+    "sga": 2396814712,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 11496343014,
+    "op": -2403941899,
+    "sga": 3064610803,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14618399763,
+    "op": -3007373300,
+    "sga": 3783374398,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1255096164,
+    "op": -424982899,
+    "sga": 724931677,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 3982,
+   "revenue": 10124,
+   "op": 1573,
+   "sga": 343
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 3279,
+   "revenue": 18376,
+   "op": -604,
+   "sga": 2175
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 3470,
+   "revenue": 5420,
+   "op": -2992,
+   "sga": 1195
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 3088,
+   "revenue": 7943,
+   "op": -5765,
+   "sga": 3415
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 3526,
+   "revenue": 5435,
+   "op": -506,
+   "sga": 893
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 2847,
+   "revenue": 9584,
+   "op": -1058,
+   "sga": 708
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 3193,
+   "revenue": 8577,
+   "op": 226,
+   "sga": 960
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3710,
+   "op": -5982,
+   "sga": 2611
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2182,
+   "op": -688,
+   "sga": 1242
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3556,
+   "op": -1181,
+   "sga": 1155
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5758,
+   "op": -534,
+   "sga": 668
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 3122,
+   "op": -603,
+   "sga": 719
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1255,
+   "op": -425,
+   "sga": 725
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 41864,
+   "op": -7788,
+   "sga": 7128,
+   "inventory": 3088
+  },
+  {
+   "year": 2024,
+   "revenue": 27307,
+   "op": -7321,
+   "sga": 5172,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 14618,
+   "op": -3007,
+   "sga": 3783,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:39:31"
+}

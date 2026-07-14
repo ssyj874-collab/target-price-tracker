@@ -1,0 +1,27 @@
+{
+ "corp_code": "01910759",
+ "corp_name": "삼성스팩10호",
+ "stock_code": "0044K0",
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -27777120,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -28,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:43:31"
+}

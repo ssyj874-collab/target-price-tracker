@@ -1,0 +1,124 @@
+{
+ "corp_code": "01384787",
+ "corp_name": "시프트업",
+ "stock_code": "462870",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 160595179726,
+    "op": 106519105949,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 224084645616,
+    "op": 152676273166,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 42234606788,
+    "op": 26251344145,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 154617107742,
+    "op": 94466613903,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 230116310973,
+    "op": 144014233887,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 294545937439,
+    "op": 181417657557,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 47309371906,
+    "op": 21505889993,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 63489,
+   "op": 46157,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 42235,
+   "op": 26251,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 112383,
+   "op": 68215,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 75499,
+   "op": 49548,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 64430,
+   "op": 37403,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 47309,
+   "op": 21506,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 224085,
+   "op": 152676,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 294546,
+   "op": 181418,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:09:36"
+}

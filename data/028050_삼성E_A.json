@@ -1,0 +1,211 @@
+{
+ "corp_code": "00126308",
+ "corp_name": "삼성E&A",
+ "stock_code": "028050",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 2533450971053,
+    "op": 225368524085,
+    "sga": 97475339494,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5319339215137,
+    "op": 569836969184,
+    "sga": 205148162209,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7797451743520,
+    "op": 723278800046,
+    "sga": 315370984559,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10624917993595,
+    "op": 993128866188,
+    "sga": 457632969865,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2384735479283,
+    "op": 209349578689,
+    "sga": 127545667624,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5071011445730,
+    "op": 471922595217,
+    "sga": 261219497676,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7388044325535,
+    "op": 675849119808,
+    "sga": 391036016847,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9966551344477,
+    "op": 971611686017,
+    "sga": 537562956151,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2097955167196,
+    "op": 157303530634,
+    "sga": 136671435277,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4275977917371,
+    "op": 338160166481,
+    "sga": 269957570912,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6271586984132,
+    "op": 514707024088,
+    "sga": 402129731818,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9028769083650,
+    "op": 792078846892,
+    "sga": 541817326106,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2267382739826,
+    "op": 188193584998,
+    "sga": 155605707223,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 2533451,
+   "op": 225369,
+   "sga": 97475
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 2785888,
+   "op": 344468,
+   "sga": 107673
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 2478113,
+   "op": 153442,
+   "sga": 110223
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 2827466,
+   "op": 269850,
+   "sga": 142262
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 2384735,
+   "op": 209350,
+   "sga": 127546
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 2686276,
+   "op": 262573,
+   "sga": 133674
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2317033,
+   "op": 203927,
+   "sga": 129817
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2578507,
+   "op": 295763,
+   "sga": 146527
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2097955,
+   "op": 157304,
+   "sga": 136671
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 2178023,
+   "op": 180857,
+   "sga": 133286
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1995609,
+   "op": 176547,
+   "sga": 132172
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 2757182,
+   "op": 277372,
+   "sga": 139688
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2267383,
+   "op": 188194,
+   "sga": 155606
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 10624918,
+   "op": 993129,
+   "sga": 457633,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 9966551,
+   "op": 971612,
+   "sga": 537563,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 9028769,
+   "op": 792079,
+   "sga": 541817,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:41:52"
+}

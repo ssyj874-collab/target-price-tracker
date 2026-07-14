@@ -1,0 +1,211 @@
+{
+ "corp_code": "01182408",
+ "corp_name": "소프트캠프",
+ "stock_code": "258790",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3377981204,
+    "op": -1364450304,
+    "sga": 3395867210,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8191948483,
+    "op": -1697912177,
+    "sga": 7252810209,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12815292471,
+    "op": -1763306110,
+    "sga": 10388990152,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 18485371904,
+    "op": -2568547973,
+    "sga": 13779340130,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3120208452,
+    "op": -1318742049,
+    "sga": 3403053557,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7002312863,
+    "op": -2573326418,
+    "sga": 7288278796,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 10924963206,
+    "op": -3115429771,
+    "sga": 10509631174,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16887234056,
+    "op": -1831061034,
+    "sga": 13761706735,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 4011086277,
+    "op": -603250349,
+    "sga": 3362382449,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9101418854,
+    "op": -449691055,
+    "sga": 6762895120,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 15740469231,
+    "op": 324591507,
+    "sga": 10920599810,
+    "inventory": 195573317
+   },
+   "4": {
+    "revenue": 25721722546,
+    "op": 2981626076,
+    "sga": 15610254657,
+    "inventory": 212780219
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4577476575,
+    "op": -1134212264,
+    "sga": 4112965258,
+    "inventory": 75382323
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 3378,
+   "op": -1364,
+   "sga": 3396
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 4814,
+   "op": -333,
+   "sga": 3857
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 4623,
+   "op": -65,
+   "sga": 3136
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 5670,
+   "op": -805,
+   "sga": 3390
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3120,
+   "op": -1319,
+   "sga": 3403
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 3882,
+   "op": -1255,
+   "sga": 3885
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3923,
+   "op": -542,
+   "sga": 3221
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5962,
+   "op": 1284,
+   "sga": 3252
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 4011,
+   "op": -603,
+   "sga": 3362
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5090,
+   "op": 154,
+   "sga": 3401
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 196,
+   "revenue": 6639,
+   "op": 774,
+   "sga": 4158
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 213,
+   "revenue": 9981,
+   "op": 2657,
+   "sga": 4690
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 75,
+   "revenue": 4577,
+   "op": -1134,
+   "sga": 4113
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 18485,
+   "op": -2569,
+   "sga": 13779,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 16887,
+   "op": -1831,
+   "sga": 13762,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 25722,
+   "op": 2982,
+   "sga": 15610,
+   "inventory": 213
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:03:25"
+}

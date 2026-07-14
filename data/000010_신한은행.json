@@ -1,0 +1,185 @@
+{
+ "corp_code": "00149293",
+ "corp_name": "신한은행",
+ "stock_code": "000010",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": 3454320000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 4147197000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": 1496859000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 2848582000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 4249146000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 5059246000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 1460133000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 2931486000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 4397561000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 5309694000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 1465475000000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 692877,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1496859,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1351723,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1400564,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 810100,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1460133,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1471353,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1466075,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 912133,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 1465475,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": 4147197,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": 5059246,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 5309694,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-14T23:04:58",
+ "fs_div": "CFS"
+}

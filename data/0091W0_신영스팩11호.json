@@ -1,0 +1,50 @@
+{
+ "corp_code": "01945339",
+ "corp_name": "신영스팩11호",
+ "stock_code": "0091W0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 0,
+    "op": -35860410000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -11464580,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -35860,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:12:08"
+}

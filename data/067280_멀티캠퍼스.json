@@ -1,0 +1,211 @@
+{
+ "corp_code": "00425351",
+ "corp_name": "멀티캠퍼스",
+ "stock_code": "067280",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 82267583907,
+    "op": 6894978847,
+    "sga": 15490081493,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 173596344254,
+    "op": 17416371569,
+    "sga": 30810032160,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 266487465464,
+    "op": 27503419381,
+    "sga": 46703970068,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 358598251427,
+    "op": 40285830663,
+    "sga": 60091216413,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 82333681243,
+    "op": 7152581711,
+    "sga": 15831168743,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 170868744849,
+    "op": 17679074099,
+    "sga": 31410978582,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 261927700013,
+    "op": 27564867995,
+    "sga": 47375829026,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 352739509730,
+    "op": 38928839417,
+    "sga": 62244442544,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 75918093527,
+    "op": 4700316971,
+    "sga": 15298192236,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 160791033770,
+    "op": 13494958151,
+    "sga": 30548813869,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 245654126717,
+    "op": 21487069220,
+    "sga": 45288512143,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 330827395521,
+    "op": 31891937098,
+    "sga": 60410951469,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 80685700556,
+    "op": 638362100,
+    "sga": 16630510785,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 82268,
+   "op": 6895,
+   "sga": 15490
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 91329,
+   "op": 10521,
+   "sga": 15320
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 92891,
+   "op": 10087,
+   "sga": 15894
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 92111,
+   "op": 12782,
+   "sga": 13387
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 82334,
+   "op": 7153,
+   "sga": 15831
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 88535,
+   "op": 10526,
+   "sga": 15580
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 91059,
+   "op": 9886,
+   "sga": 15965
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 90812,
+   "op": 11364,
+   "sga": 14869
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 75918,
+   "op": 4700,
+   "sga": 15298
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 84873,
+   "op": 8795,
+   "sga": 15251
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 84863,
+   "op": 7992,
+   "sga": 14740
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 85173,
+   "op": 10405,
+   "sga": 15122
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 80686,
+   "op": 638,
+   "sga": 16631
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 358598,
+   "op": 40286,
+   "sga": 60091,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 352740,
+   "op": 38929,
+   "sga": 62244,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 330827,
+   "op": 31892,
+   "sga": 60411,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-13T23:50:25"
+}

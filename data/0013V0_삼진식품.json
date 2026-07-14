@@ -1,0 +1,50 @@
+{
+ "corp_code": "01370322",
+ "corp_name": "삼진식품",
+ "stock_code": "0013V0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 109497527234,
+    "op": 5955739965,
+    "sga": 39998835535,
+    "inventory": 9521248891
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 33318659219,
+    "op": 3889538108,
+    "sga": 11322026519,
+    "inventory": 10903769530
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 9521,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 10904,
+   "revenue": 33319,
+   "op": 3890,
+   "sga": 11322
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 109498,
+   "op": 5956,
+   "sga": 39999,
+   "inventory": 9521
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:47:35"
+}

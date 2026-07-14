@@ -1,0 +1,133 @@
+{
+ "corp_code": "01436558",
+ "corp_name": "신한서부티엔디리츠",
+ "stock_code": "404990",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 7724695317,
+    "op": 4720295421,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16472785395,
+    "op": 10645701563,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 8936655500,
+    "op": 5739366512,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 18056047809,
+    "op": 11918498897,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 15508391113,
+    "op": 11486447736,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32077312593,
+    "op": 23736239003,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 15531917798,
+    "op": 11333940971,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 16473,
+   "op": 10646,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 18056,
+   "op": 11918,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 32077,
+   "op": 23736,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:14:06"
+}

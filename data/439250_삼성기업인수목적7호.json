@@ -1,0 +1,27 @@
+{
+ "corp_code": "01675227",
+ "corp_name": "삼성기업인수목적7호",
+ "stock_code": "439250",
+ "cums": {
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -25148845000000,
+    "sga": 25148845000000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -25148845,
+   "sga": 25148845
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:42:28"
+}

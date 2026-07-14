@@ -1,0 +1,211 @@
+{
+ "corp_code": "01344202",
+ "corp_name": "뷰노",
+ "stock_code": "338220",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1776499882,
+    "op": -4291714146,
+    "sga": null,
+    "inventory": 333431792
+   },
+   "2": {
+    "revenue": 4781811807,
+    "op": -10070189152,
+    "sga": null,
+    "inventory": 381440798
+   },
+   "3": {
+    "revenue": 8349979843,
+    "op": -12207064264,
+    "sga": null,
+    "inventory": 451584789
+   },
+   "4": {
+    "revenue": 13275892081,
+    "op": -15675806109,
+    "sga": null,
+    "inventory": 230287200
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5538269277,
+    "op": -3863076444,
+    "sga": null,
+    "inventory": 123837600
+   },
+   "2": {
+    "revenue": 11928487127,
+    "op": -7010064280,
+    "sga": null,
+    "inventory": 256629600
+   },
+   "3": {
+    "revenue": 18793843234,
+    "op": -9775497876,
+    "sga": null,
+    "inventory": 235174100
+   },
+   "4": {
+    "revenue": 25869420408,
+    "op": -12450008523,
+    "sga": null,
+    "inventory": 167355028
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7537708109,
+    "op": -3428094741,
+    "sga": null,
+    "inventory": 159250353
+   },
+   "2": {
+    "revenue": 16792194763,
+    "op": -3597565931,
+    "sga": null,
+    "inventory": 239007075
+   },
+   "3": {
+    "revenue": 27616154687,
+    "op": -2580731513,
+    "sga": null,
+    "inventory": 298196481
+   },
+   "4": {
+    "revenue": 34847834702,
+    "op": -4933322116,
+    "sga": null,
+    "inventory": 247232135
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6049588319,
+    "op": -4108009903,
+    "sga": null,
+    "inventory": 275654835
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 333,
+   "revenue": 1776,
+   "op": -4292,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 381,
+   "revenue": 3005,
+   "op": -5778,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 452,
+   "revenue": 3568,
+   "op": -2137,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 230,
+   "revenue": 4926,
+   "op": -3469,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 124,
+   "revenue": 5538,
+   "op": -3863,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 257,
+   "revenue": 6390,
+   "op": -3147,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 235,
+   "revenue": 6865,
+   "op": -2765,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 167,
+   "revenue": 7076,
+   "op": -2675,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 159,
+   "revenue": 7538,
+   "op": -3428,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 239,
+   "revenue": 9254,
+   "op": -169,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 298,
+   "revenue": 10824,
+   "op": 1017,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 247,
+   "revenue": 7232,
+   "op": -2353,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 276,
+   "revenue": 6050,
+   "op": -4108,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 13276,
+   "op": -15676,
+   "sga": null,
+   "inventory": 230
+  },
+  {
+   "year": 2024,
+   "revenue": 25869,
+   "op": -12450,
+   "sga": null,
+   "inventory": 167
+  },
+  {
+   "year": 2025,
+   "revenue": 34848,
+   "op": -4933,
+   "sga": null,
+   "inventory": 247
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:32:46"
+}

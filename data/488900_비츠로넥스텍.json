@@ -1,0 +1,50 @@
+{
+ "corp_code": "01194607",
+ "corp_name": "비츠로넥스텍",
+ "stock_code": "488900",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 36790989927,
+    "op": -7364263584,
+    "sga": 9795489001,
+    "inventory": 103224501
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7120960555,
+    "op": -3369203137,
+    "sga": 2181781157,
+    "inventory": 50916203
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 103,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 51,
+   "revenue": 7121,
+   "op": -3369,
+   "sga": 2182
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 36791,
+   "op": -7364,
+   "sga": 9795,
+   "inventory": 103
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:37:29"
+}

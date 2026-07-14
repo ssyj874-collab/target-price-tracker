@@ -1,0 +1,124 @@
+{
+ "corp_code": "01675421",
+ "corp_name": "아이비케이에스제20호기업인수목적",
+ "stock_code": "439730",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -52914450,
+    "sga": 52914450,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -59034450,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -15958940,
+    "sga": 15958940,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -29252120,
+    "sga": 29252120,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -60458250,
+    "sga": 60458250,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -88618250,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -15868580,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -16,
+   "sga": 16
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -13,
+   "sga": 13
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -31,
+   "sga": 31
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -28,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -16,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -59,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -89,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:32:22"
+}

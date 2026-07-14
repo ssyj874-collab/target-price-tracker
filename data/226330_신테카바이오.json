@@ -1,0 +1,211 @@
+{
+ "corp_code": "01344336",
+ "corp_name": "신테카바이오",
+ "stock_code": "226330",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3177355,
+    "op": -3037174443,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6136977,
+    "op": -6248271546,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8759078,
+    "op": -9480961724,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 123405804,
+    "op": -12276297771,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6213883,
+    "op": -3210404797,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7113851,
+    "op": -6768546512,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7687325,
+    "op": -10699038447,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 120887133,
+    "op": -14269530180,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 868805202,
+    "op": -2957763887,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1214717221,
+    "op": -5960150570,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1670177312,
+    "op": -8274709326,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3429231736,
+    "op": -10764609170,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 422309918,
+    "op": -3505778986,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 3,
+   "op": -3037,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 3,
+   "op": -3211,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 3,
+   "op": -3233,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 115,
+   "op": -2795,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 6,
+   "op": -3210,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1,
+   "op": -3558,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1,
+   "op": -3930,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 113,
+   "op": -3570,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 869,
+   "op": -2958,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 346,
+   "op": -3002,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 455,
+   "op": -2315,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1759,
+   "op": -2490,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 422,
+   "op": -3506,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 123,
+   "op": -12276,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 121,
+   "op": -14270,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 3429,
+   "op": -10765,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:13:25"
+}

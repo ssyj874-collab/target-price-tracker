@@ -1,0 +1,211 @@
+{
+ "corp_code": "01562589",
+ "corp_name": "LX홀딩스",
+ "stock_code": "383800",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8551000000,
+    "op": 40507000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 19429000000,
+    "op": 62076000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 28066000000,
+    "op": 82253000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 37913000000,
+    "op": 73176000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9176000000,
+    "op": 48624000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 19822000000,
+    "op": 107284000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 30821000000,
+    "op": 162116000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 40673000000,
+    "op": 156017000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 10062000000,
+    "op": 71375000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 20198000000,
+    "op": 113837000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 31340000000,
+    "op": 151143000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 41293000000,
+    "op": 133398000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 14382000000,
+    "op": 41600000000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 8551,
+   "op": 40507,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 10878,
+   "op": 21569,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 8637,
+   "op": 20177,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 9847,
+   "op": -9077,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 9176,
+   "op": 48624,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 10646,
+   "op": 58660,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 10999,
+   "op": 54832,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9852,
+   "op": -6099,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 10062,
+   "op": 71375,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 10136,
+   "op": 42462,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 11142,
+   "op": 37306,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9953,
+   "op": -17745,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 14382,
+   "op": 41600,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 37913,
+   "op": 73176,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 40673,
+   "op": 156017,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 41293,
+   "op": 133398,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-12T20:19:24"
+}

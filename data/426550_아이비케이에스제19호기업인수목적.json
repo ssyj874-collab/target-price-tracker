@@ -1,0 +1,27 @@
+{
+ "corp_code": "01632851",
+ "corp_name": "아이비케이에스제19호기업인수목적",
+ "stock_code": "426550",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -74482090,
+    "sga": 74482090,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:32:16"
+}

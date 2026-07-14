@@ -1,0 +1,111 @@
+{
+ "corp_code": "01590980",
+ "corp_name": "심플랫폼",
+ "stock_code": "444530",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 7227053902,
+    "op": -142923926,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 102337600,
+    "op": -1093594834,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1010271200,
+    "op": -2116624507,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2880236589,
+    "op": -5172372622,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10404472896,
+    "op": -2664703884,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 472360736,
+    "op": -2373047924,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 102,
+   "op": -1094,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 908,
+   "op": -1023,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1870,
+   "op": -3056,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 7524,
+   "op": 2508,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 472,
+   "op": -2373,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 7227,
+   "op": -143,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 10404,
+   "op": -2665,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:17:28"
+}

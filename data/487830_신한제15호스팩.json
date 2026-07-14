@@ -1,0 +1,35 @@
+{
+ "corp_code": "01854408",
+ "corp_name": "신한제15호스팩",
+ "stock_code": "487830",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -28299118,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -28,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:15:03"
+}

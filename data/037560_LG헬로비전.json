@@ -1,0 +1,211 @@
+{
+ "corp_code": "00222532",
+ "corp_name": "LG헬로비전",
+ "stock_code": "037560",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 277904911296,
+    "op": 11259610993,
+    "sga": null,
+    "inventory": 8502140436
+   },
+   "2": {
+    "revenue": 564912281460,
+    "op": 24660645449,
+    "sga": null,
+    "inventory": 8874382831
+   },
+   "3": {
+    "revenue": 853898276444,
+    "op": 33145674976,
+    "sga": null,
+    "inventory": 19735020281
+   },
+   "4": {
+    "revenue": 1191623725696,
+    "op": 45489928746,
+    "sga": null,
+    "inventory": 10345332143
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 267545092250,
+    "op": 3846558670,
+    "sga": null,
+    "inventory": 10660729055
+   },
+   "2": {
+    "revenue": 551520196192,
+    "op": 11000680492,
+    "sga": null,
+    "inventory": 10538259213
+   },
+   "3": {
+    "revenue": 875169086847,
+    "op": 14081360418,
+    "sga": null,
+    "inventory": 13460784079
+   },
+   "4": {
+    "revenue": 1197784096349,
+    "op": 12702860049,
+    "sga": null,
+    "inventory": 51876305384
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 313851625927,
+    "op": 8220329216,
+    "sga": null,
+    "inventory": 24727455566
+   },
+   "2": {
+    "revenue": 668295612051,
+    "op": 19882471442,
+    "sga": null,
+    "inventory": 7148139928
+   },
+   "3": {
+    "revenue": 966975648536,
+    "op": 30338572354,
+    "sga": null,
+    "inventory": 8850964574
+   },
+   "4": {
+    "revenue": 1266851190603,
+    "op": 24596703433,
+    "sga": null,
+    "inventory": 6892129497
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 255471489398,
+    "op": 6411595293,
+    "sga": null,
+    "inventory": 6490712954
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 8502,
+   "revenue": 277905,
+   "op": 11260,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 8874,
+   "revenue": 287007,
+   "op": 13401,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 19735,
+   "revenue": 288986,
+   "op": 8485,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 10345,
+   "revenue": 337725,
+   "op": 12344,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 10661,
+   "revenue": 267545,
+   "op": 3847,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 10538,
+   "revenue": 283975,
+   "op": 7154,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 13461,
+   "revenue": 323649,
+   "op": 3081,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 51876,
+   "revenue": 322615,
+   "op": -1379,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 24727,
+   "revenue": 313852,
+   "op": 8220,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 7148,
+   "revenue": 354444,
+   "op": 11662,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 8851,
+   "revenue": 298680,
+   "op": 10456,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 6892,
+   "revenue": 299876,
+   "op": -5742,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 6491,
+   "revenue": 255471,
+   "op": 6412,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1191624,
+   "op": 45490,
+   "sga": null,
+   "inventory": 10345
+  },
+  {
+   "year": 2024,
+   "revenue": 1197784,
+   "op": 12703,
+   "sga": null,
+   "inventory": 51876
+  },
+  {
+   "year": 2025,
+   "revenue": 1266851,
+   "op": 24597,
+   "sga": null,
+   "inventory": 6892
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-12T20:17:22"
+}

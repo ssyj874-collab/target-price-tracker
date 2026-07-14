@@ -1,0 +1,120 @@
+{
+ "corp_code": "00125664",
+ "corp_name": "삼미금속",
+ "stock_code": "012210",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 76842784518,
+    "op": 5964405335,
+    "sga": 4082038130,
+    "inventory": 12548611797
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 76441344507,
+    "op": 4454162901,
+    "sga": 3917871789,
+    "inventory": 12175070751
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 40235580220,
+    "op": 3428970940,
+    "sga": 1940130379,
+    "inventory": 14852830185
+   },
+   "3": {
+    "revenue": 57786059871,
+    "op": 4354621046,
+    "sga": 3026023386,
+    "inventory": 15820872329
+   },
+   "4": {
+    "revenue": 73796930775,
+    "op": 5812312220,
+    "sga": 4037302281,
+    "inventory": 19040467560
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 18258698314,
+    "op": 1602296350,
+    "sga": 1135842351,
+    "inventory": 21250015656
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": 12549,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 12175,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 14853,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 15821,
+   "revenue": 17550,
+   "op": 926,
+   "sga": 1086
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 19040,
+   "revenue": 16011,
+   "op": 1458,
+   "sga": 1011
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 21250,
+   "revenue": 18259,
+   "op": 1602,
+   "sga": 1136
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 76843,
+   "op": 5964,
+   "sga": 4082,
+   "inventory": 12549
+  },
+  {
+   "year": 2024,
+   "revenue": 76441,
+   "op": 4454,
+   "sga": 3918,
+   "inventory": 12175
+  },
+  {
+   "year": 2025,
+   "revenue": 73797,
+   "op": 5812,
+   "sga": 4037,
+   "inventory": 19040
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:41:22"
+}

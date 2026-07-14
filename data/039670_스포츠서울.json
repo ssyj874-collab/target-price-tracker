@@ -1,0 +1,96 @@
+{
+ "corp_code": "00298687",
+ "corp_name": "스포츠서울",
+ "stock_code": "039670",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1831414529,
+    "op": -409808188,
+    "sga": 546006781,
+    "inventory": 30081990
+   },
+   "2": {
+    "revenue": 3308983735,
+    "op": -1258876070,
+    "sga": 1125179242,
+    "inventory": 40822880
+   },
+   "3": {
+    "revenue": 5115243046,
+    "op": -1833839781,
+    "sga": 1681151760,
+    "inventory": 20831700
+   },
+   "4": {
+    "revenue": 8653751679,
+    "op": -1240017858,
+    "sga": 2141572016,
+    "inventory": 71200920
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 8129607910,
+    "op": -2237722131,
+    "sga": 2351574858,
+    "inventory": 20433200
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 30,
+   "revenue": 1831,
+   "op": -410,
+   "sga": 546
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 41,
+   "revenue": 1478,
+   "op": -849,
+   "sga": 579
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 21,
+   "revenue": 1806,
+   "op": -575,
+   "sga": 556
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 71,
+   "revenue": 3539,
+   "op": 594,
+   "sga": 460
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 20,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 8654,
+   "op": -1240,
+   "sga": 2142,
+   "inventory": 71
+  },
+  {
+   "year": 2024,
+   "revenue": 8130,
+   "op": -2238,
+   "sga": 2352,
+   "inventory": 20
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:07:50"
+}

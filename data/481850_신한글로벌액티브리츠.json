@@ -1,0 +1,105 @@
+{
+ "corp_code": "01714997",
+ "corp_name": "신한글로벌액티브리츠",
+ "stock_code": "481850",
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 1680842043,
+    "op": 885667219,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3485471429,
+    "op": 147395778,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 1050251008,
+    "op": 563279744,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3055377228,
+    "op": 1968635050,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 2254978556,
+    "op": 1437203692,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 3485,
+   "op": 147,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 3055,
+   "op": 1969,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 2255,
+   "op": 1437,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:14:00"
+}

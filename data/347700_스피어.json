@@ -1,0 +1,211 @@
+{
+ "corp_code": "01336762",
+ "corp_name": "스피어",
+ "stock_code": "347700",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 577337915,
+    "op": -2027913041,
+    "sga": null,
+    "inventory": 14369333
+   },
+   "2": {
+    "revenue": 916283578,
+    "op": -4270526272,
+    "sga": null,
+    "inventory": 7184667
+   },
+   "3": {
+    "revenue": 2399819956,
+    "op": -7146434857,
+    "sga": null,
+    "inventory": 209523711
+   },
+   "4": {
+    "revenue": 3325344082,
+    "op": -9591751526,
+    "sga": null,
+    "inventory": 881172559
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2451080142,
+    "op": -3042644628,
+    "sga": null,
+    "inventory": 931191842
+   },
+   "2": {
+    "revenue": 4738991871,
+    "op": -6045512749,
+    "sga": null,
+    "inventory": 1502484298
+   },
+   "3": {
+    "revenue": 6002828882,
+    "op": -7680875053,
+    "sga": null,
+    "inventory": 2067901243
+   },
+   "4": {
+    "revenue": 2557761611,
+    "op": -6372865544,
+    "sga": null,
+    "inventory": 3055863
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 21852554171,
+    "op": 4310963578,
+    "sga": null,
+    "inventory": 2851643482
+   },
+   "2": {
+    "revenue": 40713856934,
+    "op": 6402633766,
+    "sga": 4005402953,
+    "inventory": 8306862279
+   },
+   "3": {
+    "revenue": 61810330678,
+    "op": 5413080232,
+    "sga": 6063368977,
+    "inventory": 10720452521
+   },
+   "4": {
+    "revenue": 95638566409,
+    "op": 9052274666,
+    "sga": 7796712078,
+    "inventory": 10479203039
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 45069081671,
+    "op": 710711909,
+    "sga": 6022257509,
+    "inventory": 26437929263
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 14,
+   "revenue": 577,
+   "op": -2028,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 7,
+   "revenue": 339,
+   "op": -2243,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 210,
+   "revenue": 1484,
+   "op": -2876,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 881,
+   "revenue": 926,
+   "op": -2445,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 931,
+   "revenue": 2451,
+   "op": -3043,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1502,
+   "revenue": 2288,
+   "op": -3003,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 2068,
+   "revenue": 1264,
+   "op": -1635,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 3,
+   "revenue": -3445,
+   "op": 1308,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2852,
+   "revenue": 21853,
+   "op": 4311,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 8307,
+   "revenue": 18861,
+   "op": 2092,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 10720,
+   "revenue": 21096,
+   "op": -990,
+   "sga": 2058
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 10479,
+   "revenue": 33828,
+   "op": 3639,
+   "sga": 1733
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 26438,
+   "revenue": 45069,
+   "op": 711,
+   "sga": 6022
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 3325,
+   "op": -9592,
+   "sga": null,
+   "inventory": 881
+  },
+  {
+   "year": 2024,
+   "revenue": 2558,
+   "op": -6373,
+   "sga": null,
+   "inventory": 3
+  },
+  {
+   "year": 2025,
+   "revenue": 95639,
+   "op": 9052,
+   "sga": 7797,
+   "inventory": 10479
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:07:54"
+}

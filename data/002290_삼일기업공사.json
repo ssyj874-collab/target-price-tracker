@@ -1,0 +1,211 @@
+{
+ "corp_code": "00127936",
+ "corp_name": "삼일기업공사",
+ "stock_code": "002290",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10030363086,
+    "op": 631603509,
+    "sga": 973509394,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 35795523407,
+    "op": 2231088484,
+    "sga": 2329858775,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 62697018561,
+    "op": 2851236844,
+    "sga": 6888062509,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 78639206759,
+    "op": 3104213935,
+    "sga": 8391686867,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 17136060522,
+    "op": 732510558,
+    "sga": 985674787,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 42713919389,
+    "op": 1149274874,
+    "sga": 2161172875,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 75645475305,
+    "op": 3218673946,
+    "sga": 3648806784,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 112650084355,
+    "op": 5653268035,
+    "sga": 4853213695,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 21672257905,
+    "op": 2253603935,
+    "sga": 1006291570,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 41493805404,
+    "op": 4201310496,
+    "sga": 2305903824,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 58991805112,
+    "op": 6084538589,
+    "sga": 3425563805,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 85177109801,
+    "op": 7394157183,
+    "sga": 4940966724,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 20134690011,
+    "op": 1515608534,
+    "sga": 1015888769,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 10030,
+   "op": 632,
+   "sga": 974
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 25765,
+   "op": 1599,
+   "sga": 1356
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 26901,
+   "op": 620,
+   "sga": 4558
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 15942,
+   "op": 253,
+   "sga": 1504
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 17136,
+   "op": 733,
+   "sga": 986
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 25578,
+   "op": 417,
+   "sga": 1175
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 32932,
+   "op": 2069,
+   "sga": 1488
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 37005,
+   "op": 2435,
+   "sga": 1204
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 21672,
+   "op": 2254,
+   "sga": 1006
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 19822,
+   "op": 1948,
+   "sga": 1300
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 17498,
+   "op": 1883,
+   "sga": 1120
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 26185,
+   "op": 1310,
+   "sga": 1515
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 20135,
+   "op": 1516,
+   "sga": 1016
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 78639,
+   "op": 3104,
+   "sga": 8392,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 112650,
+   "op": 5653,
+   "sga": 4853,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 85177,
+   "op": 7394,
+   "sga": 4941,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:47:04"
+}

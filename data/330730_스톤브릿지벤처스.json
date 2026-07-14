@@ -1,0 +1,211 @@
+{
+ "corp_code": "01305249",
+ "corp_name": "스톤브릿지벤처스",
+ "stock_code": "330730",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5378669069,
+    "op": 2919268149,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9282444114,
+    "op": 4587373633,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 14070565248,
+    "op": 6644904570,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 19002056584,
+    "op": 6440509588,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3814747046,
+    "op": 1278052620,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11327926948,
+    "op": 4945540747,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 14792955270,
+    "op": 5537529803,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14175207477,
+    "op": 3373889240,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3637667995,
+    "op": 30699959,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8748417975,
+    "op": 2295914528,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 14002812072,
+    "op": 4945710872,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 25549170407,
+    "op": 13461156317,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 19631489955,
+    "op": 15235384656,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 5379,
+   "op": 2919,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 3904,
+   "op": 1668,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 4788,
+   "op": 2058,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 4931,
+   "op": -204,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3815,
+   "op": 1278,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 7513,
+   "op": 3667,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3465,
+   "op": 592,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": -618,
+   "op": -2164,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3638,
+   "op": 31,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5111,
+   "op": 2265,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5254,
+   "op": 2650,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 11546,
+   "op": 8515,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 19631,
+   "op": 15235,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 19002,
+   "op": 6441,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 14175,
+   "op": 3374,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 25549,
+   "op": 13461,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:06:42"
+}

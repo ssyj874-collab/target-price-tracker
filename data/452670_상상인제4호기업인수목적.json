@@ -1,0 +1,42 @@
+{
+ "corp_code": "01717170",
+ "corp_name": "상상인제4호기업인수목적",
+ "stock_code": "452670",
+ "cums": {
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -17299100,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -17767420,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -18,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:49:26"
+}

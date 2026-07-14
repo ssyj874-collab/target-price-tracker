@@ -1,0 +1,124 @@
+{
+ "corp_code": "00126292",
+ "corp_name": "삼성카드",
+ "stock_code": "029780",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 3070899944984,
+    "op": 571210213973,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4004222629932,
+    "op": 810006981367,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1106001610731,
+    "op": 241189976607,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2195699505154,
+    "op": 489816540712,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3078966377232,
+    "op": 713655910411,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4383209688411,
+    "op": 885421436897,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1067407617453,
+    "op": 244917902127,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 933323,
+   "op": 238797,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1106002,
+   "op": 241190,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1089698,
+   "op": 248627,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 883267,
+   "op": 223839,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 1304243,
+   "op": 171766,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1067408,
+   "op": 244918,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4004223,
+   "op": 810007,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 4383210,
+   "op": 885421,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:44:43"
+}

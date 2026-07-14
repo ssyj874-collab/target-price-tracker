@@ -1,0 +1,40 @@
+{
+ "corp_code": "00273615",
+ "corp_name": "비케이탑스",
+ "stock_code": "030790",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 6981045827,
+    "op": -1203447648,
+    "sga": 1757424822,
+    "inventory": 27745571028
+   },
+   "3": {
+    "revenue": 9915488837,
+    "op": -3743107474,
+    "sga": 4691210806,
+    "inventory": 27857924597
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 27746,
+   "revenue": 6981,
+   "op": -1203,
+   "sga": 1757
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 27858,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:37:50"
+}

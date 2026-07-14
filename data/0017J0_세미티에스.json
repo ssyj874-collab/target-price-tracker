@@ -1,0 +1,27 @@
+{
+ "corp_code": "01596221",
+ "corp_name": "세미티에스",
+ "stock_code": "0017J0",
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 12697181693,
+    "op": 4458268048,
+    "sga": 1931874682,
+    "inventory": 803429268
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": 803,
+   "revenue": 12697,
+   "op": 4458,
+   "sga": 1932
+  }
+ ],
+ "annual": [],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:57:22"
+}

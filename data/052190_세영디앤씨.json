@@ -1,0 +1,211 @@
+{
+ "corp_code": "00347877",
+ "corp_name": "세영디앤씨",
+ "stock_code": "052190",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -108263965,
+    "sga": 108263965,
+    "inventory": 0
+   },
+   "2": {
+    "revenue": 327272727,
+    "op": -141572990,
+    "sga": 196118445,
+    "inventory": 0
+   },
+   "3": {
+    "revenue": 327272727,
+    "op": -209822978,
+    "sga": 264368433,
+    "inventory": 0
+   },
+   "4": {
+    "revenue": 327272727,
+    "op": -266849267,
+    "sga": 321394722,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -57197995,
+    "sga": 57197995,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -108574894,
+    "sga": 108574894,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -159382252,
+    "sga": 159382252,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -226689948,
+    "sga": 226689948,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -63795775,
+    "sga": 63795775,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -115218953,
+    "sga": 115218953,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -167632127,
+    "sga": 167632127,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -217449304,
+    "sga": 217449304,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -43302300,
+    "sga": 43302300,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -108,
+   "sga": 108
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 0,
+   "revenue": 327,
+   "op": -33,
+   "sga": 88
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -68,
+   "sga": 68
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -57,
+   "sga": 57
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -57,
+   "sga": 57
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -51,
+   "sga": 51
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -51,
+   "sga": 51
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -67,
+   "sga": 67
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -64,
+   "sga": 64
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -51,
+   "sga": 51
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -52,
+   "sga": 52
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -50,
+   "sga": 50
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -43,
+   "sga": 43
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 327,
+   "op": -267,
+   "sga": 321,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -227,
+   "sga": 227,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -217,
+   "sga": 217,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:58:52"
+}

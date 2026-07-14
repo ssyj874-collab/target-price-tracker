@@ -1,0 +1,50 @@
+{
+ "corp_code": "01829819",
+ "corp_name": "아크릴",
+ "stock_code": "0007C0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 13312020352,
+    "op": -2253580136,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6573651832,
+    "op": -786247311,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 6574,
+   "op": -786,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 13312,
+   "op": -2254,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:39:10"
+}

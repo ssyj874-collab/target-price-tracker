@@ -1,0 +1,111 @@
+{
+ "corp_code": "01728167",
+ "corp_name": "아이지넷",
+ "stock_code": "462980",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 23340662328,
+    "op": 352456597,
+    "sga": 22988205731,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7553783771,
+    "op": 24563101,
+    "sga": 7529220670,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 15319017798,
+    "op": -99378267,
+    "sga": 15418396065,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 24265540301,
+    "op": 507784432,
+    "sga": 23757755869,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 39018670597,
+    "op": 3329722972,
+    "sga": 35688947625,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8728498920,
+    "op": 636160137,
+    "sga": 8092338783,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7554,
+   "op": 25,
+   "sga": 7529
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7765,
+   "op": -124,
+   "sga": 7889
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8947,
+   "op": 607,
+   "sga": 8339
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 14753,
+   "op": 2822,
+   "sga": 11931
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8728,
+   "op": 636,
+   "sga": 8092
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 23341,
+   "op": 352,
+   "sga": 22988,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 39019,
+   "op": 3330,
+   "sga": 35689,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:36:03"
+}

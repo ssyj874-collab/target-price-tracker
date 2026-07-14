@@ -1,0 +1,109 @@
+{
+ "corp_code": "00138321",
+ "corp_name": "신한투자증권",
+ "stock_code": "008670",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 7745380000000,
+    "op": 349455000000,
+    "sga": 586404000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9947400000000,
+    "op": 253063000000,
+    "sga": 750021000000,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3527000000000,
+    "op": 85948000000,
+    "sga": 191630000000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6013973000000,
+    "op": 273635000000,
+    "sga": 397243000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8490525000000,
+    "op": 374585000000,
+    "sga": 602468000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11446637000000,
+    "op": 281905000000,
+    "sga": 822798000000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 2202020,
+   "op": -96392,
+   "sga": 163617
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3527000,
+   "op": 85948,
+   "sga": 191630
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 2486973,
+   "op": 187687,
+   "sga": 205613
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2476552,
+   "op": 100950,
+   "sga": 205225
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2956112,
+   "op": -92680,
+   "sga": 220330
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 9947400,
+   "op": 253063,
+   "sga": 750021,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 11446637,
+   "op": 281905,
+   "sga": 822798,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:16:23"
+}

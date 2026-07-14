@@ -1,0 +1,150 @@
+{
+ "corp_code": "01701328",
+ "corp_name": "아이비케이에스제22호기업인수목적",
+ "stock_code": "448760",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -39150800,
+    "sga": 39150800,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -44939200,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -13802820,
+    "sga": 13802820,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -25504560,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -34424560,
+    "sga": 34424560,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -39588960,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -36204050,
+    "sga": 36204050,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -72164050,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -102624050,
+    "sga": 102624050,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -14,
+   "sga": 14
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -36,
+   "sga": 36
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -36,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -30,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -45,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -40,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:32:34"
+}

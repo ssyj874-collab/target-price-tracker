@@ -1,0 +1,57 @@
+{
+ "corp_code": "00677334",
+ "corp_name": "아하",
+ "stock_code": "102950",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 56211087228,
+    "op": 2425949300,
+    "sga": 23698390104,
+    "inventory": 29118071219
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 79000542929,
+    "op": -335696266,
+    "sga": 36556234900,
+    "inventory": 24943374104
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 29118,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 24943,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 56211,
+   "op": 2426,
+   "sga": 23698,
+   "inventory": 29118
+  },
+  {
+   "year": 2025,
+   "revenue": 79001,
+   "op": -336,
+   "sga": 36556,
+   "inventory": 24943
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:39:50"
+}

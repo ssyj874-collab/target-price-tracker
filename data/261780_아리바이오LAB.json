@@ -1,0 +1,198 @@
+{
+ "corp_code": "01141599",
+ "corp_name": "아리바이오LAB",
+ "stock_code": "261780",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 121869000,
+    "op": -1614156549,
+    "sga": 1722705231,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 294124200,
+    "op": -2807905852,
+    "sga": 3067527385,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 294124200,
+    "op": -4790025520,
+    "sga": 5049647053,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 294124200,
+    "op": -6419346568,
+    "sga": 6678968101,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 370658340,
+    "op": -1550889494,
+    "sga": 1897620923,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 370658340,
+    "op": -3612574433,
+    "sga": 3959305862,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 370658340,
+    "op": -5517896905,
+    "sga": 5864628334,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 370658340,
+    "op": -7696424811,
+    "sga": 8043156240,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 158616000,
+    "op": -5462741667,
+    "sga": 5606659886,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 158616000,
+    "op": -8883469834,
+    "sga": 9027388053,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 158616000,
+    "op": -14271049992,
+    "sga": 14414968211,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 173160000,
+    "op": -1705697328,
+    "sga": 1865860658,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 122,
+   "op": -1614,
+   "sga": 1723
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 172,
+   "op": -1194,
+   "sga": 1345
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1982,
+   "sga": 1982
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1629,
+   "sga": 1629
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 371,
+   "op": -1551,
+   "sga": 1898
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2062,
+   "sga": 2062
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1905,
+   "sga": 1905
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2179,
+   "sga": 2179
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3421,
+   "sga": 3421
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5388,
+   "sga": 5388
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 173,
+   "op": -1706,
+   "sga": 1866
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 294,
+   "op": -6419,
+   "sga": 6679,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 371,
+   "op": -7696,
+   "sga": 8043,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 159,
+   "op": -14271,
+   "sga": 14415,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:26:14"
+}

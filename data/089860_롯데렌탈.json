@@ -1,0 +1,211 @@
+{
+ "corp_code": "00545716",
+ "corp_name": "롯데렌탈",
+ "stock_code": "089860",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 721241666590,
+    "op": 721241666590,
+    "sga": null,
+    "inventory": 35058453214
+   },
+   "2": {
+    "revenue": 1409866450264,
+    "op": 1409866450264,
+    "sga": null,
+    "inventory": 26751876673
+   },
+   "3": {
+    "revenue": 2097199274152,
+    "op": 2097199274152,
+    "sga": null,
+    "inventory": 28531061536
+   },
+   "4": {
+    "revenue": 2752292105099,
+    "op": 305192202982,
+    "sga": null,
+    "inventory": 35022925777
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 656867132236,
+    "op": 56886940160,
+    "sga": null,
+    "inventory": 37479873590
+   },
+   "2": {
+    "revenue": 1353054770805,
+    "op": 132671757167,
+    "sga": null,
+    "inventory": 38806123636
+   },
+   "3": {
+    "revenue": 2071545937469,
+    "op": 213159442473,
+    "sga": null,
+    "inventory": 34705817174
+   },
+   "4": {
+    "revenue": 2792395464171,
+    "op": 284811996731,
+    "sga": null,
+    "inventory": 31073025688
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 685640430602,
+    "op": 66991361519,
+    "sga": null,
+    "inventory": 34993245970
+   },
+   "2": {
+    "revenue": 1434395858349,
+    "op": 144202959336,
+    "sga": null,
+    "inventory": 48283873326
+   },
+   "3": {
+    "revenue": 2192364628584,
+    "op": 233198978680,
+    "sga": null,
+    "inventory": 29237094507
+   },
+   "4": {
+    "revenue": 2918751542343,
+    "op": 312502750438,
+    "sga": null,
+    "inventory": 30266717029
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 730924604457,
+    "op": 83626439520,
+    "sga": null,
+    "inventory": 55433579275
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 35058,
+   "revenue": 721242,
+   "op": 721242,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 26752,
+   "revenue": 688625,
+   "op": 688625,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 28531,
+   "revenue": 687333,
+   "op": 687333,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 35023,
+   "revenue": 655093,
+   "op": -1792007,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 37480,
+   "revenue": 656867,
+   "op": 56887,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 38806,
+   "revenue": 696188,
+   "op": 75785,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 34706,
+   "revenue": 718491,
+   "op": 80488,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 31073,
+   "revenue": 720850,
+   "op": 71653,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 34993,
+   "revenue": 685640,
+   "op": 66991,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 48284,
+   "revenue": 748755,
+   "op": 77212,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 29237,
+   "revenue": 757969,
+   "op": 88996,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 30267,
+   "revenue": 726387,
+   "op": 79304,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 55434,
+   "revenue": 730925,
+   "op": 83626,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 2752292,
+   "op": 305192,
+   "sga": null,
+   "inventory": 35023
+  },
+  {
+   "year": 2024,
+   "revenue": 2792395,
+   "op": 284812,
+   "sga": null,
+   "inventory": 31073
+  },
+  {
+   "year": 2025,
+   "revenue": 2918752,
+   "op": 312503,
+   "sga": null,
+   "inventory": 30267
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-13T23:41:50"
+}

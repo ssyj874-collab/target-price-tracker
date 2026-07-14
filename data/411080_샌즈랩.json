@@ -1,0 +1,211 @@
+{
+ "corp_code": "01242241",
+ "corp_name": "샌즈랩",
+ "stock_code": "411080",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 797791335,
+    "op": -800904098,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1588452430,
+    "op": -1872372572,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2857611383,
+    "op": -2900552822,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11721914034,
+    "op": -883678732,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 974499257,
+    "op": -1735606778,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1635231356,
+    "op": -3003128653,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3428228610,
+    "op": -3822860658,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 8296932833,
+    "op": -3709115101,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 714131369,
+    "op": -1447188481,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4262154590,
+    "op": -2660987666,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 4788305179,
+    "op": -4109251563,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10097861691,
+    "op": -2170243237,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1478500516,
+    "op": -973404946,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 798,
+   "op": -801,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 791,
+   "op": -1071,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 1269,
+   "op": -1028,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 8864,
+   "op": 2017,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 974,
+   "op": -1736,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 661,
+   "op": -1268,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1793,
+   "op": -820,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 4869,
+   "op": 114,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 714,
+   "op": -1447,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3548,
+   "op": -1214,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 526,
+   "op": -1448,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5310,
+   "op": 1939,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1479,
+   "op": -973,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 11722,
+   "op": -884,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 8297,
+   "op": -3709,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 10098,
+   "op": -2170,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:50:16"
+}

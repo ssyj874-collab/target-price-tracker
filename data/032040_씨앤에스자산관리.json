@@ -1,0 +1,211 @@
+{
+ "corp_code": "00173731",
+ "corp_name": "씨앤에스자산관리",
+ "stock_code": "032040",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 32184565413,
+    "op": 226300611,
+    "sga": 1367016119,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 65995176021,
+    "op": 1224917819,
+    "sga": 1977935718,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 100197346815,
+    "op": 1816041049,
+    "sga": 3232341726,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 133754858967,
+    "op": 793931063,
+    "sga": 4157044417,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 32982612530,
+    "op": 51993500,
+    "sga": 1464780572,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 65954822259,
+    "op": -678666005,
+    "sga": 3464508533,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 101147263473,
+    "op": -443744621,
+    "sga": 4968856889,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 137089528379,
+    "op": -1347862955,
+    "sga": 6936638428,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 35914129679,
+    "op": 1146185118,
+    "sga": 1335145861,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 72240265860,
+    "op": 2247592592,
+    "sga": 2767903424,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 108498494562,
+    "op": 3370818293,
+    "sga": 4062187324,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 146470176909,
+    "op": 2627882324,
+    "sga": 6562986506,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 41631543853,
+    "op": 2402102351,
+    "sga": 1340063506,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 32185,
+   "op": 226,
+   "sga": 1367
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 33811,
+   "op": 999,
+   "sga": 611
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 34202,
+   "op": 591,
+   "sga": 1254
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 33558,
+   "op": -1022,
+   "sga": 925
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 32983,
+   "op": 52,
+   "sga": 1465
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 32972,
+   "op": -731,
+   "sga": 2000
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 35192,
+   "op": 235,
+   "sga": 1504
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 35942,
+   "op": -904,
+   "sga": 1968
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 35914,
+   "op": 1146,
+   "sga": 1335
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 36326,
+   "op": 1101,
+   "sga": 1433
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 36258,
+   "op": 1123,
+   "sga": 1294
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 37972,
+   "op": -743,
+   "sga": 2501
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 41632,
+   "op": 2402,
+   "sga": 1340
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 133755,
+   "op": 794,
+   "sga": 4157,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 137090,
+   "op": -1348,
+   "sga": 6937,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 146470,
+   "op": 2628,
+   "sga": 6563,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:22:05"
+}

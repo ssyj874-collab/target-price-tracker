@@ -1,0 +1,211 @@
+{
+ "corp_code": "00132992",
+ "corp_name": "성우하이텍",
+ "stock_code": "015750",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1063425632014,
+    "op": 50327055100,
+    "sga": 18310877797,
+    "inventory": 588571490355
+   },
+   "2": {
+    "revenue": 2122359356445,
+    "op": 97375173262,
+    "sga": 36632546164,
+    "inventory": 600034280623
+   },
+   "3": {
+    "revenue": 3138875665760,
+    "op": 146518463349,
+    "sga": null,
+    "inventory": 599875226247
+   },
+   "4": {
+    "revenue": 4321987308635,
+    "op": 256728659148,
+    "sga": null,
+    "inventory": 599720651525
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1030783799924,
+    "op": 42960834876,
+    "sga": null,
+    "inventory": 607390810413
+   },
+   "2": {
+    "revenue": 2145271157886,
+    "op": 81090775075,
+    "sga": null,
+    "inventory": 668647563826
+   },
+   "3": {
+    "revenue": 3200623859067,
+    "op": 125089212777,
+    "sga": null,
+    "inventory": 576747725757
+   },
+   "4": {
+    "revenue": 4245092707610,
+    "op": 205882638168,
+    "sga": null,
+    "inventory": 640045589666
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1048933788637,
+    "op": 58249987510,
+    "sga": null,
+    "inventory": 711642364216
+   },
+   "2": {
+    "revenue": 2202853150435,
+    "op": 123633658645,
+    "sga": null,
+    "inventory": 652573930807
+   },
+   "3": {
+    "revenue": 3387959502530,
+    "op": 187064272080,
+    "sga": null,
+    "inventory": 611872896442
+   },
+   "4": {
+    "revenue": 4382670411366,
+    "op": 242683147425,
+    "sga": null,
+    "inventory": 668884333158
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1069577960819,
+    "op": 54495556673,
+    "sga": null,
+    "inventory": 708164282853
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 588571,
+   "revenue": 1063426,
+   "op": 50327,
+   "sga": 18311
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 600034,
+   "revenue": 1058934,
+   "op": 47048,
+   "sga": 18322
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 599875,
+   "revenue": 1016516,
+   "op": 49143,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 599721,
+   "revenue": 1183112,
+   "op": 110210,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 607391,
+   "revenue": 1030784,
+   "op": 42961,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 668648,
+   "revenue": 1114487,
+   "op": 38130,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 576748,
+   "revenue": 1055353,
+   "op": 43998,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 640046,
+   "revenue": 1044469,
+   "op": 80793,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 711642,
+   "revenue": 1048934,
+   "op": 58250,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 652574,
+   "revenue": 1153919,
+   "op": 65384,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 611873,
+   "revenue": 1185106,
+   "op": 63431,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 668884,
+   "revenue": 994711,
+   "op": 55619,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 708164,
+   "revenue": 1069578,
+   "op": 54496,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4321987,
+   "op": 256729,
+   "sga": null,
+   "inventory": 599721
+  },
+  {
+   "year": 2024,
+   "revenue": 4245093,
+   "op": 205883,
+   "sga": null,
+   "inventory": 640046
+  },
+  {
+   "year": 2025,
+   "revenue": 4382670,
+   "op": 242683,
+   "sga": null,
+   "inventory": 668884
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:55:13"
+}

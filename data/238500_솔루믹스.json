@@ -1,0 +1,35 @@
+{
+ "corp_code": "01118643",
+ "corp_name": "솔루믹스",
+ "stock_code": "238500",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 821032726,
+    "op": -1990424396,
+    "sga": 1922697986,
+    "inventory": 208028539
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": 208,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 821,
+   "op": -1990,
+   "sga": 1923,
+   "inventory": 208
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:03:49"
+}

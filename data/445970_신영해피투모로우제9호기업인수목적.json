@@ -1,0 +1,124 @@
+{
+ "corp_code": "01689938",
+ "corp_name": "신영해피투모로우제9호기업인수목적",
+ "stock_code": "445970",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -29015160,
+    "sga": 29015160,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -33679560,
+    "sga": 33679560,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -15935070,
+    "sga": 15935070,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -20834893,
+    "sga": 20834893,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -25626393,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -30418293,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -11938120,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -16,
+   "sga": 16
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -34,
+   "sga": 34,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -30,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:12:43"
+}

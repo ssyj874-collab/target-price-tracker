@@ -1,0 +1,211 @@
+{
+ "corp_code": "01050738",
+ "corp_name": "솔트룩스",
+ "stock_code": "304100",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3490394751,
+    "op": -3918793569,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6506300564,
+    "op": -9296033797,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13833118182,
+    "op": -11478719800,
+    "sga": null,
+    "inventory": 519583637
+   },
+   "4": {
+    "revenue": 30828903129,
+    "op": -9292178997,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6688275424,
+    "op": -5674330740,
+    "sga": null,
+    "inventory": 34000000
+   },
+   "2": {
+    "revenue": 18985167354,
+    "op": -9602242096,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 33175913205,
+    "op": -7750573528,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 45944417924,
+    "op": -6631928392,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5764884223,
+    "op": -5925059222,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12778584318,
+    "op": -9205550669,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 21891816230,
+    "op": -11860420586,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 41635622271,
+    "op": -8042487449,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8942818264,
+    "op": -4863738482,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 3490,
+   "op": -3919,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 3016,
+   "op": -5377,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 520,
+   "revenue": 7327,
+   "op": -2183,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 16996,
+   "op": 2187,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 34,
+   "revenue": 6688,
+   "op": -5674,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 12297,
+   "op": -3928,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 14191,
+   "op": 1852,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12769,
+   "op": 1119,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5765,
+   "op": -5925,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7014,
+   "op": -3280,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 9113,
+   "op": -2655,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 19744,
+   "op": 3818,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8943,
+   "op": -4864,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 30829,
+   "op": -9292,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 45944,
+   "op": -6632,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 41636,
+   "op": -8042,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:04:25"
+}

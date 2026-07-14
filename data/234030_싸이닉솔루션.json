@@ -1,0 +1,63 @@
+{
+ "corp_code": "00874168",
+ "corp_name": "싸이닉솔루션",
+ "stock_code": "234030",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 112513863640,
+    "op": 1628658608,
+    "sga": 6981498095,
+    "inventory": 1699794938
+   },
+   "4": {
+    "revenue": 154563595625,
+    "op": 2512181957,
+    "sga": 9744351917,
+    "inventory": 1149082826
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 40386799922,
+    "op": -31702756,
+    "sga": 2567149202,
+    "inventory": 1549883845
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 1700,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1149,
+   "revenue": 42050,
+   "op": 884,
+   "sga": 2763
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1550,
+   "revenue": 40387,
+   "op": -32,
+   "sga": 2567
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 154564,
+   "op": 2512,
+   "sga": 9744,
+   "inventory": 1149
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:17:35"
+}

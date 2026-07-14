@@ -1,0 +1,211 @@
+{
+ "corp_code": "00458234",
+ "corp_name": "아시아나IDT",
+ "stock_code": "267850",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 46258413795,
+    "op": 2877667848,
+    "sga": 1850641034,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 93045529925,
+    "op": 5570650218,
+    "sga": 3529488464,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 135647934709,
+    "op": 7484838141,
+    "sga": 5277410090,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 188353920542,
+    "op": 9112194550,
+    "sga": 7204814287,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 46733508528,
+    "op": 1781420951,
+    "sga": 2362813850,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 95561078340,
+    "op": 2046067641,
+    "sga": 4841814353,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 143402885212,
+    "op": 4454836740,
+    "sga": 7530155921,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 194024077326,
+    "op": 9225853941,
+    "sga": 9990665417,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 57174073536,
+    "op": 3045099240,
+    "sga": 2306414363,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 106179766660,
+    "op": 6501151359,
+    "sga": 4744594632,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 150625094776,
+    "op": 9267656997,
+    "sga": 6974406750,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 194059284908,
+    "op": 12128135452,
+    "sga": 10277066736,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 45815356121,
+    "op": 2027492604,
+    "sga": 2491784229,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 46258,
+   "op": 2878,
+   "sga": 1851
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 46787,
+   "op": 2693,
+   "sga": 1679
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 42602,
+   "op": 1914,
+   "sga": 1748
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 52706,
+   "op": 1627,
+   "sga": 1927
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 46734,
+   "op": 1781,
+   "sga": 2363
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 48828,
+   "op": 265,
+   "sga": 2479
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 47842,
+   "op": 2409,
+   "sga": 2688
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 50621,
+   "op": 4771,
+   "sga": 2461
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 57174,
+   "op": 3045,
+   "sga": 2306
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 49006,
+   "op": 3456,
+   "sga": 2438
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 44445,
+   "op": 2767,
+   "sga": 2230
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 43434,
+   "op": 2860,
+   "sga": 3303
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 45815,
+   "op": 2027,
+   "sga": 2492
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 188354,
+   "op": 9112,
+   "sga": 7205,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 194024,
+   "op": 9226,
+   "sga": 9991,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 194059,
+   "op": 12128,
+   "sga": 10277,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:28:22"
+}

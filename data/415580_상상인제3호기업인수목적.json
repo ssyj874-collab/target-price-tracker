@@ -1,0 +1,27 @@
+{
+ "corp_code": "01604371",
+ "corp_name": "상상인제3호기업인수목적",
+ "stock_code": "415580",
+ "cums": {
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -14769810,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:49:20"
+}

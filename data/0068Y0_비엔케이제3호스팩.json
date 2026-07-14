@@ -1,0 +1,50 @@
+{
+ "corp_code": "01933981",
+ "corp_name": "비엔케이제3호스팩",
+ "stock_code": "0068Y0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": null,
+    "op": -17827050,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -17849530,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -18,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -18,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-14T23:09:55",
+ "fs_div": "OFS"
+}

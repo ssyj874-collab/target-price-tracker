@@ -1,0 +1,109 @@
+{
+ "corp_code": "01700921",
+ "corp_name": "삼성기업인수목적8호",
+ "stock_code": "448740",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -27460637,
+    "sga": 27460637,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -26540537,
+    "sga": 26540537,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -41415240,
+    "sga": 41415240,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -51829440,
+    "sga": 51829440,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -55187064,
+    "sga": 55187064,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -55981904,
+    "sga": 55981904,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": 1,
+   "sga": -1
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -41,
+   "sga": 41
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": 10
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3,
+   "sga": 3
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1,
+   "sga": 1
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -27,
+   "sga": 27,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -56,
+   "sga": 56,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:42:34"
+}

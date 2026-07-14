@@ -1,0 +1,111 @@
+{
+ "corp_code": "01506617",
+ "corp_name": "쓰리빌리언",
+ "stock_code": "394800",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 5772098148,
+    "op": -7419089160,
+    "sga": null,
+    "inventory": 221898150
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2004205105,
+    "op": -1965922812,
+    "sga": null,
+    "inventory": 377091600
+   },
+   "2": {
+    "revenue": 4596218945,
+    "op": -3559937101,
+    "sga": null,
+    "inventory": 262210825
+   },
+   "3": {
+    "revenue": 7826448509,
+    "op": -4828856062,
+    "sga": null,
+    "inventory": 441770127
+   },
+   "4": {
+    "revenue": 11708662411,
+    "op": -5880265904,
+    "sga": null,
+    "inventory": 340589894
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3362891050,
+    "op": -1628508819,
+    "sga": null,
+    "inventory": 371761575
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 222,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 377,
+   "revenue": 2004,
+   "op": -1966,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 262,
+   "revenue": 2592,
+   "op": -1594,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 442,
+   "revenue": 3230,
+   "op": -1269,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 341,
+   "revenue": 3882,
+   "op": -1051,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 372,
+   "revenue": 3363,
+   "op": -1629,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 5772,
+   "op": -7419,
+   "sga": null,
+   "inventory": 222
+  },
+  {
+   "year": 2025,
+   "revenue": 11709,
+   "op": -5880,
+   "sga": null,
+   "inventory": 341
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:20:12"
+}

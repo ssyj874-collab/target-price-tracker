@@ -1,0 +1,76 @@
+{
+ "corp_code": "01649620",
+ "corp_name": "아우토크립트",
+ "stock_code": "331740",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 10111479771,
+    "op": -8444563291,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 15939475348,
+    "op": -12966929250,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 25479479430,
+    "op": -13519713490,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5095237139,
+    "op": -4652957432,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5828,
+   "op": -4522,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9540,
+   "op": -553,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5095,
+   "op": -4653,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 25479,
+   "op": -13520,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:30:36"
+}

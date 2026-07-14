@@ -1,0 +1,135 @@
+{
+ "corp_code": "01014657",
+ "corp_name": "비즈니스온커뮤니케이션",
+ "stock_code": "138580",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 15055005518,
+    "op": 5038931108,
+    "sga": 10016074410,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 25603154089,
+    "op": 8581388975,
+    "sga": 17021765114,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 39570769212,
+    "op": 12747431319,
+    "sga": 26823337893,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 51088229137,
+    "op": 16377485447,
+    "sga": 34710743690,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 15415447615,
+    "op": 6125261601,
+    "sga": 9290186014,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 26019545770,
+    "op": 8462290855,
+    "sga": 17557254915,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 37570965305,
+    "op": 10537290078,
+    "sga": 27033675227,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 49570553755,
+    "op": 11578629532,
+    "sga": 37991924223,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 15055,
+   "op": 5039,
+   "sga": 10016
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 10548,
+   "op": 3542,
+   "sga": 7006
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 13968,
+   "op": 4166,
+   "sga": 9802
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 11517,
+   "op": 3630,
+   "sga": 7887
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 15415,
+   "op": 6125,
+   "sga": 9290
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 10604,
+   "op": 2337,
+   "sga": 8267
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 11551,
+   "op": 2075,
+   "sga": 9476
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12000,
+   "op": 1041,
+   "sga": 10958
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 51088,
+   "op": 16377,
+   "sga": 34711,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 49571,
+   "op": 11579,
+   "sga": 37992,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:37:15"
+}

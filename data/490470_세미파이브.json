@@ -1,0 +1,50 @@
+{
+ "corp_code": "01627363",
+ "corp_name": "세미파이브",
+ "stock_code": "490470",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 120952056617,
+    "op": -53394038561,
+    "sga": 72586178340,
+    "inventory": 56817416
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 47874896276,
+    "op": 105054259,
+    "sga": 20161934294,
+    "inventory": 532376506
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 57,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 532,
+   "revenue": 47875,
+   "op": 105,
+   "sga": 20162
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 120952,
+   "op": -53394,
+   "sga": 72586,
+   "inventory": 57
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T21:57:29"
+}

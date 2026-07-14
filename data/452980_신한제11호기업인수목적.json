@@ -1,0 +1,92 @@
+{
+ "corp_code": "01719105",
+ "corp_name": "신한제11호기업인수목적",
+ "stock_code": "452980",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -11060520,
+    "sga": 0,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -39891434,
+    "sga": 39891434,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -51338365,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 0,
+    "op": -45617025,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -29,
+   "sga": 40
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -40,
+   "sga": 40,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -51,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -46,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:14:34"
+}

@@ -1,0 +1,211 @@
+{
+ "corp_code": "00108977",
+ "corp_name": "대구백화점",
+ "stock_code": "006370",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 17942181890,
+    "op": -2840079672,
+    "sga": null,
+    "inventory": 7487579838
+   },
+   "2": {
+    "revenue": 34428958268,
+    "op": -5398404690,
+    "sga": null,
+    "inventory": 7498887454
+   },
+   "3": {
+    "revenue": 51502664331,
+    "op": -9193728678,
+    "sga": null,
+    "inventory": 7994755427
+   },
+   "4": {
+    "revenue": 67645316949,
+    "op": -15147326554,
+    "sga": null,
+    "inventory": 7574670186
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 16111460441,
+    "op": -3209003621,
+    "sga": null,
+    "inventory": 8648415747
+   },
+   "2": {
+    "revenue": 31026949028,
+    "op": -6169800363,
+    "sga": null,
+    "inventory": 8367381927
+   },
+   "3": {
+    "revenue": 46357206655,
+    "op": -9783783695,
+    "sga": null,
+    "inventory": 11508242490
+   },
+   "4": {
+    "revenue": 59871280257,
+    "op": -14996437410,
+    "sga": null,
+    "inventory": 11598531647
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 14135858891,
+    "op": -3818606191,
+    "sga": null,
+    "inventory": 11436833886
+   },
+   "2": {
+    "revenue": 26682001977,
+    "op": -6316434170,
+    "sga": null,
+    "inventory": 12055102529
+   },
+   "3": {
+    "revenue": 40068949341,
+    "op": -10345316639,
+    "sga": null,
+    "inventory": 13196301749
+   },
+   "4": {
+    "revenue": 53086953606,
+    "op": -14972843698,
+    "sga": null,
+    "inventory": 12971072366
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 12643938330,
+    "op": -3768382660,
+    "sga": null,
+    "inventory": 12481729841
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 7488,
+   "revenue": 17942,
+   "op": -2840,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 7499,
+   "revenue": 16487,
+   "op": -2558,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 7995,
+   "revenue": 17074,
+   "op": -3795,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 7575,
+   "revenue": 16143,
+   "op": -5954,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 8648,
+   "revenue": 16111,
+   "op": -3209,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 8367,
+   "revenue": 14915,
+   "op": -2961,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 11508,
+   "revenue": 15330,
+   "op": -3614,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 11599,
+   "revenue": 13514,
+   "op": -5213,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 11437,
+   "revenue": 14136,
+   "op": -3819,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 12055,
+   "revenue": 12546,
+   "op": -2498,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 13196,
+   "revenue": 13387,
+   "op": -4029,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 12971,
+   "revenue": 13018,
+   "op": -4628,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 12482,
+   "revenue": 12644,
+   "op": -3768,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 67645,
+   "op": -15147,
+   "sga": null,
+   "inventory": 7575
+  },
+  {
+   "year": 2024,
+   "revenue": 59871,
+   "op": -14996,
+   "sga": null,
+   "inventory": 11599
+  },
+  {
+   "year": 2025,
+   "revenue": 53087,
+   "op": -14973,
+   "sga": null,
+   "inventory": 12971
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-12T21:56:36"
+}

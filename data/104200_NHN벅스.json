@@ -1,0 +1,211 @@
+{
+ "corp_code": "00645089",
+ "corp_name": "NHN벅스",
+ "stock_code": "104200",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 14637735320,
+    "op": 381888066,
+    "sga": null,
+    "inventory": 245100500
+   },
+   "2": {
+    "revenue": 29779957980,
+    "op": 983789231,
+    "sga": null,
+    "inventory": 228520000
+   },
+   "3": {
+    "revenue": 43952979672,
+    "op": 1106515181,
+    "sga": null,
+    "inventory": 231414500
+   },
+   "4": {
+    "revenue": 56843263266,
+    "op": 803513553,
+    "sga": null,
+    "inventory": 23736000
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 12895145348,
+    "op": -599882873,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 26903631956,
+    "op": -299515687,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 39554319422,
+    "op": -447086955,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 52070939126,
+    "op": 357425932,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 11073372833,
+    "op": -626342087,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 22659833165,
+    "op": -406622359,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 33564458083,
+    "op": -818868720,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 44899287200,
+    "op": -734987723,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10722116187,
+    "op": 175459893,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 245,
+   "revenue": 14638,
+   "op": 382,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 229,
+   "revenue": 15142,
+   "op": 602,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 231,
+   "revenue": 14173,
+   "op": 123,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 24,
+   "revenue": 12890,
+   "op": -303,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 12895,
+   "op": -600,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 14008,
+   "op": 300,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 12651,
+   "op": -148,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12517,
+   "op": 805,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 11073,
+   "op": -626,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 11586,
+   "op": 220,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 10905,
+   "op": -412,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 11335,
+   "op": 84,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 10722,
+   "op": 175,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 56843,
+   "op": 804,
+   "sga": null,
+   "inventory": 24
+  },
+  {
+   "year": 2024,
+   "revenue": 52071,
+   "op": 357,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 44899,
+   "op": -735,
+   "sga": null,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-12T20:20:48"
+}

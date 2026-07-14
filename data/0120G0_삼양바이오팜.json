@@ -1,0 +1,50 @@
+{
+ "corp_code": "01965333",
+ "corp_name": "삼양바이오팜",
+ "stock_code": "0120G0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 28594373504,
+    "op": 2691177859,
+    "sga": 11878577236,
+    "inventory": 43000545572
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 31173917568,
+    "op": 1386436905,
+    "sga": 13763590766,
+    "inventory": 46844553720
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 43001,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 46845,
+   "revenue": 31174,
+   "op": 1386,
+   "sga": 13764
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 28594,
+   "op": 2691,
+   "sga": 11879,
+   "inventory": 43001
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:45:07"
+}

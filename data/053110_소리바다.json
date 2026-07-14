@@ -1,0 +1,74 @@
+{
+ "corp_code": "00352718",
+ "corp_name": "소리바다",
+ "stock_code": "053110",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 274246990,
+    "op": -525673882,
+    "sga": 469700280,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 742243878,
+    "op": -659746030,
+    "sga": 920592385,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1013875399,
+    "op": -1138337309,
+    "sga": 1381302280,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1436573758,
+    "op": -1155766437,
+    "sga": 1779076464,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 274,
+   "op": -526,
+   "sga": 470
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 468,
+   "op": -134,
+   "sga": 451
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 272,
+   "op": -479,
+   "sga": 461
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 423,
+   "op": -17,
+   "sga": 398
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1437,
+   "op": -1156,
+   "sga": 1779,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:02:57"
+}

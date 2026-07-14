@@ -1,0 +1,211 @@
+{
+ "corp_code": "01049422",
+ "corp_name": "썸에이지",
+ "stock_code": "208640",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3541724304,
+    "op": -1900084681,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6445656419,
+    "op": -5417805719,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8944200546,
+    "op": -9419228928,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11560934744,
+    "op": -12823161753,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5863182181,
+    "op": -2410890707,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9542929714,
+    "op": -4587780858,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 11825009166,
+    "op": -7424841929,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13975932832,
+    "op": -10168798530,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1966623086,
+    "op": -2378207295,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3746097041,
+    "op": -5155457307,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 5023411394,
+    "op": -6686281304,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 6018579018,
+    "op": -7875912076,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1012368337,
+    "op": -980662633,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 3542,
+   "op": -1900,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 2904,
+   "op": -3518,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 2499,
+   "op": -4001,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 2617,
+   "op": -3404,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5863,
+   "op": -2411,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 3680,
+   "op": -2177,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2282,
+   "op": -2837,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2151,
+   "op": -2744,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1967,
+   "op": -2378,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1779,
+   "op": -2777,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1277,
+   "op": -1531,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 995,
+   "op": -1190,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1012,
+   "op": -981,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 11561,
+   "op": -12823,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 13976,
+   "op": -10169,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 6019,
+   "op": -7876,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:18:58"
+}

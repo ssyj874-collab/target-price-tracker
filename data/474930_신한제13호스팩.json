@@ -1,0 +1,27 @@
+{
+ "corp_code": "01807747",
+ "corp_name": "신한제13호스팩",
+ "stock_code": "474930",
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -9658650,
+    "sga": 9658650,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": 10
+  }
+ ],
+ "annual": [],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:14:48"
+}

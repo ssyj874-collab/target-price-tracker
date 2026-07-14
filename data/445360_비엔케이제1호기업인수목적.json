@@ -1,0 +1,137 @@
+{
+ "corp_code": "01689336",
+ "corp_name": "비엔케이제1호기업인수목적",
+ "stock_code": "445360",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 0,
+    "op": -30868250,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -20773250,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -8231880,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -19509328,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -26308720,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -29803720,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -11808560,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -15381320,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -4,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -31,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -30,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T23:09:38"
+}

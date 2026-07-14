@@ -1,0 +1,172 @@
+{
+ "corp_code": "01462739",
+ "corp_name": "비아이매트릭스",
+ "stock_code": "413640",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 25855874322,
+    "op": -2700550603,
+    "sga": 12970133157,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5094384703,
+    "op": -1670365931,
+    "sga": 3848008664,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12617644678,
+    "op": -454851533,
+    "sga": 7574479503,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 21603891643,
+    "op": 840839526,
+    "sga": 12299324402,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30866150941,
+    "op": 2026649857,
+    "sga": 17132189056,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7001720918,
+    "op": -687767214,
+    "sga": 4350364728,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 15079876065,
+    "op": 538031458,
+    "sga": 8615972213,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 22338653812,
+    "op": -426596867,
+    "sga": 13383133102,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 31448256831,
+    "op": 870778532,
+    "sga": 17729794694,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8509270816,
+    "op": -257119126,
+    "sga": 4828933841,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5094,
+   "op": -1670,
+   "sga": 3848
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 7523,
+   "op": 1216,
+   "sga": 3726
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 8986,
+   "op": 1296,
+   "sga": 4725
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9262,
+   "op": 1186,
+   "sga": 4833
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7002,
+   "op": -688,
+   "sga": 4350
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 8078,
+   "op": 1226,
+   "sga": 4266
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 7259,
+   "op": -965,
+   "sga": 4767
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9110,
+   "op": 1297,
+   "sga": 4347
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8509,
+   "op": -257,
+   "sga": 4829
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 25856,
+   "op": -2701,
+   "sga": 12970,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 30866,
+   "op": 2027,
+   "sga": 17132,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 31448,
+   "op": 871,
+   "sga": 17730,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:35:21"
+}

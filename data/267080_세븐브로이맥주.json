@@ -1,0 +1,92 @@
+{
+ "corp_code": "01575361",
+ "corp_name": "세븐브로이맥주",
+ "stock_code": "267080",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 10944082901,
+    "op": -3931716513,
+    "sga": 5386077999,
+    "inventory": 4487998831
+   },
+   "4": {
+    "revenue": 12399818269,
+    "op": -6188672593,
+    "sga": 6631006870,
+    "inventory": 3930544494
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 8487066181,
+    "op": -9085618631,
+    "sga": 5793604538,
+    "inventory": 3074931487
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 6831219026,
+    "op": -5364356590,
+    "sga": 3407154088,
+    "inventory": 1208335764
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": 4488,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 3931,
+   "revenue": 1456,
+   "op": -2257,
+   "sga": 1245
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 3075,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1208,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 12400,
+   "op": -6189,
+   "sga": 6631,
+   "inventory": 3931
+  },
+  {
+   "year": 2024,
+   "revenue": 8487,
+   "op": -9086,
+   "sga": 5794,
+   "inventory": 3075
+  },
+  {
+   "year": 2025,
+   "revenue": 6831,
+   "op": -5364,
+   "sga": 3407,
+   "inventory": 1208
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:57:50"
+}

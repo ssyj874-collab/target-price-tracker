@@ -1,0 +1,111 @@
+{
+ "corp_code": "01370517",
+ "corp_name": "스트라드비젼",
+ "stock_code": "475040",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 11539392256,
+    "op": -63875179774,
+    "sga": 65182962548,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3483064157,
+    "op": -15161393409,
+    "sga": 14731125793,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6575335074,
+    "op": -30000002696,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7728688861,
+    "op": -49909049564,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 18109229713,
+    "op": -58595029759,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3567729023,
+    "op": -13170104738,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3483,
+   "op": -15161,
+   "sga": 14731
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3092,
+   "op": -14839,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1153,
+   "op": -19909,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 10381,
+   "op": -8686,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3568,
+   "op": -13170,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 11539,
+   "op": -63875,
+   "sga": 65183,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 18109,
+   "op": -58595,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:07:21"
+}

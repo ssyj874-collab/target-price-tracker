@@ -1,0 +1,63 @@
+{
+ "corp_code": "01381805",
+ "corp_name": "아로마티카",
+ "stock_code": "0015N0",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 37437883217,
+    "op": 4144859396,
+    "sga": 21315367920,
+    "inventory": 8277151928
+   },
+   "4": {
+    "revenue": 51187435857,
+    "op": 5139610703,
+    "sga": 29789486871,
+    "inventory": 8571686382
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 13999703353,
+    "op": 1339086229,
+    "sga": 8625126482,
+    "inventory": 10560617222
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 8277,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 8572,
+   "revenue": 13750,
+   "op": 995,
+   "sga": 8474
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 10561,
+   "revenue": 14000,
+   "op": 1339,
+   "sga": 8625
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 51187,
+   "op": 5140,
+   "sga": 29789,
+   "inventory": 8572
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:26:02"
+}

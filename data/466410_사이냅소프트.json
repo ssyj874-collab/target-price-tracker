@@ -1,0 +1,111 @@
+{
+ "corp_code": "01207901",
+ "corp_name": "사이냅소프트",
+ "stock_code": "466410",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 13252818490,
+    "op": 5074253584,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2831956807,
+    "op": 899736451,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5849856032,
+    "op": 1730624468,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8986360647,
+    "op": 2656347124,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13472225245,
+    "op": 4673775543,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3438475722,
+    "op": 1092565739,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2832,
+   "op": 900,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3018,
+   "op": 831,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 3137,
+   "op": 926,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 4486,
+   "op": 2017,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3438,
+   "op": 1093,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 13253,
+   "op": 5074,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 13472,
+   "op": 4674,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:39:17"
+}

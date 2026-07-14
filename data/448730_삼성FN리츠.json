@@ -1,0 +1,101 @@
+{
+ "corp_code": "01688896",
+ "corp_name": "삼성FN리츠",
+ "stock_code": "448730",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 9278256098,
+    "op": 5611737396,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 10190719332,
+    "op": 5934214718,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 12236124626,
+    "op": 7403212797,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 12196309440,
+    "op": 8573099784,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 9278,
+   "op": 5612,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 10191,
+   "op": 5934,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 12236,
+   "op": 7403,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 12196,
+   "op": 8573,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T21:41:58"
+}

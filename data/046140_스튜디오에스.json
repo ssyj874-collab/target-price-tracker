@@ -1,0 +1,74 @@
+{
+ "corp_code": "00280688",
+ "corp_name": "스튜디오에스",
+ "stock_code": "046140",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 50345038934,
+    "op": 1351313607,
+    "sga": 1521086505,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 116451512514,
+    "op": 3432531230,
+    "sga": 3223166037,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 174281537327,
+    "op": 4856993429,
+    "sga": 4501636405,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 223687817836,
+    "op": 5307228926,
+    "sga": 6895425991,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 50345,
+   "op": 1351,
+   "sga": 1521
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 66106,
+   "op": 2081,
+   "sga": 1702
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 57830,
+   "op": 1424,
+   "sga": 1278
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 49406,
+   "op": 450,
+   "sga": 2394
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 223688,
+   "op": 5307,
+   "sga": 6895,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:07:15"
+}

@@ -1,0 +1,35 @@
+{
+ "corp_code": "00112721",
+ "corp_name": "대창스틸",
+ "stock_code": "140520",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 398574191699,
+    "op": 3355298284,
+    "sga": 12603901290,
+    "inventory": 79349515728
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 79350,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 398574,
+   "op": 3355,
+   "sga": 12604,
+   "inventory": 79350
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-13T22:54:02"
+}

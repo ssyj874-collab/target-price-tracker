@@ -1,0 +1,211 @@
+{
+ "corp_code": "00140168",
+ "corp_name": "HS애드",
+ "stock_code": "035000",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 89601190400,
+    "op": -6137733776,
+    "sga": 45545113551,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 241817153614,
+    "op": 940908673,
+    "sga": 95816585759,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 358270751735,
+    "op": 8973361986,
+    "sga": 143026262844,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 548333999026,
+    "op": 26444087237,
+    "sga": 193275700308,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 86301098830,
+    "op": -7526858199,
+    "sga": 50466667195,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 211083026306,
+    "op": -1374664507,
+    "sga": 102583530675,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 327545961821,
+    "op": 6206999307,
+    "sga": 154071588339,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 554730448204,
+    "op": 29573201909,
+    "sga": 213905528958,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 80767666320,
+    "op": -9518634803,
+    "sga": 53483462062,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 179765732076,
+    "op": -9057342296,
+    "sga": 106779483884,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 271960341005,
+    "op": -3848538006,
+    "sga": 155686129801,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 483850786724,
+    "op": 27495115023,
+    "sga": 207545039815,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 72120019026,
+    "op": -12144495843,
+    "sga": 53040201602,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 89601,
+   "op": -6138,
+   "sga": 45545
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 152216,
+   "op": 7079,
+   "sga": 50271
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 116454,
+   "op": 8032,
+   "sga": 47210
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 190063,
+   "op": 17471,
+   "sga": 50249
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 86301,
+   "op": -7527,
+   "sga": 50467
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 124782,
+   "op": 6152,
+   "sga": 52117
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 116463,
+   "op": 7582,
+   "sga": 51488
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 227184,
+   "op": 23366,
+   "sga": 59834
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 80768,
+   "op": -9519,
+   "sga": 53483
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 98998,
+   "op": 461,
+   "sga": 53296
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 92195,
+   "op": 5209,
+   "sga": 48907
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 211890,
+   "op": 31344,
+   "sga": 51859
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 72120,
+   "op": -12144,
+   "sga": 53040
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 548334,
+   "op": 26444,
+   "sga": 193276,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 554730,
+   "op": 29573,
+   "sga": 213906,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 483851,
+   "op": 27495,
+   "sga": 207545,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-12T20:08:28"
+}

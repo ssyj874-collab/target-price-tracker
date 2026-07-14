@@ -1,0 +1,211 @@
+{
+ "corp_code": "01168684",
+ "corp_name": "스튜디오드래곤",
+ "stock_code": "253450",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 211147926843,
+    "op": 21613125301,
+    "sga": 9228638498,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 374635027792,
+    "op": 37867992644,
+    "sga": 16886331904,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 592047336724,
+    "op": 59720529888,
+    "sga": 23829756110,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 753145749935,
+    "op": 55871055692,
+    "sga": 31996561275,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 192070613610,
+    "op": 21525381622,
+    "sga": 7151985897,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 329190654723,
+    "op": 31979128511,
+    "sga": 14829743947,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 419510501471,
+    "op": 31042415944,
+    "sga": 21672188985,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 550080744350,
+    "op": 36393818100,
+    "sga": 31578531189,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 133800053446,
+    "op": 4273548496,
+    "sga": 7113721305,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 248291460880,
+    "op": 1357990057,
+    "sga": 13807167093,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 384801145434,
+    "op": 11827029594,
+    "sga": 20462618519,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 530685384145,
+    "op": 30359009641,
+    "sga": 26648450650,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 155268525812,
+    "op": 6414968835,
+    "sga": 6181851639,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 211148,
+   "op": 21613,
+   "sga": 9229
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 163487,
+   "op": 16255,
+   "sga": 7658
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 217412,
+   "op": 21853,
+   "sga": 6943
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 161098,
+   "op": -3849,
+   "sga": 8167
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 192071,
+   "op": 21525,
+   "sga": 7152
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 137120,
+   "op": 10454,
+   "sga": 7678
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 90320,
+   "op": -937,
+   "sga": 6842
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 130570,
+   "op": 5351,
+   "sga": 9906
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 133800,
+   "op": 4274,
+   "sga": 7114
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 114491,
+   "op": -2916,
+   "sga": 6693
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 136510,
+   "op": 10469,
+   "sga": 6655
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 145884,
+   "op": 18532,
+   "sga": 6186
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 155269,
+   "op": 6415,
+   "sga": 6182
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 753146,
+   "op": 55871,
+   "sga": 31997,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 550081,
+   "op": 36394,
+   "sga": 31579,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 530685,
+   "op": 30359,
+   "sga": 26648,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-14T22:06:59"
+}

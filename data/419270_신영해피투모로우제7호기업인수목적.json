@@ -1,0 +1,48 @@
+{
+ "corp_code": "01612608",
+ "corp_name": "신영해피투모로우제7호기업인수목적",
+ "stock_code": "419270",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -52799330,
+    "sga": 52799330,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -58953330,
+    "sga": 58953330,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -59,
+   "sga": 59,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:12:31"
+}

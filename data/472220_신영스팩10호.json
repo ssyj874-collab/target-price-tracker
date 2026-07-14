@@ -1,0 +1,172 @@
+{
+ "corp_code": "01796858",
+ "corp_name": "신영스팩10호",
+ "stock_code": "472220",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 0,
+    "op": -11259640,
+    "sga": 11259640,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -30983150,
+    "sga": 30983150,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -35770650,
+    "sga": 35770650,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -40558150,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -44930050,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -16430410,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -28508210,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -34799710,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -41102170,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -15269000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -31,
+   "sga": 31
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -16,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -11,
+   "sga": 11,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -45,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -41,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-14T22:12:01"
+}
