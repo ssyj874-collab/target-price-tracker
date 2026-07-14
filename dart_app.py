@@ -25,6 +25,7 @@ import datetime as dt
 import glob
 import json
 import os
+import subprocess
 import sys
 import threading
 import time
@@ -164,8 +165,39 @@ def run_job(mode: str) -> None:
         if _PACER:
             save_quota(_PACER.quota)
         dart_store.API_HOOK = None
+        # 수집이 끝날 때마다(한도 중단 포함) 자동으로 GitHub 백업
+        if JOB["added"]:
+            JOB["current"] = "GitHub 백업 중..."
+            JOB["message"] = (JOB["message"] + " · " if JOB["message"] else "") + git_backup()
         JOB["running"] = False
         JOB["current"] = ""
+
+
+def git_backup() -> str:
+    """data/ 폴더를 커밋하고 GitHub로 푸시. 결과를 한 줄로 반환."""
+    root = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.isdir(os.path.join(root, ".git")):
+        return "git 저장소가 아니라 백업 생략"
+
+    def run(*args, timeout=120):
+        return subprocess.run(args, cwd=root, capture_output=True,
+                              text=True, timeout=timeout)
+
+    try:
+        run("git", "add", DATA_DIR)
+        if run("git", "diff", "--cached", "--quiet").returncode == 0:
+            return "GitHub 백업: 변경 없음"
+        stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
+        commit = run("git", "commit", "-m", f"재무 데이터 백업 {stamp}")
+        if commit.returncode != 0:
+            return f"GitHub 백업 실패(commit): {commit.stderr.strip()[:200]}"
+        push = run("git", "push")
+        if push.returncode != 0:
+            return ("GitHub 백업 실패(push): " + push.stderr.strip()[:200]
+                    + " — GitHub 로그인(토큰) 문제일 수 있음")
+        return "GitHub 백업 완료"
+    except (OSError, subprocess.TimeoutExpired) as e:
+        return f"GitHub 백업 실패: {e}"
 
 
 def start_job(mode: str) -> bool:
@@ -261,6 +293,13 @@ class Handler(BaseHTTPRequestHandler):
                 if _PACER:
                     _PACER.stop = True
                 self._json({"ok": True})
+            elif url.path == "/api/backup":
+                if JOB["running"]:
+                    self._json({"ok": False,
+                                "error": "수집 진행 중에는 백업할 수 없습니다 — 완료 후 자동 백업됩니다."},
+                               409)
+                    return
+                self._json({"ok": True, "result": git_backup()})
             elif url.path == "/api/update-one":
                 if JOB["running"]:
                     self._json({"ok": False,
@@ -375,6 +414,7 @@ tbody tr:last-child { border-bottom: none; }
       <button class="primary" id="btn-backfill">전체 수집 시작/이어하기 (3년치)</button>
       <button class="primary" id="btn-season">실적시즌 업데이트 (직전 4개 분기)</button>
       <button id="btn-stop" disabled>중지</button>
+      <button id="btn-backup">GitHub 백업</button>
     </div>
     <div id="progress-wrap">
       <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -384,7 +424,9 @@ tbody tr:last-child { border-bottom: none; }
     <p class="hint">전체 수집은 다트 일일 한도(2만 건) 때문에 첫 회는 2~3일에
       나뉠 수 있습니다 — 한도에 닿으면 자동으로 멈추고, 다음 날 같은 버튼을
       누르면 이어서 받습니다(이미 받은 보고서는 건너뜀). 실적시즌 업데이트는
-      새로 공시된 보고서만 조회하므로 시즌 중 몇 번을 눌러도 가볍습니다.</p>
+      새로 공시된 보고서만 조회하므로 시즌 중 몇 번을 눌러도 가볍습니다.
+      수집이 끝나면(한도로 멈춘 경우 포함) data/ 폴더가 <b>자동으로 GitHub에
+      백업</b>됩니다 — 수동으로 하려면 [GitHub 백업] 버튼.</p>
   </section>
 
   <section class="panel">
@@ -528,6 +570,7 @@ function setJobUi(job) {
   const running = job.running;
   $("btn-backfill").disabled = running;
   $("btn-season").disabled = running;
+  $("btn-backup").disabled = running;
   $("btn-stop").disabled = !running;
   $("progress-wrap").style.display = running || job.done ? "block" : "none";
   const pctDone = job.total ? (job.done / job.total * 100) : 0;
@@ -573,6 +616,21 @@ async function startJob(mode) {
 $("btn-backfill").addEventListener("click", () => startJob("backfill"));
 $("btn-season").addEventListener("click", () => startJob("season"));
 $("btn-stop").addEventListener("click", () => api("/api/job/stop", {}));
+$("btn-backup").addEventListener("click", async () => {
+  const btn = $("btn-backup");
+  btn.disabled = true; btn.textContent = "백업 중…";
+  try {
+    const r = await api("/api/backup", {});
+    $("job-msg").textContent = r.ok ? r.result : (r.error || "실패");
+    $("job-msg").className = r.ok && r.result.includes("완료") ? "" :
+      (r.ok ? "" : "err");
+  } catch (e) {
+    $("job-msg").textContent = "백업 실패: 서버 연결 안 됨";
+    $("job-msg").className = "err";
+  } finally {
+    btn.disabled = false; btn.textContent = "GitHub 백업";
+  }
+});
 $("filter").addEventListener("input", renderList);
 $("tab-q").addEventListener("click", () => {
   currentTab = "q";

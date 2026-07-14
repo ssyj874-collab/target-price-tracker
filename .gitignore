@@ -2,4 +2,5 @@ __pycache__/
 *.pyc
 dart_api_key.txt
 corp_codes_cache.json
-data/
+data/_quota.json
+data/_job_state.json
