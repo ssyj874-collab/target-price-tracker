@@ -262,6 +262,11 @@ class Handler(BaseHTTPRequestHandler):
                     _PACER.stop = True
                 self._json({"ok": True})
             elif url.path == "/api/update-one":
+                if JOB["running"]:
+                    self._json({"ok": False,
+                                "error": "전체 수집이 진행 중입니다 — 완료(또는 중지) 후 다시 시도하세요."},
+                               409)
+                    return
                 key = resolve_key(None)
                 code = str(payload.get("code", "")).strip()
                 store = find_store(code)
@@ -272,13 +277,24 @@ class Handler(BaseHTTPRequestHandler):
                         "corp_name": store["corp_name"],
                         "stock_code": store["stock_code"]}
                 # 단일 종목은 호출 부담이 없으므로 3년치 전체 범위를 채운다
-                # (빠진 보고서만 조회 — 이미 있으면 호출 0건)
+                # (빠진 보고서만 조회 — 이미 있으면 호출 0건).
+                # 일일 한도는 여기서도 지킨다.
                 this_year = dt.date.today().year
+                pacer = _Pacer()
                 with _LOCK:
-                    _s, added = dart_store.ensure_periods(
-                        key, corp, DATA_DIR,
-                        dart_store.year_range_periods(this_year - 3, this_year))
-                self._json({"ok": True, "added": added})
+                    dart_store.API_HOOK = pacer
+                    try:
+                        _s, added = dart_store.ensure_periods(
+                            key, corp, DATA_DIR,
+                            dart_store.year_range_periods(this_year - 3, this_year))
+                    except dart_store.BudgetExceeded as e:
+                        self._json({"ok": False, "error": str(e)}, 429)
+                        return
+                    finally:
+                        save_quota(pacer.quota)
+                        dart_store.API_HOOK = None
+                self._json({"ok": True, "added": added,
+                            "quarters": len(_s.get("quarterly", []))})
             else:
                 self._json({"error": "not found"}, 404)
         except SystemExit as e:
@@ -444,10 +460,24 @@ function renderList() {
     btn.addEventListener("click", async e => {
       e.stopPropagation();
       btn.disabled = true;
-      await api("/api/update-one", { code: s.stock_code });
-      btn.disabled = false;
-      await refreshList();
-      if (currentCode === s.stock_code) showDetail(s.stock_code);
+      btn.textContent = "수집중…";
+      const msg = $("job-msg");
+      try {
+        const r = await api("/api/update-one", { code: s.stock_code });
+        if (!r.ok) throw new Error(r.error || "실패");
+        msg.textContent = `${s.corp_name}: 새 보고서 ${r.added}건 (분기 ${r.quarters}개 보유)`;
+        msg.className = "";
+      } catch (err) {
+        const detail = String(err.message || err);
+        msg.textContent = `${s.corp_name} 업데이트 실패: ` +
+          (detail.includes("Failed to fetch")
+            ? "서버가 꺼져 있습니다 — 수집기실행.command(또는 python3 dart_app.py)를 먼저 실행하세요."
+            : detail);
+        msg.className = "err";
+      } finally {
+        await refreshList().catch(() => {});
+        if (currentCode === s.stock_code) showDetail(s.stock_code).catch(() => {});
+      }
     });
     tr.lastChild.appendChild(btn);
     tr.addEventListener("click", () => showDetail(s.stock_code));
@@ -514,7 +544,15 @@ function setJobUi(job) {
 }
 
 async function pollJob() {
-  const job = await api("/api/job");
+  let job;
+  try {
+    job = await api("/api/job");
+  } catch (e) {
+    $("job-msg").textContent = "서버 연결 안 됨 — 수집기실행.command(또는 python3 dart_app.py)를 실행한 뒤 이 페이지를 새로고침하세요.";
+    $("job-msg").className = "err";
+    if (poller) { clearInterval(poller); poller = null; }
+    return;
+  }
   setJobUi(job);
   if (job.running) {
     if (!poller) poller = setInterval(pollJob, 2000);
