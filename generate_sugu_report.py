@@ -433,7 +433,7 @@ function showChart(ticker) {{
   }});
 
   chartCards.push({{ ticker, chart1: ch1, chart2: ch2, el: card }});
-  card.scrollIntoView({{behavior:'smooth', block:'start'}});
+  window.scrollTo({{top: 0, behavior: 'smooth'}});
 }}
 
 function removeChart(ticker) {{
