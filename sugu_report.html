@@ -13833,10 +13833,7 @@ function showChart(ticker) {
 
   // 이미 표시 중인 종목이면 스크롤만
   const existing = chartCards.find(c => c.ticker === ticker);
-  if (existing) {
-    existing.el.scrollIntoView({behavior:'smooth', block:'start'});
-    return;
-  }
+  if (existing) return;
 
   // 테이블 행 하이라이트
   document.querySelectorAll('#tab-stock tr.active').forEach(r => r.classList.remove('active'));
@@ -13916,7 +13913,6 @@ function showChart(ticker) {
   });
 
   chartCards.push({ ticker, chart1: ch1, chart2: ch2, el: card });
-  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 function removeChart(ticker) {
