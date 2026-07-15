@@ -578,8 +578,6 @@ function selectAc(ticker) {{
   document.getElementById('acList').classList.remove('open');
   filterTable();
   showChart(ticker);
-  const row = document.querySelector(`#dataTable tr[data-ticker="${{ticker}}"]`);
-  if (row) setTimeout(() => row.scrollIntoView({{behavior:'smooth', block:'center'}}), 300);
 }}
 
 document.addEventListener('click', e => {{
