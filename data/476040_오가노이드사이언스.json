@@ -1,0 +1,76 @@
+{
+ "corp_code": "01626391",
+ "corp_name": "오가노이드사이언스",
+ "stock_code": "476040",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 859194334,
+    "op": -8448628010,
+    "sga": 9307822344,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1179272033,
+    "op": -12355267041,
+    "sga": 13534539074,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2406581881,
+    "op": -16200194886,
+    "sga": 18606776767,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 143577371,
+    "op": -4242968999,
+    "sga": 4386546370,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 320,
+   "op": -3907,
+   "sga": 4227
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 1227,
+   "op": -3845,
+   "sga": 5072
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 144,
+   "op": -4243,
+   "sga": 4387
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 2407,
+   "op": -16200,
+   "sga": 18607,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:07:11"
+}

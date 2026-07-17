@@ -1,0 +1,111 @@
+{
+ "corp_code": "01658831",
+ "corp_name": "오름테라퓨틱",
+ "stock_code": "475830",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 20905620577,
+    "op": -8335353372,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2953532,
+    "op": -9570062962,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7116323,
+    "op": -19565911487,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23006057,
+    "op": -33504661618,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23564233,
+    "op": -51759177005,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -18076125528,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3,
+   "op": -9570,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4,
+   "op": -9996,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 16,
+   "op": -13939,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1,
+   "op": -18255,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -18076,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 20906,
+   "op": -8335,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 24,
+   "op": -51759,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:07:57"
+}

@@ -1,0 +1,111 @@
+{
+ "corp_code": "01632912",
+ "corp_name": "온코닉테라퓨틱스",
+ "stock_code": "476060",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 14838322428,
+    "op": -4797790778,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 9169393924,
+    "op": 1578313537,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 18601733139,
+    "op": 2691201797,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 37814825614,
+    "op": 11007800043,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 53391845897,
+    "op": 12619100519,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 22982482884,
+    "op": 4585894819,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 9169,
+   "op": 1578,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 9432,
+   "op": 1113,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 19213,
+   "op": 8317,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 15577,
+   "op": 1611,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 22982,
+   "op": 4586,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 14838,
+   "op": -4798,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 53392,
+   "op": 12619,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T21:10:09"
+}

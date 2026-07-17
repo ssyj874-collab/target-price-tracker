@@ -1,0 +1,211 @@
+{
+ "corp_code": "01169434",
+ "corp_name": "오가닉티코스메틱",
+ "stock_code": "900300",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 166170058,
+    "op": -86345344,
+    "sga": 144477722,
+    "inventory": 18855060
+   },
+   "2": {
+    "revenue": 415576697,
+    "op": -195657761,
+    "sga": 190914107,
+    "inventory": 15124249
+   },
+   "3": {
+    "revenue": 732127544,
+    "op": -348426358,
+    "sga": 574720949,
+    "inventory": 0
+   },
+   "4": {
+    "revenue": 965440088,
+    "op": -402150318,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 139132019,
+    "op": -41169126,
+    "sga": 96873384,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 345890719,
+    "op": -160931591,
+    "sga": 297658344,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 616731250,
+    "op": -294341720,
+    "sga": 525711386,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 870730681,
+    "op": -340461210,
+    "sga": 661043065,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 157342220,
+    "op": -48769884,
+    "sga": 113294490,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 391351413,
+    "op": -144150016,
+    "sga": 301811418,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 625808396,
+    "op": -286264110,
+    "sga": 533044952,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 926741227,
+    "op": -310836113,
+    "sga": 667524376,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 195053133,
+    "op": -34942460,
+    "sga": 111152952,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 19,
+   "revenue": 166,
+   "op": -86,
+   "sga": 144
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 15,
+   "revenue": 249,
+   "op": -109,
+   "sga": 46
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 0,
+   "revenue": 317,
+   "op": -153,
+   "sga": 384
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 233,
+   "op": -54,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 139,
+   "op": -41,
+   "sga": 97
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 207,
+   "op": -120,
+   "sga": 201
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 271,
+   "op": -133,
+   "sga": 228
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 254,
+   "op": -46,
+   "sga": 135
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 157,
+   "op": -49,
+   "sga": 113
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 234,
+   "op": -95,
+   "sga": 189
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 234,
+   "op": -142,
+   "sga": 231
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 301,
+   "op": -25,
+   "sga": 134
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 195,
+   "op": -35,
+   "sga": 111
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 965,
+   "op": -402,
+   "sga": null,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 871,
+   "op": -340,
+   "sga": 661,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 927,
+   "op": -311,
+   "sga": 668,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:07:16"
+}

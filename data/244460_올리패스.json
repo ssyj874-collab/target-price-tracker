@@ -1,0 +1,211 @@
+{
+ "corp_code": "01070149",
+ "corp_name": "올리패스",
+ "stock_code": "244460",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 893864497,
+    "op": -5099161804,
+    "sga": 5880483249,
+    "inventory": 290741353
+   },
+   "2": {
+    "revenue": 2722789574,
+    "op": -7501724651,
+    "sga": 9913807604,
+    "inventory": 185521835
+   },
+   "3": {
+    "revenue": 4537682712,
+    "op": -10351850490,
+    "sga": 14448649790,
+    "inventory": 170234284
+   },
+   "4": {
+    "revenue": 5289606360,
+    "op": -13706542935,
+    "sga": 18441009939,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 420428679,
+    "op": -2953354861,
+    "sga": 3347000142,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 895740238,
+    "op": -5658862755,
+    "sga": 6516596572,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1596335237,
+    "op": -7424743149,
+    "sga": 8793624351,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 756033925,
+    "op": -10119335666,
+    "sga": 10396408356,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 404282983,
+    "op": -1876088617,
+    "sga": 2027512665,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 563352569,
+    "op": -4183669137,
+    "sga": 4461456383,
+    "inventory": 632240000
+   },
+   "3": {
+    "revenue": 686858325,
+    "op": -5723332656,
+    "sga": 6094864651,
+    "inventory": 632240000
+   },
+   "4": {
+    "revenue": 816018331,
+    "op": -7390044360,
+    "sga": 7828503571,
+    "inventory": 714280000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 92566355,
+    "op": -1786486795,
+    "sga": 1839951080,
+    "inventory": 691680000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 291,
+   "revenue": 894,
+   "op": -5099,
+   "sga": 5880
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 186,
+   "revenue": 1829,
+   "op": -2403,
+   "sga": 4033
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 170,
+   "revenue": 1815,
+   "op": -2850,
+   "sga": 4535
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 752,
+   "op": -3355,
+   "sga": 3992
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 420,
+   "op": -2953,
+   "sga": 3347
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 475,
+   "op": -2706,
+   "sga": 3170
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 701,
+   "op": -1766,
+   "sga": 2277
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": -840,
+   "op": -2695,
+   "sga": 1603
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 404,
+   "op": -1876,
+   "sga": 2028
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 632,
+   "revenue": 159,
+   "op": -2308,
+   "sga": 2434
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 632,
+   "revenue": 124,
+   "op": -1540,
+   "sga": 1633
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 714,
+   "revenue": 129,
+   "op": -1667,
+   "sga": 1734
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 692,
+   "revenue": 93,
+   "op": -1786,
+   "sga": 1840
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 5290,
+   "op": -13707,
+   "sga": 18441,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 756,
+   "op": -10119,
+   "sga": 10396,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 816,
+   "op": -7390,
+   "sga": 7829,
+   "inventory": 714
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T21:10:24"
+}

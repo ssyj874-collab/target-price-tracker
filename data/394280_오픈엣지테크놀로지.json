@@ -1,0 +1,211 @@
+{
+ "corp_code": "01571107",
+ "corp_name": "오픈엣지테크놀로지",
+ "stock_code": "394280",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1059051206,
+    "op": -7741586573,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3900749140,
+    "op": -13322133202,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 5785794923,
+    "op": -20748443154,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 19594562678,
+    "op": -15863858723,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2483565708,
+    "op": -7105867171,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6534026620,
+    "op": -12839336417,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13157974590,
+    "op": -15316318237,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 15328473450,
+    "op": -24612257562,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 4801111702,
+    "op": -6609859665,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7398166730,
+    "op": -15368133811,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12654436431,
+    "op": -21342842750,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16058809323,
+    "op": -28907297350,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2673764184,
+    "op": -9017562312,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 1059,
+   "op": -7742,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 2842,
+   "op": -5581,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 1885,
+   "op": -7426,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 13809,
+   "op": 4885,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 2484,
+   "op": -7106,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 4050,
+   "op": -5733,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 6624,
+   "op": -2477,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2170,
+   "op": -9296,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 4801,
+   "op": -6610,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 2597,
+   "op": -8758,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5256,
+   "op": -5975,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 3404,
+   "op": -7564,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2674,
+   "op": -9018,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 19595,
+   "op": -15864,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 15328,
+   "op": -24612,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 16059,
+   "op": -28907,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:10:02"
+}

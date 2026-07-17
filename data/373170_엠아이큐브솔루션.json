@@ -1,0 +1,185 @@
+{
+ "corp_code": "01497142",
+ "corp_name": "엠아이큐브솔루션",
+ "stock_code": "373170",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 17196792625,
+    "op": 734031636,
+    "sga": 3740043648,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 24152183801,
+    "op": 1756064734,
+    "sga": 4376266398,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7449562574,
+    "op": 75516005,
+    "sga": 1358515029,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13858303130,
+    "op": -990931204,
+    "sga": 2846432889,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 21516609274,
+    "op": -476945358,
+    "sga": 3763948014,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 29636481104,
+    "op": -1069721190,
+    "sga": 5705622021,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6049946132,
+    "op": -617748492,
+    "sga": 835078129,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13459718683,
+    "op": -854205070,
+    "sga": 1670628736,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 19568575577,
+    "op": -694157519,
+    "sga": 2413934710,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 25620442016,
+    "op": 885921750,
+    "sga": 2553467604,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4437912358,
+    "op": -837723065,
+    "sga": 1234576756,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 6955,
+   "op": 1022,
+   "sga": 636
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 7450,
+   "op": 76,
+   "sga": 1359
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6409,
+   "op": -1066,
+   "sga": 1488
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7658,
+   "op": 514,
+   "sga": 918
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 8120,
+   "op": -593,
+   "sga": 1942
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6050,
+   "op": -618,
+   "sga": 835
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7410,
+   "op": -236,
+   "sga": 836
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6109,
+   "op": 160,
+   "sga": 743
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6052,
+   "op": 1580,
+   "sga": 140
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 4438,
+   "op": -838,
+   "sga": 1235
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 24152,
+   "op": 1756,
+   "sga": 4376,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 29636,
+   "op": -1070,
+   "sga": 5706,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 25620,
+   "op": 886,
+   "sga": 2553,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T21:04:41"
+}

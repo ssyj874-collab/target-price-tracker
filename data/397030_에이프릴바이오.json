@@ -1,0 +1,211 @@
+{
+ "corp_code": "01375822",
+ "corp_name": "에이프릴바이오",
+ "stock_code": "397030",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -3393902413,
+    "sga": 3393902413,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -7051639337,
+    "sga": 7051639337,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -10737400055,
+    "sga": 10737400055,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -13387937231,
+    "sga": 13387937231,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -2520441918,
+    "sga": 2520441918,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 20712000000,
+    "op": 15648670522,
+    "sga": 5063329478,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20712000000,
+    "op": 13217391198,
+    "sga": 7494608802,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27514000000,
+    "op": 16869084717,
+    "sga": 10644915283,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2172000000,
+    "op": -110181271,
+    "sga": 2282181271,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2172000000,
+    "op": -2767450558,
+    "sga": 4939450558,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2172000000,
+    "op": -5267028702,
+    "sga": 7439028702,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2172000000,
+    "op": -7263930208,
+    "sga": 9435930208,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 725350000,
+    "op": -2192730702,
+    "sga": 2918080702,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3394,
+   "sga": 3394
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3658,
+   "sga": 3658
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3686,
+   "sga": 3686
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2651,
+   "sga": 2651
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2520,
+   "sga": 2520
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 20712,
+   "op": 18169,
+   "sga": 2543
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2431,
+   "sga": 2431
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 6802,
+   "op": 3652,
+   "sga": 3150
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2172,
+   "op": -110,
+   "sga": 2282
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2657,
+   "sga": 2657
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2500,
+   "sga": 2500
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1997,
+   "sga": 1997
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 725,
+   "op": -2193,
+   "sga": 2918
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -13388,
+   "sga": 13388,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 27514,
+   "op": 16869,
+   "sga": 10645,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 2172,
+   "op": -7264,
+   "sga": 9436,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T20:58:19"
+}

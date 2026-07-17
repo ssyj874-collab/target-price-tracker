@@ -1,0 +1,211 @@
+{
+ "corp_code": "00956028",
+ "corp_name": "엑세스바이오",
+ "stock_code": "950130",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 187669675,
+    "op": 42393133,
+    "sga": 69104494,
+    "inventory": 49802171
+   },
+   "2": {
+    "revenue": 237894623,
+    "op": 43315780,
+    "sga": 96357249,
+    "inventory": 39116050
+   },
+   "3": {
+    "revenue": 240240959,
+    "op": 27863209,
+    "sga": 105815610,
+    "inventory": 38891863
+   },
+   "4": {
+    "revenue": 267075591,
+    "op": 16538993,
+    "sga": 113888999,
+    "inventory": 24991717
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 26428835,
+    "op": 1630372,
+    "sga": 11860073,
+    "inventory": 21689641
+   },
+   "2": {
+    "revenue": 45019114,
+    "op": -303309,
+    "sga": 22968607,
+    "inventory": 20463030
+   },
+   "3": {
+    "revenue": 61057615,
+    "op": -6378747,
+    "sga": 32113387,
+    "inventory": 18431849
+   },
+   "4": {
+    "revenue": 82451940,
+    "op": -3101264,
+    "sga": 42422373,
+    "inventory": 15958916
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 14942592,
+    "op": -5679968,
+    "sga": 9212760,
+    "inventory": 12854987
+   },
+   "2": {
+    "revenue": 15905423,
+    "op": -19250444,
+    "sga": 13961897,
+    "inventory": 13567508
+   },
+   "3": {
+    "revenue": 18422472,
+    "op": -29055940,
+    "sga": 20994387,
+    "inventory": 12838384
+   },
+   "4": {
+    "revenue": 21976285,
+    "op": -44547579,
+    "sga": 27356637,
+    "inventory": 7469431
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3679101,
+    "op": -7710809,
+    "sga": 5100941,
+    "inventory": 7581204
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 50,
+   "revenue": 188,
+   "op": 42,
+   "sga": 69
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 39,
+   "revenue": 50,
+   "op": 1,
+   "sga": 27
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 39,
+   "revenue": 2,
+   "op": -15,
+   "sga": 9
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 25,
+   "revenue": 27,
+   "op": -11,
+   "sga": 8
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 22,
+   "revenue": 26,
+   "op": 2,
+   "sga": 12
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 20,
+   "revenue": 19,
+   "op": -2,
+   "sga": 11
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 18,
+   "revenue": 16,
+   "op": -6,
+   "sga": 9
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 16,
+   "revenue": 21,
+   "op": 3,
+   "sga": 10
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 13,
+   "revenue": 15,
+   "op": -6,
+   "sga": 9
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 14,
+   "revenue": 1,
+   "op": -14,
+   "sga": 5
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 13,
+   "revenue": 3,
+   "op": -10,
+   "sga": 7
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 7,
+   "revenue": 4,
+   "op": -15,
+   "sga": 6
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 8,
+   "revenue": 4,
+   "op": -8,
+   "sga": 5
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 267,
+   "op": 17,
+   "sga": 114,
+   "inventory": 25
+  },
+  {
+   "year": 2024,
+   "revenue": 82,
+   "op": -3,
+   "sga": 42,
+   "inventory": 16
+  },
+  {
+   "year": 2025,
+   "revenue": 22,
+   "op": -45,
+   "sga": 27,
+   "inventory": 7
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:00:18"
+}

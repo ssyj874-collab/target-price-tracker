@@ -1,0 +1,185 @@
+{
+ "corp_code": "01226234",
+ "corp_name": "와이바이오로직스",
+ "stock_code": "338840",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 2862996449,
+    "op": -6619792785,
+    "sga": 8538112518,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3479080759,
+    "op": -10142692527,
+    "sga": 12531670151,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1142664755,
+    "op": -2433528772,
+    "sga": 3169209359,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1374671258,
+    "op": -5896202313,
+    "sga": 6644233546,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 4615379708,
+    "op": -6084968950,
+    "sga": 9725958295,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 5762795738,
+    "op": -8446978249,
+    "sga": 12820108060,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 407196300,
+    "op": -2258449673,
+    "sga": 2478470001,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1571943820,
+    "op": -3753776422,
+    "sga": 5013765965,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2464345870,
+    "op": -6283735172,
+    "sga": 8292362250,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2912981882,
+    "op": -9269185096,
+    "sga": 11649848926,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 281888000,
+    "op": -3879920567,
+    "sga": 4017493857,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 616,
+   "op": -3523,
+   "sga": 3994
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1143,
+   "op": -2434,
+   "sga": 3169
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 232,
+   "op": -3463,
+   "sga": 3475
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3241,
+   "op": -189,
+   "sga": 3082
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 1147,
+   "op": -2362,
+   "sga": 3094
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 407,
+   "op": -2258,
+   "sga": 2478
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1165,
+   "op": -1495,
+   "sga": 2535
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 892,
+   "op": -2530,
+   "sga": 3279
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 449,
+   "op": -2985,
+   "sga": 3357
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 282,
+   "op": -3880,
+   "sga": 4017
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 3479,
+   "op": -10143,
+   "sga": 12532,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 5763,
+   "op": -8447,
+   "sga": 12820,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 2913,
+   "op": -9269,
+   "sga": 11650,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T21:11:10"
+}

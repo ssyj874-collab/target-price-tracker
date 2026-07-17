@@ -1,0 +1,211 @@
+{
+ "corp_code": "00532129",
+ "corp_name": "영림원소프트랩",
+ "stock_code": "060850",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 12571903891,
+    "op": -55221690,
+    "sga": 5410072708,
+    "inventory": 25000001
+   },
+   "2": {
+    "revenue": 26562176715,
+    "op": 726271946,
+    "sga": 11852785292,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 40799303570,
+    "op": 2120423210,
+    "sga": 17681251983,
+    "inventory": 25000001
+   },
+   "4": {
+    "revenue": 55510670316,
+    "op": 2890955672,
+    "sga": 23836532166,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 12131170579,
+    "op": -846718575,
+    "sga": 6213291736,
+    "inventory": 30000000
+   },
+   "2": {
+    "revenue": 27224551275,
+    "op": -486845877,
+    "sga": 12948993712,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 45867336923,
+    "op": 1761841734,
+    "sga": 19717526172,
+    "inventory": 30000000
+   },
+   "4": {
+    "revenue": 62553419730,
+    "op": 2221478070,
+    "sga": 26485984480,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 16572249135,
+    "op": 72897073,
+    "sga": 7210688026,
+    "inventory": 30000000
+   },
+   "2": {
+    "revenue": 35697978418,
+    "op": 1343780505,
+    "sga": 14831458514,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 56270753050,
+    "op": 2633215014,
+    "sga": 22208354030,
+    "inventory": 30000000
+   },
+   "4": {
+    "revenue": 79883113261,
+    "op": 4219231934,
+    "sga": 29753415377,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 21913352015,
+    "op": 1798375868,
+    "sga": 7924347640,
+    "inventory": 34500000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 25,
+   "revenue": 12572,
+   "op": -55,
+   "sga": 5410
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 13990,
+   "op": 781,
+   "sga": 6443
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 25,
+   "revenue": 14237,
+   "op": 1394,
+   "sga": 5828
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 14711,
+   "op": 771,
+   "sga": 6155
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 30,
+   "revenue": 12131,
+   "op": -847,
+   "sga": 6213
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 15093,
+   "op": 360,
+   "sga": 6736
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 30,
+   "revenue": 18643,
+   "op": 2249,
+   "sga": 6769
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 16686,
+   "op": 460,
+   "sga": 6768
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 30,
+   "revenue": 16572,
+   "op": 73,
+   "sga": 7211
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 19126,
+   "op": 1271,
+   "sga": 7621
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 30,
+   "revenue": 20573,
+   "op": 1289,
+   "sga": 7377
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 23612,
+   "op": 1586,
+   "sga": 7545
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 34,
+   "revenue": 21913,
+   "op": 1798,
+   "sga": 7924
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 55511,
+   "op": 2891,
+   "sga": 23837,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 62553,
+   "op": 2221,
+   "sga": 26486,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 79883,
+   "op": 4219,
+   "sga": 29753,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:05:59"
+}

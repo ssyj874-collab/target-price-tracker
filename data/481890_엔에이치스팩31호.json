@@ -1,0 +1,124 @@
+{
+ "corp_code": "01834194",
+ "corp_name": "엔에이치스팩31호",
+ "stock_code": "481890",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": null,
+    "op": -30996300,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -35745300,
+    "sga": 35745300,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -11438395,
+    "sga": 11438395,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -28456295,
+    "sga": 28456295,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -34496295,
+    "sga": 34496295,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -50269705,
+    "sga": 50269705,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -11515150,
+    "sga": 11515150,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": 11
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": 17
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -16,
+   "sga": 16
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12,
+   "sga": 12
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -36,
+   "sga": 36,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -50,
+   "sga": 50,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T21:01:51"
+}

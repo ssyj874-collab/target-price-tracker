@@ -1,0 +1,211 @@
+{
+ "corp_code": "00684802",
+ "corp_name": "에이플러스에셋",
+ "stock_code": "244920",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 74979119459,
+    "op": 594768793,
+    "sga": null,
+    "inventory": 955447233
+   },
+   "2": {
+    "revenue": 161243021169,
+    "op": 2459705521,
+    "sga": null,
+    "inventory": 913186755
+   },
+   "3": {
+    "revenue": 258379978603,
+    "op": 9433905677,
+    "sga": null,
+    "inventory": 897256637
+   },
+   "4": {
+    "revenue": 354607752665,
+    "op": 7648299829,
+    "sga": null,
+    "inventory": 826110163
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 122931115559,
+    "op": 5894415469,
+    "sga": null,
+    "inventory": 840257830
+   },
+   "2": {
+    "revenue": 236387517877,
+    "op": 16111223596,
+    "sga": null,
+    "inventory": 911158841
+   },
+   "3": {
+    "revenue": 376298731755,
+    "op": 27049744449,
+    "sga": null,
+    "inventory": 14136587419
+   },
+   "4": {
+    "revenue": 515785555014,
+    "op": 31550650101,
+    "sga": null,
+    "inventory": 13986112744
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 158287275763,
+    "op": 7403151911,
+    "sga": null,
+    "inventory": 14934432931
+   },
+   "2": {
+    "revenue": 325710941558,
+    "op": 16342116720,
+    "sga": null,
+    "inventory": 14628911667
+   },
+   "3": {
+    "revenue": 501716967436,
+    "op": 22514055875,
+    "sga": null,
+    "inventory": 14528325141
+   },
+   "4": {
+    "revenue": 682466555853,
+    "op": 29314448307,
+    "sga": null,
+    "inventory": 13244985120
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 186597644750,
+    "op": 15908368086,
+    "sga": null,
+    "inventory": 14396299832
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 955,
+   "revenue": 74979,
+   "op": 595,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 913,
+   "revenue": 86264,
+   "op": 1865,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 897,
+   "revenue": 97137,
+   "op": 6974,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 826,
+   "revenue": 96228,
+   "op": -1786,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 840,
+   "revenue": 122931,
+   "op": 5894,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 911,
+   "revenue": 113456,
+   "op": 10217,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 14137,
+   "revenue": 139911,
+   "op": 10939,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 13986,
+   "revenue": 139487,
+   "op": 4501,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 14934,
+   "revenue": 158287,
+   "op": 7403,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 14629,
+   "revenue": 167424,
+   "op": 8939,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 14528,
+   "revenue": 176006,
+   "op": 6172,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 13245,
+   "revenue": 180750,
+   "op": 6800,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 14396,
+   "revenue": 186598,
+   "op": 15908,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 354608,
+   "op": 7648,
+   "sga": null,
+   "inventory": 826
+  },
+  {
+   "year": 2024,
+   "revenue": 515786,
+   "op": 31551,
+   "sga": null,
+   "inventory": 13986
+  },
+  {
+   "year": 2025,
+   "revenue": 682467,
+   "op": 29314,
+   "sga": null,
+   "inventory": 13245
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T20:58:24"
+}

@@ -1,0 +1,211 @@
+{
+ "corp_code": "00877174",
+ "corp_name": "엠브레인",
+ "stock_code": "169330",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10096619063,
+    "op": 330611629,
+    "sga": 1697531842,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 31203084928,
+    "op": 3230176565,
+    "sga": 3531582459,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 42875061750,
+    "op": 4513244226,
+    "sga": 4756508237,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 54943864075,
+    "op": 4711681708,
+    "sga": 6261834139,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 10335508276,
+    "op": -119737330,
+    "sga": 2170685249,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 30702023589,
+    "op": 1415633840,
+    "sga": 4438285754,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 41385837944,
+    "op": 2055363385,
+    "sga": 5082450259,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 53710500356,
+    "op": 1675104422,
+    "sga": 6936884437,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 13627219544,
+    "op": 335147956,
+    "sga": 3566533306,
+    "inventory": 1048631626
+   },
+   "2": {
+    "revenue": 35462074066,
+    "op": 2870482406,
+    "sga": 6894540334,
+    "inventory": 597444580
+   },
+   "3": {
+    "revenue": 41852778951,
+    "op": 408252530,
+    "sga": 6682420084,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 56161085757,
+    "op": -1257743396,
+    "sga": 9893135546,
+    "inventory": 386341546
+   }
+  },
+  "2026": {
+   "3": {
+    "revenue": 45346322564,
+    "op": 1913197450,
+    "sga": 8983518265,
+    "inventory": 582653269
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 10097,
+   "op": 331,
+   "sga": 1698
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 21106,
+   "op": 2900,
+   "sga": 1834
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 11672,
+   "op": 1283,
+   "sga": 1225
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 12069,
+   "op": 198,
+   "sga": 1505
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 10336,
+   "op": -120,
+   "sga": 2171
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 20367,
+   "op": 1535,
+   "sga": 2268
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 10684,
+   "op": 640,
+   "sga": 644
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12325,
+   "op": -380,
+   "sga": 1854
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1049,
+   "revenue": 13627,
+   "op": 335,
+   "sga": 3567
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 597,
+   "revenue": 21835,
+   "op": 2535,
+   "sga": 3328
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6391,
+   "op": -2462,
+   "sga": -212
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 386,
+   "revenue": 14308,
+   "op": -1666,
+   "sga": 3211
+  },
+  {
+   "label": "2026.3분기",
+   "inventory": 583,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 54944,
+   "op": 4712,
+   "sga": 6262,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 53711,
+   "op": 1675,
+   "sga": 6937,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 56161,
+   "op": -1258,
+   "sga": 9893,
+   "inventory": 386
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T21:04:31"
+}
