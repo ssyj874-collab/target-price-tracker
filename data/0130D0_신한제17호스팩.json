@@ -2,8 +2,26 @@
  "corp_code": "01963520",
  "corp_name": "신한제17호스팩",
  "stock_code": "0130D0",
- "cums": {},
- "quarterly": [],
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -203038180,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -203,
+   "sga": null
+  }
+ ],
  "annual": [],
- "updated": "2026-07-14T22:15:17"
+ "updated": "2026-07-17T15:59:42",
+ "fs_div": "OFS"
 }

@@ -10,9 +10,78 @@
     "sga": null,
     "inventory": null
    }
+  },
+  "2024": {
+   "4": {
+    "revenue": null,
+    "op": -30902990,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -21966750,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -29486710,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -37062970,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -46918390,
+    "sga": null,
+    "inventory": null
+   }
   }
  },
  "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -22,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
+   "sga": null
+  },
   {
    "label": "2026.1분기",
    "inventory": null,
@@ -21,7 +90,22 @@
    "sga": null
   }
  ],
- "annual": [],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -31,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -47,
+   "sga": null,
+   "inventory": null
+  }
+ ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:14:56"
+ "updated": "2026-07-17T15:59:23"
 }

@@ -42,6 +42,40 @@
     "sga": 822798000000,
     "inventory": null
    }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 117636000000,
+    "sga": 196070000000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 318506000000,
+    "sga": 391883000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 462624000000,
+    "sga": 601191000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 488478000000,
+    "sga": 838840000000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 386407000000,
+    "sga": 244756000000,
+    "inventory": null
+   }
   }
  },
  "quarterly": [
@@ -86,6 +120,41 @@
    "revenue": 2956112,
    "op": -92680,
    "sga": 220330
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 117636,
+   "sga": 196070
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 200870,
+   "sga": 195813
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 144118,
+   "sga": 209308
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 25854,
+   "sga": 237649
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 386407,
+   "sga": 244756
   }
  ],
  "annual": [
@@ -102,8 +171,15 @@
    "op": 281905,
    "sga": 822798,
    "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 488478,
+   "sga": 838840,
+   "inventory": null
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:16:23"
+ "updated": "2026-07-17T16:00:39"
 }

@@ -41,6 +41,12 @@
     "op": -2065265053,
     "sga": 2838441943,
     "inventory": 677314956
+   },
+   "3": {
+    "revenue": null,
+    "op": -1814930624,
+    "sga": 1814930624,
+    "inventory": null
    }
   }
  },
@@ -86,6 +92,13 @@
    "revenue": 1551,
    "op": -1903,
    "sga": 2019
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 250,
+   "sga": -1024
   }
  ],
  "annual": [
@@ -97,6 +110,6 @@
    "inventory": 879
   }
  ],
- "fs_div": "CFS",
- "updated": "2026-07-14T22:35:16"
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:13:41"
 }

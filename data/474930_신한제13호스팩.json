@@ -10,9 +10,104 @@
     "sga": 9658650,
     "inventory": null
    }
+  },
+  "2024": {
+   "2": {
+    "revenue": null,
+    "op": -21202748,
+    "sga": 21202748,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -29223648,
+    "sga": 29223648,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -33550148,
+    "sga": 33550148,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -16233950,
+    "sga": 16233950,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -24034850,
+    "sga": 24034850,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -32182480,
+    "sga": 32182480,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -36684380,
+    "sga": 36684380,
+    "inventory": null
+   }
   }
  },
  "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -16,
+   "sga": 16
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": 5
+  },
   {
    "label": "2026.1분기",
    "inventory": null,
@@ -21,7 +116,22 @@
    "sga": 10
   }
  ],
- "annual": [],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -34,
+   "sga": 34,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -37,
+   "sga": 37,
+   "inventory": null
+  }
+ ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:14:48"
+ "updated": "2026-07-17T15:59:18"
 }

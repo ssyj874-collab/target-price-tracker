@@ -1,0 +1,115 @@
+{
+ "corp_code": "01259056",
+ "corp_name": "애닉",
+ "stock_code": "299910",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 482751410,
+    "op": -216131650,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 423244430,
+    "op": -626602852,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 535087147,
+    "op": -776743773,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 640250904,
+    "op": -2107479149,
+    "sga": null,
+    "inventory": 2733215546
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 384713148,
+    "op": -902790823,
+    "sga": 996103635,
+    "inventory": 6144164946
+   },
+   "2": {
+    "revenue": 2054921505,
+    "op": -2718164784,
+    "sga": 3541531913,
+    "inventory": 8126874987
+   },
+   "3": {
+    "revenue": 11884223342,
+    "op": -2880025159,
+    "sga": 4915022618,
+    "inventory": 253380895
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 483,
+   "op": -216,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": -60,
+   "op": -410,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 112,
+   "op": -150,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 2733,
+   "revenue": 105,
+   "op": -1331,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 6144,
+   "revenue": 385,
+   "op": -903,
+   "sga": 996
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 8127,
+   "revenue": 1670,
+   "op": -1815,
+   "sga": 2545
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 253,
+   "revenue": 9829,
+   "op": -162,
+   "sga": 1373
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 640,
+   "op": -2107,
+   "sga": null,
+   "inventory": 2733
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:19:28"
+}

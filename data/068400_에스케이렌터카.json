@@ -1,0 +1,211 @@
+{
+ "corp_code": "00201450",
+ "corp_name": "에스케이렌터카",
+ "stock_code": "068400",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 350931997632,
+    "op": 32209155961,
+    "sga": null,
+    "inventory": 21217088538
+   },
+   "2": {
+    "revenue": 705584539050,
+    "op": 62949585200,
+    "sga": null,
+    "inventory": 25408902038
+   },
+   "3": {
+    "revenue": 1069646316648,
+    "op": 98893296170,
+    "sga": null,
+    "inventory": 19547232268
+   },
+   "4": {
+    "revenue": 1402832688625,
+    "op": 121991681400,
+    "sga": null,
+    "inventory": 24262149156
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 373912985756,
+    "op": 36447819926,
+    "sga": null,
+    "inventory": 24554768044
+   },
+   "2": {
+    "revenue": 773053843913,
+    "op": 76631262271,
+    "sga": null,
+    "inventory": 25709032488
+   },
+   "3": {
+    "revenue": 1164477437165,
+    "op": 110649622042,
+    "sga": null,
+    "inventory": 25393294882
+   },
+   "4": {
+    "revenue": 1556525851704,
+    "op": 172534958634,
+    "sga": null,
+    "inventory": 15415580027
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 357296967921,
+    "op": 40297944286,
+    "sga": null,
+    "inventory": 10165633093
+   },
+   "2": {
+    "revenue": 718587095810,
+    "op": 74139273810,
+    "sga": null,
+    "inventory": 29880833792
+   },
+   "3": {
+    "revenue": 1162085565779,
+    "op": 126777293614,
+    "sga": null,
+    "inventory": 8287175307
+   },
+   "4": {
+    "revenue": 1558366386407,
+    "op": 168739301848,
+    "sga": null,
+    "inventory": 17062064922
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 399648997174,
+    "op": 41020109501,
+    "sga": null,
+    "inventory": 11409382475
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 21217,
+   "revenue": 350932,
+   "op": 32209,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 25409,
+   "revenue": 354653,
+   "op": 30740,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 19547,
+   "revenue": 364062,
+   "op": 35944,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 24262,
+   "revenue": 333186,
+   "op": 23098,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 24555,
+   "revenue": 373913,
+   "op": 36448,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 25709,
+   "revenue": 399141,
+   "op": 40183,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 25393,
+   "revenue": 391424,
+   "op": 34018,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 15416,
+   "revenue": 392048,
+   "op": 61885,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 10166,
+   "revenue": 357297,
+   "op": 40298,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 29881,
+   "revenue": 361290,
+   "op": 33841,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 8287,
+   "revenue": 443498,
+   "op": 52638,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 17062,
+   "revenue": 396281,
+   "op": 41962,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 11409,
+   "revenue": 399649,
+   "op": 41020,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1402833,
+   "op": 121992,
+   "sga": null,
+   "inventory": 24262
+  },
+  {
+   "year": 2024,
+   "revenue": 1556526,
+   "op": 172535,
+   "sga": null,
+   "inventory": 15416
+  },
+  {
+   "year": 2025,
+   "revenue": 1558366,
+   "op": 168739,
+   "sga": null,
+   "inventory": 17062
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:28:50"
+}

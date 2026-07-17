@@ -1,0 +1,172 @@
+{
+ "corp_code": "01596920",
+ "corp_name": "알지노믹스",
+ "stock_code": "476830",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 143607690,
+    "op": -15522148625,
+    "sga": 15665756315,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -3371805304,
+    "sga": 3371805304,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -6791674647,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -10236963307,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -12861965312,
+    "sga": 12861965312,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -4131093685,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7090248000,
+    "op": -1075132261,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7090248000,
+    "op": -9157043387,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 7919875859,
+    "op": -14597361438,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 366290000,
+    "op": -8057629875,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3372,
+   "sga": 3372
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3420,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3445,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2625,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4131,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7090,
+   "op": 3056,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8082,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 830,
+   "op": -5440,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 366,
+   "op": -8058,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 144,
+   "op": -15522,
+   "sga": 15666,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -12862,
+   "sga": 12862,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 7920,
+   "op": -14597,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:18:04"
+}

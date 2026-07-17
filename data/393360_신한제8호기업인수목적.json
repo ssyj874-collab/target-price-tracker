@@ -2,8 +2,47 @@
  "corp_code": "01574760",
  "corp_name": "신한제8호기업인수목적",
  "stock_code": "393360",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T22:15:52"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -66069110,
+    "sga": 66069110,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -77738240,
+    "sga": 77738240,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": 12
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -78,
+   "sga": 78,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-17T16:00:18",
+ "fs_div": "OFS"
 }

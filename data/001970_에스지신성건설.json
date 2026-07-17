@@ -1,0 +1,185 @@
+{
+ "corp_code": "00173661",
+ "corp_name": "에스지신성건설",
+ "stock_code": "001970",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 154960224309,
+    "op": -4474133519,
+    "sga": 7674406585,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 213158959126,
+    "op": -3680656993,
+    "sga": 11594301449,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 56800859169,
+    "op": -937966729,
+    "sga": 3381300112,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 118187963972,
+    "op": -2232607518,
+    "sga": 4365683466,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 136365131420,
+    "op": -4892162785,
+    "sga": 8257437293,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 139482482452,
+    "op": -16115689632,
+    "sga": 12887459526,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6900289810,
+    "op": -5564970937,
+    "sga": 5683010294,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11607752579,
+    "op": -9056426598,
+    "sga": 8786763754,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16767420037,
+    "op": -9060982102,
+    "sga": 8870281622,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22412385642,
+    "op": -20630221997,
+    "sga": 20419703113,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4653404924,
+    "op": -2681135804,
+    "sga": 1591543898,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 58199,
+   "op": 793,
+   "sga": 3920
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 56801,
+   "op": -938,
+   "sga": 3381
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 61387,
+   "op": -1295,
+   "sga": 984
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 18177,
+   "op": -2660,
+   "sga": 3892
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3117,
+   "op": -11224,
+   "sga": 4630
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6900,
+   "op": -5565,
+   "sga": 5683
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4707,
+   "op": -3491,
+   "sga": 3104
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5160,
+   "op": -5,
+   "sga": 84
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5645,
+   "op": -11569,
+   "sga": 11549
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 4653,
+   "op": -2681,
+   "sga": 1592
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 213159,
+   "op": -3681,
+   "sga": 11594,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 139482,
+   "op": -16116,
+   "sga": 12887,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 22412,
+   "op": -20630,
+   "sga": 20420,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:28:11"
+}

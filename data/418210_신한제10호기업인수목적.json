@@ -2,8 +2,108 @@
  "corp_code": "01616482",
  "corp_name": "신한제10호기업인수목적",
  "stock_code": "418210",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T22:14:27"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -41337230,
+    "sga": 41337230,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -48581600,
+    "sga": 48581600,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": -12096220,
+    "sga": 12096220,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -24037090,
+    "sga": 24037090,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -54118710,
+    "sga": 54118710,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -100054580,
+    "sga": 100054580,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": 12
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": 12
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -30,
+   "sga": 30
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -46,
+   "sga": 46
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -49,
+   "sga": 49,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -100,
+   "sga": 100,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-17T15:59:04",
+ "fs_div": "OFS"
 }

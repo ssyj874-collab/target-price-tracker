@@ -23,12 +23,56 @@
     "op": -51338365,
     "sga": null,
     "inventory": null
+   },
+   "1": {
+    "revenue": null,
+    "op": -24178375,
+    "sga": 24178375,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -32952425,
+    "sga": 32952425,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -43452945,
+    "sga": null,
+    "inventory": null
    }
   },
   "2025": {
    "4": {
     "revenue": 0,
     "op": -45617025,
+    "sga": null,
+    "inventory": null
+   },
+   "1": {
+    "revenue": null,
+    "op": -20866535,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -28132595,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -38365235,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -20975560,
     "sga": null,
     "inventory": null
    }
@@ -50,17 +94,66 @@
    "sga": 40
   },
   {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -24,
+   "sga": 24
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -11,
+   "sga": null
+  },
+  {
    "label": "2024.4분기",
    "inventory": null,
    "revenue": null,
-   "op": null,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -21,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
    "sga": null
   },
   {
    "label": "2025.4분기",
    "inventory": null,
    "revenue": null,
-   "op": null,
+   "op": -7,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -21,
    "sga": null
   }
  ],
@@ -88,5 +181,5 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:14:34"
+ "updated": "2026-07-17T15:59:07"
 }

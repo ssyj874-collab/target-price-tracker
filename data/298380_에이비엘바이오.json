@@ -1,0 +1,211 @@
+{
+ "corp_code": "01256864",
+ "corp_name": "에이비엘바이오",
+ "stock_code": "298380",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 40381313881,
+    "op": 23111170245,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 48971623228,
+    "op": 12768050938,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 57542357247,
+    "op": 7573761936,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 65547054627,
+    "op": -2617101131,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7937205882,
+    "op": -14278464933,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 16379131764,
+    "op": -25560958859,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 24316337646,
+    "op": -40251423134,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 33403030159,
+    "op": -59377417080,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2164692513,
+    "op": -29033843574,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 77906720026,
+    "op": 11694215228,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 79349848373,
+    "op": -10714502083,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 79349848373,
+    "op": -40389935899,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 13136000000,
+    "op": -17225118856,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 40381,
+   "op": 23111,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 8590,
+   "op": -10343,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 8571,
+   "op": -5194,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 8005,
+   "op": -10191,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 7937,
+   "op": -14278,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 8442,
+   "op": -11282,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7937,
+   "op": -14690,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9087,
+   "op": -19126,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2165,
+   "op": -29034,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 75742,
+   "op": 40728,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1443,
+   "op": -22409,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -29675,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 13136,
+   "op": -17225,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 65547,
+   "op": -2617,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 33403,
+   "op": -59377,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 79350,
+   "op": -40390,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:33:18"
+}

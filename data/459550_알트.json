@@ -1,0 +1,63 @@
+{
+ "corp_code": "01466373",
+ "corp_name": "알트",
+ "stock_code": "459550",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 88978761776,
+    "op": 7342101921,
+    "sga": 10537645193,
+    "inventory": 5698585753
+   },
+   "4": {
+    "revenue": 112948434552,
+    "op": 8966761577,
+    "sga": 14355405577,
+    "inventory": 3520241625
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 18127597913,
+    "op": -787594931,
+    "sga": 3678434171,
+    "inventory": 2876195961
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 5699,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3520,
+   "revenue": 23970,
+   "op": 1625,
+   "sga": 3818
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2876,
+   "revenue": 18128,
+   "op": -788,
+   "sga": 3678
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 112948,
+   "op": 8967,
+   "sga": 14355,
+   "inventory": 3520
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:18:25"
+}

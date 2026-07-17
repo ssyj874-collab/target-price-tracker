@@ -1,0 +1,115 @@
+{
+ "corp_code": "00245898",
+ "corp_name": "에스에이치엔엘",
+ "stock_code": "050320",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -93820615,
+    "sga": 93820615,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -194068110,
+    "sga": 194068110,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -309529994,
+    "sga": 309529994,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -373881472,
+    "sga": 373881472,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -73093508,
+    "sga": 73093508,
+    "inventory": 0
+   },
+   "2": {
+    "revenue": 0,
+    "op": -129308124,
+    "sga": 129308124,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -212226166,
+    "sga": 212226166,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -94,
+   "sga": 94
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -100,
+   "sga": 100
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -115,
+   "sga": 115
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -64,
+   "sga": 64
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -73,
+   "sga": 73
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -56,
+   "sga": 56
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -83,
+   "sga": 83
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -374,
+   "sga": 374,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:25:17"
+}

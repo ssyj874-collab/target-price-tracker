@@ -1,0 +1,185 @@
+{
+ "corp_code": "00450339",
+ "corp_name": "에스에프씨",
+ "stock_code": "112240",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 7528563060,
+    "op": -2128565786,
+    "sga": 2441677423,
+    "inventory": 2258277021
+   },
+   "4": {
+    "revenue": 8503665980,
+    "op": -2663959736,
+    "sga": 3113999721,
+    "inventory": 2329361844
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1639464229,
+    "op": -740564271,
+    "sga": 944573300,
+    "inventory": 2785671252
+   },
+   "2": {
+    "revenue": 3573366619,
+    "op": -1403163320,
+    "sga": 1666853616,
+    "inventory": 2569722637
+   },
+   "3": {
+    "revenue": 5240692307,
+    "op": -1568867642,
+    "sga": 2278470005,
+    "inventory": 2311198300
+   },
+   "4": {
+    "revenue": 6352091729,
+    "op": -2797227197,
+    "sga": 2962859304,
+    "inventory": 2204509752
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1283305422,
+    "op": -410967308,
+    "sga": 637022338,
+    "inventory": 2053308260
+   },
+   "2": {
+    "revenue": 2217427948,
+    "op": -948995598,
+    "sga": 1229486178,
+    "inventory": 1984285738
+   },
+   "3": {
+    "revenue": 2910040643,
+    "op": -2840339949,
+    "sga": 1664736053,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2923214261,
+    "op": -3042626619,
+    "sga": 1880196341,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1718400,
+    "op": -231214814,
+    "sga": 232933214,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": 2258,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 2329,
+   "revenue": 975,
+   "op": -535,
+   "sga": 672
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 2786,
+   "revenue": 1639,
+   "op": -741,
+   "sga": 945
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 2570,
+   "revenue": 1934,
+   "op": -663,
+   "sga": 722
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 2311,
+   "revenue": 1667,
+   "op": -166,
+   "sga": 612
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 2205,
+   "revenue": 1111,
+   "op": -1228,
+   "sga": 684
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2053,
+   "revenue": 1283,
+   "op": -411,
+   "sga": 637
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1984,
+   "revenue": 934,
+   "op": -538,
+   "sga": 592
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 693,
+   "op": -1891,
+   "sga": 435
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 13,
+   "op": -202,
+   "sga": 215
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2,
+   "op": -231,
+   "sga": 233
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 8504,
+   "op": -2664,
+   "sga": 3114,
+   "inventory": 2329
+  },
+  {
+   "year": 2024,
+   "revenue": 6352,
+   "op": -2797,
+   "sga": 2963,
+   "inventory": 2205
+  },
+  {
+   "year": 2025,
+   "revenue": 2923,
+   "op": -3043,
+   "sga": 1880,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:25:33"
+}

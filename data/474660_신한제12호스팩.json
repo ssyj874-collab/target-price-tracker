@@ -9,6 +9,52 @@
     "op": -222881560,
     "sga": 222881560,
     "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -235358280,
+    "sga": 235358280,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -242521000,
+    "sga": 242521000,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -21733770,
+    "sga": 21733770,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -28962690,
+    "sga": 28962690,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -39279970,
+    "sga": 39279970,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -46617430,
+    "sga": 46617430,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -16270960,
+    "sga": 16270960,
+    "inventory": null
    }
   }
  },
@@ -19,9 +65,73 @@
    "revenue": null,
    "op": null,
    "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": 12
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -22,
+   "sga": 22
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
+   "sga": 10
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -16,
+   "sga": 16
   }
  ],
- "annual": [],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -243,
+   "sga": 243,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -47,
+   "sga": 47,
+   "inventory": null
+  }
+ ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:14:41"
+ "updated": "2026-07-17T15:59:13"
 }

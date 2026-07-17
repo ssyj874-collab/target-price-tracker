@@ -1,0 +1,63 @@
+{
+ "corp_code": "01803635",
+ "corp_name": "에스투더블유",
+ "stock_code": "488280",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 6386192855,
+    "op": -5158754657,
+    "sga": 11544947512,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10088850738,
+    "op": -5640472823,
+    "sga": 15729323561,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2176940127,
+    "op": -2251582443,
+    "sga": 4428522570,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 3703,
+   "op": -482,
+   "sga": 4184
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2177,
+   "op": -2252,
+   "sga": 4429
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 10089,
+   "op": -5640,
+   "sga": 15729,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:30:44"
+}

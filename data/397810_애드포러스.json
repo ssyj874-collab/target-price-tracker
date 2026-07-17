@@ -1,0 +1,76 @@
+{
+ "corp_code": "01551042",
+ "corp_name": "애드포러스",
+ "stock_code": "397810",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 17262074485,
+    "op": 2146571746,
+    "sga": 15115502739,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23746511716,
+    "op": 2465004925,
+    "sga": 21281506791,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30598804671,
+    "op": 2421167532,
+    "sga": 28177637139,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7819230598,
+    "op": 675828290,
+    "sga": 7143402308,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6484,
+   "op": 318,
+   "sga": 6166
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6852,
+   "op": -44,
+   "sga": 6896
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7819,
+   "op": 676,
+   "sga": 7143
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 30599,
+   "op": 2421,
+   "sga": 28178,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:19:46"
+}

@@ -1,0 +1,150 @@
+{
+ "corp_code": "00136642",
+ "corp_name": "에스유앤피",
+ "stock_code": "019590",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -1552234380,
+    "sga": 2851658340,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -10582309920,
+    "sga": 4634388756,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": 51335122867,
+    "sga": 2036779959,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -10811202558,
+    "sga": 1913191857,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -20506468051,
+    "sga": 2995913571,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -27869654099,
+    "sga": 5349674718,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -1451157113,
+    "sga": -20138224,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -4721440652,
+    "sga": 1887247509,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -5553293743,
+    "sga": 2839090007,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9030,
+   "sga": 1783
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 51335,
+   "sga": 2037
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -62146,
+   "sga": -124
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9695,
+   "sga": 1083
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7363,
+   "sga": 2354
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -1451,
+   "sga": -20
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3270,
+   "sga": 1907
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -832,
+   "sga": 952
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -10582,
+   "sga": 4634,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -27870,
+   "sga": 5350,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:27:37"
+}

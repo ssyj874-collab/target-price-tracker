@@ -1,0 +1,124 @@
+{
+ "corp_code": "01671197",
+ "corp_name": "에스케이증권제8호기업인수목적",
+ "stock_code": "435870",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 0,
+    "op": -80565650,
+    "sga": 80565650,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -87690650,
+    "sga": 87690650,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -6984326,
+    "sga": 6984326,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -23723800,
+    "sga": 23723800,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -30848800,
+    "sga": 30848800,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -34673800,
+    "sga": 34673800,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -11461850,
+    "sga": 11461850,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": 17
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": 11
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -88,
+   "sga": 88,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -35,
+   "sga": 35,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:30:08"
+}

@@ -1,0 +1,50 @@
+{
+ "corp_code": "01554508",
+ "corp_name": "액스비스",
+ "stock_code": "0011A0",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 56573055392,
+    "op": 4306996816,
+    "sga": 9277689610,
+    "inventory": 4647047521
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 11064075446,
+    "op": 786598525,
+    "sga": 2501762592,
+    "inventory": 6695026683
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 4647,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 6695,
+   "revenue": 11064,
+   "op": 787,
+   "sga": 2502
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 56573,
+   "op": 4307,
+   "sga": 9278,
+   "inventory": 4647
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:20:00"
+}

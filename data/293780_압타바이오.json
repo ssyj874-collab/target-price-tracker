@@ -1,0 +1,211 @@
+{
+ "corp_code": "01251595",
+ "corp_name": "압타바이오",
+ "stock_code": "293780",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 19488450,
+    "op": -3596907986,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 26272450,
+    "op": -6596201902,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 34658950,
+    "op": -10805745112,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 323868818,
+    "op": -16358338253,
+    "sga": 16436837144,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 637231826,
+    "op": -3099028923,
+    "sga": 3173783795,
+    "inventory": 32872648
+   },
+   "2": {
+    "revenue": 1757559435,
+    "op": -6330962221,
+    "sga": 6449392944,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2616966967,
+    "op": -12229402576,
+    "sga": 12424302681,
+    "inventory": 29976536
+   },
+   "4": {
+    "revenue": 3360980197,
+    "op": -18830842689,
+    "sga": 19117458946,
+    "inventory": 224870032
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 382701179,
+    "op": -2627303705,
+    "sga": 2650729015,
+    "inventory": 184536352
+   },
+   "2": {
+    "revenue": 958827913,
+    "op": -6770850217,
+    "sga": 6913843013,
+    "inventory": 537551096
+   },
+   "3": {
+    "revenue": 2150518202,
+    "op": -10155713157,
+    "sga": 10868577083,
+    "inventory": 558772499
+   },
+   "4": {
+    "revenue": 3151736080,
+    "op": -15787181490,
+    "sga": 16785264964,
+    "inventory": 612757922
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 957409754,
+    "op": -6083538663,
+    "sga": 6537067124,
+    "inventory": 725889642
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 19,
+   "op": -3597,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 7,
+   "op": -2999,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 8,
+   "op": -4210,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 289,
+   "op": -5553,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 33,
+   "revenue": 637,
+   "op": -3099,
+   "sga": 3174
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1120,
+   "op": -3232,
+   "sga": 3276
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 30,
+   "revenue": 859,
+   "op": -5898,
+   "sga": 5975
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 225,
+   "revenue": 744,
+   "op": -6601,
+   "sga": 6693
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 185,
+   "revenue": 383,
+   "op": -2627,
+   "sga": 2651
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 538,
+   "revenue": 576,
+   "op": -4144,
+   "sga": 4263
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 559,
+   "revenue": 1192,
+   "op": -3385,
+   "sga": 3955
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 613,
+   "revenue": 1001,
+   "op": -5631,
+   "sga": 5917
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 726,
+   "revenue": 957,
+   "op": -6084,
+   "sga": 6537
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 324,
+   "op": -16358,
+   "sga": 16437,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 3361,
+   "op": -18831,
+   "sga": 19117,
+   "inventory": 225
+  },
+  {
+   "year": 2025,
+   "revenue": 3152,
+   "op": -15787,
+   "sga": 16785,
+   "inventory": 613
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:18:54"
+}

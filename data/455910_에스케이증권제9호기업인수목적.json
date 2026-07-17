@@ -1,0 +1,170 @@
+{
+ "corp_code": "01725577",
+ "corp_name": "에스케이증권제9호기업인수목적",
+ "stock_code": "455910",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -32836545,
+    "sga": 32836545,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -40251785,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": -11393920,
+    "sga": 11393920,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -19893930,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -27843936,
+    "sga": 27843936,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -32493936,
+    "sga": 32493936,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -11715250,
+    "sga": 11715250,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -20765250,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -25415250,
+    "sga": 25415250,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -33365250,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -11,
+   "sga": 11
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": 12
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -40,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -32,
+   "sga": 32,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -33,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-17T16:30:14"
+}

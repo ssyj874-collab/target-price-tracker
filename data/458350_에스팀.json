@@ -1,0 +1,50 @@
+{
+ "corp_code": "01379563",
+ "corp_name": "에스팀",
+ "stock_code": "458350",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 35151802281,
+    "op": 2462371133,
+    "sga": 32666396504,
+    "inventory": 10693132
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5895810873,
+    "op": -567986779,
+    "sga": 6456267725,
+    "inventory": 4581805
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 11,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 5,
+   "revenue": 5896,
+   "op": -568,
+   "sga": 6456
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 35152,
+   "op": 2462,
+   "sga": 32666,
+   "inventory": 11
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-17T16:31:39"
+}

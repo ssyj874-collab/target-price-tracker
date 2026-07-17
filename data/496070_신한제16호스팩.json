@@ -2,8 +2,75 @@
  "corp_code": "01875146",
  "corp_name": "신한제16호스팩",
  "stock_code": "496070",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T22:15:10"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": null,
+    "op": -22176360,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -32062670,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -38495880,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -12462820,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -12,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -38,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-17T15:59:35",
+ "fs_div": "OFS"
 }
