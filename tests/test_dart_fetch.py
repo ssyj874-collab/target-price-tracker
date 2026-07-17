@@ -140,6 +140,55 @@ class WriteAndRoundtripTest(unittest.TestCase):
         self.assertEqual(parsed[0].label, "2022.1분기")
 
 
+class ListedCodesTest(unittest.TestCase):
+    def test_parse_kind_download(self):
+        kospi = "<table><tr><td>삼성전자</td><td>005930</td></tr></table>"
+        kosdaq = "<table><tr><td>에코프로</td><td>086520</td></tr></table>"
+        with mock.patch.object(
+            dart_fetch, "_http_get",
+            side_effect=[kospi.encode("cp949"), kosdaq.encode("cp949")],
+        ), mock.patch.object(dart_fetch, "_LISTED_CACHE", "/nonexistent/x.json"):
+            codes = dart_fetch.fetch_listed_codes(refresh=True)
+        self.assertEqual(codes["005930"], "유가")
+        self.assertEqual(codes["086520"], "코스닥")
+        self.assertEqual(len(codes), 2)
+
+    def test_fetch_failure_returns_none(self):
+        with mock.patch.object(dart_fetch, "_http_get",
+                               side_effect=OSError("down")), \
+             mock.patch.object(dart_fetch, "_LISTED_CACHE", "/nonexistent/x.json"):
+            self.assertIsNone(dart_fetch.fetch_listed_codes(refresh=True))
+
+
+class ResumeIndexTest(unittest.TestCase):
+    def _corps(self, names):
+        return [{"corp_name": n, "stock_code": f"{i:06d}", "corp_code": str(i)}
+                for i, n in enumerate(names)]
+
+    def test_name_based_resume_with_filtered_list(self):
+        import dart_app
+
+        corps = self._corps(["가나", "다라", "마바", "사아"])
+        state = {"mode": "backfill", "last_name": "마바"}
+        self.assertEqual(dart_app.resume_index(corps, state, "K"), 2)
+
+    def test_old_index_state_migrates_via_full_list(self):
+        import dart_app
+
+        full = self._corps(["가나", "나나", "다라", "라라", "마바"])
+        filtered = [c for c in full if c["corp_name"] != "나나"]
+        state = {"mode": "backfill", "index": 2}  # 옛 형식: 전체 목록의 '다라'
+        with mock.patch.object(dart_app, "load_corp_map",
+                               return_value={"entries": full}):
+            idx = dart_app.resume_index(filtered, state, "K")
+        self.assertEqual(filtered[idx]["corp_name"], "다라")
+
+    def test_no_state_starts_at_zero(self):
+        import dart_app
+
+        self.assertEqual(dart_app.resume_index(self._corps(["가"]), {}, "K"), 0)
+
+
 class ApiJsonTest(unittest.TestCase):
     def test_no_data_status_returns_empty(self):
         body = json.dumps({"status": "013", "message": "조회된 데이타가 없습니다."})

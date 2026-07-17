@@ -208,6 +208,50 @@ def lookup_corp(corp_map: dict, query: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# KRX 상장법인 목록 (유가증권 + 코스닥) — 코넥스·기타법인 필터용
+# ---------------------------------------------------------------------------
+
+_KIND_URL = ("https://kind.krx.co.kr/corpgeneral/corpList.do"
+             "?method=download&marketType={mt}")
+_LISTED_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             "listed_codes_cache.json")
+
+
+def fetch_listed_codes(refresh: bool = False) -> Optional[dict]:
+    """{종목코드: '유가'|'코스닥'}. KRX KIND 상장법인목록 다운로드(키 불필요).
+
+    실패하면 None을 돌려주고 호출부는 필터 없이 진행한다(안전한 폴백).
+    결과는 파일로 캐시한다.
+    """
+    if not refresh and os.path.exists(_LISTED_CACHE):
+        try:
+            with open(_LISTED_CACHE, encoding="utf-8") as f:
+                cached = json.load(f)
+            if cached:
+                return cached
+        except (OSError, ValueError):
+            pass
+    codes: dict[str, str] = {}
+    for mt, market in (("stockMkt", "유가"), ("kosdaqMkt", "코스닥")):
+        try:
+            raw = _http_get(_KIND_URL.format(mt=mt))
+        except (SystemExit, Exception):  # noqa: BLE001 — 폴백 허용
+            return None
+        text = raw.decode("cp949", errors="replace")
+        found = re.findall(r">(\d{6})<", text)
+        if not found:
+            return None
+        for code in found:
+            codes[code] = market
+    try:
+        with open(_LISTED_CACHE, "w", encoding="utf-8") as f:
+            json.dump(codes, f, ensure_ascii=False)
+    except OSError:
+        pass
+    return codes
+
+
+# ---------------------------------------------------------------------------
 # 분기 실적
 # ---------------------------------------------------------------------------
 

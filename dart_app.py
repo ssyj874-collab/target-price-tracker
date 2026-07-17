@@ -34,7 +34,7 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import dart_store
-from dart_fetch import load_corp_map, lookup_corp, resolve_key
+from dart_fetch import fetch_listed_codes, load_corp_map, resolve_key
 
 DATA_DIR = "data"
 DAILY_BUDGET = 19000       # 다트 일일 한도(20,000)보다 여유 있게
@@ -119,21 +119,54 @@ def _save_job_state(state: dict) -> None:
 _PACER: _Pacer | None = None
 
 
+def job_universe(key: str) -> list[dict]:
+    """수집 대상: 유가증권 + 코스닥 상장사만 (코넥스·기타법인 제외).
+
+    KRX 상장법인 목록을 못 받으면 필터 없이 전체를 쓴다(폴백).
+    """
+    corps = sorted(load_corp_map(key)["entries"], key=lambda e: e["corp_name"])
+    listed = fetch_listed_codes()
+    if listed:
+        corps = [c for c in corps if c["stock_code"] in listed]
+    return corps
+
+
+def resume_index(corps: list[dict], state: dict, key: str) -> int:
+    """저장된 진행 위치 → 현재 목록에서의 시작 인덱스.
+
+    새 형식은 종목명(last_name) 기준이라 목록이 필터로 바뀌어도 정확하다.
+    옛 형식(index)은 필터 전 전체 목록에서 이름을 복원해 변환한다.
+    """
+    import bisect
+
+    if state.get("mode") != "backfill":
+        return 0
+    last_name = state.get("last_name")
+    if not last_name and "index" in state:
+        all_sorted = sorted(load_corp_map(key)["entries"],
+                            key=lambda e: e["corp_name"])
+        i = state["index"]
+        if 0 <= i < len(all_sorted):
+            last_name = all_sorted[i]["corp_name"]
+    if not last_name:
+        return 0
+    names = [c["corp_name"] for c in corps]
+    return bisect.bisect_left(names, last_name)
+
+
 def run_job(mode: str) -> None:
     """mode: 'backfill'(3년치 전체) | 'season'(직전 4개 분기만)."""
     global _PACER
     key = resolve_key(None)
-    corps = sorted(load_corp_map(key)["entries"], key=lambda e: e["corp_name"])
+    corps = job_universe(key)
     this_year = dt.date.today().year
     if mode == "backfill":
         periods = dart_store.year_range_periods(this_year - 3, this_year)
     else:
         periods = dart_store.rolling_periods()
 
-    # 이어하기: backfill은 마지막 완료 지점부터
-    state = _load_job_state()
-    start_idx = state.get("index", 0) if (
-        mode == "backfill" and state.get("mode") == "backfill") else 0
+    # 이어하기: backfill은 마지막 진행 지점(종목명 기준)부터
+    start_idx = resume_index(corps, _load_job_state(), key) if mode == "backfill" else 0
 
     _PACER = _Pacer()
     dart_store.API_HOOK = _PACER
@@ -150,7 +183,8 @@ def run_job(mode: str) -> None:
             except dart_store.BudgetExceeded as e:
                 JOB["message"] = str(e)
                 if mode == "backfill":
-                    _save_job_state({"mode": "backfill", "index": i})
+                    _save_job_state({"mode": "backfill",
+                                     "last_name": corp["corp_name"]})
                 return
             except Exception as e:  # noqa: BLE001 — 한 종목 실패는 건너뛴다
                 JOB["errors"].append(f"{corp['corp_name']}: {e}")
@@ -424,7 +458,7 @@ tbody tr:last-child { border-bottom: none; }
 </head>
 <body>
 <div class="wrap">
-  <h1>다트 재무 데이터 수집기<small>전 상장사 · 매출액 · 영업이익 · 판관비 · 재고자산 (단위: 백만원)</small></h1>
+  <h1>다트 재무 데이터 수집기<small>유가증권+코스닥 전 종목 · 매출액 · 영업이익 · 판관비 · 재고자산 (단위: 백만원)</small></h1>
 
   <section class="panel">
     <div class="row">
