@@ -9,6 +9,12 @@
     "op": 961727538,
     "sga": null,
     "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 3627312121,
+    "sga": null,
+    "inventory": null
    }
   },
   "2024": {
@@ -74,10 +80,17 @@
  },
  "quarterly": [
   {
-   "label": "2023.4분기",
+   "label": "2023.3분기",
    "inventory": null,
    "revenue": null,
    "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2666,
    "sga": null
   },
   {
@@ -168,5 +181,5 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:49:32"
+ "updated": "2026-07-17T15:37:43"
 }

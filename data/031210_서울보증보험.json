@@ -2,8 +2,88 @@
  "corp_code": "00112998",
  "corp_name": "서울보증보험",
  "stock_code": "031210",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T21:51:57"
+ "cums": {
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 27271305031,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 111817031552,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 192764006141,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 375701743924,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 93471140831,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 27271,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 84546,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 80947,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 182938,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 93471,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 375702,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-17T15:38:43",
+ "fs_div": "CFS"
 }

@@ -9,19 +9,81 @@
     "op": -14769810,
     "sga": null,
     "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -18035530,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -20506530,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -77987310,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -92796710,
+    "sga": null,
+    "inventory": null
    }
   }
  },
  "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -15,
+   "sga": null
+  },
   {
    "label": "2024.1분기",
    "inventory": null,
    "revenue": 0,
    "op": -15,
    "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2,
+   "sga": null
   }
  ],
- "annual": [],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -93,
+   "sga": null,
+   "inventory": null
+  }
+ ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:49:20"
+ "updated": "2026-07-17T15:37:36"
 }

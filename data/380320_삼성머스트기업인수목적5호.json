@@ -2,8 +2,47 @@
  "corp_code": "01534522",
  "corp_name": "삼성머스트기업인수목적5호",
  "stock_code": "380320",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T21:42:53"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -55248870,
+    "sga": 55248870,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -55313240,
+    "sga": 55313240,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 0,
+   "sga": 0
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -55,
+   "sga": 55,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-17T15:34:10",
+ "fs_div": "OFS"
 }

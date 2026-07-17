@@ -2,8 +2,26 @@
  "corp_code": "01528530",
  "corp_name": "삼성기업인수목적4호",
  "stock_code": "377630",
- "cums": {},
- "quarterly": [],
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -49027436,
+    "sga": 49027436,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
  "annual": [],
- "updated": "2026-07-14T21:42:14"
+ "updated": "2026-07-17T15:33:38",
+ "fs_div": "OFS"
 }

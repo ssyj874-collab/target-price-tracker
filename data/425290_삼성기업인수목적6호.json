@@ -35,6 +35,12 @@
     "op": -62667540,
     "sga": 62667540,
     "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -50020680,
+    "sga": null,
+    "inventory": null
    }
   }
  },
@@ -61,10 +67,17 @@
    "sga": 27
   },
   {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -23,
+   "sga": null
+  },
+  {
    "label": "2024.3분기",
    "inventory": null,
    "revenue": null,
-   "op": null,
+   "op": -8,
    "sga": null
   },
   {
@@ -92,5 +105,5 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:42:21"
+ "updated": "2026-07-17T15:33:42"
 }
