@@ -1,0 +1,211 @@
+{
+ "corp_code": "00165680",
+ "corp_name": "호텔신라",
+ "stock_code": "008770",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 752139598763,
+    "op": 34525080380,
+    "sga": null,
+    "inventory": 552235257414
+   },
+   "2": {
+    "revenue": 1619064595799,
+    "op": 101750325134,
+    "sga": null,
+    "inventory": 730923882226
+   },
+   "3": {
+    "revenue": 2630846473181,
+    "op": 109491576943,
+    "sga": null,
+    "inventory": 639566163096
+   },
+   "4": {
+    "revenue": 3568466181329,
+    "op": 91230447816,
+    "sga": null,
+    "inventory": 629899690494
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 980826187102,
+    "op": 12122802054,
+    "sga": null,
+    "inventory": 592621716026
+   },
+   "2": {
+    "revenue": 1983512323066,
+    "op": 39750905457,
+    "sga": null,
+    "inventory": 748188006473
+   },
+   "3": {
+    "revenue": 2999742445252,
+    "op": 22764455647,
+    "sga": null,
+    "inventory": 612596155528
+   },
+   "4": {
+    "revenue": 3947552203343,
+    "op": -5184329302,
+    "sga": null,
+    "inventory": 622778243294
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 971789251566,
+    "op": -2470361690,
+    "sga": null,
+    "inventory": 560756256753
+   },
+   "2": {
+    "revenue": 1997236298406,
+    "op": 6189975065,
+    "sga": null,
+    "inventory": 551336815790
+   },
+   "3": {
+    "revenue": 3022927413523,
+    "op": 17630254667,
+    "sga": null,
+    "inventory": 508246249086
+   },
+   "4": {
+    "revenue": 4068306491409,
+    "op": 13512516028,
+    "sga": null,
+    "inventory": 526211348269
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1053491831261,
+    "op": 20415282258,
+    "sga": null,
+    "inventory": 519937938917
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 552235,
+   "revenue": 752140,
+   "op": 34525,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 730924,
+   "revenue": 866925,
+   "op": 67225,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 639566,
+   "revenue": 1011782,
+   "op": 7741,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 629900,
+   "revenue": 937620,
+   "op": -18261,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 592622,
+   "revenue": 980826,
+   "op": 12123,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 748188,
+   "revenue": 1002686,
+   "op": 27628,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 612596,
+   "revenue": 1016230,
+   "op": -16986,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 622778,
+   "revenue": 947810,
+   "op": -27949,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 560756,
+   "revenue": 971789,
+   "op": -2470,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 551337,
+   "revenue": 1025447,
+   "op": 8660,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 508246,
+   "revenue": 1025691,
+   "op": 11440,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 526211,
+   "revenue": 1045379,
+   "op": -4118,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 519938,
+   "revenue": 1053492,
+   "op": 20415,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 3568466,
+   "op": 91230,
+   "sga": null,
+   "inventory": 629900
+  },
+  {
+   "year": 2024,
+   "revenue": 3947552,
+   "op": -5184,
+   "sga": null,
+   "inventory": 622778
+  },
+  {
+   "year": 2025,
+   "revenue": 4068306,
+   "op": 13513,
+   "sga": null,
+   "inventory": 526211
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-19T00:04:56"
+}

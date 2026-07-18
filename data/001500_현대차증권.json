@@ -1,0 +1,185 @@
+{
+ "corp_code": "00137997",
+ "corp_name": "현대차증권",
+ "stock_code": "001500",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 1134238957417,
+    "op": 64925890990,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1582196918963,
+    "op": 65170508123,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 473911000000,
+    "op": 13140000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 909437000000,
+    "op": 32588000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1161494000000,
+    "op": 47140000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1795633000000,
+    "op": 54691000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 425447000000,
+    "op": 27100000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 54129000000,
+    "op": 54129000000,
+    "sga": 120062000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 68205000000,
+    "sga": 181542000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 72252000000,
+    "sga": 236751000000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 32311000000,
+    "sga": 62926000000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 447958,
+   "op": 245,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 473911,
+   "op": 13140,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 435526,
+   "op": 19448,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 252057,
+   "op": 14552,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 634139,
+   "op": 7551,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 425447,
+   "op": 27100,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": -371318,
+   "op": 27029,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 14076,
+   "sga": 61480
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 4047,
+   "sga": 55209
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 32311,
+   "sga": 62926
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1582197,
+   "op": 65171,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 1795633,
+   "op": 54691,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 72252,
+   "sga": 236751,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-19T00:03:50"
+}

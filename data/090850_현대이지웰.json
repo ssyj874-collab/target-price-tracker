@@ -1,0 +1,211 @@
+{
+ "corp_code": "00656951",
+ "corp_name": "현대이지웰",
+ "stock_code": "090850",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 36569146868,
+    "op": 8776495184,
+    "sga": 11008745685,
+    "inventory": 1550357282
+   },
+   "2": {
+    "revenue": 60575764810,
+    "op": 13505597528,
+    "sga": null,
+    "inventory": 1295116065
+   },
+   "3": {
+    "revenue": 89042280895,
+    "op": 16402489826,
+    "sga": null,
+    "inventory": 2257386382
+   },
+   "4": {
+    "revenue": 117951671998,
+    "op": 18340862426,
+    "sga": null,
+    "inventory": 1268129154
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 37471682594,
+    "op": 7569407908,
+    "sga": null,
+    "inventory": 2193476398
+   },
+   "2": {
+    "revenue": 65894347000,
+    "op": 14145252216,
+    "sga": null,
+    "inventory": 1776857931
+   },
+   "3": {
+    "revenue": 100145273616,
+    "op": 17934484447,
+    "sga": null,
+    "inventory": 1549203983
+   },
+   "4": {
+    "revenue": 131056281150,
+    "op": 20243595525,
+    "sga": null,
+    "inventory": 1850971297
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 42942669261,
+    "op": 8514571160,
+    "sga": null,
+    "inventory": 2000209948
+   },
+   "2": {
+    "revenue": 72566535395,
+    "op": 15132220372,
+    "sga": null,
+    "inventory": 1338826965
+   },
+   "3": {
+    "revenue": 106207152137,
+    "op": 19940409774,
+    "sga": null,
+    "inventory": 2579861271
+   },
+   "4": {
+    "revenue": 142648866656,
+    "op": 24197478889,
+    "sga": null,
+    "inventory": 1065285985
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 46339411000,
+    "op": 7354774000,
+    "sga": null,
+    "inventory": 1484043000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1550,
+   "revenue": 36569,
+   "op": 8776,
+   "sga": 11009
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1295,
+   "revenue": 24007,
+   "op": 4729,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 2257,
+   "revenue": 28467,
+   "op": 2897,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1268,
+   "revenue": 28909,
+   "op": 1938,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 2193,
+   "revenue": 37472,
+   "op": 7569,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1777,
+   "revenue": 28423,
+   "op": 6576,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1549,
+   "revenue": 34251,
+   "op": 3789,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1851,
+   "revenue": 30911,
+   "op": 2309,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2000,
+   "revenue": 42943,
+   "op": 8515,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1339,
+   "revenue": 29624,
+   "op": 6618,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2580,
+   "revenue": 33641,
+   "op": 4808,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1065,
+   "revenue": 36442,
+   "op": 4257,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1484,
+   "revenue": 46339,
+   "op": 7355,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 117952,
+   "op": 18341,
+   "sga": null,
+   "inventory": 1268
+  },
+  {
+   "year": 2024,
+   "revenue": 131056,
+   "op": 20244,
+   "sga": null,
+   "inventory": 1851
+  },
+  {
+   "year": 2025,
+   "revenue": 142649,
+   "op": 24197,
+   "sga": null,
+   "inventory": 1065
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-19T00:03:30"
+}
