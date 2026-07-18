@@ -1,0 +1,211 @@
+{
+ "corp_code": "00374738",
+ "corp_name": "위세아이텍",
+ "stock_code": "065370",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5874941510,
+    "op": -971046918,
+    "sga": 1714497736,
+    "inventory": 57820667
+   },
+   "2": {
+    "revenue": 11011489257,
+    "op": -2329500360,
+    "sga": 3502312932,
+    "inventory": 0
+   },
+   "3": {
+    "revenue": 18121174041,
+    "op": -2585269475,
+    "sga": 5215590483,
+    "inventory": 0
+   },
+   "4": {
+    "revenue": 27625153460,
+    "op": -2868674786,
+    "sga": -7079732267,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6059622370,
+    "op": -182573991,
+    "sga": 1632013969,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13223568998,
+    "op": -281280891,
+    "sga": 3557956643,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20932639629,
+    "op": -1457319499,
+    "sga": 5780725373,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 35028457232,
+    "op": 927730373,
+    "sga": -6541735183,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6109788987,
+    "op": -1073190351,
+    "sga": 2208729824,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13738379866,
+    "op": -596361679,
+    "sga": 3698799301,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 22807908243,
+    "op": 572687497,
+    "sga": 5686151929,
+    "inventory": 216000000
+   },
+   "4": {
+    "revenue": 38258327979,
+    "op": 786004716,
+    "sga": -6932463292,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7914558065,
+    "op": 390177227,
+    "sga": 2250556993,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 58,
+   "revenue": 5875,
+   "op": -971,
+   "sga": 1714
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 0,
+   "revenue": 5137,
+   "op": -1358,
+   "sga": 1788
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 0,
+   "revenue": 7110,
+   "op": -256,
+   "sga": 1713
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 9504,
+   "op": -283,
+   "sga": -12295
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 6060,
+   "op": -183,
+   "sga": 1632
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 7164,
+   "op": -99,
+   "sga": 1926
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7709,
+   "op": -1176,
+   "sga": 2223
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 14096,
+   "op": 2385,
+   "sga": -12322
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6110,
+   "op": -1073,
+   "sga": 2209
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7629,
+   "op": 477,
+   "sga": 1490
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 216,
+   "revenue": 9070,
+   "op": 1169,
+   "sga": 1987
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 15450,
+   "op": 213,
+   "sga": -12619
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7915,
+   "op": 390,
+   "sga": 2251
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 27625,
+   "op": -2869,
+   "sga": -7080,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 35028,
+   "op": 928,
+   "sga": -6542,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 38258,
+   "op": 786,
+   "sga": -6932,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:44:00"
+}

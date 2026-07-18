@@ -1,0 +1,124 @@
+{
+ "corp_code": "00909835",
+ "corp_name": "차이커뮤니케이션",
+ "stock_code": "351870",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 41811801724,
+    "op": 2699215707,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 58777951391,
+    "op": 3547196022,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 11229337842,
+    "op": 471767166,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 22684921775,
+    "op": 795014546,
+    "sga": null,
+    "inventory": 585782786
+   },
+   "3": {
+    "revenue": 43077333391,
+    "op": 1948108679,
+    "sga": null,
+    "inventory": 251950818
+   },
+   "4": {
+    "revenue": 66474697200,
+    "op": 4435474598,
+    "sga": null,
+    "inventory": 940827421
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 19198793323,
+    "op": -896396326,
+    "sga": null,
+    "inventory": 905893030
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 16966,
+   "op": 848,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 11229,
+   "op": 472,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 586,
+   "revenue": 11456,
+   "op": 323,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 252,
+   "revenue": 20392,
+   "op": 1153,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 941,
+   "revenue": 23397,
+   "op": 2487,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 906,
+   "revenue": 19199,
+   "op": -896,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 58778,
+   "op": 3547,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 66475,
+   "op": 4435,
+   "sga": null,
+   "inventory": 941
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:09:39"
+}

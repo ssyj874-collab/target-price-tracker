@@ -1,0 +1,218 @@
+{
+ "corp_code": "00490090",
+ "corp_name": "이지케어텍",
+ "stock_code": "099750",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 17095144768,
+    "op": -232128449,
+    "sga": 2835174087,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 33951416452,
+    "op": -1870459305,
+    "sga": 6598166538,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 49400589707,
+    "op": -570237235,
+    "sga": 8933756232,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 73187504449,
+    "op": -4120069782,
+    "sga": 14400193729,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 19244087604,
+    "op": 604398798,
+    "sga": 3090908393,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 37943689490,
+    "op": 1879404540,
+    "sga": 6321643688,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 55688794639,
+    "op": 2884907504,
+    "sga": 9866371012,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 67942814983,
+    "op": 236082310,
+    "sga": 11715187191,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 15924141095,
+    "op": 111315732,
+    "sga": 4204925873,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 33034114784,
+    "op": 2241416256,
+    "sga": 6994850190,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 52815545592,
+    "op": 3306055290,
+    "sga": 10247398987,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 72641489962,
+    "op": 2210930799,
+    "sga": 13612658393,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 78894081157,
+    "op": 5018701835,
+    "sga": 14016540765,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 17095,
+   "op": -232,
+   "sga": 2835
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 16856,
+   "op": -1638,
+   "sga": 3763
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 15449,
+   "op": 1300,
+   "sga": 2336
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 23787,
+   "op": -3550,
+   "sga": 5466
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 19244,
+   "op": 604,
+   "sga": 3091
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 18700,
+   "op": 1275,
+   "sga": 3231
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 17745,
+   "op": 1006,
+   "sga": 3545
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12254,
+   "op": -2649,
+   "sga": 1849
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 15924,
+   "op": 111,
+   "sga": 4205
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 17110,
+   "op": 2130,
+   "sga": 2790
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 19781,
+   "op": 1065,
+   "sga": 3253
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 19826,
+   "op": -1095,
+   "sga": 3365
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 73188,
+   "op": -4120,
+   "sga": 14400,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 67943,
+   "op": 236,
+   "sga": 11715,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 72641,
+   "op": 2211,
+   "sga": 13613,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 78894,
+   "op": 5019,
+   "sga": 14017,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:53:56"
+}

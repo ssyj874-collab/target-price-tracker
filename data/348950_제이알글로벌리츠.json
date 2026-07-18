@@ -1,0 +1,133 @@
+{
+ "corp_code": "01415892",
+ "corp_name": "제이알글로벌리츠",
+ "stock_code": "348950",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 29565970728,
+    "op": 15199671518,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 60458987894,
+    "op": 32578997444,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 30914341530,
+    "op": 14191810345,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 62571210627,
+    "op": 30990940704,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 40585081207,
+    "op": 31231385234,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 72166270260,
+    "op": 54542329728,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 42705002715,
+    "op": 34413515856,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 60459,
+   "op": 32579,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 62571,
+   "op": 30991,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 72166,
+   "op": 54542,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:01:36"
+}

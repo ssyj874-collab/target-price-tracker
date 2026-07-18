@@ -1,0 +1,111 @@
+{
+ "corp_code": "01498576",
+ "corp_name": "유디엠텍",
+ "stock_code": "389680",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 6072035307,
+    "op": -2009724761,
+    "sga": 3979418048,
+    "inventory": 6658400
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 631276298,
+    "op": -1108921833,
+    "sga": 983038600,
+    "inventory": 11808400
+   },
+   "2": {
+    "revenue": 1420265514,
+    "op": -2428244757,
+    "sga": 2567235822,
+    "inventory": 10298400
+   },
+   "3": {
+    "revenue": 1899205122,
+    "op": -3404102043,
+    "sga": 3347814327,
+    "inventory": 6962200
+   },
+   "4": {
+    "revenue": 3213108855,
+    "op": -3646962261,
+    "sga": 4248476117,
+    "inventory": 52940000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 890081317,
+    "op": -558936355,
+    "sga": 999090878,
+    "inventory": 4105000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 7,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 12,
+   "revenue": 631,
+   "op": -1109,
+   "sga": 983
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 10,
+   "revenue": 789,
+   "op": -1319,
+   "sga": 1584
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 7,
+   "revenue": 479,
+   "op": -976,
+   "sga": 781
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 53,
+   "revenue": 1314,
+   "op": -243,
+   "sga": 901
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 4,
+   "revenue": 890,
+   "op": -559,
+   "sga": 999
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 6072,
+   "op": -2010,
+   "sga": 3979,
+   "inventory": 7
+  },
+  {
+   "year": 2025,
+   "revenue": 3213,
+   "op": -3647,
+   "sga": 4248,
+   "inventory": 53
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:46:04"
+}

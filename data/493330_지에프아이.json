@@ -1,0 +1,63 @@
+{
+ "corp_code": "01450938",
+ "corp_name": "지에프아이",
+ "stock_code": "493330",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 27031410608,
+    "op": 3450191136,
+    "sga": 3716689599,
+    "inventory": 7364832629
+   },
+   "4": {
+    "revenue": 44955710087,
+    "op": 6754673220,
+    "sga": 5331086741,
+    "inventory": 8562780926
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 19474045395,
+    "op": 2902135825,
+    "sga": 1197607270,
+    "inventory": 7498251485
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 7365,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 8563,
+   "revenue": 17924,
+   "op": 3304,
+   "sga": 1614
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 7498,
+   "revenue": 19474,
+   "op": 2902,
+   "sga": 1198
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 44956,
+   "op": 6755,
+   "sga": 5331,
+   "inventory": 8563
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:07:23"
+}

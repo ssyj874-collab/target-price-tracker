@@ -1,0 +1,185 @@
+{
+ "corp_code": "00117601",
+ "corp_name": "유안타증권",
+ "stock_code": "003470",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 2131687409000,
+    "op": 91420257000,
+    "sga": 280276178000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2855003316000,
+    "op": 129124926000,
+    "sga": 380787563000,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 745614979000,
+    "op": 41968410000,
+    "sga": 124246773000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1339400080000,
+    "op": 53916886000,
+    "sga": 220351710000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2005715397000,
+    "op": 72128319000,
+    "sga": 324665817000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2712726528000,
+    "op": 94753156000,
+    "sga": 418474412000,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 763714664000,
+    "op": 12908400000,
+    "sga": 106366540000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1537364542000,
+    "op": 39749832000,
+    "sga": 223664034000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2238153120000,
+    "op": 78850792000,
+    "sga": 353904725000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3461272611000,
+    "op": 99379167000,
+    "sga": 502237643000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1723369309000,
+    "op": 72815836000,
+    "sga": 211294284000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 723316,
+   "op": 37705,
+   "sga": 100511
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 745615,
+   "op": 41968,
+   "sga": 124247
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 593785,
+   "op": 11948,
+   "sga": 96105
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 666315,
+   "op": 18211,
+   "sga": 104314
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 707011,
+   "op": 22625,
+   "sga": 93809
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 763715,
+   "op": 12908,
+   "sga": 106367
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 773650,
+   "op": 26841,
+   "sga": 117297
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 700789,
+   "op": 39101,
+   "sga": 130241
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1223119,
+   "op": 20528,
+   "sga": 148333
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1723369,
+   "op": 72816,
+   "sga": 211294
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 2855003,
+   "op": 129125,
+   "sga": 380788,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 2712727,
+   "op": 94753,
+   "sga": 418474,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 3461273,
+   "op": 99379,
+   "sga": 502238,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:47:32"
+}

@@ -1,0 +1,76 @@
+{
+ "corp_code": "01203659",
+ "corp_name": "이뮨온시아",
+ "stock_code": "424870",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 111208740,
+    "op": -7843394365,
+    "sga": 5732606357,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 111208740,
+    "op": -18439147773,
+    "sga": 7036826917,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 111208740,
+    "op": -28004634036,
+    "sga": 8294566946,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -5750756129,
+    "sga": 4506726990,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10596,
+   "sga": 1304
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9565,
+   "sga": 1258
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5751,
+   "sga": 4507
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 111,
+   "op": -28005,
+   "sga": 8295,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:51:22"
+}

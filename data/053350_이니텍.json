@@ -1,0 +1,211 @@
+{
+ "corp_code": "00353610",
+ "corp_name": "이니텍",
+ "stock_code": "053350",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 12988041394,
+    "op": -286467847,
+    "sga": 1993705338,
+    "inventory": 301309273
+   },
+   "2": {
+    "revenue": 23971694685,
+    "op": -897872327,
+    "sga": 3954414013,
+    "inventory": 260659273
+   },
+   "3": {
+    "revenue": 34893570309,
+    "op": -1244432554,
+    "sga": 5903809249,
+    "inventory": 277999273
+   },
+   "4": {
+    "revenue": 45650974077,
+    "op": -3543879108,
+    "sga": 8854713508,
+    "inventory": 64009273
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9044054409,
+    "op": 11138602,
+    "sga": 1739853683,
+    "inventory": 22132000
+   },
+   "2": {
+    "revenue": 17446882659,
+    "op": 213607513,
+    "sga": 3555167738,
+    "inventory": 22132000
+   },
+   "3": {
+    "revenue": 26292929542,
+    "op": 554456891,
+    "sga": 5433850383,
+    "inventory": 22132000
+   },
+   "4": {
+    "revenue": 38881694487,
+    "op": 230825748,
+    "sga": 9004835648,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7724576842,
+    "op": -227583016,
+    "sga": 1883939195,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 15546472710,
+    "op": -1630140648,
+    "sga": 3872647589,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23447169842,
+    "op": -2131664725,
+    "sga": 5818097742,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32705788691,
+    "op": -1562381653,
+    "sga": 7627187482,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7342015213,
+    "op": -535116899,
+    "sga": 1696551438,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 301,
+   "revenue": 12988,
+   "op": -286,
+   "sga": 1994
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 261,
+   "revenue": 10984,
+   "op": -611,
+   "sga": 1961
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 278,
+   "revenue": 10922,
+   "op": -347,
+   "sga": 1949
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 64,
+   "revenue": 10757,
+   "op": -2299,
+   "sga": 2951
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 22,
+   "revenue": 9044,
+   "op": 11,
+   "sga": 1740
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 22,
+   "revenue": 8403,
+   "op": 202,
+   "sga": 1815
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 22,
+   "revenue": 8846,
+   "op": 341,
+   "sga": 1879
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 12589,
+   "op": -324,
+   "sga": 3571
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7725,
+   "op": -228,
+   "sga": 1884
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7822,
+   "op": -1403,
+   "sga": 1989
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 7901,
+   "op": -502,
+   "sga": 1945
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 9259,
+   "op": 569,
+   "sga": 1809
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7342,
+   "op": -535,
+   "sga": 1697
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 45651,
+   "op": -3544,
+   "sga": 8855,
+   "inventory": 64
+  },
+  {
+   "year": 2024,
+   "revenue": 38882,
+   "op": 231,
+   "sga": 9005,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 32706,
+   "op": -1562,
+   "sga": 7627,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:50:38"
+}

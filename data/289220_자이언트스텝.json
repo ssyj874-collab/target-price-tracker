@@ -1,0 +1,211 @@
+{
+ "corp_code": "01264438",
+ "corp_name": "자이언트스텝",
+ "stock_code": "289220",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10320322750,
+    "op": -6715586801,
+    "sga": null,
+    "inventory": 171405333
+   },
+   "2": {
+    "revenue": 19214113992,
+    "op": -14773032390,
+    "sga": null,
+    "inventory": 442534186
+   },
+   "3": {
+    "revenue": 27616627650,
+    "op": -21123027081,
+    "sga": null,
+    "inventory": 62412101
+   },
+   "4": {
+    "revenue": 42309465927,
+    "op": -26059397731,
+    "sga": null,
+    "inventory": 312366569
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 11517127331,
+    "op": -4682539158,
+    "sga": null,
+    "inventory": 423666735
+   },
+   "2": {
+    "revenue": 26127672801,
+    "op": -10173039692,
+    "sga": null,
+    "inventory": 478628529
+   },
+   "3": {
+    "revenue": 35869987068,
+    "op": -16561759959,
+    "sga": null,
+    "inventory": 481866803
+   },
+   "4": {
+    "revenue": 50088415919,
+    "op": -17292787337,
+    "sga": null,
+    "inventory": 542293715
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 10064581992,
+    "op": -4244324527,
+    "sga": null,
+    "inventory": 997048533
+   },
+   "2": {
+    "revenue": 17856099411,
+    "op": -12649064605,
+    "sga": null,
+    "inventory": 358716787
+   },
+   "3": {
+    "revenue": 26843038416,
+    "op": -17504269760,
+    "sga": null,
+    "inventory": 335745495
+   },
+   "4": {
+    "revenue": 36726021382,
+    "op": -18997198393,
+    "sga": null,
+    "inventory": 252777780
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 9296764921,
+    "op": -5554354207,
+    "sga": null,
+    "inventory": 322590417
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 171,
+   "revenue": 10320,
+   "op": -6716,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 443,
+   "revenue": 8894,
+   "op": -8057,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 62,
+   "revenue": 8403,
+   "op": -6350,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 312,
+   "revenue": 14693,
+   "op": -4936,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 424,
+   "revenue": 11517,
+   "op": -4683,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 479,
+   "revenue": 14611,
+   "op": -5491,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 482,
+   "revenue": 9742,
+   "op": -6389,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 542,
+   "revenue": 14218,
+   "op": -731,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 997,
+   "revenue": 10065,
+   "op": -4244,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 359,
+   "revenue": 7792,
+   "op": -8405,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 336,
+   "revenue": 8987,
+   "op": -4855,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 253,
+   "revenue": 9883,
+   "op": -1493,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 323,
+   "revenue": 9297,
+   "op": -5554,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 42309,
+   "op": -26059,
+   "sga": null,
+   "inventory": 312
+  },
+  {
+   "year": 2024,
+   "revenue": 50088,
+   "op": -17293,
+   "sga": null,
+   "inventory": 542
+  },
+  {
+   "year": 2025,
+   "revenue": 36726,
+   "op": -18997,
+   "sga": null,
+   "inventory": 253
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:59:15"
+}

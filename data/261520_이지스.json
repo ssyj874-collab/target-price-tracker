@@ -1,0 +1,50 @@
+{
+ "corp_code": "01211889",
+ "corp_name": "이지스",
+ "stock_code": "261520",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 21250116427,
+    "op": -6798876860,
+    "sga": 6911445752,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5796542571,
+    "op": -2222780506,
+    "sga": 1879771629,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5797,
+   "op": -2223,
+   "sga": 1880
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 21250,
+   "op": -6799,
+   "sga": 6911,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:53:40"
+}

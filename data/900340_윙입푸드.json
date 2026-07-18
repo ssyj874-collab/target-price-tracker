@@ -1,0 +1,211 @@
+{
+ "corp_code": "01328639",
+ "corp_name": "윙입푸드",
+ "stock_code": "900340",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 224035742,
+    "op": 27006369,
+    "sga": 23868882,
+    "inventory": 30168137
+   },
+   "2": {
+    "revenue": 456968180,
+    "op": 75865719,
+    "sga": 50647977,
+    "inventory": 68818642
+   },
+   "3": {
+    "revenue": 693357368,
+    "op": 113557687,
+    "sga": 88963665,
+    "inventory": 37556722
+   },
+   "4": {
+    "revenue": 949326501,
+    "op": 131788172,
+    "sga": 138436186,
+    "inventory": 46690014
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 242712230,
+    "op": 40777879,
+    "sga": 35088910,
+    "inventory": 34123742
+   },
+   "2": {
+    "revenue": 495149043,
+    "op": 68956014,
+    "sga": 71931520,
+    "inventory": 31682338
+   },
+   "3": {
+    "revenue": 760653521,
+    "op": 87466240,
+    "sga": 107733510,
+    "inventory": 41098529
+   },
+   "4": {
+    "revenue": 1040710982,
+    "op": 107618777,
+    "sga": 141959318,
+    "inventory": 61725037
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 249609024,
+    "op": 30000708,
+    "sga": 28415865,
+    "inventory": 53575021
+   },
+   "2": {
+    "revenue": 508504362,
+    "op": 47976899,
+    "sga": 70868304,
+    "inventory": 32143934
+   },
+   "3": {
+    "revenue": 738068247,
+    "op": 48194566,
+    "sga": 108638139,
+    "inventory": 36874226
+   },
+   "4": {
+    "revenue": 971702858,
+    "op": 75487056,
+    "sga": 139416881,
+    "inventory": 68804645
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 219191036,
+    "op": 12698052,
+    "sga": 31226886,
+    "inventory": 33260109
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 30,
+   "revenue": 224,
+   "op": 27,
+   "sga": 24
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 69,
+   "revenue": 233,
+   "op": 49,
+   "sga": 27
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 38,
+   "revenue": 236,
+   "op": 38,
+   "sga": 38
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 47,
+   "revenue": 256,
+   "op": 18,
+   "sga": 49
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 34,
+   "revenue": 243,
+   "op": 41,
+   "sga": 35
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 32,
+   "revenue": 252,
+   "op": 28,
+   "sga": 37
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 41,
+   "revenue": 266,
+   "op": 19,
+   "sga": 36
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 62,
+   "revenue": 280,
+   "op": 20,
+   "sga": 34
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 54,
+   "revenue": 250,
+   "op": 30,
+   "sga": 28
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 32,
+   "revenue": 259,
+   "op": 18,
+   "sga": 42
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 37,
+   "revenue": 230,
+   "op": 0,
+   "sga": 38
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 69,
+   "revenue": 234,
+   "op": 27,
+   "sga": 31
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 33,
+   "revenue": 219,
+   "op": 13,
+   "sga": 31
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 949,
+   "op": 132,
+   "sga": 138,
+   "inventory": 47
+  },
+  {
+   "year": 2024,
+   "revenue": 1041,
+   "op": 108,
+   "sga": 142,
+   "inventory": 62
+  },
+  {
+   "year": 2025,
+   "revenue": 972,
+   "op": 75,
+   "sga": 139,
+   "inventory": 69
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:44:50"
+}

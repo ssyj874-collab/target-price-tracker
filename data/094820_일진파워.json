@@ -1,0 +1,211 @@
+{
+ "corp_code": "00485177",
+ "corp_name": "일진파워",
+ "stock_code": "094820",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 44499468826,
+    "op": 4456232164,
+    "sga": 2501087344,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 97647537614,
+    "op": 8233729290,
+    "sga": 5279272359,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 140313675876,
+    "op": 13050504764,
+    "sga": 8059766018,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 190826764234,
+    "op": 13120377484,
+    "sga": 11938695224,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 43151550611,
+    "op": 2971134531,
+    "sga": 3127401230,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 110712023596,
+    "op": 7896725466,
+    "sga": 6603285316,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 147886387974,
+    "op": 8511775789,
+    "sga": 11048536128,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 193088109908,
+    "op": 10272754233,
+    "sga": 14523556907,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 41052793836,
+    "op": 2294345137,
+    "sga": 3234905862,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 116848329150,
+    "op": 8585203046,
+    "sga": 5622871733,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 181577070183,
+    "op": 16013436902,
+    "sga": 9728628098,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 251984799104,
+    "op": 24121399743,
+    "sga": 13461539909,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 63778347105,
+    "op": 6999732306,
+    "sga": 3749793031,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 44499,
+   "op": 4456,
+   "sga": 2501
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 53148,
+   "op": 3777,
+   "sga": 2778
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 42666,
+   "op": 4817,
+   "sga": 2780
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 50513,
+   "op": 70,
+   "sga": 3879
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 43152,
+   "op": 2971,
+   "sga": 3127
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 67560,
+   "op": 4926,
+   "sga": 3476
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 37174,
+   "op": 615,
+   "sga": 4445
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 45202,
+   "op": 1761,
+   "sga": 3475
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 41053,
+   "op": 2294,
+   "sga": 3235
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 75796,
+   "op": 6291,
+   "sga": 2388
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 64729,
+   "op": 7428,
+   "sga": 4106
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 70408,
+   "op": 8108,
+   "sga": 3733
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 63778,
+   "op": 7000,
+   "sga": 3750
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 190827,
+   "op": 13120,
+   "sga": 11939,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 193088,
+   "op": 10273,
+   "sga": 14524,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 251985,
+   "op": 24121,
+   "sga": 13462,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:58:27"
+}

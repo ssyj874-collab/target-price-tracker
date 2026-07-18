@@ -1,0 +1,211 @@
+{
+ "corp_code": "01236532",
+ "corp_name": "와이즈버즈",
+ "stock_code": "273060",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 2062044065,
+    "op": -1553512913,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4522681470,
+    "op": -2144327956,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7407922512,
+    "op": -2421343099,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13815025894,
+    "op": 354443971,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2038447628,
+    "op": -1116739489,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4694897998,
+    "op": -1797053269,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7208832961,
+    "op": -2344085184,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11164613826,
+    "op": -1915432895,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2758120329,
+    "op": -742767502,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6404348736,
+    "op": -724909640,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 10614105252,
+    "op": -123862320,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 17345111813,
+    "op": 1507299639,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5826678406,
+    "op": 1845074862,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 2062,
+   "op": -1554,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 2461,
+   "op": -591,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 2885,
+   "op": -277,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 6407,
+   "op": 2776,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 2038,
+   "op": -1117,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 2656,
+   "op": -680,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2514,
+   "op": -547,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3956,
+   "op": 429,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2758,
+   "op": -743,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3646,
+   "op": 18,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4210,
+   "op": 601,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6731,
+   "op": 1631,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5827,
+   "op": 1845,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 13815,
+   "op": 354,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 11165,
+   "op": -1915,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 17345,
+   "op": 1507,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:38:26"
+}

@@ -1,0 +1,111 @@
+{
+ "corp_code": "01284876",
+ "corp_name": "인스피언",
+ "stock_code": "465480",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 19035192738,
+    "op": 3784285683,
+    "sga": null,
+    "inventory": 41410000
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3687436639,
+    "op": 31922439,
+    "sga": null,
+    "inventory": 44160000
+   },
+   "2": {
+    "revenue": 7715638161,
+    "op": -385420915,
+    "sga": null,
+    "inventory": 42250000
+   },
+   "3": {
+    "revenue": 11853317171,
+    "op": -606772973,
+    "sga": null,
+    "inventory": 74810000
+   },
+   "4": {
+    "revenue": 19025889792,
+    "op": 2398018482,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3982965955,
+    "op": 191757691,
+    "sga": null,
+    "inventory": 0
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 41,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 44,
+   "revenue": 3687,
+   "op": 32,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 42,
+   "revenue": 4028,
+   "op": -417,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 75,
+   "revenue": 4138,
+   "op": -221,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 7173,
+   "op": 3005,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 0,
+   "revenue": 3983,
+   "op": 192,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 19035,
+   "op": 3784,
+   "sga": null,
+   "inventory": 41
+  },
+  {
+   "year": 2025,
+   "revenue": 19026,
+   "op": 2398,
+   "sga": null,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:55:21"
+}

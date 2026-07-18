@@ -1,0 +1,211 @@
+{
+ "corp_code": "00616290",
+ "corp_name": "이엠넷",
+ "stock_code": "123570",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8037812346,
+    "op": 135903842,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 16298680562,
+    "op": 510664202,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 25691727832,
+    "op": 1996159212,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 35018281188,
+    "op": 3665773146,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 8618234399,
+    "op": 707322831,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17676696891,
+    "op": 1888112723,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 26249120692,
+    "op": 2771361234,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 36311366788,
+    "op": 4757884465,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7747700347,
+    "op": -322418907,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 15866564541,
+    "op": -320163060,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23793973328,
+    "op": -331948560,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32260399959,
+    "op": 274223860,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8469371702,
+    "op": 236650373,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 8038,
+   "op": 136,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 8261,
+   "op": 375,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 9393,
+   "op": 1485,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 9327,
+   "op": 1670,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 8618,
+   "op": 707,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 9058,
+   "op": 1181,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 8572,
+   "op": 883,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 10062,
+   "op": 1987,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7748,
+   "op": -322,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 8119,
+   "op": 2,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 7927,
+   "op": -12,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 8466,
+   "op": 606,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8469,
+   "op": 237,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 35018,
+   "op": 3666,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 36311,
+   "op": 4758,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 32260,
+   "op": 274,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:52:55"
+}

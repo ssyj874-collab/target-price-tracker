@@ -1,0 +1,63 @@
+{
+ "corp_code": "01745173",
+ "corp_name": "이노테크",
+ "stock_code": "469610",
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 58146585804,
+    "op": 9040121239,
+    "sga": 6693514492,
+    "inventory": 4724211637
+   },
+   "4": {
+    "revenue": 75699364393,
+    "op": 8638432723,
+    "sga": 9464011624,
+    "inventory": 3748279176
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 19858599303,
+    "op": 3049042555,
+    "sga": 2585344998,
+    "inventory": 3458351106
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 4724,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3748,
+   "revenue": 17553,
+   "op": -402,
+   "sga": 2770
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3458,
+   "revenue": 19859,
+   "op": 3049,
+   "sga": 2585
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 75699,
+   "op": 8638,
+   "sga": 9464,
+   "inventory": 3748
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:50:23"
+}

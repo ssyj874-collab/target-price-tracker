@@ -1,0 +1,211 @@
+{
+ "corp_code": "01441611",
+ "corp_name": "원티드랩",
+ "stock_code": "376980",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10942397041,
+    "op": 535671493,
+    "sga": 10406725548,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 21018911023,
+    "op": 888119520,
+    "sga": 20130791503,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 30591703432,
+    "op": 1740855400,
+    "sga": 28850848032,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 39668183099,
+    "op": 1573389396,
+    "sga": 38094793703,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 8903216887,
+    "op": -773823003,
+    "sga": 9677039890,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 18966348417,
+    "op": -368033308,
+    "sga": 19334381725,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 28688811853,
+    "op": 207043795,
+    "sga": 28481768058,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 36742962222,
+    "op": -817999396,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7939105194,
+    "op": -1209283016,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17603191416,
+    "op": -684911118,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 27258979209,
+    "op": -149828247,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 38173738651,
+    "op": 1019795155,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8900163393,
+    "op": -982962503,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 10942,
+   "op": 536,
+   "sga": 10407
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 10077,
+   "op": 352,
+   "sga": 9724
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 9573,
+   "op": 853,
+   "sga": 8720
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 9076,
+   "op": -167,
+   "sga": 9244
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 8903,
+   "op": -774,
+   "sga": 9677
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 10063,
+   "op": 406,
+   "sga": 9657
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 9722,
+   "op": 575,
+   "sga": 9147
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 8054,
+   "op": -1025,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7939,
+   "op": -1209,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 9664,
+   "op": 524,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 9656,
+   "op": 535,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 10915,
+   "op": 1170,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8900,
+   "op": -983,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 39668,
+   "op": 1573,
+   "sga": 38095,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 36743,
+   "op": -818,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 38174,
+   "op": 1020,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:42:19"
+}

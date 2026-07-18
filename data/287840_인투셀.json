@@ -1,0 +1,137 @@
+{
+ "corp_code": "01374443",
+ "corp_name": "인투셀",
+ "stock_code": "287840",
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 1807541332,
+    "op": -5346602827,
+    "sga": 7154144159,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2792590623,
+    "op": -7659183098,
+    "sga": 10451773721,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2905033092,
+    "op": -9790200602,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 109165651,
+    "op": -3409049683,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 148568102,
+    "op": -7131466346,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1571070553,
+    "op": -8430762300,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 2299122477,
+    "op": -10300409988,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 281152450,
+    "op": -3530746735,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 985,
+   "op": -2313,
+   "sga": 3298
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 112,
+   "op": -2131,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 109,
+   "op": -3409,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 39,
+   "op": -3722,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1423,
+   "op": -1299,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 728,
+   "op": -1870,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 281,
+   "op": -3531,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 2905,
+   "op": -9790,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 2299,
+   "op": -10300,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:56:38"
+}

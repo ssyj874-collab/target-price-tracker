@@ -1,0 +1,124 @@
+{
+ "corp_code": "01815764",
+ "corp_name": "이베스트스팩6호",
+ "stock_code": "478110",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 0,
+    "op": -31763440,
+    "sga": 31763440,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -35490940,
+    "sga": 35490940,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -13689210,
+    "sga": 13689210,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -26137660,
+    "sga": 26137660,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -34617160,
+    "sga": 34617160,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -32927200,
+    "sga": 32927200,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -9217260,
+    "sga": 9217260,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -14,
+   "sga": 14
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12,
+   "sga": 12
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": 2,
+   "sga": -2
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9,
+   "sga": 9
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -35,
+   "sga": 35,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -33,
+   "sga": 33,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:51:33"
+}

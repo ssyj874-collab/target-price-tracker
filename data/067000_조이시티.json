@@ -1,0 +1,211 @@
+{
+ "corp_code": "00397252",
+ "corp_name": "조이시티",
+ "stock_code": "067000",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 36576614698,
+    "op": 4010853629,
+    "sga": 32565761069,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 70543409111,
+    "op": 8770821560,
+    "sga": 61772587551,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 106067943352,
+    "op": 12610009946,
+    "sga": 93457933406,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 149618519176,
+    "op": 25330688881,
+    "sga": 124287830295,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 38573117392,
+    "op": 4566986970,
+    "sga": 34006130422,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 75570810192,
+    "op": 7746760771,
+    "sga": 67824049421,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 109572844096,
+    "op": 9579819307,
+    "sga": 99993024789,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 142849965435,
+    "op": 11614781723,
+    "sga": 131235183712,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 32661971230,
+    "op": 2181205263,
+    "sga": 30480765967,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 65660555408,
+    "op": 5330169067,
+    "sga": 60330386341,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 92145262783,
+    "op": 2370985870,
+    "sga": 89774276913,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 140359841215,
+    "op": 5664758588,
+    "sga": 97911163168,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 42199439281,
+    "op": 312383212,
+    "sga": 33330790320,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 36577,
+   "op": 4011,
+   "sga": 32566
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 33967,
+   "op": 4760,
+   "sga": 29207
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 35525,
+   "op": 3839,
+   "sga": 31685
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 43551,
+   "op": 12721,
+   "sga": 30830
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 38573,
+   "op": 4567,
+   "sga": 34006
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 36998,
+   "op": 3180,
+   "sga": 33818
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 34002,
+   "op": 1833,
+   "sga": 32169
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 33277,
+   "op": 2035,
+   "sga": 31242
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 32662,
+   "op": 2181,
+   "sga": 30481
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 32999,
+   "op": 3149,
+   "sga": 29850
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 26485,
+   "op": -2959,
+   "sga": 29444
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 48215,
+   "op": 3294,
+   "sga": 8137
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 42199,
+   "op": 312,
+   "sga": 33331
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 149619,
+   "op": 25331,
+   "sga": 124288,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 142850,
+   "op": 11615,
+   "sga": 131235,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 140360,
+   "op": 5665,
+   "sga": 97911,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:04:34"
+}

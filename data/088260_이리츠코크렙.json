@@ -1,0 +1,133 @@
+{
+ "corp_code": "00544452",
+ "corp_name": "이리츠코크렙",
+ "stock_code": "088260",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 11092886997,
+    "op": 8590091970,
+    "sga": 2502795027,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22290715029,
+    "op": 17266032983,
+    "sga": 5024682046,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 11316467181,
+    "op": 8764562538,
+    "sga": 2551904643,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22754387430,
+    "op": 17606425388,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 11550376999,
+    "op": 9028418733,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23218505054,
+    "op": 18180884436,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 11668128055,
+    "op": 9163005585,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 22291,
+   "op": 17266,
+   "sga": 5025,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 22754,
+   "op": 17606,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 23219,
+   "op": 18181,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:51:10"
+}

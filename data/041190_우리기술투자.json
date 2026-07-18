@@ -1,0 +1,185 @@
+{
+ "corp_code": "00231664",
+ "corp_name": "우리기술투자",
+ "stock_code": "041190",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 57919302405,
+    "op": 47386486134,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 170741464684,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 12228023955,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 102880057647,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 109154539323,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 192251177787,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 22702736897,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 194187570248,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 196004174288,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 162866987251,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 18419237529,
+    "op": null,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 112822,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 12228,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 90652,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 6274,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 83097,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 22703,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 171485,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1817,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": -33137,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 18419,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 170741,
+   "op": null,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 192251,
+   "op": null,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 162867,
+   "op": null,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:39:05"
+}

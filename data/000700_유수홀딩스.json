@@ -1,0 +1,211 @@
+{
+ "corp_code": "00163691",
+ "corp_name": "유수홀딩스",
+ "stock_code": "000700",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 79435711299,
+    "op": 4453786522,
+    "sga": 13520443813,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 163267952920,
+    "op": 10240790397,
+    "sga": 27815291475,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 249067294562,
+    "op": 18289475123,
+    "sga": 41168912901,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 341773101419,
+    "op": 21005544102,
+    "sga": 55358590103,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 97074742738,
+    "op": 5106919564,
+    "sga": 13978762488,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 200832380421,
+    "op": 11037423283,
+    "sga": 28332721972,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 325043198547,
+    "op": 20269860421,
+    "sga": 42364282365,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 435867054050,
+    "op": 18315439948,
+    "sga": 68276258222,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 107678581430,
+    "op": 6503801026,
+    "sga": 15283071367,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 210130503064,
+    "op": 13208565691,
+    "sga": 31088464041,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 315263006560,
+    "op": 24372485233,
+    "sga": 45099727555,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 418474161915,
+    "op": 21219524179,
+    "sga": 74301816247,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 106343396750,
+    "op": 9954921518,
+    "sga": 16508702359,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 79436,
+   "op": 4454,
+   "sga": 13520
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 83832,
+   "op": 5787,
+   "sga": 14295
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 85799,
+   "op": 8049,
+   "sga": 13354
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 92706,
+   "op": 2716,
+   "sga": 14190
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 97075,
+   "op": 5107,
+   "sga": 13979
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 103758,
+   "op": 5931,
+   "sga": 14354
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 124211,
+   "op": 9232,
+   "sga": 14032
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 110824,
+   "op": -1954,
+   "sga": 25912
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 107679,
+   "op": 6504,
+   "sga": 15283
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 102452,
+   "op": 6705,
+   "sga": 15805
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 105133,
+   "op": 11164,
+   "sga": 14011
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 103211,
+   "op": -3153,
+   "sga": 29202
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 106343,
+   "op": 9955,
+   "sga": 16509
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 341773,
+   "op": 21006,
+   "sga": 55359,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 435867,
+   "op": 18315,
+   "sga": 68276,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 418474,
+   "op": 21220,
+   "sga": 74302,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:46:55"
+}

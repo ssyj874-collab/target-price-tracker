@@ -1,0 +1,140 @@
+{
+ "corp_code": "01394377",
+ "corp_name": "이지스밸류플러스리츠",
+ "stock_code": "334890",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 39959077719,
+    "op": 35161845821,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 53573815675,
+    "op": 40125188988,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 4776321498,
+    "op": 3805288724,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10408477081,
+    "op": 635636152,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 15633693502,
+    "op": 13657941490,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 21788441864,
+    "op": 16624984118,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 21187971544,
+    "op": 14572809821,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 53574,
+   "op": 40125,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 10408,
+   "op": 636,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 21788,
+   "op": 16625,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 21188,
+   "op": 14573,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:53:52"
+}

@@ -1,0 +1,98 @@
+{
+ "corp_code": "01221752",
+ "corp_name": "지에프씨생명과학",
+ "stock_code": "388610",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 16804533739,
+    "op": 1704603240,
+    "sga": 6172623970,
+    "inventory": 517936033
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 8981188787,
+    "op": 590373124,
+    "sga": 3941941577,
+    "inventory": 610622914
+   },
+   "3": {
+    "revenue": 13161682492,
+    "op": 306571109,
+    "sga": 6132024617,
+    "inventory": 754129724
+   },
+   "4": {
+    "revenue": 17714780998,
+    "op": 386262084,
+    "sga": 8123374190,
+    "inventory": 575816134
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5039718879,
+    "op": 464039591,
+    "sga": 2228476917,
+    "inventory": 1003665061
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 518,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 611,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 754,
+   "revenue": 4180,
+   "op": -284,
+   "sga": 2190
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 576,
+   "revenue": 4553,
+   "op": 80,
+   "sga": 1991
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1004,
+   "revenue": 5040,
+   "op": 464,
+   "sga": 2228
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 16805,
+   "op": 1705,
+   "sga": 6173,
+   "inventory": 518
+  },
+  {
+   "year": 2025,
+   "revenue": 17715,
+   "op": 386,
+   "sga": 8123,
+   "inventory": 576
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:07:16"
+}

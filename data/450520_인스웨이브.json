@@ -1,0 +1,185 @@
+{
+ "corp_code": "01222113",
+ "corp_name": "인스웨이브",
+ "stock_code": "450520",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 20720630924,
+    "op": 742199104,
+    "sga": 7793734529,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32603845712,
+    "op": 5181088943,
+    "sga": 10876213753,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6984986946,
+    "op": -1878827374,
+    "sga": 3087980835,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11914095834,
+    "op": -3727002168,
+    "sga": 7080519876,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20986985631,
+    "op": -3579434752,
+    "sga": 10262639321,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30412970558,
+    "op": -3593363299,
+    "sga": 14710532320,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7112292492,
+    "op": -3390148476,
+    "sga": 4743015541,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17487619284,
+    "op": -4462258601,
+    "sga": 9135948367,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 28942970285,
+    "op": -5346528054,
+    "sga": 14406915363,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 38958024167,
+    "op": -4855159163,
+    "sga": 18081397036,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 11261175315,
+    "op": -2808157271,
+    "sga": 4304208927,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 11883,
+   "op": 4439,
+   "sga": 3082
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 6985,
+   "op": -1879,
+   "sga": 3088
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 4929,
+   "op": -1848,
+   "sga": 3993
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 9073,
+   "op": 148,
+   "sga": 3182
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9426,
+   "op": -14,
+   "sga": 4448
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7112,
+   "op": -3390,
+   "sga": 4743
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 10375,
+   "op": -1072,
+   "sga": 4393
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 11455,
+   "op": -884,
+   "sga": 5271
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 10015,
+   "op": 491,
+   "sga": 3674
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 11261,
+   "op": -2808,
+   "sga": 4304
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 32604,
+   "op": 5181,
+   "sga": 10876,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 30413,
+   "op": -3593,
+   "sga": 14711,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 38958,
+   "op": -4855,
+   "sga": 18081,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:55:15"
+}

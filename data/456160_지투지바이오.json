@@ -1,0 +1,124 @@
+{
+ "corp_code": "01577952",
+ "corp_name": "지투지바이오",
+ "stock_code": "456160",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 770802981,
+    "op": -7430092008,
+    "sga": 2340201420,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 768930985,
+    "op": -10763507974,
+    "sga": 3287532630,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7858516,
+    "op": -2872535439,
+    "sga": 857512507,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 161286587,
+    "op": -5617879659,
+    "sga": 1744048832,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 219748119,
+    "op": -9182925986,
+    "sga": 3018094055,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 423070926,
+    "op": -12202308190,
+    "sga": 4081922139,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 350828736,
+    "op": -3313885255,
+    "sga": 1204735345,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": -2,
+   "op": -3333,
+   "sga": 947
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 8,
+   "op": -2873,
+   "sga": 858
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 153,
+   "op": -2745,
+   "sga": 887
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 58,
+   "op": -3565,
+   "sga": 1274
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 203,
+   "op": -3019,
+   "sga": 1064
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 351,
+   "op": -3314,
+   "sga": 1205
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 769,
+   "op": -10764,
+   "sga": 3288,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 423,
+   "op": -12202,
+   "sga": 4082,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:08:00"
+}

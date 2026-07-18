@@ -1,0 +1,137 @@
+{
+ "corp_code": "01804476",
+ "corp_name": "유안타제16호스팩",
+ "stock_code": "474490",
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 0,
+    "op": -30032870,
+    "sga": 30032870,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -37379370,
+    "sga": 37379370,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -41667680,
+    "sga": 41667680,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -17022298,
+    "sga": 17022298,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -25377348,
+    "sga": 25377348,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -29080348,
+    "sga": 29080348,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -37172248,
+    "sga": 37172248,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -14704050,
+    "sga": 14704050,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": 17
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": 15
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -42,
+   "sga": 42,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -37,
+   "sga": 37,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T10:47:21"
+}

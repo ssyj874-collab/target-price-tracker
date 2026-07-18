@@ -1,0 +1,211 @@
+{
+ "corp_code": "01153293",
+ "corp_name": "제이엘케이",
+ "stock_code": "322510",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 998359623,
+    "op": -1205064792,
+    "sga": null,
+    "inventory": 20990000
+   },
+   "2": {
+    "revenue": 1235677898,
+    "op": -3347559622,
+    "sga": null,
+    "inventory": 38591000
+   },
+   "3": {
+    "revenue": 1470808591,
+    "op": -5598297842,
+    "sga": null,
+    "inventory": 74892000
+   },
+   "4": {
+    "revenue": 2488983756,
+    "op": -7147568952,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 136222555,
+    "op": -3666110036,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 364392776,
+    "op": -6694592870,
+    "sga": null,
+    "inventory": 10860000
+   },
+   "3": {
+    "revenue": 614514809,
+    "op": -9922592329,
+    "sga": null,
+    "inventory": 11210000
+   },
+   "4": {
+    "revenue": 1427510483,
+    "op": -12731677700,
+    "sga": null,
+    "inventory": 11210000
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 484713007,
+    "op": -3341900682,
+    "sga": null,
+    "inventory": 90890000
+   },
+   "2": {
+    "revenue": 1547780689,
+    "op": -6234631086,
+    "sga": null,
+    "inventory": 290560000
+   },
+   "3": {
+    "revenue": 2442903531,
+    "op": -8910086673,
+    "sga": null,
+    "inventory": 144447854
+   },
+   "4": {
+    "revenue": 3339486486,
+    "op": -13202037178,
+    "sga": null,
+    "inventory": 19295000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 411652605,
+    "op": -3352534843,
+    "sga": null,
+    "inventory": 16335000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 21,
+   "revenue": 998,
+   "op": -1205,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 39,
+   "revenue": 237,
+   "op": -2142,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 75,
+   "revenue": 235,
+   "op": -2251,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 1018,
+   "op": -1549,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 136,
+   "op": -3666,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 11,
+   "revenue": 228,
+   "op": -3028,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 11,
+   "revenue": 250,
+   "op": -3228,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 11,
+   "revenue": 813,
+   "op": -2809,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 91,
+   "revenue": 485,
+   "op": -3342,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 291,
+   "revenue": 1063,
+   "op": -2893,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 144,
+   "revenue": 895,
+   "op": -2675,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 19,
+   "revenue": 897,
+   "op": -4292,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 16,
+   "revenue": 412,
+   "op": -3353,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 2489,
+   "op": -7148,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 1428,
+   "op": -12732,
+   "sga": null,
+   "inventory": 11
+  },
+  {
+   "year": 2025,
+   "revenue": 3339,
+   "op": -13202,
+   "sga": null,
+   "inventory": 19
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:02:10"
+}

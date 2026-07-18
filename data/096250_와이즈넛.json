@@ -1,0 +1,198 @@
+{
+ "corp_code": "00351427",
+ "corp_name": "와이즈넛",
+ "stock_code": "096250",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 13632155879,
+    "op": -965914159,
+    "sga": 6958356913,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 21771098230,
+    "op": -902307630,
+    "sga": 10586574436,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 35172218324,
+    "op": 3456887664,
+    "sga": 13921615727,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7270124863,
+    "op": -2225845424,
+    "sga": 4116224721,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13808383153,
+    "op": -3002834226,
+    "sga": 7639933598,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 21528184354,
+    "op": -2924199555,
+    "sga": 10831976886,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 34920657325,
+    "op": 1702832524,
+    "sga": 14316772087,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5394633776,
+    "op": -4075087896,
+    "sga": 5819896324,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13538447095,
+    "op": -3204470705,
+    "sga": 9532138667,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 22351325338,
+    "op": -2035417096,
+    "sga": 13408846345,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 34730241834,
+    "op": 113589771,
+    "sga": 17611366362,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7217622909,
+    "op": -1426009153,
+    "sga": 3987320046,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 8139,
+   "op": 64,
+   "sga": 3628
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 13401,
+   "op": 4359,
+   "sga": 3335
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 7270,
+   "op": -2226,
+   "sga": 4116
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6538,
+   "op": -777,
+   "sga": 3524
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7720,
+   "op": 79,
+   "sga": 3192
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 13392,
+   "op": 4627,
+   "sga": 3485
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5395,
+   "op": -4075,
+   "sga": 5820
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 8144,
+   "op": 871,
+   "sga": 3712
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8813,
+   "op": 1169,
+   "sga": 3877
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 12379,
+   "op": 2149,
+   "sga": 4203
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7218,
+   "op": -1426,
+   "sga": 3987
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 35172,
+   "op": 3457,
+   "sga": 13922,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 34921,
+   "op": 1703,
+   "sga": 14317,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 34730,
+   "op": 114,
+   "sga": 17611,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:38:21"
+}

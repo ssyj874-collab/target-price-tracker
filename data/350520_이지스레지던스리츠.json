@@ -1,0 +1,133 @@
+{
+ "corp_code": "01436628",
+ "corp_name": "이지스레지던스리츠",
+ "stock_code": "350520",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 1979005758,
+    "op": 1278302410,
+    "sga": 700703348,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20560819791,
+    "op": 12103940364,
+    "sga": 8456879427,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 7865470485,
+    "op": 7042409000,
+    "sga": 823061485,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20635384697,
+    "op": 12986988878,
+    "sga": 7648395819,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 8697184931,
+    "op": 7755515519,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16512932058,
+    "op": 14317961314,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 4379639430,
+    "op": 4101690770,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 20561,
+   "op": 12104,
+   "sga": 8457,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 20635,
+   "op": 12987,
+   "sga": 7648,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 16513,
+   "op": 14318,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T10:53:46"
+}
