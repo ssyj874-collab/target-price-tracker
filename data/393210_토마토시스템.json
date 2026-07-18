@@ -1,0 +1,211 @@
+{
+ "corp_code": "01436479",
+ "corp_name": "토마토시스템",
+ "stock_code": "393210",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5484202455,
+    "op": 293194759,
+    "sga": 1995009105,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11313138133,
+    "op": 1568518641,
+    "sga": 3426694681,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17979310471,
+    "op": 1691129213,
+    "sga": 5848228897,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26572393885,
+    "op": 2824665460,
+    "sga": 7941161081,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4411741888,
+    "op": -1368265492,
+    "sga": 2389861355,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 10981420936,
+    "op": -1316060251,
+    "sga": 5026889198,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 15773341779,
+    "op": -1829847964,
+    "sga": 7325082693,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 21608252848,
+    "op": -3080000267,
+    "sga": 10222549902,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5586671320,
+    "op": -798055834,
+    "sga": 2664895905,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11437179673,
+    "op": -1361519194,
+    "sga": 5523495874,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 18346038419,
+    "op": -2379671770,
+    "sga": 8836860318,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27188748631,
+    "op": -1730883212,
+    "sga": 10910201024,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8283890221,
+    "op": 421078132,
+    "sga": 2683935460,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 5484,
+   "op": 293,
+   "sga": 1995
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 5829,
+   "op": 1275,
+   "sga": 1432
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 6666,
+   "op": 123,
+   "sga": 2422
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 8593,
+   "op": 1134,
+   "sga": 2093
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4412,
+   "op": -1368,
+   "sga": 2390
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6570,
+   "op": 52,
+   "sga": 2637
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4792,
+   "op": -514,
+   "sga": 2298
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5835,
+   "op": -1250,
+   "sga": 2897
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5587,
+   "op": -798,
+   "sga": 2665
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5851,
+   "op": -563,
+   "sga": 2859
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6909,
+   "op": -1018,
+   "sga": 3313
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 8843,
+   "op": 649,
+   "sga": 2073
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8284,
+   "op": 421,
+   "sga": 2684
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 26572,
+   "op": 2825,
+   "sga": 7941,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 21608,
+   "op": -3080,
+   "sga": 10223,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 27189,
+   "op": -1731,
+   "sga": 10910,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:31:57"
+}

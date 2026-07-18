@@ -1,0 +1,185 @@
+{
+ "corp_code": "00113058",
+ "corp_name": "한화생명",
+ "stock_code": "088350",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": 1080416545445,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": 1057044424910,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": 400911898259,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 780507779114,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 908685153046,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 1096965243506,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 371359000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 612062000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 966952000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 1147250000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 480782000000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -23372,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 400912,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 379596,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 128177,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 188280,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 371359,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 240703,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 354890,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 180298,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 480782,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": 1057044,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": 1096965,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 1147250,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:58:57"
+}

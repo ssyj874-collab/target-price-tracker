@@ -1,0 +1,133 @@
+{
+ "corp_code": "01430475",
+ "corp_name": "코람코라이프인프라리츠",
+ "stock_code": "357120",
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 14917178484,
+    "op": 8912404541,
+    "sga": 6004773943,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 31480225980,
+    "op": 18120543978,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 17397837030,
+    "op": 11794505738,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 48494556591,
+    "op": 35648009165,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 16534575504,
+    "op": 11202825955,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 38554129732,
+    "op": 24157963679,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 17385574857,
+    "op": 12960473322,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 31480,
+   "op": 18121,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 48495,
+   "op": 35648,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 38554,
+   "op": 24158,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:22:05"
+}

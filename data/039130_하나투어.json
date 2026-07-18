@@ -1,0 +1,211 @@
+{
+ "corp_code": "00269940",
+ "corp_name": "하나투어",
+ "stock_code": "039130",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 82976096152,
+    "op": 5612350564,
+    "sga": null,
+    "inventory": 10916915855
+   },
+   "2": {
+    "revenue": 165379173030,
+    "op": 9678140065,
+    "sga": null,
+    "inventory": 23419366628
+   },
+   "3": {
+    "revenue": 292076060687,
+    "op": 22891714971,
+    "sga": null,
+    "inventory": 39582403783
+   },
+   "4": {
+    "revenue": 411611609463,
+    "op": 34047986427,
+    "sga": null,
+    "inventory": 59064707669
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 183336055761,
+    "op": 21629505521,
+    "sga": null,
+    "inventory": 58141131803
+   },
+   "2": {
+    "revenue": 315003941539,
+    "op": 25295119597,
+    "sga": null,
+    "inventory": 61329862634
+   },
+   "3": {
+    "revenue": 474396924210,
+    "op": 37321411946,
+    "sga": null,
+    "inventory": 75498829019
+   },
+   "4": {
+    "revenue": 616606993658,
+    "op": 50919001973,
+    "sga": null,
+    "inventory": 70111978681
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 168451223004,
+    "op": 12282301697,
+    "sga": null,
+    "inventory": 33678392083
+   },
+   "2": {
+    "revenue": 288388433961,
+    "op": 21932368025,
+    "sga": null,
+    "inventory": 48061685183
+   },
+   "3": {
+    "revenue": 411675041317,
+    "op": 30213056025,
+    "sga": null,
+    "inventory": 68052327431
+   },
+   "4": {
+    "revenue": 586902971424,
+    "op": 57626875763,
+    "sga": null,
+    "inventory": 46212129694
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 174828804322,
+    "op": 16763342698,
+    "sga": null,
+    "inventory": 28441337218
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 10917,
+   "revenue": 82976,
+   "op": 5612,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 23419,
+   "revenue": 82403,
+   "op": 4066,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 39582,
+   "revenue": 126697,
+   "op": 13214,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 59065,
+   "revenue": 119536,
+   "op": 11156,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 58141,
+   "revenue": 183336,
+   "op": 21630,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 61330,
+   "revenue": 131668,
+   "op": 3666,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 75499,
+   "revenue": 159393,
+   "op": 12026,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 70112,
+   "revenue": 142210,
+   "op": 13598,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 33678,
+   "revenue": 168451,
+   "op": 12282,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 48062,
+   "revenue": 119937,
+   "op": 9650,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 68052,
+   "revenue": 123287,
+   "op": 8281,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 46212,
+   "revenue": 175228,
+   "op": 27414,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 28441,
+   "revenue": 174829,
+   "op": 16763,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 411612,
+   "op": 34048,
+   "sga": null,
+   "inventory": 59065
+  },
+  {
+   "year": 2024,
+   "revenue": 616607,
+   "op": 50919,
+   "sga": null,
+   "inventory": 70112
+  },
+  {
+   "year": 2025,
+   "revenue": 586903,
+   "op": 57627,
+   "sga": null,
+   "inventory": 46212
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:47:20"
+}

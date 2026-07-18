@@ -1,0 +1,211 @@
+{
+ "corp_code": "00862853",
+ "corp_name": "플레이디",
+ "stock_code": "237820",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8959286501,
+    "op": 166980499,
+    "sga": null,
+    "inventory": 462892025
+   },
+   "2": {
+    "revenue": 17659413367,
+    "op": 462769887,
+    "sga": null,
+    "inventory": 213808602
+   },
+   "3": {
+    "revenue": 27968674002,
+    "op": 1553660007,
+    "sga": null,
+    "inventory": 415282387
+   },
+   "4": {
+    "revenue": 37255650160,
+    "op": 2531121706,
+    "sga": null,
+    "inventory": 757953718
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9311516355,
+    "op": 642304753,
+    "sga": null,
+    "inventory": 437286059
+   },
+   "2": {
+    "revenue": 19227888712,
+    "op": 1744072480,
+    "sga": null,
+    "inventory": 599848883
+   },
+   "3": {
+    "revenue": 28764852230,
+    "op": 3024992891,
+    "sga": null,
+    "inventory": 585556478
+   },
+   "4": {
+    "revenue": 38614111514,
+    "op": 4001982311,
+    "sga": null,
+    "inventory": 1040599439
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7656160574,
+    "op": 46055134,
+    "sga": null,
+    "inventory": 653830851
+   },
+   "2": {
+    "revenue": 17448323955,
+    "op": 1742808623,
+    "sga": null,
+    "inventory": 826451161
+   },
+   "3": {
+    "revenue": 26904902000,
+    "op": 3180249267,
+    "sga": null,
+    "inventory": 765877769
+   },
+   "4": {
+    "revenue": 38555931352,
+    "op": 6422463389,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7518812128,
+    "op": 821659257,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 463,
+   "revenue": 8959,
+   "op": 167,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 214,
+   "revenue": 8700,
+   "op": 296,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 415,
+   "revenue": 10309,
+   "op": 1091,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 758,
+   "revenue": 9287,
+   "op": 977,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 437,
+   "revenue": 9312,
+   "op": 642,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 600,
+   "revenue": 9916,
+   "op": 1102,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 586,
+   "revenue": 9537,
+   "op": 1281,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1041,
+   "revenue": 9849,
+   "op": 977,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 654,
+   "revenue": 7656,
+   "op": 46,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 826,
+   "revenue": 9792,
+   "op": 1697,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 766,
+   "revenue": 9457,
+   "op": 1437,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 11651,
+   "op": 3242,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7519,
+   "op": 822,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 37256,
+   "op": 2531,
+   "sga": null,
+   "inventory": 758
+  },
+  {
+   "year": 2024,
+   "revenue": 38614,
+   "op": 4002,
+   "sga": null,
+   "inventory": 1041
+  },
+  {
+   "year": 2025,
+   "revenue": 38556,
+   "op": 6422,
+   "sga": null,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:43:50"
+}

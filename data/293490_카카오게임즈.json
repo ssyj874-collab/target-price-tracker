@@ -1,0 +1,211 @@
+{
+ "corp_code": "01137383",
+ "corp_name": "카카오게임즈",
+ "stock_code": "293490",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 249161528586,
+    "op": 11342197946,
+    "sga": 237819330640,
+    "inventory": 114664014269
+   },
+   "2": {
+    "revenue": 520253915700,
+    "op": 37819739255,
+    "sga": 482434176445,
+    "inventory": 100305829714
+   },
+   "3": {
+    "revenue": 784952044049,
+    "op": 60382249279,
+    "sga": 724569794770,
+    "inventory": 93865960070
+   },
+   "4": {
+    "revenue": 1025085964285,
+    "op": 74516883006,
+    "sga": null,
+    "inventory": 80382694000
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 246277620948,
+    "op": 12263543215,
+    "sga": 234014077733,
+    "inventory": 75235639313
+   },
+   "2": {
+    "revenue": 481890997999,
+    "op": 15063457645,
+    "sga": 466827540354,
+    "inventory": 68804864719
+   },
+   "3": {
+    "revenue": 578691209442,
+    "op": 12752593493,
+    "sga": null,
+    "inventory": 22846787296
+   },
+   "4": {
+    "revenue": 627227484059,
+    "op": 19148863191,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 122854093781,
+    "op": -12440478072,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 238662152512,
+    "op": -21055008346,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 366129860165,
+    "op": -26501594732,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 465018566528,
+    "op": -39590701112,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 82925831048,
+    "op": -25459591902,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 114664,
+   "revenue": 249162,
+   "op": 11342,
+   "sga": 237819
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 100306,
+   "revenue": 271092,
+   "op": 26478,
+   "sga": 244615
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 93866,
+   "revenue": 264698,
+   "op": 22563,
+   "sga": 242136
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 80383,
+   "revenue": 240134,
+   "op": 14135,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 75236,
+   "revenue": 246278,
+   "op": 12264,
+   "sga": 234014
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 68805,
+   "revenue": 235613,
+   "op": 2800,
+   "sga": 232813
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 22847,
+   "revenue": 96800,
+   "op": -2311,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 48536,
+   "op": 6396,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 122854,
+   "op": -12440,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 115808,
+   "op": -8615,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 127468,
+   "op": -5447,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 98889,
+   "op": -13089,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 82926,
+   "op": -25460,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1025086,
+   "op": 74517,
+   "sga": null,
+   "inventory": 80383
+  },
+  {
+   "year": 2024,
+   "revenue": 627227,
+   "op": 19149,
+   "sga": null,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 465019,
+   "op": -39591,
+   "sga": null,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:15:53"
+}

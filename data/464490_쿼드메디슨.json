@@ -1,0 +1,124 @@
+{
+ "corp_code": "01671285",
+ "corp_name": "쿼드메디슨",
+ "stock_code": "464490",
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 1307994410,
+    "op": -4524925701,
+    "sga": null,
+    "inventory": 561646543
+   },
+   "3": {
+    "revenue": 3481177337,
+    "op": -5066948644,
+    "sga": null,
+    "inventory": 887843383
+   },
+   "4": {
+    "revenue": 9303610913,
+    "op": -3282107523,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1189171439,
+    "op": -2670336280,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5353935959,
+    "op": -2361054775,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10698152626,
+    "op": -6039787375,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 273811548,
+    "op": -4407705419,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": 562,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 888,
+   "revenue": 2173,
+   "op": -542,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5822,
+   "op": 1785,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1189,
+   "op": -2670,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4165,
+   "op": 309,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 274,
+   "op": -4408,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 9304,
+   "op": -3282,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 10698,
+   "op": -6040,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:26:12"
+}

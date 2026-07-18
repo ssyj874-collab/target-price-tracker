@@ -1,0 +1,211 @@
+{
+ "corp_code": "01245062",
+ "corp_name": "코오롱티슈진",
+ "stock_code": "950160",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 399119,
+    "op": -3380207,
+    "sga": 3442088,
+    "inventory": 11720
+   },
+   "2": {
+    "revenue": 909896,
+    "op": -7529786,
+    "sga": 7649529,
+    "inventory": 45187
+   },
+   "3": {
+    "revenue": 2256257,
+    "op": -11515794,
+    "sga": 11779307,
+    "inventory": 31979
+   },
+   "4": {
+    "revenue": 2839000,
+    "op": -15707145,
+    "sga": 16023679,
+    "inventory": 49852
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 912850,
+    "op": -3195104,
+    "sga": 3315574,
+    "inventory": 38696
+   },
+   "2": {
+    "revenue": 1623343,
+    "op": -7182330,
+    "sga": 7376811,
+    "inventory": 65755
+   },
+   "3": {
+    "revenue": 3174348,
+    "op": -11474927,
+    "sga": 11822977,
+    "inventory": 51062
+   },
+   "4": {
+    "revenue": 3719583,
+    "op": -16127329,
+    "sga": 16563176,
+    "inventory": 63575
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 886776,
+    "op": -3731468,
+    "sga": 3844412,
+    "inventory": 40980
+   },
+   "2": {
+    "revenue": 1827668,
+    "op": -7605792,
+    "sga": 7850779,
+    "inventory": 71309
+   },
+   "3": {
+    "revenue": 3042129,
+    "op": -10137053,
+    "sga": 10543331,
+    "inventory": 28027
+   },
+   "4": {
+    "revenue": 3627220,
+    "op": -15695998,
+    "sga": 16177812,
+    "inventory": 42150
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 962649,
+    "op": -3672157,
+    "sga": 3787453,
+    "inventory": 16294
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 0,
+   "revenue": 0,
+   "op": -3,
+   "sga": 3
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -3,
+   "sga": 3
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 0,
+   "revenue": 2,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -3,
+   "sga": 3
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 0,
+   "revenue": 1,
+   "op": -4,
+   "sga": 4
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 3,
+   "op": -16,
+   "sga": 16,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 4,
+   "op": -16,
+   "sga": 17,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 4,
+   "op": -16,
+   "sga": 16,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:24:51"
+}

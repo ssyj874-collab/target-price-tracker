@@ -1,0 +1,76 @@
+{
+ "corp_code": "01638387",
+ "corp_name": "케이지에이",
+ "stock_code": "455180",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 16542082238,
+    "op": 990316482,
+    "sga": 1619446194,
+    "inventory": 798969824
+   },
+   "3": {
+    "revenue": 16887451764,
+    "op": -688126288,
+    "sga": 2620053158,
+    "inventory": 828729847
+   },
+   "4": {
+    "revenue": 18123087764,
+    "op": -3685407805,
+    "sga": 3697884840,
+    "inventory": 765521215
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 899257193,
+    "op": -1221091566,
+    "sga": 1047441597,
+    "inventory": 3594394285
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 799,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 829,
+   "revenue": 345,
+   "op": -1678,
+   "sga": 1001
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 766,
+   "revenue": 1236,
+   "op": -2997,
+   "sga": 1078
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3594,
+   "revenue": 899,
+   "op": -1221,
+   "sga": 1047
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 18123,
+   "op": -3685,
+   "sga": 3698,
+   "inventory": 766
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:20:08"
+}

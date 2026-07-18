@@ -1,0 +1,211 @@
+{
+ "corp_code": "00155276",
+ "corp_name": "포스코퓨처엠",
+ "stock_code": "003670",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1135237636646,
+    "op": 20264913113,
+    "sga": 3995297790,
+    "inventory": 1158389683773
+   },
+   "2": {
+    "revenue": 2328259514587,
+    "op": 72403820045,
+    "sga": 7517535904,
+    "inventory": 1376782313840
+   },
+   "3": {
+    "revenue": 3614031439897,
+    "op": 109540569149,
+    "sga": 11308445976,
+    "inventory": 1243472179321
+   },
+   "4": {
+    "revenue": 4759871486264,
+    "op": 35882185999,
+    "sga": null,
+    "inventory": 916674470483
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1138422307321,
+    "op": 37897306820,
+    "sga": null,
+    "inventory": 715452572684
+   },
+   "2": {
+    "revenue": 2053909108103,
+    "op": 40634625586,
+    "sga": null,
+    "inventory": 769534759877
+   },
+   "3": {
+    "revenue": 2976697279275,
+    "op": 42002219895,
+    "sga": null,
+    "inventory": 716222602542
+   },
+   "4": {
+    "revenue": 3699944235821,
+    "op": 721245866,
+    "sga": null,
+    "inventory": 768212453686
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 845393850220,
+    "op": 17150145795,
+    "sga": null,
+    "inventory": 708350379959
+   },
+   "2": {
+    "revenue": 1506330789509,
+    "op": 17923470785,
+    "sga": null,
+    "inventory": 827630651289
+   },
+   "3": {
+    "revenue": 2381129104817,
+    "op": 84593421295,
+    "sga": null,
+    "inventory": 846969506708
+   },
+   "4": {
+    "revenue": 2938698184392,
+    "op": 32827283494,
+    "sga": null,
+    "inventory": 841132239882
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 757515005832,
+    "op": 17699640745,
+    "sga": null,
+    "inventory": 651081988867
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1158390,
+   "revenue": 1135238,
+   "op": 20265,
+   "sga": 3995
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1376782,
+   "revenue": 1193022,
+   "op": 52139,
+   "sga": 3522
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1243472,
+   "revenue": 1285772,
+   "op": 37137,
+   "sga": 3791
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 916674,
+   "revenue": 1145840,
+   "op": -73658,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 715453,
+   "revenue": 1138422,
+   "op": 37897,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 769535,
+   "revenue": 915487,
+   "op": 2737,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 716223,
+   "revenue": 922788,
+   "op": 1368,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 768212,
+   "revenue": 723247,
+   "op": -41281,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 708350,
+   "revenue": 845394,
+   "op": 17150,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 827631,
+   "revenue": 660937,
+   "op": 773,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 846970,
+   "revenue": 874798,
+   "op": 66670,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 841132,
+   "revenue": 557569,
+   "op": -51766,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 651082,
+   "revenue": 757515,
+   "op": 17700,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4759871,
+   "op": 35882,
+   "sga": null,
+   "inventory": 916674
+  },
+  {
+   "year": 2024,
+   "revenue": 3699944,
+   "op": 721,
+   "sga": null,
+   "inventory": 768212
+  },
+  {
+   "year": 2025,
+   "revenue": 2938698,
+   "op": 32827,
+   "sga": null,
+   "inventory": 841132
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:40:11"
+}

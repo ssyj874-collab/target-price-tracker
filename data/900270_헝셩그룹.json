@@ -1,0 +1,211 @@
+{
+ "corp_code": "01160512",
+ "corp_name": "헝셩그룹",
+ "stock_code": "900270",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 98239049,
+    "op": -7926318,
+    "sga": 17110589,
+    "inventory": 32182707
+   },
+   "2": {
+    "revenue": 264554292,
+    "op": -6832227,
+    "sga": 42091986,
+    "inventory": 32732889
+   },
+   "3": {
+    "revenue": 442275904,
+    "op": 228741,
+    "sga": 69319754,
+    "inventory": 29312673
+   },
+   "4": {
+    "revenue": 597014088,
+    "op": -757051,
+    "sga": 91341267,
+    "inventory": 17239146
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 124302288,
+    "op": -1210156,
+    "sga": 16275522,
+    "inventory": 27363326
+   },
+   "2": {
+    "revenue": 312265139,
+    "op": 12355620,
+    "sga": 38100362,
+    "inventory": 30342253
+   },
+   "3": {
+    "revenue": 521511075,
+    "op": 35198183,
+    "sga": 61361467,
+    "inventory": 28332758
+   },
+   "4": {
+    "revenue": 619098618,
+    "op": 38873402,
+    "sga": 61658050,
+    "inventory": 29210607
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 93237300,
+    "op": -6393730,
+    "sga": 12990311,
+    "inventory": 21512095
+   },
+   "2": {
+    "revenue": 233057700,
+    "op": -6993756,
+    "sga": 29838401,
+    "inventory": 24916088
+   },
+   "3": {
+    "revenue": 384175307,
+    "op": -6689,
+    "sga": 48167099,
+    "inventory": 21541060
+   },
+   "4": {
+    "revenue": 550151496,
+    "op": -1079266,
+    "sga": 65016303,
+    "inventory": 23219346
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 104750053,
+    "op": -400530,
+    "sga": 12993355,
+    "inventory": 35734335
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 32,
+   "revenue": 98,
+   "op": -8,
+   "sga": 17
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 33,
+   "revenue": 166,
+   "op": 1,
+   "sga": 25
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 29,
+   "revenue": 178,
+   "op": 7,
+   "sga": 27
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 17,
+   "revenue": 155,
+   "op": -1,
+   "sga": 22
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 27,
+   "revenue": 124,
+   "op": -1,
+   "sga": 16
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 30,
+   "revenue": 188,
+   "op": 14,
+   "sga": 22
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 28,
+   "revenue": 209,
+   "op": 23,
+   "sga": 23
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 29,
+   "revenue": 98,
+   "op": 4,
+   "sga": 0
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 22,
+   "revenue": 93,
+   "op": -6,
+   "sga": 13
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 25,
+   "revenue": 140,
+   "op": -1,
+   "sga": 17
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 22,
+   "revenue": 151,
+   "op": 7,
+   "sga": 18
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 23,
+   "revenue": 166,
+   "op": -1,
+   "sga": 17
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 36,
+   "revenue": 105,
+   "op": 0,
+   "sga": 13
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 597,
+   "op": -1,
+   "sga": 91,
+   "inventory": 17
+  },
+  {
+   "year": 2024,
+   "revenue": 619,
+   "op": 39,
+   "sga": 62,
+   "inventory": 29
+  },
+  {
+   "year": 2025,
+   "revenue": 550,
+   "op": -1,
+   "sga": 65,
+   "inventory": 23
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T12:00:18"
+}

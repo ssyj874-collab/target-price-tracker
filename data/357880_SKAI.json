@@ -2,8 +2,210 @@
  "corp_code": "01381984",
  "corp_name": "SKAI",
  "stock_code": "357880",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:26:40"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 6384037529,
+    "op": 145091869,
+    "sga": 6238945660,
+    "inventory": 671243000
+   },
+   "2": {
+    "revenue": 12688249095,
+    "op": -4654225140,
+    "sga": 17342474235,
+    "inventory": 2274789046
+   },
+   "3": {
+    "revenue": 19832602857,
+    "op": -7918015333,
+    "sga": 27750618190,
+    "inventory": 2010357663
+   },
+   "4": {
+    "revenue": 27840337672,
+    "op": -13292681427,
+    "sga": 41133019099,
+    "inventory": 1659408792
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7608388676,
+    "op": -1891802200,
+    "sga": 9500190876,
+    "inventory": 1555483785
+   },
+   "2": {
+    "revenue": 18099117728,
+    "op": -3891789087,
+    "sga": 21990906815,
+    "inventory": 425066
+   },
+   "3": {
+    "revenue": 23664640519,
+    "op": -4288389539,
+    "sga": null,
+    "inventory": 5874107280
+   },
+   "4": {
+    "revenue": 19848856622,
+    "op": -12065103096,
+    "sga": null,
+    "inventory": 3573987775
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2057102964,
+    "op": -3017260586,
+    "sga": null,
+    "inventory": 3576732314
+   },
+   "2": {
+    "revenue": 8921940827,
+    "op": -376375700,
+    "sga": null,
+    "inventory": 3505894899
+   },
+   "3": {
+    "revenue": 11437085325,
+    "op": -3043544982,
+    "sga": null,
+    "inventory": 2098560020
+   },
+   "4": {
+    "revenue": 15641618670,
+    "op": -4391455139,
+    "sga": null,
+    "inventory": 394321924
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3233990009,
+    "op": -1653705605,
+    "sga": null,
+    "inventory": 715300075
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 671,
+   "revenue": 6384,
+   "op": 145,
+   "sga": 6239
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 2275,
+   "revenue": 6304,
+   "op": -4799,
+   "sga": 11104
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 2010,
+   "revenue": 7144,
+   "op": -3264,
+   "sga": 10408
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1659,
+   "revenue": 8008,
+   "op": -5375,
+   "sga": 13382
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1555,
+   "revenue": 7608,
+   "op": -1892,
+   "sga": 9500
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 0,
+   "revenue": 10491,
+   "op": -2000,
+   "sga": 12491
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 5874,
+   "revenue": 5566,
+   "op": -397,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 3574,
+   "revenue": -3816,
+   "op": -7777,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 3577,
+   "revenue": 2057,
+   "op": -3017,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 3506,
+   "revenue": 6865,
+   "op": 2641,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2099,
+   "revenue": 2515,
+   "op": -2667,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 394,
+   "revenue": 4205,
+   "op": -1348,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 715,
+   "revenue": 3234,
+   "op": -1654,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 27840,
+   "op": -13293,
+   "sga": 41133,
+   "inventory": 1659
+  },
+  {
+   "year": 2024,
+   "revenue": 19849,
+   "op": -12065,
+   "sga": null,
+   "inventory": 3574
+  },
+  {
+   "year": 2025,
+   "revenue": 15642,
+   "op": -4391,
+   "sga": null,
+   "inventory": 394
+  }
+ ],
+ "updated": "2026-07-18T11:12:54",
+ "fs_div": "CFS"
 }

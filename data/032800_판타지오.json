@@ -1,0 +1,211 @@
+{
+ "corp_code": "00231691",
+ "corp_name": "판타지오",
+ "stock_code": "032800",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 12521498911,
+    "op": -923621879,
+    "sga": 446367341,
+    "inventory": 11681983097
+   },
+   "2": {
+    "revenue": 30953082254,
+    "op": -1135640240,
+    "sga": 1156896314,
+    "inventory": 13672655960
+   },
+   "3": {
+    "revenue": 32451449206,
+    "op": -2992215013,
+    "sga": 5349606187,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 38527506388,
+    "op": -4913262869,
+    "sga": 5285813291,
+    "inventory": 13354809507
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7543883283,
+    "op": -1182806234,
+    "sga": 675704436,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 16913199254,
+    "op": -2115923187,
+    "sga": 1267014156,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 47821327151,
+    "op": -1443800831,
+    "sga": 1742080872,
+    "inventory": 11734416485
+   },
+   "4": {
+    "revenue": 72334500746,
+    "op": -1540001928,
+    "sga": 2420828165,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 10394340378,
+    "op": -915488174,
+    "sga": 817111941,
+    "inventory": 1033087522
+   },
+   "2": {
+    "revenue": 19669551525,
+    "op": -2497567855,
+    "sga": 1529034332,
+    "inventory": 7431128776
+   },
+   "3": {
+    "revenue": 25517431518,
+    "op": -2848776482,
+    "sga": 1750780736,
+    "inventory": 0
+   },
+   "4": {
+    "revenue": 38192077332,
+    "op": -8032024834,
+    "sga": 7762657916,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "3": {
+    "revenue": 25651575491,
+    "op": -4713179071,
+    "sga": 2210936008,
+    "inventory": 12254989040
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 11682,
+   "revenue": 12521,
+   "op": -924,
+   "sga": 446
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 13673,
+   "revenue": 18432,
+   "op": -212,
+   "sga": 711
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 1498,
+   "op": -1857,
+   "sga": 4193
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 13355,
+   "revenue": 6076,
+   "op": -1921,
+   "sga": -64
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 7544,
+   "op": -1183,
+   "sga": 676
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 9369,
+   "op": -933,
+   "sga": 591
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 11734,
+   "revenue": 30908,
+   "op": 672,
+   "sga": 475
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 24513,
+   "op": -96,
+   "sga": 679
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1033,
+   "revenue": 10394,
+   "op": -915,
+   "sga": 817
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 7431,
+   "revenue": 9275,
+   "op": -1582,
+   "sga": 712
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 0,
+   "revenue": 5848,
+   "op": -351,
+   "sga": 222
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 12675,
+   "op": -5183,
+   "sga": 6012
+  },
+  {
+   "label": "2026.3분기",
+   "inventory": 12255,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 38528,
+   "op": -4913,
+   "sga": 5286,
+   "inventory": 13355
+  },
+  {
+   "year": 2024,
+   "revenue": 72335,
+   "op": -1540,
+   "sga": 2421,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 38192,
+   "op": -8032,
+   "sga": 7763,
+   "inventory": 0
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:37:44"
+}

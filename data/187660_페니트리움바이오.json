@@ -1,0 +1,211 @@
+{
+ "corp_code": "01409022",
+ "corp_name": "페니트리움바이오",
+ "stock_code": "187660",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3607096264,
+    "op": -905707637,
+    "sga": 1578574878,
+    "inventory": 745385935
+   },
+   "2": {
+    "revenue": 7788500122,
+    "op": -1201258012,
+    "sga": 3365219041,
+    "inventory": 752418956
+   },
+   "3": {
+    "revenue": 11043679010,
+    "op": -2173530871,
+    "sga": 5074067042,
+    "inventory": 952716685
+   },
+   "4": {
+    "revenue": 13790195699,
+    "op": -3464613885,
+    "sga": 6681117369,
+    "inventory": 1162854413
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2932546806,
+    "op": -1772388898,
+    "sga": 1620817113,
+    "inventory": 927013192
+   },
+   "2": {
+    "revenue": 5559110117,
+    "op": -12338876128,
+    "sga": 12427282642,
+    "inventory": 120740448
+   },
+   "3": {
+    "revenue": 7603670527,
+    "op": -14916965293,
+    "sga": 14768604282,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9744986676,
+    "op": -15932446161,
+    "sga": 16033696815,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2212570846,
+    "op": -2718369968,
+    "sga": 2180581855,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4736519233,
+    "op": -4370270484,
+    "sga": 4005765252,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7343258433,
+    "op": -5825314990,
+    "sga": 5881320401,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9273012798,
+    "op": -7376237084,
+    "sga": 7409816265,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1692154721,
+    "op": -1836201631,
+    "sga": 1657379193,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 745,
+   "revenue": 3607,
+   "op": -906,
+   "sga": 1579
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 752,
+   "revenue": 4181,
+   "op": -296,
+   "sga": 1787
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 953,
+   "revenue": 3255,
+   "op": -972,
+   "sga": 1709
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1163,
+   "revenue": 2747,
+   "op": -1291,
+   "sga": 1607
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 927,
+   "revenue": 2933,
+   "op": -1772,
+   "sga": 1621
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 121,
+   "revenue": 2627,
+   "op": -10566,
+   "sga": 10806
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2045,
+   "op": -2578,
+   "sga": 2341
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2141,
+   "op": -1015,
+   "sga": 1265
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2213,
+   "op": -2718,
+   "sga": 2181
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 2524,
+   "op": -1652,
+   "sga": 1825
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 2607,
+   "op": -1455,
+   "sga": 1876
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1930,
+   "op": -1551,
+   "sga": 1528
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1692,
+   "op": -1836,
+   "sga": 1657
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 13790,
+   "op": -3465,
+   "sga": 6681,
+   "inventory": 1163
+  },
+  {
+   "year": 2024,
+   "revenue": 9745,
+   "op": -15932,
+   "sga": 16034,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 9273,
+   "op": -7376,
+   "sga": 7410,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:38:59"
+}

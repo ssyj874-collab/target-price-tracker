@@ -1,0 +1,50 @@
+{
+ "corp_code": "01445024",
+ "corp_name": "한패스",
+ "stock_code": "408470",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 66448336065,
+    "op": 8228502898,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 17056441759,
+    "op": -746963207,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 17056,
+   "op": -747,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 66448,
+   "op": 8229,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:58:29"
+}

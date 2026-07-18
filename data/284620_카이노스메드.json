@@ -1,0 +1,211 @@
+{
+ "corp_code": "01263527",
+ "corp_name": "카이노스메드",
+ "stock_code": "284620",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 70545110,
+    "op": -3570144464,
+    "sga": 3619526041,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 115694070,
+    "op": -8538250756,
+    "sga": 8630473781,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 166264516,
+    "op": -13049588528,
+    "sga": 13179500846,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 267311985,
+    "op": -16811614766,
+    "sga": 17016836048,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 138729588,
+    "op": -2609126093,
+    "sga": 2713792485,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 315403256,
+    "op": -5750777325,
+    "sga": 5987115602,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 519040187,
+    "op": -8149413478,
+    "sga": 8537518901,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 590366156,
+    "op": -12327872668,
+    "sga": 12749736044,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 368861907,
+    "op": -1689894701,
+    "sga": 1974830417,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 545343997,
+    "op": -2634853114,
+    "sga": 3046804643,
+    "inventory": 681818000
+   },
+   "3": {
+    "revenue": 867542487,
+    "op": -4140631440,
+    "sga": 4793675634,
+    "inventory": 681818000
+   },
+   "4": {
+    "revenue": 1171631910,
+    "op": -6438933559,
+    "sga": 6638722279,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 370336741,
+    "op": -1011829423,
+    "sga": 1287835107,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 71,
+   "op": -3570,
+   "sga": 3620
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 45,
+   "op": -4968,
+   "sga": 5011
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 51,
+   "op": -4511,
+   "sga": 4549
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 101,
+   "op": -3762,
+   "sga": 3837
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 139,
+   "op": -2609,
+   "sga": 2714
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 177,
+   "op": -3142,
+   "sga": 3273
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 204,
+   "op": -2399,
+   "sga": 2550
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 71,
+   "op": -4178,
+   "sga": 4212
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 369,
+   "op": -1690,
+   "sga": 1975
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 682,
+   "revenue": 176,
+   "op": -945,
+   "sga": 1072
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 682,
+   "revenue": 322,
+   "op": -1506,
+   "sga": 1747
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 304,
+   "op": -2298,
+   "sga": 1845
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 370,
+   "op": -1012,
+   "sga": 1288
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 267,
+   "op": -16812,
+   "sga": 17017,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 590,
+   "op": -12328,
+   "sga": 12750,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 1172,
+   "op": -6439,
+   "sga": 6639,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:15:43"
+}

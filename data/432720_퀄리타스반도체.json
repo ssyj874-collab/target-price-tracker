@@ -1,0 +1,172 @@
+{
+ "corp_code": "01584183",
+ "corp_name": "퀄리타스반도체",
+ "stock_code": "432720",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 10774541164,
+    "op": -11186432731,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 743129353,
+    "op": -5928950842,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1180835676,
+    "op": -11554950400,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2357690056,
+    "op": -17457455438,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 6074683889,
+    "op": -22694310411,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1879977032,
+    "op": -5043450371,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2795298884,
+    "op": -11414530608,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3636927989,
+    "op": -17985000577,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 5350047190,
+    "op": -24471844867,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5153686910,
+    "op": -4740378317,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 743,
+   "op": -5929,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 438,
+   "op": -5626,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1177,
+   "op": -5903,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3717,
+   "op": -5237,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1880,
+   "op": -5043,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 915,
+   "op": -6371,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 842,
+   "op": -6570,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1713,
+   "op": -6487,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5154,
+   "op": -4740,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 10775,
+   "op": -11186,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 6075,
+   "op": -22694,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 5350,
+   "op": -24472,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:26:22"
+}

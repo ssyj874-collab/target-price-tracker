@@ -1,0 +1,211 @@
+{
+ "corp_code": "00763701",
+ "corp_name": "헥토파이낸셜",
+ "stock_code": "234340",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 36324129398,
+    "op": 2858430880,
+    "sga": null,
+    "inventory": 1008547000
+   },
+   "2": {
+    "revenue": 74783240808,
+    "op": 5865546114,
+    "sga": null,
+    "inventory": 771463000
+   },
+   "3": {
+    "revenue": 114453880617,
+    "op": 9678907456,
+    "sga": null,
+    "inventory": 1396386400
+   },
+   "4": {
+    "revenue": 153076082801,
+    "op": 12571136493,
+    "sga": null,
+    "inventory": 907587050
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 37076068872,
+    "op": 4038450290,
+    "sga": null,
+    "inventory": 1782029164
+   },
+   "2": {
+    "revenue": 75129095296,
+    "op": 7608284603,
+    "sga": null,
+    "inventory": 1573078464
+   },
+   "3": {
+    "revenue": 114573438757,
+    "op": 11751144533,
+    "sga": null,
+    "inventory": 2171311964
+   },
+   "4": {
+    "revenue": 159308044324,
+    "op": 13293369221,
+    "sga": null,
+    "inventory": 1895960664
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 45989988925,
+    "op": 3657202920,
+    "sga": null,
+    "inventory": 2949558482
+   },
+   "2": {
+    "revenue": 90515816360,
+    "op": 7492804451,
+    "sga": null,
+    "inventory": 2740449342
+   },
+   "3": {
+    "revenue": 136274832398,
+    "op": 12011439979,
+    "sga": null,
+    "inventory": 2187778590
+   },
+   "4": {
+    "revenue": 187435598839,
+    "op": 15577801607,
+    "sga": null,
+    "inventory": 2174984480
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 57471142722,
+    "op": 9136813436,
+    "sga": null,
+    "inventory": 1716275472
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1009,
+   "revenue": 36324,
+   "op": 2858,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 771,
+   "revenue": 38459,
+   "op": 3007,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1396,
+   "revenue": 39671,
+   "op": 3813,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 908,
+   "revenue": 38622,
+   "op": 2892,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1782,
+   "revenue": 37076,
+   "op": 4038,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1573,
+   "revenue": 38053,
+   "op": 3570,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 2171,
+   "revenue": 39444,
+   "op": 4143,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1896,
+   "revenue": 44735,
+   "op": 1542,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2950,
+   "revenue": 45990,
+   "op": 3657,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 2740,
+   "revenue": 44526,
+   "op": 3836,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2188,
+   "revenue": 45759,
+   "op": 4519,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 2175,
+   "revenue": 51161,
+   "op": 3566,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1716,
+   "revenue": 57471,
+   "op": 9137,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 153076,
+   "op": 12571,
+   "sga": null,
+   "inventory": 908
+  },
+  {
+   "year": 2024,
+   "revenue": 159308,
+   "op": 13293,
+   "sga": null,
+   "inventory": 1896
+  },
+  {
+   "year": 2025,
+   "revenue": 187436,
+   "op": 15578,
+   "sga": null,
+   "inventory": 2175
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T12:00:30"
+}

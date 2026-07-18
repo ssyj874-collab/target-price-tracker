@@ -1,0 +1,76 @@
+{
+ "corp_code": "01688568",
+ "corp_name": "프로티나",
+ "stock_code": "468530",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 2025421018,
+    "op": -3972549075,
+    "sga": 5187669177,
+    "inventory": 121779005
+   },
+   "3": {
+    "revenue": 2607612379,
+    "op": -6920746413,
+    "sga": 8354633620,
+    "inventory": 324634497
+   },
+   "4": {
+    "revenue": 2950918349,
+    "op": -11367962763,
+    "sga": 12907570355,
+    "inventory": 494222161
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 168557500,
+    "op": -4712013613,
+    "sga": 4740852643,
+    "inventory": 855844598
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 122,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 325,
+   "revenue": 582,
+   "op": -2948,
+   "sga": 3167
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 494,
+   "revenue": 343,
+   "op": -4447,
+   "sga": 4553
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 856,
+   "revenue": 169,
+   "op": -4712,
+   "sga": 4741
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 2951,
+   "op": -11368,
+   "sga": 12908,
+   "inventory": 494
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:42:56"
+}

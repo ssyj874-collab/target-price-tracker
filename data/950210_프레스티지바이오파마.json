@@ -1,0 +1,211 @@
+{
+ "corp_code": "01510489",
+ "corp_name": "프레스티지바이오파마",
+ "stock_code": "950210",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 51354,
+    "op": -13101595,
+    "sga": 13152949,
+    "inventory": 7342002
+   },
+   "2": {
+    "revenue": 142074,
+    "op": -27496036,
+    "sga": 27638110,
+    "inventory": 6248611
+   },
+   "3": {
+    "revenue": 0,
+    "op": -36757930,
+    "sga": 36757930,
+    "inventory": 9055936
+   },
+   "4": {
+    "revenue": 122410,
+    "op": -52622071,
+    "sga": 52744481,
+    "inventory": 5443348
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1634310,
+    "op": -11404559,
+    "sga": 13038869,
+    "inventory": 14064723
+   },
+   "2": {
+    "revenue": 3894514,
+    "op": -26885776,
+    "sga": 30780290,
+    "inventory": 12588743
+   },
+   "3": {
+    "revenue": 625868,
+    "op": -40179845,
+    "sga": 40805713,
+    "inventory": 5799574
+   },
+   "4": {
+    "revenue": 517114,
+    "op": -47115233,
+    "sga": 47632347,
+    "inventory": 13031240
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1665776,
+    "op": -17516506,
+    "sga": 17608375,
+    "inventory": 22427586
+   },
+   "2": {
+    "revenue": 7103589,
+    "op": -30696494,
+    "sga": 29141866,
+    "inventory": 21206288
+   },
+   "3": {
+    "revenue": 6277007,
+    "op": -37832689,
+    "sga": 44109696,
+    "inventory": 15430825
+   },
+   "4": {
+    "revenue": 10215103,
+    "op": -48025250,
+    "sga": 39014649,
+    "inventory": 19901848
+   }
+  },
+  "2026": {
+   "3": {
+    "revenue": 7459096,
+    "op": -49094315,
+    "sga": 39358921,
+    "inventory": 23485269
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 7,
+   "revenue": 0,
+   "op": -13,
+   "sga": 13
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 6,
+   "revenue": 0,
+   "op": -14,
+   "sga": 14
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 9,
+   "revenue": 0,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 5,
+   "revenue": 0,
+   "op": -16,
+   "sga": 16
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 14,
+   "revenue": 2,
+   "op": -11,
+   "sga": 13
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 13,
+   "revenue": 2,
+   "op": -15,
+   "sga": 18
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 6,
+   "revenue": -3,
+   "op": -13,
+   "sga": 10
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 13,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 22,
+   "revenue": 2,
+   "op": -18,
+   "sga": 18
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 21,
+   "revenue": 5,
+   "op": -13,
+   "sga": 12
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 15,
+   "revenue": -1,
+   "op": -7,
+   "sga": 15
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 20,
+   "revenue": 4,
+   "op": -10,
+   "sga": -5
+  },
+  {
+   "label": "2026.3분기",
+   "inventory": 23,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -53,
+   "sga": 53,
+   "inventory": 5
+  },
+  {
+   "year": 2024,
+   "revenue": 1,
+   "op": -47,
+   "sga": 48,
+   "inventory": 13
+  },
+  {
+   "year": 2025,
+   "revenue": 10,
+   "op": -48,
+   "sga": 39,
+   "inventory": 20
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:42:40"
+}

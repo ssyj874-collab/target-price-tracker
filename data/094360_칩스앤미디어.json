@@ -1,0 +1,211 @@
+{
+ "corp_code": "00579971",
+ "corp_name": "칩스앤미디어",
+ "stock_code": "094360",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 6486814773,
+    "op": 1554070223,
+    "sga": 4932744550,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13279181574,
+    "op": 3432900681,
+    "sga": 9846280893,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20232240180,
+    "op": 5452074236,
+    "sga": 14780165944,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27627400828,
+    "op": 7769441247,
+    "sga": 19857959581,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4908998591,
+    "op": 9378251,
+    "sga": 4899620340,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 10958939376,
+    "op": 637887587,
+    "sga": 10321051789,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17988729111,
+    "op": 2363130034,
+    "sga": 15625599077,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27075424194,
+    "op": 5281327227,
+    "sga": 21794096967,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5369889309,
+    "op": 203111488,
+    "sga": 5166777821,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11983168451,
+    "op": 1579490130,
+    "sga": 10403678321,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 18600506913,
+    "op": 3104528424,
+    "sga": 15495978489,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 28467135839,
+    "op": 6964476384,
+    "sga": 21502659455,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5779897129,
+    "op": 180528224,
+    "sga": 5599368905,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 6487,
+   "op": 1554,
+   "sga": 4933
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 6792,
+   "op": 1879,
+   "sga": 4914
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 6953,
+   "op": 2019,
+   "sga": 4934
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 7395,
+   "op": 2317,
+   "sga": 5078
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4909,
+   "op": 9,
+   "sga": 4900
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6050,
+   "op": 629,
+   "sga": 5421
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7030,
+   "op": 1725,
+   "sga": 5305
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9087,
+   "op": 2918,
+   "sga": 6168
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5370,
+   "op": 203,
+   "sga": 5167
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6613,
+   "op": 1376,
+   "sga": 5237
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6617,
+   "op": 1525,
+   "sga": 5092
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9867,
+   "op": 3860,
+   "sga": 6007
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5780,
+   "op": 181,
+   "sga": 5599
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 27627,
+   "op": 7769,
+   "sga": 19858,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 27075,
+   "op": 5281,
+   "sga": 21794,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 28467,
+   "op": 6964,
+   "sga": 21503,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:15:33"
+}

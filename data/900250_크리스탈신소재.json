@@ -1,0 +1,211 @@
+{
+ "corp_code": "01107665",
+ "corp_name": "크리스탈신소재",
+ "stock_code": "900250",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 84019794,
+    "op": 19882124,
+    "sga": 16735356,
+    "inventory": 45095988
+   },
+   "2": {
+    "revenue": 212029408,
+    "op": 60634786,
+    "sga": 26855054,
+    "inventory": 39973740
+   },
+   "3": {
+    "revenue": 344328988,
+    "op": 94795335,
+    "sga": 41471356,
+    "inventory": 37493152
+   },
+   "4": {
+    "revenue": 446935129,
+    "op": 126216500,
+    "sga": 61222159,
+    "inventory": 36624888
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 110333406,
+    "op": 24751770,
+    "sga": 16649199,
+    "inventory": 51748647
+   },
+   "2": {
+    "revenue": 232851938,
+    "op": 47567228,
+    "sga": 35804520,
+    "inventory": 34406823
+   },
+   "3": {
+    "revenue": 372371456,
+    "op": 76085229,
+    "sga": 55073947,
+    "inventory": 35023572
+   },
+   "4": {
+    "revenue": 518897047,
+    "op": 99577615,
+    "sga": 75384350,
+    "inventory": 48044186
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 112775664,
+    "op": 13119831,
+    "sga": 16609442,
+    "inventory": 60788547
+   },
+   "2": {
+    "revenue": 260583251,
+    "op": 42855330,
+    "sga": 33420616,
+    "inventory": 116882683
+   },
+   "3": {
+    "revenue": 402501587,
+    "op": 65393986,
+    "sga": 51226750,
+    "inventory": 203498458
+   },
+   "4": {
+    "revenue": 353228450,
+    "op": 54183226,
+    "sga": 52728187,
+    "inventory": 180955418
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 54828826,
+    "op": 2597416,
+    "sga": 9218715,
+    "inventory": 175616972
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 45,
+   "revenue": 84,
+   "op": 20,
+   "sga": 17
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 40,
+   "revenue": 128,
+   "op": 41,
+   "sga": 10
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 37,
+   "revenue": 132,
+   "op": 34,
+   "sga": 15
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 37,
+   "revenue": 103,
+   "op": 31,
+   "sga": 20
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 52,
+   "revenue": 110,
+   "op": 25,
+   "sga": 17
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 34,
+   "revenue": 123,
+   "op": 23,
+   "sga": 19
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 35,
+   "revenue": 140,
+   "op": 29,
+   "sga": 19
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 48,
+   "revenue": 147,
+   "op": 23,
+   "sga": 20
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 61,
+   "revenue": 113,
+   "op": 13,
+   "sga": 17
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 117,
+   "revenue": 148,
+   "op": 30,
+   "sga": 17
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 203,
+   "revenue": 142,
+   "op": 23,
+   "sga": 18
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 181,
+   "revenue": -49,
+   "op": -11,
+   "sga": 2
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 176,
+   "revenue": 55,
+   "op": 3,
+   "sga": 9
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 447,
+   "op": 126,
+   "sga": 61,
+   "inventory": 37
+  },
+  {
+   "year": 2024,
+   "revenue": 519,
+   "op": 100,
+   "sga": 75,
+   "inventory": 48
+  },
+  {
+   "year": 2025,
+   "revenue": 353,
+   "op": 54,
+   "sga": 53,
+   "inventory": 181
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:28:08"
+}

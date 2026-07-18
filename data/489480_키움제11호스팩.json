@@ -1,0 +1,111 @@
+{
+ "corp_code": "01873272",
+ "corp_name": "키움제11호스팩",
+ "stock_code": "489480",
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -21705380,
+    "sga": 21705380,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -5803578,
+    "sga": 5803578,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -19003818,
+    "sga": 19003818,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -19678658,
+    "sga": 19678658,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -20343658,
+    "sga": 20343658,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -5924300,
+    "sga": 5924300,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -13,
+   "sga": 13
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1,
+   "sga": 1
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -1,
+   "sga": 1
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -22,
+   "sga": 22,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -20,
+   "sga": 20,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:28:57"
+}

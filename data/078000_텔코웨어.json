@@ -1,0 +1,211 @@
+{
+ "corp_code": "00361488",
+ "corp_name": "텔코웨어",
+ "stock_code": "078000",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5584916342,
+    "op": -1783748826,
+    "sga": 3664539398,
+    "inventory": 428419000
+   },
+   "2": {
+    "revenue": 15941178364,
+    "op": 870044737,
+    "sga": 6973230517,
+    "inventory": 428419000
+   },
+   "3": {
+    "revenue": 25798604514,
+    "op": 1019760133,
+    "sga": 10294513469,
+    "inventory": 85524000
+   },
+   "4": {
+    "revenue": 40637609678,
+    "op": 3042871954,
+    "sga": 15432191869,
+    "inventory": 0
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7021509420,
+    "op": -2203010963,
+    "sga": 4144344817,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 15943018632,
+    "op": -2742619597,
+    "sga": 7689443851,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23464301419,
+    "op": -3622394103,
+    "sga": 11185998837,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 44852925328,
+    "op": 3375021568,
+    "sga": 16722955997,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6373230111,
+    "op": -1816402622,
+    "sga": 3731439908,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12489575383,
+    "op": -3206797624,
+    "sga": 7240617281,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 19625581824,
+    "op": -3236775820,
+    "sga": 10209677982,
+    "inventory": 633196000
+   },
+   "4": {
+    "revenue": 38351279931,
+    "op": 3285832222,
+    "sga": 15649355085,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6823209103,
+    "op": -1350297002,
+    "sga": 3563750286,
+    "inventory": 110010000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 428,
+   "revenue": 5585,
+   "op": -1784,
+   "sga": 3665
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 428,
+   "revenue": 10356,
+   "op": 2654,
+   "sga": 3309
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 86,
+   "revenue": 9857,
+   "op": 150,
+   "sga": 3321
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 0,
+   "revenue": 14839,
+   "op": 2023,
+   "sga": 5138
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 7022,
+   "op": -2203,
+   "sga": 4144
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 8922,
+   "op": -540,
+   "sga": 3545
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7521,
+   "op": -880,
+   "sga": 3497
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 21389,
+   "op": 6997,
+   "sga": 5537
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6373,
+   "op": -1816,
+   "sga": 3731
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6116,
+   "op": -1390,
+   "sga": 3509
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 633,
+   "revenue": 7136,
+   "op": -30,
+   "sga": 2969
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 18726,
+   "op": 6523,
+   "sga": 5440
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 110,
+   "revenue": 6823,
+   "op": -1350,
+   "sga": 3564
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 40638,
+   "op": 3043,
+   "sga": 15432,
+   "inventory": 0
+  },
+  {
+   "year": 2024,
+   "revenue": 44853,
+   "op": 3375,
+   "sga": 16723,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 38351,
+   "op": 3286,
+   "sga": 15649,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:31:42"
+}

@@ -1,0 +1,42 @@
+{
+ "corp_code": "01957282",
+ "corp_name": "테라뷰",
+ "stock_code": "950250",
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 1794087,
+    "op": -1894820,
+    "sga": 2885673,
+    "inventory": 1877582
+   }
+  },
+  "2026": {
+   "3": {
+    "revenue": 3064086,
+    "op": -3233839,
+    "sga": 4859656,
+    "inventory": 1853879
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 2,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.3분기",
+   "inventory": 2,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:31:02"
+}

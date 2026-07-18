@@ -1,0 +1,185 @@
+{
+ "corp_code": "01130849",
+ "corp_name": "파라택시스이더리움",
+ "stock_code": "290560",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 5979281975,
+    "op": 523488460,
+    "sga": 3439675433,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10459352357,
+    "op": 1533812236,
+    "sga": 4996257866,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1803101439,
+    "op": -321908415,
+    "sga": 1349855448,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4336380731,
+    "op": 89474753,
+    "sga": 2546270251,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6834464935,
+    "op": 413962974,
+    "sga": 3727236629,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11825525641,
+    "op": 2381138061,
+    "sga": 5336242690,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1984452540,
+    "op": -321516846,
+    "sga": 1381654333,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 5156943616,
+    "op": 406413763,
+    "sga": 2741835102,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8126249507,
+    "op": 1230431631,
+    "sga": 3882867539,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13997153284,
+    "op": 3631464763,
+    "sga": 5564064237,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2698576679,
+    "op": -307738131,
+    "sga": 1689201258,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 4480,
+   "op": 1010,
+   "sga": 1557
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1803,
+   "op": -322,
+   "sga": 1350
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 2533,
+   "op": 411,
+   "sga": 1196
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2498,
+   "op": 324,
+   "sga": 1181
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 4991,
+   "op": 1967,
+   "sga": 1609
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1984,
+   "op": -322,
+   "sga": 1382
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3172,
+   "op": 728,
+   "sga": 1360
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 2969,
+   "op": 824,
+   "sga": 1141
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5871,
+   "op": 2401,
+   "sga": 1681
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2699,
+   "op": -308,
+   "sga": 1689
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 10459,
+   "op": 1534,
+   "sga": 4996,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 11826,
+   "op": 2381,
+   "sga": 5336,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 13997,
+   "op": 3631,
+   "sga": 5564,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:35:43"
+}

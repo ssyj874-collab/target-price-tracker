@@ -1,0 +1,211 @@
+{
+ "corp_code": "00608699",
+ "corp_name": "탑코미디어",
+ "stock_code": "134580",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 6819235513,
+    "op": -1012546670,
+    "sga": 5636590992,
+    "inventory": 1564952016
+   },
+   "2": {
+    "revenue": 11156104274,
+    "op": -7615945443,
+    "sga": 14993887061,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 14048560510,
+    "op": -2955516195,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 19178342271,
+    "op": -2653050366,
+    "sga": 21831392637,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5516681787,
+    "op": -858057269,
+    "sga": 6374739056,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11035535470,
+    "op": -2731948404,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17348879241,
+    "op": -3683616277,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23340259807,
+    "op": -3726430593,
+    "sga": 27066690400,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5589817993,
+    "op": -2292440689,
+    "sga": 7882258682,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 20478612104,
+    "op": 686445398,
+    "sga": 19792166706,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 34390406905,
+    "op": 2354770800,
+    "sga": 32035636105,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 48604543452,
+    "op": 3670011557,
+    "sga": 44934531895,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 11879582201,
+    "op": -83531879,
+    "sga": 11963114080,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1565,
+   "revenue": 6819,
+   "op": -1013,
+   "sga": 5637
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 4337,
+   "op": -6603,
+   "sga": 9357
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 2892,
+   "op": 4660,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 5130,
+   "op": 302,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5517,
+   "op": -858,
+   "sga": 6375
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 5519,
+   "op": -1874,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 6313,
+   "op": -952,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5991,
+   "op": -43,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5590,
+   "op": -2292,
+   "sga": 7882
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 14889,
+   "op": 2979,
+   "sga": 11910
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 13912,
+   "op": 1668,
+   "sga": 12243
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 14214,
+   "op": 1315,
+   "sga": 12899
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 11880,
+   "op": -84,
+   "sga": 11963
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 19178,
+   "op": -2653,
+   "sga": 21831,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 23340,
+   "op": -3726,
+   "sga": 27067,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 48605,
+   "op": 3670,
+   "sga": 44935,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:29:47"
+}

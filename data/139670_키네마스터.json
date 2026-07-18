@@ -1,0 +1,211 @@
+{
+ "corp_code": "00535375",
+ "corp_name": "키네마스터",
+ "stock_code": "139670",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 4701795039,
+    "op": 976066673,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9063140385,
+    "op": 1752928220,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12981915507,
+    "op": 2171748723,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16773679386,
+    "op": 1861579740,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3274332417,
+    "op": 50977008,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6743183363,
+    "op": 337114780,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 9978235468,
+    "op": 431445061,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13333948574,
+    "op": 592222129,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3149991064,
+    "op": 281047872,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6244490319,
+    "op": 402386131,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 9245832654,
+    "op": 697743637,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12259444646,
+    "op": 925499754,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2834559805,
+    "op": 323506396,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 4702,
+   "op": 976,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 4361,
+   "op": 777,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 3919,
+   "op": 419,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 3792,
+   "op": -310,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3274,
+   "op": 51,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 3469,
+   "op": 286,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3235,
+   "op": 94,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3356,
+   "op": 161,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3150,
+   "op": 281,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3094,
+   "op": 121,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 3001,
+   "op": 295,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 3014,
+   "op": 228,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2835,
+   "op": 324,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 16774,
+   "op": 1862,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 13334,
+   "op": 592,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 12259,
+   "op": 925,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:28:34"
+}

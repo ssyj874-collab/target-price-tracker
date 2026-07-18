@@ -1,0 +1,211 @@
+{
+ "corp_code": "00361169",
+ "corp_name": "한국전자인증",
+ "stock_code": "041460",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 10437440978,
+    "op": 1411696250,
+    "sga": null,
+    "inventory": 135497325
+   },
+   "2": {
+    "revenue": 19811274035,
+    "op": 2166744107,
+    "sga": null,
+    "inventory": 135291037
+   },
+   "3": {
+    "revenue": 29354158456,
+    "op": 2916765441,
+    "sga": null,
+    "inventory": 159875013
+   },
+   "4": {
+    "revenue": 38340871020,
+    "op": 3140593441,
+    "sga": null,
+    "inventory": 1248139
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9569596031,
+    "op": 1132725142,
+    "sga": null,
+    "inventory": 1303702
+   },
+   "2": {
+    "revenue": 18626429735,
+    "op": 1833014542,
+    "sga": null,
+    "inventory": 1344746
+   },
+   "3": {
+    "revenue": 28319881163,
+    "op": 2495899882,
+    "sga": null,
+    "inventory": 1277373
+   },
+   "4": {
+    "revenue": 37086529359,
+    "op": 4724845238,
+    "sga": null,
+    "inventory": 1422960
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 9485764323,
+    "op": 2075665008,
+    "sga": null,
+    "inventory": 1419572
+   },
+   "2": {
+    "revenue": 18852555924,
+    "op": 3320836496,
+    "sga": null,
+    "inventory": 1312995
+   },
+   "3": {
+    "revenue": 27516256971,
+    "op": 5142697016,
+    "sga": null,
+    "inventory": 1357330
+   },
+   "4": {
+    "revenue": 36746209552,
+    "op": 6726887202,
+    "sga": null,
+    "inventory": 1388983
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10979568051,
+    "op": 2524509649,
+    "sga": null,
+    "inventory": 1464971
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 135,
+   "revenue": 10437,
+   "op": 1412,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 135,
+   "revenue": 9374,
+   "op": 755,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 160,
+   "revenue": 9543,
+   "op": 750,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1,
+   "revenue": 8987,
+   "op": 224,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1,
+   "revenue": 9570,
+   "op": 1133,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1,
+   "revenue": 9057,
+   "op": 700,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1,
+   "revenue": 9693,
+   "op": 663,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1,
+   "revenue": 8767,
+   "op": 2229,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1,
+   "revenue": 9486,
+   "op": 2076,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1,
+   "revenue": 9367,
+   "op": 1245,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1,
+   "revenue": 8664,
+   "op": 1822,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1,
+   "revenue": 9230,
+   "op": 1584,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1,
+   "revenue": 10980,
+   "op": 2525,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 38341,
+   "op": 3141,
+   "sga": null,
+   "inventory": 1
+  },
+  {
+   "year": 2024,
+   "revenue": 37087,
+   "op": 4725,
+   "sga": null,
+   "inventory": 1
+  },
+  {
+   "year": 2025,
+   "revenue": 36746,
+   "op": 6727,
+   "sga": null,
+   "inventory": 1
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:50:39"
+}

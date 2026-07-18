@@ -1,0 +1,185 @@
+{
+ "corp_code": "01514005",
+ "corp_name": "크라우드웍스",
+ "stock_code": "355390",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 17903977364,
+    "op": -1360718740,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23978460238,
+    "op": -1785822511,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2656299880,
+    "op": -3003466628,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4487845338,
+    "op": -7333063250,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6716717366,
+    "op": -11126198792,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12013503460,
+    "op": -11726095494,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1899866689,
+    "op": -2772517827,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3894092901,
+    "op": -5781597904,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6246582994,
+    "op": -8789706539,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10484246161,
+    "op": -13366222293,
+    "sga": null,
+    "inventory": 12378910
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2849341130,
+    "op": -2160737664,
+    "sga": null,
+    "inventory": 51633129
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 6074,
+   "op": -425,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 2656,
+   "op": -3003,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1832,
+   "op": -4330,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2229,
+   "op": -3793,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5297,
+   "op": -600,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1900,
+   "op": -2773,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1994,
+   "op": -3009,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 2352,
+   "op": -3008,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 12,
+   "revenue": 4238,
+   "op": -4577,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 52,
+   "revenue": 2849,
+   "op": -2161,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 23978,
+   "op": -1786,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 12014,
+   "op": -11726,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 10484,
+   "op": -13366,
+   "sga": null,
+   "inventory": 12
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:27:34"
+}

@@ -1,0 +1,172 @@
+{
+ "corp_code": "01492651",
+ "corp_name": "큐로셀",
+ "stock_code": "372320",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 0,
+    "op": -31129752767,
+    "sga": 31129752767,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -9007188322,
+    "sga": 9007188322,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -16541826940,
+    "sga": 16541826940,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -26576978856,
+    "sga": 26576978856,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -36618932031,
+    "sga": 36618932031,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -6236925965,
+    "sga": 6236925965,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -18383421565,
+    "sga": 18383421565,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -27569651400,
+    "sga": 27569651400,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -36274346153,
+    "sga": 36274346153,
+    "inventory": 1681705621
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -7795746512,
+    "sga": 7795746512,
+    "inventory": 1699795484
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9007,
+   "sga": 9007
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7535,
+   "sga": 7535
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10035,
+   "sga": 10035
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10042,
+   "sga": 10042
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6237,
+   "sga": 6237
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -12146,
+   "sga": 12146
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9186,
+   "sga": 9186
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1682,
+   "revenue": 0,
+   "op": -8705,
+   "sga": 8705
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1700,
+   "revenue": 0,
+   "op": -7796,
+   "sga": 7796
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -31130,
+   "sga": 31130,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -36619,
+   "sga": 36619,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -36274,
+   "sga": 36274,
+   "inventory": 1682
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:26:43"
+}

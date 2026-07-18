@@ -1,0 +1,211 @@
+{
+ "corp_code": "01290381",
+ "corp_name": "피엔케이피부임상연구센타",
+ "stock_code": "347740",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3528393048,
+    "op": 516305451,
+    "sga": 1399300203,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6562393749,
+    "op": 373047637,
+    "sga": 2790593646,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 9891887707,
+    "op": 433325959,
+    "sga": 4274638148,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14842604136,
+    "op": 1378893865,
+    "sga": 5820119781,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4185845508,
+    "op": 653990420,
+    "sga": 1532297190,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8002620864,
+    "op": 1111792385,
+    "sga": 2858568828,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12720233725,
+    "op": 1842685061,
+    "sga": 4284466955,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 17846810010,
+    "op": 2582128221,
+    "sga": 5893667215,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6460264130,
+    "op": 1910961240,
+    "sga": 1492006799,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11949447907,
+    "op": 2735963225,
+    "sga": 3088133611,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17003980535,
+    "op": 3187729472,
+    "sga": 4763002657,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22783129250,
+    "op": 3940175380,
+    "sga": 6771722946,
+    "inventory": 59130000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6238495981,
+    "op": 958564842,
+    "sga": 2023520444,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 3528,
+   "op": 516,
+   "sga": 1399
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 3034,
+   "op": -143,
+   "sga": 1391
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 3329,
+   "op": 60,
+   "sga": 1484
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 4951,
+   "op": 946,
+   "sga": 1545
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4186,
+   "op": 654,
+   "sga": 1532
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 3817,
+   "op": 458,
+   "sga": 1326
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4718,
+   "op": 731,
+   "sga": 1426
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5127,
+   "op": 739,
+   "sga": 1609
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6460,
+   "op": 1911,
+   "sga": 1492
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5489,
+   "op": 825,
+   "sga": 1596
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5055,
+   "op": 452,
+   "sga": 1675
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 59,
+   "revenue": 5779,
+   "op": 752,
+   "sga": 2009
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 6238,
+   "op": 959,
+   "sga": 2024
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 14843,
+   "op": 1379,
+   "sga": 5820,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 17847,
+   "op": 2582,
+   "sga": 5894,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 22783,
+   "op": 3940,
+   "sga": 6772,
+   "inventory": 59
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:45:10"
+}

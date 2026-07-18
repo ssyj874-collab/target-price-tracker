@@ -1,0 +1,172 @@
+{
+ "corp_code": "01497124",
+ "corp_name": "캡스톤파트너스",
+ "stock_code": "452300",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 9508927375,
+    "op": -2432527988,
+    "sga": 4784940862,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1902996511,
+    "op": 656975833,
+    "sga": 1075499575,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3499179183,
+    "op": 892319480,
+    "sga": 2183001361,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 5080351818,
+    "op": 1248672850,
+    "sga": 3253262385,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9692753598,
+    "op": 2195664243,
+    "sga": 4541223899,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1494597316,
+    "op": 305610199,
+    "sga": 980487563,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3327693600,
+    "op": 756349746,
+    "sga": 1998803134,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6228021652,
+    "op": 2472734293,
+    "sga": 3074555382,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 7473416657,
+    "op": 2339031606,
+    "sga": 3776205462,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1544589032,
+    "op": 387173051,
+    "sga": 971210306,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1903,
+   "op": 657,
+   "sga": 1075
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1596,
+   "op": 235,
+   "sga": 1108
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1581,
+   "op": 356,
+   "sga": 1070
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 4612,
+   "op": 947,
+   "sga": 1288
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1495,
+   "op": 306,
+   "sga": 980
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1833,
+   "op": 451,
+   "sga": 1018
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 2900,
+   "op": 1716,
+   "sga": 1076
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1245,
+   "op": -134,
+   "sga": 702
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1545,
+   "op": 387,
+   "sga": 971
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 9509,
+   "op": -2433,
+   "sga": 4785,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 9693,
+   "op": 2196,
+   "sga": 4541,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 7473,
+   "op": 2339,
+   "sga": 3776,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:16:52"
+}

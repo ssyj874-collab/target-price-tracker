@@ -1,0 +1,211 @@
+{
+ "corp_code": "00596260",
+ "corp_name": "투비소프트",
+ "stock_code": "079970",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 12570353086,
+    "op": -1627143079,
+    "sga": 7084992554,
+    "inventory": 32983373981
+   },
+   "2": {
+    "revenue": 22507515591,
+    "op": -2387383444,
+    "sga": 13778041992,
+    "inventory": 31087039300
+   },
+   "3": {
+    "revenue": 32216100282,
+    "op": -4155380148,
+    "sga": 20236287509,
+    "inventory": 28625849993
+   },
+   "4": {
+    "revenue": 43016191966,
+    "op": -3482953259,
+    "sga": 25306719981,
+    "inventory": 24958690104
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7401945052,
+    "op": -2421058422,
+    "sga": 6085805723,
+    "inventory": 25383204895
+   },
+   "2": {
+    "revenue": 16083275294,
+    "op": -3377537559,
+    "sga": 12452764301,
+    "inventory": 1881180113
+   },
+   "3": {
+    "revenue": 25827441390,
+    "op": -4272019307,
+    "sga": 18301070094,
+    "inventory": 18168682121
+   },
+   "4": {
+    "revenue": 28125456516,
+    "op": -1978719555,
+    "sga": 21031257529,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7260997424,
+    "op": -814918453,
+    "sga": 5579015846,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13679282474,
+    "op": -744662987,
+    "sga": 9546906338,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 19780946881,
+    "op": -374600986,
+    "sga": 13391695050,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26761382722,
+    "op": 743202292,
+    "sga": 17097126491,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5848030013,
+    "op": -34741602,
+    "sga": 4079714663,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 32983,
+   "revenue": 12570,
+   "op": -1627,
+   "sga": 7085
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 31087,
+   "revenue": 9937,
+   "op": -760,
+   "sga": 6693
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 28626,
+   "revenue": 9709,
+   "op": -1768,
+   "sga": 6458
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 24959,
+   "revenue": 10800,
+   "op": 672,
+   "sga": 5070
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 25383,
+   "revenue": 7402,
+   "op": -2421,
+   "sga": 6086
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1881,
+   "revenue": 8681,
+   "op": -956,
+   "sga": 6367
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 18169,
+   "revenue": 9744,
+   "op": -894,
+   "sga": 5848
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2298,
+   "op": 2293,
+   "sga": 2730
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7261,
+   "op": -815,
+   "sga": 5579
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6418,
+   "op": 70,
+   "sga": 3968
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6102,
+   "op": 370,
+   "sga": 3845
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6980,
+   "op": 1118,
+   "sga": 3705
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5848,
+   "op": -35,
+   "sga": 4080
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 43016,
+   "op": -3483,
+   "sga": 25307,
+   "inventory": 24959
+  },
+  {
+   "year": 2024,
+   "revenue": 28125,
+   "op": -1979,
+   "sga": 21031,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 26761,
+   "op": 743,
+   "sga": 17097,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:32:30"
+}

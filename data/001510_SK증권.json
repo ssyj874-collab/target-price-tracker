@@ -2,8 +2,184 @@
  "corp_code": "00131850",
  "corp_name": "SK증권",
  "stock_code": "001510",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:28:30"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": 37035858814,
+    "sga": 171125670793,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 13097857611,
+    "sga": 249164616988,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": -13905822963,
+    "sga": 67323910253,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -75135692079,
+    "sga": 125895337492,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -76410357799,
+    "sga": 189557104118,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -107876388585,
+    "sga": 256171588815,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 534918763,
+    "sga": 60949763950,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 5211656994,
+    "sga": 116844575596,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 13471831072,
+    "sga": 176369392410,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 7785938575,
+    "sga": 297427534549,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 28703124621,
+    "sga": 77627508275,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -23938,
+   "sga": 78039
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -13906,
+   "sga": 67324
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -61230,
+   "sga": 58571
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -1275,
+   "sga": 63662
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -31466,
+   "sga": 66614
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 535,
+   "sga": 60950
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 4677,
+   "sga": 55895
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 8260,
+   "sga": 59525
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5686,
+   "sga": 121058
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 28703,
+   "sga": 77628
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": 13098,
+   "sga": 249165,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -107876,
+   "sga": 256172,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 7786,
+   "sga": 297428,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-18T11:13:31",
+ "fs_div": "CFS"
 }

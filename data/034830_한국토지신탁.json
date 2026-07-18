@@ -1,0 +1,185 @@
+{
+ "corp_code": "00233653",
+ "corp_name": "한국토지신탁",
+ "stock_code": "034830",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 136388638725,
+    "op": 14871800187,
+    "sga": -59804183721,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 270086082704,
+    "op": 31235368989,
+    "sga": -87289641416,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 51324843393,
+    "op": 7281794759,
+    "sga": 20852637754,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 95805967019,
+    "op": 19684795502,
+    "sga": 40197042652,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 138146023491,
+    "op": 21825918227,
+    "sga": -61496453043,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 236337804592,
+    "op": 33943466106,
+    "sga": 84703755255,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 37241508835,
+    "op": -4619277141,
+    "sga": 21592990625,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 77186468545,
+    "op": -596206463,
+    "sga": 40578008636,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 124697403314,
+    "op": -15574445896,
+    "sga": 65001710147,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 184359776341,
+    "op": -20879502584,
+    "sga": 92063796200,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 43690820385,
+    "op": 478580636,
+    "sga": 21469841042,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 133697,
+   "op": 16364,
+   "sga": -27485
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 51325,
+   "op": 7282,
+   "sga": 20853
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 44481,
+   "op": 12403,
+   "sga": 19344
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 42340,
+   "op": 2141,
+   "sga": -101693
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 98192,
+   "op": 12118,
+   "sga": 146200
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 37242,
+   "op": -4619,
+   "sga": 21593
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 39945,
+   "op": 4023,
+   "sga": 18985
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 47511,
+   "op": -14978,
+   "sga": 24424
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 59662,
+   "op": -5305,
+   "sga": 27062
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 43691,
+   "op": 479,
+   "sga": 21470
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 270086,
+   "op": 31235,
+   "sga": -87290,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 236338,
+   "op": 33943,
+   "sga": 84704,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 184360,
+   "op": -20880,
+   "sga": 92064,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:52:16"
+}

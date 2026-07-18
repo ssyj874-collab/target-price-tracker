@@ -1,0 +1,211 @@
+{
+ "corp_code": "00161426",
+ "corp_name": "한미사이언스",
+ "stock_code": "008930",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 291262980224,
+    "op": 31338502146,
+    "sga": null,
+    "inventory": 110940965887
+   },
+   "2": {
+    "revenue": 606619682291,
+    "op": 57779151916,
+    "sga": null,
+    "inventory": 85234133100
+   },
+   "3": {
+    "revenue": 915976678707,
+    "op": 93530270013,
+    "sga": null,
+    "inventory": 88796554425
+   },
+   "4": {
+    "revenue": 1247906379068,
+    "op": 124468680998,
+    "sga": null,
+    "inventory": 104868807910
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 320152331872,
+    "op": 37303322942,
+    "sga": null,
+    "inventory": 105990858870
+   },
+   "2": {
+    "revenue": 629248185005,
+    "op": 63791855243,
+    "sga": null,
+    "inventory": 109387359511
+   },
+   "3": {
+    "revenue": 951722446041,
+    "op": 86226662320,
+    "sga": null,
+    "inventory": 107066897642
+   },
+   "4": {
+    "revenue": 1283432295647,
+    "op": 98867912225,
+    "sga": null,
+    "inventory": 108730608243
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 332150251048,
+    "op": 27066600134,
+    "sga": null,
+    "inventory": 110490365617
+   },
+   "2": {
+    "revenue": 670419185150,
+    "op": 61678754042,
+    "sga": null,
+    "inventory": 113104861005
+   },
+   "3": {
+    "revenue": 1012931165519,
+    "op": 100980600436,
+    "sga": null,
+    "inventory": 112891822467
+   },
+   "4": {
+    "revenue": 1356957532846,
+    "op": 138727168534,
+    "sga": null,
+    "inventory": 122541716918
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 353702972178,
+    "op": 33561995850,
+    "sga": null,
+    "inventory": 119547918387
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 110941,
+   "revenue": 291263,
+   "op": 31339,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 85234,
+   "revenue": 315357,
+   "op": 26441,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 88797,
+   "revenue": 309357,
+   "op": 35751,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 104869,
+   "revenue": 331930,
+   "op": 30938,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 105991,
+   "revenue": 320152,
+   "op": 37303,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 109387,
+   "revenue": 309096,
+   "op": 26489,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 107067,
+   "revenue": 322474,
+   "op": 22435,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 108731,
+   "revenue": 331710,
+   "op": 12641,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 110490,
+   "revenue": 332150,
+   "op": 27067,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 113105,
+   "revenue": 338269,
+   "op": 34612,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 112892,
+   "revenue": 342512,
+   "op": 39302,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 122542,
+   "revenue": 344026,
+   "op": 37747,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 119548,
+   "revenue": 353703,
+   "op": 33562,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1247906,
+   "op": 124469,
+   "sga": null,
+   "inventory": 104869
+  },
+  {
+   "year": 2024,
+   "revenue": 1283432,
+   "op": 98868,
+   "sga": null,
+   "inventory": 108731
+  },
+  {
+   "year": 2025,
+   "revenue": 1356958,
+   "op": 138727,
+   "sga": null,
+   "inventory": 122542
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:53:44"
+}

@@ -1,0 +1,211 @@
+{
+ "corp_code": "00490179",
+ "corp_name": "플랜티넷",
+ "stock_code": "075130",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 9696717776,
+    "op": 585348290,
+    "sga": null,
+    "inventory": 1399424847
+   },
+   "2": {
+    "revenue": 18855732905,
+    "op": 816103374,
+    "sga": null,
+    "inventory": 1458743056
+   },
+   "3": {
+    "revenue": 26891006733,
+    "op": 867699971,
+    "sga": null,
+    "inventory": 1507325980
+   },
+   "4": {
+    "revenue": 33066451624,
+    "op": 1271312159,
+    "sga": null,
+    "inventory": 1023389699
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7542792055,
+    "op": -76841627,
+    "sga": null,
+    "inventory": 902409273
+   },
+   "2": {
+    "revenue": 16660513286,
+    "op": 854484893,
+    "sga": null,
+    "inventory": 865648099
+   },
+   "3": {
+    "revenue": 26381821570,
+    "op": 1726112804,
+    "sga": null,
+    "inventory": 980758582
+   },
+   "4": {
+    "revenue": 36676622317,
+    "op": 2139964516,
+    "sga": null,
+    "inventory": 911652554
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 13244664114,
+    "op": 3360231987,
+    "sga": null,
+    "inventory": 267173304
+   },
+   "2": {
+    "revenue": 25186361829,
+    "op": 3492876091,
+    "sga": null,
+    "inventory": 933479119
+   },
+   "3": {
+    "revenue": 36032548201,
+    "op": 3410844482,
+    "sga": null,
+    "inventory": 2833378399
+   },
+   "4": {
+    "revenue": 45612921206,
+    "op": 3260980299,
+    "sga": null,
+    "inventory": 1591779645
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10552973793,
+    "op": 475549613,
+    "sga": null,
+    "inventory": 138760866
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1399,
+   "revenue": 9697,
+   "op": 585,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1459,
+   "revenue": 9159,
+   "op": 231,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1507,
+   "revenue": 8035,
+   "op": 52,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1023,
+   "revenue": 6175,
+   "op": 404,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 902,
+   "revenue": 7543,
+   "op": -77,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 866,
+   "revenue": 9118,
+   "op": 931,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 981,
+   "revenue": 9721,
+   "op": 872,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 912,
+   "revenue": 10295,
+   "op": 414,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 267,
+   "revenue": 13245,
+   "op": 3360,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 933,
+   "revenue": 11942,
+   "op": 133,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2833,
+   "revenue": 10846,
+   "op": -82,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1592,
+   "revenue": 9580,
+   "op": -150,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 139,
+   "revenue": 10553,
+   "op": 476,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 33066,
+   "op": 1271,
+   "sga": null,
+   "inventory": 1023
+  },
+  {
+   "year": 2024,
+   "revenue": 36677,
+   "op": 2140,
+   "sga": null,
+   "inventory": 912
+  },
+  {
+   "year": 2025,
+   "revenue": 45613,
+   "op": 3261,
+   "sga": null,
+   "inventory": 1592
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:43:40"
+}

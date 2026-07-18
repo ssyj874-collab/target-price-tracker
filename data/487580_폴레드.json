@@ -1,0 +1,27 @@
+{
+ "corp_code": "01565364",
+ "corp_name": "폴레드",
+ "stock_code": "487580",
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 25335946661,
+    "op": 4500035538,
+    "sga": 8250002687,
+    "inventory": 8375380913
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": 8375,
+   "revenue": 25336,
+   "op": 4500,
+   "sga": 8250
+  }
+ ],
+ "annual": [],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:41:14"
+}

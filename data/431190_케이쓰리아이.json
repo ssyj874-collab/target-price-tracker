@@ -1,0 +1,124 @@
+{
+ "corp_code": "01689266",
+ "corp_name": "케이쓰리아이",
+ "stock_code": "431190",
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 8380473478,
+    "op": -2939988529,
+    "sga": 4101234149,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13901787278,
+    "op": -3724291749,
+    "sga": 5896875727,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3193469466,
+    "op": -1123686003,
+    "sga": 1784171275,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4952306294,
+    "op": -2667307906,
+    "sga": 3739899202,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8497922383,
+    "op": -3075090062,
+    "sga": 5114804326,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14636322456,
+    "op": -2405940352,
+    "sga": 6587970082,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2434239794,
+    "op": -913676939,
+    "sga": 1962940907,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5521,
+   "op": -784,
+   "sga": 1796
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3193,
+   "op": -1124,
+   "sga": 1784
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1759,
+   "op": -1544,
+   "sga": 1956
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 3546,
+   "op": -408,
+   "sga": 1375
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6138,
+   "op": 669,
+   "sga": 1473
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2434,
+   "op": -914,
+   "sga": 1963
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 13902,
+   "op": -3724,
+   "sga": 5897,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 14636,
+   "op": -2406,
+   "sga": 6588,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:18:04"
+}

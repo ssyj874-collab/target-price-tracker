@@ -1,0 +1,185 @@
+{
+ "corp_code": "01495180",
+ "corp_name": "파로스아이바이오",
+ "stock_code": "388870",
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": -7660182223,
+    "sga": 7660182223,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -10116681013,
+    "sga": 10116681013,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": -3534831918,
+    "sga": 3534831918,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -6681295461,
+    "sga": 6681295461,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -9684906291,
+    "sga": 9684906291,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -12601090336,
+    "sga": 12601090336,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -3148282864,
+    "sga": 3148282864,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -5577937647,
+    "sga": 5577937647,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -8570959619,
+    "sga": 8570959619,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -11507092762,
+    "sga": 11507092762,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -2367121322,
+    "sga": 2367121322,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2456,
+   "sga": 2456
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3535,
+   "sga": 3535
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3146,
+   "sga": 3146
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3004,
+   "sga": 3004
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2916,
+   "sga": 2916
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3148,
+   "sga": 3148
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2430,
+   "sga": 2430
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2993,
+   "sga": 2993
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2936,
+   "sga": 2936
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2367,
+   "sga": 2367
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -10117,
+   "sga": 10117,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -12601,
+   "sga": 12601,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -11507,
+   "sga": 11507,
+   "inventory": null
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:35:58"
+}

@@ -1,0 +1,101 @@
+{
+ "corp_code": "01180118",
+ "corp_name": "코람코더원리츠",
+ "stock_code": "417310",
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 7139114940,
+    "op": 4776480578,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 7416432648,
+    "op": 5139930346,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 7567308893,
+    "op": 5096710047,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 8504770540,
+    "op": 5848803560,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 7139,
+   "op": 4776,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 7416,
+   "op": 5140,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 7567,
+   "op": 5097,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 8505,
+   "op": 5849,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:21:59"
+}

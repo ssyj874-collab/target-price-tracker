@@ -1,0 +1,211 @@
+{
+ "corp_code": "00601988",
+ "corp_name": "코난테크놀로지",
+ "stock_code": "402030",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 2142201511,
+    "op": -3183146864,
+    "sga": 2578322108,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4563811462,
+    "op": -7449098613,
+    "sga": 6708237835,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 7674748400,
+    "op": -12945350592,
+    "sga": 11315222045,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 24428255327,
+    "op": -10994514501,
+    "sga": 16020941170,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2572663244,
+    "op": -6220595303,
+    "sga": 5006610520,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8838471345,
+    "op": -10646762240,
+    "sga": 9929110863,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12489680521,
+    "op": -15418611420,
+    "sga": 14767605775,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26318506558,
+    "op": -14106433041,
+    "sga": 18998865727,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 4065594996,
+    "op": -3988860917,
+    "sga": 3902685427,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7455177299,
+    "op": -8440686313,
+    "sga": 7754833522,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23918380749,
+    "op": -9992765205,
+    "sga": 11352754605,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 33979970427,
+    "op": -9865474602,
+    "sga": 14822353443,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3875777255,
+    "op": -3987662563,
+    "sga": 3878516098,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 2142,
+   "op": -3183,
+   "sga": 2578
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 2422,
+   "op": -4266,
+   "sga": 4130
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 3111,
+   "op": -5496,
+   "sga": 4607
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 16754,
+   "op": 1951,
+   "sga": 4706
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 2573,
+   "op": -6221,
+   "sga": 5007
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6266,
+   "op": -4426,
+   "sga": 4923
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3651,
+   "op": -4772,
+   "sga": 4838
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 13829,
+   "op": 1312,
+   "sga": 4231
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 4066,
+   "op": -3989,
+   "sga": 3903
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3390,
+   "op": -4452,
+   "sga": 3852
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 16463,
+   "op": -1552,
+   "sga": 3598
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 10062,
+   "op": 127,
+   "sga": 3470
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3876,
+   "op": -3988,
+   "sga": 3879
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 24428,
+   "op": -10995,
+   "sga": 16021,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 26319,
+   "op": -14106,
+   "sga": 18999,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 33980,
+   "op": -9865,
+   "sga": 14822,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:21:33"
+}

@@ -1,0 +1,211 @@
+{
+ "corp_code": "01335930",
+ "corp_name": "티움바이오",
+ "stock_code": "321550",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 200180300,
+    "op": -9256805776,
+    "sga": 9456986076,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1167468251,
+    "op": -16978355965,
+    "sga": 18145824216,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2538056537,
+    "op": -23239418039,
+    "sga": 25777474576,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4898775191,
+    "op": -27832080130,
+    "sga": 32730855321,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1991732118,
+    "op": -4615565330,
+    "sga": 6607297448,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4178203236,
+    "op": -9102109440,
+    "sga": 13280312676,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 5309974123,
+    "op": -13489768286,
+    "sga": 18799742409,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 6792235001,
+    "op": -18699185300,
+    "sga": 25491420301,
+    "inventory": 356062525
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2106376698,
+    "op": -5345698865,
+    "sga": 5992973630,
+    "inventory": 398262589
+   },
+   "2": {
+    "revenue": 4719706663,
+    "op": -8840694951,
+    "sga": 10476039719,
+    "inventory": 502015386
+   },
+   "3": {
+    "revenue": 7840745390,
+    "op": -13360040576,
+    "sga": 16092266744,
+    "inventory": 461324742
+   },
+   "4": {
+    "revenue": 12288796652,
+    "op": -16146558840,
+    "sga": 21190859143,
+    "inventory": 324252332
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2950377447,
+    "op": -4538573473,
+    "sga": 5119707787,
+    "inventory": 413702982
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 200,
+   "op": -9257,
+   "sga": 9457
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 967,
+   "op": -7722,
+   "sga": 8689
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 1371,
+   "op": -6261,
+   "sga": 7632
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 2361,
+   "op": -4593,
+   "sga": 6953
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1992,
+   "op": -4616,
+   "sga": 6607
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 2186,
+   "op": -4487,
+   "sga": 6673
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1132,
+   "op": -4388,
+   "sga": 5519
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 356,
+   "revenue": 1482,
+   "op": -5209,
+   "sga": 6692
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 398,
+   "revenue": 2106,
+   "op": -5346,
+   "sga": 5993
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 502,
+   "revenue": 2613,
+   "op": -3495,
+   "sga": 4483
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 461,
+   "revenue": 3121,
+   "op": -4519,
+   "sga": 5616
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 324,
+   "revenue": 4448,
+   "op": -2787,
+   "sga": 5099
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 414,
+   "revenue": 2950,
+   "op": -4539,
+   "sga": 5120
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4899,
+   "op": -27832,
+   "sga": 32731,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 6792,
+   "op": -18699,
+   "sga": 25491,
+   "inventory": 356
+  },
+  {
+   "year": 2025,
+   "revenue": 12289,
+   "op": -16147,
+   "sga": 21191,
+   "inventory": 324
+  }
+ ],
+ "fs_div": "CFS",
+ "updated": "2026-07-18T11:34:41"
+}

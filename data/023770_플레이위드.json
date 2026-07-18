@@ -1,0 +1,211 @@
+{
+ "corp_code": "00138367",
+ "corp_name": "플레이위드",
+ "stock_code": "023770",
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1994955081,
+    "op": -2439753187,
+    "sga": 3676974419,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6642686219,
+    "op": -4794233231,
+    "sga": 9145763702,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16690903844,
+    "op": -4584158444,
+    "sga": 15746292149,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 28552255519,
+    "op": -6647064613,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 12722355877,
+    "op": 1638630968,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 18777215265,
+    "op": -1437235222,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 23497150507,
+    "op": -6454914728,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32307321526,
+    "op": -8532221284,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 7527177680,
+    "op": -2355469600,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 21136683550,
+    "op": -1601628506,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 29184994649,
+    "op": -1838032530,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 34657760135,
+    "op": -4682241152,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3690791544,
+    "op": -1809886879,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 1995,
+   "op": -2440,
+   "sga": 3677
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 4648,
+   "op": -2354,
+   "sga": 5469
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 10048,
+   "op": 210,
+   "sga": 6601
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 11861,
+   "op": -2063,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 12722,
+   "op": 1639,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6055,
+   "op": -3076,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4720,
+   "op": -5018,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 8810,
+   "op": -2077,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 7527,
+   "op": -2355,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 13610,
+   "op": 754,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8048,
+   "op": -236,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5473,
+   "op": -2844,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3691,
+   "op": -1810,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 28552,
+   "op": -6647,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 32307,
+   "op": -8532,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 34658,
+   "op": -4682,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:43:55"
+}

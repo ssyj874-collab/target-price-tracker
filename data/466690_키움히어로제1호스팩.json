@@ -1,0 +1,50 @@
+{
+ "corp_code": "01784677",
+ "corp_name": "키움히어로제1호스팩",
+ "stock_code": "466690",
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 0,
+    "op": -29718410,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -15916000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -16,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -30,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "fs_div": "OFS",
+ "updated": "2026-07-18T11:29:10"
+}
