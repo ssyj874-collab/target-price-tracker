@@ -2,8 +2,186 @@
  "corp_code": "00156859",
  "corp_name": "다올투자증권",
  "stock_code": "030210",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:54:53"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 1123691885045,
+    "op": -66728410342,
+    "sga": 211568531626,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1508370888138,
+    "op": -62004542741,
+    "sga": 266774316948,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 365071075047,
+    "op": 6502662815,
+    "sga": 68035451018,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 664787033375,
+    "op": -32436343398,
+    "sga": 131347590268,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 946252482957,
+    "op": -29958725506,
+    "sga": 190421122855,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1442566582864,
+    "op": -74930396986,
+    "sga": 250094073047,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 437161616100,
+    "op": 6014934002,
+    "sga": 63203781049,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 940345195766,
+    "op": 25586584402,
+    "sga": 134499711813,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1241317403872,
+    "op": 37101251580,
+    "sga": 199890892407,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1714450686727,
+    "op": 33723214189,
+    "sga": 264766560991,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 769062907717,
+    "op": 9184564102,
+    "sga": 75392167064,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 384679,
+   "op": 4724,
+   "sga": 55206
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 365071,
+   "op": 6503,
+   "sga": 68035
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 299716,
+   "op": -38939,
+   "sga": 63312
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 281465,
+   "op": 2478,
+   "sga": 59074
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 496314,
+   "op": -44972,
+   "sga": 59673
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 437162,
+   "op": 6015,
+   "sga": 63204
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 503184,
+   "op": 19572,
+   "sga": 71296
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 300972,
+   "op": 11515,
+   "sga": 65391
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 473133,
+   "op": -3378,
+   "sga": 64876
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 769063,
+   "op": 9185,
+   "sga": 75392
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1508371,
+   "op": -62005,
+   "sga": 266774,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 1442567,
+   "op": -74930,
+   "sga": 250094,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 1714451,
+   "op": 33723,
+   "sga": 264767,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:51:17",
+ "fs_div": "CFS",
+ "industry_code": "661",
+ "industry_name": "금융지원서비스"
 }

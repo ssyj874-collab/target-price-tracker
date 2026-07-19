@@ -2,8 +2,186 @@
  "corp_code": "00113359",
  "corp_name": "교보증권",
  "stock_code": "030610",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:14:38"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 2660791181282,
+    "op": 63600405928,
+    "sga": 171309147428,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3743018931529,
+    "op": 70278210960,
+    "sga": 213596596411,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1133257005656,
+    "op": 40117020886,
+    "sga": 59471492444,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 1573256533942,
+    "op": 75133109245,
+    "sga": 119357704882,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 2108380663992,
+    "op": 155594680103,
+    "sga": 185253772831,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3166321957747,
+    "op": 113926120400,
+    "sga": 247803867479,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1108266590645,
+    "op": 67178773455,
+    "sga": 67094242374,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2366068846000,
+    "op": 137697193000,
+    "sga": 137652739000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3196503113000,
+    "op": 178329990000,
+    "sga": 202605248000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4506795230000,
+    "op": 190443426000,
+    "sga": 261228496000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2395697867000,
+    "op": 95907271000,
+    "sga": 85251652000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 1082228,
+   "op": 6678,
+   "sga": 42287
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1133257,
+   "op": 40117,
+   "sga": 59471
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 440000,
+   "op": 35016,
+   "sga": 59886
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 535124,
+   "op": 80462,
+   "sga": 65896
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 1057941,
+   "op": -41669,
+   "sga": 62550
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1108267,
+   "op": 67179,
+   "sga": 67094
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1257802,
+   "op": 70518,
+   "sga": 70558
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 830434,
+   "op": 40633,
+   "sga": 64953
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1310292,
+   "op": 12113,
+   "sga": 58623
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2395698,
+   "op": 95907,
+   "sga": 85252
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 3743019,
+   "op": 70278,
+   "sga": 213597,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 3166322,
+   "op": 113926,
+   "sga": 247804,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 4506795,
+   "op": 190443,
+   "sga": 261228,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:51:23",
+ "fs_div": "CFS",
+ "industry_code": "66121",
+ "industry_name": "금융지원서비스"
 }
