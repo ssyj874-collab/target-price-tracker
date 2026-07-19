@@ -2,8 +2,186 @@
  "corp_code": "00980122",
  "corp_name": "JB금융지주",
  "stock_code": "175330",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:09:37"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": 673681000000,
+    "sga": 551793000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 799978000000,
+    "sga": -772275000000,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": 227963000000,
+    "sga": 198578000000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 486765000000,
+    "sga": 381446000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 747798000000,
+    "sga": 577479000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 906079000000,
+    "sga": 830242000000,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 217472000000,
+    "sga": 206332000000,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 484368000000,
+    "sga": -408193000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 765444000000,
+    "sga": -597546000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 952314000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 221310000000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 126297,
+   "sga": -1324068
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 227963,
+   "sga": 198578
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 258802,
+   "sga": 182868
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 261033,
+   "sga": 196033
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 158281,
+   "sga": 252763
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 217472,
+   "sga": 206332
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 266896,
+   "sga": -614525
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 281076,
+   "sga": -189353
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 186870,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 221310,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": 799978,
+   "sga": -772275,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": 906079,
+   "sga": 830242,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 952314,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:54:45",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융"
 }

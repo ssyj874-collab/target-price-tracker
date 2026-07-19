@@ -207,5 +207,7 @@
   }
  ],
  "updated": "2026-07-18T11:11:02",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융"
 }

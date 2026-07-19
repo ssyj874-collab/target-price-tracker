@@ -2,8 +2,138 @@
  "corp_code": "01814589",
  "corp_name": "디비금융스팩12호",
  "stock_code": "477760",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:23:28"
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 0,
+    "op": -40540440,
+    "sga": 40540440,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -50688751,
+    "sga": 50688751,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -56450147,
+    "sga": 56450147,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -15172113,
+    "sga": 15172113,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -22526884,
+    "sga": 22526884,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -28306782,
+    "sga": 28306782,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -32187733,
+    "sga": 32187733,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -14470084,
+    "sga": 14470084,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": 10
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": 15
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -14,
+   "sga": 14
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -56,
+   "sga": 56,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -32,
+   "sga": 32,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:54:51",
+ "fs_div": "OFS",
+ "industry_code": "6491",
+ "industry_name": "금융"
 }
