@@ -2,8 +2,214 @@
  "corp_code": "01150515",
  "corp_name": "대명에너지",
  "stock_code": "389260",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:58:35"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 25004212600,
+    "op": 9781481137,
+    "sga": 2981160759,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 37560720246,
+    "op": 10758947684,
+    "sga": 3980038922,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 49511699919,
+    "op": 12744435658,
+    "sga": 5258031834,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 61640473408,
+    "op": 16741316162,
+    "sga": 7515391823,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 14841583085,
+    "op": 3650850188,
+    "sga": 2498338852,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 29733889306,
+    "op": 4640366292,
+    "sga": 4728858268,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 47166643869,
+    "op": 5504929812,
+    "sga": 6994207500,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 67761578359,
+    "op": 9705106323,
+    "sga": 9485426500,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 19161918695,
+    "op": 5682030105,
+    "sga": 2785097712,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 41224267219,
+    "op": 8671321306,
+    "sga": 4979064617,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 78178795348,
+    "op": 8910880036,
+    "sga": 7685081482,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 130971472403,
+    "op": 16798712496,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 30811295629,
+    "op": 17926791004,
+    "sga": 2907730937,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 25004,
+   "op": 9781,
+   "sga": 2981
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 12557,
+   "op": 977,
+   "sga": 999
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 11951,
+   "op": 1985,
+   "sga": 1278
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 12129,
+   "op": 3997,
+   "sga": 2257
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 14842,
+   "op": 3651,
+   "sga": 2498
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 14892,
+   "op": 990,
+   "sga": 2231
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 17433,
+   "op": 865,
+   "sga": 2265
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 20595,
+   "op": 4200,
+   "sga": 2491
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 19162,
+   "op": 5682,
+   "sga": 2785
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 22062,
+   "op": 2989,
+   "sga": 2194
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 36955,
+   "op": 240,
+   "sga": 2706
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 52793,
+   "op": 7888,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 30811,
+   "op": 17927,
+   "sga": 2908
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 61640,
+   "op": 16741,
+   "sga": 7515,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 67762,
+   "op": 9705,
+   "sga": 9485,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 130971,
+   "op": 16799,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:43:44",
+ "fs_div": "CFS",
+ "industry_code": "4112",
+ "industry_name": "종합건설",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

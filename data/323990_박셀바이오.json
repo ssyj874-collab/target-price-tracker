@@ -2,8 +2,214 @@
  "corp_code": "01335851",
  "corp_name": "박셀바이오",
  "stock_code": "323990",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:10:29"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": null,
+    "op": -2495175377,
+    "sga": 2495175377,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -5269091874,
+    "sga": 5269091874,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -8362831118,
+    "sga": 8362831118,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13723327,
+    "op": -11507176671,
+    "sga": 11514304135,
+    "inventory": 96736680
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 26637061,
+    "op": -3241836372,
+    "sga": 3254831176,
+    "inventory": 97723240
+   },
+   "2": {
+    "revenue": 55876193,
+    "op": -7156236743,
+    "sga": 7185763078,
+    "inventory": 158086028
+   },
+   "3": {
+    "revenue": 100823655,
+    "op": -10702144064,
+    "sga": 10759913827,
+    "inventory": 164245693
+   },
+   "4": {
+    "revenue": 1898934365,
+    "op": -15037699414,
+    "sga": 15402466338,
+    "inventory": 237786122
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1719429038,
+    "op": -4305458028,
+    "sga": 4616867120,
+    "inventory": 424382938
+   },
+   "2": {
+    "revenue": 3705465901,
+    "op": -8410054210,
+    "sga": 9030132000,
+    "inventory": 345640117
+   },
+   "3": {
+    "revenue": 5359822739,
+    "op": -11852896111,
+    "sga": 12668901096,
+    "inventory": 355507143
+   },
+   "4": {
+    "revenue": 7056291555,
+    "op": -15498287282,
+    "sga": 16391392419,
+    "inventory": 324027834
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1535500977,
+    "op": -4624612704,
+    "sga": 4844439474,
+    "inventory": 399183740
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2495,
+   "sga": 2495
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -2774,
+   "sga": 2774
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -3094,
+   "sga": 3094
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 97,
+   "revenue": null,
+   "op": -3144,
+   "sga": 3151
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 98,
+   "revenue": 27,
+   "op": -3242,
+   "sga": 3255
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 158,
+   "revenue": 29,
+   "op": -3914,
+   "sga": 3931
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 164,
+   "revenue": 45,
+   "op": -3546,
+   "sga": 3574
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 238,
+   "revenue": 1798,
+   "op": -4336,
+   "sga": 4643
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 424,
+   "revenue": 1719,
+   "op": -4305,
+   "sga": 4617
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 346,
+   "revenue": 1986,
+   "op": -4105,
+   "sga": 4413
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 356,
+   "revenue": 1654,
+   "op": -3443,
+   "sga": 3639
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 324,
+   "revenue": 1696,
+   "op": -3645,
+   "sga": 3722
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 399,
+   "revenue": 1536,
+   "op": -4625,
+   "sga": 4844
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 14,
+   "op": -11507,
+   "sga": 11514,
+   "inventory": 97
+  },
+  {
+   "year": 2024,
+   "revenue": 1899,
+   "op": -15038,
+   "sga": 15402,
+   "inventory": 238
+  },
+  {
+   "year": 2025,
+   "revenue": 7056,
+   "op": -15498,
+   "sga": 16391,
+   "inventory": 324
+  }
+ ],
+ "updated": "2026-07-19T21:20:01",
+ "fs_div": "OFS",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

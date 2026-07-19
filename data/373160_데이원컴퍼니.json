@@ -2,8 +2,114 @@
  "corp_code": "01455492",
  "corp_name": "데이원컴퍼니",
  "stock_code": "373160",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:00:19"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 127680095673,
+    "op": -286759540,
+    "sga": null,
+    "inventory": 1162664119
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 27095072331,
+    "op": -1284412188,
+    "sga": null,
+    "inventory": 881352182
+   },
+   "2": {
+    "revenue": 56278563974,
+    "op": -878975118,
+    "sga": null,
+    "inventory": 600190020
+   },
+   "3": {
+    "revenue": 89975584371,
+    "op": 2548215997,
+    "sga": null,
+    "inventory": 441933803
+   },
+   "4": {
+    "revenue": 123860403525,
+    "op": 4571578722,
+    "sga": null,
+    "inventory": 542813170
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 30318823391,
+    "op": 388161931,
+    "sga": null,
+    "inventory": 475729443
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 1163,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 881,
+   "revenue": 27095,
+   "op": -1284,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 600,
+   "revenue": 29183,
+   "op": 405,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 442,
+   "revenue": 33697,
+   "op": 3427,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 543,
+   "revenue": 33885,
+   "op": 2023,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 476,
+   "revenue": 30319,
+   "op": 388,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 127680,
+   "op": -287,
+   "sga": null,
+   "inventory": 1163
+  },
+  {
+   "year": 2025,
+   "revenue": 123860,
+   "op": 4572,
+   "sga": null,
+   "inventory": 543
+  }
+ ],
+ "updated": "2026-07-19T20:13:06",
+ "fs_div": "CFS",
+ "industry_code": "85669",
+ "industry_name": "교육",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

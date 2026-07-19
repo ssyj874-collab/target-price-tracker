@@ -2,8 +2,214 @@
  "corp_code": "00261355",
  "corp_name": "레드캡투어",
  "stock_code": "038390",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:38:32"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 77346663943,
+    "op": 7772966760,
+    "sga": null,
+    "inventory": 1873168304
+   },
+   "2": {
+    "revenue": 165200810333,
+    "op": 19334345970,
+    "sga": null,
+    "inventory": 947403095
+   },
+   "3": {
+    "revenue": 249271743137,
+    "op": 29062276282,
+    "sga": null,
+    "inventory": 2695990526
+   },
+   "4": {
+    "revenue": 338183142415,
+    "op": 38770681338,
+    "sga": null,
+    "inventory": 4721904139
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 94185669591,
+    "op": 13029955036,
+    "sga": null,
+    "inventory": 3885904452
+   },
+   "2": {
+    "revenue": 184454423805,
+    "op": 25213649238,
+    "sga": null,
+    "inventory": 2418423183
+   },
+   "3": {
+    "revenue": 267595310080,
+    "op": 35170645699,
+    "sga": null,
+    "inventory": 2539816187
+   },
+   "4": {
+    "revenue": 358876963707,
+    "op": 43565664081,
+    "sga": null,
+    "inventory": 8199247715
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 105253280283,
+    "op": 17858522574,
+    "sga": null,
+    "inventory": 1363602283
+   },
+   "2": {
+    "revenue": 200026073114,
+    "op": 31384834511,
+    "sga": null,
+    "inventory": 3193689424
+   },
+   "3": {
+    "revenue": 288953125223,
+    "op": 41677275579,
+    "sga": null,
+    "inventory": 1943237813
+   },
+   "4": {
+    "revenue": 365552937696,
+    "op": 46775282613,
+    "sga": null,
+    "inventory": 3825500317
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 92351191387,
+    "op": 17921463455,
+    "sga": null,
+    "inventory": 5010017088
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1873,
+   "revenue": 77347,
+   "op": 7773,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 947,
+   "revenue": 87854,
+   "op": 11561,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 2696,
+   "revenue": 84071,
+   "op": 9728,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 4722,
+   "revenue": 88911,
+   "op": 9708,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 3886,
+   "revenue": 94186,
+   "op": 13030,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 2418,
+   "revenue": 90269,
+   "op": 12184,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 2540,
+   "revenue": 83141,
+   "op": 9957,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 8199,
+   "revenue": 91282,
+   "op": 8395,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1364,
+   "revenue": 105253,
+   "op": 17859,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 3194,
+   "revenue": 94773,
+   "op": 13526,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1943,
+   "revenue": 88927,
+   "op": 10292,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3826,
+   "revenue": 76600,
+   "op": 5098,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 5010,
+   "revenue": 92351,
+   "op": 17921,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 338183,
+   "op": 38771,
+   "sga": null,
+   "inventory": 4722
+  },
+  {
+   "year": 2024,
+   "revenue": 358877,
+   "op": 43566,
+   "sga": null,
+   "inventory": 8199
+  },
+  {
+   "year": 2025,
+   "revenue": 365553,
+   "op": 46775,
+   "sga": null,
+   "inventory": 3826
+  }
+ ],
+ "updated": "2026-07-19T20:21:04",
+ "fs_div": "CFS",
+ "industry_code": "75210",
+ "industry_name": "사업지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

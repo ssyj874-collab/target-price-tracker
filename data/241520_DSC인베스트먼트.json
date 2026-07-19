@@ -2,8 +2,188 @@
  "corp_code": "01109715",
  "corp_name": "DSC인베스트먼트",
  "stock_code": "241520",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:00:04"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 22068174575,
+    "op": 9489422305,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 33564906112,
+    "op": 17544942089,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9310897307,
+    "op": 3350794035,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 20012633021,
+    "op": 5286287376,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 27786675573,
+    "op": 9249343587,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 38626549523,
+    "op": 14954394099,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6530122701,
+    "op": -364155349,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17288979936,
+    "op": 5202343416,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 24635894929,
+    "op": 6129656691,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 45138188422,
+    "op": 22339147639,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 12401037355,
+    "op": 4586555198,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 11497,
+   "op": 8056,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 9311,
+   "op": 3351,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 10702,
+   "op": 1935,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7774,
+   "op": 3963,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 10840,
+   "op": 5705,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6530,
+   "op": -364,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 10759,
+   "op": 5566,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 7347,
+   "op": 927,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 20502,
+   "op": 16209,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 12401,
+   "op": 4587,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 33565,
+   "op": 17545,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 38627,
+   "op": 14954,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 45138,
+   "op": 22339,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:05",
+ "fs_div": "CFS",
+ "industry_code": "64209",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

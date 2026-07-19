@@ -2,8 +2,140 @@
  "corp_code": "01817249",
  "corp_name": "미래에셋비전스팩5호",
  "stock_code": "477470",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:02:51"
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": null,
+    "op": -22873140,
+    "sga": 22873140,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -29707400,
+    "sga": 29707400,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -37315460,
+    "sga": 37315460,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -19554830,
+    "sga": 19554830,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -27308390,
+    "sga": 27308390,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -37443110,
+    "sga": 37443110,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -44891110,
+    "sga": 44891110,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -22164400,
+    "sga": 22164400,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -20,
+   "sga": 20
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -10,
+   "sga": 10
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -22,
+   "sga": 22
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -37,
+   "sga": 37,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -45,
+   "sga": 45,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:26:05",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

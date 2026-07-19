@@ -2,8 +2,79 @@
  "corp_code": "01565054",
  "corp_name": "그래피",
  "stock_code": "318060",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:32:25"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 6653472201,
+    "op": -6159122666,
+    "sga": 9836424500,
+    "inventory": 1440415455
+   },
+   "3": {
+    "revenue": 10093052661,
+    "op": -9879408010,
+    "sga": 15734955641,
+    "inventory": 1935861390
+   },
+   "4": {
+    "revenue": 20532799353,
+    "op": -11053753180,
+    "sga": 23304238015,
+    "inventory": 3356511974
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3353346585,
+    "op": -3188953777,
+    "sga": 5782882861,
+    "inventory": 3203458458
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 1440,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1936,
+   "revenue": 3440,
+   "op": -3720,
+   "sga": 5899
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3357,
+   "revenue": 10440,
+   "op": -1174,
+   "sga": 7569
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3203,
+   "revenue": 3353,
+   "op": -3189,
+   "sga": 5783
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 20533,
+   "op": -11054,
+   "sga": 23304,
+   "inventory": 3357
+  }
+ ],
+ "updated": "2026-07-19T21:02:19",
+ "fs_div": "CFS",
+ "industry_code": "20202",
+ "industry_name": "화학",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

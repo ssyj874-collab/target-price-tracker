@@ -2,8 +2,214 @@
  "corp_code": "00616962",
  "corp_name": "린드먼아시아",
  "stock_code": "277070",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:46:17"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1660786783,
+    "op": 765979500,
+    "sga": 623174929,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3557561051,
+    "op": 1696401555,
+    "sga": 1317486008,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 4842434767,
+    "op": 2285860902,
+    "sga": 2001728934,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9667503356,
+    "op": 3400246788,
+    "sga": 2744208961,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1267825877,
+    "op": 330236739,
+    "sga": 834260992,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2556765985,
+    "op": 624341748,
+    "sga": 1455153943,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3829537420,
+    "op": 1164663591,
+    "sga": 2082160209,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9094055307,
+    "op": 4209661938,
+    "sga": 2725491207,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1576765447,
+    "op": 215490203,
+    "sga": 626933415,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 3450229868,
+    "op": 1599145249,
+    "sga": 1189034255,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 4651018435,
+    "op": 2215921145,
+    "sga": 1967144658,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 7432097638,
+    "op": 3602841246,
+    "sga": 2536791659,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2338286107,
+    "op": 1067923778,
+    "sga": 562625571,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 1661,
+   "op": 766,
+   "sga": 623
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 1897,
+   "op": 930,
+   "sga": 694
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 1285,
+   "op": 589,
+   "sga": 684
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 4825,
+   "op": 1114,
+   "sga": 742
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 1268,
+   "op": 330,
+   "sga": 834
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1289,
+   "op": 294,
+   "sga": 621
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1273,
+   "op": 540,
+   "sga": 627
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5265,
+   "op": 3045,
+   "sga": 643
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1577,
+   "op": 215,
+   "sga": 627
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1873,
+   "op": 1384,
+   "sga": 562
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1201,
+   "op": 617,
+   "sga": 778
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 2781,
+   "op": 1387,
+   "sga": 570
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 2338,
+   "op": 1068,
+   "sga": 563
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 9668,
+   "op": 3400,
+   "sga": 2744,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 9094,
+   "op": 4210,
+   "sga": 2725,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 7432,
+   "op": 3603,
+   "sga": 2537,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:59:03",
+ "fs_div": "CFS",
+ "industry_code": "64209",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

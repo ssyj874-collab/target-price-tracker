@@ -2,8 +2,136 @@
  "corp_code": "01363818",
  "corp_name": "롯데리츠",
  "stock_code": "330590",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:41:57"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 29480677047,
+    "op": 17545008339,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 59415198441,
+    "op": 36133570225,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 30872050295,
+    "op": 19529499209,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 65629118705,
+    "op": 42006230943,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 35266843166,
+    "op": 23045909500,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 70879702538,
+    "op": 46254900872,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 38933859236,
+    "op": 26063130000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 59415,
+   "op": 36134,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 65629,
+   "op": 42006,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 70880,
+   "op": 46255,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:07:55",
+ "fs_div": "OFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

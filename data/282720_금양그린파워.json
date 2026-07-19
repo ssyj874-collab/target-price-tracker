@@ -2,8 +2,214 @@
  "corp_code": "00872656",
  "corp_name": "금양그린파워",
  "stock_code": "282720",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:36:22"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 52867795237,
+    "op": 2877061061,
+    "sga": 2829540588,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 109602233122,
+    "op": -2161292157,
+    "sga": 5814873159,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 161056308891,
+    "op": 2272261114,
+    "sga": 9269258239,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 238857679141,
+    "op": 6051854924,
+    "sga": 12569194976,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 72823952705,
+    "op": -7338911509,
+    "sga": 3884732591,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 141615864760,
+    "op": -6434434640,
+    "sga": 6293481827,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 188397729664,
+    "op": -15291074914,
+    "sga": 9804001332,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 243169597848,
+    "op": -17128386918,
+    "sga": 13424926703,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 46797615206,
+    "op": -8456283041,
+    "sga": 5056046977,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 103179426541,
+    "op": -8261341457,
+    "sga": 7842601498,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 177113208678,
+    "op": -3949384419,
+    "sga": 10574438017,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 264778674601,
+    "op": 427286876,
+    "sga": 14597619065,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 72777933828,
+    "op": -8020052603,
+    "sga": 3657719494,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 52868,
+   "op": 2877,
+   "sga": 2830
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 56734,
+   "op": -5038,
+   "sga": 2985
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 51454,
+   "op": 4434,
+   "sga": 3454
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 77801,
+   "op": 3780,
+   "sga": 3300
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 72824,
+   "op": -7339,
+   "sga": 3885
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 68792,
+   "op": 904,
+   "sga": 2409
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 46782,
+   "op": -8857,
+   "sga": 3511
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 54772,
+   "op": -1837,
+   "sga": 3621
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 46798,
+   "op": -8456,
+   "sga": 5056
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 56382,
+   "op": 195,
+   "sga": 2787
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 73934,
+   "op": 4312,
+   "sga": 2732
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 87665,
+   "op": 4377,
+   "sga": 4023
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 72778,
+   "op": -8020,
+   "sga": 3658
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 238858,
+   "op": 6052,
+   "sga": 12569,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 243170,
+   "op": -17128,
+   "sga": 13425,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 264779,
+   "op": 427,
+   "sga": 14598,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:49:46",
+ "fs_div": "CFS",
+ "industry_code": "423",
+ "industry_name": "전문건설",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

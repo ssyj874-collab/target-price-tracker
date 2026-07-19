@@ -2,8 +2,214 @@
  "corp_code": "01047840",
  "corp_name": "미스터블루",
  "stock_code": "207760",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:05:01"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 19364715694,
+    "op": 811935322,
+    "sga": null,
+    "inventory": 215367685
+   },
+   "2": {
+    "revenue": 38149476329,
+    "op": 1352445763,
+    "sga": null,
+    "inventory": 407545555
+   },
+   "3": {
+    "revenue": 56698927197,
+    "op": 1496496592,
+    "sga": null,
+    "inventory": 513313091
+   },
+   "4": {
+    "revenue": 74126065820,
+    "op": 694659937,
+    "sga": null,
+    "inventory": 604338099
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 15711426911,
+    "op": -3642298248,
+    "sga": null,
+    "inventory": 540506363
+   },
+   "2": {
+    "revenue": 31871402662,
+    "op": -6651473975,
+    "sga": null,
+    "inventory": 541624907
+   },
+   "3": {
+    "revenue": 51337048435,
+    "op": -11251651321,
+    "sga": null,
+    "inventory": 541435549
+   },
+   "4": {
+    "revenue": 70341804726,
+    "op": -13552961926,
+    "sga": null,
+    "inventory": 438264879
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 17053580195,
+    "op": -435712239,
+    "sga": null,
+    "inventory": 519116166
+   },
+   "2": {
+    "revenue": 33491060026,
+    "op": -2208923129,
+    "sga": null,
+    "inventory": 476694660
+   },
+   "3": {
+    "revenue": 50956979427,
+    "op": -2922904795,
+    "sga": null,
+    "inventory": 441321062
+   },
+   "4": {
+    "revenue": 67463445141,
+    "op": -2457410069,
+    "sga": null,
+    "inventory": 323705470
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 16421161971,
+    "op": 528525425,
+    "sga": null,
+    "inventory": 286601997
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 215,
+   "revenue": 19365,
+   "op": 812,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 408,
+   "revenue": 18785,
+   "op": 541,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 513,
+   "revenue": 18549,
+   "op": 144,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 604,
+   "revenue": 17427,
+   "op": -802,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 541,
+   "revenue": 15711,
+   "op": -3642,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 542,
+   "revenue": 16160,
+   "op": -3009,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 541,
+   "revenue": 19466,
+   "op": -4600,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 438,
+   "revenue": 19005,
+   "op": -2301,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 519,
+   "revenue": 17054,
+   "op": -436,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 477,
+   "revenue": 16437,
+   "op": -1773,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 441,
+   "revenue": 17466,
+   "op": -714,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 324,
+   "revenue": 16506,
+   "op": 465,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 287,
+   "revenue": 16421,
+   "op": 529,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 74126,
+   "op": 695,
+   "sga": null,
+   "inventory": 604
+  },
+  {
+   "year": 2024,
+   "revenue": 70342,
+   "op": -13553,
+   "sga": null,
+   "inventory": 438
+  },
+  {
+   "year": 2025,
+   "revenue": 67463,
+   "op": -2457,
+   "sga": null,
+   "inventory": 324
+  }
+ ],
+ "updated": "2026-07-19T20:53:06",
+ "fs_div": "CFS",
+ "industry_code": "63991",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

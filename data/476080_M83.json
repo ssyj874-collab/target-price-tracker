@@ -2,8 +2,127 @@
  "corp_code": "01704680",
  "corp_name": "M83",
  "stock_code": "476080",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:19:32"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 32723618952,
+    "op": 1785741000,
+    "sga": null,
+    "inventory": 2437583832
+   },
+   "4": {
+    "revenue": 58163355345,
+    "op": 1454115192,
+    "sga": null,
+    "inventory": 1025468931
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 10826216557,
+    "op": -2988325144,
+    "sga": null,
+    "inventory": 774837914
+   },
+   "2": {
+    "revenue": 42556764945,
+    "op": -4749624361,
+    "sga": null,
+    "inventory": 3999847656
+   },
+   "3": {
+    "revenue": 75517313721,
+    "op": -6926960044,
+    "sga": null,
+    "inventory": 7432608008
+   },
+   "4": {
+    "revenue": 132396372517,
+    "op": -8966649833,
+    "sga": null,
+    "inventory": 7765106894
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 66878627583,
+    "op": -2579597019,
+    "sga": null,
+    "inventory": 6215292779
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": 2438,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1025,
+   "revenue": 25440,
+   "op": -332,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 775,
+   "revenue": 10826,
+   "op": -2988,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 4000,
+   "revenue": 31731,
+   "op": -1761,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 7433,
+   "revenue": 32961,
+   "op": -2177,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 7765,
+   "revenue": 56879,
+   "op": -2040,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 6215,
+   "revenue": 66879,
+   "op": -2580,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 58163,
+   "op": 1454,
+   "sga": null,
+   "inventory": 1025
+  },
+  {
+   "year": 2025,
+   "revenue": 132396,
+   "op": -8967,
+   "sga": null,
+   "inventory": 7765
+  }
+ ],
+ "updated": "2026-07-19T21:09:33",
+ "fs_div": "CFS",
+ "industry_code": "59111",
+ "industry_name": "영상·음반",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

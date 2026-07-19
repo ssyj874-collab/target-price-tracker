@@ -2,8 +2,114 @@
  "corp_code": "01866926",
  "corp_name": "KB제31호스팩",
  "stock_code": "492220",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:11:46"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -27807630,
+    "sga": 27807630,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -5973900,
+    "sga": 5973900,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -76873789,
+    "sga": 76873789,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -81198189,
+    "sga": 81198189,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -85519389,
+    "sga": 85519389,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -7925800,
+    "sga": 7925800,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -71,
+   "sga": 71
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -28,
+   "sga": 28,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -86,
+   "sga": 86,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:09:45",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

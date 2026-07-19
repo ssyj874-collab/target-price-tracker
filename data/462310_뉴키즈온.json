@@ -2,8 +2,79 @@
  "corp_code": "01467503",
  "corp_name": "뉴키즈온",
  "stock_code": "462310",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:53:14"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 24116321634,
+    "op": 843165519,
+    "sga": 12365591216,
+    "inventory": 19013331094
+   },
+   "3": {
+    "revenue": 31091729065,
+    "op": -562984820,
+    "sga": 17425969347,
+    "inventory": 25947460452
+   },
+   "4": {
+    "revenue": 49034721544,
+    "op": 723884290,
+    "sga": 25062130727,
+    "inventory": 18895179174
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10305419771,
+    "op": -509042868,
+    "sga": 5642265267,
+    "inventory": 22622336147
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 19013,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 25947,
+   "revenue": 6975,
+   "op": -1406,
+   "sga": 5060
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 18895,
+   "revenue": 17943,
+   "op": 1287,
+   "sga": 7636
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 22622,
+   "revenue": 10305,
+   "op": -509,
+   "sga": 5642
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 49035,
+   "op": 724,
+   "sga": 25062,
+   "inventory": 18895
+  }
+ ],
+ "updated": "2026-07-19T20:30:44",
+ "fs_div": "CFS",
+ "industry_code": "141",
+ "industry_name": "의복",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,214 @@
  "corp_code": "00399694",
  "corp_name": "SOOP",
  "stock_code": "067160",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:30:11"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 72704826071,
+    "op": 18384338876,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 159372006838,
+    "op": 42015825693,
+    "sga": null,
+    "inventory": 1416702514
+   },
+   "3": {
+    "revenue": 247252568959,
+    "op": 63913015512,
+    "sga": null,
+    "inventory": 1022026677
+   },
+   "4": {
+    "revenue": 344016008889,
+    "op": 90309374651,
+    "sga": null,
+    "inventory": 890683869
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 94932224769,
+    "op": 28534927167,
+    "sga": null,
+    "inventory": 890952588
+   },
+   "2": {
+    "revenue": 201462587224,
+    "op": 61837721060,
+    "sga": null,
+    "inventory": 636430414
+   },
+   "3": {
+    "revenue": 311459334985,
+    "op": 85705490218,
+    "sga": null,
+    "inventory": 228326955
+   },
+   "4": {
+    "revenue": 413178446964,
+    "op": 113506476450,
+    "sga": null,
+    "inventory": 101007122
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 107652122421,
+    "op": 27944065797,
+    "sga": null,
+    "inventory": 71597622
+   },
+   "2": {
+    "revenue": 224535556497,
+    "op": 57957870960,
+    "sga": null,
+    "inventory": 905916159
+   },
+   "3": {
+    "revenue": 350397416883,
+    "op": 94215012452,
+    "sga": null,
+    "inventory": 895718740
+   },
+   "4": {
+    "revenue": 466570266082,
+    "op": 124840445238,
+    "sga": null,
+    "inventory": 506567641
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 106017902692,
+    "op": 21221271018,
+    "sga": null,
+    "inventory": 1082174814
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 72705,
+   "op": 18384,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1417,
+   "revenue": 86667,
+   "op": 23631,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1022,
+   "revenue": 87881,
+   "op": 21897,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 891,
+   "revenue": 96763,
+   "op": 26396,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 891,
+   "revenue": 94932,
+   "op": 28535,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 636,
+   "revenue": 106530,
+   "op": 33303,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 228,
+   "revenue": 109997,
+   "op": 23868,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 101,
+   "revenue": 101719,
+   "op": 27801,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 72,
+   "revenue": 107652,
+   "op": 27944,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 906,
+   "revenue": 116883,
+   "op": 30014,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 896,
+   "revenue": 125862,
+   "op": 36257,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 507,
+   "revenue": 116173,
+   "op": 30625,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1082,
+   "revenue": 106018,
+   "op": 21221,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 344016,
+   "op": 90309,
+   "sga": null,
+   "inventory": 891
+  },
+  {
+   "year": 2024,
+   "revenue": 413178,
+   "op": 113506,
+   "sga": null,
+   "inventory": 101
+  },
+  {
+   "year": 2025,
+   "revenue": 466570,
+   "op": 124840,
+   "sga": null,
+   "inventory": 507
+  }
+ ],
+ "updated": "2026-07-19T20:32:40",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

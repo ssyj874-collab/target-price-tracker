@@ -2,8 +2,214 @@
  "corp_code": "01189438",
  "corp_name": "HLB바이오스텝",
  "stock_code": "278650",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:06:32"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 13791917662,
+    "op": 837273317,
+    "sga": null,
+    "inventory": 1721940293
+   },
+   "2": {
+    "revenue": 27139215593,
+    "op": 289260771,
+    "sga": null,
+    "inventory": 1450819617
+   },
+   "3": {
+    "revenue": 38086717143,
+    "op": -1392624130,
+    "sga": null,
+    "inventory": 1354706670
+   },
+   "4": {
+    "revenue": 52814062371,
+    "op": -1276200671,
+    "sga": null,
+    "inventory": 1550721513
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 11566174974,
+    "op": -2359552049,
+    "sga": null,
+    "inventory": 1592563814
+   },
+   "2": {
+    "revenue": 23490854326,
+    "op": -5623243361,
+    "sga": null,
+    "inventory": 1426694711
+   },
+   "3": {
+    "revenue": 42027862973,
+    "op": -8284465311,
+    "sga": null,
+    "inventory": 1509207079
+   },
+   "4": {
+    "revenue": 58168784882,
+    "op": -12965447083,
+    "sga": null,
+    "inventory": 1510773639
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 13577782274,
+    "op": -2547028928,
+    "sga": null,
+    "inventory": 1561313408
+   },
+   "2": {
+    "revenue": 31350610724,
+    "op": -6854992838,
+    "sga": null,
+    "inventory": 1546377949
+   },
+   "3": {
+    "revenue": 55324955004,
+    "op": -6400102382,
+    "sga": null,
+    "inventory": 1564603182
+   },
+   "4": {
+    "revenue": 74050095463,
+    "op": -8616559710,
+    "sga": null,
+    "inventory": 1490540128
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 13485250914,
+    "op": -2610713177,
+    "sga": null,
+    "inventory": 1754404863
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1722,
+   "revenue": 13792,
+   "op": 837,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1451,
+   "revenue": 13347,
+   "op": -548,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1355,
+   "revenue": 10948,
+   "op": -1682,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1551,
+   "revenue": 14727,
+   "op": 116,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1593,
+   "revenue": 11566,
+   "op": -2360,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1427,
+   "revenue": 11925,
+   "op": -3264,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1509,
+   "revenue": 18537,
+   "op": -2661,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1511,
+   "revenue": 16141,
+   "op": -4681,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1561,
+   "revenue": 13578,
+   "op": -2547,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1546,
+   "revenue": 17773,
+   "op": -4308,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1565,
+   "revenue": 23974,
+   "op": 455,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1491,
+   "revenue": 18725,
+   "op": -2216,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1754,
+   "revenue": 13485,
+   "op": -2611,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 52814,
+   "op": -1276,
+   "sga": null,
+   "inventory": 1551
+  },
+  {
+   "year": 2024,
+   "revenue": 58169,
+   "op": -12965,
+   "sga": null,
+   "inventory": 1511
+  },
+  {
+   "year": 2025,
+   "revenue": 74050,
+   "op": -8617,
+   "sga": null,
+   "inventory": 1491
+  }
+ ],
+ "updated": "2026-07-19T21:19:19",
+ "fs_div": "CFS",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

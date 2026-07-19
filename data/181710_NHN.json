@@ -2,8 +2,214 @@
  "corp_code": "00983271",
  "corp_name": "NHN",
  "stock_code": "181710",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:20:35"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 548338063813,
+    "op": 19109949646,
+    "sga": null,
+    "inventory": 43398424642
+   },
+   "2": {
+    "revenue": 1099770233826,
+    "op": 40001478437,
+    "sga": null,
+    "inventory": 43026528812
+   },
+   "3": {
+    "revenue": 1671303049679,
+    "op": 63356655094,
+    "sga": null,
+    "inventory": 78916884005
+   },
+   "4": {
+    "revenue": 2269614866943,
+    "op": 55598405513,
+    "sga": null,
+    "inventory": 66988030474
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 604394809831,
+    "op": 27286832997,
+    "sga": null,
+    "inventory": 74896190805
+   },
+   "2": {
+    "revenue": 1203798841699,
+    "op": 55763566709,
+    "sga": null,
+    "inventory": 77153571478
+   },
+   "3": {
+    "revenue": 1812166052907,
+    "op": -57625060760,
+    "sga": null,
+    "inventory": 68376768055
+   },
+   "4": {
+    "revenue": 2456107865377,
+    "op": -32619646834,
+    "sga": null,
+    "inventory": 49371283462
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 600129016163,
+    "op": 27645536068,
+    "sga": null,
+    "inventory": 35779383294
+   },
+   "2": {
+    "revenue": 1205016373149,
+    "op": 49567388388,
+    "sga": null,
+    "inventory": 30970842518
+   },
+   "3": {
+    "revenue": 1830618548804,
+    "op": 77204832093,
+    "sga": null,
+    "inventory": 28745255765
+   },
+   "4": {
+    "revenue": 2516233825224,
+    "op": 132434145572,
+    "sga": null,
+    "inventory": 25855850748
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 671397393908,
+    "op": 26251000334,
+    "sga": null,
+    "inventory": 24675870408
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 43398,
+   "revenue": 548338,
+   "op": 19110,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 43027,
+   "revenue": 551432,
+   "op": 20892,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 78917,
+   "revenue": 571533,
+   "op": 23355,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 66988,
+   "revenue": 598312,
+   "op": -7758,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 74896,
+   "revenue": 604395,
+   "op": 27287,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 77154,
+   "revenue": 599404,
+   "op": 28477,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 68377,
+   "revenue": 608367,
+   "op": -113389,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 49371,
+   "revenue": 643942,
+   "op": 25005,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 35779,
+   "revenue": 600129,
+   "op": 27646,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 30971,
+   "revenue": 604887,
+   "op": 21922,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 28745,
+   "revenue": 625602,
+   "op": 27637,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 25856,
+   "revenue": 685615,
+   "op": 55229,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 24676,
+   "revenue": 671397,
+   "op": 26251,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 2269615,
+   "op": 55598,
+   "sga": null,
+   "inventory": 66988
+  },
+  {
+   "year": 2024,
+   "revenue": 2456108,
+   "op": -32620,
+   "sga": null,
+   "inventory": 49371
+  },
+  {
+   "year": 2025,
+   "revenue": 2516234,
+   "op": 132434,
+   "sga": null,
+   "inventory": 25856
+  }
+ ],
+ "updated": "2026-07-19T20:30:04",
+ "fs_div": "CFS",
+ "industry_code": "5821",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "Y",
+ "market": "유가"
 }

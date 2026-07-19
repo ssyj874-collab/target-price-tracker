@@ -2,8 +2,214 @@
  "corp_code": "00266961",
  "corp_name": "NAVER",
  "stock_code": "035420",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:20:02"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 2280442537690,
+    "op": 330492062205,
+    "sga": null,
+    "inventory": 9087135081
+   },
+   "2": {
+    "revenue": 4688347022652,
+    "op": 703148522093,
+    "sga": null,
+    "inventory": 9944457707
+   },
+   "3": {
+    "revenue": 7133639509858,
+    "op": 1083329265515,
+    "sga": null,
+    "inventory": 12092622235
+   },
+   "4": {
+    "revenue": 9670643576585,
+    "op": 1488820269608,
+    "sga": null,
+    "inventory": 14811319796
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 2526055415876,
+    "op": 439293106330,
+    "sga": null,
+    "inventory": 19236631619
+   },
+   "2": {
+    "revenue": 5136541336068,
+    "op": 911978251158,
+    "sga": null,
+    "inventory": 22322401707
+   },
+   "3": {
+    "revenue": 7852098497624,
+    "op": 1437247915601,
+    "sga": null,
+    "inventory": 25675194120
+   },
+   "4": {
+    "revenue": 10737719264647,
+    "op": 1979263438827,
+    "sga": null,
+    "inventory": 21743796031
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2786783351907,
+    "op": 505301333937,
+    "sga": null,
+    "inventory": 21515348620
+   },
+   "2": {
+    "revenue": 5701868408120,
+    "op": 1026855081011,
+    "sga": null,
+    "inventory": 25356506258
+   },
+   "3": {
+    "revenue": 8839922977621,
+    "op": 1597501912182,
+    "sga": null,
+    "inventory": 21784759972
+   },
+   "4": {
+    "revenue": 12035007218975,
+    "op": 2208138388720,
+    "sga": null,
+    "inventory": 20235420058
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3241061102900,
+    "op": 541757341691,
+    "sga": null,
+    "inventory": 32366042279
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 9087,
+   "revenue": 2280443,
+   "op": 330492,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 9944,
+   "revenue": 2407904,
+   "op": 372656,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 12093,
+   "revenue": 2445292,
+   "op": 380181,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 14811,
+   "revenue": 2537004,
+   "op": 405491,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 19237,
+   "revenue": 2526055,
+   "op": 439293,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 22322,
+   "revenue": 2610486,
+   "op": 472685,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 25675,
+   "revenue": 2715557,
+   "op": 525270,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 21744,
+   "revenue": 2885621,
+   "op": 542016,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 21515,
+   "revenue": 2786783,
+   "op": 505301,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 25357,
+   "revenue": 2915085,
+   "op": 521554,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 21785,
+   "revenue": 3138055,
+   "op": 570647,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 20235,
+   "revenue": 3195084,
+   "op": 610636,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 32366,
+   "revenue": 3241061,
+   "op": 541757,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 9670644,
+   "op": 1488820,
+   "sga": null,
+   "inventory": 14811
+  },
+  {
+   "year": 2024,
+   "revenue": 10737719,
+   "op": 1979263,
+   "sga": null,
+   "inventory": 21744
+  },
+  {
+   "year": 2025,
+   "revenue": 12035007,
+   "op": 2208138,
+   "sga": null,
+   "inventory": 20235
+  }
+ ],
+ "updated": "2026-07-19T20:04:37",
+ "fs_div": "CFS",
+ "industry_code": "63120",
+ "industry_name": "정보서비스",
+ "corp_cls": "Y",
+ "market": "유가"
 }

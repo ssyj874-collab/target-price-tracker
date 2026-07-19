@@ -2,8 +2,114 @@
  "corp_code": "00367400",
  "corp_name": "모티브링크",
  "stock_code": "463480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:58:38"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 61738933021,
+    "op": 1721683537,
+    "sga": 8940996511,
+    "inventory": 8050614862
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 16976323014,
+    "op": 19313964,
+    "sga": 2901373357,
+    "inventory": 10790690840
+   },
+   "2": {
+    "revenue": 37456819955,
+    "op": 129812723,
+    "sga": 6165414418,
+    "inventory": 11357590992
+   },
+   "3": {
+    "revenue": 54386059136,
+    "op": -407823766,
+    "sga": 9357165346,
+    "inventory": 10049773652
+   },
+   "4": {
+    "revenue": 67411311418,
+    "op": -1723075249,
+    "sga": 12748045547,
+    "inventory": 9735525865
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 17688433493,
+    "op": -1440644442,
+    "sga": 4001985417,
+    "inventory": 10846507088
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 8051,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 10791,
+   "revenue": 16976,
+   "op": 19,
+   "sga": 2901
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 11358,
+   "revenue": 20480,
+   "op": 110,
+   "sga": 3264
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 10050,
+   "revenue": 16929,
+   "op": -538,
+   "sga": 3192
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 9736,
+   "revenue": 13025,
+   "op": -1315,
+   "sga": 3391
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 10847,
+   "revenue": 17688,
+   "op": -1441,
+   "sga": 4002
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 61739,
+   "op": 1722,
+   "sga": 8941,
+   "inventory": 8051
+  },
+  {
+   "year": 2025,
+   "revenue": 67411,
+   "op": -1723,
+   "sga": 12748,
+   "inventory": 9736
+  }
+ ],
+ "updated": "2026-07-19T20:31:55",
+ "fs_div": "CFS",
+ "industry_code": "26294",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

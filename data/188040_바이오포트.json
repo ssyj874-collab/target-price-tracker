@@ -2,8 +2,101 @@
  "corp_code": "01157846",
  "corp_name": "바이오포트",
  "stock_code": "188040",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:09:39"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 73346275464,
+    "op": 5240027576,
+    "sga": 15735944766,
+    "inventory": 5744367212
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 36093765794,
+    "op": 727109738,
+    "sga": 9067657390,
+    "inventory": 5961023459
+   },
+   "3": {
+    "revenue": 55155647455,
+    "op": 1251772192,
+    "sga": 12919190475,
+    "inventory": 5939477209
+   },
+   "4": {
+    "revenue": 70879747598,
+    "op": 830046239,
+    "sga": 16525160178,
+    "inventory": 5942988119
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 21384551090,
+    "op": 765026695,
+    "sga": 5422731629,
+    "inventory": 8584024215
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 5744,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 5961,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 5939,
+   "revenue": 19062,
+   "op": 525,
+   "sga": 3852
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 5943,
+   "revenue": 15724,
+   "op": -422,
+   "sga": 3606
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 8584,
+   "revenue": 21385,
+   "op": 765,
+   "sga": 5423
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 73346,
+   "op": 5240,
+   "sga": 15736,
+   "inventory": 5744
+  },
+  {
+   "year": 2025,
+   "revenue": 70880,
+   "op": 830,
+   "sga": 16525,
+   "inventory": 5943
+  }
+ ],
+ "updated": "2026-07-19T21:20:12",
+ "fs_div": "CFS",
+ "industry_code": "108",
+ "industry_name": "식료품",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

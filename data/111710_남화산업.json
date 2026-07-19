@@ -2,8 +2,214 @@
  "corp_code": "00245694",
  "corp_name": "남화산업",
  "stock_code": "111710",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:43:33"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 4184135458,
+    "op": 1547066714,
+    "sga": null,
+    "inventory": 10936536
+   },
+   "2": {
+    "revenue": 13027730460,
+    "op": 6146312629,
+    "sga": null,
+    "inventory": 14742263
+   },
+   "3": {
+    "revenue": 18284087733,
+    "op": 8576672528,
+    "sga": null,
+    "inventory": 13605558
+   },
+   "4": {
+    "revenue": 24670582732,
+    "op": 11794142261,
+    "sga": null,
+    "inventory": 13334502
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3056845913,
+    "op": 430252484,
+    "sga": null,
+    "inventory": 8228976
+   },
+   "2": {
+    "revenue": 10524740005,
+    "op": 3633423249,
+    "sga": null,
+    "inventory": 12750319
+   },
+   "3": {
+    "revenue": 14662612733,
+    "op": 4961612341,
+    "sga": null,
+    "inventory": 10973269
+   },
+   "4": {
+    "revenue": 20703099096,
+    "op": 8010834824,
+    "sga": null,
+    "inventory": 13247283
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2176354091,
+    "op": -315201793,
+    "sga": null,
+    "inventory": 13075018
+   },
+   "2": {
+    "revenue": 8433448637,
+    "op": 1785980362,
+    "sga": null,
+    "inventory": 13880305
+   },
+   "3": {
+    "revenue": 11219865909,
+    "op": 1811957643,
+    "sga": null,
+    "inventory": 15169148
+   },
+   "4": {
+    "revenue": 16771010459,
+    "op": 4093920849,
+    "sga": null,
+    "inventory": 15362110
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1987642731,
+    "op": -459212607,
+    "sga": null,
+    "inventory": 11643922
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 11,
+   "revenue": 4184,
+   "op": 1547,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 15,
+   "revenue": 8844,
+   "op": 4599,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 14,
+   "revenue": 5256,
+   "op": 2430,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 13,
+   "revenue": 6386,
+   "op": 3217,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 8,
+   "revenue": 3057,
+   "op": 430,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 13,
+   "revenue": 7468,
+   "op": 3203,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 11,
+   "revenue": 4138,
+   "op": 1328,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 13,
+   "revenue": 6040,
+   "op": 3049,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 13,
+   "revenue": 2176,
+   "op": -315,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 14,
+   "revenue": 6257,
+   "op": 2101,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 15,
+   "revenue": 2786,
+   "op": 26,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 15,
+   "revenue": 5551,
+   "op": 2282,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 12,
+   "revenue": 1988,
+   "op": -459,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 24671,
+   "op": 11794,
+   "sga": null,
+   "inventory": 13
+  },
+  {
+   "year": 2024,
+   "revenue": 20703,
+   "op": 8011,
+   "sga": null,
+   "inventory": 13
+  },
+  {
+   "year": 2025,
+   "revenue": 16771,
+   "op": 4094,
+   "sga": null,
+   "inventory": 15
+  }
+ ],
+ "updated": "2026-07-19T20:40:01",
+ "fs_div": "OFS",
+ "industry_code": "91121",
+ "industry_name": "여가서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

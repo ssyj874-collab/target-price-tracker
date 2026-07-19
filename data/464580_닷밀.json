@@ -2,8 +2,114 @@
  "corp_code": "01605282",
  "corp_name": "닷밀",
  "stock_code": "464580",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:56:26"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 23630302177,
+    "op": 1023815806,
+    "sga": 6147434120,
+    "inventory": 245837544
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5422876332,
+    "op": -1282593938,
+    "sga": 1874323990,
+    "inventory": 277762886
+   },
+   "2": {
+    "revenue": 11153518203,
+    "op": -1784770395,
+    "sga": 3780282893,
+    "inventory": 324173407
+   },
+   "3": {
+    "revenue": 24943586473,
+    "op": 13060215,
+    "sga": 5692273277,
+    "inventory": 321586452
+   },
+   "4": {
+    "revenue": 33841306055,
+    "op": 122524497,
+    "sga": 7795662595,
+    "inventory": 325153745
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6039003486,
+    "op": -1535920121,
+    "sga": 2133785912,
+    "inventory": 354791621
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 246,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 278,
+   "revenue": 5423,
+   "op": -1283,
+   "sga": 1874
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 324,
+   "revenue": 5731,
+   "op": -502,
+   "sga": 1906
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 322,
+   "revenue": 13790,
+   "op": 1798,
+   "sga": 1912
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 325,
+   "revenue": 8898,
+   "op": 109,
+   "sga": 2103
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 355,
+   "revenue": 6039,
+   "op": -1536,
+   "sga": 2134
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 23630,
+   "op": 1024,
+   "sga": 6147,
+   "inventory": 246
+  },
+  {
+   "year": 2025,
+   "revenue": 33841,
+   "op": 123,
+   "sga": 7796,
+   "inventory": 325
+  }
+ ],
+ "updated": "2026-07-19T21:08:22",
+ "fs_div": "OFS",
+ "industry_code": "591",
+ "industry_name": "영상·음반",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

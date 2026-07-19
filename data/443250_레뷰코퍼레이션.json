@@ -2,8 +2,188 @@
  "corp_code": "01468061",
  "corp_name": "레뷰코퍼레이션",
  "stock_code": "443250",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:38:54"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 37650299289,
+    "op": 2166381233,
+    "sga": null,
+    "inventory": 2285516346
+   },
+   "4": {
+    "revenue": 51589751390,
+    "op": 2786624323,
+    "sga": null,
+    "inventory": 2103028216
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9604257024,
+    "op": 607331578,
+    "sga": null,
+    "inventory": 0
+   },
+   "2": {
+    "revenue": 20733691367,
+    "op": 2441419815,
+    "sga": null,
+    "inventory": 0
+   },
+   "3": {
+    "revenue": 33309129720,
+    "op": 4689208914,
+    "sga": null,
+    "inventory": 0
+   },
+   "4": {
+    "revenue": 48902612922,
+    "op": 7474694540,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 12055611633,
+    "op": 1201175746,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 25948716069,
+    "op": 3484512905,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 40213865732,
+    "op": 6400173605,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 56457817420,
+    "op": 8878960891,
+    "sga": null,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 13273348099,
+    "op": 1284349237,
+    "sga": null,
+    "inventory": 0
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": 2286,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 2103,
+   "revenue": 13939,
+   "op": 620,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 0,
+   "revenue": 9604,
+   "op": 607,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 0,
+   "revenue": 11129,
+   "op": 1834,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 0,
+   "revenue": 12575,
+   "op": 2248,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 15593,
+   "op": 2785,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 12056,
+   "op": 1201,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 13893,
+   "op": 2283,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 14265,
+   "op": 2916,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 16244,
+   "op": 2479,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 0,
+   "revenue": 13273,
+   "op": 1284,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 51590,
+   "op": 2787,
+   "sga": null,
+   "inventory": 2103
+  },
+  {
+   "year": 2024,
+   "revenue": 48903,
+   "op": 7475,
+   "sga": null,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 56458,
+   "op": 8879,
+   "sga": null,
+   "inventory": 0
+  }
+ ],
+ "updated": "2026-07-19T20:56:02",
+ "fs_div": "CFS",
+ "industry_code": "71310",
+ "industry_name": "전문서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

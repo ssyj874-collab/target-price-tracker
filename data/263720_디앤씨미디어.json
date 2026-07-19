@@ -2,8 +2,214 @@
  "corp_code": "01186404",
  "corp_name": "디앤씨미디어",
  "stock_code": "263720",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:26:32"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 16142704575,
+    "op": 880362381,
+    "sga": null,
+    "inventory": 1042478779
+   },
+   "2": {
+    "revenue": 31597965415,
+    "op": 2047799170,
+    "sga": null,
+    "inventory": 1080626530
+   },
+   "3": {
+    "revenue": 46598168681,
+    "op": 3191459473,
+    "sga": null,
+    "inventory": 1224792062
+   },
+   "4": {
+    "revenue": 60372245944,
+    "op": 3486546807,
+    "sga": null,
+    "inventory": 1052636483
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 19924871209,
+    "op": 2516168100,
+    "sga": null,
+    "inventory": 1335156460
+   },
+   "2": {
+    "revenue": 44065835418,
+    "op": 6489583625,
+    "sga": null,
+    "inventory": 1058187500
+   },
+   "3": {
+    "revenue": 67080228725,
+    "op": 10997291427,
+    "sga": null,
+    "inventory": 1103984481
+   },
+   "4": {
+    "revenue": 83514767448,
+    "op": 10278991964,
+    "sga": null,
+    "inventory": 862666751
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 18107954932,
+    "op": 1407793854,
+    "sga": null,
+    "inventory": 833629971
+   },
+   "2": {
+    "revenue": 42434762728,
+    "op": 6726152016,
+    "sga": null,
+    "inventory": 977634902
+   },
+   "3": {
+    "revenue": 70104540781,
+    "op": 13229872180,
+    "sga": null,
+    "inventory": 1037913311
+   },
+   "4": {
+    "revenue": 85471656697,
+    "op": 17336284379,
+    "sga": null,
+    "inventory": 959834643
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 17358785833,
+    "op": 3490379087,
+    "sga": null,
+    "inventory": 993973663
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1042,
+   "revenue": 16143,
+   "op": 880,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1081,
+   "revenue": 15455,
+   "op": 1167,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1225,
+   "revenue": 15000,
+   "op": 1144,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1053,
+   "revenue": 13774,
+   "op": 295,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1335,
+   "revenue": 19925,
+   "op": 2516,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1058,
+   "revenue": 24141,
+   "op": 3973,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1104,
+   "revenue": 23014,
+   "op": 4508,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 863,
+   "revenue": 16435,
+   "op": -718,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 834,
+   "revenue": 18108,
+   "op": 1408,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 978,
+   "revenue": 24327,
+   "op": 5318,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1038,
+   "revenue": 27670,
+   "op": 6504,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 960,
+   "revenue": 15367,
+   "op": 4106,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 994,
+   "revenue": 17359,
+   "op": 3490,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 60372,
+   "op": 3487,
+   "sga": null,
+   "inventory": 1053
+  },
+  {
+   "year": 2024,
+   "revenue": 83515,
+   "op": 10279,
+   "sga": null,
+   "inventory": 863
+  },
+  {
+   "year": 2025,
+   "revenue": 85472,
+   "op": 17336,
+   "sga": null,
+   "inventory": 960
+  }
+ ],
+ "updated": "2026-07-19T20:13:32",
+ "fs_div": "CFS",
+ "industry_code": "581",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,188 @@
  "corp_code": "00109037",
  "corp_name": "대성창투",
  "stock_code": "027830",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:47:21"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 6721695186,
+    "op": -953039200,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12363265555,
+    "op": 2052559665,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3316911862,
+    "op": 1433108787,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11964541000,
+    "op": 8485949024,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16463617725,
+    "op": 9687899370,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20088466445,
+    "op": 10238452840,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2049279180,
+    "op": 502134554,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4615159749,
+    "op": 530672675,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6315757657,
+    "op": 559322389,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 9251631072,
+    "op": 796603028,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1414986867,
+    "op": -348839780,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 5642,
+   "op": 3006,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3317,
+   "op": 1433,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 8648,
+   "op": 7053,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4499,
+   "op": 1202,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3625,
+   "op": 551,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2049,
+   "op": 502,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 2566,
+   "op": 29,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 1701,
+   "op": 29,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 2936,
+   "op": 237,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1415,
+   "op": -349,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 12363,
+   "op": 2053,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 20088,
+   "op": 10238,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 9252,
+   "op": 797,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:11:33",
+ "fs_div": "OFS",
+ "industry_code": "64209",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

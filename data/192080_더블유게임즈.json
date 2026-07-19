@@ -2,8 +2,214 @@
  "corp_code": "01010110",
  "corp_name": "더블유게임즈",
  "stock_code": "192080",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:57:29"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 145297852403,
+    "op": 46069871007,
+    "sga": 99227981396,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 289240980174,
+    "op": 96337097346,
+    "sga": 192903882828,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 428857966334,
+    "op": 150451633861,
+    "sga": 278406332473,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 582333575007,
+    "op": 213292020378,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 160481372919,
+    "op": 61686704658,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 323616569670,
+    "op": 128758628483,
+    "sga": 194857941187,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 477676375599,
+    "op": 188226455521,
+    "sga": null,
+    "inventory": 64346882
+   },
+   "4": {
+    "revenue": 633474235686,
+    "op": 248734053740,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 161979965731,
+    "op": 54753566142,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 333925658380,
+    "op": 109071304960,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 520079206711,
+    "op": 168223588768,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 719897452508,
+    "op": 232134020348,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 204987089511,
+    "op": 68470864691,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 145298,
+   "op": 46070,
+   "sga": 99228
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 143943,
+   "op": 50267,
+   "sga": 93676
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 139617,
+   "op": 54115,
+   "sga": 85502
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 153476,
+   "op": 62840,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 160481,
+   "op": 61687,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 163135,
+   "op": 67072,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 64,
+   "revenue": 154060,
+   "op": 59468,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 155798,
+   "op": 60508,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 161980,
+   "op": 54754,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 171946,
+   "op": 54318,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 186154,
+   "op": 59152,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 199818,
+   "op": 63910,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 204987,
+   "op": 68471,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 582334,
+   "op": 213292,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 633474,
+   "op": 248734,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 719897,
+   "op": 232134,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:23:44",
+ "fs_div": "CFS",
+ "industry_code": "5821",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "Y",
+ "market": "유가"
 }

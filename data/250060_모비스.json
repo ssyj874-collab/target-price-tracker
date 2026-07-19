@@ -2,8 +2,214 @@
  "corp_code": "01165155",
  "corp_name": "모비스",
  "stock_code": "250060",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:57:33"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5784800562,
+    "op": -1596966765,
+    "sga": 2553152389,
+    "inventory": 765195398
+   },
+   "2": {
+    "revenue": 10675026127,
+    "op": -3103706643,
+    "sga": 5637422042,
+    "inventory": 772228419
+   },
+   "3": {
+    "revenue": 14728521928,
+    "op": -4670443162,
+    "sga": 8064612235,
+    "inventory": 971603457
+   },
+   "4": {
+    "revenue": 19082389118,
+    "op": -6515719573,
+    "sga": 10225189330,
+    "inventory": 1181733657
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3590205060,
+    "op": -2451322443,
+    "sga": 2201132580,
+    "inventory": 945892436
+   },
+   "2": {
+    "revenue": 1812952189,
+    "op": -1503938459,
+    "sga": 1532571606,
+    "inventory": 18879244
+   },
+   "3": {
+    "revenue": 3081072703,
+    "op": -2210349201,
+    "sga": 2094077286,
+    "inventory": 18879244
+   },
+   "4": {
+    "revenue": 5026430528,
+    "op": -2393806350,
+    "sga": 2626765717,
+    "inventory": 0
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1245422414,
+    "op": -600971558,
+    "sga": 484043394,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2936994169,
+    "op": -1149687907,
+    "sga": 939673774,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3832877999,
+    "op": -1684507954,
+    "sga": 1393249452,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 5097704071,
+    "op": -2935210411,
+    "sga": 2172284881,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1042323523,
+    "op": -542819667,
+    "sga": 473847386,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 765,
+   "revenue": 5785,
+   "op": -1597,
+   "sga": 2553
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 772,
+   "revenue": 4890,
+   "op": -1507,
+   "sga": 3084
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 972,
+   "revenue": 4053,
+   "op": -1567,
+   "sga": 2427
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1182,
+   "revenue": 4354,
+   "op": -1845,
+   "sga": 2161
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 946,
+   "revenue": 3590,
+   "op": -2451,
+   "sga": 2201
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 19,
+   "revenue": -1777,
+   "op": 947,
+   "sga": -669
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 19,
+   "revenue": 1268,
+   "op": -706,
+   "sga": 562
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 0,
+   "revenue": 1945,
+   "op": -183,
+   "sga": 533
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1245,
+   "op": -601,
+   "sga": 484
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1692,
+   "op": -549,
+   "sga": 456
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 896,
+   "op": -535,
+   "sga": 454
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 1265,
+   "op": -1251,
+   "sga": 779
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1042,
+   "op": -543,
+   "sga": 474
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 19082,
+   "op": -6516,
+   "sga": 10225,
+   "inventory": 1182
+  },
+  {
+   "year": 2024,
+   "revenue": 5026,
+   "op": -2394,
+   "sga": 2627,
+   "inventory": 0
+  },
+  {
+   "year": 2025,
+   "revenue": 5098,
+   "op": -2935,
+   "sga": 2172,
+   "inventory": 0
+  }
+ ],
+ "updated": "2026-07-19T20:57:23",
+ "fs_div": "OFS",
+ "industry_code": "620",
+ "industry_name": "IT서비스·SW개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

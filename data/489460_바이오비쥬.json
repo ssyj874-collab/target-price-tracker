@@ -2,8 +2,79 @@
  "corp_code": "01657197",
  "corp_name": "바이오비쥬",
  "stock_code": "489460",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:08:17"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 17823256074,
+    "op": 4518749255,
+    "sga": 5005802666,
+    "inventory": 4399741027
+   },
+   "3": {
+    "revenue": 24463716547,
+    "op": 6967507088,
+    "sga": 7165725168,
+    "inventory": 4611417305
+   },
+   "4": {
+    "revenue": 28490907891,
+    "op": 4227326924,
+    "sga": 11693281287,
+    "inventory": 5415153669
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8014647553,
+    "op": 2594342052,
+    "sga": 2913014819,
+    "inventory": 5863297745
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 4400,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 4611,
+   "revenue": 6640,
+   "op": 2449,
+   "sga": 2160
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 5415,
+   "revenue": 4027,
+   "op": -2740,
+   "sga": 4528
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 5863,
+   "revenue": 8015,
+   "op": 2594,
+   "sga": 2913
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 28491,
+   "op": 4227,
+   "sga": 11693,
+   "inventory": 5415
+  }
+ ],
+ "updated": "2026-07-19T21:10:09",
+ "fs_div": "CFS",
+ "industry_code": "204",
+ "industry_name": "화학",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

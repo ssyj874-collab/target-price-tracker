@@ -2,8 +2,114 @@
  "corp_code": "00867034",
  "corp_name": "듀켐바이오",
  "stock_code": "176750",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:21:16"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 35600990962,
+    "op": 5075928847,
+    "sga": 7001510110,
+    "inventory": 1304185868
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 8459403366,
+    "op": 669780397,
+    "sga": 1891337832,
+    "inventory": 1102306907
+   },
+   "2": {
+    "revenue": 17963929759,
+    "op": 2557095169,
+    "sga": 3523262529,
+    "inventory": 1279602852
+   },
+   "3": {
+    "revenue": 27889001698,
+    "op": 4457813692,
+    "sga": 5286323895,
+    "inventory": 1205568127
+   },
+   "4": {
+    "revenue": 38572364091,
+    "op": 7443287746,
+    "sga": 6906236145,
+    "inventory": 1037545520
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 9704628588,
+    "op": 1256035567,
+    "sga": 2147766109,
+    "inventory": 1710718848
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 1304,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1102,
+   "revenue": 8459,
+   "op": 670,
+   "sga": 1891
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1280,
+   "revenue": 9505,
+   "op": 1887,
+   "sga": 1632
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1206,
+   "revenue": 9925,
+   "op": 1901,
+   "sga": 1763
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1038,
+   "revenue": 10683,
+   "op": 2985,
+   "sga": 1620
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1711,
+   "revenue": 9705,
+   "op": 1256,
+   "sga": 2148
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 35601,
+   "op": 5076,
+   "sga": 7002,
+   "inventory": 1304
+  },
+  {
+   "year": 2025,
+   "revenue": 38572,
+   "op": 7443,
+   "sga": 6906,
+   "inventory": 1038
+  }
+ ],
+ "updated": "2026-07-19T21:19:44",
+ "fs_div": "CFS",
+ "industry_code": "212",
+ "industry_name": "의약품",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

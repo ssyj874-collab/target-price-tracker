@@ -2,8 +2,214 @@
  "corp_code": "00357740",
  "corp_name": "NHN KCP",
  "stock_code": "060250",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:20:43"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 226374566803,
+    "op": 8967395676,
+    "sga": 12601433471,
+    "inventory": 6237642478
+   },
+   "2": {
+    "revenue": 460543970911,
+    "op": 19920357140,
+    "sga": 24278921167,
+    "inventory": 5868193941
+   },
+   "3": {
+    "revenue": 703659476363,
+    "op": 29565324366,
+    "sga": 38168246461,
+    "inventory": 5433975293
+   },
+   "4": {
+    "revenue": 972016222465,
+    "op": 41958924937,
+    "sga": 50438821524,
+    "inventory": 4904163059
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 268164002181,
+    "op": 11163531877,
+    "sga": 13213731849,
+    "inventory": 4410040203
+   },
+   "2": {
+    "revenue": 544091272750,
+    "op": 22815570570,
+    "sga": 24989863903,
+    "inventory": 3468773935
+   },
+   "3": {
+    "revenue": 816536785011,
+    "op": 31601217363,
+    "sga": 39706136096,
+    "inventory": 3435800906
+   },
+   "4": {
+    "revenue": 1105325511837,
+    "op": 43781831372,
+    "sga": null,
+    "inventory": 4855271334
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 281071276334,
+    "op": 10907327097,
+    "sga": null,
+    "inventory": 4671585634
+   },
+   "2": {
+    "revenue": 581732951983,
+    "op": 23277508690,
+    "sga": null,
+    "inventory": 4119523875
+   },
+   "3": {
+    "revenue": 899245113403,
+    "op": 39040485307,
+    "sga": null,
+    "inventory": 3618790118
+   },
+   "4": {
+    "revenue": 1234882750705,
+    "op": 54687939493,
+    "sga": null,
+    "inventory": 3311354141
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 344859626447,
+    "op": 13783712135,
+    "sga": null,
+    "inventory": 3372977192
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 6238,
+   "revenue": 226375,
+   "op": 8967,
+   "sga": 12601
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 5868,
+   "revenue": 234169,
+   "op": 10953,
+   "sga": 11677
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 5434,
+   "revenue": 243116,
+   "op": 9645,
+   "sga": 13889
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 4904,
+   "revenue": 268357,
+   "op": 12394,
+   "sga": 12271
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 4410,
+   "revenue": 268164,
+   "op": 11164,
+   "sga": 13214
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 3469,
+   "revenue": 275927,
+   "op": 11652,
+   "sga": 11776
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 3436,
+   "revenue": 272446,
+   "op": 8786,
+   "sga": 14716
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 4855,
+   "revenue": 288789,
+   "op": 12181,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 4672,
+   "revenue": 281071,
+   "op": 10907,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 4120,
+   "revenue": 300662,
+   "op": 12370,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 3619,
+   "revenue": 317512,
+   "op": 15763,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3311,
+   "revenue": 335638,
+   "op": 15647,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3373,
+   "revenue": 344860,
+   "op": 13784,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 972016,
+   "op": 41959,
+   "sga": 50439,
+   "inventory": 4904
+  },
+  {
+   "year": 2024,
+   "revenue": 1105326,
+   "op": 43782,
+   "sga": null,
+   "inventory": 4855
+  },
+  {
+   "year": 2025,
+   "revenue": 1234883,
+   "op": 54688,
+   "sga": null,
+   "inventory": 3311
+  }
+ ],
+ "updated": "2026-07-19T20:29:59",
+ "fs_div": "CFS",
+ "industry_code": "661",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

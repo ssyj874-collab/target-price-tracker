@@ -2,8 +2,214 @@
  "corp_code": "01170962",
  "corp_name": "GRT",
  "stock_code": "900290",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:02:51"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 1132434563,
+    "op": 200121293,
+    "sga": 103094497,
+    "inventory": 141332037
+   },
+   "2": {
+    "revenue": 2258714513,
+    "op": 414089975,
+    "sga": 41815606,
+    "inventory": 107766932
+   },
+   "3": {
+    "revenue": 2900164798,
+    "op": 315066404,
+    "sga": 43354230,
+    "inventory": 166522888
+   },
+   "4": {
+    "revenue": 4041639278,
+    "op": 414515313,
+    "sga": 61354595,
+    "inventory": 118453476
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1281014974,
+    "op": 167470625,
+    "sga": 153139979,
+    "inventory": 145261044
+   },
+   "2": {
+    "revenue": 2598381825,
+    "op": 371056938,
+    "sga": null,
+    "inventory": 171575998
+   },
+   "3": {
+    "revenue": 3314879131,
+    "op": 587409163,
+    "sga": 63443658,
+    "inventory": 195553909
+   },
+   "4": {
+    "revenue": 4574221304,
+    "op": 798079282,
+    "sga": 84988123,
+    "inventory": 117067615
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1359371831,
+    "op": 221899496,
+    "sga": null,
+    "inventory": 132556060
+   },
+   "2": {
+    "revenue": 2857927905,
+    "op": 456813393,
+    "sga": null,
+    "inventory": 128240758
+   },
+   "3": {
+    "revenue": 3668845993,
+    "op": 515789078,
+    "sga": null,
+    "inventory": 137187501
+   },
+   "4": {
+    "revenue": 4943342767,
+    "op": 707629590,
+    "sga": null,
+    "inventory": 123462947
+   }
+  },
+  "2026": {
+   "3": {
+    "revenue": 4224880210,
+    "op": 662144457,
+    "sga": null,
+    "inventory": 148722941
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 141,
+   "revenue": 1132,
+   "op": 200,
+   "sga": 103
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 108,
+   "revenue": 1126,
+   "op": 214,
+   "sga": -61
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 167,
+   "revenue": 641,
+   "op": -99,
+   "sga": 2
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 118,
+   "revenue": 1141,
+   "op": 99,
+   "sga": 18
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 145,
+   "revenue": 1281,
+   "op": 167,
+   "sga": 153
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 172,
+   "revenue": 1317,
+   "op": 204,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 196,
+   "revenue": 716,
+   "op": 216,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 117,
+   "revenue": 1259,
+   "op": 211,
+   "sga": 22
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 133,
+   "revenue": 1359,
+   "op": 222,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 128,
+   "revenue": 1499,
+   "op": 235,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 137,
+   "revenue": 811,
+   "op": 59,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 123,
+   "revenue": 1274,
+   "op": 192,
+   "sga": null
+  },
+  {
+   "label": "2026.3분기",
+   "inventory": 149,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4042,
+   "op": 415,
+   "sga": 61,
+   "inventory": 118
+  },
+  {
+   "year": 2024,
+   "revenue": 4574,
+   "op": 798,
+   "sga": 85,
+   "inventory": 117
+  },
+  {
+   "year": 2025,
+   "revenue": 4943,
+   "op": 708,
+   "sga": null,
+   "inventory": 123
+  }
+ ],
+ "updated": "2026-07-19T21:10:48",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

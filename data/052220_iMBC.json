@@ -2,8 +2,214 @@
  "corp_code": "00370006",
  "corp_name": "iMBC",
  "stock_code": "052220",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:48:17"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 11284975603,
+    "op": 356519097,
+    "sga": 10928456506,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 21902733649,
+    "op": 352992855,
+    "sga": 21549740794,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 33316813720,
+    "op": 1046977467,
+    "sga": 32269836253,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 46303655129,
+    "op": 1156866116,
+    "sga": 45146789013,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 11507353576,
+    "op": -186125915,
+    "sga": 11693479491,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 23255856868,
+    "op": 406169693,
+    "sga": 22849687175,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 33609200907,
+    "op": 435477022,
+    "sga": 33173723885,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 45442807948,
+    "op": 634528436,
+    "sga": 44808279512,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 10247723395,
+    "op": -533406044,
+    "sga": 10781129439,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 19988573404,
+    "op": -6713316325,
+    "sga": 26701889729,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 30058255181,
+    "op": -7895576771,
+    "sga": 37953831952,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 40045648499,
+    "op": -7632134757,
+    "sga": 47677783256,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 9630131871,
+    "op": 2630259,
+    "sga": 9627501612,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 11285,
+   "op": 357,
+   "sga": 10928
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 10618,
+   "op": -4,
+   "sga": 10621
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 11414,
+   "op": 694,
+   "sga": 10720
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 12987,
+   "op": 110,
+   "sga": 12877
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 11507,
+   "op": -186,
+   "sga": 11693
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 11749,
+   "op": 592,
+   "sga": 11156
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 10353,
+   "op": 29,
+   "sga": 10324
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 11834,
+   "op": 199,
+   "sga": 11635
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 10248,
+   "op": -533,
+   "sga": 10781
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 9741,
+   "op": -6180,
+   "sga": 15921
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 10070,
+   "op": -1182,
+   "sga": 11252
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9987,
+   "op": 263,
+   "sga": 9724
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 9630,
+   "op": 3,
+   "sga": 9628
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 46304,
+   "op": 1157,
+   "sga": 45147,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 45443,
+   "op": 635,
+   "sga": 44808,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 40046,
+   "op": -7632,
+   "sga": 47678,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:27:06",
+ "fs_div": "CFS",
+ "industry_code": "603",
+ "industry_name": "방송",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

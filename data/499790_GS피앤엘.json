@@ -2,8 +2,114 @@
  "corp_code": "01882845",
  "corp_name": "GS피앤엘",
  "stock_code": "499790",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:03:32"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 38321549330,
+    "op": -38200717,
+    "sga": 5430643649,
+    "inventory": 1968327534
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 94475877201,
+    "op": 15215734704,
+    "sga": 8311487085,
+    "inventory": 1981696989
+   },
+   "2": {
+    "revenue": 206621045094,
+    "op": 26779447359,
+    "sga": 17431413399,
+    "inventory": 2032437222
+   },
+   "3": {
+    "revenue": 328582982143,
+    "op": 46708743252,
+    "sga": 26742483810,
+    "inventory": 3801085339
+   },
+   "4": {
+    "revenue": 481682588524,
+    "op": 78022623652,
+    "sga": 35836200732,
+    "inventory": 3276731339
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 130365731480,
+    "op": 24162422637,
+    "sga": 9059522314,
+    "inventory": 3304782456
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 1968,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1982,
+   "revenue": 94476,
+   "op": 15216,
+   "sga": 8311
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 2032,
+   "revenue": 112145,
+   "op": 11564,
+   "sga": 9120
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 3801,
+   "revenue": 121962,
+   "op": 19929,
+   "sga": 9311
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3277,
+   "revenue": 153100,
+   "op": 31314,
+   "sga": 9094
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3305,
+   "revenue": 130366,
+   "op": 24162,
+   "sga": 9060
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 38322,
+   "op": -38,
+   "sga": 5431,
+   "inventory": 1968
+  },
+  {
+   "year": 2025,
+   "revenue": 481683,
+   "op": 78023,
+   "sga": 35836,
+   "inventory": 3277
+  }
+ ],
+ "updated": "2026-07-19T21:10:25",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "Y",
+ "market": "유가"
 }

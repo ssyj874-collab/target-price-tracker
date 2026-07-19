@@ -2,8 +2,53 @@
  "corp_code": "01685677",
  "corp_name": "리센스메디컬",
  "stock_code": "394420",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:45:47"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 8828610805,
+    "op": -10640384599,
+    "sga": 14971883911,
+    "inventory": 3672727112
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1020668629,
+    "op": -2363757854,
+    "sga": 2932900533,
+    "inventory": 4026428584
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 3673,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 4026,
+   "revenue": 1021,
+   "op": -2364,
+   "sga": 2933
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 8829,
+   "op": -10640,
+   "sga": 14972,
+   "inventory": 3673
+  }
+ ],
+ "updated": "2026-07-19T20:28:37",
+ "fs_div": "CFS",
+ "industry_code": "27199",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

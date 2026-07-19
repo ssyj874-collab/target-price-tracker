@@ -2,8 +2,214 @@
  "corp_code": "00266952",
  "corp_name": "네오위즈홀딩스",
  "stock_code": "042420",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:44:52"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 69125574814,
+    "op": -1459337988,
+    "sga": null,
+    "inventory": 103840505
+   },
+   "2": {
+    "revenue": 139743735376,
+    "op": -8438417918,
+    "sga": null,
+    "inventory": 91685569
+   },
+   "3": {
+    "revenue": 257561736462,
+    "op": 9857954621,
+    "sga": null,
+    "inventory": 109927348
+   },
+   "4": {
+    "revenue": 366584640067,
+    "op": 17377536173,
+    "sga": null,
+    "inventory": 168431650
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 97464676860,
+    "op": 12612519651,
+    "sga": null,
+    "inventory": 158532221
+   },
+   "2": {
+    "revenue": 184739356084,
+    "op": 12303920659,
+    "sga": null,
+    "inventory": 169319451
+   },
+   "3": {
+    "revenue": 278173895132,
+    "op": 16530309194,
+    "sga": null,
+    "inventory": 123660217
+   },
+   "4": {
+    "revenue": 368058340152,
+    "op": 20412125520,
+    "sga": null,
+    "inventory": 205922691
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 89303912108,
+    "op": 8470781997,
+    "sga": null,
+    "inventory": 217380236
+   },
+   "2": {
+    "revenue": 199739609106,
+    "op": 25664514710,
+    "sga": null,
+    "inventory": 444765174
+   },
+   "3": {
+    "revenue": 328927215528,
+    "op": 52575662395,
+    "sga": null,
+    "inventory": 452120595
+   },
+   "4": {
+    "revenue": 436800978752,
+    "op": 55244001359,
+    "sga": null,
+    "inventory": 572187574
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 101585075744,
+    "op": 5596284515,
+    "sga": null,
+    "inventory": 481154142
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 104,
+   "revenue": 69126,
+   "op": -1459,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 92,
+   "revenue": 70618,
+   "op": -6979,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 110,
+   "revenue": 117818,
+   "op": 18296,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 168,
+   "revenue": 109023,
+   "op": 7520,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 159,
+   "revenue": 97465,
+   "op": 12613,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 169,
+   "revenue": 87275,
+   "op": -309,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 124,
+   "revenue": 93435,
+   "op": 4226,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 206,
+   "revenue": 89884,
+   "op": 3882,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 217,
+   "revenue": 89304,
+   "op": 8471,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 445,
+   "revenue": 110436,
+   "op": 17194,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 452,
+   "revenue": 129188,
+   "op": 26911,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 572,
+   "revenue": 107874,
+   "op": 2668,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 481,
+   "revenue": 101585,
+   "op": 5596,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 366585,
+   "op": 17378,
+   "sga": null,
+   "inventory": 168
+  },
+  {
+   "year": 2024,
+   "revenue": 368058,
+   "op": 20412,
+   "sga": null,
+   "inventory": 206
+  },
+  {
+   "year": 2025,
+   "revenue": 436801,
+   "op": 55244,
+   "sga": null,
+   "inventory": 572
+  }
+ ],
+ "updated": "2026-07-19T20:16:44",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

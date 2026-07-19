@@ -2,8 +2,214 @@
  "corp_code": "00108001",
  "corp_name": "남화토건",
  "stock_code": "091590",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:43:41"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 28109968324,
+    "op": 2402629760,
+    "sga": 829884120,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 46285565978,
+    "op": 865088505,
+    "sga": 1684477103,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 61248157556,
+    "op": -1129612513,
+    "sga": 2532243892,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 71796422978,
+    "op": -4374625832,
+    "sga": 4594816475,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 16594155190,
+    "op": -1601153120,
+    "sga": 3282662571,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 30523602297,
+    "op": -2059413651,
+    "sga": 4904452165,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 41200633831,
+    "op": -1858518655,
+    "sga": 5761192120,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 56667089060,
+    "op": -2000605756,
+    "sga": 6321819640,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 13749753067,
+    "op": -120050033,
+    "sga": 920402395,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 29155856702,
+    "op": 198598703,
+    "sga": 1851117148,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 49418498923,
+    "op": 1021400784,
+    "sga": 2840643042,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 72692437385,
+    "op": 3750421857,
+    "sga": 2459886655,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 17559116425,
+    "op": 385216686,
+    "sga": 936821133,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 28110,
+   "op": 2403,
+   "sga": 830
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 18176,
+   "op": -1538,
+   "sga": 855
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 14963,
+   "op": -1995,
+   "sga": 848
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 10548,
+   "op": -3245,
+   "sga": 2063
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 16594,
+   "op": -1601,
+   "sga": 3283
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 13929,
+   "op": -458,
+   "sga": 1622
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 10677,
+   "op": 201,
+   "sga": 857
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 15466,
+   "op": -142,
+   "sga": 561
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 13750,
+   "op": -120,
+   "sga": 920
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 15406,
+   "op": 319,
+   "sga": 931
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 20263,
+   "op": 823,
+   "sga": 990
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 23274,
+   "op": 2729,
+   "sga": -381
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 17559,
+   "op": 385,
+   "sga": 937
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 71796,
+   "op": -4375,
+   "sga": 4595,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 56667,
+   "op": -2001,
+   "sga": 6322,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 72692,
+   "op": 3750,
+   "sga": 2460,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:39:55",
+ "fs_div": "CFS",
+ "industry_code": "411",
+ "industry_name": "종합건설",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,188 @@
  "corp_code": "00651017",
  "corp_name": "나우IB",
  "stock_code": "293580",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:41:16"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 20855163413,
+    "op": 2714738486,
+    "sga": 4711784231,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26697697608,
+    "op": 2455449314,
+    "sga": 6195267842,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 3972446436,
+    "op": -863404586,
+    "sga": 1272704601,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 38002549183,
+    "op": 26190078155,
+    "sga": 6867419859,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 31120422977,
+    "op": 17411595727,
+    "sga": 7301614961,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 31417158257,
+    "op": 9011096930,
+    "sga": 6923164519,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 14089461547,
+    "op": 8823677119,
+    "sga": 3688923005,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12346051692,
+    "op": 6143574086,
+    "sga": 3474929368,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 22484944290,
+    "op": 12763711684,
+    "sga": 7079384913,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 29156196744,
+    "op": 7301339438,
+    "sga": 6909363694,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6738454813,
+    "op": 311944961,
+    "sga": 1526081380,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 5843,
+   "op": -259,
+   "sga": 1483
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 3972,
+   "op": -863,
+   "sga": 1273
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 34030,
+   "op": 27053,
+   "sga": 5595
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": -6882,
+   "op": -8778,
+   "sga": 434
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 297,
+   "op": -8400,
+   "sga": -378
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 14089,
+   "op": 8824,
+   "sga": 3689
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": -1743,
+   "op": -2680,
+   "sga": -214
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 10139,
+   "op": 6620,
+   "sga": 3604
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6671,
+   "op": -5462,
+   "sga": -170
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 6738,
+   "op": 312,
+   "sga": 1526
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 26698,
+   "op": 2455,
+   "sga": 6195,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 31417,
+   "op": 9011,
+   "sga": 6923,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 29156,
+   "op": 7301,
+   "sga": 6909,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:19:21",
+ "fs_div": "CFS",
+ "industry_code": "64919",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

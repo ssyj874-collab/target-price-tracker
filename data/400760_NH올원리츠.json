@@ -2,8 +2,136 @@
  "corp_code": "01480780",
  "corp_name": "NH올원리츠",
  "stock_code": "400760",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:21:08"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 10241303318,
+    "op": 6345966156,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20516614653,
+    "op": 12473536347,
+    "sga": 8043078306,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 9542948786,
+    "op": 4884239835,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 19306598112,
+    "op": 10303676888,
+    "sga": 9002921224,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 13882125496,
+    "op": 8287671073,
+    "sga": 5594454423,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27889483783,
+    "op": 18768745817,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 12798242120,
+    "op": 8404704674,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 20517,
+   "op": 12474,
+   "sga": 8043,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 19307,
+   "op": 10304,
+   "sga": 9003,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 27889,
+   "op": 18769,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:06:25",
+ "fs_div": "CFS",
+ "industry_code": "6812",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

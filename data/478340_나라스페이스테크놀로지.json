@@ -2,8 +2,66 @@
  "corp_code": "01787355",
  "corp_name": "나라스페이스테크놀로지",
  "stock_code": "478340",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:40:20"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 11366229097,
+    "op": -3836170763,
+    "sga": 5991557715,
+    "inventory": 867515516
+   },
+   "4": {
+    "revenue": 13236859805,
+    "op": -5460961314,
+    "sga": 8683101651,
+    "inventory": 2308232609
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 413320760,
+    "op": -3030654488,
+    "sga": 2636936555,
+    "inventory": 3206507662
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 868,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 2308,
+   "revenue": 1871,
+   "op": -1625,
+   "sga": 2692
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3207,
+   "revenue": 413,
+   "op": -3031,
+   "sga": 2637
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 13237,
+   "op": -5461,
+   "sga": 8683,
+   "inventory": 2308
+  }
+ ],
+ "updated": "2026-07-19T20:19:57",
+ "fs_div": "OFS",
+ "industry_code": "31311",
+ "industry_name": "기타운송장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

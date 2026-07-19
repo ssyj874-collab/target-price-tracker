@@ -2,8 +2,143 @@
  "corp_code": "01576102",
  "corp_name": "미래에셋글로벌리츠",
  "stock_code": "396690",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:01:17"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 5334391055,
+    "op": 2077548587,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12546165194,
+    "op": 4417222814,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 6589550049,
+    "op": 2243475224,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12752315741,
+    "op": 4247765372,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 6853885751,
+    "op": 2712195512,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12192220640,
+    "op": -2512882750,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 11842441279,
+    "op": 1693806545,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 12546,
+   "op": 4417,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 12752,
+   "op": 4248,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 12192,
+   "op": -2513,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 11842,
+   "op": 1694,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:47",
+ "fs_div": "CFS",
+ "industry_code": "6811",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

@@ -2,8 +2,114 @@
  "corp_code": "01233465",
  "corp_name": "동국생명과학",
  "stock_code": "303810",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:03:54"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 131816122285,
+    "op": 11916090535,
+    "sga": 16671854829,
+    "inventory": 42258309008
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 35050322459,
+    "op": 3102940532,
+    "sga": 4900847369,
+    "inventory": 32341282967
+   },
+   "2": {
+    "revenue": 69939031929,
+    "op": 6315067720,
+    "sga": 10222137363,
+    "inventory": 33661916090
+   },
+   "3": {
+    "revenue": 99376863606,
+    "op": 10591483346,
+    "sga": 15014132416,
+    "inventory": 31811796760
+   },
+   "4": {
+    "revenue": 130343747512,
+    "op": 13045359378,
+    "sga": 19953424095,
+    "inventory": 35229561860
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 33084007101,
+    "op": 3438791812,
+    "sga": 5365405768,
+    "inventory": 33515597973
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 42258,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 32341,
+   "revenue": 35050,
+   "op": 3103,
+   "sga": 4901
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 33662,
+   "revenue": 34889,
+   "op": 3212,
+   "sga": 5321
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 31812,
+   "revenue": 29438,
+   "op": 4276,
+   "sga": 4792
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 35230,
+   "revenue": 30967,
+   "op": 2454,
+   "sga": 4939
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 33516,
+   "revenue": 33084,
+   "op": 3439,
+   "sga": 5365
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 131816,
+   "op": 11916,
+   "sga": 16672,
+   "inventory": 42258
+  },
+  {
+   "year": 2025,
+   "revenue": 130344,
+   "op": 13045,
+   "sga": 19953,
+   "inventory": 35230
+  }
+ ],
+ "updated": "2026-07-19T20:35:22",
+ "fs_div": "OFS",
+ "industry_code": "212",
+ "industry_name": "의약품",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

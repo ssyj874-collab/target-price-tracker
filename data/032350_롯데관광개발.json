@@ -2,8 +2,214 @@
  "corp_code": "00231372",
  "corp_name": "롯데관광개발",
  "stock_code": "032350",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:41:45"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 47108205040,
+    "op": -33403977537,
+    "sga": null,
+    "inventory": 5562911092
+   },
+   "2": {
+    "revenue": 124046027699,
+    "op": -51652685306,
+    "sga": null,
+    "inventory": 3428653239
+   },
+   "3": {
+    "revenue": 220819258968,
+    "op": -51312014385,
+    "sga": null,
+    "inventory": 4335174117
+   },
+   "4": {
+    "revenue": 313548275382,
+    "op": -60605788472,
+    "sga": null,
+    "inventory": 4134584468
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 106226678882,
+    "op": 8790964437,
+    "sga": null,
+    "inventory": 7029594545
+   },
+   "2": {
+    "revenue": 222305020463,
+    "op": 14677504376,
+    "sga": null,
+    "inventory": 6257051997
+   },
+   "3": {
+    "revenue": 361454258938,
+    "op": 36841036576,
+    "sga": null,
+    "inventory": 3246566520
+   },
+   "4": {
+    "revenue": 471467953184,
+    "op": 39006615340,
+    "sga": null,
+    "inventory": 6318219786
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 121947998745,
+    "op": 13024878207,
+    "sga": null,
+    "inventory": 8179824621
+   },
+   "2": {
+    "revenue": 279629879321,
+    "op": 46138929138,
+    "sga": null,
+    "inventory": 8568683792
+   },
+   "3": {
+    "revenue": 466299717711,
+    "op": 99096120069,
+    "sga": null,
+    "inventory": 6802747785
+   },
+   "4": {
+    "revenue": 653447659142,
+    "op": 143328051761,
+    "sga": null,
+    "inventory": 6345812064
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 156181531200,
+    "op": 28784836987,
+    "sga": null,
+    "inventory": 10987422895
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 5563,
+   "revenue": 47108,
+   "op": -33404,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 3429,
+   "revenue": 76938,
+   "op": -18249,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 4335,
+   "revenue": 96773,
+   "op": 341,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 4135,
+   "revenue": 92729,
+   "op": -9294,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 7030,
+   "revenue": 106227,
+   "op": 8791,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 6257,
+   "revenue": 116078,
+   "op": 5887,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 3247,
+   "revenue": 139149,
+   "op": 22164,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 6318,
+   "revenue": 110014,
+   "op": 2166,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 8180,
+   "revenue": 121948,
+   "op": 13025,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 8569,
+   "revenue": 157682,
+   "op": 33114,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 6803,
+   "revenue": 186670,
+   "op": 52957,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 6346,
+   "revenue": 187148,
+   "op": 44232,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 10987,
+   "revenue": 156182,
+   "op": 28785,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 313548,
+   "op": -60606,
+   "sga": null,
+   "inventory": 4135
+  },
+  {
+   "year": 2024,
+   "revenue": 471468,
+   "op": 39007,
+   "sga": null,
+   "inventory": 6318
+  },
+  {
+   "year": 2025,
+   "revenue": 653448,
+   "op": 143328,
+   "sga": null,
+   "inventory": 6346
+  }
+ ],
+ "updated": "2026-07-19T20:07:33",
+ "fs_div": "CFS",
+ "industry_code": "75210",
+ "industry_name": "사업지원서비스",
+ "corp_cls": "Y",
+ "market": "유가"
 }

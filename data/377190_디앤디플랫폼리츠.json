@@ -2,8 +2,143 @@
  "corp_code": "01475609",
  "corp_name": "디앤디플랫폼리츠",
  "stock_code": "377190",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:26:14"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 9691479606,
+    "op": 5152853166,
+    "sga": 4538626440,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20916813932,
+    "op": 10780572029,
+    "sga": 10136241903,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 10617617422,
+    "op": 5638295057,
+    "sga": 4979322365,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20209688646,
+    "op": 10361527713,
+    "sga": 9848160933,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 14632403199,
+    "op": 9467930150,
+    "sga": 5164473049,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26345572257,
+    "op": 15013132094,
+    "sga": 11332440163,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 29764634888,
+    "op": 19821380822,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 20917,
+   "op": 10781,
+   "sga": 10136,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 20210,
+   "op": 10362,
+   "sga": 9848,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 26346,
+   "op": 15013,
+   "sga": 11332,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 29765,
+   "op": 19821,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:05:11",
+ "fs_div": "CFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

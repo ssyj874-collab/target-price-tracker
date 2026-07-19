@@ -2,8 +2,114 @@
  "corp_code": "01374717",
  "corp_name": "미트박스",
  "stock_code": "475460",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:06:39"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 110262919538,
+    "op": 3119147742,
+    "sga": 107143771796,
+    "inventory": 9885927662
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 28329287709,
+    "op": 219362645,
+    "sga": 28109925064,
+    "inventory": 13109527656
+   },
+   "2": {
+    "revenue": 59857576892,
+    "op": -69491864,
+    "sga": 59927068756,
+    "inventory": 19030332030
+   },
+   "3": {
+    "revenue": 101394080362,
+    "op": 872679928,
+    "sga": 100521400434,
+    "inventory": 20056788724
+   },
+   "4": {
+    "revenue": 135593979851,
+    "op": 2906042515,
+    "sga": 132687937336,
+    "inventory": 11769114307
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 34324381316,
+    "op": 1589287285,
+    "sga": 32735094031,
+    "inventory": 24133691413
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 9886,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 13110,
+   "revenue": 28329,
+   "op": 219,
+   "sga": 28110
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 19030,
+   "revenue": 31528,
+   "op": -289,
+   "sga": 31817
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 20057,
+   "revenue": 41537,
+   "op": 942,
+   "sga": 40594
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 11769,
+   "revenue": 34200,
+   "op": 2033,
+   "sga": 32167
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 24134,
+   "revenue": 34324,
+   "op": 1589,
+   "sga": 32735
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 110263,
+   "op": 3119,
+   "sga": 107144,
+   "inventory": 9886
+  },
+  {
+   "year": 2025,
+   "revenue": 135594,
+   "op": 2906,
+   "sga": 132688,
+   "inventory": 11769
+  }
+ ],
+ "updated": "2026-07-19T21:09:27",
+ "fs_div": "CFS",
+ "industry_code": "639",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

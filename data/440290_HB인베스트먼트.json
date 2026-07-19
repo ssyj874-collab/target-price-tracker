@@ -2,8 +2,175 @@
  "corp_code": "00309460",
  "corp_name": "HB인베스트먼트",
  "stock_code": "440290",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:03:48"
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 20516634627,
+    "op": 10605665105,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4922297608,
+    "op": 2201510669,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 6919728090,
+    "op": 1900308669,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 10459056051,
+    "op": 5013267119,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 15154239893,
+    "op": 6494612538,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2370297697,
+    "op": 361956709,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8947214826,
+    "op": 4292713825,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12606220402,
+    "op": 5936947212,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 17401010000,
+    "op": 7258048422,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3183504041,
+    "op": 882516410,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4922,
+   "op": 2202,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 1997,
+   "op": -301,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3539,
+   "op": 3113,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 4695,
+   "op": 1481,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 2370,
+   "op": 362,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6577,
+   "op": 3931,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 3659,
+   "op": 1644,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 4795,
+   "op": 1321,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3184,
+   "op": 883,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 20517,
+   "op": 10606,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 15154,
+   "op": 6495,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 17401,
+   "op": 7258,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:26",
+ "fs_div": "OFS",
+ "industry_code": "649",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,127 @@
  "corp_code": "01385050",
  "corp_name": "넥스트바이오메디컬",
  "stock_code": "389650",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:47:36"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 7315707365,
+    "op": -2461496065,
+    "sga": 6968626242,
+    "inventory": 2761800319
+   },
+   "4": {
+    "revenue": 9542630855,
+    "op": -3574731246,
+    "sga": 9397109788,
+    "inventory": 2581094690
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3773575369,
+    "op": -667927156,
+    "sga": 3115457638,
+    "inventory": 2558293284
+   },
+   "2": {
+    "revenue": 7744772261,
+    "op": -647286041,
+    "sga": 5925455600,
+    "inventory": 2548214049
+   },
+   "3": {
+    "revenue": 12677720102,
+    "op": -277672277,
+    "sga": 9130917328,
+    "inventory": 2618026240
+   },
+   "4": {
+    "revenue": 16476802680,
+    "op": -719540988,
+    "sga": 12247857844,
+    "inventory": 3035672492
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4121403275,
+    "op": -1191381800,
+    "sga": 3964904879,
+    "inventory": 2869658132
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": 2762,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 2581,
+   "revenue": 2227,
+   "op": -1113,
+   "sga": 2428
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2558,
+   "revenue": 3774,
+   "op": -668,
+   "sga": 3115
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 2548,
+   "revenue": 3971,
+   "op": 21,
+   "sga": 2810
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2618,
+   "revenue": 4933,
+   "op": 370,
+   "sga": 3205
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3036,
+   "revenue": 3799,
+   "op": -442,
+   "sga": 3117
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2870,
+   "revenue": 4121,
+   "op": -1191,
+   "sga": 3965
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 9543,
+   "op": -3575,
+   "sga": 9397,
+   "inventory": 2581
+  },
+  {
+   "year": 2025,
+   "revenue": 16477,
+   "op": -720,
+   "sga": 12248,
+   "inventory": 3036
+  }
+ ],
+ "updated": "2026-07-19T20:28:30",
+ "fs_div": "OFS",
+ "industry_code": "27199",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

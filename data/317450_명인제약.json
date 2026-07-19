@@ -2,8 +2,66 @@
  "corp_code": "00179489",
  "corp_name": "명인제약",
  "stock_code": "317450",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:54:49"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 215162686788,
+    "op": 68828222044,
+    "sga": 61224312100,
+    "inventory": 62660115484
+   },
+   "4": {
+    "revenue": 287254358952,
+    "op": 92498324556,
+    "sga": 80961714791,
+    "inventory": 64107845030
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 72135799962,
+    "op": 25109405212,
+    "sga": 19495381771,
+    "inventory": 63019095237
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 62660,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 64108,
+   "revenue": 72092,
+   "op": 23670,
+   "sga": 19737
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 63019,
+   "revenue": 72136,
+   "op": 25109,
+   "sga": 19495
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 287254,
+   "op": 92498,
+   "sga": 80962,
+   "inventory": 64108
+  }
+ ],
+ "updated": "2026-07-19T21:02:00",
+ "fs_div": "CFS",
+ "industry_code": "21212",
+ "industry_name": "의약품",
+ "corp_cls": "Y",
+ "market": "유가"
 }

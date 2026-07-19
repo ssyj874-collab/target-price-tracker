@@ -2,8 +2,214 @@
  "corp_code": "01398151",
  "corp_name": "밸로프",
  "stock_code": "331520",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:11:25"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8327335138,
+    "op": 905191203,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17452357336,
+    "op": 536838857,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 27151859066,
+    "op": 352082766,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 35972131511,
+    "op": 228744749,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 8731888788,
+    "op": 873365012,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17823589185,
+    "op": 515752266,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 26091360647,
+    "op": -525247948,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 35589253012,
+    "op": -194541468,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 8579386065,
+    "op": -408010074,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17481491778,
+    "op": 7087488,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 26419438852,
+    "op": 1059376794,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 37833534051,
+    "op": 2878432232,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10796784183,
+    "op": 975085432,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 8327,
+   "op": 905,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 9125,
+   "op": -368,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 9700,
+   "op": -185,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 8820,
+   "op": -123,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 8732,
+   "op": 873,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 9092,
+   "op": -358,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 8268,
+   "op": -1041,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 9498,
+   "op": 331,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 8579,
+   "op": -408,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 8902,
+   "op": 415,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8938,
+   "op": 1052,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 11414,
+   "op": 1819,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 10797,
+   "op": 975,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 35972,
+   "op": 229,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 35589,
+   "op": -195,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 37834,
+   "op": 2878,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:02:57",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

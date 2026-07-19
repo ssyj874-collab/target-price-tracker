@@ -2,8 +2,214 @@
  "corp_code": "00519252",
  "corp_name": "THE E&M",
  "stock_code": "089230",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:46:38"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8091142925,
+    "op": -1814156610,
+    "sga": 3044064087,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 16389051823,
+    "op": -3912388152,
+    "sga": 6197326151,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 24477291549,
+    "op": -5874318039,
+    "sga": 9189194771,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 31702033259,
+    "op": -7717794327,
+    "sga": 11991754862,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6427348490,
+    "op": -1744647992,
+    "sga": 2636138798,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12110862575,
+    "op": -3535899739,
+    "sga": 4905294331,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17122344154,
+    "op": -5543565040,
+    "sga": 7190688086,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22196259181,
+    "op": -7472181005,
+    "sga": 9320288183,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 4525368831,
+    "op": -1741447918,
+    "sga": 1915616855,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9096174794,
+    "op": -3581981399,
+    "sga": 4156239270,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13355318412,
+    "op": -5652353971,
+    "sga": 6393112586,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 12340921889,
+    "op": -8575907256,
+    "sga": 9553662882,
+    "inventory": 2127019738
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 6196020250,
+    "op": -2142663625,
+    "sga": 3121973102,
+    "inventory": 2100378954
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 8091,
+   "op": -1814,
+   "sga": 3044
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 8298,
+   "op": -2098,
+   "sga": 3153
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 8088,
+   "op": -1962,
+   "sga": 2992
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 7225,
+   "op": -1843,
+   "sga": 2803
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 6427,
+   "op": -1745,
+   "sga": 2636
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 5684,
+   "op": -1791,
+   "sga": 2269
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 5011,
+   "op": -2008,
+   "sga": 2285
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5074,
+   "op": -1929,
+   "sga": 2130
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 4525,
+   "op": -1741,
+   "sga": 1916
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4571,
+   "op": -1841,
+   "sga": 2241
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4259,
+   "op": -2070,
+   "sga": 2237
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 2127,
+   "revenue": -1014,
+   "op": -2924,
+   "sga": 3161
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2100,
+   "revenue": 6196,
+   "op": -2143,
+   "sga": 3122
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 31702,
+   "op": -7718,
+   "sga": 11992,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 22196,
+   "op": -7472,
+   "sga": 9320,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 12341,
+   "op": -8576,
+   "sga": 9554,
+   "inventory": 2127
+  }
+ ],
+ "updated": "2026-07-19T20:05:13",
+ "fs_div": "CFS",
+ "industry_code": "639",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

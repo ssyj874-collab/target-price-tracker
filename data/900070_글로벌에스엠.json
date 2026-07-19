@@ -2,8 +2,214 @@
  "corp_code": "00783246",
  "corp_name": "글로벌에스엠",
  "stock_code": "900070",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:34:34"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 153434754,
+    "op": 6542623,
+    "sga": 31493308,
+    "inventory": 120717097
+   },
+   "2": {
+    "revenue": 303690839,
+    "op": 13916267,
+    "sga": 63083384,
+    "inventory": 121026298
+   },
+   "3": {
+    "revenue": 452667726,
+    "op": 23055692,
+    "sga": 95473522,
+    "inventory": 115687964
+   },
+   "4": {
+    "revenue": 602118826,
+    "op": 19571603,
+    "sga": 136992854,
+    "inventory": 111139523
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 23243620,
+    "op": 907441,
+    "sga": 5155915,
+    "inventory": 15544366
+   },
+   "2": {
+    "revenue": 46410089,
+    "op": 2330442,
+    "sga": 10348212,
+    "inventory": 15017980
+   },
+   "3": {
+    "revenue": 69391743,
+    "op": 3577720,
+    "sga": 15049334,
+    "inventory": 14685870
+   },
+   "4": {
+    "revenue": 90355041,
+    "op": 4099798,
+    "sga": 20212535,
+    "inventory": 14263993
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 21443705,
+    "op": 817634,
+    "sga": 5118809,
+    "inventory": 14679823
+   },
+   "2": {
+    "revenue": 44510127,
+    "op": 2865756,
+    "sga": 10060705,
+    "inventory": 15893755
+   },
+   "3": {
+    "revenue": 67430582,
+    "op": 4250571,
+    "sga": 14950425,
+    "inventory": 15668458
+   },
+   "4": {
+    "revenue": 90947338,
+    "op": 5838640,
+    "sga": 19436094,
+    "inventory": 14330935
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 23247136,
+    "op": 978419,
+    "sga": 5243455,
+    "inventory": 14223005
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 121,
+   "revenue": 153,
+   "op": 7,
+   "sga": 31
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 121,
+   "revenue": 150,
+   "op": 7,
+   "sga": 32
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 116,
+   "revenue": 149,
+   "op": 9,
+   "sga": 32
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 111,
+   "revenue": 149,
+   "op": -3,
+   "sga": 42
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 16,
+   "revenue": 23,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 15,
+   "revenue": 23,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 15,
+   "revenue": 23,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 14,
+   "revenue": 21,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 15,
+   "revenue": 21,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 16,
+   "revenue": 23,
+   "op": 2,
+   "sga": 5
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 16,
+   "revenue": 23,
+   "op": 1,
+   "sga": 5
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 14,
+   "revenue": 24,
+   "op": 2,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 14,
+   "revenue": 23,
+   "op": 1,
+   "sga": 5
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 602,
+   "op": 20,
+   "sga": 137,
+   "inventory": 111
+  },
+  {
+   "year": 2024,
+   "revenue": 90,
+   "op": 4,
+   "sga": 20,
+   "inventory": 14
+  },
+  {
+   "year": 2025,
+   "revenue": 91,
+   "op": 6,
+   "sga": 19,
+   "inventory": 14
+  }
+ ],
+ "updated": "2026-07-19T20:06:58",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

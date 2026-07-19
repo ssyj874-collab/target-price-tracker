@@ -2,8 +2,30 @@
  "corp_code": "01709065",
  "corp_name": "마키나락스",
  "stock_code": "477850",
- "cums": {},
- "quarterly": [],
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 3034769432,
+    "op": -2433478229,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3035,
+   "op": -2433,
+   "sga": null
+  }
+ ],
  "annual": [],
- "updated": "2026-07-13T23:48:33"
+ "updated": "2026-07-19T20:19:50",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,156 @@
  "corp_code": "01622720",
  "corp_name": "KB스타리츠",
  "stock_code": "432320",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:11:20"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 12081386594,
+    "op": 5571959585,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 28576063875,
+    "op": -21428738638,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 13049821275,
+    "op": 6682885437,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 29781181411,
+    "op": -26837382721,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 14682362792,
+    "op": 8488694040,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30393926136,
+    "op": -72447633526,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 16331438209,
+    "op": 9958341277,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32357935534,
+    "op": -879802489,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 28576,
+   "op": -21429,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 29781,
+   "op": -26837,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 30394,
+   "op": -72448,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 32358,
+   "op": -880,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:13:46",
+ "fs_div": "CFS",
+ "industry_code": "68112",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

@@ -2,8 +2,114 @@
  "corp_code": "01703849",
  "corp_name": "노머스",
  "stock_code": "473980",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:49:31"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 68912539631,
+    "op": 8181458723,
+    "sga": 20563625747,
+    "inventory": 2559451493
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 19144104283,
+    "op": 4595560589,
+    "sga": 5097426239,
+    "inventory": 2067779119
+   },
+   "2": {
+    "revenue": 35178064082,
+    "op": 8814312626,
+    "sga": 10114596161,
+    "inventory": 1859535818
+   },
+   "3": {
+    "revenue": 62822696455,
+    "op": 14245061254,
+    "sga": 17280703156,
+    "inventory": 2859396474
+   },
+   "4": {
+    "revenue": 75725779285,
+    "op": 12339888114,
+    "sga": 25266169389,
+    "inventory": 1559160013
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 18580439645,
+    "op": 3999255843,
+    "sga": 5627053841,
+    "inventory": 1401334912
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 2559,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2068,
+   "revenue": 19144,
+   "op": 4596,
+   "sga": 5097
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1860,
+   "revenue": 16034,
+   "op": 4219,
+   "sga": 5017
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2859,
+   "revenue": 27645,
+   "op": 5431,
+   "sga": 7166
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1559,
+   "revenue": 12903,
+   "op": -1905,
+   "sga": 7985
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1401,
+   "revenue": 18580,
+   "op": 3999,
+   "sga": 5627
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 68913,
+   "op": 8181,
+   "sga": 20564,
+   "inventory": 2559
+  },
+  {
+   "year": 2025,
+   "revenue": 75726,
+   "op": 12340,
+   "sga": 25266,
+   "inventory": 1559
+  }
+ ],
+ "updated": "2026-07-19T21:09:14",
+ "fs_div": "CFS",
+ "industry_code": "90199",
+ "industry_name": "예술·스포츠",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

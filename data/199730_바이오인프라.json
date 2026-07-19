@@ -2,8 +2,214 @@
  "corp_code": "01110058",
  "corp_name": "바이오인프라",
  "stock_code": "199730",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:09:09"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 6124433520,
+    "op": -718323891,
+    "sga": 2206552271,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 14651459245,
+    "op": 244816694,
+    "sga": 4211453385,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 22478874379,
+    "op": 395455723,
+    "sga": 6355730734,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30128735340,
+    "op": 1305211809,
+    "sga": 8248060159,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5022224725,
+    "op": -1505502626,
+    "sga": 2607635508,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 10879329090,
+    "op": -2810730091,
+    "sga": 5190230917,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 18496945293,
+    "op": -3958526435,
+    "sga": 8024725733,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23833208627,
+    "op": -5116782778,
+    "sga": 10812909698,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5441320360,
+    "op": -2206678460,
+    "sga": 2831328843,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11520836503,
+    "op": -3322958460,
+    "sga": 5389764051,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16586877901,
+    "op": -5374844915,
+    "sga": 8713602578,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23148010709,
+    "op": -6276773124,
+    "sga": 11601374919,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5500274369,
+    "op": -2408960079,
+    "sga": 3100370232,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 6124,
+   "op": -718,
+   "sga": 2207
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 8527,
+   "op": 963,
+   "sga": 2005
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 7827,
+   "op": 151,
+   "sga": 2144
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 7650,
+   "op": 910,
+   "sga": 1892
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5022,
+   "op": -1506,
+   "sga": 2608
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 5857,
+   "op": -1305,
+   "sga": 2583
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 7618,
+   "op": -1148,
+   "sga": 2834
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5336,
+   "op": -1158,
+   "sga": 2788
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5441,
+   "op": -2207,
+   "sga": 2831
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6080,
+   "op": -1116,
+   "sga": 2558
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5066,
+   "op": -2052,
+   "sga": 3324
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6561,
+   "op": -902,
+   "sga": 2888
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5500,
+   "op": -2409,
+   "sga": 3100
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 30129,
+   "op": 1305,
+   "sga": 8248,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 23833,
+   "op": -5117,
+   "sga": 10813,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 23148,
+   "op": -6277,
+   "sga": 11601,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:31:37",
+ "fs_div": "OFS",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

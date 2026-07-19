@@ -2,8 +2,214 @@
  "corp_code": "01511558",
  "corp_name": "네오이뮨텍",
  "stock_code": "950220",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:45:00"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -9447804,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -22299795,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -32617489,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -42605742,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -8279653,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -15291552,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 806272,
+    "op": -23788691,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 124917,
+    "op": -29352453,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 9111,
+    "op": -5564406,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 26690,
+    "op": -10329712,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 39666,
+    "op": -13518849,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 66673,
+    "op": -17732754,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 359672,
+    "op": -4245868,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -13,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1,
+   "op": -8,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": -1,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -43,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -29,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -18,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:11:02",
+ "fs_div": "CFS",
+ "industry_code": "70130",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

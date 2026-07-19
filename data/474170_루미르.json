@@ -2,8 +2,114 @@
  "corp_code": "01636565",
  "corp_name": "루미르",
  "stock_code": "474170",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:44:03"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 14277073160,
+    "op": -1201741372,
+    "sga": 2835944132,
+    "inventory": 675704385
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1412679212,
+    "op": -810694353,
+    "sga": 778641711,
+    "inventory": 1235454780
+   },
+   "2": {
+    "revenue": 3424039567,
+    "op": -501771759,
+    "sga": 1115853936,
+    "inventory": 2123162944
+   },
+   "3": {
+    "revenue": 6851020231,
+    "op": -829996261,
+    "sga": 1939345214,
+    "inventory": 3510650482
+   },
+   "4": {
+    "revenue": 10568518218,
+    "op": -594389927,
+    "sga": 2841373908,
+    "inventory": 3239835805
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1897647434,
+    "op": -250410838,
+    "sga": 922917222,
+    "inventory": 3489762782
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 676,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1235,
+   "revenue": 1413,
+   "op": -811,
+   "sga": 779
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 2123,
+   "revenue": 2011,
+   "op": 309,
+   "sga": 337
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 3511,
+   "revenue": 3427,
+   "op": -328,
+   "sga": 823
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 3240,
+   "revenue": 3717,
+   "op": 236,
+   "sga": 902
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 3490,
+   "revenue": 1898,
+   "op": -250,
+   "sga": 923
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 14277,
+   "op": -1202,
+   "sga": 2836,
+   "inventory": 676
+  },
+  {
+   "year": 2025,
+   "revenue": 10569,
+   "op": -594,
+   "sga": 2841,
+   "inventory": 3240
+  }
+ ],
+ "updated": "2026-07-19T21:09:21",
+ "fs_div": "OFS",
+ "industry_code": "31311",
+ "industry_name": "기타운송장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

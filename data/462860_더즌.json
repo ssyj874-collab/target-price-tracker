@@ -2,8 +2,92 @@
  "corp_code": "01563667",
  "corp_name": "더즌",
  "stock_code": "462860",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:58:16"
+ "cums": {
+  "2025": {
+   "1": {
+    "revenue": 15394446649,
+    "op": 2607896798,
+    "sga": null,
+    "inventory": 31609134
+   },
+   "2": {
+    "revenue": 30003274315,
+    "op": 5715623456,
+    "sga": null,
+    "inventory": 30091087
+   },
+   "3": {
+    "revenue": 45097309755,
+    "op": 9684643963,
+    "sga": null,
+    "inventory": 28616894
+   },
+   "4": {
+    "revenue": 59971247338,
+    "op": 13628015735,
+    "sga": null,
+    "inventory": 28087263
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 15684907159,
+    "op": 3895717096,
+    "sga": null,
+    "inventory": 27513778
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.1분기",
+   "inventory": 32,
+   "revenue": 15394,
+   "op": 2608,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 30,
+   "revenue": 14609,
+   "op": 3108,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 29,
+   "revenue": 15094,
+   "op": 3969,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 28,
+   "revenue": 14874,
+   "op": 3943,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 28,
+   "revenue": 15685,
+   "op": 3896,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 59971,
+   "op": 13628,
+   "sga": null,
+   "inventory": 28
+  }
+ ],
+ "updated": "2026-07-19T20:24:05",
+ "fs_div": "CFS",
+ "industry_code": "612",
+ "industry_name": "통신",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

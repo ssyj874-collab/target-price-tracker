@@ -2,8 +2,188 @@
  "corp_code": "00156910",
  "corp_name": "SBI인베스트먼트",
  "stock_code": "019550",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:23:40"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 25742837725,
+    "op": 9838176153,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 29276094479,
+    "op": 8539182950,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5428355419,
+    "op": 2629353059,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12394771291,
+    "op": 5853284700,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16742911921,
+    "op": 7610800621,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 28682710829,
+    "op": 11742142586,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3569248472,
+    "op": 909752328,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7874440891,
+    "op": 2003520621,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12827934936,
+    "op": 4066951887,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 32707572126,
+    "op": 9323017602,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8109221172,
+    "op": 4941943761,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 3533,
+   "op": -1299,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5428,
+   "op": 2629,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6966,
+   "op": 3224,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4348,
+   "op": 1758,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 11940,
+   "op": 4131,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3569,
+   "op": 910,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4305,
+   "op": 1094,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4953,
+   "op": 2063,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 19880,
+   "op": 5256,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8109,
+   "op": 4942,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 29276,
+   "op": 8539,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 28683,
+   "op": 11742,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 32708,
+   "op": 9323,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:00",
+ "fs_div": "OFS",
+ "industry_code": "64209",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

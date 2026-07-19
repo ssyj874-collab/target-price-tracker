@@ -2,8 +2,214 @@
  "corp_code": "01335790",
  "corp_name": "바이젠셀",
  "stock_code": "308080",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:10:13"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -4970638948,
+    "sga": 4970638948,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -10147717151,
+    "sga": 10147717151,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -14613896739,
+    "sga": 14613896739,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -20084446567,
+    "sga": 20084446567,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -4455019141,
+    "sga": 4455019141,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 55000000,
+    "op": -8047382891,
+    "sga": 8056306175,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 55500000,
+    "op": -11678628261,
+    "sga": 11687666918,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 278946254,
+    "op": -15330478633,
+    "sga": 15342363544,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -2686108098,
+    "sga": 2686108098,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 622300,
+    "op": -8342441072,
+    "sga": 8342781661,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8623300,
+    "op": -10775148715,
+    "sga": 10779868305,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22674300,
+    "op": -17108466056,
+    "sga": 17119529971,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 328712689,
+    "op": -2835237212,
+    "sga": 2850663811,
+    "inventory": 12487272
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4971,
+   "sga": 4971
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5177,
+   "sga": 5177
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4466,
+   "sga": 4466
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5471,
+   "sga": 5471
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4455,
+   "sga": 4455
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 55,
+   "op": -3592,
+   "sga": 3601
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3631,
+   "sga": 3631
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 223,
+   "op": -3652,
+   "sga": 3655
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2686,
+   "sga": 2686
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 1,
+   "op": -5656,
+   "sga": 5657
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8,
+   "op": -2433,
+   "sga": 2437
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 14,
+   "op": -6333,
+   "sga": 6340
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 12,
+   "revenue": 329,
+   "op": -2835,
+   "sga": 2851
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -20084,
+   "sga": 20084,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 279,
+   "op": -15330,
+   "sga": 15342,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 23,
+   "op": -17108,
+   "sga": 17120,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:01:00",
+ "fs_div": "OFS",
+ "industry_code": "701",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

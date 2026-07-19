@@ -2,8 +2,214 @@
  "corp_code": "00904672",
  "corp_name": "넷마블",
  "stock_code": "251270",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:48:47"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 602610785532,
+    "op": -28192788197,
+    "sga": null,
+    "inventory": 2672032060
+   },
+   "2": {
+    "revenue": 1205939120379,
+    "op": -65426454996,
+    "sga": null,
+    "inventory": 2368569894
+   },
+   "3": {
+    "revenue": 1836500001858,
+    "op": -87306842862,
+    "sga": null,
+    "inventory": 2745253242
+   },
+   "4": {
+    "revenue": 2502055599771,
+    "op": -68468184309,
+    "sga": null,
+    "inventory": 2721582674
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 585386793718,
+    "op": 3693042333,
+    "sga": null,
+    "inventory": 2349815109
+   },
+   "2": {
+    "revenue": 1367473377960,
+    "op": 114904512989,
+    "sga": null,
+    "inventory": 2323473095
+   },
+   "3": {
+    "revenue": 2014784142537,
+    "op": 180399994612,
+    "sga": null,
+    "inventory": 2133575333
+   },
+   "4": {
+    "revenue": 2663783169910,
+    "op": 215627215188,
+    "sga": null,
+    "inventory": 2118851906
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 623876973162,
+    "op": 49710408219,
+    "sga": null,
+    "inventory": 2255538400
+   },
+   "2": {
+    "revenue": 1341517868624,
+    "op": 150851382392,
+    "sga": null,
+    "inventory": 1713019737
+   },
+   "3": {
+    "revenue": 2037473134234,
+    "op": 241720913259,
+    "sga": null,
+    "inventory": 1704271635
+   },
+   "4": {
+    "revenue": 2835074411896,
+    "op": 352478352483,
+    "sga": null,
+    "inventory": 1521893175
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 651726759308,
+    "op": 53053513568,
+    "sga": null,
+    "inventory": 1504730407
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 2672,
+   "revenue": 602611,
+   "op": -28193,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 2369,
+   "revenue": 603328,
+   "op": -37234,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 2745,
+   "revenue": 630561,
+   "op": -21880,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 2722,
+   "revenue": 665556,
+   "op": 18839,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 2350,
+   "revenue": 585387,
+   "op": 3693,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 2323,
+   "revenue": 782087,
+   "op": 111211,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 2134,
+   "revenue": 647311,
+   "op": 65495,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 2119,
+   "revenue": 648999,
+   "op": 35227,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 2256,
+   "revenue": 623877,
+   "op": 49710,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1713,
+   "revenue": 717641,
+   "op": 101141,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1704,
+   "revenue": 695955,
+   "op": 90870,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1522,
+   "revenue": 797601,
+   "op": 110757,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1505,
+   "revenue": 651727,
+   "op": 53054,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 2502056,
+   "op": -68468,
+   "sga": null,
+   "inventory": 2722
+  },
+  {
+   "year": 2024,
+   "revenue": 2663783,
+   "op": 215627,
+   "sga": null,
+   "inventory": 2119
+  },
+  {
+   "year": 2025,
+   "revenue": 2835074,
+   "op": 352478,
+   "sga": null,
+   "inventory": 1522
+  }
+ ],
+ "updated": "2026-07-19T20:29:23",
+ "fs_div": "CFS",
+ "industry_code": "5821",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "Y",
+ "market": "유가"
 }

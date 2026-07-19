@@ -2,8 +2,214 @@
  "corp_code": "00303873",
  "corp_name": "CJ CGV",
  "stock_code": "079160",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T19:56:48"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 393594866657,
+    "op": -14096812125,
+    "sga": null,
+    "inventory": 16337541251
+   },
+   "2": {
+    "revenue": 795259003621,
+    "op": 1680560088,
+    "sga": null,
+    "inventory": 16875338296
+   },
+   "3": {
+    "revenue": 1202849143863,
+    "op": 32207177116,
+    "sga": null,
+    "inventory": 19367516189
+   },
+   "4": {
+    "revenue": 1545839243146,
+    "op": 49065796701,
+    "sga": null,
+    "inventory": 18966978727
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 392945522607,
+    "op": 4540791362,
+    "sga": null,
+    "inventory": 19475506164
+   },
+   "2": {
+    "revenue": 822885557698,
+    "op": 26885661239,
+    "sga": null,
+    "inventory": 18599823631
+   },
+   "3": {
+    "revenue": 1369886162917,
+    "op": 58956889421,
+    "sga": null,
+    "inventory": 23444465357
+   },
+   "4": {
+    "revenue": 1957884214182,
+    "op": 75933768898,
+    "sga": null,
+    "inventory": 21298947687
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 533590697727,
+    "op": 3200890054,
+    "sga": null,
+    "inventory": 21064547901
+   },
+   "2": {
+    "revenue": 1025207306825,
+    "op": 4917673710,
+    "sga": null,
+    "inventory": 21043796130
+   },
+   "3": {
+    "revenue": 1608286791139,
+    "op": 28261763692,
+    "sga": null,
+    "inventory": 23593059672
+   },
+   "4": {
+    "revenue": 2275369359771,
+    "op": 96217499551,
+    "sga": null,
+    "inventory": 21378065104
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 573377789600,
+    "op": 8718738801,
+    "sga": null,
+    "inventory": 21342708725
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 16338,
+   "revenue": 393595,
+   "op": -14097,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 16875,
+   "revenue": 401664,
+   "op": 15777,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 19368,
+   "revenue": 407590,
+   "op": 30527,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 18967,
+   "revenue": 342990,
+   "op": 16859,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 19476,
+   "revenue": 392946,
+   "op": 4541,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 18600,
+   "revenue": 429940,
+   "op": 22345,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 23444,
+   "revenue": 547001,
+   "op": 32071,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 21299,
+   "revenue": 587998,
+   "op": 16977,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 21065,
+   "revenue": 533591,
+   "op": 3201,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 21044,
+   "revenue": 491617,
+   "op": 1717,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 23593,
+   "revenue": 583079,
+   "op": 23344,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 21378,
+   "revenue": 667083,
+   "op": 67956,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 21343,
+   "revenue": 573378,
+   "op": 8719,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1545839,
+   "op": 49066,
+   "sga": null,
+   "inventory": 18967
+  },
+  {
+   "year": 2024,
+   "revenue": 1957884,
+   "op": 75934,
+   "sga": null,
+   "inventory": 21299
+  },
+  {
+   "year": 2025,
+   "revenue": 2275369,
+   "op": 96217,
+   "sga": null,
+   "inventory": 21378
+  }
+ ],
+ "updated": "2026-07-19T20:16:08",
+ "fs_div": "CFS",
+ "industry_code": "59141",
+ "industry_name": "영상·음반",
+ "corp_cls": "Y",
+ "market": "유가"
 }

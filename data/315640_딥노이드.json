@@ -2,8 +2,214 @@
  "corp_code": "01344831",
  "corp_name": "딥노이드",
  "stock_code": "315640",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:35:46"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 161399656,
+    "op": -2100618447,
+    "sga": 2214965953,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 366764536,
+    "op": -3697265977,
+    "sga": 3906930762,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 860233039,
+    "op": -5366873095,
+    "sga": 5916841252,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1933065857,
+    "op": -6726839518,
+    "sga": 7536388064,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 358057362,
+    "op": -2757676529,
+    "sga": 2957287469,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4229844449,
+    "op": -5499915055,
+    "sga": 6062225600,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 8209141763,
+    "op": -7344975816,
+    "sga": 8637626708,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10847380732,
+    "op": -10095677184,
+    "sga": 11128858660,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 961395121,
+    "op": -3568941101,
+    "sga": 3985835842,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 4632689241,
+    "op": -3802226066,
+    "sga": 7736851656,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6813128433,
+    "op": -6837310507,
+    "sga": 11275025002,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 7471991050,
+    "op": -10557394860,
+    "sga": 15350516096,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 357186316,
+    "op": -3980895452,
+    "sga": 3980520572,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 161,
+   "op": -2101,
+   "sga": 2215
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 205,
+   "op": -1597,
+   "sga": 1692
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 493,
+   "op": -1670,
+   "sga": 2010
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 1073,
+   "op": -1360,
+   "sga": 1620
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 358,
+   "op": -2758,
+   "sga": 2957
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 3872,
+   "op": -2742,
+   "sga": 3105
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3979,
+   "op": -1845,
+   "sga": 2575
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 2638,
+   "op": -2751,
+   "sga": 2491
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 961,
+   "op": -3569,
+   "sga": 3986
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3671,
+   "op": -233,
+   "sga": 3751
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 2180,
+   "op": -3035,
+   "sga": 3538
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 659,
+   "op": -3720,
+   "sga": 4075
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 357,
+   "op": -3981,
+   "sga": 3981
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1933,
+   "op": -6727,
+   "sga": 7536,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 10847,
+   "op": -10096,
+   "sga": 11129,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 7472,
+   "op": -10557,
+   "sga": 15351,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:01:47",
+ "fs_div": "OFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,214 @@
  "corp_code": "00158325",
  "corp_name": "NICE평가정보",
  "stock_code": "030190",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:21:48"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 119229322565,
+    "op": 14672655846,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 245177542339,
+    "op": 33409158010,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 363999250377,
+    "op": 49314772871,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 485713636119,
+    "op": 65329237352,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 122798901925,
+    "op": 17433332989,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 253946772414,
+    "op": 41521408145,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 388329807108,
+    "op": 64136006123,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 535031889316,
+    "op": 86788428829,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 142177516584,
+    "op": 24972262489,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 293516705252,
+    "op": 52545169780,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 444568158503,
+    "op": 79541833701,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 602147035954,
+    "op": 104389438156,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 155989684683,
+    "op": 29402388646,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 119229,
+   "op": 14673,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 125948,
+   "op": 18737,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 118822,
+   "op": 15906,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 121714,
+   "op": 16014,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 122799,
+   "op": 17433,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 131148,
+   "op": 24088,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 134383,
+   "op": 22615,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 146702,
+   "op": 22652,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 142178,
+   "op": 24972,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 151339,
+   "op": 27573,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 151051,
+   "op": 26997,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 157579,
+   "op": 24848,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 155990,
+   "op": 29402,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 485714,
+   "op": 65329,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 535032,
+   "op": 86788,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 602147,
+   "op": 104389,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:04:26",
+ "fs_div": "CFS",
+ "industry_code": "63991",
+ "industry_name": "정보서비스",
+ "corp_cls": "Y",
+ "market": "유가"
 }

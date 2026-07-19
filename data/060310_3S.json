@@ -2,8 +2,221 @@
  "corp_code": "00378363",
  "corp_name": "3S",
  "stock_code": "060310",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T19:54:38"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 13312060243,
+    "op": 1078353604,
+    "sga": null,
+    "inventory": 3185851186
+   },
+   "2": {
+    "revenue": 23030396227,
+    "op": 1889462619,
+    "sga": null,
+    "inventory": 3376854923
+   },
+   "3": {
+    "revenue": 31082912613,
+    "op": 1517935436,
+    "sga": null,
+    "inventory": 3943372015
+   },
+   "4": {
+    "revenue": 41857755025,
+    "op": 2180508808,
+    "sga": 3122503222,
+    "inventory": 3714713347
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5355505235,
+    "op": -407287068,
+    "sga": null,
+    "inventory": 4461047763
+   },
+   "2": {
+    "revenue": 11837908224,
+    "op": -791011479,
+    "sga": null,
+    "inventory": 4084594539
+   },
+   "3": {
+    "revenue": 18306974740,
+    "op": -932183647,
+    "sga": null,
+    "inventory": 4881507511
+   },
+   "4": {
+    "revenue": 43595351592,
+    "op": 1164030344,
+    "sga": 3512912033,
+    "inventory": 3900186980
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 9871306195,
+    "op": 248814157,
+    "sga": 1112997082,
+    "inventory": 5157686132
+   },
+   "2": {
+    "revenue": 15823025089,
+    "op": -2433657827,
+    "sga": 2691189216,
+    "inventory": 4817739756
+   },
+   "3": {
+    "revenue": 21253626700,
+    "op": -3491560513,
+    "sga": 3557957570,
+    "inventory": 4312730507
+   },
+   "4": {
+    "revenue": 29022184967,
+    "op": -5831286169,
+    "sga": 3327811180,
+    "inventory": 4765268657
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 28386681783,
+    "op": -5106705737,
+    "sga": 4664414985,
+    "inventory": 3663237419
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 3186,
+   "revenue": 13312,
+   "op": 1078,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 3377,
+   "revenue": 9718,
+   "op": 811,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 3943,
+   "revenue": 8053,
+   "op": -372,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 3715,
+   "revenue": 10775,
+   "op": 663,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 4461,
+   "revenue": 5356,
+   "op": -407,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 4085,
+   "revenue": 6482,
+   "op": -384,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 4882,
+   "revenue": 6469,
+   "op": -141,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 3900,
+   "revenue": 25288,
+   "op": 2096,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 5158,
+   "revenue": 9871,
+   "op": 249,
+   "sga": 1113
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 4818,
+   "revenue": 5952,
+   "op": -2682,
+   "sga": 1578
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 4313,
+   "revenue": 5431,
+   "op": -1058,
+   "sga": 867
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 4765,
+   "revenue": 7769,
+   "op": -2340,
+   "sga": -230
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": 3663,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 41858,
+   "op": 2181,
+   "sga": 3123,
+   "inventory": 3715
+  },
+  {
+   "year": 2024,
+   "revenue": 43595,
+   "op": 1164,
+   "sga": 3513,
+   "inventory": 3900
+  },
+  {
+   "year": 2025,
+   "revenue": 29022,
+   "op": -5831,
+   "sga": 3328,
+   "inventory": 4765
+  },
+  {
+   "year": 2026,
+   "revenue": 28387,
+   "op": -5107,
+   "sga": 4664,
+   "inventory": 3663
+  }
+ ],
+ "updated": "2026-07-19T20:30:55",
+ "fs_div": "CFS",
+ "industry_code": "272",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

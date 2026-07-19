@@ -2,8 +2,140 @@
  "corp_code": "01376715",
  "corp_name": "디앤디파마텍",
  "stock_code": "347850",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:26:04"
+ "cums": {
+  "2024": {
+   "2": {
+    "revenue": 4441585559,
+    "op": -11167185542,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 6381313830,
+    "op": -18155678792,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 11436756608,
+    "op": -25016868135,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1413461813,
+    "op": -9312613506,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 2338018567,
+    "op": -17371820996,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 3307513230,
+    "op": -23581055755,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4297604947,
+    "op": -33992611604,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 128776875,
+    "op": -11122079256,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 1940,
+   "op": -6988,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5055,
+   "op": -6861,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 1413,
+   "op": -9313,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 925,
+   "op": -8059,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 969,
+   "op": -6209,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 990,
+   "op": -10412,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 129,
+   "op": -11122,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 11437,
+   "op": -25017,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 4298,
+   "op": -33993,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:29:18",
+ "fs_div": "CFS",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

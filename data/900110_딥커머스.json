@@ -2,8 +2,214 @@
  "corp_code": "00799070",
  "corp_name": "딥커머스",
  "stock_code": "900110",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:35:54"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 47744525,
+    "op": 206316,
+    "sga": 13158055,
+    "inventory": 13652915
+   },
+   "2": {
+    "revenue": 138709560,
+    "op": 13118971,
+    "sga": 29396912,
+    "inventory": 13945259
+   },
+   "3": {
+    "revenue": 224095506,
+    "op": 19828515,
+    "sga": 48979698,
+    "inventory": 13280350
+   },
+   "4": {
+    "revenue": 339379595,
+    "op": 30676045,
+    "sga": 75059994,
+    "inventory": 14579348
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 66269448,
+    "op": 475530,
+    "sga": 21041206,
+    "inventory": 15184594
+   },
+   "2": {
+    "revenue": 171732669,
+    "op": 15427718,
+    "sga": 40909271,
+    "inventory": 13943584
+   },
+   "3": {
+    "revenue": 264610379,
+    "op": 23939534,
+    "sga": 59032732,
+    "inventory": 15768179
+   },
+   "4": {
+    "revenue": 391629664,
+    "op": 42753918,
+    "sga": 77541579,
+    "inventory": 16035852
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 65341422,
+    "op": 2634356,
+    "sga": 16744089,
+    "inventory": 18805676
+   },
+   "2": {
+    "revenue": 151693640,
+    "op": 13138392,
+    "sga": 32696055,
+    "inventory": 14936791
+   },
+   "3": {
+    "revenue": 243767938,
+    "op": 30258058,
+    "sga": 48278129,
+    "inventory": 12182707
+   },
+   "4": {
+    "revenue": 356659191,
+    "op": 47641119,
+    "sga": 63622134,
+    "inventory": 10875290
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 72135348,
+    "op": 8339958,
+    "sga": 13977295,
+    "inventory": 11645306
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 14,
+   "revenue": 48,
+   "op": 0,
+   "sga": 13
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 14,
+   "revenue": 91,
+   "op": 13,
+   "sga": 16
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 13,
+   "revenue": 85,
+   "op": 7,
+   "sga": 20
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 15,
+   "revenue": 115,
+   "op": 11,
+   "sga": 26
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 15,
+   "revenue": 66,
+   "op": 0,
+   "sga": 21
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 14,
+   "revenue": 105,
+   "op": 15,
+   "sga": 20
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 16,
+   "revenue": 93,
+   "op": 9,
+   "sga": 18
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 16,
+   "revenue": 127,
+   "op": 19,
+   "sga": 19
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 19,
+   "revenue": 65,
+   "op": 3,
+   "sga": 17
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 15,
+   "revenue": 86,
+   "op": 11,
+   "sga": 16
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 12,
+   "revenue": 92,
+   "op": 17,
+   "sga": 16
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 11,
+   "revenue": 113,
+   "op": 17,
+   "sga": 15
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 12,
+   "revenue": 72,
+   "op": 8,
+   "sga": 14
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 339,
+   "op": 31,
+   "sga": 75,
+   "inventory": 15
+  },
+  {
+   "year": 2024,
+   "revenue": 392,
+   "op": 43,
+   "sga": 78,
+   "inventory": 16
+  },
+  {
+   "year": 2025,
+   "revenue": 357,
+   "op": 48,
+   "sga": 64,
+   "inventory": 11
+  }
+ ],
+ "updated": "2026-07-19T21:10:37",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

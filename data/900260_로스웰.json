@@ -2,8 +2,214 @@
  "corp_code": "01139266",
  "corp_name": "로스웰",
  "stock_code": "900260",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:40:27"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 266320375,
+    "op": 1516487,
+    "sga": 19878643,
+    "inventory": 215927901
+   },
+   "2": {
+    "revenue": 759817963,
+    "op": 26307125,
+    "sga": 41075641,
+    "inventory": 187239404
+   },
+   "3": {
+    "revenue": 1225475542,
+    "op": 44116255,
+    "sga": 60723129,
+    "inventory": 272427273
+   },
+   "4": {
+    "revenue": 1969978518,
+    "op": 78950986,
+    "sga": 86290937,
+    "inventory": 175775725
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 698808338,
+    "op": 47502231,
+    "sga": 19444296,
+    "inventory": 296146721
+   },
+   "2": {
+    "revenue": 1380876962,
+    "op": 76176873,
+    "sga": 34506663,
+    "inventory": 242549173
+   },
+   "3": {
+    "revenue": 2023932358,
+    "op": 88359916,
+    "sga": 58011587,
+    "inventory": 400296574
+   },
+   "4": {
+    "revenue": 2693371318,
+    "op": 103270506,
+    "sga": 80883819,
+    "inventory": 676210707
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 618365140,
+    "op": 777772,
+    "sga": 36992438,
+    "inventory": 1020953980
+   },
+   "2": {
+    "revenue": 1273686843,
+    "op": 11947258,
+    "sga": 61949056,
+    "inventory": 1377472387
+   },
+   "3": {
+    "revenue": 1965891394,
+    "op": 21648611,
+    "sga": 86485950,
+    "inventory": 1645306169
+   },
+   "4": {
+    "revenue": 3818232561,
+    "op": 56436923,
+    "sga": 124244770,
+    "inventory": 982105210
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1239518485,
+    "op": 33373927,
+    "sga": 30921301,
+    "inventory": 824565631
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 216,
+   "revenue": 266,
+   "op": 2,
+   "sga": 20
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 187,
+   "revenue": 493,
+   "op": 25,
+   "sga": 21
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 272,
+   "revenue": 466,
+   "op": 18,
+   "sga": 20
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 176,
+   "revenue": 745,
+   "op": 35,
+   "sga": 26
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 296,
+   "revenue": 699,
+   "op": 48,
+   "sga": 19
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 243,
+   "revenue": 682,
+   "op": 29,
+   "sga": 15
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 400,
+   "revenue": 643,
+   "op": 12,
+   "sga": 24
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 676,
+   "revenue": 669,
+   "op": 15,
+   "sga": 23
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1021,
+   "revenue": 618,
+   "op": 1,
+   "sga": 37
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1377,
+   "revenue": 655,
+   "op": 11,
+   "sga": 25
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1645,
+   "revenue": 692,
+   "op": 10,
+   "sga": 25
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 982,
+   "revenue": 1852,
+   "op": 35,
+   "sga": 38
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 825,
+   "revenue": 1240,
+   "op": 33,
+   "sga": 31
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1970,
+   "op": 79,
+   "sga": 86,
+   "inventory": 176
+  },
+  {
+   "year": 2024,
+   "revenue": 2693,
+   "op": 103,
+   "sga": 81,
+   "inventory": 676
+  },
+  {
+   "year": 2025,
+   "revenue": 3818,
+   "op": 56,
+   "sga": 124,
+   "inventory": 982
+  }
+ ],
+ "updated": "2026-07-19T21:10:43",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

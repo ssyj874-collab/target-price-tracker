@@ -2,8 +2,127 @@
  "corp_code": "01851650",
  "corp_name": "KB제30호스팩",
  "stock_code": "486630",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:11:39"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 0,
+    "op": -20430840,
+    "sga": 20430840,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -31246340,
+    "sga": 31246340,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -5999800,
+    "sga": 5999800,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -21186760,
+    "sga": 21186760,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -27009500,
+    "sga": 27009500,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -31331300,
+    "sga": 31331300,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -7909800,
+    "sga": 7909800,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": 11
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -15,
+   "sga": 15
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -31,
+   "sga": 31,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -31,
+   "sga": 31,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:09:39",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

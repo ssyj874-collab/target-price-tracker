@@ -2,8 +2,214 @@
  "corp_code": "00253985",
  "corp_name": "국보디자인",
  "stock_code": "066620",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:15:45"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 83077742992,
+    "op": 6087223874,
+    "sga": 5749519090,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 187956187213,
+    "op": 10817038880,
+    "sga": 12709554606,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 289427361077,
+    "op": 20348649354,
+    "sga": 17738708389,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 401268154696,
+    "op": 32409587505,
+    "sga": 23911967865,
+    "inventory": 141597300
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 101467048372,
+    "op": 8386808101,
+    "sga": 6131112670,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 208278126114,
+    "op": 18853567772,
+    "sga": 13770039762,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 314621919112,
+    "op": 34982455628,
+    "sga": 21408858615,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 421641298281,
+    "op": 41699899386,
+    "sga": 28872447450,
+    "inventory": 60520194
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 101949333821,
+    "op": 17103829186,
+    "sga": 6805933404,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 221226125893,
+    "op": 28307315511,
+    "sga": 12993375987,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 337103714487,
+    "op": 36100739866,
+    "sga": 19318579421,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 438886977675,
+    "op": 45761779944,
+    "sga": 26799846409,
+    "inventory": 0
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 102194858659,
+    "op": 15465352454,
+    "sga": 6712164719,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 83078,
+   "op": 6087,
+   "sga": 5750
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 104878,
+   "op": 4730,
+   "sga": 6960
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 101471,
+   "op": 9532,
+   "sga": 5029
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 142,
+   "revenue": 111841,
+   "op": 12061,
+   "sga": 6173
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 101467,
+   "op": 8387,
+   "sga": 6131
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 106811,
+   "op": 10467,
+   "sga": 7639
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 106344,
+   "op": 16129,
+   "sga": 7639
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 61,
+   "revenue": 107019,
+   "op": 6717,
+   "sga": 7464
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 101949,
+   "op": 17104,
+   "sga": 6806
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 119277,
+   "op": 11203,
+   "sga": 6187
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 115878,
+   "op": 7793,
+   "sga": 6325
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 0,
+   "revenue": 101783,
+   "op": 9661,
+   "sga": 7481
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 102195,
+   "op": 15465,
+   "sga": 6712
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 401268,
+   "op": 32410,
+   "sga": 23912,
+   "inventory": 142
+  },
+  {
+   "year": 2024,
+   "revenue": 421641,
+   "op": 41700,
+   "sga": 28872,
+   "inventory": 61
+  },
+  {
+   "year": 2025,
+   "revenue": 438887,
+   "op": 45762,
+   "sga": 26800,
+   "inventory": 0
+  }
+ ],
+ "updated": "2026-07-19T20:32:15",
+ "fs_div": "CFS",
+ "industry_code": "424",
+ "industry_name": "전문건설",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,214 @@
  "corp_code": "01210066",
  "corp_name": "리파인",
  "stock_code": "377450",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:46:09"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 15415990060,
+    "op": 5517173302,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 32085721839,
+    "op": 11482375635,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 48192410979,
+    "op": 16531935238,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 66484437442,
+    "op": 22552141363,
+    "sga": 43932296079,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 17950828123,
+    "op": 6387758874,
+    "sga": 11563069249,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 35571620370,
+    "op": 12566105592,
+    "sga": 23005514778,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 51798865090,
+    "op": 17047174707,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 67848478041,
+    "op": 20505136523,
+    "sga": 47343341518,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 15571746538,
+    "op": 4512036412,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 32583431064,
+    "op": 10865826557,
+    "sga": 21717604507,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 47816868023,
+    "op": 15685733413,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 61572418310,
+    "op": 18941412133,
+    "sga": 42631006177,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 15028805082,
+    "op": 5552142990,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 15416,
+   "op": 5517,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 16670,
+   "op": 5965,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 16107,
+   "op": 5050,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 18292,
+   "op": 6020,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 17951,
+   "op": 6388,
+   "sga": 11563
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 17621,
+   "op": 6178,
+   "sga": 11442
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 16227,
+   "op": 4481,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 16050,
+   "op": 3458,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 15572,
+   "op": 4512,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 17012,
+   "op": 6354,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 15233,
+   "op": 4820,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 13756,
+   "op": 3256,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 15029,
+   "op": 5552,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 66484,
+   "op": 22552,
+   "sga": 43932,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 67848,
+   "op": 20505,
+   "sga": 47343,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 61572,
+   "op": 18941,
+   "sga": 42631,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:05:16",
+ "fs_div": "OFS",
+ "industry_code": "63991",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

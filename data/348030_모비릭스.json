@@ -2,8 +2,214 @@
  "corp_code": "01210190",
  "corp_name": "모비릭스",
  "stock_code": "348030",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:57:20"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 25568886001,
+    "op": -1353976446,
+    "sga": 26922862447,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 50675951841,
+    "op": -2415778105,
+    "sga": 53091729946,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 73061638117,
+    "op": -752156222,
+    "sga": 73813794339,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 90794664557,
+    "op": -1524499350,
+    "sga": 92319163907,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 16781204610,
+    "op": -2072796643,
+    "sga": 18854001253,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 29989163437,
+    "op": -4811714950,
+    "sga": 34800878387,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 43534264377,
+    "op": -7969316181,
+    "sga": 51503580558,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 56000833353,
+    "op": -9307921050,
+    "sga": 65308754403,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 9894417918,
+    "op": -3056991394,
+    "sga": 12951409312,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 20196339911,
+    "op": -5725682579,
+    "sga": 25922022490,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 30517090251,
+    "op": -6576430071,
+    "sga": 37093520322,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 39684702560,
+    "op": -8922905730,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 7217698093,
+    "op": 1011292954,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 25569,
+   "op": -1354,
+   "sga": 26923
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 25107,
+   "op": -1062,
+   "sga": 26169
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 22386,
+   "op": 1664,
+   "sga": 20722
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 17733,
+   "op": -772,
+   "sga": 18505
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 16781,
+   "op": -2073,
+   "sga": 18854
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 13208,
+   "op": -2739,
+   "sga": 15947
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 13545,
+   "op": -3158,
+   "sga": 16703
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 12467,
+   "op": -1339,
+   "sga": 13805
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 9894,
+   "op": -3057,
+   "sga": 12951
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 10302,
+   "op": -2669,
+   "sga": 12971
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 10321,
+   "op": -851,
+   "sga": 11171
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9168,
+   "op": -2346,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 7218,
+   "op": 1011,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 90795,
+   "op": -1524,
+   "sga": 92319,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 56001,
+   "op": -9308,
+   "sga": 65309,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 39685,
+   "op": -8923,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:03:35",
+ "fs_div": "OFS",
+ "industry_code": "5821",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

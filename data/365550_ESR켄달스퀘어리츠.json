@@ -2,8 +2,136 @@
  "corp_code": "01437186",
  "corp_name": "ESR켄달스퀘어리츠",
  "stock_code": "365550",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:01:32"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 26522645796,
+    "op": 11047724352,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 52957789556,
+    "op": 24194866648,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 28147451687,
+    "op": 11975149308,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 56876297402,
+    "op": 26551539946,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 29119370754,
+    "op": 10931394867,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 59557601618,
+    "op": 25859163408,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 32463673068,
+    "op": 16899720908,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 52958,
+   "op": 24195,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 56876,
+   "op": 26552,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 59558,
+   "op": 25859,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:05:34",
+ "fs_div": "CFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

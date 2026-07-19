@@ -2,8 +2,79 @@
  "corp_code": "01380578",
  "corp_name": "도우인시스",
  "stock_code": "484120",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:02:32"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 69817534371,
+    "op": 1680839893,
+    "sga": 11225807993,
+    "inventory": 10900126205
+   },
+   "3": {
+    "revenue": 99598551404,
+    "op": -404087296,
+    "sga": 16372475347,
+    "inventory": 14584202875
+   },
+   "4": {
+    "revenue": 139791218651,
+    "op": 3384516329,
+    "sga": 21723683601,
+    "inventory": 11103566738
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 26828518417,
+    "op": 1819731091,
+    "sga": null,
+    "inventory": 21744371110
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 10900,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 14584,
+   "revenue": 29781,
+   "op": -2085,
+   "sga": 5147
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 11104,
+   "revenue": 40193,
+   "op": 3789,
+   "sga": 5351
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 21744,
+   "revenue": 26829,
+   "op": 1820,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 139791,
+   "op": 3385,
+   "sga": 21724,
+   "inventory": 11104
+  }
+ ],
+ "updated": "2026-07-19T21:09:51",
+ "fs_div": "CFS",
+ "industry_code": "26211",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

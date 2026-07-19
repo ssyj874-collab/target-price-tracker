@@ -2,8 +2,214 @@
  "corp_code": "00186452",
  "corp_name": "광무",
  "stock_code": "029480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:12:31"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 5342538118,
+    "op": -1146348383,
+    "sga": 1758212539,
+    "inventory": 469130690
+   },
+   "2": {
+    "revenue": 11167245853,
+    "op": -1602304625,
+    "sga": 2853526497,
+    "inventory": 11898384
+   },
+   "3": {
+    "revenue": 22018089336,
+    "op": -2142735126,
+    "sga": 4013980467,
+    "inventory": 2974299
+   },
+   "4": {
+    "revenue": 24240060004,
+    "op": -2607263511,
+    "sga": 5149087661,
+    "inventory": 2442699
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1618954791,
+    "op": -676195455,
+    "sga": 1221276660,
+    "inventory": 2442699
+   },
+   "2": {
+    "revenue": 3030723229,
+    "op": -938662228,
+    "sga": 2029217333,
+    "inventory": 2442699
+   },
+   "3": {
+    "revenue": 4427729059,
+    "op": -2185517639,
+    "sga": 3644119154,
+    "inventory": 148273659
+   },
+   "4": {
+    "revenue": 6526887723,
+    "op": -4708785371,
+    "sga": 6127410033,
+    "inventory": 102555199
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 1452201363,
+    "op": -1110169602,
+    "sga": 1472461692,
+    "inventory": 251727949
+   },
+   "2": {
+    "revenue": 3904727292,
+    "op": -2235544343,
+    "sga": 3146189076,
+    "inventory": 395133349
+   },
+   "3": {
+    "revenue": 5922444330,
+    "op": -3416417304,
+    "sga": 4612179253,
+    "inventory": 38210349
+   },
+   "4": {
+    "revenue": 7572016042,
+    "op": -4228353350,
+    "sga": 5986645815,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1175927590,
+    "op": -892450796,
+    "sga": 1063292407,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 469,
+   "revenue": 5343,
+   "op": -1146,
+   "sga": 1758
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 12,
+   "revenue": 5825,
+   "op": -456,
+   "sga": 1095
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 3,
+   "revenue": 10851,
+   "op": -540,
+   "sga": 1160
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 2,
+   "revenue": 2222,
+   "op": -465,
+   "sga": 1135
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 2,
+   "revenue": 1619,
+   "op": -676,
+   "sga": 1221
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 2,
+   "revenue": 1412,
+   "op": -262,
+   "sga": 808
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 148,
+   "revenue": 1397,
+   "op": -1247,
+   "sga": 1615
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 103,
+   "revenue": 2099,
+   "op": -2523,
+   "sga": 2483
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 252,
+   "revenue": 1452,
+   "op": -1110,
+   "sga": 1472
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 395,
+   "revenue": 2453,
+   "op": -1125,
+   "sga": 1674
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 38,
+   "revenue": 2018,
+   "op": -1181,
+   "sga": 1466
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 1650,
+   "op": -812,
+   "sga": 1374
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1176,
+   "op": -892,
+   "sga": 1063
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 24240,
+   "op": -2607,
+   "sga": 5149,
+   "inventory": 2
+  },
+  {
+   "year": 2024,
+   "revenue": 6527,
+   "op": -4709,
+   "sga": 6127,
+   "inventory": 103
+  },
+  {
+   "year": 2025,
+   "revenue": 7572,
+   "op": -4228,
+   "sga": 5987,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:12:19",
+ "fs_div": "CFS",
+ "industry_code": "26410",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

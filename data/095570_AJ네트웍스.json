@@ -2,8 +2,214 @@
  "corp_code": "00365387",
  "corp_name": "AJ네트웍스",
  "stock_code": "095570",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T19:54:53"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 254011929182,
+    "op": 20598389675,
+    "sga": null,
+    "inventory": 27909410793
+   },
+   "2": {
+    "revenue": 493780657286,
+    "op": 36010078274,
+    "sga": null,
+    "inventory": 30840249970
+   },
+   "3": {
+    "revenue": 754741855737,
+    "op": 56985277108,
+    "sga": null,
+    "inventory": 25815903528
+   },
+   "4": {
+    "revenue": 1001975993554,
+    "op": 78385856886,
+    "sga": null,
+    "inventory": 17826546561
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 244782826887,
+    "op": 19471017345,
+    "sga": null,
+    "inventory": 31050394319
+   },
+   "2": {
+    "revenue": 524191063850,
+    "op": 40476106940,
+    "sga": null,
+    "inventory": 38638392836
+   },
+   "3": {
+    "revenue": 773983906984,
+    "op": 60072650386,
+    "sga": null,
+    "inventory": 30962598980
+   },
+   "4": {
+    "revenue": 1014156314426,
+    "op": 72790207643,
+    "sga": null,
+    "inventory": 25129909338
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 261122037529,
+    "op": 15948417838,
+    "sga": null,
+    "inventory": 25912850152
+   },
+   "2": {
+    "revenue": 514155214000,
+    "op": 33153647000,
+    "sga": null,
+    "inventory": 25685556000
+   },
+   "3": {
+    "revenue": 797676556000,
+    "op": 46311299000,
+    "sga": null,
+    "inventory": 32449099000
+   },
+   "4": {
+    "revenue": 1070114469000,
+    "op": 71548375000,
+    "sga": null,
+    "inventory": 28675556000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 287155871000,
+    "op": 21871050000,
+    "sga": null,
+    "inventory": 42083260000
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 27909,
+   "revenue": 254012,
+   "op": 20598,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 30840,
+   "revenue": 239769,
+   "op": 15412,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 25816,
+   "revenue": 260961,
+   "op": 20975,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 17827,
+   "revenue": 247234,
+   "op": 21401,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 31050,
+   "revenue": 244783,
+   "op": 19471,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 38638,
+   "revenue": 279408,
+   "op": 21005,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 30963,
+   "revenue": 249793,
+   "op": 19597,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 25130,
+   "revenue": 240172,
+   "op": 12718,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 25913,
+   "revenue": 261122,
+   "op": 15948,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 25686,
+   "revenue": 253033,
+   "op": 17205,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 32449,
+   "revenue": 283521,
+   "op": 13158,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 28676,
+   "revenue": 272438,
+   "op": 25237,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 42083,
+   "revenue": 287156,
+   "op": 21871,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1001976,
+   "op": 78386,
+   "sga": null,
+   "inventory": 17827
+  },
+  {
+   "year": 2024,
+   "revenue": 1014156,
+   "op": 72790,
+   "sga": null,
+   "inventory": 25130
+  },
+  {
+   "year": 2025,
+   "revenue": 1070114,
+   "op": 71548,
+   "sga": null,
+   "inventory": 28676
+  }
+ ],
+ "updated": "2026-07-19T20:42:22",
+ "fs_div": "CFS",
+ "industry_code": "76320",
+ "industry_name": "임대",
+ "corp_cls": "Y",
+ "market": "유가"
 }

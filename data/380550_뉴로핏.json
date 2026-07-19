@@ -2,8 +2,79 @@
  "corp_code": "01782004",
  "corp_name": "뉴로핏",
  "stock_code": "380550",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:52:14"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 1289320893,
+    "op": -7963750695,
+    "sga": null,
+    "inventory": 38462760
+   },
+   "3": {
+    "revenue": 2051911576,
+    "op": -12190255957,
+    "sga": null,
+    "inventory": 62901773
+   },
+   "4": {
+    "revenue": 2615085161,
+    "op": -16506712356,
+    "sga": null,
+    "inventory": 47235169
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 481423630,
+    "op": -5552290493,
+    "sga": null,
+    "inventory": 55740955
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 38,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 63,
+   "revenue": 763,
+   "op": -4227,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 47,
+   "revenue": 563,
+   "op": -4316,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 56,
+   "revenue": 481,
+   "op": -5552,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 2615,
+   "op": -16507,
+   "sga": null,
+   "inventory": 47
+  }
+ ],
+ "updated": "2026-07-19T20:30:37",
+ "fs_div": "OFS",
+ "industry_code": "58222",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

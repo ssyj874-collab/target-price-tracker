@@ -2,8 +2,214 @@
  "corp_code": "01416235",
  "corp_name": "고스트스튜디오",
  "stock_code": "950190",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:55:29"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 18521782,
+    "op": 4133717,
+    "sga": 7723916,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 38528082,
+    "op": 9820614,
+    "sga": 15228027,
+    "inventory": 628763
+   },
+   "3": {
+    "revenue": 56754028,
+    "op": 16084649,
+    "sga": 20442254,
+    "inventory": 628230
+   },
+   "4": {
+    "revenue": 75939360,
+    "op": 19235312,
+    "sga": 26998396,
+    "inventory": 619954
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 17428955,
+    "op": 3849146,
+    "sga": 5220506,
+    "inventory": 591306
+   },
+   "2": {
+    "revenue": 33741855,
+    "op": 8017671,
+    "sga": 9946541,
+    "inventory": 597989
+   },
+   "3": {
+    "revenue": 48504048,
+    "op": 10321948,
+    "sga": 15193869,
+    "inventory": 661446
+   },
+   "4": {
+    "revenue": 62865926,
+    "op": 11300257,
+    "sga": 20838375,
+    "inventory": 570086
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 14254089,
+    "op": 2815520,
+    "sga": 4788397,
+    "inventory": 586867
+   },
+   "2": {
+    "revenue": 28792036,
+    "op": 5545916,
+    "sga": 9522980,
+    "inventory": 726337
+   },
+   "3": {
+    "revenue": 43881556,
+    "op": 8623902,
+    "sga": 14405215,
+    "inventory": 755622
+   },
+   "4": {
+    "revenue": 79118339,
+    "op": 10778553,
+    "sga": 20292571,
+    "inventory": 745037
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 14286310,
+    "op": 2966674,
+    "sga": 4866523,
+    "inventory": 734073
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 19,
+   "op": 4,
+   "sga": 8
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1,
+   "revenue": 20,
+   "op": 6,
+   "sga": 8
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1,
+   "revenue": 18,
+   "op": 6,
+   "sga": 5
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1,
+   "revenue": 19,
+   "op": 3,
+   "sga": 7
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1,
+   "revenue": 17,
+   "op": 4,
+   "sga": 5
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1,
+   "revenue": 16,
+   "op": 4,
+   "sga": 5
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1,
+   "revenue": 15,
+   "op": 2,
+   "sga": 5
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1,
+   "revenue": 14,
+   "op": 1,
+   "sga": 6
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1,
+   "revenue": 14,
+   "op": 3,
+   "sga": 5
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1,
+   "revenue": 15,
+   "op": 3,
+   "sga": 5
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1,
+   "revenue": 15,
+   "op": 3,
+   "sga": 5
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1,
+   "revenue": 35,
+   "op": 2,
+   "sga": 6
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1,
+   "revenue": 14,
+   "op": 3,
+   "sga": 5
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 76,
+   "op": 19,
+   "sga": 27,
+   "inventory": 1
+  },
+  {
+   "year": 2024,
+   "revenue": 63,
+   "op": 11,
+   "sga": 21,
+   "inventory": 1
+  },
+  {
+   "year": 2025,
+   "revenue": 79,
+   "op": 11,
+   "sga": 20,
+   "inventory": 1
+  }
+ ],
+ "updated": "2026-07-19T20:22:04",
+ "fs_div": "CFS",
+ "industry_code": "58212",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

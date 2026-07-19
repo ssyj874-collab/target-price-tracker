@@ -2,8 +2,214 @@
  "corp_code": "00116408",
  "corp_name": "동신건설",
  "stock_code": "025950",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:12:24"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 15644898281,
+    "op": -118813304,
+    "sga": 1410045363,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 39186047365,
+    "op": 605178970,
+    "sga": 2315474117,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 59557862032,
+    "op": 4242400492,
+    "sga": 3085811933,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 82743779233,
+    "op": 6340785950,
+    "sga": 3185437346,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 13154650455,
+    "op": 96599859,
+    "sga": 1083105625,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 31854815735,
+    "op": 856605941,
+    "sga": 2255302075,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 51124768429,
+    "op": 2162335277,
+    "sga": 3207641322,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 68971328816,
+    "op": 585892436,
+    "sga": 3857626873,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5967669530,
+    "op": -1285371763,
+    "sga": 1812902882,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 14741412445,
+    "op": -673572382,
+    "sga": 2034214647,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 25065304972,
+    "op": -2719432553,
+    "sga": 2819465353,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 33382076965,
+    "op": -2206114342,
+    "sga": 3543490197,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 5664750751,
+    "op": -250350493,
+    "sga": 944904077,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 15645,
+   "op": -119,
+   "sga": 1410
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 23541,
+   "op": 724,
+   "sga": 905
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 20372,
+   "op": 3637,
+   "sga": 770
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 23186,
+   "op": 2098,
+   "sga": 100
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 13155,
+   "op": 97,
+   "sga": 1083
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 18700,
+   "op": 760,
+   "sga": 1172
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 19270,
+   "op": 1306,
+   "sga": 952
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 17847,
+   "op": -1576,
+   "sga": 650
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5968,
+   "op": -1285,
+   "sga": 1813
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 8774,
+   "op": 612,
+   "sga": 221
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 10324,
+   "op": -2046,
+   "sga": 785
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 8317,
+   "op": 513,
+   "sga": 724
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 5665,
+   "op": -250,
+   "sga": 945
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 82744,
+   "op": 6341,
+   "sga": 3185,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 68971,
+   "op": 586,
+   "sga": 3858,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 33382,
+   "op": -2206,
+   "sga": 3543,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:10:44",
+ "fs_div": "OFS",
+ "industry_code": "41221",
+ "industry_name": "종합건설",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

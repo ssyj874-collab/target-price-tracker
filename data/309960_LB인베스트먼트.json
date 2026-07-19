@@ -2,8 +2,188 @@
  "corp_code": "00231901",
  "corp_name": "LB인베스트먼트",
  "stock_code": "309960",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:15:57"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 18194782462,
+    "op": 5638846517,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 27582188617,
+    "op": 8463269974,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5354234149,
+    "op": 455096781,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 10829666930,
+    "op": 2759357003,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13606224677,
+    "op": 2390117495,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 30257378187,
+    "op": 10852356019,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5294244845,
+    "op": 1018871563,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12178950104,
+    "op": 3660869520,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20321078485,
+    "op": 8945558624,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26415002944,
+    "op": 9665347388,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 13117400670,
+    "op": 2111185600,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 9387,
+   "op": 2824,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5354,
+   "op": 455,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 5475,
+   "op": 2304,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 2777,
+   "op": -369,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 16651,
+   "op": 8462,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5294,
+   "op": 1019,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6885,
+   "op": 2642,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 8142,
+   "op": 5285,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6094,
+   "op": 720,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 13117,
+   "op": 2111,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 27582,
+   "op": 8463,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 30257,
+   "op": 10852,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 26415,
+   "op": 9665,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:20",
+ "fs_div": "CFS",
+ "industry_code": "64991",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

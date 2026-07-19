@@ -5,5 +5,9 @@
  "cums": {},
  "quarterly": [],
  "annual": [],
- "updated": "2026-07-13T23:50:06"
+ "updated": "2026-07-13T23:50:06",
+ "industry_code": "642",
+ "industry_name": "금융",
+ "corp_cls": "Y",
+ "market": "유가"
 }

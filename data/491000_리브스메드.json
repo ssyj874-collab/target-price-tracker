@@ -2,8 +2,53 @@
  "corp_code": "01385005",
  "corp_name": "리브스메드",
  "stock_code": "491000",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:45:40"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 51192098328,
+    "op": -22642203092,
+    "sga": 52176611017,
+    "inventory": 9768250926
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10263217860,
+    "op": -8366869549,
+    "sga": 12860074269,
+    "inventory": 14181669579
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 9768,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 14182,
+   "revenue": 10263,
+   "op": -8367,
+   "sga": 12860
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 51192,
+   "op": -22642,
+   "sga": 52177,
+   "inventory": 9768
+  }
+ ],
+ "updated": "2026-07-19T21:10:17",
+ "fs_div": "CFS",
+ "industry_code": "27112",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

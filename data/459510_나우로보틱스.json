@@ -2,8 +2,79 @@
  "corp_code": "01594791",
  "corp_name": "나우로보틱스",
  "stock_code": "459510",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:41:23"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 3367153012,
+    "op": -2987883544,
+    "sga": 3476840812,
+    "inventory": 1351325629
+   },
+   "3": {
+    "revenue": 7458502257,
+    "op": -5785313659,
+    "sga": 6018115181,
+    "inventory": 2954697708
+   },
+   "4": {
+    "revenue": 12526033167,
+    "op": -8206292816,
+    "sga": 8493836350,
+    "inventory": 1448826580
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1873370944,
+    "op": -1599625575,
+    "sga": 1536066158,
+    "inventory": 2509762694
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": 1351,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2955,
+   "revenue": 4091,
+   "op": -2797,
+   "sga": 2541
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1449,
+   "revenue": 5068,
+   "op": -2421,
+   "sga": 2476
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2510,
+   "revenue": 1873,
+   "op": -1600,
+   "sga": 1536
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 12526,
+   "op": -8206,
+   "sga": 8494,
+   "inventory": 1449
+  }
+ ],
+ "updated": "2026-07-19T20:19:43",
+ "fs_div": "OFS",
+ "industry_code": "29280",
+ "industry_name": "기계·장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

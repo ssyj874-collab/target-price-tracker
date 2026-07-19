@@ -2,8 +2,188 @@
  "corp_code": "00778235",
  "corp_name": "TS인베스트먼트",
  "stock_code": "246690",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:47:11"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 13827073844,
+    "op": 5070309009,
+    "sga": -5265551106,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 26165566670,
+    "op": 14300519265,
+    "sga": -8030915165,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4824035885,
+    "op": -2128879008,
+    "sga": -2027507750,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8909448011,
+    "op": -2173543655,
+    "sga": -4147929163,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12234346472,
+    "op": -3189230639,
+    "sga": -6213498034,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 17597059268,
+    "op": -3001864633,
+    "sga": -7707507259,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3131956316,
+    "op": 867177081,
+    "sga": -1634958369,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9049497861,
+    "op": 759746273,
+    "sga": -3295613555,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13183464565,
+    "op": 1767733226,
+    "sga": -5309561812,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 19617531648,
+    "op": 9022853755,
+    "sga": -6773616840,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4934581102,
+    "op": -2700557078,
+    "sga": -2165648401,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 12338,
+   "op": 9230,
+   "sga": -2765
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4824,
+   "op": -2129,
+   "sga": -2028
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 4085,
+   "op": -45,
+   "sga": -2120
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 3325,
+   "op": -1016,
+   "sga": -2066
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5363,
+   "op": 187,
+   "sga": -1494
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3132,
+   "op": 867,
+   "sga": -1635
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5918,
+   "op": -107,
+   "sga": -1661
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4134,
+   "op": 1008,
+   "sga": -2014
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 6434,
+   "op": 7255,
+   "sga": -1464
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 4935,
+   "op": -2701,
+   "sga": -2166
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 26166,
+   "op": 14301,
+   "sga": -8031,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 17597,
+   "op": -3002,
+   "sga": -7708,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 19618,
+   "op": 9023,
+   "sga": -6774,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:10",
+ "fs_div": "CFS",
+ "industry_code": "64209",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

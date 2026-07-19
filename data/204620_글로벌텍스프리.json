@@ -2,8 +2,214 @@
  "corp_code": "01042711",
  "corp_name": "글로벌텍스프리",
  "stock_code": "204620",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:34:43"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 17548771489,
+    "op": 1233999244,
+    "sga": null,
+    "inventory": 1556754262
+   },
+   "2": {
+    "revenue": 40468923116,
+    "op": 4661740145,
+    "sga": null,
+    "inventory": 1543494433
+   },
+   "3": {
+    "revenue": 66556998853,
+    "op": 8494571227,
+    "sga": null,
+    "inventory": 1501308695
+   },
+   "4": {
+    "revenue": 93373547015,
+    "op": 14776893088,
+    "sga": null,
+    "inventory": 1437714149
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 31341937714,
+    "op": 2433986434,
+    "sga": null,
+    "inventory": 1537573365
+   },
+   "2": {
+    "revenue": 58827360968,
+    "op": 9500883624,
+    "sga": null,
+    "inventory": 1535134656
+   },
+   "3": {
+    "revenue": 92048600425,
+    "op": 15339860863,
+    "sga": null,
+    "inventory": 1477797862
+   },
+   "4": {
+    "revenue": 129729725356,
+    "op": 21771465088,
+    "sga": null,
+    "inventory": 1384627033
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 34286266580,
+    "op": 5085250689,
+    "sga": null,
+    "inventory": 1380456999
+   },
+   "2": {
+    "revenue": 79279418121,
+    "op": 13349392134,
+    "sga": null,
+    "inventory": 1398124346
+   },
+   "3": {
+    "revenue": 124330749559,
+    "op": 21599241063,
+    "sga": null,
+    "inventory": 1387661119
+   },
+   "4": {
+    "revenue": 154056520360,
+    "op": 28985101394,
+    "sga": null,
+    "inventory": 42998371
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 35489470932,
+    "op": 5821967072,
+    "sga": null,
+    "inventory": 43028822
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1557,
+   "revenue": 17549,
+   "op": 1234,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1543,
+   "revenue": 22920,
+   "op": 3428,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1501,
+   "revenue": 26088,
+   "op": 3833,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1438,
+   "revenue": 26817,
+   "op": 6282,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 1538,
+   "revenue": 31342,
+   "op": 2434,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1535,
+   "revenue": 27485,
+   "op": 7067,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1478,
+   "revenue": 33221,
+   "op": 5839,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1385,
+   "revenue": 37681,
+   "op": 6432,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1380,
+   "revenue": 34286,
+   "op": 5085,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1398,
+   "revenue": 44993,
+   "op": 8264,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1388,
+   "revenue": 45051,
+   "op": 8250,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 43,
+   "revenue": 29726,
+   "op": 7386,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 43,
+   "revenue": 35489,
+   "op": 5822,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 93374,
+   "op": 14777,
+   "sga": null,
+   "inventory": 1438
+  },
+  {
+   "year": 2024,
+   "revenue": 129730,
+   "op": 21771,
+   "sga": null,
+   "inventory": 1385
+  },
+  {
+   "year": 2025,
+   "revenue": 154057,
+   "op": 28985,
+   "sga": null,
+   "inventory": 43
+  }
+ ],
+ "updated": "2026-07-19T20:06:42",
+ "fs_div": "CFS",
+ "industry_code": "661",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

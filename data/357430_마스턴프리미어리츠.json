@@ -2,8 +2,143 @@
  "corp_code": "01442966",
  "corp_name": "마스턴프리미어리츠",
  "stock_code": "357430",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:47:26"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 823334241,
+    "op": -42743102,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4081936676,
+    "op": -5454694207,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 939991524,
+    "op": -10456658531,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4344097477,
+    "op": 1699923445,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 1028774337,
+    "op": -358641921,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4128904816,
+    "op": 2763887761,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 3522928893,
+    "op": -2507550481,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4082,
+   "op": -5455,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 4344,
+   "op": 1700,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 4129,
+   "op": 2764,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 3523,
+   "op": -2508,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:04:13",
+ "fs_div": "CFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

@@ -2,8 +2,136 @@
  "corp_code": "01437292",
  "corp_name": "미래에셋맵스리츠",
  "stock_code": "357250",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:01:46"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 3006362462,
+    "op": 1378467779,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 10908521649,
+    "op": 8097481866,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 3590931888,
+    "op": 1950220990,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 6884641520,
+    "op": 4012458888,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 3624142267,
+    "op": 1983317394,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 6921621130,
+    "op": 4089015610,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 3629648923,
+    "op": 2560272476,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 10909,
+   "op": 8097,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 6885,
+   "op": 4012,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 6922,
+   "op": 4089,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:26:18",
+ "fs_div": "OFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

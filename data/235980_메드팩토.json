@@ -2,8 +2,214 @@
  "corp_code": "01336373",
  "corp_name": "메드팩토",
  "stock_code": "235980",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:51:04"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 0,
+    "op": -7204850694,
+    "sga": 7204850694,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -14910663062,
+    "sga": 14910663062,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -21131757922,
+    "sga": 21131757922,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -28757985751,
+    "sga": 28757985751,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -9705531087,
+    "sga": 9705531087,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -14820489087,
+    "sga": 14820489087,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -17020145934,
+    "sga": 17020145934,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -21815962051,
+    "sga": 21815962051,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 429943713,
+    "op": -3794911917,
+    "sga": 3735051830,
+    "inventory": 17850000
+   },
+   "2": {
+    "revenue": 1269572792,
+    "op": -6354261047,
+    "sga": 6472288693,
+    "inventory": 348463756
+   },
+   "3": {
+    "revenue": 2469023433,
+    "op": -11097111309,
+    "sga": 11317175784,
+    "inventory": 892011809
+   },
+   "4": {
+    "revenue": 3898477868,
+    "op": -14018507792,
+    "sga": 14403669549,
+    "inventory": 646153693
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1316478719,
+    "op": -4168422733,
+    "sga": 4259601304,
+    "inventory": 755622209
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7205,
+   "sga": 7205
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7706,
+   "sga": 7706
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6221,
+   "sga": 6221
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -7626,
+   "sga": 7626
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9706,
+   "sga": 9706
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5115,
+   "sga": 5115
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2200,
+   "sga": 2200
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4796,
+   "sga": 4796
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 18,
+   "revenue": 430,
+   "op": -3795,
+   "sga": 3735
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 348,
+   "revenue": 840,
+   "op": -2559,
+   "sga": 2737
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 892,
+   "revenue": 1199,
+   "op": -4743,
+   "sga": 4845
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 646,
+   "revenue": 1429,
+   "op": -2921,
+   "sga": 3086
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 756,
+   "revenue": 1316,
+   "op": -4168,
+   "sga": 4260
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -28758,
+   "sga": 28758,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -21816,
+   "sga": 21816,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 3898,
+   "op": -14019,
+   "sga": 14404,
+   "inventory": 646
+  }
+ ],
+ "updated": "2026-07-19T20:56:22",
+ "fs_div": "CFS",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

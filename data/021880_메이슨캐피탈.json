@@ -2,8 +2,188 @@
  "corp_code": "00136101",
  "corp_name": "메이슨캐피탈",
  "stock_code": "021880",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:53:05"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 2121366965,
+    "op": -596893792,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 11453912889,
+    "op": 1901305403,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 5588938120,
+    "op": -10768011972,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11591146987,
+    "op": -11024305291,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16557408417,
+    "op": -12357668790,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20284640607,
+    "op": 4297892217,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5180032759,
+    "op": -543273285,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 9786902069,
+    "op": -1031007974,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 15420602986,
+    "op": -872326604,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 25090614032,
+    "op": -10097939629,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 22027228993,
+    "op": -2218414748,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 9333,
+   "op": 2498,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 5589,
+   "op": -10768,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 6002,
+   "op": -256,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4966,
+   "op": -1333,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3727,
+   "op": 16656,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5180,
+   "op": -543,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 4607,
+   "op": -488,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 5634,
+   "op": 159,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9670,
+   "op": -9226,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 20285,
+   "op": 4298,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 25091,
+   "op": -10098,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 22027,
+   "op": -2218,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:07:18",
+ "fs_div": "CFS",
+ "industry_code": "64911",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

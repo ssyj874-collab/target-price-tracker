@@ -2,8 +2,214 @@
  "corp_code": "00632845",
  "corp_name": "노랑풍선",
  "stock_code": "104620",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:49:10"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 23736470937,
+    "op": 1736329890,
+    "sga": null,
+    "inventory": 1450720027
+   },
+   "2": {
+    "revenue": 41919255922,
+    "op": 2641608203,
+    "sga": null,
+    "inventory": 4610385173
+   },
+   "3": {
+    "revenue": 73245601053,
+    "op": 6375340505,
+    "sga": null,
+    "inventory": 2195792588
+   },
+   "4": {
+    "revenue": 98612582467,
+    "op": 6616430893,
+    "sga": null,
+    "inventory": 6801261378
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 38349117019,
+    "op": 4004879958,
+    "sga": null,
+    "inventory": 5620429057
+   },
+   "2": {
+    "revenue": 68957517456,
+    "op": -2450522376,
+    "sga": null,
+    "inventory": 10599363079
+   },
+   "3": {
+    "revenue": 105148538013,
+    "op": -4823587726,
+    "sga": null,
+    "inventory": 5978111708
+   },
+   "4": {
+    "revenue": 131914391956,
+    "op": -6546408621,
+    "sga": null,
+    "inventory": 11402016973
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 31417102346,
+    "op": 355299235,
+    "sga": null,
+    "inventory": 6205012700
+   },
+   "2": {
+    "revenue": 55799744327,
+    "op": 316854043,
+    "sga": null,
+    "inventory": 9833691071
+   },
+   "3": {
+    "revenue": 80814245482,
+    "op": -1862627220,
+    "sga": null,
+    "inventory": 12204324479
+   },
+   "4": {
+    "revenue": 119704117734,
+    "op": 2238783517,
+    "sga": null,
+    "inventory": 5579014241
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 29615028303,
+    "op": 2380877772,
+    "sga": null,
+    "inventory": 4452100140
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1451,
+   "revenue": 23736,
+   "op": 1736,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 4610,
+   "revenue": 18183,
+   "op": 905,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 2196,
+   "revenue": 31326,
+   "op": 3734,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 6801,
+   "revenue": 25367,
+   "op": 241,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 5620,
+   "revenue": 38349,
+   "op": 4005,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 10599,
+   "revenue": 30608,
+   "op": -6455,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 5978,
+   "revenue": 36191,
+   "op": -2373,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 11402,
+   "revenue": 26766,
+   "op": -1723,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 6205,
+   "revenue": 31417,
+   "op": 355,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 9834,
+   "revenue": 24383,
+   "op": -38,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 12204,
+   "revenue": 25015,
+   "op": -2179,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 5579,
+   "revenue": 38890,
+   "op": 4101,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 4452,
+   "revenue": 29615,
+   "op": 2381,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 98613,
+   "op": 6616,
+   "sga": null,
+   "inventory": 6801
+  },
+  {
+   "year": 2024,
+   "revenue": 131914,
+   "op": -6546,
+   "sga": null,
+   "inventory": 11402
+  },
+  {
+   "year": 2025,
+   "revenue": 119704,
+   "op": 2239,
+   "sga": null,
+   "inventory": 5579
+  }
+ ],
+ "updated": "2026-07-19T20:44:17",
+ "fs_div": "CFS",
+ "industry_code": "75210",
+ "industry_name": "사업지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

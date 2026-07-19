@@ -2,8 +2,214 @@
  "corp_code": "01084364",
  "corp_name": "다산디엠씨",
  "stock_code": "208860",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:54:21"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 381689636,
+    "op": -1356362836,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 855304544,
+    "op": -2673341675,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1434579894,
+    "op": -3656257625,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 4941175060,
+    "op": -2990583502,
+    "sga": -4847876710,
+    "inventory": 172860382
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 1750518439,
+    "op": 89024858,
+    "sga": null,
+    "inventory": 175189217
+   },
+   "2": {
+    "revenue": 2603048029,
+    "op": -1163974620,
+    "sga": null,
+    "inventory": 179785994
+   },
+   "3": {
+    "revenue": 5452880210,
+    "op": -482986663,
+    "sga": null,
+    "inventory": 293201710
+   },
+   "4": {
+    "revenue": 11214636407,
+    "op": 1789120145,
+    "sga": null,
+    "inventory": 166775722
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 2217382422,
+    "op": -400509972,
+    "sga": null,
+    "inventory": 82923784
+   },
+   "2": {
+    "revenue": 5939119254,
+    "op": -585085701,
+    "sga": null,
+    "inventory": 2635545316
+   },
+   "3": {
+    "revenue": 8912923050,
+    "op": -1899865645,
+    "sga": null,
+    "inventory": 2421357396
+   },
+   "4": {
+    "revenue": 30750966751,
+    "op": -2531549768,
+    "sga": null,
+    "inventory": 4953834944
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 28606618257,
+    "op": 847250636,
+    "sga": null,
+    "inventory": 5182618190
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 382,
+   "op": -1356,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 474,
+   "op": -1317,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 579,
+   "op": -983,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 173,
+   "revenue": 3507,
+   "op": 666,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 175,
+   "revenue": 1751,
+   "op": 89,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 180,
+   "revenue": 853,
+   "op": -1253,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 293,
+   "revenue": 2850,
+   "op": 681,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 167,
+   "revenue": 5762,
+   "op": 2272,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 83,
+   "revenue": 2217,
+   "op": -401,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 2636,
+   "revenue": 3722,
+   "op": -185,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2421,
+   "revenue": 2974,
+   "op": -1315,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 4954,
+   "revenue": 21838,
+   "op": -632,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 5183,
+   "revenue": 28607,
+   "op": 847,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 4941,
+   "op": -2991,
+   "sga": -4848,
+   "inventory": 173
+  },
+  {
+   "year": 2024,
+   "revenue": 11215,
+   "op": 1789,
+   "sga": null,
+   "inventory": 167
+  },
+  {
+   "year": 2025,
+   "revenue": 30751,
+   "op": -2532,
+   "sga": null,
+   "inventory": 4954
+  }
+ ],
+ "updated": "2026-07-19T20:21:43",
+ "fs_div": "OFS",
+ "industry_code": "58222",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

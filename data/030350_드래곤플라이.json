@@ -2,8 +2,214 @@
  "corp_code": "00230036",
  "corp_name": "드래곤플라이",
  "stock_code": "030350",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:21:28"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 2552327428,
+    "op": -2049046415,
+    "sga": null,
+    "inventory": 329653543
+   },
+   "2": {
+    "revenue": 4577674752,
+    "op": -6473369156,
+    "sga": null,
+    "inventory": 358114350
+   },
+   "3": {
+    "revenue": 6561920511,
+    "op": -9484878722,
+    "sga": null,
+    "inventory": 395736300
+   },
+   "4": {
+    "revenue": 16617929586,
+    "op": -13327228938,
+    "sga": null,
+    "inventory": 230727374
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 11497451818,
+    "op": -3108785336,
+    "sga": null,
+    "inventory": 281063297
+   },
+   "2": {
+    "revenue": 16688984933,
+    "op": -4846666370,
+    "sga": null,
+    "inventory": 646701839
+   },
+   "3": {
+    "revenue": 21483555639,
+    "op": -7460955942,
+    "sga": null,
+    "inventory": 1227120855
+   },
+   "4": {
+    "revenue": 25626856758,
+    "op": -9649776532,
+    "sga": null,
+    "inventory": 961417197
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 4257633657,
+    "op": -497283977,
+    "sga": null,
+    "inventory": 962702247
+   },
+   "2": {
+    "revenue": 8343333297,
+    "op": -743655297,
+    "sga": null,
+    "inventory": 977206160
+   },
+   "3": {
+    "revenue": 12497207402,
+    "op": -1177992148,
+    "sga": null,
+    "inventory": 1074007107
+   },
+   "4": {
+    "revenue": 15879336176,
+    "op": -1944834011,
+    "sga": null,
+    "inventory": 756602091
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 2931382528,
+    "op": -535278043,
+    "sga": null,
+    "inventory": 565234256
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 330,
+   "revenue": 2552,
+   "op": -2049,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 358,
+   "revenue": 2025,
+   "op": -4424,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 396,
+   "revenue": 1984,
+   "op": -3012,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 231,
+   "revenue": 10056,
+   "op": -3842,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 281,
+   "revenue": 11497,
+   "op": -3109,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 647,
+   "revenue": 5192,
+   "op": -1738,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1227,
+   "revenue": 4795,
+   "op": -2614,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 961,
+   "revenue": 4143,
+   "op": -2189,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 963,
+   "revenue": 4258,
+   "op": -497,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 977,
+   "revenue": 4086,
+   "op": -246,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1074,
+   "revenue": 4154,
+   "op": -434,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 757,
+   "revenue": 3382,
+   "op": -767,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 565,
+   "revenue": 2931,
+   "op": -535,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 16618,
+   "op": -13327,
+   "sga": null,
+   "inventory": 231
+  },
+  {
+   "year": 2024,
+   "revenue": 25627,
+   "op": -9650,
+   "sga": null,
+   "inventory": 961
+  },
+  {
+   "year": 2025,
+   "revenue": 15879,
+   "op": -1945,
+   "sga": null,
+   "inventory": 757
+  }
+ ],
+ "updated": "2026-07-19T20:12:25",
+ "fs_div": "CFS",
+ "industry_code": "5821",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

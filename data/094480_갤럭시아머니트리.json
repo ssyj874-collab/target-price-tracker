@@ -2,8 +2,214 @@
  "corp_code": "00587457",
  "corp_name": "갤럭시아머니트리",
  "stock_code": "094480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:50:02"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 31917252671,
+    "op": 2912204382,
+    "sga": 5935275521,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 63231036187,
+    "op": 4078907484,
+    "sga": 12294753968,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 97160398800,
+    "op": 6958920635,
+    "sga": 18669592054,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 132389824802,
+    "op": 9240639992,
+    "sga": 25374643444,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 34296174327,
+    "op": 2809659277,
+    "sga": 6142481879,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 66930094207,
+    "op": 6582994100,
+    "sga": 12588906088,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 98165938715,
+    "op": 9755617509,
+    "sga": 18703840040,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 128772392051,
+    "op": 13220798774,
+    "sga": 25693395441,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 31237201650,
+    "op": 4570079301,
+    "sga": 6153993162,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 63585429455,
+    "op": 9537316546,
+    "sga": 12178269944,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 96449771092,
+    "op": 14343132188,
+    "sga": 18542000654,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 129700193187,
+    "op": 18393923568,
+    "sga": 25421188299,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 35134031854,
+    "op": 4629242765,
+    "sga": 6579799646,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 31917,
+   "op": 2912,
+   "sga": 5935
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 31314,
+   "op": 1167,
+   "sga": 6359
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 33929,
+   "op": 2880,
+   "sga": 6375
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 35229,
+   "op": 2282,
+   "sga": 6705
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 34296,
+   "op": 2810,
+   "sga": 6142
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 32634,
+   "op": 3773,
+   "sga": 6446
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 31236,
+   "op": 3173,
+   "sga": 6115
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 30606,
+   "op": 3465,
+   "sga": 6990
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 31237,
+   "op": 4570,
+   "sga": 6154
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 32348,
+   "op": 4967,
+   "sga": 6024
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 32864,
+   "op": 4806,
+   "sga": 6364
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 33250,
+   "op": 4051,
+   "sga": 6879
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 35134,
+   "op": 4629,
+   "sga": 6580
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 132390,
+   "op": 9241,
+   "sga": 25375,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 128772,
+   "op": 13221,
+   "sga": 25693,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 129700,
+   "op": 18394,
+   "sga": 25421,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:41:46",
+ "fs_div": "CFS",
+ "industry_code": "58221",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,214 @@
  "corp_code": "01008762",
  "corp_name": "데브시스터즈",
  "stock_code": "194480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:00:02"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 50312245331,
+    "op": -5048466111,
+    "sga": 55360711442,
+    "inventory": 1924144856
+   },
+   "2": {
+    "revenue": 88563338897,
+    "op": -18156191339,
+    "sga": 106719530236,
+    "inventory": 1431115681
+   },
+   "3": {
+    "revenue": 123314051512,
+    "op": -36184857579,
+    "sga": 159498909091,
+    "inventory": 1236906396
+   },
+   "4": {
+    "revenue": 161143328758,
+    "op": -47992774337,
+    "sga": 209136103095,
+    "inventory": 924743212
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 59500472536,
+    "op": 8139570864,
+    "sga": 51360901672,
+    "inventory": 980521751
+   },
+   "2": {
+    "revenue": 113985459087,
+    "op": 13083942518,
+    "sga": 100901516569,
+    "inventory": 571649049
+   },
+   "3": {
+    "revenue": 186015683656,
+    "op": 26478524956,
+    "sga": 159537158700,
+    "inventory": 393627476
+   },
+   "4": {
+    "revenue": 236186554886,
+    "op": 27185096721,
+    "sga": 209001458165,
+    "inventory": 412881241
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 89082593293,
+    "op": 9408349968,
+    "sga": null,
+    "inventory": 74902947
+   },
+   "2": {
+    "revenue": 181058330839,
+    "op": 19516653420,
+    "sga": null,
+    "inventory": 494425979
+   },
+   "3": {
+    "revenue": 235934108182,
+    "op": 18787817090,
+    "sga": null,
+    "inventory": 658277911
+   },
+   "4": {
+    "revenue": 295578347074,
+    "op": 6350198195,
+    "sga": null,
+    "inventory": 1160815337
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 58471497546,
+    "op": -17373679304,
+    "sga": null,
+    "inventory": 2311345876
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1924,
+   "revenue": 50312,
+   "op": -5048,
+   "sga": 55361
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 1431,
+   "revenue": 38251,
+   "op": -13108,
+   "sga": 51359
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 1237,
+   "revenue": 34751,
+   "op": -18029,
+   "sga": 52779
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 925,
+   "revenue": 37829,
+   "op": -11808,
+   "sga": 49637
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 981,
+   "revenue": 59500,
+   "op": 8140,
+   "sga": 51361
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 572,
+   "revenue": 54485,
+   "op": 4944,
+   "sga": 49541
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 394,
+   "revenue": 72030,
+   "op": 13395,
+   "sga": 58636
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 413,
+   "revenue": 50171,
+   "op": 707,
+   "sga": 49464
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 75,
+   "revenue": 89083,
+   "op": 9408,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 494,
+   "revenue": 91976,
+   "op": 10108,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 658,
+   "revenue": 54876,
+   "op": -729,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1161,
+   "revenue": 59644,
+   "op": -12438,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2311,
+   "revenue": 58471,
+   "op": -17374,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 161143,
+   "op": -47993,
+   "sga": 209136,
+   "inventory": 925
+  },
+  {
+   "year": 2024,
+   "revenue": 236187,
+   "op": 27185,
+   "sga": 209001,
+   "inventory": 413
+  },
+  {
+   "year": 2025,
+   "revenue": 295578,
+   "op": 6350,
+   "sga": null,
+   "inventory": 1161
+  }
+ ],
+ "updated": "2026-07-19T20:50:55",
+ "fs_div": "CFS",
+ "industry_code": "58212",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

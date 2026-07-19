@@ -2,8 +2,188 @@
  "corp_code": "01784394",
  "corp_name": "STX그린로지스",
  "stock_code": "465770",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:30:38"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 2773746256,
+    "op": 385431293,
+    "sga": 93977382,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 28310433178,
+    "op": 1847006212,
+    "sga": 808659467,
+    "inventory": 1492180328
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 13247512139,
+    "op": 2381150527,
+    "sga": 126641349,
+    "inventory": 166474500
+   },
+   "2": {
+    "revenue": 21830038332,
+    "op": 3620772510,
+    "sga": 766697685,
+    "inventory": 925767159
+   },
+   "3": {
+    "revenue": 33462810553,
+    "op": 6438077596,
+    "sga": 1434443655,
+    "inventory": 771549455
+   },
+   "4": {
+    "revenue": 46509032719,
+    "op": 7572284312,
+    "sga": 2094139668,
+    "inventory": 3755460509
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 18798048313,
+    "op": -1584392189,
+    "sga": 1008229786,
+    "inventory": 1856389615
+   },
+   "2": {
+    "revenue": 36881380922,
+    "op": -3873766227,
+    "sga": 1781128530,
+    "inventory": 5279141950
+   },
+   "3": {
+    "revenue": 54312586389,
+    "op": -5677029596,
+    "sga": 2681449396,
+    "inventory": 2455078509
+   },
+   "4": {
+    "revenue": 74588259178,
+    "op": -3625813519,
+    "sga": 3457317976,
+    "inventory": 1218896941
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 15933737972,
+    "op": -1375208163,
+    "sga": 837666731,
+    "inventory": 1343301422
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 1492,
+   "revenue": 25537,
+   "op": 1462,
+   "sga": 715
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 166,
+   "revenue": 13248,
+   "op": 2381,
+   "sga": 127
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 926,
+   "revenue": 8583,
+   "op": 1240,
+   "sga": 640
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 772,
+   "revenue": 11633,
+   "op": 2817,
+   "sga": 668
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 3755,
+   "revenue": 13046,
+   "op": 1134,
+   "sga": 660
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1856,
+   "revenue": 18798,
+   "op": -1584,
+   "sga": 1008
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 5279,
+   "revenue": 18083,
+   "op": -2289,
+   "sga": 773
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 2455,
+   "revenue": 17431,
+   "op": -1803,
+   "sga": 900
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1219,
+   "revenue": 20276,
+   "op": 2051,
+   "sga": 776
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1343,
+   "revenue": 15934,
+   "op": -1375,
+   "sga": 838
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 28310,
+   "op": 1847,
+   "sga": 809,
+   "inventory": 1492
+  },
+  {
+   "year": 2024,
+   "revenue": 46509,
+   "op": 7572,
+   "sga": 2094,
+   "inventory": 3755
+  },
+  {
+   "year": 2025,
+   "revenue": 74588,
+   "op": -3626,
+   "sga": 3457,
+   "inventory": 1219
+  }
+ ],
+ "updated": "2026-07-19T20:49:35",
+ "fs_div": "OFS",
+ "industry_code": "501",
+ "industry_name": "수상운송",
+ "corp_cls": "Y",
+ "market": "유가"
 }

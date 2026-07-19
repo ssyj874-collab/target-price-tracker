@@ -2,8 +2,175 @@
  "corp_code": "01792791",
  "corp_name": "IBKS제24호스팩",
  "stock_code": "469480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:09:00"
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 0,
+    "op": -19692920,
+    "sga": 19692920,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 0,
+    "op": -20956240,
+    "sga": 20956240,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -9200000,
+    "sga": 9200000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -38620640,
+    "sga": 38620640,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -43366760,
+    "sga": 43366760,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -14183150,
+    "sga": 14183150,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -22923150,
+    "sga": 22923150,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -31387550,
+    "sga": 31387550,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -36551950,
+    "sga": 36551950,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 11991650,
+    "op": -11991650,
+    "sga": 11991650,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -21,
+   "sga": 21
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": 12,
+   "sga": -12
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -29,
+   "sga": 29
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -14,
+   "sga": 14
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": 8
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 12,
+   "op": -12,
+   "sga": 12
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 0,
+   "op": -20,
+   "sga": 20,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -43,
+   "sga": 43,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -37,
+   "sga": 37,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:08:56",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

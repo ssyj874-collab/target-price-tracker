@@ -2,8 +2,114 @@
  "corp_code": "01845534",
  "corp_name": "대신밸런스제19호스팩",
  "stock_code": "482690",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:49:01"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -25112931,
+    "sga": 25112931,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -9019050,
+    "sga": 9019050,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -20102090,
+    "sga": 20102090,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -22260650,
+    "sga": 22260650,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -38943610,
+    "sga": 38943610,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -8492990,
+    "sga": 8492990,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -11,
+   "sga": 11
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -2,
+   "sga": 2
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": 17
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -8,
+   "sga": 8
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -25,
+   "sga": 25,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -39,
+   "sga": 39,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:09:08",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

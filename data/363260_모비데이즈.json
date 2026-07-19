@@ -2,8 +2,214 @@
  "corp_code": "01493535",
  "corp_name": "모비데이즈",
  "stock_code": "363260",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:57:11"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 3920312398,
+    "op": 538384266,
+    "sga": null,
+    "inventory": 18190142
+   },
+   "2": {
+    "revenue": 7323984521,
+    "op": -12852398,
+    "sga": null,
+    "inventory": 27013881
+   },
+   "3": {
+    "revenue": 13820312356,
+    "op": -593235360,
+    "sga": null,
+    "inventory": 482462912
+   },
+   "4": {
+    "revenue": 23890581882,
+    "op": -1902922259,
+    "sga": 21701874873,
+    "inventory": 721608469
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6759346069,
+    "op": -404133169,
+    "sga": 5631175390,
+    "inventory": 704104513
+   },
+   "2": {
+    "revenue": 16750697173,
+    "op": 188489693,
+    "sga": 11780062980,
+    "inventory": 1015942863
+   },
+   "3": {
+    "revenue": 26313688226,
+    "op": -29496591,
+    "sga": 18037302038,
+    "inventory": 1199782815
+   },
+   "4": {
+    "revenue": 37232287419,
+    "op": 315014042,
+    "sga": 24503234522,
+    "inventory": 1491835042
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 11109896008,
+    "op": 669924849,
+    "sga": 5195340611,
+    "inventory": 1097551713
+   },
+   "2": {
+    "revenue": 23293386940,
+    "op": 3145244833,
+    "sga": 10002801153,
+    "inventory": 1451628447
+   },
+   "3": {
+    "revenue": 36280440686,
+    "op": 4729011617,
+    "sga": 16032746286,
+    "inventory": 1296057310
+   },
+   "4": {
+    "revenue": 44359105328,
+    "op": 4506603704,
+    "sga": 21598858569,
+    "inventory": 1418560917
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 9562483923,
+    "op": -166562772,
+    "sga": 6105368048,
+    "inventory": 1425732241
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 18,
+   "revenue": 3920,
+   "op": 538,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 27,
+   "revenue": 3404,
+   "op": -551,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 482,
+   "revenue": 6496,
+   "op": -580,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 722,
+   "revenue": 10070,
+   "op": -1310,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 704,
+   "revenue": 6759,
+   "op": -404,
+   "sga": 5631
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 1016,
+   "revenue": 9991,
+   "op": 593,
+   "sga": 6149
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1200,
+   "revenue": 9563,
+   "op": -218,
+   "sga": 6257
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 1492,
+   "revenue": 10919,
+   "op": 345,
+   "sga": 6466
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 1098,
+   "revenue": 11110,
+   "op": 670,
+   "sga": 5195
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 1452,
+   "revenue": 12183,
+   "op": 2475,
+   "sga": 4807
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 1296,
+   "revenue": 12987,
+   "op": 1584,
+   "sga": 6030
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1419,
+   "revenue": 8079,
+   "op": -222,
+   "sga": 5566
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1426,
+   "revenue": 9562,
+   "op": -167,
+   "sga": 6105
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 23891,
+   "op": -1903,
+   "sga": 21702,
+   "inventory": 722
+  },
+  {
+   "year": 2024,
+   "revenue": 37232,
+   "op": 315,
+   "sga": 24503,
+   "inventory": 1492
+  },
+  {
+   "year": 2025,
+   "revenue": 44359,
+   "op": 4507,
+   "sga": 21599,
+   "inventory": 1419
+  }
+ ],
+ "updated": "2026-07-19T21:04:22",
+ "fs_div": "CFS",
+ "industry_code": "713",
+ "industry_name": "전문서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,175 @@
  "corp_code": "01492688",
  "corp_name": "드림인사이트",
  "stock_code": "362990",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:22:25"
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 17374444869,
+    "op": 4079032132,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 4304137906,
+    "op": 776339161,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 8762519319,
+    "op": 1509019822,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 12910267037,
+    "op": 2010654012,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 16538166991,
+    "op": 2186118138,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 3725908360,
+    "op": -237006289,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 7591787093,
+    "op": -369787273,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 11774792094,
+    "op": -346076444,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 15455849385,
+    "op": -464094758,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3886725393,
+    "op": 12076413,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 4304,
+   "op": 776,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 4458,
+   "op": 733,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 4148,
+   "op": 502,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 3628,
+   "op": 175,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 3726,
+   "op": -237,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 3866,
+   "op": -133,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4183,
+   "op": 24,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 3681,
+   "op": -118,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3887,
+   "op": 12,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 17374,
+   "op": 4079,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 16538,
+   "op": 2186,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 15456,
+   "op": -464,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:50:45",
+ "fs_div": "OFS",
+ "industry_code": "71310",
+ "industry_name": "전문서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

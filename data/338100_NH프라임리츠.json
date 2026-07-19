@@ -2,8 +2,136 @@
  "corp_code": "01391033",
  "corp_name": "NH프라임리츠",
  "stock_code": "338100",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:21:23"
+ "cums": {
+  "2023": {
+   "2": {
+    "revenue": 1585213121,
+    "op": 1126493219,
+    "sga": 458719902,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14631179728,
+    "op": 12848136458,
+    "sga": 1783043270,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "2": {
+    "revenue": 10425305586,
+    "op": 10256213520,
+    "sga": 169092066,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 14633144964,
+    "op": 7020004168,
+    "sga": 7613140796,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "2": {
+    "revenue": 1345134262,
+    "op": -1908871185,
+    "sga": 3254005447,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 3979315609,
+    "op": -200510886,
+    "sga": 4179826495,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "2": {
+    "revenue": 10020714267,
+    "op": 9634959727,
+    "sga": 385754540,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 14631,
+   "op": 12848,
+   "sga": 1783,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 14633,
+   "op": 7020,
+   "sga": 7613,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 3979,
+   "op": -201,
+   "sga": 4180,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:03:16",
+ "fs_div": "OFS",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가"
 }

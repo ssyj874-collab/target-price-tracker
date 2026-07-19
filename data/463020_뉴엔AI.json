@@ -2,8 +2,79 @@
  "corp_code": "01639508",
  "corp_name": "뉴엔AI",
  "stock_code": "463020",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:52:36"
+ "cums": {
+  "2025": {
+   "2": {
+    "revenue": 8659000000,
+    "op": -1534000000,
+    "sga": 10193000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 13480000000,
+    "op": -1683000000,
+    "sga": 15163000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 18819000000,
+    "op": -1109000000,
+    "sga": 19928000000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 4342000000,
+    "op": -745000000,
+    "sga": 5087000000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4821,
+   "op": -149,
+   "sga": 4970
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5339,
+   "op": 574,
+   "sga": 4765
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 4342,
+   "op": -745,
+   "sga": 5087
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 18819,
+   "op": -1109,
+   "sga": 19928,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:30:50",
+ "fs_div": "OFS",
+ "industry_code": "58222",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,66 @@
  "corp_code": "01810477",
  "corp_name": "노타",
  "stock_code": "486990",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:50:32"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 3597725233,
+    "op": -12542837517,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 13100933426,
+    "op": -15279286074,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3584548582,
+    "op": -4197671191,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 9503,
+   "op": -2736,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 3585,
+   "op": -4198,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 13101,
+   "op": -15279,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T21:10:02",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

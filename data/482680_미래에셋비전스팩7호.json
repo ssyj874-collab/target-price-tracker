@@ -2,8 +2,127 @@
  "corp_code": "01841635",
  "corp_name": "미래에셋비전스팩7호",
  "stock_code": "482680",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:03:05"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 0,
+    "op": -21587260,
+    "sga": 21587260,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -26029760,
+    "sga": 26029760,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -10306050,
+    "sga": 10306050,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -29663220,
+    "sga": 29663220,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -33580070,
+    "sga": 33580070,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -38020290,
+    "sga": 38020290,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -47596290,
+    "sga": 47596290,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -10,
+   "sga": 10
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -19,
+   "sga": 19
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -48,
+   "sga": 48
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -26,
+   "sga": 26,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -38,
+   "sga": 38,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:25:53",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

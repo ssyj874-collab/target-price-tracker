@@ -2,8 +2,114 @@
  "corp_code": "01286476",
  "corp_name": "RF시스템즈",
  "stock_code": "474610",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:23:08"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 32672118780,
+    "op": 1685721027,
+    "sga": 6799863402,
+    "inventory": 6994200303
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6654463397,
+    "op": 291345632,
+    "sga": 1367091318,
+    "inventory": 10720048717
+   },
+   "2": {
+    "revenue": 17053843084,
+    "op": 1873330798,
+    "sga": 3128138076,
+    "inventory": 10295776655
+   },
+   "3": {
+    "revenue": 24654738361,
+    "op": 2486008411,
+    "sga": 4880764322,
+    "inventory": 11448817006
+   },
+   "4": {
+    "revenue": 38174363248,
+    "op": 4056230151,
+    "sga": 6683552685,
+    "inventory": 9655918815
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10004468336,
+    "op": 1121913560,
+    "sga": 1940331430,
+    "inventory": 11148651209
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": 6994,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 10720,
+   "revenue": 6654,
+   "op": 291,
+   "sga": 1367
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 10296,
+   "revenue": 10399,
+   "op": 1582,
+   "sga": 1761
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 11449,
+   "revenue": 7601,
+   "op": 613,
+   "sga": 1753
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 9656,
+   "revenue": 13520,
+   "op": 1570,
+   "sga": 1803
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 11149,
+   "revenue": 10004,
+   "op": 1122,
+   "sga": 1940
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 32672,
+   "op": 1686,
+   "sga": 6800,
+   "inventory": 6994
+  },
+  {
+   "year": 2025,
+   "revenue": 38174,
+   "op": 4056,
+   "sga": 6684,
+   "inventory": 9656
+  }
+ ],
+ "updated": "2026-07-19T20:54:55",
+ "fs_div": "OFS",
+ "industry_code": "25924",
+ "industry_name": "금속가공",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

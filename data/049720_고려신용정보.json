@@ -2,8 +2,214 @@
  "corp_code": "00336297",
  "corp_name": "고려신용정보",
  "stock_code": "049720",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:54:49"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 36905330776,
+    "op": 2801824593,
+    "sga": 34103506183,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 76824877956,
+    "op": 6012158788,
+    "sga": 70812719168,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 117195587289,
+    "op": 8824601246,
+    "sga": 108370986043,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 158214357320,
+    "op": 13070357375,
+    "sga": 145143999945,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 41506050056,
+    "op": 3158933613,
+    "sga": 38347116443,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 84680164719,
+    "op": 7080852460,
+    "sga": 77599312259,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 128067992821,
+    "op": 10840989941,
+    "sga": 117227002880,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 171309350127,
+    "op": 15310219206,
+    "sga": 155999130921,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 42646512366,
+    "op": 3325381006,
+    "sga": 39321131360,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 87498025291,
+    "op": 7508718013,
+    "sga": 79989307278,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 132995896868,
+    "op": 12041306076,
+    "sga": 120954590792,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 178029909590,
+    "op": 16740742506,
+    "sga": 161289167084,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 43815159618,
+    "op": 3685952421,
+    "sga": 40129207197,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 36905,
+   "op": 2802,
+   "sga": 34104
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 39920,
+   "op": 3210,
+   "sga": 36709
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 40371,
+   "op": 2812,
+   "sga": 37558
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 41019,
+   "op": 4246,
+   "sga": 36773
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 41506,
+   "op": 3159,
+   "sga": 38347
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 43174,
+   "op": 3922,
+   "sga": 39252
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 43388,
+   "op": 3760,
+   "sga": 39628
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 43241,
+   "op": 4469,
+   "sga": 38772
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 42647,
+   "op": 3325,
+   "sga": 39321
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 44852,
+   "op": 4183,
+   "sga": 40668
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 45498,
+   "op": 4533,
+   "sga": 40965
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 45034,
+   "op": 4699,
+   "sga": 40335
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 43815,
+   "op": 3686,
+   "sga": 40129
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 158214,
+   "op": 13070,
+   "sga": 145144,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 171309,
+   "op": 15310,
+   "sga": 155999,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 178030,
+   "op": 16741,
+   "sga": 161289,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:25:26",
+ "fs_div": "CFS",
+ "industry_code": "75993",
+ "industry_name": "사업지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

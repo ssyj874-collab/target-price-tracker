@@ -2,8 +2,214 @@
  "corp_code": "01364747",
  "corp_name": "가온칩스",
  "stock_code": "399720",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:48:59"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 12653945692,
+    "op": -640797808,
+    "sga": 2004774304,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 27010782353,
+    "op": 825984833,
+    "sga": 3532784211,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 42710599548,
+    "op": 1989084376,
+    "sga": 5991467914,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 63597349804,
+    "op": 4351646460,
+    "sga": 8366349236,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 17934956248,
+    "op": -609184992,
+    "sga": 2513791458,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 41204629152,
+    "op": -542373195,
+    "sga": 5804830719,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 70112765402,
+    "op": 1693132716,
+    "sga": 8202686971,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 96492001688,
+    "op": 3524912928,
+    "sga": 10719161635,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 15201026995,
+    "op": -6426235850,
+    "sga": 3041674545,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 24339926059,
+    "op": -11155941251,
+    "sga": 5721174460,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 35403074112,
+    "op": -18433133384,
+    "sga": 8332989320,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 68510181008,
+    "op": -16721496228,
+    "sga": 11508951773,
+    "inventory": 1061362786
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 20569510882,
+    "op": -3906114629,
+    "sga": 2997738018,
+    "inventory": 1061362786
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 12654,
+   "op": -641,
+   "sga": 2005
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 14357,
+   "op": 1467,
+   "sga": 1528
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 15700,
+   "op": 1163,
+   "sga": 2459
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 20887,
+   "op": 2363,
+   "sga": 2375
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 17935,
+   "op": -609,
+   "sga": 2514
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 23270,
+   "op": 67,
+   "sga": 3291
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 28908,
+   "op": 2236,
+   "sga": 2398
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 26379,
+   "op": 1832,
+   "sga": 2516
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 15201,
+   "op": -6426,
+   "sga": 3042
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 9139,
+   "op": -4730,
+   "sga": 2679
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 11063,
+   "op": -7277,
+   "sga": 2612
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1061,
+   "revenue": 33107,
+   "op": 1712,
+   "sga": 3176
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1061,
+   "revenue": 20570,
+   "op": -3906,
+   "sga": 2998
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 63597,
+   "op": 4352,
+   "sga": 8366,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 96492,
+   "op": 3525,
+   "sga": 10719,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 68510,
+   "op": -16721,
+   "sga": 11509,
+   "inventory": 1061
+  }
+ ],
+ "updated": "2026-07-19T20:36:26",
+ "fs_div": "CFS",
+ "industry_code": "26112",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

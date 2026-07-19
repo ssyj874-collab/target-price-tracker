@@ -2,8 +2,214 @@
  "corp_code": "01096341",
  "corp_name": "넥슨게임즈",
  "stock_code": "225570",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:48:16"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 52159483328,
+    "op": 12716233453,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 95586135328,
+    "op": 12898281486,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 152062530729,
+    "op": 22449591634,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 193272169533,
+    "op": 12013961586,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 52630643818,
+    "op": 2468925815,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 96224017476,
+    "op": -5968675076,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 207723199570,
+    "op": 40863752908,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 256071097561,
+    "op": 38733545039,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 51305608201,
+    "op": -4892943326,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 89877717659,
+    "op": -26688617828,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 140027812143,
+    "op": -37166702685,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 179316825078,
+    "op": -60239594834,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 41514124764,
+    "op": -21107966194,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 52159,
+   "op": 12716,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 43427,
+   "op": 182,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 56476,
+   "op": 9551,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 41210,
+   "op": -10436,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 52631,
+   "op": 2469,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 43593,
+   "op": -8438,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 111499,
+   "op": 46832,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 48348,
+   "op": -2130,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 51306,
+   "op": -4893,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 38572,
+   "op": -21796,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 50150,
+   "op": -10478,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 39289,
+   "op": -23073,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 41514,
+   "op": -21108,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 193272,
+   "op": 12014,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 256071,
+   "op": 38734,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 179317,
+   "op": -60240,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:55:32",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

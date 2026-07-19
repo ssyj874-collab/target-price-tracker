@@ -2,8 +2,214 @@
  "corp_code": "00231442",
  "corp_name": "디지틀조선",
  "stock_code": "033130",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:33:46"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 7326879455,
+    "op": -393827571,
+    "sga": null,
+    "inventory": 134289884
+   },
+   "2": {
+    "revenue": 17089802104,
+    "op": 1092444630,
+    "sga": null,
+    "inventory": 622174974
+   },
+   "3": {
+    "revenue": 26978596774,
+    "op": 2386289048,
+    "sga": null,
+    "inventory": 605804154
+   },
+   "4": {
+    "revenue": 36571550723,
+    "op": 2174982408,
+    "sga": null,
+    "inventory": 388122014
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 8485996981,
+    "op": -283226869,
+    "sga": null,
+    "inventory": 306161431
+   },
+   "2": {
+    "revenue": 17536074726,
+    "op": 666535794,
+    "sga": null,
+    "inventory": 264996985
+   },
+   "3": {
+    "revenue": 26855455491,
+    "op": 1535780026,
+    "sga": null,
+    "inventory": 172997934
+   },
+   "4": {
+    "revenue": 36955034215,
+    "op": 2364890239,
+    "sga": null,
+    "inventory": 146719740
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 8216848515,
+    "op": -1013443809,
+    "sga": null,
+    "inventory": 130307918
+   },
+   "2": {
+    "revenue": 18330355028,
+    "op": 1076704681,
+    "sga": null,
+    "inventory": 125612258
+   },
+   "3": {
+    "revenue": 28342308474,
+    "op": 3273319524,
+    "sga": null,
+    "inventory": 108289021
+   },
+   "4": {
+    "revenue": 39901898759,
+    "op": 5508704439,
+    "sga": null,
+    "inventory": 114957514
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10256769326,
+    "op": 2382843228,
+    "sga": null,
+    "inventory": 102180824
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 134,
+   "revenue": 7327,
+   "op": -394,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 622,
+   "revenue": 9763,
+   "op": 1486,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 606,
+   "revenue": 9889,
+   "op": 1294,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 388,
+   "revenue": 9593,
+   "op": -211,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 306,
+   "revenue": 8486,
+   "op": -283,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 265,
+   "revenue": 9050,
+   "op": 950,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 173,
+   "revenue": 9319,
+   "op": 869,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 147,
+   "revenue": 10100,
+   "op": 829,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 130,
+   "revenue": 8217,
+   "op": -1013,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 126,
+   "revenue": 10114,
+   "op": 2090,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 108,
+   "revenue": 10012,
+   "op": 2197,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 115,
+   "revenue": 11560,
+   "op": 2235,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 102,
+   "revenue": 10257,
+   "op": 2383,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 36572,
+   "op": 2175,
+   "sga": null,
+   "inventory": 388
+  },
+  {
+   "year": 2024,
+   "revenue": 36955,
+   "op": 2365,
+   "sga": null,
+   "inventory": 147
+  },
+  {
+   "year": 2025,
+   "revenue": 39902,
+   "op": 5509,
+   "sga": null,
+   "inventory": 115
+  }
+ ],
+ "updated": "2026-07-19T20:14:05",
+ "fs_div": "CFS",
+ "industry_code": "631",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

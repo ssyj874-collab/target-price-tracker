@@ -2,8 +2,188 @@
  "corp_code": "01467451",
  "corp_name": "KT밀리의서재",
  "stock_code": "418470",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:15:12"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 40632974558,
+    "op": 7491647721,
+    "sga": null,
+    "inventory": 126238403
+   },
+   "4": {
+    "revenue": 56572748963,
+    "op": 10406126329,
+    "sga": null,
+    "inventory": 180899079
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 16820607989,
+    "op": 2869100016,
+    "sga": null,
+    "inventory": 222377755
+   },
+   "2": {
+    "revenue": 34635518152,
+    "op": 6569717775,
+    "sga": null,
+    "inventory": 308293552
+   },
+   "3": {
+    "revenue": 53121920109,
+    "op": 9706768389,
+    "sga": null,
+    "inventory": 288074354
+   },
+   "4": {
+    "revenue": 72598807189,
+    "op": 11001459438,
+    "sga": null,
+    "inventory": 260726208
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 20002798810,
+    "op": 3719175599,
+    "sga": null,
+    "inventory": 236012284
+   },
+   "2": {
+    "revenue": 40693654815,
+    "op": 8460071047,
+    "sga": null,
+    "inventory": 100726972
+   },
+   "3": {
+    "revenue": 63486024391,
+    "op": 12744305975,
+    "sga": null,
+    "inventory": 72306471
+   },
+   "4": {
+    "revenue": 88189777012,
+    "op": 14370840675,
+    "sga": null,
+    "inventory": 74005903
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 23932222736,
+    "op": 3901379578,
+    "sga": null,
+    "inventory": 80597626
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": 126,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 181,
+   "revenue": 15940,
+   "op": 2914,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 222,
+   "revenue": 16821,
+   "op": 2869,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 308,
+   "revenue": 17815,
+   "op": 3701,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 288,
+   "revenue": 18486,
+   "op": 3137,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 261,
+   "revenue": 19477,
+   "op": 1295,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 236,
+   "revenue": 20003,
+   "op": 3719,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 101,
+   "revenue": 20691,
+   "op": 4741,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 72,
+   "revenue": 22792,
+   "op": 4284,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 74,
+   "revenue": 24704,
+   "op": 1627,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 81,
+   "revenue": 23932,
+   "op": 3901,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 56573,
+   "op": 10406,
+   "sga": null,
+   "inventory": 181
+  },
+  {
+   "year": 2024,
+   "revenue": 72599,
+   "op": 11001,
+   "sga": null,
+   "inventory": 261
+  },
+  {
+   "year": 2025,
+   "revenue": 88190,
+   "op": 14371,
+   "sga": null,
+   "inventory": 74
+  }
+ ],
+ "updated": "2026-07-19T20:29:44",
+ "fs_div": "OFS",
+ "industry_code": "581",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

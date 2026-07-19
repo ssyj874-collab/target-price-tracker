@@ -2,8 +2,214 @@
  "corp_code": "01067808",
  "corp_name": "넵튠",
  "stock_code": "217270",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:48:39"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 19049690513,
+    "op": -1487939778,
+    "sga": null,
+    "inventory": 115838999
+   },
+   "2": {
+    "revenue": 49427504474,
+    "op": -1336260111,
+    "sga": null,
+    "inventory": 42385396
+   },
+   "3": {
+    "revenue": 71105937267,
+    "op": -1153862741,
+    "sga": null,
+    "inventory": 26768538
+   },
+   "4": {
+    "revenue": 99746932814,
+    "op": 2155714673,
+    "sga": null,
+    "inventory": 26194704
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 24566944648,
+    "op": 722998781,
+    "sga": null,
+    "inventory": 33004949
+   },
+   "2": {
+    "revenue": 51399023766,
+    "op": 1476900716,
+    "sga": null,
+    "inventory": 29037128
+   },
+   "3": {
+    "revenue": 89678089768,
+    "op": 6683331133,
+    "sga": null,
+    "inventory": 30875559
+   },
+   "4": {
+    "revenue": 121600718535,
+    "op": 9605576935,
+    "sga": null,
+    "inventory": 35797243
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 31586525907,
+    "op": 2373887935,
+    "sga": null,
+    "inventory": 95016710
+   },
+   "2": {
+    "revenue": 65747689296,
+    "op": 3512846204,
+    "sga": null,
+    "inventory": 88549113
+   },
+   "3": {
+    "revenue": 95419753475,
+    "op": 4082305980,
+    "sga": null,
+    "inventory": 77543319
+   },
+   "4": {
+    "revenue": 122530715081,
+    "op": 2492318946,
+    "sga": null,
+    "inventory": 104538213
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 31409350309,
+    "op": 1718409045,
+    "sga": null,
+    "inventory": 101443158
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 116,
+   "revenue": 19050,
+   "op": -1488,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 42,
+   "revenue": 30378,
+   "op": 152,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 27,
+   "revenue": 21678,
+   "op": 182,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 26,
+   "revenue": 28641,
+   "op": 3310,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 33,
+   "revenue": 24567,
+   "op": 723,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 29,
+   "revenue": 26832,
+   "op": 754,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 31,
+   "revenue": 38279,
+   "op": 5206,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": 36,
+   "revenue": 31923,
+   "op": 2922,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": 95,
+   "revenue": 31587,
+   "op": 2374,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": 89,
+   "revenue": 34161,
+   "op": 1139,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 78,
+   "revenue": 29672,
+   "op": 569,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 105,
+   "revenue": 27111,
+   "op": -1590,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 101,
+   "revenue": 31409,
+   "op": 1718,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 99747,
+   "op": 2156,
+   "sga": null,
+   "inventory": 26
+  },
+  {
+   "year": 2024,
+   "revenue": 121601,
+   "op": 9606,
+   "sga": null,
+   "inventory": 36
+  },
+  {
+   "year": 2025,
+   "revenue": 122531,
+   "op": 2492,
+   "sga": null,
+   "inventory": 105
+  }
+ ],
+ "updated": "2026-07-19T20:54:14",
+ "fs_div": "CFS",
+ "industry_code": "582",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }

@@ -2,8 +2,127 @@
  "corp_code": "01138595",
  "corp_name": "뱅크웨어글로벌",
  "stock_code": "199480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:11:33"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": 36694027320,
+    "op": -10214323440,
+    "sga": 10145896533,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 50200792001,
+    "op": -14933898549,
+    "sga": 13774630023,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 14232425618,
+    "op": -2033862210,
+    "sga": 3119965483,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 29083616839,
+    "op": -2638002180,
+    "sga": 5812557618,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 46060356537,
+    "op": -2868220698,
+    "sga": 9142814675,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 63448191187,
+    "op": -4381350455,
+    "sga": 12678853932,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 19346907866,
+    "op": -1176999196,
+    "sga": 2954203862,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 13507,
+   "op": -4720,
+   "sga": 3629
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 14232,
+   "op": -2034,
+   "sga": 3120
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 14851,
+   "op": -604,
+   "sga": 2693
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 16977,
+   "op": -230,
+   "sga": 3330
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 17388,
+   "op": -1513,
+   "sga": 3536
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 19347,
+   "op": -1177,
+   "sga": 2954
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 50201,
+   "op": -14934,
+   "sga": 13775,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 63448,
+   "op": -4381,
+   "sga": 12679,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T20:06:37",
+ "fs_div": "CFS",
+ "industry_code": "58222",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥"
 }
