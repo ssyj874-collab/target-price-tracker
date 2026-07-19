@@ -328,6 +328,9 @@ def ensure_industry(key: str, corp: dict, data_dir: str) -> Optional[str]:
     store["industry_name"] = industry_name(code)
     store["corp_cls"] = cls
     store["market"] = _CORP_CLS.get(cls, "")
+    # 결산월 — 12월이 아니면 분기 라벨이 회계연도 기준이라 달력 분기와
+    # 어긋난다(신영증권 3월 결산 등). 스크리닝에서 구분하기 위해 저장.
+    store["acc_mt"] = (data.get("acc_mt") or "").strip()
     save_store(path, store)
     return code
 
