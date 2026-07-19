@@ -180,6 +180,7 @@ def run_job(mode: str) -> None:
             try:
                 _store, added = dart_store.ensure_periods(key, corp, DATA_DIR, periods)
                 JOB["added"] += added
+                dart_store.ensure_industry(key, corp, DATA_DIR)
             except dart_store.BudgetExceeded as e:
                 JOB["message"] = str(e)
                 if mode == "backfill":
@@ -267,15 +268,33 @@ def start_job(mode: str) -> bool:
 # 조회
 # ---------------------------------------------------------------------------
 
+_LISTED_MAP: dict | None = None
+
+
+def listed_map() -> dict:
+    """{종목코드: 시장} — 못 받으면 빈 dict(필터 없이 전체 표시)."""
+    global _LISTED_MAP
+    if _LISTED_MAP is None:
+        _LISTED_MAP = fetch_listed_codes() or {}
+    return _LISTED_MAP
+
+
 def list_stores() -> list[dict]:
+    listed = listed_map()
     out = []
     for path in sorted(glob.glob(os.path.join(DATA_DIR, "[0-9]*.json"))):
         store = dart_store.load_store(path)
         if not store:
             continue
+        code = store.get("stock_code")
+        # 유가·코스닥 목록이 있으면 그 외(코넥스·기타)는 숨긴다
+        if listed and code not in listed:
+            continue
         out.append({
-            "stock_code": store.get("stock_code"),
+            "stock_code": code,
             "corp_name": store.get("corp_name"),
+            "market": listed.get(code, ""),
+            "industry": store.get("industry_name") or "",
             "updated": store.get("updated"),
             "quarters": len(store.get("quarterly", [])),
             "latest": (store.get("quarterly") or [{}])[-1].get("label"),
@@ -377,6 +396,7 @@ class Handler(BaseHTTPRequestHandler):
                         _s, added = dart_store.ensure_periods(
                             key, corp, DATA_DIR,
                             dart_store.year_range_periods(this_year - 3, this_year))
+                        dart_store.ensure_industry(key, corp, DATA_DIR)
                     except dart_store.BudgetExceeded as e:
                         self._json({"ok": False, "error": str(e)}, 429)
                         return
@@ -487,8 +507,8 @@ tbody tr:last-child { border-bottom: none; }
     </div>
     <div class="table-wrap" style="margin-top:8px">
       <table>
-        <thead><tr><th>종목</th><th>코드</th><th>분기 수</th><th>최근 분기</th>
-          <th>마지막 수집</th><th></th></tr></thead>
+        <thead><tr><th>종목</th><th>코드</th><th>시장</th><th>업종</th>
+          <th>분기 수</th><th>최근 분기</th><th>마지막 수집</th><th></th></tr></thead>
         <tbody id="stock-list"></tbody>
       </table>
     </div>
@@ -540,12 +560,14 @@ function renderList() {
   tbody.innerHTML = "";
   let shown = 0;
   for (const s of stocks) {
-    if (q && !(s.corp_name.toLowerCase().includes(q) || s.stock_code.includes(q))) continue;
+    if (q && !(s.corp_name.toLowerCase().includes(q) || s.stock_code.includes(q)
+               || (s.industry || "").includes(q))) continue;
     shown += 1;
     if (shown > 500) break;  // 필터로 좁혀 쓰세요
     const tr = document.createElement("tr");
     if (s.stock_code === currentCode) tr.className = "active";
     tr.innerHTML = `<td>${s.corp_name}</td><td>${s.stock_code}</td>` +
+      `<td>${s.market || "–"}</td><td>${s.industry || "–"}</td>` +
       `<td>${s.quarters}</td><td>${s.latest || "–"}</td>` +
       `<td>${(s.updated || "").replace("T", " ")}</td><td></td>`;
     const btn = document.createElement("button");

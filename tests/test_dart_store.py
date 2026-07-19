@@ -204,6 +204,46 @@ class PeriodsTest(unittest.TestCase):
         self.assertEqual(got, [(2024, 3), (2025, 1)])
 
 
+class IndustryTest(unittest.TestCase):
+    def test_industry_name_mapping(self):
+        self.assertEqual(dart_store.industry_name("21201"), "의약품")
+        self.assertEqual(dart_store.industry_name("264"), "전자부품·통신장비")
+        self.assertIsNone(dart_store.industry_name(None))
+        self.assertIsNone(dart_store.industry_name("99"))
+
+    def test_ensure_industry_fetches_once(self):
+        calls = []
+
+        def fake_api(path, **params):
+            calls.append(path)
+            return {"status": "000", "induty_code": "28112"}
+
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(dart_store, "_api_json", side_effect=fake_api):
+                code = dart_store.ensure_industry("K", CORP, d)
+                self.assertEqual(code, "28112")
+                # 두 번째 호출은 저장된 값을 쓰고 API를 안 부른다
+                code2 = dart_store.ensure_industry("K", CORP, d)
+            saved = dart_store.load_store(dart_store.store_path(d, CORP))
+        self.assertEqual(code2, "28112")
+        self.assertEqual(calls, ["company.json"])
+        self.assertEqual(saved["industry_name"], "전기장비")
+
+    def test_diag_accounts_saved_when_no_match(self):
+        def fake_api(path, **params):
+            return {"status": "000", "list": [
+                {"sj_div": "IS", "account_nm": "보험수익", "account_id": "",
+                 "thstrm_amount": "100"},
+            ]}
+
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(dart_store, "_api_json", side_effect=fake_api):
+                store, added = dart_store.ensure_periods(
+                    "K", CORP, d, [(2025, 1)])
+        self.assertEqual(added, 0)
+        self.assertIn("보험수익", store.get("diag_accounts", []))
+
+
 class FetchPeriodTest(unittest.TestCase):
     def test_cfs_then_ofs_fallback(self):
         calls = []

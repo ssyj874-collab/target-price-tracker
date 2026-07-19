@@ -80,6 +80,40 @@ _METRICS = tuple(_MATCHERS)
 # "Ⅰ. 매출액", "1.매출액" 같은 순번 접두어 제거용
 _ORDINAL_PREFIX = re.compile(r"^[0-9IVXⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]+\.")
 
+# 계정 미매칭 진단용 — 보고서 행은 있는데 매출·영업이익을 못 찾은 경우
+# 그 보고서의 계정명 샘플을 남긴다 (다음 매칭 개선의 근거)
+LAST_MISS: Optional[list] = None
+
+# 한국표준산업분류(KSIC) 대분류(2자리) 이름 — 업종 필터용
+KSIC_DIVISIONS = {
+    "01": "농업", "02": "임업", "03": "어업",
+    "05": "석탄·석유광업", "06": "원유·가스채굴", "07": "금속광업",
+    "08": "비금속광물광업", "10": "식료품", "11": "음료", "12": "담배",
+    "13": "섬유", "14": "의복", "15": "가죽·신발", "16": "목재",
+    "17": "펄프·종이", "18": "인쇄", "19": "석유정제", "20": "화학",
+    "21": "의약품", "22": "고무·플라스틱", "23": "비금속광물제품",
+    "24": "1차금속", "25": "금속가공", "26": "전자부품·통신장비",
+    "27": "의료·정밀기기", "28": "전기장비", "29": "기계·장비",
+    "30": "자동차", "31": "기타운송장비", "32": "가구", "33": "기타제품",
+    "34": "기계수리", "35": "전기·가스", "36": "수도", "37": "하수처리",
+    "38": "폐기물처리", "39": "환경정화", "41": "종합건설", "42": "전문건설",
+    "45": "자동차판매", "46": "도매·상품중개", "47": "소매",
+    "49": "육상운송", "50": "수상운송", "51": "항공운송", "52": "물류·창고",
+    "55": "숙박", "56": "음식점", "58": "출판·게임SW", "59": "영상·음반",
+    "60": "방송", "61": "통신", "62": "IT서비스·SW개발", "63": "정보서비스",
+    "64": "금융", "65": "보험·연금", "66": "금융지원서비스", "68": "부동산",
+    "70": "연구개발", "71": "전문서비스", "72": "엔지니어링",
+    "73": "과학기술서비스", "74": "사업시설관리", "75": "사업지원서비스",
+    "76": "임대", "85": "교육", "86": "보건업", "87": "사회복지",
+    "90": "예술·스포츠", "91": "여가서비스",
+}
+
+
+def industry_name(code: Optional[str]) -> Optional[str]:
+    if not code:
+        return None
+    return KSIC_DIVISIONS.get(str(code).strip()[:2])
+
 
 def _amount(row: dict, cumulative: bool) -> Optional[int]:
     """원 단위 금액. 손익 항목은 당기누적(thstrm_add_amount) 우선."""
@@ -117,10 +151,12 @@ def fetch_period(key: str, corp_code: str, year: int, q: int,
     fs_hint(이 회사가 지난번에 쓴 재무제표 구분)를 먼저 시도해 호출을
     절약한다. 공시가 없거나 매출·영업이익을 못 찾으면 (None, None).
     """
+    global LAST_MISS
     order = ["CFS", "OFS"]
     if fs_hint in order:
         order.remove(fs_hint)
         order.insert(0, fs_hint)
+    miss_sample = None
     for fs in order:
         data = _call_api("fnlttSinglAcntAll.json", crtfc_key=key,
                          corp_code=corp_code, bsns_year=str(year),
@@ -133,6 +169,12 @@ def fetch_period(key: str, corp_code: str, year: int, q: int,
         # 저장한다(매출 칸은 비움). 둘 다 없으면 이 재무제표는 불채택.
         if metrics["op"] is not None or metrics["revenue"] is not None:
             return metrics, fs
+        miss_sample = sorted({
+            (r.get("account_nm") or "").strip()
+            for r in rows if (r.get("sj_div") or "") in ("IS", "CIS")
+        })[:20]
+    if miss_sample:
+        LAST_MISS = miss_sample
     return None, None
 
 
@@ -239,11 +281,13 @@ def ensure_periods(key: str, corp: dict, data_dir: str,
     이미 저장된 기간은 API를 부르지 않으므로 멱등이면서 싸다.
     BudgetExceeded가 나면 그때까지 받은 것을 저장하고 그대로 올린다.
     """
+    global LAST_MISS
     path = store_path(data_dir, corp)
     store = load_store(path) or new_store(corp)
     store.setdefault("cums", {})
     todo = missing_periods(store, periods)
     added = 0
+    LAST_MISS = None
     try:
         for year, q in todo:
             metrics, fs = fetch_period(key, corp["corp_code"], year, q,
@@ -254,11 +298,28 @@ def ensure_periods(key: str, corp: dict, data_dir: str,
             store["fs_div"] = fs
             added += 1
     finally:
-        if added or not os.path.exists(path):
+        # 여전히 빈 종목이면 왜 비는지 계정명 샘플을 남긴다(매칭 개선 근거)
+        if not store["cums"] and LAST_MISS:
+            store["diag_accounts"] = LAST_MISS
+        if added or not os.path.exists(path) or store.get("diag_accounts"):
             rebuild(store)
             store["updated"] = dt.datetime.now().isoformat(timespec="seconds")
             save_store(path, store)
     return store, added
+
+
+def ensure_industry(key: str, corp: dict, data_dir: str) -> Optional[str]:
+    """표준산업분류코드가 없으면 다트 기업개요에서 받아 저장. 코드 반환."""
+    path = store_path(data_dir, corp)
+    store = load_store(path) or new_store(corp)
+    if "industry_code" in store:
+        return store.get("industry_code")
+    data = _call_api("company.json", crtfc_key=key, corp_code=corp["corp_code"])
+    code = (data.get("induty_code") or "").strip()
+    store["industry_code"] = code
+    store["industry_name"] = industry_name(code)
+    save_store(path, store)
+    return code
 
 
 def year_range_periods(start_year: int, end_year: int) -> list[tuple[int, int]]:
