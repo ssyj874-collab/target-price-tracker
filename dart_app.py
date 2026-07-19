@@ -287,13 +287,18 @@ def list_stores() -> list[dict]:
         if not store:
             continue
         code = store.get("stock_code")
-        # 유가·코스닥 목록이 있으면 그 외(코넥스·기타)는 숨긴다
-        if listed and code not in listed:
+        # 시장구분: 다트 기업개요(corp_cls)가 있으면 그걸 우선(공식),
+        # 없으면 KRX 목록으로 판별. 유가·코스닥 외는 숨긴다.
+        cls = store.get("corp_cls")
+        if cls is not None:
+            if cls not in ("Y", "K"):
+                continue
+        elif listed and code not in listed:
             continue
         out.append({
             "stock_code": code,
             "corp_name": store.get("corp_name"),
-            "market": listed.get(code, ""),
+            "market": store.get("market") or listed.get(code, ""),
             "industry": store.get("industry_name") or "",
             "updated": store.get("updated"),
             "quarters": len(store.get("quarterly", [])),

@@ -308,16 +308,26 @@ def ensure_periods(key: str, corp: dict, data_dir: str,
     return store, added
 
 
+_CORP_CLS = {"Y": "유가", "K": "코스닥", "N": "코넥스", "E": "기타"}
+
+
 def ensure_industry(key: str, corp: dict, data_dir: str) -> Optional[str]:
-    """표준산업분류코드가 없으면 다트 기업개요에서 받아 저장. 코드 반환."""
+    """표준산업분류코드·시장구분이 없으면 다트 기업개요에서 받아 저장.
+
+    corp_cls(Y=유가/K=코스닥/N=코넥스/E=기타)가 공식 시장구분이라
+    상장폐지·코넥스·기타법인을 정확히 걸러낼 수 있다.
+    """
     path = store_path(data_dir, corp)
     store = load_store(path) or new_store(corp)
-    if "industry_code" in store:
+    if "industry_code" in store and "market" in store:
         return store.get("industry_code")
     data = _call_api("company.json", crtfc_key=key, corp_code=corp["corp_code"])
     code = (data.get("induty_code") or "").strip()
+    cls = (data.get("corp_cls") or "").strip()
     store["industry_code"] = code
     store["industry_name"] = industry_name(code)
+    store["corp_cls"] = cls
+    store["market"] = _CORP_CLS.get(cls, "")
     save_store(path, store)
     return code
 
