@@ -2,8 +2,184 @@
  "corp_code": "00123772",
  "corp_name": "부국증권",
  "stock_code": "001270",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:18:23"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 614414307161,
+    "op": 59569329167,
+    "sga": 84682755297,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 815040553001,
+    "op": 69108709126,
+    "sga": 116505442265,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 167687501769,
+    "op": 19799387785,
+    "sga": 24246424734,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 353833315821,
+    "op": 29792945487,
+    "sga": 40771260687,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 557112281835,
+    "op": 38165358272,
+    "sga": 61723083321,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 779174975982,
+    "op": 36674404410,
+    "sga": 93956885027,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 193216191147,
+    "op": 22337568536,
+    "sga": 30362356927,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 455971175578,
+    "op": 42810345587,
+    "sga": 60178998362,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 664478447232,
+    "op": 56730399490,
+    "sga": 86420211211,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 965463610904,
+    "op": 56777193314,
+    "sga": 122958183337,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 479606128154,
+    "op": 15625412371,
+    "sga": 28648959003,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 200626,
+   "op": 9539,
+   "sga": 31823
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 167688,
+   "op": 19799,
+   "sga": 24246
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 186146,
+   "op": 9994,
+   "sga": 16525
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 203279,
+   "op": 8372,
+   "sga": 20952
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 222063,
+   "op": -1491,
+   "sga": 32234
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 193216,
+   "op": 22338,
+   "sga": 30362
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 262755,
+   "op": 20473,
+   "sga": 29817
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 208507,
+   "op": 13920,
+   "sga": 26241
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 300985,
+   "op": 47,
+   "sga": 36538
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 479606,
+   "op": 15625,
+   "sga": 28649
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 815041,
+   "op": 69109,
+   "sga": 116505,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 779175,
+   "op": 36674,
+   "sga": 93957,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 965464,
+   "op": 56777,
+   "sga": 122958,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:17:53",
+ "fs_div": "CFS"
 }

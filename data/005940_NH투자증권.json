@@ -2,8 +2,184 @@
  "corp_code": "00120182",
  "corp_name": "NH투자증권",
  "stock_code": "005940",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:21:16"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": null,
+    "op": 590355000000,
+    "sga": 710236000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 725757000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": 276869000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 545703000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 733897000000,
+    "sga": 825119000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 901069000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": 289044000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 610970000000,
+    "sga": 585015000000,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": 1002315000000,
+    "sga": 906334000000,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 1420580000000,
+    "sga": 1255627000000,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 636689000000,
+    "sga": 414400000000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 135402,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 276869,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 268834,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 188194,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 167172,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 289044,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 321926,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 391345,
+   "sga": 321319
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 418265,
+   "sga": 349293
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 636689,
+   "sga": 414400
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": 725757,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": 901069,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 1420580,
+   "sga": 1255627,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:27:10",
+ "fs_div": "CFS"
 }

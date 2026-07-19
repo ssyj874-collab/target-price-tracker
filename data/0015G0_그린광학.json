@@ -2,8 +2,62 @@
  "corp_code": "00677486",
  "corp_name": "그린광학",
  "stock_code": "0015G0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:33:03"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 28229411969,
+    "op": 735648975,
+    "sga": 6411256401,
+    "inventory": 29037815207
+   },
+   "4": {
+    "revenue": 41751906908,
+    "op": 2202413577,
+    "sga": 8864803370,
+    "inventory": 29762587745
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10857975616,
+    "op": 555373569,
+    "sga": 2501003709,
+    "inventory": 32511916065
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 29038,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 29763,
+   "revenue": 13522,
+   "op": 1467,
+   "sga": 2454
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 32512,
+   "revenue": 10858,
+   "op": 555,
+   "sga": 2501
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 41752,
+   "op": 2202,
+   "sga": 8865,
+   "inventory": 29763
+  }
+ ],
+ "updated": "2026-07-19T00:18:51",
+ "fs_div": "CFS"
 }

@@ -2,8 +2,173 @@
  "corp_code": "01797440",
  "corp_name": "SK증권제11호스팩",
  "stock_code": "472230",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:28:37"
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": null,
+    "op": -11964640,
+    "sga": 11964640,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": null,
+    "op": -21300170,
+    "sga": 21300170,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -21071677,
+    "sga": 21071677,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -30561677,
+    "sga": 30561677,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -34178077,
+    "sga": 34178077,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -13860750,
+    "sga": 13860750,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -25021958,
+    "sga": 25021958,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -31761958,
+    "sga": 31761958,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -35756358,
+    "sga": 35756358,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -14114533,
+    "sga": 14114533,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -21,
+   "sga": 21
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 0,
+   "sga": 0
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -14,
+   "sga": 14
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -11,
+   "sga": 11
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -7,
+   "sga": 7
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -4,
+   "sga": 4
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -14,
+   "sga": 14
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": null,
+   "op": -12,
+   "sga": 12,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -34,
+   "sga": 34,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -36,
+   "sga": 36,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:45:12",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스"
 }

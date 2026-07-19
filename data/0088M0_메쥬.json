@@ -2,8 +2,49 @@
  "corp_code": "01780608",
  "corp_name": "메쥬",
  "stock_code": "0088M0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:53:11"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 7377640926,
+    "op": -2832462145,
+    "sga": 7877873655,
+    "inventory": 1799646678
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3908180962,
+    "op": 957302796,
+    "sga": 2170346236,
+    "inventory": 2161320897
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 1800,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2161,
+   "revenue": 3908,
+   "op": 957,
+   "sga": 2170
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 7378,
+   "op": -2832,
+   "sga": 7878,
+   "inventory": 1800
+  }
+ ],
+ "updated": "2026-07-19T00:32:18",
+ "fs_div": "OFS"
 }

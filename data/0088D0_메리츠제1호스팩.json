@@ -2,8 +2,49 @@
  "corp_code": "01958111",
  "corp_name": "메리츠제1호스팩",
  "stock_code": "0088D0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:52:18"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 0,
+    "op": -34028700,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -12779010,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -13,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -34,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:32:11",
+ "fs_div": "OFS"
 }

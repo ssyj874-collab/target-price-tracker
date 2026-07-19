@@ -2,8 +2,186 @@
  "corp_code": "00115694",
  "corp_name": "DB증권",
  "stock_code": "016610",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T19:58:37"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 910987278970,
+    "op": 33553345919,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1206986042160,
+    "op": 21296499824,
+    "sga": 244765863738,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 365467265126,
+    "op": 25770969326,
+    "sga": 70262465733,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 682693614919,
+    "op": 49834898534,
+    "sga": 144203123816,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 956974989334,
+    "op": 52430526823,
+    "sga": 210856728854,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1318537932981,
+    "op": 61858580381,
+    "sga": 277845295425,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 437276991167,
+    "op": 24205759946,
+    "sga": 79878564568,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 943341679065,
+    "op": 56762784954,
+    "sga": 159390393414,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 1332226175731,
+    "op": 100952605407,
+    "sga": 231974231623,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 1921987648624,
+    "op": 116698438500,
+    "sga": 312288823725,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1075176925000,
+    "op": 30224965000,
+    "sga": 85912603000,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 295999,
+   "op": -12257,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 365467,
+   "op": 25771,
+   "sga": 70262
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 317226,
+   "op": 24064,
+   "sga": 73941
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 274281,
+   "op": 2596,
+   "sga": 66654
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 361563,
+   "op": 9428,
+   "sga": 66989
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 437277,
+   "op": 24206,
+   "sga": 79879
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 506065,
+   "op": 32557,
+   "sga": 79512
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 388884,
+   "op": 44190,
+   "sga": 72584
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 589761,
+   "op": 15746,
+   "sga": 80315
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 1075177,
+   "op": 30225,
+   "sga": 85913
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 1206986,
+   "op": 21296,
+   "sga": 244766,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 1318538,
+   "op": 61859,
+   "sga": 277845,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 1921988,
+   "op": 116698,
+   "sga": 312289,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:40:48",
+ "fs_div": "CFS",
+ "industry_code": "66121",
+ "industry_name": "금융지원서비스"
 }

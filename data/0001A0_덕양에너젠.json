@@ -2,8 +2,49 @@
  "corp_code": "01516933",
  "corp_name": "덕양에너젠",
  "stock_code": "0001A0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:59:45"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 143195229364,
+    "op": 6680358069,
+    "sga": 6141738472,
+    "inventory": 571200776
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 36980490344,
+    "op": 1392363028,
+    "sga": 1936520109,
+    "inventory": 497471707
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 571,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 497,
+   "revenue": 36980,
+   "op": 1392,
+   "sga": 1937
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 143195,
+   "op": 6680,
+   "sga": 6142,
+   "inventory": 571
+  }
+ ],
+ "updated": "2026-07-19T00:14:28",
+ "fs_div": "CFS"
 }

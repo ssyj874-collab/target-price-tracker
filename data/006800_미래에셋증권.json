@@ -2,8 +2,184 @@
  "corp_code": "00111722",
  "corp_name": "미래에셋증권",
  "stock_code": "006800",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:04:04"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 15415547034018,
+    "op": 611416075004,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 20359463366897,
+    "op": 521036811624,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 6278995667435,
+    "op": 270473283917,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11003687052905,
+    "op": 543762121807,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 16452542861723,
+    "op": 914525331276,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 22242327609027,
+    "op": 1188076348199,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6052641000000,
+    "op": 346185000000,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 13747518000000,
+    "op": 846629000000,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 20419949000000,
+    "op": 1069425000000,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 29283028000000,
+    "op": 1915104000000,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 14428703000000,
+    "op": 1375040000000,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 4943916,
+   "op": -90379,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 6278996,
+   "op": 270473,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 4724691,
+   "op": 273289,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 5448856,
+   "op": 370763,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 5789785,
+   "op": 273551,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6052641,
+   "op": 346185,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 7694877,
+   "op": 500444,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 6672431,
+   "op": 222796,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 8863079,
+   "op": 845679,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 14428703,
+   "op": 1375040,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 20359463,
+   "op": 521037,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 22242328,
+   "op": 1188076,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 29283028,
+   "op": 1915104,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:28:23",
+ "fs_div": "CFS"
 }

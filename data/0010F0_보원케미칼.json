@@ -2,8 +2,49 @@
  "corp_code": "00871587",
  "corp_name": "보원케미칼",
  "stock_code": "0010F0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:17:11"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 52193588709,
+    "op": 5119400582,
+    "sga": 6411059069,
+    "inventory": 2588009157
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 14986244035,
+    "op": 971052726,
+    "sga": 1832913619,
+    "inventory": 1774579491
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": 2588,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1775,
+   "revenue": 14986,
+   "op": 971,
+   "sga": 1833
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 52194,
+   "op": 5119,
+   "sga": 6411,
+   "inventory": 2588
+  }
+ ],
+ "updated": "2026-07-19T00:17:14",
+ "fs_div": "OFS"
 }

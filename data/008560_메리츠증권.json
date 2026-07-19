@@ -2,8 +2,184 @@
  "corp_code": "00163682",
  "corp_name": "메리츠증권",
  "stock_code": "008560",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:52:40"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 34767423849439,
+    "op": 604844145195,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 47448295541105,
+    "op": 881301571969,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 9581857606893,
+    "op": 155655318125,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17918452379065,
+    "op": 501792247003,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 26012699361874,
+    "op": 744739825241,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 34785043562728,
+    "op": 1054859980430,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 5195861577079,
+    "op": 148197797267,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 11239976424118,
+    "op": 448547746322,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 15616339894224,
+    "op": 701575028985,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 788276943898,
+    "sga": 899670993407,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 255587382272,
+    "sga": 271752505066,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 12680872,
+   "op": 276457,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 9581858,
+   "op": 155655,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 8336595,
+   "op": 346137,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 8094247,
+   "op": 242948,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 8772344,
+   "op": 310120,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 5195862,
+   "op": 148198,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 6044115,
+   "op": 300350,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4376363,
+   "op": 253027,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 86702,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 255587,
+   "sga": 271753
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 47448296,
+   "op": 881302,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 34785044,
+   "op": 1054860,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 788277,
+   "sga": 899671,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:31:38",
+ "fs_div": "CFS"
 }

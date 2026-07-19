@@ -2,8 +2,56 @@
  "corp_code": "01885222",
  "corp_name": "대신밸류리츠",
  "stock_code": "0030R0",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T22:49:21"
+ "cums": {
+  "2025": {
+   "4": {
+    "revenue": 9454944600,
+    "op": 6672380970,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 8061177210,
+    "op": 6671762909,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 9455,
+   "op": 6672,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 8061,
+   "op": 6672,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:22:40",
+ "fs_div": "CFS"
 }

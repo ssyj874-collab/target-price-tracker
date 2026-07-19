@@ -2,8 +2,212 @@
  "corp_code": "00125725",
  "corp_name": "디모아",
  "stock_code": "016670",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:22:57"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 8538785592,
+    "op": 1638641653,
+    "sga": 5252134767,
+    "inventory": 1099928031
+   },
+   "2": {
+    "revenue": 17636510819,
+    "op": 3188977475,
+    "sga": 9518104029,
+    "inventory": 934609659
+   },
+   "3": {
+    "revenue": 25219766688,
+    "op": 4467250076,
+    "sga": 14051686907,
+    "inventory": 829270234
+   },
+   "4": {
+    "revenue": 31352678402,
+    "op": 2912404483,
+    "sga": 19810300169,
+    "inventory": 316000973
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 7227180588,
+    "op": 1478022857,
+    "sga": 4127260107,
+    "inventory": 192337858
+   },
+   "2": {
+    "revenue": 13147120477,
+    "op": 1029543216,
+    "sga": 8802151949,
+    "inventory": 28878104
+   },
+   "3": {
+    "revenue": 19164353664,
+    "op": 1182380151,
+    "sga": 13225477265,
+    "inventory": 906035
+   },
+   "4": {
+    "revenue": 26625181456,
+    "op": 2141259987,
+    "sga": 17989994468,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 6673743224,
+    "op": 2388570117,
+    "sga": 4273173107,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 12646803778,
+    "op": 3428349864,
+    "sga": 9130013414,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 17133915786,
+    "op": 3526490346,
+    "sga": 13477959940,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 23062358194,
+    "op": 4054721710,
+    "sga": 18673790120,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 8171767216,
+    "op": 3782773479,
+    "sga": 4361043137,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": 1100,
+   "revenue": 8539,
+   "op": 1639,
+   "sga": 5252
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": 935,
+   "revenue": 9098,
+   "op": 1550,
+   "sga": 4266
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": 829,
+   "revenue": 7583,
+   "op": 1278,
+   "sga": 4534
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": 316,
+   "revenue": 6133,
+   "op": -1555,
+   "sga": 5759
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": 192,
+   "revenue": 7227,
+   "op": 1478,
+   "sga": 4127
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": 29,
+   "revenue": 5920,
+   "op": -448,
+   "sga": 4675
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": 1,
+   "revenue": 6017,
+   "op": 153,
+   "sga": 4423
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 7461,
+   "op": 959,
+   "sga": 4765
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 6674,
+   "op": 2389,
+   "sga": 4273
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 5973,
+   "op": 1040,
+   "sga": 4857
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 4487,
+   "op": 98,
+   "sga": 4348
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 5928,
+   "op": 528,
+   "sga": 5196
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 8172,
+   "op": 3783,
+   "sga": 4361
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 31353,
+   "op": 2912,
+   "sga": 19810,
+   "inventory": 316
+  },
+  {
+   "year": 2024,
+   "revenue": 26625,
+   "op": 2141,
+   "sga": 17990,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 23062,
+   "op": 4055,
+   "sga": 18674,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:40:55",
+ "fs_div": "OFS",
+ "industry_code": "467",
+ "industry_name": "도매·상품중개"
 }

@@ -2,8 +2,210 @@
  "corp_code": "00114552",
  "corp_name": "도화엔지니어링",
  "stock_code": "002150",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:03:08"
+ "cums": {
+  "2023": {
+   "1": {
+    "revenue": 119609065334,
+    "op": 1738240013,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 260916561824,
+    "op": 5730062363,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 389685894340,
+    "op": 9449441702,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 574990699821,
+    "op": 21891969353,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 123980986184,
+    "op": 904542337,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 275499822225,
+    "op": 7318587011,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 406263519476,
+    "op": 3184409725,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 582786671724,
+    "op": -13386874639,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 157508097667,
+    "op": 3473699381,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 324382581158,
+    "op": 8215766835,
+    "sga": null,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 505100917662,
+    "op": 16021375643,
+    "sga": null,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 698474865934,
+    "op": 30117245820,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 155456782696,
+    "op": -2385665312,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.1분기",
+   "inventory": null,
+   "revenue": 119609,
+   "op": 1738,
+   "sga": null
+  },
+  {
+   "label": "2023.2분기",
+   "inventory": null,
+   "revenue": 141307,
+   "op": 3992,
+   "sga": null
+  },
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": 128769,
+   "op": 3719,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 185305,
+   "op": 12443,
+   "sga": null
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 123981,
+   "op": 905,
+   "sga": null
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 151519,
+   "op": 6414,
+   "sga": null
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 130764,
+   "op": -4134,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 176523,
+   "op": -16571,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 157508,
+   "op": 3474,
+   "sga": null
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 166874,
+   "op": 4742,
+   "sga": null
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 180718,
+   "op": 7806,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 193374,
+   "op": 14096,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 155457,
+   "op": -2386,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 574991,
+   "op": 21892,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 582787,
+   "op": -13387,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 698475,
+   "op": 30117,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T00:19:48",
+ "fs_div": "CFS"
 }

@@ -2,8 +2,125 @@
  "corp_code": "01801822",
  "corp_name": "SK증권제13호스팩",
  "stock_code": "473950",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:28:52"
+ "cums": {
+  "2024": {
+   "3": {
+    "revenue": null,
+    "op": -40980957,
+    "sga": 40980957,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -46527857,
+    "sga": 46527857,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": null,
+    "op": -12581150,
+    "sga": 12581150,
+    "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": -25237694,
+    "sga": 25237694,
+    "inventory": null
+   },
+   "3": {
+    "revenue": null,
+    "op": -34027694,
+    "sga": 34027694,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": -39522094,
+    "sga": 39522094,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": -15614533,
+    "sga": 15614533,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -13,
+   "sga": 13
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -13,
+   "sga": 13
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -5,
+   "sga": 5
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -16,
+   "sga": 16
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": null,
+   "op": -47,
+   "sga": 47,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": -40,
+   "sga": 40,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:45:24",
+ "fs_div": "OFS",
+ "industry_code": "66199",
+ "industry_name": "금융지원서비스"
 }

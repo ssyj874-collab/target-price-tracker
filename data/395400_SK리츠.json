@@ -2,8 +2,102 @@
  "corp_code": "01535150",
  "corp_name": "SK리츠",
  "stock_code": "395400",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T20:27:30"
+ "cums": {
+  "2023": {
+   "4": {
+    "revenue": 52636897301,
+    "op": 35808941724,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "4": {
+    "revenue": 52409629619,
+    "op": 35412431276,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "4": {
+    "revenue": 70358094799,
+    "op": 64534748213,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "4": {
+    "revenue": 63369239197,
+    "op": 53853739755,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2026.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 52637,
+   "op": 35809,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 52410,
+   "op": 35412,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 70358,
+   "op": 64535,
+   "sga": null,
+   "inventory": null
+  },
+  {
+   "year": 2026,
+   "revenue": 63369,
+   "op": 53854,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:45:03",
+ "fs_div": "CFS",
+ "industry_code": "68112",
+ "industry_name": "부동산"
 }
