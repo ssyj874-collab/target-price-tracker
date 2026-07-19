@@ -2,8 +2,112 @@
  "corp_code": "01857991",
  "corp_name": "디비금융제13호스팩",
  "stock_code": "489730",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:23:57"
+ "cums": {
+  "2024": {
+   "4": {
+    "revenue": 0,
+    "op": -46541850,
+    "sga": 46541850,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 0,
+    "op": -17944930,
+    "sga": 17944930,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -23793570,
+    "sga": 23793570,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 0,
+    "op": -32646970,
+    "sga": 32646970,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 0,
+    "op": -35646970,
+    "sga": 35646970,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 0,
+    "op": -16883310,
+    "sga": 16883310,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -18,
+   "sga": 18
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -6,
+   "sga": 6
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -9,
+   "sga": 9
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -3,
+   "sga": 3
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -17,
+   "sga": 17
+  }
+ ],
+ "annual": [
+  {
+   "year": 2024,
+   "revenue": 0,
+   "op": -47,
+   "sga": 47,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 0,
+   "op": -36,
+   "sga": 36,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:54:57",
+ "fs_div": "OFS",
+ "industry_code": "649",
+ "industry_name": "금융"
 }

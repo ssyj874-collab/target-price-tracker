@@ -2,8 +2,186 @@
  "corp_code": "00860332",
  "corp_name": "메리츠금융지주",
  "stock_code": "138040",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:52:11"
+ "cums": {
+  "2023": {
+   "3": {
+    "revenue": 43344407984558,
+    "op": 2375474521052,
+    "sga": -537664586192,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 58558358469900,
+    "op": 2933502360678,
+    "sga": 630333088653,
+    "inventory": null
+   }
+  },
+  "2024": {
+   "1": {
+    "revenue": 12563849568546,
+    "op": 770786222345,
+    "sga": 184327331664,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 23786599167197,
+    "op": 1776383653961,
+    "sga": 387295444811,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 34693496996106,
+    "op": 2677920088767,
+    "sga": 619795837682,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 46574506350960,
+    "op": 3188889251285,
+    "sga": 742945688143,
+    "inventory": null
+   }
+  },
+  "2025": {
+   "1": {
+    "revenue": 8230277845059,
+    "op": 721743012746,
+    "sga": 208205906671,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 17581733721359,
+    "op": 1671476172272,
+    "sga": 457810926580,
+    "inventory": null
+   },
+   "3": {
+    "revenue": 24952230060123,
+    "op": 2533789377724,
+    "sga": 688502215303,
+    "inventory": null
+   },
+   "4": {
+    "revenue": null,
+    "op": 2872733957980,
+    "sga": null,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": null,
+    "op": 854828696134,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2023.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2023.4분기",
+   "inventory": null,
+   "revenue": 15213950,
+   "op": 558028,
+   "sga": 1167998
+  },
+  {
+   "label": "2024.1분기",
+   "inventory": null,
+   "revenue": 12563850,
+   "op": 770786,
+   "sga": 184327
+  },
+  {
+   "label": "2024.2분기",
+   "inventory": null,
+   "revenue": 11222750,
+   "op": 1005597,
+   "sga": 202968
+  },
+  {
+   "label": "2024.3분기",
+   "inventory": null,
+   "revenue": 10906898,
+   "op": 901536,
+   "sga": 232500
+  },
+  {
+   "label": "2024.4분기",
+   "inventory": null,
+   "revenue": 11881009,
+   "op": 510969,
+   "sga": 123150
+  },
+  {
+   "label": "2025.1분기",
+   "inventory": null,
+   "revenue": 8230278,
+   "op": 721743,
+   "sga": 208206
+  },
+  {
+   "label": "2025.2분기",
+   "inventory": null,
+   "revenue": 9351456,
+   "op": 949733,
+   "sga": 249605
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": 7370496,
+   "op": 862313,
+   "sga": 230691
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 338945,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 854829,
+   "sga": null
+  }
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "revenue": 58558358,
+   "op": 2933502,
+   "sga": 630333,
+   "inventory": null
+  },
+  {
+   "year": 2024,
+   "revenue": 46574506,
+   "op": 3188889,
+   "sga": 742946,
+   "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": null,
+   "op": 2872734,
+   "sga": null,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-19T19:54:28",
+ "fs_div": "CFS",
+ "industry_code": "64992",
+ "industry_name": "금융"
 }
