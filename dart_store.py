@@ -115,9 +115,20 @@ def industry_name(code: Optional[str]) -> Optional[str]:
     return KSIC_DIVISIONS.get(str(code).strip()[:2])
 
 
-def _amount(row: dict, cumulative: bool) -> Optional[int]:
-    """원 단위 금액. 손익 항목은 당기누적(thstrm_add_amount) 우선."""
-    fields = ("thstrm_add_amount", "thstrm_amount") if cumulative else ("thstrm_amount",)
+def _amount(row: dict, cumulative: bool, q1: bool = False) -> Optional[int]:
+    """원 단위 금액.
+
+    손익 항목은 당기누적(thstrm_add_amount) 우선 — 반기·3분기 차분에
+    필요한 값이라서. 단 1분기 보고서는 '3개월 = 누적'이 원칙이므로
+    당기금액(thstrm_amount)을 우선한다: 일부 회사가 1분기 누적 필드에
+    다른 값을 실어 분기값이 오염되는 사고(삼성전자 2026Q1)를 막는다.
+    """
+    if not cumulative:
+        fields = ("thstrm_amount",)
+    elif q1:
+        fields = ("thstrm_amount", "thstrm_add_amount")
+    else:
+        fields = ("thstrm_add_amount", "thstrm_amount")
     for f in fields:
         raw = (row.get(f) or "").replace(",", "").strip()
         if raw and raw != "-":
@@ -128,7 +139,7 @@ def _amount(row: dict, cumulative: bool) -> Optional[int]:
     return None
 
 
-def extract_metrics(rows: list[dict]) -> dict[str, Optional[int]]:
+def extract_metrics(rows: list[dict], q1: bool = False) -> dict[str, Optional[int]]:
     """보고서 응답에서 {revenue, op, sga, inventory} (원, 누적/시점)."""
     out: dict[str, Optional[int]] = {m: None for m in _METRICS}
     for r in rows:
@@ -140,7 +151,7 @@ def extract_metrics(rows: list[dict]) -> dict[str, Optional[int]]:
             if out[metric] is not None or sj not in m["sj"]:
                 continue
             if acc_id in m["ids"] or name in m["names"]:
-                out[metric] = _amount(r, m["cumulative"])
+                out[metric] = _amount(r, m["cumulative"], q1=q1)
     return out
 
 
@@ -164,7 +175,7 @@ def fetch_period(key: str, corp_code: str, year: int, q: int,
         rows = data.get("list", [])
         if not rows:
             continue
-        metrics = extract_metrics(rows)
+        metrics = extract_metrics(rows, q1=(q == 1))
         # 은행·지주 등 금융사는 매출액 계정이 없다 — 영업이익만 있어도
         # 저장한다(매출 칸은 비움). 둘 다 없으면 이 재무제표는 불채택.
         if metrics["op"] is not None or metrics["revenue"] is not None:

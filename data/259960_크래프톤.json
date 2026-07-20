@@ -80,14 +80,6 @@
     "sga": null,
     "inventory": null
    }
-  },
-  "2026": {
-   "1": {
-    "revenue": 1371415007891,
-    "op": 561563204569,
-    "sga": null,
-    "inventory": null
-   }
   }
  },
  "quarterly": [
@@ -173,13 +165,6 @@
    "inventory": null,
    "revenue": 919698,
    "op": 2433,
-   "sga": null
-  },
-  {
-   "label": "2026.1분기",
-   "inventory": null,
-   "revenue": 1371415,
-   "op": 561563,
    "sga": null
   }
  ],
