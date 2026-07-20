@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:44:56"
+ "updated": "2026-07-14T21:44:56",
+ "industry_code": "24222",
+ "industry_name": "1차금속",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

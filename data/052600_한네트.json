@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:53:02"
+ "updated": "2026-07-18T11:53:02",
+ "industry_code": "61299",
+ "industry_name": "통신",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

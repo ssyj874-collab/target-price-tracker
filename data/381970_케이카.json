@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:20:12"
+ "updated": "2026-07-18T11:20:12",
+ "industry_code": "45120",
+ "industry_name": "자동차판매",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

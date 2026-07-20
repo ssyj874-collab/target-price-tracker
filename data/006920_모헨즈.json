@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-19T00:28:39",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "23322",
+ "industry_name": "비금속광물제품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

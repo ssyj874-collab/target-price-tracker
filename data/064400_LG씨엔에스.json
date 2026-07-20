@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T20:16:50"
+ "updated": "2026-07-12T20:16:50",
+ "industry_code": "62021",
+ "industry_name": "IT서비스·SW개발",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

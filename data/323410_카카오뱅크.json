@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:16:01"
+ "updated": "2026-07-18T11:16:01",
+ "industry_code": "64121",
+ "industry_name": "금융",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

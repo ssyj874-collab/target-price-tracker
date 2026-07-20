@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-18T11:13:49",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "2229",
+ "industry_name": "고무·플라스틱",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

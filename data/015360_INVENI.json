@@ -80,6 +80,14 @@
     "sga": 144411133000,
     "inventory": 1669597000
    }
+  },
+  "2026": {
+   "1": {
+    "revenue": 572033744000,
+    "op": 79145863000,
+    "sga": 33676325000,
+    "inventory": 1778432000
+   }
   }
  },
  "quarterly": [
@@ -166,6 +174,13 @@
    "revenue": 397636,
    "op": 21301,
    "sga": 42967
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1778,
+   "revenue": 572034,
+   "op": 79146,
+   "sga": 33676
   }
  ],
  "annual": [
@@ -191,8 +206,11 @@
    "inventory": 1670
   }
  ],
- "updated": "2026-07-19T19:40:08",
+ "updated": "2026-07-20T20:05:04",
  "fs_div": "CFS",
  "industry_code": "715",
- "industry_name": "전문서비스"
+ "industry_name": "전문서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

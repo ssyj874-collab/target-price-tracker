@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:06:13"
+ "updated": "2026-07-18T11:06:13",
+ "industry_code": "58221",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

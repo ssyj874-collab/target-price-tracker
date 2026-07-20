@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-19T00:05:36"
+ "updated": "2026-07-19T00:05:36",
+ "industry_code": "303",
+ "industry_name": "자동차",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

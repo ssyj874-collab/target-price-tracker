@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T21:00:59"
+ "updated": "2026-07-17T21:00:59",
+ "industry_code": "479",
+ "industry_name": "소매",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

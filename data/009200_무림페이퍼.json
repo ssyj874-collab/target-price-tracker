@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:43:48",
  "fs_div": "CFS",
  "industry_code": "171",
- "industry_name": "펄프·종이"
+ "industry_name": "펄프·종이",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:47:19",
  "fs_div": "OFS",
  "industry_code": "911",
- "industry_name": "여가서비스"
+ "industry_name": "여가서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

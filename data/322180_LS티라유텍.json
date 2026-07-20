@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:48:38",
  "fs_div": "CFS",
  "industry_code": "582",
- "industry_name": "출판·게임SW"
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

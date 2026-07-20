@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:57:09"
+ "updated": "2026-07-18T11:57:09",
+ "industry_code": "72129",
+ "industry_name": "엔지니어링",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

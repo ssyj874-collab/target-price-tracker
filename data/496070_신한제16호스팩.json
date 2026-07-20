@@ -72,5 +72,10 @@
   }
  ],
  "updated": "2026-07-17T15:59:35",
- "fs_div": "OFS"
+ "fs_div": "OFS",
+ "industry_code": "661",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

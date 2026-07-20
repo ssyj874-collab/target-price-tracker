@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:05:10"
+ "updated": "2026-07-14T22:05:10",
+ "industry_code": "213",
+ "industry_name": "의약품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

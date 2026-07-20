@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:57:04"
+ "updated": "2026-07-14T21:57:04",
+ "industry_code": "222",
+ "industry_name": "고무·플라스틱",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

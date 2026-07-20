@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-17T15:55:07",
- "fs_div": "OFS"
+ "fs_div": "OFS",
+ "industry_code": "17902",
+ "industry_name": "펄프·종이",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

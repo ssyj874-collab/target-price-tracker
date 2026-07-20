@@ -68,6 +68,14 @@
     "sga": null,
     "inventory": 14982000000
    }
+  },
+  "2026": {
+   "1": {
+    "revenue": 300349000000,
+    "op": 8278295000000,
+    "sga": null,
+    "inventory": 12376000000
+   }
   }
  },
  "quarterly": [
@@ -140,6 +148,13 @@
    "revenue": 194230,
    "op": 3098486,
    "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 12376,
+   "revenue": 300349,
+   "op": 8278295,
+   "sga": null
   }
  ],
  "annual": [
@@ -166,5 +181,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T20:27:43"
+ "updated": "2026-07-20T20:06:27",
+ "industry_code": "64992",
+ "industry_name": "금융",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

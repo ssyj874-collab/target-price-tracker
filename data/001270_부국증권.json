@@ -68,6 +68,14 @@
     "sga": 122958183337,
     "inventory": null
    }
+  },
+  "2026": {
+   "1": {
+    "revenue": 479606128154,
+    "op": 15625412371,
+    "sga": 28648959003,
+    "inventory": null
+   }
   }
  },
  "quarterly": [
@@ -140,6 +148,13 @@
    "revenue": 300985,
    "op": 47,
    "sga": 36538
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 479606,
+   "op": 15625,
+   "sga": 28649
   }
  ],
  "annual": [
@@ -165,6 +180,11 @@
    "inventory": null
   }
  ],
- "updated": "2026-07-19T00:17:53",
- "fs_div": "CFS"
+ "updated": "2026-07-20T20:12:13",
+ "fs_div": "CFS",
+ "industry_code": "66121",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

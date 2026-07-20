@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T21:00:54"
+ "updated": "2026-07-17T21:00:54",
+ "industry_code": "339",
+ "industry_name": "기타제품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

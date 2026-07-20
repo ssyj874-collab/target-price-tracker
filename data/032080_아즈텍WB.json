@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:38:36"
+ "updated": "2026-07-14T22:38:36",
+ "industry_code": "13402",
+ "industry_name": "섬유",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

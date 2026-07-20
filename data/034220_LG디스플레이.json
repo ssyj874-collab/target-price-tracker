@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:45:29",
  "fs_div": "CFS",
  "industry_code": "2621",
- "industry_name": "전자부품·통신장비"
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:41:27",
  "fs_div": "OFS",
  "industry_code": "108",
- "industry_name": "식료품"
+ "industry_name": "식료품",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

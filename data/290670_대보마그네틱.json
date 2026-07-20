@@ -2,8 +2,67 @@
  "corp_code": "01259418",
  "corp_name": "대보마그네틱",
  "stock_code": "290670",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-12T21:59:05"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 21540244020,
+    "op": -5910787336,
+    "sga": 5592968150,
+    "inventory": 26010755683
+   },
+   "4": {
+    "revenue": 26147290618,
+    "op": -10443217543,
+    "sga": 6987513035,
+    "inventory": 23169609939
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1139270067,
+    "op": -1860609709,
+    "sga": 1953471556,
+    "inventory": 26115622232
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 26011,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 23170,
+   "revenue": 4607,
+   "op": -4532,
+   "sga": 1395
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 26116,
+   "revenue": 1139,
+   "op": -1861,
+   "sga": 1953
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 26147,
+   "op": -10443,
+   "sga": 6988,
+   "inventory": 23170
+  }
+ ],
+ "updated": "2026-07-20T20:08:36",
+ "fs_div": "CFS",
+ "industry_code": "28909",
+ "industry_name": "전기장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

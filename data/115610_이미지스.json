@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T10:51:26"
+ "updated": "2026-07-18T10:51:26",
+ "industry_code": "2611",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

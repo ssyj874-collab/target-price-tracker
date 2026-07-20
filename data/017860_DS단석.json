@@ -168,5 +168,10 @@
   }
  ],
  "updated": "2026-07-17T15:52:08",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "204",
+ "industry_name": "화학",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

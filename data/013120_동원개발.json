@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:42:52",
  "fs_div": "CFS",
  "industry_code": "41112",
- "industry_name": "종합건설"
+ "industry_name": "종합건설",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

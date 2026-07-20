@@ -59,5 +59,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:53:28"
+ "updated": "2026-07-18T11:53:28",
+ "industry_code": "303",
+ "industry_name": "자동차",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

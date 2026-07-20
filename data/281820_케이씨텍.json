@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:18:28"
+ "updated": "2026-07-18T11:18:28",
+ "industry_code": "272",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

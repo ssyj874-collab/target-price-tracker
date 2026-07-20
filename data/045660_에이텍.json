@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T20:57:39"
+ "updated": "2026-07-17T20:57:39",
+ "industry_code": "291",
+ "industry_name": "기계·장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

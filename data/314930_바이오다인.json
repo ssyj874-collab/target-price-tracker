@@ -2,8 +2,67 @@
  "corp_code": "01117413",
  "corp_name": "바이오다인",
  "stock_code": "314930",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:08:10"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 3567431284,
+    "op": -891940752,
+    "sga": 3124714509,
+    "inventory": 783933585
+   },
+   "4": {
+    "revenue": 7027675925,
+    "op": 671332846,
+    "sga": 3796445731,
+    "inventory": 460604935
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 867102584,
+    "op": -385450351,
+    "sga": 950496669,
+    "inventory": 511134136
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 784,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 461,
+   "revenue": 3460,
+   "op": 1563,
+   "sga": 672
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 511,
+   "revenue": 867,
+   "op": -385,
+   "sga": 950
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 7028,
+   "op": 671,
+   "sga": 3796,
+   "inventory": 461
+  }
+ ],
+ "updated": "2026-07-20T20:11:54",
+ "fs_div": "OFS",
+ "industry_code": "2719",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

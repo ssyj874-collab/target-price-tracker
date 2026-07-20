@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:15:03"
+ "updated": "2026-07-18T11:15:03",
+ "industry_code": "49220",
+ "industry_name": "육상운송",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-19T00:23:39",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "132",
+ "industry_name": "섬유",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "09"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:07:20"
+ "updated": "2026-07-17T21:07:20",
+ "industry_code": "20493",
+ "industry_name": "화학",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T16:21:12"
+ "updated": "2026-07-17T16:21:12",
+ "industry_code": "1811",
+ "industry_name": "인쇄",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "06"
 }

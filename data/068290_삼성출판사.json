@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:44:36"
+ "updated": "2026-07-14T21:44:36",
+ "industry_code": "5811",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

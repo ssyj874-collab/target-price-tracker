@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:02:18"
+ "updated": "2026-07-14T22:02:18",
+ "industry_code": "21100",
+ "industry_name": "의약품",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

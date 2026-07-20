@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:51:50"
+ "updated": "2026-07-18T11:51:50",
+ "industry_code": "64911",
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

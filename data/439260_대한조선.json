@@ -72,5 +72,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T22:55:38"
+ "updated": "2026-07-13T22:55:38",
+ "industry_code": "3111",
+ "industry_name": "기타운송장비",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:33:36"
+ "updated": "2026-07-18T11:33:36",
+ "industry_code": "23999",
+ "industry_name": "비금속광물제품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

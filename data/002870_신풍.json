@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:13:37"
+ "updated": "2026-07-14T22:13:37",
+ "industry_code": "467",
+ "industry_name": "도매·상품중개",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

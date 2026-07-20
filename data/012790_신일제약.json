@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:13:09"
+ "updated": "2026-07-14T22:13:09",
+ "industry_code": "212",
+ "industry_name": "의약품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

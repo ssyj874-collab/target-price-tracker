@@ -43,6 +43,12 @@
     "op": 6944254857,
     "sga": 8040488000,
     "inventory": 13244331377
+   },
+   "3": {
+    "revenue": 110169071524,
+    "op": 10162734526,
+    "sga": 7055370700,
+    "inventory": 12801373277
    }
   },
   "2026": {
@@ -91,11 +97,18 @@
    "sga": 2528
   },
   {
-   "label": "2025.4분기",
-   "inventory": 13244,
+   "label": "2025.3분기",
+   "inventory": 12801,
    "revenue": null,
    "op": null,
    "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 13244,
+   "revenue": 9516,
+   "op": -3218,
+   "sga": 985
   },
   {
    "label": "2026.1분기",
@@ -129,5 +142,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T23:03:33"
+ "updated": "2026-07-20T20:09:20",
+ "industry_code": "2511",
+ "industry_name": "금속가공",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

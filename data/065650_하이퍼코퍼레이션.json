@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:48:41"
+ "updated": "2026-07-18T11:48:41",
+ "industry_code": "465",
+ "industry_name": "도매·상품중개",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

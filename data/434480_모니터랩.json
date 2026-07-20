@@ -2,8 +2,67 @@
  "corp_code": "01583652",
  "corp_name": "모니터랩",
  "stock_code": "434480",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:55:29"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 12344755756,
+    "op": -143321200,
+    "sga": 7388389671,
+    "inventory": 1811031048
+   },
+   "4": {
+    "revenue": 19168619599,
+    "op": 943352791,
+    "sga": 9957569785,
+    "inventory": 1234024453
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3639192564,
+    "op": -710338713,
+    "sga": 2643917472,
+    "inventory": 1783287239
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 1811,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1234,
+   "revenue": 6824,
+   "op": 1087,
+   "sga": 2569
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 1783,
+   "revenue": 3639,
+   "op": -710,
+   "sga": 2644
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 19169,
+   "op": 943,
+   "sga": 9958,
+   "inventory": 1234
+  }
+ ],
+ "updated": "2026-07-20T20:11:23",
+ "fs_div": "CFS",
+ "industry_code": "58221",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

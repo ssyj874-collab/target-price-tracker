@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T10:44:06"
+ "updated": "2026-07-18T10:44:06",
+ "industry_code": "47711",
+ "industry_name": "소매",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

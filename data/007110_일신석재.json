@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T10:57:54"
+ "updated": "2026-07-18T10:57:54",
+ "industry_code": "466",
+ "industry_name": "도매·상품중개",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

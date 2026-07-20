@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:55:02",
  "fs_div": "CFS",
  "industry_code": "855",
- "industry_name": "교육"
+ "industry_name": "교육",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

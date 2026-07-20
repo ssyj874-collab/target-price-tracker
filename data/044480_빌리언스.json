@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:38:39"
+ "updated": "2026-07-14T21:38:39",
+ "industry_code": "901",
+ "industry_name": "예술·스포츠",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -187,5 +187,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:54:06"
+ "updated": "2026-07-14T21:54:06",
+ "industry_code": "109",
+ "industry_name": "식료품",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

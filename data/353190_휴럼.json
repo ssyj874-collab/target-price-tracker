@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-19T00:06:59"
+ "updated": "2026-07-19T00:06:59",
+ "industry_code": "108",
+ "industry_name": "식료품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

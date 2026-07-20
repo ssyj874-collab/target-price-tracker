@@ -22,6 +22,28 @@
     "sga": 9233420859,
     "inventory": 40856393768
    }
+  },
+  "2025": {
+   "3": {
+    "revenue": 257474195801,
+    "op": 2112773377,
+    "sga": 9532080873,
+    "inventory": 39739290745
+   },
+   "4": {
+    "revenue": 329542961820,
+    "op": 1928283924,
+    "sga": 12608629838,
+    "inventory": 53849339111
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 93778407216,
+    "op": -1828338268,
+    "sga": 3091712770,
+    "inventory": 48626244499
+   }
   }
  },
  "quarterly": [
@@ -45,9 +67,43 @@
    "revenue": 87915,
    "op": 1470,
    "sga": 3126
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 39739,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 53849,
+   "revenue": 72069,
+   "op": -184,
+   "sga": 3077
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 48626,
+   "revenue": 93778,
+   "op": -1828,
+   "sga": 3092
   }
  ],
- "annual": [],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 329543,
+   "op": 1928,
+   "sga": 12609,
+   "inventory": 53849
+  }
+ ],
  "fs_div": "OFS",
- "updated": "2026-07-13T23:28:21"
+ "updated": "2026-07-20T20:10:06",
+ "industry_code": "2622",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

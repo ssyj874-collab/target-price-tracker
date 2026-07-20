@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:01:04"
+ "updated": "2026-07-17T21:01:04",
+ "industry_code": "29271",
+ "industry_name": "기계·장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

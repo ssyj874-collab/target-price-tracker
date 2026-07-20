@@ -107,5 +107,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:45:23"
+ "updated": "2026-07-14T21:45:23",
+ "industry_code": "20499",
+ "industry_name": "화학",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -181,5 +181,10 @@
   }
  ],
  "updated": "2026-07-18T11:10:16",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "2928",
+ "industry_name": "기계·장비",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:37:44"
+ "updated": "2026-07-18T11:37:44",
+ "industry_code": "901",
+ "industry_name": "예술·스포츠",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "06"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:27:40"
+ "updated": "2026-07-14T22:27:40",
+ "industry_code": "591",
+ "industry_name": "영상·음반",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

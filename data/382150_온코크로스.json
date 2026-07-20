@@ -161,5 +161,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:10:14"
+ "updated": "2026-07-17T21:10:14",
+ "industry_code": "70111",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

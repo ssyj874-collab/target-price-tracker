@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T10:48:47"
+ "updated": "2026-07-18T10:48:47",
+ "industry_code": "66121",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

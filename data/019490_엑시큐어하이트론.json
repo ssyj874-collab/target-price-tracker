@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T21:01:10"
+ "updated": "2026-07-17T21:01:10",
+ "industry_code": "265",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

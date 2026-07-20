@@ -42,6 +42,28 @@
     "sga": 24546778981,
     "inventory": 9360573723
    }
+  },
+  "2025": {
+   "3": {
+    "revenue": 108963969498,
+    "op": 8073735846,
+    "sga": 41020735216,
+    "inventory": 9528960682
+   },
+   "4": {
+    "revenue": 143830395069,
+    "op": 10235140357,
+    "sga": 54096201775,
+    "inventory": 9359437250
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 35689393411,
+    "op": 658837880,
+    "sga": 15565858764,
+    "inventory": 9547752895
+   }
   }
  },
  "quarterly": [
@@ -86,6 +108,27 @@
    "revenue": 40200,
    "op": 5156,
    "sga": 12822
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 9529,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 9359,
+   "revenue": 34866,
+   "op": 2161,
+   "sga": 13075
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 9548,
+   "revenue": 35689,
+   "op": 659,
+   "sga": 15566
   }
  ],
  "annual": [
@@ -95,8 +138,20 @@
    "op": 16163,
    "sga": 45634,
    "inventory": 10109
+  },
+  {
+   "year": 2025,
+   "revenue": 143830,
+   "op": 10235,
+   "sga": 54096,
+   "inventory": 9359
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T23:59:38"
+ "updated": "2026-07-20T20:11:34",
+ "industry_code": "11122",
+ "industry_name": "음료",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:50:28"
+ "updated": "2026-07-18T11:50:28",
+ "industry_code": "642",
+ "industry_name": "금융",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

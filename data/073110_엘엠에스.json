@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:03:47"
+ "updated": "2026-07-17T21:03:47",
+ "industry_code": "262",
+ "industry_name": "전자부품·통신장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

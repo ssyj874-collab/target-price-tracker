@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-12T20:17:22"
+ "updated": "2026-07-12T20:17:22",
+ "industry_code": "60222",
+ "industry_name": "방송",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

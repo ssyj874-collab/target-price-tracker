@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:06:08"
+ "updated": "2026-07-18T11:06:08",
+ "industry_code": "70113",
+ "industry_name": "연구개발",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

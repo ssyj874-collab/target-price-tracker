@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:52:49"
+ "updated": "2026-07-14T21:52:49",
+ "industry_code": "289",
+ "industry_name": "전기장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

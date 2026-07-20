@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:45:46",
  "fs_div": "CFS",
  "industry_code": "29119",
- "industry_name": "기계·장비"
+ "industry_name": "기계·장비",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

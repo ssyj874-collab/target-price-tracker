@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:09:49"
+ "updated": "2026-07-18T11:09:49",
+ "industry_code": "752",
+ "industry_name": "사업지원서비스",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

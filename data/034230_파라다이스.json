@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:35:38"
+ "updated": "2026-07-18T11:35:38",
+ "industry_code": "91249",
+ "industry_name": "여가서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

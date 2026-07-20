@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:50:07"
+ "updated": "2026-07-18T11:50:07",
+ "industry_code": "19221",
+ "industry_name": "석유정제",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

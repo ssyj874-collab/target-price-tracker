@@ -168,5 +168,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:21:11"
+ "updated": "2026-07-14T22:21:11",
+ "industry_code": "14199",
+ "industry_name": "의복",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

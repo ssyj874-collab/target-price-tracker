@@ -129,5 +129,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T10:51:10"
+ "updated": "2026-07-18T10:51:10",
+ "industry_code": "68112",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "06"
 }

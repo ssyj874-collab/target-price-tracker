@@ -9,16 +9,44 @@
     "op": 3355298284,
     "sga": 12603901290,
     "inventory": 79349515728
+   },
+   "3": {
+    "revenue": 298060155762,
+    "op": 1460388780,
+    "sga": 9946653082,
+    "inventory": 82243303059
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 103022042294,
+    "op": -8758442,
+    "sga": 3052729604,
+    "inventory": 81898020268
    }
   }
  },
  "quarterly": [
   {
-   "label": "2025.4분기",
-   "inventory": 79350,
+   "label": "2025.3분기",
+   "inventory": 82243,
    "revenue": null,
    "op": null,
    "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 79350,
+   "revenue": 100514,
+   "op": 1895,
+   "sga": 2657
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 81898,
+   "revenue": 103022,
+   "op": -9,
+   "sga": 3053
   }
  ],
  "annual": [
@@ -31,5 +59,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T22:54:02"
+ "updated": "2026-07-20T20:08:56",
+ "industry_code": "24122",
+ "industry_name": "1차금속",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T20:08:28"
+ "updated": "2026-07-12T20:08:28",
+ "industry_code": "71310",
+ "industry_name": "전문서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-19T00:28:56",
- "fs_div": "OFS"
+ "fs_div": "OFS",
+ "industry_code": "620",
+ "industry_name": "IT서비스·SW개발",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

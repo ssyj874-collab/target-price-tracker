@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:58:33"
+ "updated": "2026-07-14T21:58:33",
+ "industry_code": "2413",
+ "industry_name": "1차금속",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

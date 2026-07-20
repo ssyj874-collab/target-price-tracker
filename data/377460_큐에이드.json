@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:27:24"
+ "updated": "2026-07-18T11:27:24",
+ "industry_code": "953",
+ "industry_name": null,
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

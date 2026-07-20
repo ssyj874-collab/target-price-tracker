@@ -48,6 +48,28 @@
     "sga": 88598208000,
     "inventory": 262855594000
    }
+  },
+  "2025": {
+   "3": {
+    "revenue": 3041516655000,
+    "op": 42203516000,
+    "sga": null,
+    "inventory": 195418381000
+   },
+   "4": {
+    "revenue": 4109264561000,
+    "op": 52300233000,
+    "sga": null,
+    "inventory": 194050832000
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 1099073200000,
+    "op": 12851868000,
+    "sga": null,
+    "inventory": 184208511000
+   }
   }
  },
  "quarterly": [
@@ -99,6 +121,27 @@
    "revenue": 1055420,
    "op": 24601,
    "sga": 30924
+  },
+  {
+   "label": "2025.3분기",
+   "inventory": 195418,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 194051,
+   "revenue": 1067748,
+   "op": 10097,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 184209,
+   "revenue": 1099073,
+   "op": 12852,
+   "sga": null
   }
  ],
  "annual": [
@@ -108,8 +151,20 @@
    "op": 76519,
    "sga": 125914,
    "inventory": 213130
+  },
+  {
+   "year": 2025,
+   "revenue": 4109265,
+   "op": 52300,
+   "sga": null,
+   "inventory": 194051
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T20:03:16"
+ "updated": "2026-07-20T20:04:38",
+ "industry_code": "468",
+ "industry_name": "도매·상품중개",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

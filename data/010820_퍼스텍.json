@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:38:39"
+ "updated": "2026-07-18T11:38:39",
+ "industry_code": "252",
+ "industry_name": "금속가공",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

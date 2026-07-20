@@ -55,6 +55,12 @@
     "op": 6846975825,
     "sga": 6831767775,
     "inventory": 1068680411
+   },
+   "3": {
+    "revenue": 58260420574,
+    "op": 5058215276,
+    "sga": 4835100994,
+    "inventory": 1522493362
    }
   },
   "2026": {
@@ -117,11 +123,18 @@
    "sga": 1341
   },
   {
-   "label": "2025.4분기",
-   "inventory": 1069,
+   "label": "2025.3분기",
+   "inventory": 1522,
    "revenue": null,
    "op": null,
    "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 1069,
+   "revenue": 14018,
+   "op": 1789,
+   "sga": 1997
   },
   {
    "label": "2026.1분기",
@@ -148,5 +161,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-12T20:18:24"
+ "updated": "2026-07-20T20:05:46",
+ "industry_code": "423",
+ "industry_name": "전문건설",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

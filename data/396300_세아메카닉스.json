@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:58:16"
+ "updated": "2026-07-14T21:58:16",
+ "industry_code": "259",
+ "industry_name": "금속가공",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

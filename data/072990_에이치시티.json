@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T16:35:46"
+ "updated": "2026-07-17T16:35:46",
+ "industry_code": "72911",
+ "industry_name": "엔지니어링",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

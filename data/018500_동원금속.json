@@ -214,5 +214,10 @@
   }
  ],
  "updated": "2026-07-17T15:52:52",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "303",
+ "industry_name": "자동차",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "03"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-19T00:05:16"
+ "updated": "2026-07-19T00:05:16",
+ "industry_code": "15219",
+ "industry_name": "가죽·신발",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

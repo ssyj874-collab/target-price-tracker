@@ -181,5 +181,10 @@
   }
  ],
  "updated": "2026-07-17T15:35:15",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "66121",
+ "industry_name": "금융지원서비스",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

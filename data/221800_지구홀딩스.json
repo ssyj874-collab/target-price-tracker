@@ -168,5 +168,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:05:48"
+ "updated": "2026-07-18T11:05:48",
+ "industry_code": "72911",
+ "industry_name": "엔지니어링",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

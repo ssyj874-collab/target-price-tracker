@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T22:10:14"
+ "updated": "2026-07-14T22:10:14",
+ "industry_code": "681",
+ "industry_name": "부동산",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -2,8 +2,67 @@
  "corp_code": "01605529",
  "corp_name": "버넥트",
  "stock_code": "438700",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-14T00:11:42"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 2193559864,
+    "op": -7761855722,
+    "sga": null,
+    "inventory": 9956769
+   },
+   "4": {
+    "revenue": 3097045412,
+    "op": -8490874140,
+    "sga": null,
+    "inventory": 2311176533
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3796985533,
+    "op": -1473747372,
+    "sga": 2184407370,
+    "inventory": 2121318268
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 10,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 2311,
+   "revenue": 903,
+   "op": -729,
+   "sga": null
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2121,
+   "revenue": 3797,
+   "op": -1474,
+   "sga": 2184
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 3097,
+   "op": -8491,
+   "sga": null,
+   "inventory": 2311
+  }
+ ],
+ "updated": "2026-07-20T20:12:03",
+ "fs_div": "CFS",
+ "industry_code": "58222",
+ "industry_name": "출판·게임SW",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

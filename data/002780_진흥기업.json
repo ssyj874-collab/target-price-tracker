@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:09:21"
+ "updated": "2026-07-18T11:09:21",
+ "industry_code": "41221",
+ "industry_name": "종합건설",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

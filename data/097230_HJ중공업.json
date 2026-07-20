@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T20:05:50"
+ "updated": "2026-07-12T20:05:50",
+ "industry_code": "41221",
+ "industry_name": "종합건설",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

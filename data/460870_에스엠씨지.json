@@ -107,5 +107,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T16:26:31"
+ "updated": "2026-07-17T16:26:31",
+ "industry_code": "231",
+ "industry_name": "비금속광물제품",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

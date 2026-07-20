@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:56:28"
+ "updated": "2026-07-14T21:56:28",
+ "industry_code": "477",
+ "industry_name": "소매",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

@@ -97,5 +97,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:41:58"
+ "updated": "2026-07-14T21:41:58",
+ "industry_code": "6811",
+ "industry_name": "부동산",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "01"
 }

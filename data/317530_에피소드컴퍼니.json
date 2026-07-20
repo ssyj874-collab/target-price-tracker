@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:00:07"
+ "updated": "2026-07-17T21:00:07",
+ "industry_code": "59111",
+ "industry_name": "영상·음반",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

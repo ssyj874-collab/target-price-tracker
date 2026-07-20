@@ -85,5 +85,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:33:31"
+ "updated": "2026-07-18T11:33:31",
+ "industry_code": "283",
+ "industry_name": "전기장비",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

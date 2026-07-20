@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:52:29"
+ "updated": "2026-07-14T21:52:29",
+ "industry_code": "63991",
+ "industry_name": "정보서비스",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-12T19:57:09"
+ "updated": "2026-07-12T19:57:09",
+ "industry_code": "493",
+ "industry_name": "육상운송",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

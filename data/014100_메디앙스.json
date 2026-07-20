@@ -209,5 +209,8 @@
  "updated": "2026-07-19T19:39:34",
  "fs_div": "CFS",
  "industry_code": "468",
- "industry_name": "도매·상품중개"
+ "industry_name": "도매·상품중개",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -2,8 +2,67 @@
  "corp_code": "01021949",
  "corp_name": "덱스터",
  "stock_code": "206560",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:01:15"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 39946356413,
+    "op": -6831320818,
+    "sga": 46777677231,
+    "inventory": null
+   },
+   "4": {
+    "revenue": 55416993715,
+    "op": -6505871065,
+    "sga": 61922864780,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 10563287111,
+    "op": -3852689876,
+    "sga": 14415976987,
+    "inventory": 28889840
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 15471,
+   "op": 325,
+   "sga": 15145
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 29,
+   "revenue": 10563,
+   "op": -3853,
+   "sga": 14416
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 55417,
+   "op": -6506,
+   "sga": 61923,
+   "inventory": null
+  }
+ ],
+ "updated": "2026-07-20T20:09:16",
+ "fs_div": "CFS",
+ "industry_code": "59120",
+ "industry_name": "영상·음반",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

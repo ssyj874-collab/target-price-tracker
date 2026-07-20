@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:52:32"
+ "updated": "2026-07-18T11:52:32",
+ "industry_code": "17223",
+ "industry_name": "펄프·종이",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-14T21:46:59"
+ "updated": "2026-07-14T21:46:59",
+ "industry_code": "49309",
+ "industry_name": "육상운송",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

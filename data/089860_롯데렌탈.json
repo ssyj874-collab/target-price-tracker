@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T23:41:50"
+ "updated": "2026-07-13T23:41:50",
+ "industry_code": "76110",
+ "industry_name": "임대",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

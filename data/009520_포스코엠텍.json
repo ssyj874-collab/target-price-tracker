@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:40:01"
+ "updated": "2026-07-18T11:40:01",
+ "industry_code": "24199",
+ "industry_name": "1차금속",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

@@ -2,8 +2,67 @@
  "corp_code": "01011395",
  "corp_name": "레몬",
  "stock_code": "294140",
- "cums": {},
- "quarterly": [],
- "annual": [],
- "updated": "2026-07-13T23:38:40"
+ "cums": {
+  "2025": {
+   "3": {
+    "revenue": 3593915288,
+    "op": -5071773955,
+    "sga": 3595666696,
+    "inventory": 1458879260
+   },
+   "4": {
+    "revenue": 7456806685,
+    "op": -7144548463,
+    "sga": 6047609503,
+    "inventory": 2057047337
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 3314526709,
+    "op": -2084749736,
+    "sga": 1957107157,
+    "inventory": 2408431990
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2025.3분기",
+   "inventory": 1459,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": 2057,
+   "revenue": 3863,
+   "op": -2073,
+   "sga": 2452
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": 2408,
+   "revenue": 3315,
+   "op": -2085,
+   "sga": 1957
+  }
+ ],
+ "annual": [
+  {
+   "year": 2025,
+   "revenue": 7457,
+   "op": -7145,
+   "sga": 6048,
+   "inventory": 2057
+  }
+ ],
+ "updated": "2026-07-20T20:10:27",
+ "fs_div": "CFS",
+ "industry_code": "20501",
+ "industry_name": "화학",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

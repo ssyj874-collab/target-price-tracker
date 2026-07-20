@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:56:21"
+ "updated": "2026-07-18T11:56:21",
+ "industry_code": "11112",
+ "industry_name": "음료",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

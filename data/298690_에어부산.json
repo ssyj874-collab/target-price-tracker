@@ -207,5 +207,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T16:32:41"
+ "updated": "2026-07-17T16:32:41",
+ "industry_code": "511",
+ "industry_name": "항공운송",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

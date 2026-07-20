@@ -181,5 +181,10 @@
   }
  ],
  "updated": "2026-07-19T00:26:46",
- "fs_div": "CFS"
+ "fs_div": "CFS",
+ "industry_code": "65121",
+ "industry_name": "보험·연금",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

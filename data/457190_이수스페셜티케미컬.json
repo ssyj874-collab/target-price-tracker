@@ -194,5 +194,10 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T10:51:54"
+ "updated": "2026-07-18T10:51:54",
+ "industry_code": "20111",
+ "industry_name": "화학",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

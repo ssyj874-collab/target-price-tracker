@@ -214,5 +214,10 @@
   }
  ],
  "updated": "2026-07-17T15:50:52",
- "fs_div": "OFS"
+ "fs_div": "OFS",
+ "industry_code": "62021",
+ "industry_name": "IT서비스·SW개발",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "03"
 }

@@ -207,5 +207,10 @@
   }
  ],
  "updated": "2026-07-19T00:16:11",
- "fs_div": "OFS"
+ "fs_div": "OFS",
+ "industry_code": "11122",
+ "industry_name": "음료",
+ "corp_cls": "Y",
+ "market": "유가",
+ "acc_mt": "12"
 }

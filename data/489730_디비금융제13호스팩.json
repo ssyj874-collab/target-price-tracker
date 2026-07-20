@@ -109,5 +109,8 @@
  "updated": "2026-07-19T19:54:57",
  "fs_div": "OFS",
  "industry_code": "649",
- "industry_name": "금융"
+ "industry_name": "금융",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }

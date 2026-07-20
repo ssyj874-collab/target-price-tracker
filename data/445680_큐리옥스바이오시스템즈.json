@@ -181,5 +181,10 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:27:05"
+ "updated": "2026-07-18T11:27:05",
+ "industry_code": "271",
+ "industry_name": "의료·정밀기기",
+ "corp_cls": "K",
+ "market": "코스닥",
+ "acc_mt": "12"
 }
