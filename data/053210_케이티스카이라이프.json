@@ -87,6 +87,12 @@
     "op": 5935925999,
     "sga": 233034850585,
     "inventory": 896062955
+   },
+   "2": {
+    "revenue": 488896885425,
+    "op": 17036507290,
+    "sga": null,
+    "inventory": 841134311
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 238971,
    "op": 5936,
    "sga": 233035
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 841,
+   "revenue": 249926,
+   "op": 11101,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:20:27",
+ "updated": "2026-08-16T14:57:38",
  "industry_code": "60229",
  "industry_name": "방송",
  "corp_cls": "Y",

@@ -61,12 +61,24 @@
     "op": -6619696829,
     "sga": 6795439476,
     "inventory": null
+   },
+   "4": {
+    "revenue": 370460589,
+    "op": -8828143742,
+    "sga": null,
+    "inventory": null
    }
   },
   "2026": {
    "1": {
     "revenue": 167266568,
     "op": -2514397402,
+    "sga": null,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 225389068,
+    "op": -5212443017,
     "sga": null,
     "inventory": null
    }
@@ -137,10 +149,24 @@
    "sga": 2370
   },
   {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 141,
+   "op": -2208,
+   "sga": null
+  },
+  {
    "label": "2026.1분기",
    "inventory": null,
    "revenue": 167,
    "op": -2514,
+   "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 58,
+   "op": -2698,
    "sga": null
   }
  ],
@@ -158,10 +184,17 @@
    "op": -6965,
    "sga": 7687,
    "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 370,
+   "op": -8828,
+   "sga": null,
+   "inventory": null
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:10:14",
+ "updated": "2026-08-16T14:55:31",
  "industry_code": "70111",
  "industry_name": "연구개발",
  "corp_cls": "K",

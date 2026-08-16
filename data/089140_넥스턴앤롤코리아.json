@@ -87,6 +87,12 @@
     "op": 3550564126,
     "sga": 4064619932,
     "inventory": 47268064546
+   },
+   "2": {
+    "revenue": 62515331481,
+    "op": 11763848932,
+    "sga": null,
+    "inventory": 58461658657
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 25459,
    "op": 3551,
    "sga": 4065
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 58462,
+   "revenue": 37056,
+   "op": 8213,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 39949
   }
  ],
- "updated": "2026-07-19T20:39:13",
+ "updated": "2026-08-16T14:50:00",
  "fs_div": "CFS",
  "industry_code": "292",
  "industry_name": "기계·장비",

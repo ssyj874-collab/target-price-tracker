@@ -87,6 +87,12 @@
     "op": -3980487942,
     "sga": null,
     "inventory": 85881410314
+   },
+   "2": {
+    "revenue": 357340040319,
+    "op": -2810460763,
+    "sga": null,
+    "inventory": 75035859361
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 174653,
    "op": -3980,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 75036,
+   "revenue": 182687,
+   "op": 1170,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 106087
   }
  ],
- "updated": "2026-07-19T00:21:07",
+ "updated": "2026-08-16T14:49:19",
  "fs_div": "CFS",
  "industry_code": "24191",
  "industry_name": "1차금속",

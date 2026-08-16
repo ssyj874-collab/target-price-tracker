@@ -75,6 +75,12 @@
     "op": 92864188,
     "sga": null,
     "inventory": null
+   },
+   "2": {
+    "revenue": 10524378853,
+    "op": 3803700184,
+    "sga": null,
+    "inventory": null
    }
   }
  },
@@ -155,6 +161,13 @@
    "revenue": 3819,
    "op": 93,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 6706,
+   "op": 3711,
+   "sga": null
   }
  ],
  "annual": [
@@ -181,7 +194,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:27:29",
+ "updated": "2026-08-16T14:58:03",
  "industry_code": "649",
  "industry_name": "금융",
  "corp_cls": "K",

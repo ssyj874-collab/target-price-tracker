@@ -87,6 +87,12 @@
     "op": -424982899,
     "sga": 724931677,
     "inventory": null
+   },
+   "2": {
+    "revenue": 11294796290,
+    "op": -801234863,
+    "sga": 1471974467,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 1255,
    "op": -425,
    "sga": 725
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 10040,
+   "op": -376,
+   "sga": 747
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:39:31",
+ "updated": "2026-08-16T14:54:16",
  "industry_code": "591",
  "industry_name": "영상·음반",
  "corp_cls": "K",

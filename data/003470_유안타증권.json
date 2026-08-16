@@ -75,6 +75,12 @@
     "op": 72815836000,
     "sga": 211294284000,
     "inventory": null
+   },
+   "2": {
+    "revenue": 3518595025000,
+    "op": 159288929000,
+    "sga": 477362890000,
+    "inventory": null
    }
   }
  },
@@ -155,6 +161,13 @@
    "revenue": 1723369,
    "op": 72816,
    "sga": 211294
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 1795226,
+   "op": 86473,
+   "sga": 266069
   }
  ],
  "annual": [
@@ -181,7 +194,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-20T20:21:30",
+ "updated": "2026-08-16T14:56:06",
  "industry_code": "66121",
  "industry_name": "금융지원서비스",
  "corp_cls": "Y",

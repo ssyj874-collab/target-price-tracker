@@ -87,6 +87,12 @@
     "op": -2610713177,
     "sga": null,
     "inventory": 1754404863
+   },
+   "2": {
+    "revenue": 29451164163,
+    "op": -4503897365,
+    "sga": null,
+    "inventory": 2163730057
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 13485,
    "op": -2611,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 2164,
+   "revenue": 15966,
+   "op": -1893,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 1491
   }
  ],
- "updated": "2026-07-19T21:19:19",
+ "updated": "2026-08-16T14:48:24",
  "fs_div": "CFS",
  "industry_code": "70113",
  "industry_name": "연구개발",

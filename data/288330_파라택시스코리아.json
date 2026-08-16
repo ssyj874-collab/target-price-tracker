@@ -87,6 +87,12 @@
     "op": -2051684395,
     "sga": 2370908395,
     "inventory": null
+   },
+   "2": {
+    "revenue": 1593042185,
+    "op": -4331342554,
+    "sga": 5924384739,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 319,
    "op": -2052,
    "sga": 2371
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 1274,
+   "op": -2280,
+   "sga": 3553
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:35:47",
+ "updated": "2026-08-16T14:58:31",
  "industry_code": "739",
  "industry_name": "과학기술서비스",
  "corp_cls": "K",

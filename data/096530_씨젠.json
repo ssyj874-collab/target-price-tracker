@@ -87,6 +87,12 @@
     "op": 23551052857,
     "sga": null,
     "inventory": 80561082843
+   },
+   "2": {
+    "revenue": 265098134652,
+    "op": 45135773445,
+    "sga": null,
+    "inventory": 75497554671
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 129139,
    "op": 23551,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 75498,
+   "revenue": 135959,
+   "op": 21585,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:24:24",
+ "updated": "2026-08-16T14:53:51",
  "industry_code": "2130",
  "industry_name": "의약품",
  "corp_cls": "K",

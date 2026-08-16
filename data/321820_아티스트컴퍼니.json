@@ -87,6 +87,12 @@
     "op": -1438979942,
     "sga": 2871830731,
     "inventory": null
+   },
+   "2": {
+    "revenue": 16720204726,
+    "op": -2527189557,
+    "sga": 5822964698,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 7395,
    "op": -1439,
    "sga": 2872
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 9325,
+   "op": -1088,
+   "sga": 2951
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:39:36",
+ "updated": "2026-08-16T14:54:16",
  "industry_code": "901",
  "industry_name": "예술·스포츠",
  "corp_cls": "K",

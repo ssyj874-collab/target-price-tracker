@@ -87,6 +87,12 @@
     "op": 13621170362,
     "sga": null,
     "inventory": 1712719304
+   },
+   "2": {
+    "revenue": 178293405884,
+    "op": 19483949888,
+    "sga": null,
+    "inventory": 1311576801
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 85676,
    "op": 13621,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 1312,
+   "revenue": 92617,
+   "op": 5863,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T22:05:00",
+ "updated": "2026-08-16T14:53:18",
  "industry_code": "42311",
  "industry_name": "전문건설",
  "corp_cls": "Y",

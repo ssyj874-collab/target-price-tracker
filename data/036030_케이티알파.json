@@ -87,6 +87,12 @@
     "op": 13527298587,
     "sga": null,
     "inventory": 1558920385
+   },
+   "2": {
+    "revenue": 192524528882,
+    "op": 26249216624,
+    "sga": null,
+    "inventory": 1319194562
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 96159,
    "op": 13527,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 1319,
+   "revenue": 96366,
+   "op": 12722,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:20:32",
+ "updated": "2026-08-16T14:57:38",
  "industry_code": "461",
  "industry_name": "도매·상품중개",
  "corp_cls": "K",

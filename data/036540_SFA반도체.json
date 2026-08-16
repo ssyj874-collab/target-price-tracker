@@ -87,6 +87,12 @@
     "op": -6177693323,
     "sga": null,
     "inventory": 38809252900
+   },
+   "2": {
+    "revenue": 233607575671,
+    "op": -12328745085,
+    "sga": null,
+    "inventory": 38971742656
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 107319,
    "op": -6178,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 38972,
+   "revenue": 126288,
+   "op": -6151,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 37534
   }
  ],
- "updated": "2026-07-19T20:17:51",
+ "updated": "2026-08-16T14:49:04",
  "fs_div": "CFS",
  "industry_code": "2611",
  "industry_name": "전자부품·통신장비",

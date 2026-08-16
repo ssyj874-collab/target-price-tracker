@@ -87,6 +87,12 @@
     "op": -478810178,
     "sga": 2397501632,
     "inventory": 18312495
+   },
+   "2": {
+    "revenue": 44990801126,
+    "op": 286074045,
+    "sga": 2378898065,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 21127,
    "op": -479,
    "sga": 2398
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 23863,
+   "op": 765,
+   "sga": -19
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-17T21:00:59",
+ "updated": "2026-08-16T14:54:59",
  "industry_code": "479",
  "industry_name": "소매",
  "corp_cls": "K",

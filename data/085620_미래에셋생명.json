@@ -75,6 +75,12 @@
     "op": 68388520759,
     "sga": null,
     "inventory": null
+   },
+   "2": {
+    "revenue": null,
+    "op": 92038069345,
+    "sga": null,
+    "inventory": null
    }
   }
  },
@@ -155,6 +161,13 @@
    "revenue": null,
    "op": 68389,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": 23650,
+   "sga": null
   }
  ],
  "annual": [
@@ -180,7 +193,7 @@
    "inventory": null
   }
  ],
- "updated": "2026-07-19T20:25:31",
+ "updated": "2026-08-16T14:51:56",
  "fs_div": "CFS",
  "industry_code": "65110",
  "industry_name": "보험·연금",

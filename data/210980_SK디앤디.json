@@ -87,6 +87,12 @@
     "op": -9347303704,
     "sga": null,
     "inventory": 374806988368
+   },
+   "2": {
+    "revenue": 154358948910,
+    "op": -52164444320,
+    "sga": null,
+    "inventory": 392892392254
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 70333,
    "op": -9347,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 392892,
+   "revenue": 84026,
+   "op": -42817,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 399703
   }
  ],
- "updated": "2026-07-18T11:12:08",
+ "updated": "2026-08-16T14:49:09",
  "fs_div": "CFS",
  "industry_code": "68122",
  "industry_name": "부동산",

@@ -87,6 +87,12 @@
     "op": -1919568519,
     "sga": 6026145215,
     "inventory": null
+   },
+   "2": {
+    "revenue": 8616127376,
+    "op": -2475864556,
+    "sga": 11091991932,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 4107,
    "op": -1920,
    "sga": 6026
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 4510,
+   "op": -556,
+   "sga": 5066
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T10:52:20",
+ "updated": "2026-08-16T14:56:21",
  "industry_code": "631",
  "industry_name": "정보서비스",
  "corp_cls": "K",

@@ -87,6 +87,12 @@
     "op": 4020910396,
     "sga": 6632934519,
     "inventory": null
+   },
+   "2": {
+    "revenue": 199719537084,
+    "op": 4504700412,
+    "sga": 16260862054,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 99059,
    "op": 4021,
    "sga": 6633
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 100661,
+   "op": 484,
+   "sga": 9628
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:51:20",
+ "updated": "2026-08-16T14:59:22",
  "industry_code": "72121",
  "industry_name": "엔지니어링",
  "corp_cls": "Y",

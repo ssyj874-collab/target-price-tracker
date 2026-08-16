@@ -87,6 +87,12 @@
     "op": 1500252799,
     "sga": 19817013472,
     "inventory": null
+   },
+   "2": {
+    "revenue": 107573679936,
+    "op": 4538710372,
+    "sga": 37827883337,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 50299,
    "op": 1500,
    "sga": 19817
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 57274,
+   "op": 3038,
+   "sga": 18011
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T21:08:27",
+ "updated": "2026-08-16T14:55:25",
  "industry_code": "71310",
  "industry_name": "전문서비스",
  "corp_cls": "K",

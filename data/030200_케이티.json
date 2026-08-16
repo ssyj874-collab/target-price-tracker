@@ -87,6 +87,12 @@
     "op": 482701000000,
     "sga": null,
     "inventory": 537549000000
+   },
+   "2": {
+    "revenue": 13458314000000,
+    "op": 1131016000000,
+    "sga": null,
+    "inventory": 625658000000
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 6778448,
    "op": 482701,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 625658,
+   "revenue": 6679866,
+   "op": 648315,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-20T20:25:07",
+ "updated": "2026-08-16T14:57:37",
  "industry_code": "612",
  "industry_name": "통신",
  "corp_cls": "Y",

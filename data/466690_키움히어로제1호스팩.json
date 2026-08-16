@@ -17,6 +17,12 @@
     "op": -15916000,
     "sga": null,
     "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -23590820,
+    "sga": null,
+    "inventory": null
    }
   }
  },
@@ -34,6 +40,13 @@
    "revenue": null,
    "op": -16,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": -8,
+   "sga": null
   }
  ],
  "annual": [
@@ -46,7 +59,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:29:10",
+ "updated": "2026-08-16T14:58:09",
  "industry_code": "66199",
  "industry_name": "금융지원서비스",
  "corp_cls": "K",

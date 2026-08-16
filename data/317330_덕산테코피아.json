@@ -87,6 +87,12 @@
     "op": -10382543408,
     "sga": null,
     "inventory": 39123344984
+   },
+   "2": {
+    "revenue": 81322227610,
+    "op": -20944482371,
+    "sga": null,
+    "inventory": 45257401031
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 39140,
    "op": -10383,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 45257,
+   "revenue": 42182,
+   "op": -10562,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 32902
   }
  ],
- "updated": "2026-07-19T20:35:45",
+ "updated": "2026-08-16T14:50:35",
  "fs_div": "CFS",
  "industry_code": "2049",
  "industry_name": "화학",

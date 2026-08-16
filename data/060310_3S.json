@@ -87,6 +87,12 @@
     "op": -5106705737,
     "sga": 4664414985,
     "inventory": 3663237419
+   },
+   "1": {
+    "revenue": 5574850523,
+    "op": 5675393,
+    "sga": 1080757412,
+    "inventory": 3936717038
    }
   }
  },
@@ -176,6 +182,13 @@
    "sga": -230
   },
   {
+   "label": "2026.1분기",
+   "inventory": 3937,
+   "revenue": 5575,
+   "op": 6,
+   "sga": 1081
+  },
+  {
    "label": "2026.4분기",
    "inventory": 3663,
    "revenue": null,
@@ -213,7 +226,7 @@
    "inventory": 3663
   }
  ],
- "updated": "2026-07-19T20:30:55",
+ "updated": "2026-08-16T14:47:57",
  "fs_div": "CFS",
  "industry_code": "272",
  "industry_name": "의료·정밀기기",

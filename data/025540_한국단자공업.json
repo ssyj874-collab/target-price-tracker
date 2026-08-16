@@ -87,6 +87,12 @@
     "op": 25829534000,
     "sga": null,
     "inventory": 313694653000
+   },
+   "2": {
+    "revenue": 732427743000,
+    "op": 43667815000,
+    "sga": null,
+    "inventory": 300393506000
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 337350,
    "op": 25830,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 300394,
+   "revenue": 395077,
+   "op": 17838,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:49:26",
+ "updated": "2026-08-16T14:59:16",
  "industry_code": "2812",
  "industry_name": "전기장비",
  "corp_cls": "Y",

@@ -87,6 +87,12 @@
     "op": 240789739,
     "sga": 7504952530,
     "inventory": null
+   },
+   "2": {
+    "revenue": 17686012182,
+    "op": 1177086905,
+    "sga": 16508925277,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 7746,
    "op": 241,
    "sga": 7505
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 9940,
+   "op": 936,
+   "sga": 9004
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:17:57",
+ "updated": "2026-08-16T14:57:29",
  "industry_code": "58221",
  "industry_name": "출판·게임SW",
  "corp_cls": "K",

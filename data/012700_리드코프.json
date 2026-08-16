@@ -87,6 +87,12 @@
     "op": 1836195319,
     "sga": null,
     "inventory": 1349854940
+   },
+   "2": {
+    "revenue": 220254543112,
+    "op": 4282056757,
+    "sga": null,
+    "inventory": 1179489292
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 107103,
    "op": 1836,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 1179,
+   "revenue": 113152,
+   "op": 2446,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 379
   }
  ],
- "updated": "2026-07-19T19:42:37",
+ "updated": "2026-08-16T14:51:22",
  "fs_div": "CFS",
  "industry_code": "46712",
  "industry_name": "도매·상품중개",

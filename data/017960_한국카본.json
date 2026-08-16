@@ -87,6 +87,12 @@
     "op": 41066114264,
     "sga": null,
     "inventory": 204378890604
+   },
+   "2": {
+    "revenue": 455199204795,
+    "op": 91465942935,
+    "sga": null,
+    "inventory": 211457851470
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 211822,
    "op": 41066,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 211458,
+   "revenue": 243378,
+   "op": 50400,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:51:45",
+ "updated": "2026-08-16T14:59:23",
  "industry_code": "2512",
  "industry_name": "금속가공",
  "corp_cls": "Y",

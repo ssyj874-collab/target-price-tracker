@@ -87,6 +87,12 @@
     "op": 2344115868,
     "sga": null,
     "inventory": 80581875277
+   },
+   "2": {
+    "revenue": 204953947490,
+    "op": 624197539,
+    "sga": null,
+    "inventory": 60933818699
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 93945,
    "op": 2344,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 60934,
+   "revenue": 111009,
+   "op": -1720,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-19T00:07:25",
+ "updated": "2026-08-16T15:00:10",
  "industry_code": "620",
  "industry_name": "IT서비스·SW개발",
  "corp_cls": "K",

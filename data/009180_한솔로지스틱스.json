@@ -87,6 +87,12 @@
     "op": 4495907885,
     "sga": 10196502315,
     "inventory": null
+   },
+   "2": {
+    "revenue": 347724385812,
+    "op": 10614074597,
+    "sga": 20119881983,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 164911,
    "op": 4496,
    "sga": 10197
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 182813,
+   "op": 6118,
+   "sga": 9923
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:54:47",
+ "updated": "2026-08-16T14:59:32",
  "industry_code": "5299",
  "industry_name": "물류·창고",
  "corp_cls": "Y",

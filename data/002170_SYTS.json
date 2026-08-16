@@ -87,6 +87,12 @@
     "op": 2149206239,
     "sga": null,
     "inventory": 53911698238
+   },
+   "2": {
+    "revenue": 76592801067,
+    "op": 3762245281,
+    "sga": null,
+    "inventory": 56366875145
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 41251,
    "op": 2149,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 56367,
+   "revenue": 35342,
+   "op": 1613,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-19T20:22:51",
+ "updated": "2026-08-16T14:49:18",
  "industry_code": "15110",
  "industry_name": "가죽·신발",
  "corp_cls": "Y",

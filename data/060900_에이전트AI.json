@@ -87,6 +87,12 @@
     "op": -1983510052,
     "sga": 3141503500,
     "inventory": null
+   },
+   "2": {
+    "revenue": 5646614401,
+    "op": -3451443513,
+    "sga": 5479453369,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 2721,
    "op": -1984,
    "sga": 3142
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 2926,
+   "op": -1468,
+   "sga": 2338
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-17T16:35:13",
+ "updated": "2026-08-16T14:54:46",
  "industry_code": "351",
  "industry_name": "전기·가스",
  "corp_cls": "K",

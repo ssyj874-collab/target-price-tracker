@@ -87,6 +87,12 @@
     "op": 21871050000,
     "sga": null,
     "inventory": 42083260000
+   },
+   "2": {
+    "revenue": 615004376000,
+    "op": 43357316000,
+    "sga": null,
+    "inventory": 49113789000
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 287156,
    "op": 21871,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 49114,
+   "revenue": 327849,
+   "op": 21486,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 28676
   }
  ],
- "updated": "2026-07-19T20:42:22",
+ "updated": "2026-08-16T14:47:57",
  "fs_div": "CFS",
  "industry_code": "76320",
  "industry_name": "임대",

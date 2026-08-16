@@ -87,6 +87,12 @@
     "op": 17921463455,
     "sga": null,
     "inventory": 5010017088
+   },
+   "2": {
+    "revenue": 190577861425,
+    "op": 33658628782,
+    "sga": null,
+    "inventory": 3842656623
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 92351,
    "op": 17921,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 3843,
+   "revenue": 98227,
+   "op": 15737,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 3826
   }
  ],
- "updated": "2026-07-19T20:21:04",
+ "updated": "2026-08-16T14:51:10",
  "fs_div": "CFS",
  "industry_code": "75210",
  "industry_name": "사업지원서비스",

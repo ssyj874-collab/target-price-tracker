@@ -49,6 +49,12 @@
     "op": -47596290,
     "sga": 47596290,
     "inventory": null
+   },
+   "2": {
+    "revenue": 0,
+    "op": -52483070,
+    "sga": 52483070,
+    "inventory": null
    }
   }
  },
@@ -101,6 +107,13 @@
    "revenue": 0,
    "op": -48,
    "sga": 48
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 0,
+   "op": -5,
+   "sga": 5
   }
  ],
  "annual": [
@@ -119,7 +132,7 @@
    "inventory": null
   }
  ],
- "updated": "2026-07-19T20:25:53",
+ "updated": "2026-08-16T14:51:55",
  "fs_div": "OFS",
  "industry_code": "66199",
  "industry_name": "금융지원서비스",

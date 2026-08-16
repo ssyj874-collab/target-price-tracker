@@ -87,6 +87,12 @@
     "op": 35387351,
     "sga": null,
     "inventory": 24594906310
+   },
+   "2": {
+    "revenue": 32163463001,
+    "op": -1390864451,
+    "sga": null,
+    "inventory": 27734631160
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 17462,
    "op": 35,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 27735,
+   "revenue": 14702,
+   "op": -1426,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 25573
   }
  ],
- "updated": "2026-07-19T20:24:36",
+ "updated": "2026-08-16T14:49:37",
  "fs_div": "CFS",
  "industry_code": "11111",
  "industry_name": "음료",

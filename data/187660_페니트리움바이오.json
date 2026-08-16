@@ -87,6 +87,12 @@
     "op": -1836201631,
     "sga": 1657379193,
     "inventory": null
+   },
+   "2": {
+    "revenue": 3807804015,
+    "op": -3694889023,
+    "sga": 3805218955,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 1692,
    "op": -1836,
    "sga": 1657
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 2116,
+   "op": -1859,
+   "sga": 2148
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "OFS",
- "updated": "2026-07-18T11:38:59",
+ "updated": "2026-08-16T14:58:40",
  "industry_code": "70113",
  "industry_name": "연구개발",
  "corp_cls": "K",

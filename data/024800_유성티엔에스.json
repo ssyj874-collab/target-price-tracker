@@ -87,6 +87,12 @@
     "op": 928297192,
     "sga": null,
     "inventory": 27717667
+   },
+   "2": {
+    "revenue": 26814151910,
+    "op": 1788031942,
+    "sga": null,
+    "inventory": 14049667
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 13232,
    "op": 928,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 14,
+   "revenue": 13583,
+   "op": 860,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T10:46:50",
+ "updated": "2026-08-16T14:56:04",
  "industry_code": "492",
  "industry_name": "육상운송",
  "corp_cls": "K",

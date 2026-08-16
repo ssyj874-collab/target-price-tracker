@@ -2,12 +2,43 @@
  "corp_code": "00577593",
  "corp_name": "져스텍",
  "stock_code": "153890",
- "cums": {},
- "quarterly": [],
+ "cums": {
+  "2026": {
+   "1": {
+    "revenue": 3494528510,
+    "op": -283730723,
+    "sga": 1761808711,
+    "inventory": 5753952979
+   },
+   "2": {
+    "revenue": 8531138970,
+    "op": 815422006,
+    "sga": 3279062645,
+    "inventory": 8009244898
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.1분기",
+   "inventory": 5754,
+   "revenue": 3495,
+   "op": -284,
+   "sga": 1762
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 8009,
+   "revenue": 5037,
+   "op": 1099,
+   "sga": 1517
+  }
+ ],
  "annual": [],
- "updated": "2026-07-18T11:03:59",
+ "updated": "2026-08-16T14:57:02",
  "industry_code": "28111",
  "industry_name": "전기장비",
  "corp_cls": "K",
- "market": "코스닥"
+ "market": "코스닥",
+ "fs_div": "CFS"
 }

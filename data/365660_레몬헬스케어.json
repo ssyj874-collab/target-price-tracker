@@ -2,12 +2,30 @@
  "corp_code": "01424261",
  "corp_name": "레몬헬스케어",
  "stock_code": "365660",
- "cums": {},
- "quarterly": [],
+ "cums": {
+  "2026": {
+   "2": {
+    "revenue": 5503269517,
+    "op": -3566855975,
+    "sga": null,
+    "inventory": null
+   }
+  }
+ },
+ "quarterly": [
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": null,
+   "op": null,
+   "sga": null
+  }
+ ],
  "annual": [],
- "updated": "2026-07-13T23:38:46",
+ "updated": "2026-08-16T14:51:12",
  "industry_code": "58222",
  "industry_name": "출판·게임SW",
  "corp_cls": "K",
- "market": "코스닥"
+ "market": "코스닥",
+ "fs_div": "OFS"
 }

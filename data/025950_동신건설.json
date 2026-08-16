@@ -87,6 +87,12 @@
     "op": -250350493,
     "sga": 944904077,
     "inventory": null
+   },
+   "2": {
+    "revenue": 15417827163,
+    "op": -823497271,
+    "sga": 2059811485,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 5665,
    "op": -250,
    "sga": 945
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 9753,
+   "op": -573,
+   "sga": 1115
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": null
   }
  ],
- "updated": "2026-07-19T20:10:44",
+ "updated": "2026-08-16T14:50:44",
  "fs_div": "OFS",
  "industry_code": "41221",
  "industry_name": "종합건설",

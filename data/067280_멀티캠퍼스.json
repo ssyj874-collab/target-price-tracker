@@ -87,6 +87,12 @@
     "op": 638362100,
     "sga": 16630510785,
     "inventory": null
+   },
+   "2": {
+    "revenue": 168323356250,
+    "op": 9447284274,
+    "sga": 32286890162,
+    "inventory": null
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 80686,
    "op": 638,
    "sga": 16631
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 87638,
+   "op": 8809,
+   "sga": 15656
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-13T23:50:25",
+ "updated": "2026-08-16T14:51:35",
  "industry_code": "85650",
  "industry_name": "교육",
  "corp_cls": "K",

@@ -87,6 +87,12 @@
     "op": 820660783,
     "sga": null,
     "inventory": 11162835347
+   },
+   "2": {
+    "revenue": 40578758513,
+    "op": 6087877522,
+    "sga": null,
+    "inventory": 11099663464
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 14409,
    "op": 821,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 11100,
+   "revenue": 26170,
+   "op": 5267,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T10:50:29",
+ "updated": "2026-08-16T14:56:15",
  "industry_code": "319",
  "industry_name": "기타운송장비",
  "corp_cls": "K",

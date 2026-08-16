@@ -87,6 +87,12 @@
     "op": 17786628942,
     "sga": null,
     "inventory": 313187890907
+   },
+   "2": {
+    "revenue": 153762799785,
+    "op": 36058168514,
+    "sga": null,
+    "inventory": 313499728682
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 66086,
    "op": 17787,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 313500,
+   "revenue": 87676,
+   "op": 18272,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:51:11",
+ "updated": "2026-08-16T14:52:50",
  "industry_code": "551",
  "industry_name": "숙박",
  "corp_cls": "K",

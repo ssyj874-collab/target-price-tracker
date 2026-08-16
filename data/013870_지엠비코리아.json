@@ -87,6 +87,12 @@
     "op": 3580821229,
     "sga": null,
     "inventory": 160757500645
+   },
+   "2": {
+    "revenue": 416112416013,
+    "op": 13513973615,
+    "sga": null,
+    "inventory": 171233029730
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 200337,
    "op": 3581,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 171233,
+   "revenue": 215775,
+   "op": 9933,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-18T11:07:44",
+ "updated": "2026-08-16T14:57:13",
  "industry_code": "303",
  "industry_name": "자동차",
  "corp_cls": "Y",

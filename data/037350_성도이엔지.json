@@ -87,6 +87,12 @@
     "op": 7797967023,
     "sga": 6473121959,
     "inventory": 59637635612
+   },
+   "2": {
+    "revenue": 319237340267,
+    "op": 18036252556,
+    "sga": null,
+    "inventory": 59744068128
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 144597,
    "op": 7798,
    "sga": 6473
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 59744,
+   "revenue": 174640,
+   "op": 10238,
+   "sga": null
   }
  ],
  "annual": [
@@ -207,7 +220,7 @@
   }
  ],
  "fs_div": "CFS",
- "updated": "2026-07-14T21:54:36",
+ "updated": "2026-08-16T14:52:59",
  "industry_code": "721",
  "industry_name": "엔지니어링",
  "corp_cls": "K",

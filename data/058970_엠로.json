@@ -73,6 +73,26 @@
     "op": 1429785408,
     "sga": 23594012713,
     "inventory": null
+   },
+   "4": {
+    "revenue": 83980244007,
+    "op": 909560044,
+    "sga": 30645364820,
+    "inventory": null
+   }
+  },
+  "2026": {
+   "1": {
+    "revenue": 14757258873,
+    "op": -2764626454,
+    "sga": 6790010529,
+    "inventory": null
+   },
+   "2": {
+    "revenue": 32523503248,
+    "op": -3875790917,
+    "sga": 14870369665,
+    "inventory": null
    }
   }
  },
@@ -153,6 +173,27 @@
    "revenue": 21290,
    "op": 315,
    "sga": 7694
+  },
+  {
+   "label": "2025.4분기",
+   "inventory": null,
+   "revenue": 20011,
+   "op": -520,
+   "sga": 7051
+  },
+  {
+   "label": "2026.1분기",
+   "inventory": null,
+   "revenue": 14757,
+   "op": -2765,
+   "sga": 6790
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": null,
+   "revenue": 17766,
+   "op": -1111,
+   "sga": 8080
   }
  ],
  "annual": [
@@ -169,10 +210,17 @@
    "op": 8606,
    "sga": 23927,
    "inventory": null
+  },
+  {
+   "year": 2025,
+   "revenue": 83980,
+   "op": 910,
+   "sga": 30645,
+   "inventory": null
   }
  ],
- "fs_div": "CFS",
- "updated": "2026-07-17T21:04:26",
+ "fs_div": "OFS",
+ "updated": "2026-08-16T14:55:12",
  "industry_code": "582",
  "industry_name": "출판·게임SW",
  "corp_cls": "K",

@@ -87,6 +87,12 @@
     "op": -459212607,
     "sga": null,
     "inventory": 11643922
+   },
+   "2": {
+    "revenue": 7480889093,
+    "op": 634196821,
+    "sga": null,
+    "inventory": 9681265
    }
   }
  },
@@ -181,6 +187,13 @@
    "revenue": 1988,
    "op": -459,
    "sga": null
+  },
+  {
+   "label": "2026.2분기",
+   "inventory": 10,
+   "revenue": 5493,
+   "op": 1093,
+   "sga": null
   }
  ],
  "annual": [
@@ -206,7 +219,7 @@
    "inventory": 15
   }
  ],
- "updated": "2026-07-19T20:40:01",
+ "updated": "2026-08-16T14:49:54",
  "fs_div": "OFS",
  "industry_code": "91121",
  "industry_name": "여가서비스",
